@@ -1,9 +1,11 @@
 # html-css-js-course
 
+
 ## На занятиях понадобится
 
  - Тетрадь, Ручка / Карандаш
  - В идеале посещать занятия со своим компьютером. В классе есть рабочие машины, но гораздо удобнее работать в привычной среде, со знакомой клавиатурой/системой/редактором. Так что это не обязательно, но в ваших интересах.
+
 
 ## Для работы нам понадобится
 
@@ -18,11 +20,13 @@
  - Опционально:
     * Гит-клиент: [SourceTree](https://www.sourcetreeapp.com/) / [GitHub Client](https://desktop.github.com/) / etc
 
+
 ### Что нужно сделать сразу
 
  - Подключиться к каналу в Slack (https://stormnet-html-css-js.slack.com)
  - Завести и заполнить [github](https://github.com) аккаунт
  - Пройти [Git HowTo до 49-го шага](https://githowto.com/ru/) ( используя репозиторий на гитхабе )
+
 
 ## Желательно не затягивать с прочтением следующих тем:
 
@@ -34,14 +38,16 @@
  - [Преимущества метода интервального запоминания](http://web.archive.org/web/20170315102949/https://habrahabr.ru/company/everydaytools/blog/322286/)
  - [Дерек Сиверс: «Метод интервального повторения — лучший способ изучения языков программирования»](https://habrahabr.ru/post/196448/) 
  
-## Дополнительно
+
 
 ### Основные ресурсы
 
 * [MDN CSS](https://developer.mozilla.org/ru/docs/Web/CSS)
 * [MDN JavaScript](https://developer.mozilla.org/ru/docs/Web/JavaScript)
+
 * [Learn.javascript.ru](http://learn.javascript.ru/?map)
 * [Google]
+
 
 ### Литература ( читать параллельно курсу )
 
