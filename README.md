@@ -20,6 +20,7 @@
 
 ### Что нужно сделать сразу
 
+ - Подключиться к каналу в Slack (https://stormnet-html-css-js.slack.com)
  - Завести и заполнить [github](https://github.com) аккаунт
  - Пройти [Git HowTo до 49-го шага](https://githowto.com/ru/) ( используя репозиторий на гитхабе )
 
