@@ -1,9 +1,11 @@
 # html-css-js-course
 
+
 ## На занятиях понадобится
 
  - Тетрадь, Ручка / Карандаш
  - В идеале посещать занятия со своим компьютером. В классе есть рабочие машины, но гораздо удобнее работать в привычной среде, со знакомой клавиатурой/системой/редактором. Так что это не обязательно, но в ваших интересах.
+
 
 ## Для работы нам понадобится
 
@@ -17,6 +19,7 @@
     2.  [Node.js](https://nodejs.org/en/)
  - Опционально:
     * Гит-клиент: [SourceTree](https://www.sourcetreeapp.com/) / [GitHub Client](https://desktop.github.com/) / etc
+
 
 ### Что нужно сделать сразу
 
@@ -35,14 +38,16 @@
  - [Преимущества метода интервального запоминания](http://web.archive.org/web/20170315102949/https://habrahabr.ru/company/everydaytools/blog/322286/)
  - [Дерек Сиверс: «Метод интервального повторения — лучший способ изучения языков программирования»](https://habrahabr.ru/post/196448/) 
  
-## Дополнительно
+
 
 ### Основные ресурсы
 
-* [MDN](https://developer.mozilla.org/ru/docs/Web/CSS)
-* [MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript)
+* [MDN CSS](https://developer.mozilla.org/ru/docs/Web/CSS)
+* [MDN JavaScript](https://developer.mozilla.org/ru/docs/Web/JavaScript)
+
 * [Learn.javascript.ru](http://learn.javascript.ru/?map)
 * [Google]
+
 
 ### Литература ( читать параллельно курсу )
 
@@ -54,13 +59,6 @@
 
 
 ### Что полезно посмотреть
-
-#### Отдельные видео каналы, которыми полезно заменить обычное видео на youtube (и подписаться тоже)
-
-* [.getInstance](https://www.youtube.com/channel/UCEBHlT_L1ME6e9ixaRPp0wg) - Ru
-* [Fun Fun Function](https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q) - En
-
-#### Курсы
 
 * [Основы JavaScript от Zorax](https://www.youtube.com/playlist?list=PL363QX7S8MfSxcHzvkNEqMYbOyhLeWwem)
 * [Курс «Введение в Javascript» от Hexlet](https://www.youtube.com/playlist?list=PLo6puixMwuSNxJCgadaaavKqq4-ocKPrR)
@@ -76,7 +74,4 @@
  - Зарегистрировать аккаунт на [GitHub.com](http://github.com) и максимально заполнить профиль (в идеале - имя аккаунта - это ваше имя+фамилия) + пройти до конца курс [TryGit](https://try.github.io/levels/1/challenges/1)
  
 Для сдачи домашних заданий на проверку нужно сделать [fork](https://help.github.com/articles/fork-a-repo/) этого репозитория. В своем форке создать отдельную ветку с номером занятия. В этой ветке создать папку `00/{{ВАШ_НИК_НА_GITHUB}}` и в этой папке размещать домашние задания. После выполнения домашних заданий сделать [commit и push](https://readwrite.com/2013/10/02/github-for-beginners-part-2/) и создать [pull request](https://help.github.com/articles/about-pull-requests/) в этот репозиторий. 
-
-## Литература для чтения
-
 
