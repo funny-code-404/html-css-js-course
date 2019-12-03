@@ -1,0 +1,22 @@
+@font-face {
+    font-family: UnicFont;
+    src: url('../fonts/v_CCMeanwhile.ttf');
+}
+
+.Header {
+    font-family: UnicFont, serif;
+    font-size: 15pt;
+    font-style: normal;
+    text-align: center;
+}
+.header2 {
+    font-family: UnicFont, serif;
+    font-style: italic;
+    text-align: center;
+}
+ul {
+    border: 1px solid rgb(99, 98, 91);
+}
+img {
+    width: 400px;
+    height: 250px;
