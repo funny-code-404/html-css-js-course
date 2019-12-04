@@ -1,0 +1,128 @@
+/* Основные селекторы */
+
+* {
+  color: brown; /*общий селектор*/
+}
+
+p {
+  color: blue; /*селектор тэгов*/
+}
+
+.list {
+  border: 1px solid orange; /*селектор классов*/
+}
+
+#unique_element {
+  color: green; /*селектор идентификаторов (id)*/
+}
+
+
+/* Групповые селеторы */
+
+.list li {
+  color: black; /*групповой селектор*/
+}
+
+li.separated_point {
+  color: violet; /*комбинированный селектор на одном элементе*/
+}
+
+a + p {
+  border: 1px solid blue; /* следующий соседний элемент */
+}
+
+article ~ p {
+  border: 1px solid orange; /* все соседи */
+ }
+
+div.container > div {
+  color: black;
+  border: 1px solid teal; /* первый вложенны эелемент */
+}
+
+/* Псевдоклассы */
+
+a:hover {
+  color: black;
+}
+
+a:active {
+  color: yellow;
+}
+
+/* a:focus {
+  color: red;
+} */
+
+/* a:visited {
+  color: limegreen;
+} */
+
+
+/* Выборка по атрибуту */
+
+a[title] {
+  font-size: 75px;
+}
+
+a[href="https://google.com"] {
+  font-style: italic; /*точное совпадение*/
+}
+
+a[href^="www"] {
+  background-color: blue; /*совпадение в начале*/
+}
+
+a[href*="a"] {
+  text-decoration: none; /*частичное совпадение в любом месте*/
+}
+
+a[href$="net"] {
+  background-color: green; /*совпадение в конце*/
+}
+
+/* before/after */
+
+article.ba-block {
+  position: relative;
+  top: 200px;
+  line-height: 20px;
+}
+
+article.ba-block:before {
+  width: 100px;
+  height: 100px;
+  border: 1px dashed blue;
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+}
+
+article.ba-block:after {
+  width: 100px;
+  height: 100px;
+  border: 1px dashed green;
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+
+/* not */
+
+/* ul > li:not(#unique_element) {
+  text-decoration: line-through; // все элементы, кроме указанного в скобках
+} */
+
+/* child / type */
+
+aside {
+  color: black;
+}
+aside p:first-of-type {
+  color: red;
+}
+aside p:last-of-type {
+  color: violet;
+}
