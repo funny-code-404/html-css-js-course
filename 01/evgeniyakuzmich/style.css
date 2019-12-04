@@ -1,0 +1,29 @@
+h1 {
+    color : #823293;
+    font-family: "Bradley Hand";
+    font-size: 70px;
+    height: 50px;
+}
+
+h2 {
+    font-weight: 120;
+}
+
+ul {
+    color: #7c59db;
+}
+body {
+    font-family: "Arial";
+}
+.one {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Aardvark";
+    color: blue;
+    p{
+        height: 5px;
+    }
+
+}
+
+
