@@ -1,0 +1,74 @@
+@font-face {
+    font-family: Monly-L;
+    src: url(font/Monly-Light.otf);
+}
+
+@font-face {
+    font-family: Monly-B;
+    src: url(font/Monly-Bold.otf);
+}
+
+
+.top {
+    font-family: Monly-B;
+    font-size: 36px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    color: black;
+}
+
+.data {
+    background: black;
+    font-family: Monly-B;
+    font-size: 20px;
+}
+
+.p-subtitle {
+    font-family: Monly-B;
+    font-size: 28px;
+    color: white;
+    text-decoration: underline 2px;
+    margin-left: 50px;
+    text-align: left;
+    width: 60%;
+}
+
+.content {
+    color: white;
+    padding: 0%;
+    font-family: Monly-B;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 80px;
+}
+
+.article {
+    text-align: center;
+    
+}
+
+ul {
+    list-style: none;
+    
+}
+
+li {
+    margin: 10px;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(128, 128, 128);
+}
+
+.copyright {
+    margin-top: 100%;
+}
+
+.copyright-text {
+    color: greay;
+    text-align: center;
+}
