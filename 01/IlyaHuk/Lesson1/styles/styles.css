@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Caveat|Open+Sans+Condensed:300|Playfair+Display&display=swap');}
+body {
+    font-family: 'Playfair Display', cursive;
+}
+h1 {
+    font-family: Caveat, sans-serif;
+    font-size: 50px;
+}
+h2 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 30px;
+}
+article {
+    font-family: 'Playfair Display', cursive;
+    font-size: 20px;
+}
