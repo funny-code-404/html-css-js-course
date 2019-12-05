@@ -2,14 +2,13 @@
     font-family: UnicFont;
     src: url('../fonts/v_CCMeanwhile.ttf');
 }
-
-.Header {
+.header {
     font-family: UnicFont, serif;
     font-size: 15pt;
     font-style: normal;
     text-align: center;
 }
-.header2 {
+.subheader {
     font-family: UnicFont, serif;
     font-style: italic;
     text-align: center;
@@ -20,3 +19,4 @@ ul {
 img {
     width: 400px;
     height: 250px;
+}
