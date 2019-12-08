@@ -1,0 +1,85 @@
+h1{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 26px;
+  text-align: center;
+} 
+.apple{
+  background: rgb(200, 200, 200);
+  border: 2px solid black;
+  width: 300px;
+  float: left;
+  margin: 0 15px 15px 100px;
+  display: block;
+}
+.apple p{
+  font-family: 'open sans', sans-serif;
+  text-align: center;
+}
+.apple img{
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+.samsung{
+  background: rgb(200, 200, 200);
+  border: 2px solid black;
+  width: 300px;
+  float: left;
+  margin: 0 300px 15px 400px;
+  display: block;
+  
+}
+.samsung p{
+  font-family: 'open sans', sans-serif;
+  text-align: center;
+}
+.samsung img{
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+.xiaomi{
+  background: rgb(200, 200, 200);
+  border: 2px solid black;
+  width: 300px;
+  float: left;
+  margin: 0 15px 15px 100px;
+  display: block;
+}
+.xiaomi p{
+  font-family: 'open sans', sans-serif;
+  text-align: center;
+}
+.xiaomi img{
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  color: blue;
+}
+a:hover[title="like"]{
+  color: red;
+}
+.apple:hover{
+  width: 400px;
+}
+div:not(.apple):hover{
+  width: 200px;
+}
+.samsung:hover{
+  width: 400px;
+}
+div:not(.samsung):hover{
+  width: 200px;
+}
+.xiaomi:hover{
+  width: 400px;
+}
+div:not(.xiaomi):hover{
+  width: 200px;
+}
