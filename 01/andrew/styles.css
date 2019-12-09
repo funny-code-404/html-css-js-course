@@ -1,0 +1,18 @@
+@font-face {
+	font-family: trol;
+	src: url(trol.ttf);
+}
+body { 
+	font-family: sans-serif;
+	background-color: #e6b491;
+	}
+	h1, h3 {
+		font-family: trol;
+		border-bottom: 2px solid black;
+	}
+
+	.text2 {
+		font-family: trol;
+		border: 2px solid black; display: inline-block;
+	}
+	
