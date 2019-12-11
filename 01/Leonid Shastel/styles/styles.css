@@ -1,32 +1,34 @@
 h1 {
+	text-align: center;
 	font-size: 45px;
 	font-family: 'Neucha', cursive;
 }
 
-.font_style{
+.font_decorated{
 	font-family: 'El Messiri', sans-serif;
 }
 
-.font_style	p{
+.font_decorated	p{
 	font-size: 16px;
 	max-width: 97%;
 }
 
-.font_style	h2{
+.font_decorated	h2{
+	text-align: center;
 	font-size: 28px;
 }
 
-.font_style h3{
+.font_decorated h3{
 	font-size: 22px;
 }
 
 body {
-/*	background-color: rgb(255, 255, 255);*/
 	background-image: url(../images/background.png);
 	background-size: cover;
 }
 
 .text_block {
+	text-align: center;
 	width: 60%;
 	margin: 0 auto;
 }
