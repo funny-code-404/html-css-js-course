@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+header {
+	height: 100vh;
+	display: block;
+	background-size: cover;
+	background-position: center;
+	background: linear-gradient(45deg, rgba(103, 0, 31, .8), rgba(34, 101, 163, .5)), url(../images/main_bg.jpg);
+}
+
+.header_name {
+	font-size: 100px;
+	color: white;
+	position: absolute;
+	margin: 15% 0 0 15%;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-family: 'Solway', serif;
+}
+
+h2 {
+	font-size: 60px;
+	font-family: 'Righteous', cursive;
+	text-align: center;
+	color: #fff;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.block_apple {
+	display: block;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background: linear-gradient(45deg, rgba(103, 0, 31, .8), rgba(34, 101, 163, .5)), url(../images/apple_bg.jpg);
+}
+
+.apple_content	{
+	margin-top: 5%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.apple_list {
+	flex: 1 1 50%;
+	padding-left: 5%;
+}
+
+.apple_list a:hover {
+	color: black;
+	transition: 0.5s;
+	font-size: 135%;
+}
+
+.apple_img {
+	flex: 1 1 50%;
+}
+
+.apple_img img {
+	width: 35%;
+	transition: 1s;
+}
+
+.apple_img img:hover {
+	transform: scale(1.3)
+}
+
+.block_samsung {
+	display: block;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(45deg, rgba(103, 0, 31, .8), rgba(34, 101, 163, .5)), url(../images/samsung_bg.jpg);
+}
+
+.samsung_content {
+
+	margin-top: 3%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.samsung_list {
+	flex: 1 1 50%;
+	padding-left: 5%;
+}
+
+.samsung_list a:hover {
+	color: black;
+	transition: 0.5s;
+	font-size: 135%;
+}
+
+.samsung_img {
+	flex: 1 1 50%;
+}
+
+.samsung_img img {
+	width: 29%;
+	transition: 1s;
+}
+
+.samsung_img img:hover {
+	transform: scale(1.3)
+}
+
+.block_xiaomi {
+	display: block;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(45deg, rgba(103, 0, 31, .8), rgba(34, 101, 163, .5)), url(../images/xiaomi_bg.jpg);
+}
+
+.xiaomi_content {
+	margin-top: 3%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.xiaomi_list {
+	flex: 1 1 50%;
+	padding-left: 5%;
+}
+
+.xiaomi_list a:hover {
+	color: black;
+	transition: 0.5s;
+	font-size: 135%;
+}
+
+.xiaomi_img {
+	flex: 1 1 50%;
+}
+
+.xiaomi_img img {
+	width: 29%;
+	transition: 1s;
+}
+
+.xiaomi_img img:hover {
+	transform: scale(1.3)
+}
