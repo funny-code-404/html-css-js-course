@@ -91,3 +91,26 @@ body > div {
   flex: 1 1 300px;
 }
 /*example sixth*/
+
+/*before/after*/
+
+.container-ba {
+  width: 400px;
+  position: relative;
+  height: 200px;
+  outline: 1px solid red;
+}
+
+.container-ba::after {
+  content: '';
+  position: absolute;
+  height: 100px;
+  top: 200px;
+  outline: 1px solid green;
+  width: 100%;
+  border-width: 30px 100vw 0 0;
+  /* background: linear-gradient(to bottom right, green, blue);
+  background: linear-gradient(to bottom right, green 0, blue 50%, yellow 70%, brown 100%);
+  background: linear-gradient(to bottom, white 0, white 33%, blue 33%, blue 66%, red 66%, red 100%); */
+  background: radial-gradient(closest-side, red, white);
+}
