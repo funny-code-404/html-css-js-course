@@ -1,0 +1,13 @@
+.wrapper,
+.wrapper div {
+  outline: 1px solid red;
+  padding: 25px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-columns: minmax(200px, auto);
+  grid-auto-rows: minmax(200px, auto);
+  grid-template-rows: repeat(1fr);
+}
