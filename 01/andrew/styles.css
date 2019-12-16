@@ -1,18 +1,52 @@
-@font-face {
-	font-family: trol;
-	src: url(trol.ttf);
-}
-body { 
-	font-family: sans-serif;
-	background-color: #e6b491;
-	}
-	h1, h3 {
-		font-family: trol;
-		border-bottom: 2px solid black;
+	html {
+		overflow: hidden;
 	}
 
-	.text2 {
-		font-family: trol;
-		border: 2px solid black; display: inline-block;
+	h1 {
+		text-align: center;
+		font-family: sans-serif;
 	}
-	
+     .mam {
+     	
+    margin-top: 3%;
+    margin-left: 2%;
+  	width:100%;
+  	
+  	 } 
+     .mam div {
+ 	border: 2px solid black;
+	width: 30%;
+	background-color: gray;
+	display: inline-block;
+	margin-right: 1%;
+	 /}
+	 .phone {
+	 	border: 2px solid black;
+	 	display: block;
+	 	margin: auto;
+	 }
+	 p {
+	 	text-align: center;
+	 	font-family: arial;
+	 	font-weight: bolder;
+	 }
+	 ul {
+	 list-style: none;
+	 }
+	 li {
+	 	text-align: center;
+	 	padding: 10px;
+	 }
+	 li a {
+	 	color: black;
+	 	text-decoration: none;
+	 	font-family: arial;
+	 	font-weight: bold;
+	 }
+	 li a[title="best-phones"]:hover {
+	 	color: white;
+
+	 } 
+	 li a[href^="https://"]:hover {
+	 	border: 1px solid black;
+	 }
