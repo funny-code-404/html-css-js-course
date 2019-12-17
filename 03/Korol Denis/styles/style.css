@@ -12,7 +12,8 @@ body{
 }
 .container{
   font-family: Myriadpro;
-  max-width: 1680px;
+  width: 100%;
+  
 }
 .header{
   width: 100%;
@@ -53,8 +54,9 @@ article{
   margin: 0 auto;
   margin-right: -3.5%;
   position: relative;
+  right: -3.5%;
   left: 4%;
-  outline: 1px solid black;
+  border-bottom: 5px dotted rgb(204, 204, 204);
 }
 .first-container{
   border-bottom: 5px dotted rgb(204,204,204) ;
@@ -94,7 +96,7 @@ article{
   display: block;
   width: 27%;
   margin: 48px auto;
-  
+  box-shadow: 5px 5px 3px rgba(122,122,122,0.5);
 }
 .line-block-one h1,.line-block-two h1,.line-block-three h1{
   width: 80%;
@@ -130,5 +132,100 @@ article{
   margin: 25px auto 25px auto;
   padding-top: 14px;
   padding-bottom: 14px;
-  
+}
+.block-about{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.block-about-one{
+  width: 50%;
+  border-right: 5px dotted rgb(204,204,204);
+}
+.block-about-one h1{
+  font-family: Myriadpro;
+  font-size: 28pt;
+  font-weight: normal;
+  color: rgb(85,85,85);
+}
+.reviews img{ 
+  background-color: rgb(204, 204, 204);
+  width: 30%;
+  padding: 10% 0; 
+}
+.reviews p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18pt;
+  font-weight: normal;
+  color: rgb(85,85,85);
+}
+.reviews blockquote{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18pt;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(85,85,85);
+}
+.reviews cite{
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18pt;
+  font-weight: bold;
+  color: rgb(85,85,85);
+
+}
+.reviews span{
+  color: rgb(0, 147, 239);
+  font-weight: normal;
+}
+.reviews-one,.reviews-two,.reviews-three{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.reviews-one{
+  margin: 1% auto 10% auto;
+}
+.reviews-two{
+  margin: 10% auto;
+}
+.reviews-three{
+  margin: 10% auto 1% auto;
+}
+.block-about-two{
+  width: 47%; 
+}
+.block-about-two h1{
+  text-decoration: none;
+  font-size: 28pt;
+  font-weight: normal;
+  color: rgb(85,85,85);
+}
+.block-about-two h2{
+  text-decoration: none;
+  font-size: 24pt;
+  font-weight: normal;
+  color: rgb(136,136,136);
+}
+.block-about-two img{
+  width: 93%;
+  box-shadow: 5px 5px 3px rgba(122,122,122,0.5);
+}
+.block-about-two p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20pt;
+  color: rgb(85,85,85);
+  font-weight: normal;
+}
+.block-about-two a{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20pt;
+  color: rgb(0, 147, 239);
+}
+.footer span{
+  width: 80%;
+  margin-left: 4%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20pt;
+  color: rgb(136,136,136);
 }
