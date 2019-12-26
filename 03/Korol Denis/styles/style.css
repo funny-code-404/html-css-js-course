@@ -17,17 +17,21 @@ body{
 }
 .header{
   width: 100%;
-  padding: 67px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2% 0;
   position: relative;
   background-color: rgb(51,51,51);
 }
 article{
-  position: absolute;
+  display: block;
   font-family: Myriadpro;
   font-size: 60pt;
   color:rgb(238,238,238);
   left: 3%;
-  top: 10%;
+  top: 5%;
+  margin-left: 2%;
 }
 .first-nav{
   position: absolute;
@@ -51,11 +55,9 @@ article{
   color: rgb(14,141,189);
 }
 .containerbody{
-  margin: 0 auto;
-  margin-right: -3.5%;
+  max-width: 100%;
+  margin: 0 1.5%;
   position: relative;
-  right: -3.5%;
-  left: 4%;
   border-bottom: 5px dotted rgb(204, 204, 204);
 }
 .first-container{
@@ -88,17 +90,21 @@ article{
 }
 .third-container{
   border-bottom: 5px dotted rgb(204, 204, 204);
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 2% 0;
 }
 .line-block-one,.line-block-two,.line-block-three{
-  outline: 1px solid blue;
   background-color:rgb(0, 147, 239) ;
   display: block;
+  flex-direction: column; 
   width: 27%;
-  margin: 48px auto;
+  flex:1 1 100%
   box-shadow: 5px 5px 3px rgba(122,122,122,0.5);
 }
-.line-block-one h1,.line-block-two h1,.line-block-three h1{
+.line-block-one h1,.line-block-two h1 , .line-block-three h1{
+  word-wrap: break-word;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -208,7 +214,8 @@ article{
   color: rgb(136,136,136);
 }
 .block-about-two img{
-  width: 93%;
+  width: 60%;
+  
   box-shadow: 5px 5px 3px rgba(122,122,122,0.5);
 }
 .block-about-two p{
@@ -228,4 +235,45 @@ article{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20pt;
   color: rgb(136,136,136);
+}
+@media (max-width: 1050px){
+ .header{
+   padding: 2% 0;
+ } 
+ .first-nav{
+   top:70%;
+ }
+ .third-container{
+   flex-wrap: wrap; 
+ }
+}
+@media (max-width: 750px) {
+.third-container{
+  flex-direction: column;
+  align-items: flex-start;
+  width: 350%;
+}
+.line-block-one,.line-block-two,.line-block-three{
+  margin: 2% 1%;
+}
+}
+@media (max-width: 550px){
+  .header{
+    padding: 15% 0;
+  }
+  .first-nav{
+    top:78%;
+  }
+  .block-about{
+    flex-direction: column;
+    align-items: center;
+  }
+  .block-about-one{
+    border-right: none;
+    border-bottom: 5px dotted rgb(204,204,204);
+    width: 100%;
+  }
+  .block-about-two{
+    width: 100%;
+  }
 }
