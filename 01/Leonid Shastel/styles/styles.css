@@ -1,0 +1,65 @@
+h1 {
+	text-align: center;
+	font-size: 45px;
+	font-family: 'Neucha', cursive;
+}
+
+.font_decorated{
+	font-family: 'El Messiri', sans-serif;
+}
+
+.font_decorated	p{
+	font-size: 16px;
+	max-width: 97%;
+}
+
+.font_decorated	h2{
+	text-align: center;
+	font-size: 28px;
+}
+
+.font_decorated h3{
+	font-size: 22px;
+}
+
+body {
+	background-image: url(../images/background.png);
+	background-size: cover;
+}
+
+.text_block {
+	text-align: center;
+	width: 60%;
+	margin: 0 auto;
+}
+
+.img_block {
+	padding-top: 50px;
+	padding-left: 40px;
+	width: 95%;
+	margin: 0 auto;
+}
+
+.zebra_block{
+	width: 400px;
+	height: 300px;
+	display: inline;
+	border: 2px groove #000;
+	border-radius: 20px;
+}
+
+.zhiraf_block{
+	width: 400px;
+	height: 300px;
+	display: inline;
+	border: 2px groove #000;
+	border-radius: 20px;
+}
+
+.slon_block{
+	width: 400px;
+	height: 300px;
+	display: inline;
+	border: 2px groove #000;
+	border-radius: 20px;
+}
