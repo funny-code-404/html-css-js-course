@@ -125,8 +125,6 @@ html {
 	background: rgb(102, 0, 0);
 }
 
-
-
 .mainItem_service-section {
 	padding: 5% 0;
 	display: flex;
@@ -151,7 +149,8 @@ html {
 	transition: .6s;
 }
 
-!	color: rgb(255, 255, 255);
+.mainItem_service-block:hover h2 {
+	color: rgb(255, 255, 255);
 	transition: .6s;
 }
 
