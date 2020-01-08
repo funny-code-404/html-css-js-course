@@ -1,0 +1,13 @@
+.main__sidebar {
+  border: 1px solid orange;
+  flex: 1 1 25%;
+}
+
+.sidebar__item {
+  padding: 5%;
+  border: 1px solid blue;
+}
+
+.sidebar_theme_dark {
+  background-color: blueviolet;
+}

@@ -1,0 +1,17 @@
+.main__article {
+  border: 1px solid blue;
+  flex: 1 1 75%;
+}
+
+.main__article {
+  padding: 2%;
+}
+
+.main_theme_dark {
+  background-color: violet;
+} 
+
+.main_theme_font {
+  color: white;
+  font-size: 1.2em;
+}
