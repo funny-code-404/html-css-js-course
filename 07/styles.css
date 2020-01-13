@@ -1,0 +1,9 @@
+@import "components/header/header.css"; 
+@import "components/main/main.css"; 
+@import "components/footer/footer.css"; 
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
