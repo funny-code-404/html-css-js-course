@@ -1,0 +1,23 @@
+.carousel-inner {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.carousel-item img {
+  width: 50%;
+  height: 500px;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background: red;
+}
+
+.carousel-indicators li {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+/*-----------------------------*/
+.card-img-top {
+  height: 200px;
+}
