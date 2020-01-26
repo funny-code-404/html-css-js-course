@@ -1,0 +1,12 @@
+.slide-button{
+  margin: 5% 20%;
+  width: 55%;
+  font-size: 14pt;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #76C38F;
+  border-radius: 5px;
+} 

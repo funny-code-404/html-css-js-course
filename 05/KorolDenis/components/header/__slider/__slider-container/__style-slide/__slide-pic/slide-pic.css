@@ -1,0 +1,10 @@
+.slide-pic{
+  width: 40%;
+  margin: 7% -10%;
+  
+}
+.slide-pic img{
+  width: 135%;
+  border-radius: 50%;
+  border: 25px solid rgb(107, 107, 107);
+}

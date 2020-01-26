@@ -1,0 +1,10 @@
+.switch-left{
+  margin-left: -13%;
+  width: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.switch-left img{
+  margin: 0 10%;
+}

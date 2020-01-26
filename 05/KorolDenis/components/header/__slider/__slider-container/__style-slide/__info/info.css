@@ -1,0 +1,15 @@
+@import "/components/header/__slider/__slider-container/__style-slide/__info/__slide-button/slide-button.css";
+.info-slide{
+  width: 60%;
+}
+.info-slide h1{
+  display: flex;
+  color: #ffffff;
+  font-size: 46pt;
+  margin: 8% auto;
+}
+.info-slide h2{
+  display: flex;
+  color: #979797;
+  font-size: 18pt;
+}

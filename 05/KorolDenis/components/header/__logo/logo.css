@@ -1,0 +1,14 @@
+.logo{
+  width: 25%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+}
+.logo__item h1{
+  font-size: 28pt;
+  color: #ffffff;
+}
+.logo__item h2{
+  font-size: 11pt;
+  color: #ffffff;
+}

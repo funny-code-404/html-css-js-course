@@ -1,0 +1,17 @@
+.tweets{
+  display: flex;
+  flex-direction: column;
+}
+.tweets__item{
+  margin:  5% 0;
+  font-size: 10pt ;
+  color: rgb(151, 151, 151);
+}
+.tweets__item p{
+  font-size: 13pt;
+  color: rgb(151, 151, 151);
+}
+.tweets__item a{
+  text-decoration: none;
+  color: rgb(118, 195, 143);
+}

@@ -1,0 +1,39 @@
+.blog{
+  width: 25%;
+}
+.blog__item{
+  margin: 1%;
+}
+.blog__item a{
+  text-decoration: none;
+  color: rgb(118, 195, 143);
+}
+.blog__item h1{
+  display: block;
+  margin-top: 5%;
+  margin-bottom: 1%;
+  text-decoration: none;
+  color: rgb(118, 195, 143);
+  font-size: 13pt;
+}
+.blog__item h2{
+  display: block;
+  margin: 3% 0;
+  color: rgb(102, 102, 102);
+  font-size: 10pt;
+}
+.blog__item h3{
+  display: block;
+  margin-bottom: 3%;
+  color: rgb(151, 151, 151);
+  font-size: 10pt;
+}
+.blog__item p{
+  color: rgb(151, 151, 151); 
+  font-size: 13pt;
+}
+.blog__item h4{
+  display: block;
+  margin: 5% 0;
+  font-size: 13pt;
+}

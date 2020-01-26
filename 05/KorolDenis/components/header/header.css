@@ -1,0 +1,12 @@
+@import "/components/header/__logo/logo.css";
+@import "/components/header/__nav/nav.css";
+@import "/components/header/__slider/slider.css";
+.header{
+  border-top: 0.5vh solid #76C38F;
+  background-color: #290000;
+  padding:2% 5% 0 5%;
+  margin-bottom: -5%;
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction:row;
+}

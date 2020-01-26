@@ -1,0 +1,7 @@
+@import "/components/header/__slider/__slider-container/__style-slide/__info/info.css";
+@import "/components/header/__slider/__slider-container/__style-slide/__slide-pic/slide-pic.css";
+.slide-two{
+  display: flex;
+  width: 100%;  
+  display: none;
+}

@@ -1,0 +1,19 @@
+@import "/components/footer/__container/__blog/blog.css";
+@import "/components/footer/__container/__links/links.css";
+@import "/components/footer/__container/__tweets/tweets.css";
+@import "/components/footer/__container/__contact/contact.css";
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 10%;
+}
+.container__item{
+  width: 25%;
+  color: white;
+  font-size: 16pt;
+} 
+.container__item:not(:first-child):not(:last-child){
+  margin: 0 1%;
+}

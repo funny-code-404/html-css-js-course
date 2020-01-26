@@ -1,0 +1,32 @@
+.nav{
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.nav ul{
+  width: 100%;
+  margin-left: 8.5%;
+}
+.nav li{
+  padding: 2% 1%;
+  display: inline-block;
+}
+.nav a{
+  color: #ffffff;
+  text-decoration: none;
+}
+.nav li:not(:first-child):not(:last-child){
+  margin: auto 1%;
+}
+.nav li:first-child{
+  margin-right: 1%;
+}
+.nav li:last-child{
+  margin-left: 1%;
+}
+.nav li:hover{
+  background-color: #76C38F;
+  border-radius: 5px;
+}
