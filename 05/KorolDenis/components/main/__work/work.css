@@ -1,5 +1,5 @@
 .work{
-  width: 83%;
+  width: 80%;
   display: inline-flex;
   margin: 2% 10%;
   flex-wrap: wrap;
@@ -8,10 +8,16 @@
 }
 .work__item{
   margin: 2% 0;
-  width: 30%;
+  width: 32%;
   display: flex;
+  justify-content: center;
+}
+.work__item img{
+  display: block;
+  width: 100%;
 }
 .work__item a{
+  width: 100%;
   text-decoration: none;
   color: white;
   position: relative;

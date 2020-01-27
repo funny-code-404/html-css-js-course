@@ -3,15 +3,18 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  align-items: center;
 }
 .nav ul{
   width: 100%;
-  margin-left: 8.5%;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
 }
 .nav li{
   padding: 2% 1%;
+  margin: 0 5% ;
   display: inline-block;
+
 }
 .nav a{
   color: #ffffff;
