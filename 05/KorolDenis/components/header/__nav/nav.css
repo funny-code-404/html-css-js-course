@@ -2,7 +2,7 @@
   width: 70%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
 }
 .nav ul{
   width: 100%;
@@ -11,23 +11,17 @@
   flex-wrap: nowrap;
 }
 .nav li{
+  width: 12%;
+  display: block;
   padding: 2% 1%;
-  margin: 0 5% ;
+  margin: 0 1% ;
   display: inline-block;
+  text-align: center;
 
 }
 .nav a{
   color: #ffffff;
   text-decoration: none;
-}
-.nav li:not(:first-child):not(:last-child){
-  margin: auto 1%;
-}
-.nav li:first-child{
-  margin-right: 1%;
-}
-.nav li:last-child{
-  margin-left: 1%;
 }
 .nav li:hover{
   background-color: #76C38F;

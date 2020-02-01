@@ -1,4 +1,4 @@
-@import "/components/main/__haeder-work/__header-block/header-block.css";
+@import "../__haeder-work/__header-block/header-block.css";
 .header-work{
   width: 80%;
   margin: 0 10%;

@@ -1,4 +1,4 @@
-@import "/components/main/__service/__title/title.css";
+@import "../__service/__title/title.css";
 .service{
   display: flex;
   flex-wrap: wrap;

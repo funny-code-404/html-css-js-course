@@ -1,6 +1,6 @@
-@import "/components/header/__logo/logo.css";
-@import "/components/header/__nav/nav.css";
-@import "/components/header/__slider/slider.css";
+@import "../header/__logo/logo.css";
+@import "../header/__nav/nav.css";
+@import "../header/__slider/slider.css";
 .header{
   border-top: 0.5vh solid #76C38F;
   background-color: #290000;

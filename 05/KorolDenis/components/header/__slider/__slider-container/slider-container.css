@@ -1,5 +1,5 @@
-@import "/components/header/__slider/__slider-container/__slide-one/slide-one.css";
-@import "/components/header/__slider/__slider-container/__style-slide/__info/info.css";
+@import "../__slider-container/__slide-one/slide-one.css";
+@import "../__slider-container/__style-slide/__info/info.css";
 .slide{
   width: 80%;
   display: flex;

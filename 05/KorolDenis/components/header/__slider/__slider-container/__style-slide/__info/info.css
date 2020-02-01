@@ -1,4 +1,4 @@
-@import "/components/header/__slider/__slider-container/__style-slide/__info/__slide-button/slide-button.css";
+@import "../__info/__slide-button/slide-button.css";
 .info-slide{
   width: 60%;
 }

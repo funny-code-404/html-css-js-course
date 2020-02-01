@@ -1,6 +1,6 @@
-@import "/components/main/__service/service.css";
-@import "/components/main/__haeder-work/header-work.css";
-@import "/components/main/__work/work.css";
+@import "../main/__service/service.css";
+@import "../main/__haeder-work/header-work.css";
+@import "../main/__work/work.css";
 .main{
   width: 100%;
   background-color: rgb(102, 0, 0)

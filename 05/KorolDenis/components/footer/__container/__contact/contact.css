@@ -3,7 +3,11 @@
   flex-direction: column;
 }
 .contact__item{
+  width: 100%;
   margin-top: 5%;
+}
+.contact__item input{
+  width: 100%;
 }
 .footer-form-button{
   display: inline-block;

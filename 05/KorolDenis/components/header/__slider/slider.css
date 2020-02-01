@@ -1,6 +1,6 @@
-@import "/components/header/__slider/__slider-container/slider-container.css";
-@import "/components/header/__slider/__switch-left/switch-left.css";
-@import "/components/header/__slider/__switch-right/switch-right.css";
+@import "../__slider/__slider-container/slider-container.css";
+@import "../__slider/__switch-left/switch-left.css";
+@import "../__slider/__switch-right/switch-right.css";
 .slider{
   width: 100%;
   display: flex;
