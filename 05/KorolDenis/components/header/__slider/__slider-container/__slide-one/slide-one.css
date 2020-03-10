@@ -1,8 +1,0 @@
-@import "/components/header/__slider/__slider-container/__style-slide/__info/info.css";
-@import "/components/header/__slider/__slider-container/__style-slide/__slide-pic/slide-pic.css";
-.slide-one{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%; 
-}
