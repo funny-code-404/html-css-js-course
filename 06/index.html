@@ -1,0 +1,47 @@
+<!DOCTYPE html-5  >
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+  <script src="main.js"></script>
+  <title>Document</title>
+</head>
+<body class="body">
+<form>
+  <div class="container-output">
+      <div id="outputName">Имя:</div>
+      <div id="outputEmail">Email:</div>
+      <div id="outputPassword">Пароль:</div>
+      <div id="outputCounty">Страна:</div>
+      <div id="outputGender">Пол:</div>
+  </div>
+  <div class="container-input">
+    <div class="container-input_item info">
+      <p>Name <input id="nameUser" type="text"></p>
+      <p>Email <input id="emailUser" type="email" ></p>
+      <p>Password <input id="passwordUser" type="password" ></p>
+    </div>
+    <div class="container-input_item gender">
+      Male:<input id="radio-gender" type="radio" name="gender" checked="checked" >  Female:<input id="radio-gender" type="radio" name="gender" >
+    </div>
+    <div class="container-input_item countries">
+      <select name="county" id="county">
+        <option>Russia</option>
+        <option>Belarus</option>
+        <option>Ukraine</option>
+      </select>
+    </div>
+    <div class="container-input_item policity">
+      <input type="checkbox" id="policity"> Ознакомлен с правилами сайта
+    </div>
+    <div class="container-input_item button">
+      <input type="submit" id="submit">
+      <input type="reset" id="reset">
+    </div>
+  </div>
+
+</form>
+</body>
+</html>
