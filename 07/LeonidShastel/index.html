@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 18</title>
+  <link rel="stylesheet" type="text/css" href="styles/reset.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+   <div class="windowForm">
+      <div class="windowOutpute">
+         <ul>
+            <li class="outputeStyle">Name:   <span id="formName"></span></li>
+            <li class="outputeStyle">Email:   <span id="formEmail"></span></li>
+            <li class="outputeStyle">Pass:   <span id="formPass"></span></li>
+            <li class="outputeStyle">Gender:   <span id="formGender"></span></li>
+            <li class="outputeStyle">Country:   <span id="formCountry"></span></li>
+         </ul>
+      </div>
+      <div class="windowInpute">
+      <form id="userInfo">
+         <div class="inpName">
+            <label for="name">Name:</label>
+            <input type="text" name="name" >
+         </div>
+         <div class="inpEmail">
+            <label for="email">Email:</label>
+            <input type="email" name="email" >
+         </div>
+         <div class="inpPass">
+            <label for="pass">Password:</label>
+            <input type="password" name="pass">
+         </div>
+         <div class=inpGender>
+            <label for="gender">Male</label>
+            <input type="radio" name="gender" value="Male" checked>
+            <label for="gender">Female</label>
+            <input type="radio" name="gender" value="Female">      
+         </div>
+         <div class="inpCountry">
+            <select name="country" id="country" >
+               <option>Выбрать страну</option>
+               <option>Беларусь</option>
+               <option>Россия</option>
+               <option>Украина</option>
+               <option>США</option>
+               <option>КНР</option>
+            </select>
+         </div>
+         <div class="inpAgreement">
+            <label for="agreement">Лицензионное соглашение</label>
+            <input type="checkbox" name="agreement">
+         </div>
+         <div class="inpSend">
+            <input type="submit" name="send" value="Send">
+            <input type="reset">
+         </div>
+      </form>
+      </div>
+   </div>
+</body>
