@@ -1,0 +1,54 @@
+
+.line {
+   display: flex;
+}
+
+hr {
+   background-color: red;
+}
+
+.winColumn>hr {
+   margin: 1.5rem 0;
+   transform: rotate(90deg);
+}
+
+.winDiagonal>hr {
+   margin: 1.5rem 0;
+   transform: rotate(45deg);
+}
+
+.block {
+   width: 75px;
+   height: 75px;
+   font-size: 2rem;
+   border: 1px solid black;
+   text-align: center;
+   padding: 1.1% 0;
+}
+
+.endGame {
+   display: none;
+   position: absolute;
+   left: 25%;
+   top: 25%;
+   width: 50%;
+   height: 50%;
+   box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.75);
+   text-align: center;
+   font-size: 60px;
+   text-align: center;
+   color: white;
+   padding: 10% 0;
+}
+
+.winGame {
+   display: block;
+   background-color: green;
+}
+
+.winLine { 
+   width: 1px;
+   height: 250px;
+   background-color: black;
+   margin: 0 auto;
+}
