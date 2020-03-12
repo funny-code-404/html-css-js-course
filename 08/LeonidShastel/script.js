@@ -8,6 +8,9 @@ window.onload = function() {
    const lineEndGame = `<hr>`;
    let bot = {
       click () {
+         if(!this.checkingFreeCell()) {
+            return
+         };
          let pointOne = this.randomNum();
          let pointTwo = this.randomNum();
          this.setValueToArrayFoBot (pointOne, pointTwo);
@@ -17,9 +20,6 @@ window.onload = function() {
          document.getElementById(`${pointOne}${pointTwo}`).innerHTML=arr[pointOne][pointTwo];
       },
       setValueToArrayFoBot (pointOne, pointTwo) {
-         if(!this.checkingFreeCell()) {
-            return
-         }
          if (typeof(arr[pointOne][pointTwo])==`number`) {
             counter++;
             arr[pointOne][pointTwo]= counter%2 ? cross : zero;
@@ -32,7 +32,7 @@ window.onload = function() {
       },
       checkingFreeCell() {
          for (let i=0; i<arr.length; i++){
-            for(let j=0; j<arr.length; i++) {
+            for(let j=0; j<arr[i].length; j++) {
                if(typeof(arr[i][j])==`number`) {
                   return true
                };
@@ -171,14 +171,24 @@ window.onload = function() {
       lineThree.innerHTML=lineEndGame;
       switch (deg) {
          case 45: 
-            lineOne.classList.add(`winDiagonal`);
-            lineTwo.classList.add(`winDiagonal`);
-            lineThree.classList.add(`winDiagonal`);
+            lineOne.classList.add(`winDiagonalLeft`);
+            lineTwo.classList.add(`winDiagonalLeft`);
+            lineThree.classList.add(`winDiagonalLeft`);
             setTimeout(function(){
-               lineOne.classList.remove(`winDiagonal`);
-               lineTwo.classList.remove(`winDiagonal`);
-               lineThree.classList.remove(`winDiagonal`)
-            }, 2900);
+               lineOne.classList.remove(`winDiagonalLeft`);
+               lineTwo.classList.remove(`winDiagonalLeft`);
+               lineThree.classList.remove(`winDiagonalLeft`)
+            }, 2980);
+            break;
+         case -45: 
+            lineOne.classList.add(`winDiagonalRight`);
+            lineTwo.classList.add(`winDiagonalRight`);
+            lineThree.classList.add(`winDiagonalRight`);
+            setTimeout(function(){
+               lineOne.classList.remove(`winDiagonalRight`);
+               lineTwo.classList.remove(`winDiagonalRight`);
+               lineThree.classList.remove(`winDiagonalRight`)
+            }, 2980);
             break;
          case 90: 
             lineOne.classList.add(`winColumn`);

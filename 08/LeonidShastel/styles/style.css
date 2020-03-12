@@ -12,9 +12,14 @@ hr {
    transform: rotate(90deg);
 }
 
-.winDiagonal>hr {
+.winDiagonalLeft>hr {
    margin: 1.5rem 0;
    transform: rotate(45deg);
+}
+
+.winDiagonalRight>hr {
+   margin: 1.5rem 0;
+   transform: rotate(-45deg);
 }
 
 .block {
