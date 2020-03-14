@@ -9,39 +9,42 @@
   <title>Document</title>
 </head>
 <body class="body">
-<form>
-  <div class="container-output">
-      <div id="outputName">Имя:</div>
-      <div id="outputEmail">Email:</div>
-      <div id="outputPassword">Пароль:</div>
-      <div id="outputCounty">Страна:</div>
-      <div id="outputGender">Пол:</div>
+<form id="form">
+  <div class="form_item container-output">
+      <div class="container-output_item headinfo-output">Исходные данные</div>
+      <div class="container-output_item">Имя:<span id="outputName"></span></div>
+      <div class="container-output_item">Email:<span id="outputEmail"></span></div>
+      <div class="container-output_item">Пароль:<span id="outputPassword"></span></div>
+      <div class="container-output_item">Пол:<span id="outputGender"></span></div>
+      <div class="container-output_item">Страна:<span id="outputCounty"></span></div>
+      <div class="container-output_item">Ознакомлен:<span id="outputPolicity"></span></div>
   </div>
-  <div class="container-input">
+  <div class="form_item container-input">
+    <div class="container-input_item headinfo-input">Входные данные</div>
     <div class="container-input_item info">
-      <p>Name <input id="nameUser" type="text"></p>
-      <p>Email <input id="emailUser" type="email" ></p>
-      <p>Password <input id="passwordUser" type="password" ></p>
+      <label type="text" for="nameUser">Name <input id="nameUser" type="text"></label>
+      <label type="text" for="emailUser">Email  <input id="emailUser" type="email" ></label>
+      <label type="text" for="passwordUser">Password <input id="passwordUser" type="password" ></label>
     </div>
-    <div class="container-input_item gender">
-      Male:<input id="radio-gender" type="radio" name="gender" checked="checked" >  Female:<input id="radio-gender" type="radio" name="gender" >
+    <div class="container-input_item gender" id="gender">
+      <label type="text" for="genderMale">Male:</label><input id="genderMale" type="radio" name="gender" checked="checked" value="Male" >  
+      <label type="text" for="genderFemale">Female:</label><input id="genderFemale" type="radio" name="gender" value="Femail">
     </div>
     <div class="container-input_item countries">
-      <select name="county" id="county">
-        <option>Russia</option>
-        <option>Belarus</option>
-        <option>Ukraine</option>
+      <select name="country" id="country">
+        <option value="Russia">Russia</option>
+        <option value="Belarus">Belarus</option>
+        <option value="Ukraine">Ukraine</option>
       </select>
     </div>
     <div class="container-input_item policity">
-      <input type="checkbox" id="policity"> Ознакомлен с правилами сайта
+      <input type="checkbox" id="policity"><lable type="text" for="policity">Ознакомлен с правилами сайта</lable>
     </div>
     <div class="container-input_item button">
-      <input type="submit" id="submit">
+      <input type="submit" id="submit" disabled>
       <input type="reset" id="reset">
     </div>
   </div>
-
 </form>
 </body>
 </html>
