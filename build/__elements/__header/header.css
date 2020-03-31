@@ -1,0 +1,24 @@
+.header {
+  padding: 20px;
+  display: flex;
+  background-color: #333333;
+  color: #eeeeee;
+  justify-content: space-around; }
+
+.headerTitle {
+  font-size: 60px; }
+
+.headerMenu {
+  padding-top: 20px;
+  display: flex;
+  font-size: 16px;
+  line-height: 2.63; }
+  .headerMenu li {
+    margin-left: 20px; }
+    .headerMenu li a {
+      transition: .2s;
+      color: #eeeeee;
+      text-decoration: none; }
+    .headerMenu li a:hover {
+      transition: .2s;
+      color: #00aeef; }
