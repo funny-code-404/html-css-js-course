@@ -1,0 +1,33 @@
+.header{
+  width: 100%;
+  background-color: #333333;
+  .header-container{
+    width: 90%;
+    margin: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 0;
+  }
+}
+.logo{
+  h1{
+    
+    font-family: Myriad Pro;
+    font-size: 60px;
+    color: #eeeeee;
+  }
+}
+.nav{
+  padding-top: 4%;
+  nav{
+    color: #eeeeee;
+    a{
+     color:#ffffff;
+     font-size: 16px;
+     text-decoration: none;
+    }
+    a:hover{
+      color:#00aeef;
+    }
+  }
+}
