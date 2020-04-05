@@ -1,9 +1,0 @@
-@import "../components/header/header.css";
-@import "../components/main/main.css";
-@import "../components/footer/footer.css";
-@font-face{
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-body{
-  width: 100%;
-}
