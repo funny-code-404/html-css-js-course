@@ -28,15 +28,13 @@ const path = {
     css: 'build/',
     img: 'build/img/',
     root: 'build/',
-    font: 'build/fonts'
   },
   src: {
     html: 'src/*.html',
     js: 'src/js/app.js',
     scss: 'src/scss/**/*.scss',
     img: 'src/img/*',
-    root: 'src/',
-    font: 'src/fonts/*'
+    root: 'src/'
   }
 }
 
