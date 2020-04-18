@@ -1,7 +1,6 @@
 'use strict';
 
 const gulp = require('gulp');
-const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 const browserify = require('browserify');
 const babelify = require("babelify");
@@ -26,7 +25,7 @@ const path = {
   build: {
     html: 'build/',
     js: 'build/js/',
-    css: 'build/scss/',
+    css: 'build/css/',
     img: 'build/img/',
     root: 'build/',
     fonts: 'build/fonts/'
@@ -34,7 +33,7 @@ const path = {
   src: {
     html: 'src/*.html',
     js: 'src/js/app.js',
-    scss: 'src/scss/*.css',
+    scss: 'src/css/*.css',
     img: 'src/img/**/*.*',
     root: 'src/',
     fonts: 'src/fonts/**/*.*'
@@ -42,7 +41,7 @@ const path = {
   watch: {
     html: 'src/**/*.html',
     js: 'src/js/**/*.js',
-    scss: 'src/scss/**/*.scss',
+    scss: 'src/css/**/*.css',
     img: 'src/img/**/*.*',
     fonts: 'src/fonts/**/*.*'
   }
@@ -60,7 +59,6 @@ const cssBuild = () => {
         message: err.message,
     }))
     }))
-    .pipe(sass())
     .pipe(gulp.dest(path.build.css))
     .pipe(browserSync.stream());
 };
