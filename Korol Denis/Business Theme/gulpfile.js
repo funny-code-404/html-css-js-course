@@ -12,6 +12,7 @@ const buffer = require('vinyl-buffer');
 const imagemin = require('gulp-imagemin');
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
+const gcmq = require('gulp-group-css-media-queries');
 
 // npm i gulp@3.9.1 gulp-sass gulp-livereload @babel/core @babel/preset-env browserify babelify browser-sync vinyl-source-stream gulp-rename vinyl-buffer gulp-imagemin gulp-plumber gulp-notify
 // npm -g install gulp
@@ -71,7 +72,6 @@ const imgBuild = () => gulp.src(path.src.img)
     .pipe(imagemin())
     .pipe(gulp.dest(path.build.img));
 
-
 const watch = () => {
   browserSync.init({
     server: {
@@ -85,5 +85,11 @@ const watch = () => {
 
 const build = gulp.parallel(htmlBuild, cssBuild, jsBuild, imgBuild, watch);
 
+gulp.task('default', function () {
+  gulp.src('src/style.css')
+      .pipe(gcmq())
+      .pipe(gulp.dest('dist'));
+});
 gulp.task(build);
 gulp.task('default', build);
+
