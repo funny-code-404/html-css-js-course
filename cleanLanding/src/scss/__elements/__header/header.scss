@@ -1,8 +1,8 @@
 .header {
    padding: 20px;
    display: flex;
-   background-color: #333333;
-   color: #eeeeee;
+   background-color: $darkGrey;
+   color: $white;
    justify-content: space-around;
 }
 .headerTitle{
@@ -17,12 +17,12 @@
       margin-left: 20px;
       a{
          transition: .2s;
-         color: #eeeeee;
+         color: $white;
          text-decoration: none;
       };
       a:hover{
          transition: .2s;
-         color: #00aeef;
+         color: $blue;
       };
    };
 };

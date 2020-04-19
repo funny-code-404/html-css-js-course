@@ -1,16 +1,16 @@
 @mixin borderBottom() {
    padding: 5% 0;
-   border-bottom: 3px dotted rgb(204, 204, 204);
+   border-bottom: 3px dotted $grey;
 };
 @mixin blockInformation(){
    padding: 2% 2%;
    box-shadow: 2.5px 4.3px 5px 0 rgba(170, 170, 170, 0.75);
-   color: rgb(255, 255, 255);
-   background-color: rgb(0, 174, 239);
+   color: $white;
+   background-color: $blue;
    h3{
       font-size: $fontSize - 20px;
       text-align: center;
-      border-bottom: 2px dotted rgb(255, 255, 255);
+      border-bottom: 2px dotted $white;
       padding: 0 0 25px;
    };
    p{
@@ -23,7 +23,7 @@
    button{
       background-color: rgb(0, 118, 163);
       border: none;
-      color: rgb(255, 255, 255);
+      color: $white;
       line-height: 1.33;
       font-size: $fontSize - 42px;
       width: 100%;
@@ -34,7 +34,7 @@
    display: flex;
    flex-direction: column;
    padding-right: 15px;
-   border-right: 3px dotted rgb(204, 204, 204);
+   border-right: 3px dotted $grey;
    div {
       display: flex;
       justify-content: space-between;
@@ -42,7 +42,7 @@
       img{
          width: 84px;
          height: 84px;
-         background-color: rgb(204, 204, 204);
+         background-color: $grey;
       };
       div {
          width: 75%;
@@ -52,15 +52,15 @@
          font-size: $fontSize - 46px;
          font-family: Arial;
          .reviewAuthor {
-            color: rgb(85, 85, 85);
+            color: $darkGrey;
             line-height: 1.5;
          };
          .nameAuthor{
             font-weight: bold;
-            color: rgb(85, 85, 85);
+            color: $darkGrey;
          };
          .positionAuthor{
-            color: rgb(0, 174, 239);
+            color: $blue;
          }
       }
    };
@@ -89,7 +89,7 @@ $fontSize:60px;
 .mainSubTitle {
    @include borderBottom();
    font-size: $fontSize - 26px;
-   color: rgb(85, 85, 85);
+   color: $darkGrey;
    span {
       font-weight: bold;
    };
@@ -116,7 +116,7 @@ $fontSize:60px;
    h4 {
       margin-bottom: 20px;
       font-size: $fontSize - 36px;
-      color: rgb(85, 85, 85);
+      color: $darkGrey;
    };
    .lastTestimonials{
       width: 50%;
@@ -128,7 +128,7 @@ $fontSize:60px;
       font-family: Arial;
       h5 {
          font-size: $fontSize - 40px;
-         color: rgb(136, 136, 136);
+         color: $mediumGrey;
       };
       img {
          margin: 15px 0;
@@ -136,13 +136,13 @@ $fontSize:60px;
       p {
          font-size: $fontSize - 46px;
          line-height: 1.5;
-         color: rgb(85, 85, 85);
+         color: $darkGrey;
       };
       a{
          font-size: $fontSize - 46px;
          line-height: 1.43;
          text-decoration: none;
-         color: rgb(0, 174, 239);
+         color: $blue;
       };
    };
 };
