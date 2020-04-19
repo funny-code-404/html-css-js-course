@@ -1,0 +1,29 @@
+@font-face {
+  font-family: Merriweather;
+  src: url("./fonts/Merriweather-Regular.ttf");
+  font-weight: normal; }
+
+@font-face {
+  font-family: Merriweather;
+  src: url("./fonts/Merriweather-Bold.ttf");
+  font-weight: bold; }
+
+@font-face {
+  font-family: Montserrat;
+  src: url("./fonts/Montserrat-Regular.ttf");
+  font-weight: normal; }
+
+@font-face {
+  font-family: Montserrat;
+  src: url("./fonts/Montserrat-Bold.ttf");
+  font-weight: bold; }
+
+@font-face {
+  font-family: Raleway;
+  src: url("./fonts/Raleway-Regular.ttf");
+  font-weight: lighter; }
+
+@font-face {
+  font-family: Raleway;
+  src: url("./fonts/Raleway-Medium.ttf");
+  font-weight: medium; }
