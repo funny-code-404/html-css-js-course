@@ -8,15 +8,8 @@ function Slider() {
 
    let slider_now = 0;
    let slider_next;
-   console.log('ji');
-   
    slider_items[slider_now].classList.add(`slider-vision`);
    function swapSlider(e){
-      // if (e.currentTarget.id===`slider__left-arrow`){
-      //    nextItem(-1);
-      // } else {
-      //    nextItem(1);
-      // }
       (e.currentTarget.id===`slider__left-arrow`) ? nextItem(-1) : nextItem(1);
       function nextItem(a){
          slider_next=slider_now+a;
