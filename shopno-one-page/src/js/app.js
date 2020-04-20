@@ -12,7 +12,7 @@ window.onload = function(){
       whatTheSaycSectionSlider.addListner();
 
       const aboutUsSlider = new AboutUsSlider();
-      setInterval(()=>{aboutUsSlider.started()}, 3000);
+      setInterval(()=>{aboutUsSlider.started()}, 4000);
    
       const navMenu = new NavMenu();
       navMenu.moveSite();

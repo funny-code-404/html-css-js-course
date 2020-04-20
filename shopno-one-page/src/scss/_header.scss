@@ -97,6 +97,9 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+   .header {
+      height: 30vh;
+   }
    .menuOpen{
       transform: translateX(0);
       -webkit-transform: translateX(0);

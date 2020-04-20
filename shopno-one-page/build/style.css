@@ -132,6 +132,8 @@ body {
     margin-top: 10% !important; } }
 
 @media only screen and (max-width: 768px) {
+  .header {
+    height: 30vh; }
   .menuOpen {
     transform: translateX(0);
     -webkit-transform: translateX(0);
@@ -202,7 +204,8 @@ body {
     padding: 5% 0;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    overflow: hidden; }
   .about-us__slider {
     width: 35%;
     background-color: #eff0f2;
@@ -480,7 +483,8 @@ body {
     padding: 10% 0;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    overflow: hidden; }
   .what-they-says_sliders {
     width: 400vw;
     display: flex;
@@ -713,7 +717,10 @@ body {
 
 @media only screen and (max-width: 768px) {
   .about-us__slider-content {
-    top: 2.5%; }
+    top: -17%;
+    left: 14.5%; }
+  .about-us__slider-slide img {
+    width: 20%; }
   .our-services_block-button {
     letter-spacing: 1px; }
   .what-they-says_slide-photo img {

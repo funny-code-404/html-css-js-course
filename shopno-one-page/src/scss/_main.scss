@@ -38,6 +38,7 @@
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
+      overflow: hidden;
    }
    &__slider {
       width: 35%;
@@ -333,6 +334,7 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      overflow: hidden;
    }
    &_sliders {
       width: 400vw;
@@ -634,7 +636,13 @@
 @media only screen and (max-width: 768px) {
    .about-us{
       &__slider-content{
-         top: 2.5%;
+         top: -17%;
+         left: 14.5%;
+      }
+      &__slider-slide{
+         img{
+            width: 20%;
+         }
       }
    }
    .our-services{
