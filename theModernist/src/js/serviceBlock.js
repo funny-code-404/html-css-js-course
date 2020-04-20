@@ -28,9 +28,7 @@ function ServiceBlock(){
       .then((res)=>{
          return res.json();
       })
-      .then((res)=>{
-         changingButtonsWithInformation(res)
-      });
+      .then((res)=>{changingButtonsWithInformation(res)});
    };
    function changingButtonsWithInformation(jsonWorks){
       const serviceBlocks = document.getElementsByClassName('serviceBlock__item');

@@ -27,6 +27,7 @@ const path = {
     js: 'build/',
     css: 'build/',
     img: 'build/img/',
+    fonts: 'build/fonts/',
     root: 'build/',
   },
   src: {
@@ -34,6 +35,7 @@ const path = {
     js: 'src/js/app.js',
     scss: 'src/scss/**/*.scss',
     img: 'src/img/**/*',
+    fonts: 'src/fonts/*',
     root: 'src/'
   }
 }
@@ -68,8 +70,11 @@ const jsBuild = () => browserify({ entries: [path.src.js] })
   .pipe(gulp.dest(path.build.js));
 
 const imgBuild = () => gulp.src(path.src.img)
-    .pipe(imagemin())
-    .pipe(gulp.dest(path.build.img));
+  .pipe(imagemin())
+  .pipe(gulp.dest(path.build.img));
+
+const fontBuild = () => gulp.src(path.src.fonts)
+  .pipe(gulp.dest(path.build.fonts));
 
 const watch = () => {
   browserSync.init({
@@ -82,7 +87,7 @@ const watch = () => {
   gulp.watch(path.src.html, htmlBuild).on('change', browserSync.reload);
 };
 
-const build = gulp.parallel(htmlBuild, cssBuild, jsBuild, imgBuild, watch);
+const build = gulp.parallel(htmlBuild, cssBuild, jsBuild, imgBuild, fontBuild, watch);
 
 gulp.task(build);
 gulp.task('default', build);
