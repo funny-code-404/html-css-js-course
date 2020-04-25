@@ -1,0 +1,12 @@
+@import url(reset.css);
+@import "./__elements/__header/header";
+@import "./__elements/__main/main";
+@import "./__elements/__footer/footer";
+@import "./__fonts/fonts.scss";
+
+body{
+   margin: 0 auto;
+   width: 1100px;
+   height: 2000px;
+   font-family: $myriadFont;
+};
