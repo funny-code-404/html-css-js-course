@@ -1,0 +1,592 @@
+@mixin container {
+   .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+}
+
+.main_ourServices {
+   color: rgb(57, 75, 80);
+   @include openSans;
+   padding: 7% 0;
+   @include container;
+   .ourServices_blocks {
+      padding-top: 5%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+   }
+   .servicesBlock_item {
+      width: 40%;
+      margin-top: 60px;
+      display: flex;
+      justify-content: space-between;
+      i {
+         margin-right: 15px;
+         color: rgb(255, 255, 255);
+         -webkit-text-stroke: 2px rgb(112, 157, 202);
+      }
+      div {
+         width: 82%;
+      }
+      h5 {
+         @include lato;
+         font-size: 1.14rem;
+         color: rgb(57, 75, 80);
+      }
+      p {
+         @include openSans;
+         font-size: 0.95rem;
+         line-height: 1.69;
+         color: rgb(123, 123, 123);
+      }
+   }
+}
+
+.main_aboutUs {
+   background-color: rgb(255, 193, 85);
+   display: flex;
+   .aboutUs__picture {
+      width: 50%;
+   }
+   .aboutUs__info {
+      padding: 7% 5%;
+      color: rgb(255, 255, 255);
+      h4 {
+         font-size: 2.14rem;
+         @include gotham;
+         margin: 5% 0;
+      }
+      p {
+         width: 70%;
+         font-size: 0.95rem;
+         line-height: 1.85;
+         margin: 5% 0;
+      }
+      a {
+         padding: 2.5% 5%;
+         text-decoration: none;
+         color: rgb(255, 255, 255);
+         background-color: rgb(255, 193, 85);
+         border: 1px solid rgb(231, 173, 72);
+      }
+   }
+}
+
+.main_choos-price {
+   padding: 5% 0;
+   background-color: rgb(231, 237, 243);
+   .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      > div {
+         display: flex;
+      }
+   }
+   .price-container {
+      margin-top: 5%;
+   }
+   .choos-price_blocks {
+      width: 441px;
+      height: 498px;
+      @include lato;
+      > div {
+         padding: 15% 5%;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 90%;
+         text-align: center;
+         margin: 0 auto;
+         background-color: rgb(255, 255, 255);
+      }
+      h6 {
+         font-size: 1.78rem;
+         color: rgb(129, 139, 149);
+         margin: 0 0 7%;
+      }
+      .blockPrice_value {
+         margin: 0 0 7%;
+         span:first-child {
+            font-size: 2rem;
+            color: rgb(255, 187, 66);
+            vertical-align: top;
+            font-weight: bold;
+         }
+         span:nth-child(2) {
+            color: rgb(255, 187, 66);
+            font-weight: bold;
+            font-size: 4.28rem;
+         }
+         article {
+            margin: 5% 0 0;
+            font-size: 1.42rem;
+            color: rgb(129, 139, 149);
+         }
+      }
+      .blockPrice_information {
+         color: rgb(181, 187, 193);
+         line-height: 2.86;
+         font-size: 1rem;
+      }
+      button {
+         border-radius: 2px;
+         border: 1px solid rgb(255, 187, 66);
+         background-color: rgb(255, 187, 66);
+         color: rgb(255, 255, 255);
+         width: 50%;
+         margin: 10% 0 0;
+         padding: 5% 8%;
+      }
+   }
+   .choos-price_blocks:not(:first-child) {
+      margin-left: 45px;
+   }
+   .choos-price_blocks:hover {
+      transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
+      transition: 0.4s;
+      -webkit-transition: 0.4s;
+      -moz-transition: 0.4s;
+      -ms-transition: 0.4s;
+      -o-transition: 0.4s;
+      > div {
+         background-color: rgb(112, 157, 202);
+      }
+      h6 {
+         color: rgb(255, 255, 255);
+      }
+      .blockPrice_value {
+         span:first-child {
+            color: rgb(255, 255, 255);
+         }
+         span:nth-child(2) {
+            color: rgb(255, 255, 255);
+         }
+         article {
+            color: rgb(255, 255, 255);
+         }
+      }
+      .blockPrice_information {
+         color: rgb(255, 255, 255);
+      }
+   }
+   .blockPrice_border {
+      border-top: 2px solid rgb(226, 233, 240);
+   }
+}
+
+.main_howItWork {
+   padding: 5% 0;
+   @include container;
+   .step_arrow {
+      padding: 5% 0 0 21.5%;
+      img {
+         display: inline-block;
+         position: relative;
+         top: 30px;
+      }
+      img:nth-child(2) {
+         margin: 0 20% 0;
+         top: 125px;
+      }
+   }
+   .step_blocks {
+      margin-top: 5%;
+      display: flex;
+      text-align: center;
+      justify-content: space-around;
+   }
+   .step_block {
+      width: 12%;
+      i {
+         position: relative;
+         top: -50px;
+         color: rgb(255, 255, 255);
+         -webkit-text-stroke: 2px rgb(112, 157, 202);
+      }
+      h5 {
+         @include latoBold;
+         font-size: 1.43rem;
+         color: rgb(57, 75, 80);
+         margin-bottom: 5%;
+      }
+      p {
+         @include openSans;
+         font-size: 0.95rem;
+         color: rgb(123, 123, 123);
+      }
+   }
+   button {
+      margin-top: 5%;
+      color: rgb(255, 255, 255);
+      padding: 1% 2.5%;
+      background-color: rgb(255, 187, 66);
+      border-radius: 2px;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border: 1px solid rgb(255, 187, 66);
+      // margin: 0 auto;
+   }
+}
+
+.main_happyClient {
+   padding: 5% 3%;
+   background-color: rgb(255, 193, 85);
+   @include container;
+   h3,
+   h4 {
+      color: rgb(255, 255, 255) !important;
+   }
+   .clients_section {
+      margin: 5% 0 0;
+      display: flex;
+      flex-wrap: wrap;
+   }
+   .client_block {
+      padding: 3% 4%;
+      margin: 0 auto;
+      width: 40%;
+      display: flex;
+      justify-content: space-between;
+      background-color: rgb(255, 255, 255);
+      > div {
+         width: 70%;
+      }
+   }
+   .client_block:nth-child(2n) {
+      margin-left: 50px;
+   }
+   .client_block:nth-child(1n) {
+      margin-top: 2%;
+   }
+   .client_photo {
+      background-color: rgb(129, 139, 149);
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      width: 20%;
+      height: 80%;
+   }
+   .client_text {
+      @include openSans;
+      color: rgb(123, 123, 123);
+      font-size: 0.95rem;
+      line-height: 1.69;
+   }
+   .client_info {
+      margin-top: 2%;
+      @include lato;
+      color: rgb(153, 169, 174);
+      font-weight: 1rem;
+      span {
+         color: rgb(246, 119, 44);
+      }
+   }
+}
+
+.main_nevsLester {
+   padding: 5% 3%;
+   @include container;
+   .subscrive_form {
+      margin-top: 5%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      label {
+         width: 20%;
+      }
+      input {
+         border: 1px solid rgb(203, 203, 203);
+         font-size: 1rem;
+         width: 100%;
+         padding: 13px 30px;
+      }
+      i {
+         position: relative;
+         top: -32px;
+         left: 10px;
+         color: rgb(110, 110, 110);
+      }
+      button {
+         width: 20%;
+         font-size: 1rem;
+         @include lato;
+         background-color: rgb(255, 187, 66);
+         border: 1px solid rgb(255, 187, 66);
+         color: rgb(255, 255, 255);
+         padding: 13px 30px;
+      }
+      label:not(:first-child),
+      button {
+         margin-left: 90px;
+      }
+   }
+   .main_menu-bar {
+      margin-top: 2.5%;
+      display: flex;
+      justify-content: space-around;
+      font-size: 0.95rem;
+      @include lato;
+      color: rgb(57, 75, 80);
+      a {
+         text-decoration: none;
+      }
+      li:not(:first-child) {
+         margin-left: 30px;
+      }
+   }
+   .map_block {
+      margin-top: 2.5%;
+   }
+   .telCall {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 2.5%;
+      color: rgb(57, 75, 80);
+      font-size: 2.24rem;
+      a {
+         margin-left: 1%;
+         text-decoration: none;
+         color: rgb(57, 75, 80);
+      }
+   }
+   .socialNet {
+      margin-top: 2.5%;
+      display: flex;
+      justify-content: center;
+      color: rgb(112, 157, 202);
+      i:not(:first-child) {
+         margin-left: 30%;
+      }
+      i:hover {
+         color: rgb(255, 193, 85);
+      }
+   }
+}
+
+.title_decoration {
+   h3 {
+      font-size: 2.14rem;
+      @include gotham;
+      color: rgb(57, 75, 80);
+   }
+   h4 {
+      margin-top: 5px;
+      font-size: 1.14rem;
+      color: rgb(117, 136, 141);
+      text-align: center;
+   }
+}
+
+@media only screen and (max-width: 1824px) {
+   .main_aboutUs .aboutUs__picture img {
+      width: 600px;
+   }
+   .main_choos-price .choos-price_blocks {
+      width: 281px;
+      height: 317px;
+      font-family: "Lato";
+   }
+   .main_choos-price .choos-price_blocks:not(:first-child) {
+      margin-left: 20px;
+   }
+   .main_choos-price .choos-price_blocks button {
+      width: 58%;
+   }
+   .main_howItWork .step_arrow {
+      padding: 3% 0 0 18%;
+   }
+   .main_howItWork .step_arrow img:nth-child(2) {
+      margin: 0px 15% 0;
+      top: 80px;
+   }
+   .main_howItWork .step_arrow img {
+      top: 10px;
+   }
+   .main_happyClient .client_block {
+      width: 39%;
+   }
+   .main_happyClient .client_photo {
+      height: 100%;
+   }
+}
+
+@media only screen and (max-width: 1224px) {
+   .main_ourServices .ourServices_blocks {
+      padding-top: 0%;
+   }
+   .main_aboutUs .aboutUs__picture img {
+      width: 530px;
+   }
+   .main_howItWork .step_arrow {
+      padding: 3% 0 0 17%;
+   }
+   .main_howItWork .step_arrow img:nth-child(2) {
+      margin: 0px 11% 0;
+   }
+   .main_happyClient .client_block {
+      width: 38%;
+   }
+   .main_happyClient .client_photo {
+      height: 75%;
+   }
+   .main_nevsLester .subscrive_form i {
+      position: relative;
+      top: -23px;
+   }
+   .main_nevsLester .subscrive_form input {
+      padding: 10px 20px;
+   }
+   .main_nevsLester .subscrive_form label:not(:first-child),
+   .main_nevsLester .subscrive_form button {
+      margin-left: 60px;
+   }
+   .main_nevsLester .subscrive_form button {
+      height: 25px;
+   }
+   .map_block img {
+      width: 90%;
+   }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+   .main_ourServices {
+      padding: 10% 0;
+   }
+   .main_aboutUs .aboutUs__picture img {
+      width: 390px;
+   }
+   .main_choos-price .choos-price_blocks > div {
+      width: 75%;
+   }
+   .main_choos-price .choos-price_blocks:not(:first-child) {
+      margin-left: -32px;
+   }
+   .main_choos-price .choos-price_blocks button {
+      width: 61%;
+   }
+   .step_arrow img {
+      width: 17%;
+   }
+   .main_howItWork .step_arrow img:nth-child(2) {
+      margin: 0px 14% 0;
+      top: 60px;
+   }
+   .main_howItWork .step_block i {
+      top: -20px;
+   }
+   .main_happyClient .client_block {
+      width: 37%;
+   }
+   .main_nevsLester .subscrive_form i {
+      top: -17px;
+   }
+};
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+   .main_ourServices {
+      padding: 15% 0 !important;
+      h4{
+         text-align: center;
+      }
+   }
+   .main_ourServices .servicesBlock_item {
+      width: 100%;
+      margin-top: 35px;
+      display: flex;
+      div{
+         width: 78%;
+      }
+   }
+   .main_aboutUs {
+      flex-direction: column;
+      .aboutUs__picture img {
+         width: 320px;
+      }
+   }
+   .main_choos-price {
+      padding: 5% 0;
+      background-color: rgb(231, 237, 243);
+      .container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+         }
+      }
+      .price-container {
+         margin-top: 5%;
+      }
+      .choos-price_blocks {
+         > div {
+            padding: 4% 5%;
+            width: 75%;
+         }
+         button {
+            font-size: 1rem;
+         }
+      }
+      .choos-price_blocks:not(:first-child) {
+         margin-left: 0;
+         margin-top: -20px;
+      }
+   }
+   .main_happyClient .client_photo {
+      height: 47px;
+   }
+   .step_arrow{
+      display: none;
+   }      
+   .step_blocks{
+      flex-wrap: wrap;
+      .step_block{
+         width: 50%;
+         i{
+            top: -5px;
+         }
+      }
+      .step_block:nth-child(3){
+         margin-top: 14px;
+      }
+      .step_block:nth-child(4){
+         margin-top: 14px;
+      }
+   }
+   .main_happyClient .clients_section {
+      flex-direction: column;
+   }
+   .main_happyClient .client_block {
+      width: 100%;
+   }
+   .main_happyClient .client_block:nth-child(2n) {
+      margin-left: 0;
+   }
+   .main_nevsLester .subscrive_form button {
+      font-size: 0.5rem;
+      height: 33px;
+      width: 85px;
+   }
+   .main_nevsLester .subscrive_form label:not(:first-child), .main_nevsLester .subscrive_form button {
+      margin-left: 20%;
+   }
+   .main_nevsLester .main_menu-bar li:not(:first-child) {
+      margin-left: 15px;
+   }
+   .main_nevsLester .main_menu-bar {
+      font-size: 0.5rem;
+   }
+}
