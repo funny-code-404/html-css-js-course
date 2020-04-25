@@ -1,0 +1,6 @@
+@import "__sidebar/main__sidebar.css";
+@import "__article/main__article.css";
+
+.main {
+  display: flex;
+}

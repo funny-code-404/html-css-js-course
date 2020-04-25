@@ -1,0 +1,79 @@
+.container {
+  padding: 150px;
+  outline: 1px solid red;
+  position: relative;
+}
+.container__item {
+  background: green;
+  width: 100px;
+  height: 100px;
+  right: 500px;
+  position: absolute;
+  /* animation: move-animation 3s; */
+}
+.container__item:hover {
+  animation-name: hover-animation;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; /* reverse, alternate-reverse */
+  animation-delay: 1s;
+}
+
+.styled__input {
+  border: 3px solid black;
+  margin-bottom: 50px;
+  border-radius: 5px;
+  background-color: blueviolet;
+}
+.input1__label {
+  position: relative;
+  z-index: 1;
+}
+.before {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  z-index: 2;
+}
+
+.transition__item {
+  margin-top: 200px;
+  width: 120px;
+  height: 120px;
+  background-color: red;
+}
+
+.transition__item:hover {
+  transform: rotate(20deg) scale(2) translate(220px, 220px);
+  transition-duration: 3s;
+  transition-timing-function: ease;
+  transition-delay: 1s;
+  background: green;
+
+  transition-property: 'background';
+}
+
+@keyframes move-animation {
+  from {
+    right: -1000px;
+    transform: rotate(0);
+  }
+  to {
+    right: 500px;
+    transform: rotate(1440deg);
+  }
+}
+
+@keyframes hover-animation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(2880deg);
+  }
+}

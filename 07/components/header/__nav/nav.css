@@ -1,0 +1,22 @@
+.nav {
+  border: 1px solid red;
+  align-items: center;
+  display: flex;
+}
+
+.nav__item {
+  padding: 5px;
+  background-color: blue;
+  margin: 5px;
+}
+
+.nav__item_font {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.nav_theme_dark {
+  background-color: aquamarine;
+}
