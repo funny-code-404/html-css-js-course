@@ -1,0 +1,34 @@
+html{
+   font-size: 15.8px;
+}
+body{
+   box-sizing: border-box;
+}
+.container {
+   width: 80%;
+   margin: 0 auto;
+};
+
+@media only screen and (max-width : 1824px) {
+   html{
+     font-size: 10px;
+   } 
+};
+
+@media only screen and (max-width : 1224px) {
+   html{
+      font-size: 8.44px;
+   };
+};
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+   html{
+      font-size: 6.32px;
+   };
+};
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+   html{
+      font-size: 10px;
+   }
+};
