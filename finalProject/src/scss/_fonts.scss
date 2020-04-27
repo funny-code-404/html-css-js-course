@@ -1,0 +1,54 @@
+@font-face{
+   font-family: 'Century Gothic';
+   src: url('./fonts/Century Gothic.ttf');
+   font-weight: 400;
+}
+
+@font-face{
+   font-family: 'Futura PT';
+   src: url('./fonts/Futura PT.ttf');
+   font-weight: 400;
+}
+
+@font-face{
+   font-family: 'open';
+   src: url('./fonts/opensans.ttf');
+   font-weight: 200;
+}
+
+@font-face{
+   font-family: 'open';
+   src: url('./fonts/openbold.ttf');
+   font-weight: 600;
+}
+
+@font-face{
+   font-family: 'open';
+   src: url('./fonts/opensem.ttf');
+   font-weight: 400;
+}
+
+@mixin centuryGo {
+   font-family: 'Century Gothic';
+   font-weight: 400;
+}
+
+@mixin futuraPT {
+   font-family: 'Futura PT';
+   font-weight: 400;
+}
+
+@mixin open {
+   font-family: 'open';
+   font-weight: 200;
+}
+
+@mixin openBold {
+   font-family: 'open';
+   font-weight: 600;
+}
+
+@mixin openBolder {
+   font-family: 'open';
+   font-weight: 400;
+}

@@ -1,0 +1,67 @@
+@mixin blueButton {
+   display: inline-block;
+   text-decoration: none;
+   margin-top: 5%;
+   border-radius: 3px;
+   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+   border: solid 1px rgb(44, 108, 214);
+   background-color: rgb(66, 133, 244);
+   padding: 2% 7%;
+}
+
+@mixin greenFooter {
+   display: -webkit-box;
+   display: flex;
+   justify-content: space-around;
+   -webkit-box-align: center;
+   align-items: center;
+   width: 100%;
+   padding: 2% 0;
+   background-color: rgb(130, 180, 64);
+   h3 {
+      @include open;
+      font-size: 2.5rem;
+      line-height: 1.2;
+      letter-spacing: normal;
+      color: rgb(255, 255, 255);
+   }
+   a {
+      @include openBold;
+      text-decoration: none;
+      font-size: 1.3rem;
+      border-radius: 3px;
+      border: solid 1px rgb(255, 255, 255);
+      background-color: rgb(130, 180, 64);
+      color: rgb(255, 255, 255);
+      padding: 2% 7%;
+   }
+}
+
+@mixin decorationTitleSection {
+   @include open;
+   font-size: 2.6rem;
+   line-height: 0.83;
+   color: rgb(51, 51, 51);
+}
+
+@mixin decorationSubTitleSection {
+   @include open;
+   font-size: 1.3rem;
+   color: rgb(153, 153, 153);
+   line-height: 2;
+}
+
+@mixin decorationInfoSection {
+   @include open;
+   font-size: 1rem;
+   line-height: 2.14;
+   color: rgb(87, 87, 87);
+}
+
+@import 'home/style';
+@import 'demos/style';
+@import 'features/style';
+@import 'shortcodes/style';
+@import 'shop/style';
+@import 'blog/style';
+@import 'portfolio/style';
