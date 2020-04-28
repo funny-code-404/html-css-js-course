@@ -52,6 +52,7 @@
       position: absolute;
       display: flex;
       width: 400vw;
+      transition: 1s ease;
    }
    &_slide {
       width: 100vw;
@@ -207,7 +208,7 @@
    }
 }
 
-$width-image: 480px;
+$width-image: 100%;
 $height-image: 420px;
 
 .main_your-pictures-block {
@@ -375,6 +376,7 @@ $height-image: 420px;
       position: absolute;
       display: flex;
       width: 400vw;
+      transition: 1s ease;
    }
    &_slide {
       width: 100vw;
@@ -971,9 +973,6 @@ $height-image: 420px;
    }
 
    .main_your-pictures-block {
-      &_header-image {
-         width: 256px;
-      }
       &_header-image:nth-child(1) {
          height: 224px;
       }
@@ -1056,9 +1055,6 @@ $height-image: 420px;
       }
    }
    .main_your-pictures-block {
-      &_header-image {
-         width: 192px;
-      }
       &_header-image:nth-child(1) {
          height: 168px;
       }
@@ -1118,9 +1114,6 @@ $height-image: 420px;
       }
    }
    .main_your-pictures-block {
-      &_header-image {
-         width: 120px;
-      }
       &_header-image:nth-child(1) {
          height: 105px;
       }
