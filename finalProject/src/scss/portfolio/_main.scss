@@ -11,8 +11,12 @@
       margin-left: 3%;
       color: rgb(193, 193, 193);
       @include open;
+      cursor: pointer;
+      text-align: center;
+      width: 4%;
    }
    &_selected{
+      transition: .3s;
       border-top: 1px solid rgb(66, 133, 244);
    }
 }

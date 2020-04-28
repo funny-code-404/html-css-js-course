@@ -6,6 +6,8 @@
    &_menu{
       ul{
          display: flex;
+         align-items: center;
+         height: 100%;
       }
    }
    &_menu-button{
@@ -15,6 +17,7 @@
          letter-spacing: 0.65px;
          color: rgb(51, 51, 51);
          transition: .2s;
+         font-size: 1rem;
       }
       padding-right: 5%;
       

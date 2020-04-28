@@ -5,7 +5,12 @@
 .main_shop {
    text-align: left;
    padding-bottom: 5%;
-   > .container {
+   >.container{
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+   &_container{
+      display: flex;
       flex-wrap: wrap;
       justify-content: center;
    }
@@ -14,6 +19,12 @@
       height: 440px;
       background-color: rgb(232, 232, 232);
       margin: 1%;
+      img{
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
    }
    &_product:nth-child(3) {
       width: 82%;
@@ -119,6 +130,12 @@
    &_slide {
       width: 25vw;
       height: 100%;
+      img{
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
    }
    &_slide:nth-child(even) {
       background-color: rgb(223, 225, 229);

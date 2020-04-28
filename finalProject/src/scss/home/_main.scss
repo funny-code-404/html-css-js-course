@@ -4,6 +4,16 @@
    color: $color;
 }
 
+.loader_block{
+   background-repeat: no-repeat;
+   background-image: url('./img/loader.svg');
+   background-position: center;
+   background-size: auto;
+}
+.opacity_block{
+   opacity: .2;
+}
+
 .main_slider {
    background-color: rgb(105, 105, 105);
    &-nav {
@@ -229,6 +239,14 @@ $height-image: 420px;
    }
    &_header-image {
       width: $width-image;
+      background-position: center;
+      background-size: cover;
+      img{
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
    }
    &_header-image:nth-child(1) {
       height: $height-image;

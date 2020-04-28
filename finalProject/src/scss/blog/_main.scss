@@ -1,6 +1,3 @@
-@mixin createPost {
-}
-
 .main_blog-section {
    display: flex;
    justify-content: center;
@@ -11,9 +8,15 @@
       flex-direction: column;
    }
    &_post-section {
-      padding: 3.5%;
+      padding: 3.5% 0;
       margin-right: 7%;
       width: 61%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+   }
+   &_post-section-body{
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
@@ -28,7 +31,11 @@
       }
    }
    &_nav-btn {
-      margin-left: 6%;
+      font-size: 1rem;
+      text-align: center;
+      width: 25%;
+      display: inline-block;
+      margin-left: 4%;
       @include open;
       color: rgb(153, 153, 153);
       padding: 3.5%;
@@ -38,10 +45,11 @@
    }
    &_nav-btn:hover {
       background-color: rgb(66, 133, 244);
+      border: solid 1px rgb(66, 133, 244);
       color: rgb(255, 255, 255);
    }
-   &_nav-select {
-      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+   &_nav-btn-select {
+      box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
       border: solid 1px rgb(236, 236, 236);
       background-color: rgb(255, 255, 255);
    }
@@ -62,6 +70,12 @@
       background-size: cover;
       background-position: center;
       background-color: rgb(204, 204, 204);
+      img{
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
    }
    &-header_avatar::before {
       content: "";
@@ -103,6 +117,12 @@
       overflow: hidden;
       background-size: cover;
       background-position: center;
+      img{
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
    }
    &-main_picture::before {
       content: "";
@@ -132,6 +152,7 @@
       padding-left: 0;
       background: none;
       border: none;
+      font-size: 1rem;
    }
    &-footer_btn:hover {
       transform: scale(1.1);
@@ -153,6 +174,7 @@
          background-color: rgb(255, 255, 255);
          color: rgb(204, 204, 204);
          padding: 2% 6%;
+         font-size: 1rem;
       }
       input::placeholder {
          color: rgb(204, 204, 204);
@@ -170,6 +192,12 @@
       display: flex;
       flex-direction: column;
       margin-bottom: 4%;
+      img{
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
    }
    &_block-title {
       @include openBold;
@@ -221,14 +249,14 @@
       display: flex;
       flex-wrap: wrap;
    }
-   a {
-      text-decoration: none;
+   span {
       color: rgb(153, 153, 153);
       border: solid 1px rgb(230, 230, 230);
       background-color: rgb(255, 255, 255);
       padding: 3.5%;
       margin-right: 2%;
       margin-bottom: 2%;
+      font-size: 1rem;
    }
 }
 
@@ -241,6 +269,7 @@
       padding: 3% 6%;
       width: 70%;
       margin-bottom: 2%;
+      font-size: 1rem;
    }
    input::placeholder {
       color: rgb(204, 204, 204);
@@ -254,6 +283,7 @@
       color: rgb(255, 255, 255);
       width: 82%;
       padding: 3% 6%;
+      font-size: 1rem;
    }
    span {
       padding-left: 23%;
@@ -274,6 +304,12 @@
       background-position: center;
       margin-left: 1%;
       margin-bottom: 1%;
+      img{
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
    }
    .photo-from-unsplash_container-item::before {
       content: "";

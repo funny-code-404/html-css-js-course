@@ -13,8 +13,6 @@ class Slider_without_radio {
    moveSlider(directionSlider) {
       this.checkingPosition(directionSlider);
       this.slider.setAttribute(`style`, `transform: translateX(${this.positionMove}vw)`);
-      console.log(this.maxPositionMove);
-      
    }
    checkingPosition(directionSlider) {
       this.positionMove += directionSlider;
