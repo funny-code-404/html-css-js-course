@@ -1,0 +1,20 @@
+.main_shortcodes_contact {
+   &-header{
+      background-color: rgb(255, 255, 255);
+   }
+   &-header-form {
+      input,select,textarea {
+         border: solid 1px rgb(232, 232, 232);
+         background-color: rgb(255, 255, 255);
+      }
+      textarea{
+         resize: none;
+      }
+   }
+   &-footer{
+      background-color: rgb(55, 206, 255);
+      a{
+         background-color: rgb(55, 206, 255);
+      }
+   }
+}
