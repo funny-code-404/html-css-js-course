@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "FuturaPT";
+  src: url("futura-pt-bold.ttf");
+}
+@font-face {
+  font-family: "Open-Sans-Bold";
+  src: url("open-sans-bold.ttf");
+}
+@font-face {
+  font-family: "Open-Sans-Light";
+  src: url("open-sans-bold.ttf");
+}
+@font-face {
+  font-family: "CenturyGothic";
+  src: url("century-gothic.ttf");
+}
+@font-face {
+  font-family: "Open-Sans-Semibold";
+  src: url("open-sans-semibold.ttf");
+}
+@font-face {
+  font-family: "Open-Sans";
+  src: url("open-sans.ttf");
+}

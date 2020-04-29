@@ -1,0 +1,313 @@
+@primary-color: #ffffff;
+
+@sans-light: "Open-Sans-Light", sans-serif;
+@sans-semibold: "Open-Sans-Semibold", sans-serif;
+@sans: "Open-Sans",sans-serif;
+@sans-bold: "Open-Sans-Bold",sans-serif;
+
+.margin_padding {
+	margin: 0 20%;
+}
+
+.introdusing {
+  background: #eef3f8;
+}
+
+.intro_container {
+    .margin_padding;
+    display: flex;
+    justify-content: space-between;
+      .info {
+          padding: 14rem 0;
+          flex: 1 1 45%;
+          .head {
+              font-family: @sans-light;
+              font-size: 2.25rem;
+              color: #333333;
+              font-style: normal;
+              padding-bottom: 3%;
+            }
+          .subtitle {
+              font-family: @sans-light;
+              font-size: 1.125rem;
+              color: #999999;
+              font-style: normal;
+              line-height: 2;
+              padding-bottom: 3%;           
+            }
+          .text {
+              font-family: @sans;
+              font-size: 0.875rem;
+              color: #575757;
+              font-style: normal;
+              line-height: 2.14;
+              padding-bottom: 3%;
+            }
+            .btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 0.875rem;
+                font-family: @sans-bold;
+                font-weight: bold;
+                background-color: #4285f4;
+                border-color: #2c6cd6;
+                color: @primary-color;
+                width: 16.875rem;
+                padding: 2% 0;
+                .image_icon {
+                    padding-right: 1%;
+                }
+            }
+        }
+}
+
+.introdusing_image {
+    flex: 1 1 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .image {
+      width: 30rem;
+      height: 30rem;
+      margin: 0;
+    }
+}
+
+/*portfolio*/
+
+.portfolio_title {
+    .margin_padding;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6.875rem 0;
+    .head {
+        font-family: @sans;
+        font-size: 2.25rem;
+        font-weight: 300;
+        font-style: normal;
+        color: #333333;
+        padding-bottom: 1%;
+    }
+    .text {
+        font-family: @sans;
+        font-size: 1.125rem;
+        font-weight: 300;
+        font-style: normal;
+        line-height: 2;
+        color: #999999;
+        text-align: center;
+        padding: 0 27%;
+    }
+}
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    .img_square {
+        width: 30rem;
+        height: 26.25rem;
+    }
+    .img_rectangle {
+        width: 30rem;
+        height: 52.5rem;
+    }
+}
+
+.column img {
+    vertical-align: middle;
+}
+
+/*action*/
+
+.action {
+    background-color: #82b440;
+    padding: 4.375rem 0;
+}
+
+.action_container {
+    .margin_padding;
+    display: flex;
+    .text {
+        flex: 1 1 70%;
+        font-family: @sans;
+        font-size: 1.875rem;
+        color: @primary-color;
+        font-family: normal;
+        padding-top: 1%;
+    }
+    .btn {
+        flex: 1 1 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: @sans-bold;
+        font-weight: bold;
+        background-color: #82b440;
+        border-color: @primary-color;
+        color: @primary-color;
+        padding: 2% 0;
+        width: 16.875rem;
+        height: 3.438rem;
+        }
+}
+
+/*features*/
+
+.features {
+    padding: 6.25rem 0;
+}
+
+.colomn-view {
+    max-width: 100%;
+}
+
+.features_container {
+    .margin_padding;
+    display: flex;
+    justify-content: space-between;
+    .features_column {
+        display: flex;
+        padding-bottom: 25%;
+    }
+}
+
+.info {
+    padding-left: 10%;
+    .info_header {
+        font-style: @sans-semibold;
+        font-weight: bold;
+        font-size: 1.125rem;
+        color: #333333;
+        padding-bottom: 7%;
+    }
+    .info_text {
+        font-family: @sans;
+        font-style: normal;
+        font-size: 0.875rem;
+        color: #575757;
+        padding-right: 15%;
+        line-height: 2.14;
+    }
+}
+/*introdusing macbook*/
+
+.intro_macbook {
+    background: #eef3f8;
+  }
+  
+  .intro_macbook_container {
+      padding-right: 20%;
+      display: flex;
+      justify-content: space-between;
+        .info {
+            padding: 14rem 0;
+            flex: 1 1 45%;
+            .head {
+                font-family: @sans-light;
+                font-size: 2.25rem;
+                color: #333333;
+                font-style: normal;
+                padding-bottom: 3%;
+              }
+            .subtitle {
+                font-family: @sans-light;
+                font-size: 1.125rem;
+                color: #999999;
+                font-style: normal;
+                line-height: 2;
+                padding-bottom: 3%;           
+              }
+            .text {
+                font-family: @sans;
+                font-size: 0.875rem;
+                color: #575757;
+                font-style: normal;
+                line-height: 2.14;
+                padding-bottom: 3%;
+              }
+              .btn {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 0.875rem;
+                  font-family: @sans-bold;
+                  font-weight: bold;
+                  background-color: #4285f4;
+                  border-color: #2c6cd6;
+                  color: @primary-color;
+                  width: 16.875rem;
+                  padding: 2% 0;
+                  .image_icon {
+                      padding-right: 1%;
+                  }
+              }
+          }
+  }
+  
+  .intro_image {
+      flex: 1 1 55%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .image {
+        width: 40rem;
+        height: 25rem;
+        margin: 0;
+      }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .introdusing {
+        .intro_container {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .features {
+        .features_container {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .action {
+        .action_container {
+            display: flex;
+            flex-direction: column;
+            .text {
+                text-align: center;
+            }
+            .btn {
+                margin-top: 5%;
+            }
+        }
+    }
+    .intro_macbook {
+        .intro_macbook_container {
+            display: flex;
+            flex-direction: column;
+            .info {
+                padding-left: 10%;
+            }
+            .intro_image {
+                flex: 1 1 100%;
+                padding-top: 10%;
+                .image {
+                    width: 25rem;
+                    height: 10rem;
+                }
+            }
+        }
+    }
+}
+

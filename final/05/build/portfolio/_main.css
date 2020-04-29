@@ -1,0 +1,245 @@
+.margin_padding {
+  margin: 0 20%;
+}
+.introdusing {
+  background: #eef3f8;
+}
+.intro_container {
+  margin: 0 20%;
+  display: flex;
+  justify-content: space-between;
+}
+.intro_container .info {
+  padding: 14rem 0;
+  flex: 1 1 45%;
+}
+.intro_container .info .head {
+  font-family: "Open-Sans-Light", sans-serif;
+  font-size: 2.25rem;
+  color: #333333;
+  font-style: normal;
+  padding-bottom: 3%;
+}
+.intro_container .info .subtitle {
+  font-family: "Open-Sans-Light", sans-serif;
+  font-size: 1.125rem;
+  color: #999999;
+  font-style: normal;
+  line-height: 2;
+  padding-bottom: 3%;
+}
+.intro_container .info .text {
+  font-family: "Open-Sans", sans-serif;
+  font-size: 0.875rem;
+  color: #575757;
+  font-style: normal;
+  line-height: 2.14;
+  padding-bottom: 3%;
+}
+.intro_container .info .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-family: "Open-Sans-Bold", sans-serif;
+  font-weight: bold;
+  background-color: #4285f4;
+  border-color: #2c6cd6;
+  color: #ffffff;
+  width: 16.875rem;
+  padding: 2% 0;
+}
+.intro_container .info .btn .image_icon {
+  padding-right: 1%;
+}
+.introdusing_image {
+  flex: 1 1 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.introdusing_image .image {
+  width: 30rem;
+  height: 30rem;
+  margin: 0;
+}
+/*portfolio*/
+.portfolio_title {
+  margin: 0 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6.875rem 0;
+}
+.portfolio_title .head {
+  font-family: "Open-Sans", sans-serif;
+  font-size: 2.25rem;
+  font-weight: 300;
+  font-style: normal;
+  color: #333333;
+  padding-bottom: 1%;
+}
+.portfolio_title .text {
+  font-family: "Open-Sans", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 2;
+  color: #999999;
+  text-align: center;
+  padding: 0 27%;
+}
+.row {
+  display: -ms-flexbox;
+  /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap;
+  /* IE10 */
+  flex-wrap: wrap;
+}
+.column {
+  -ms-flex: 25%;
+  /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+}
+.column .img_square {
+  width: 30rem;
+  height: 26.25rem;
+}
+.column .img_rectangle {
+  width: 30rem;
+  height: 52.5rem;
+}
+.column img {
+  vertical-align: middle;
+}
+/*action*/
+.action {
+  background-color: #82b440;
+  padding: 4.375rem 0;
+}
+.action_container {
+  margin: 0 20%;
+  display: flex;
+}
+.action_container .text {
+  flex: 1 1 70%;
+  font-family: "Open-Sans", sans-serif;
+  font-size: 1.875rem;
+  color: #ffffff;
+  font-family: normal;
+  padding-top: 1%;
+}
+.action_container .btn {
+  flex: 1 1 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open-Sans-Bold", sans-serif;
+  font-weight: bold;
+  background-color: #82b440;
+  border-color: #ffffff;
+  color: #ffffff;
+  padding: 2% 0;
+  width: 16.875rem;
+  height: 3.438rem;
+}
+/*features*/
+.features {
+  padding: 6.25rem 0;
+}
+.colomn-view {
+  max-width: 100%;
+}
+.features_container {
+  margin: 0 20%;
+  display: flex;
+  justify-content: space-between;
+}
+.features_container .features_column {
+  display: flex;
+  padding-bottom: 25%;
+}
+.info {
+  padding-left: 10%;
+}
+.info .info_header {
+  font-style: "Open-Sans-Semibold", sans-serif;
+  font-weight: bold;
+  font-size: 1.125rem;
+  color: #333333;
+  padding-bottom: 7%;
+}
+.info .info_text {
+  font-family: "Open-Sans", sans-serif;
+  font-style: normal;
+  font-size: 0.875rem;
+  color: #575757;
+  padding-right: 15%;
+  line-height: 2.14;
+}
+/*introdusing macbook*/
+.intro_macbook {
+  background: #eef3f8;
+}
+.intro_macbook_container {
+  padding-right: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+.intro_macbook_container .info {
+  padding: 14rem 0;
+  flex: 1 1 45%;
+}
+.intro_macbook_container .info .head {
+  font-family: "Open-Sans-Light", sans-serif;
+  font-size: 2.25rem;
+  color: #333333;
+  font-style: normal;
+  padding-bottom: 3%;
+}
+.intro_macbook_container .info .subtitle {
+  font-family: "Open-Sans-Light", sans-serif;
+  font-size: 1.125rem;
+  color: #999999;
+  font-style: normal;
+  line-height: 2;
+  padding-bottom: 3%;
+}
+.intro_macbook_container .info .text {
+  font-family: "Open-Sans", sans-serif;
+  font-size: 0.875rem;
+  color: #575757;
+  font-style: normal;
+  line-height: 2.14;
+  padding-bottom: 3%;
+}
+.intro_macbook_container .info .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-family: "Open-Sans-Bold", sans-serif;
+  font-weight: bold;
+  background-color: #4285f4;
+  border-color: #2c6cd6;
+  color: #ffffff;
+  width: 16.875rem;
+  padding: 2% 0;
+}
+.intro_macbook_container .info .btn .image_icon {
+  padding-right: 1%;
+}
+.intro_image {
+  flex: 1 1 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro_image .image {
+  width: 40rem;
+  height: 25rem;
+  margin: 0;
+}

@@ -1,0 +1,219 @@
+@primary-color: #ffffff;
+@background: #212121;
+
+
+@sans-light: "Open-Sans-Light", sans-serif;
+@sans-semibold: "Open-Sans-Semibold", sans-serif;
+@sans: "Open-Sans",sans-serif;
+@sans-bold: "Open-Sans-Bold",sans-serif;
+@font-head: "futuraPT",sans-serif;
+@logo_text: "CenturyGothic", sans-serif;
+
+.margin_padding {
+	margin: 0 20%;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.font_styles {
+    font-family: @sans;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+}
+
+.line {
+    background: linear-gradient(to left, #4cdafe, #bfb8fe);
+}
+
+/*Contact Form*/
+
+.contact_form {
+    background-color: @background;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5.938rem 0;
+    .form_head {
+        .font_styles;
+        font-size: 2.25rem;
+        font-weight: 300;
+        color: @primary-color;
+        padding-bottom: 1%;
+    }
+    .line {
+        .line;
+        width: 5%;
+        height: 2px;
+    }
+    .text {
+        line-height: 2;
+        .font_styles;
+        font-size: 1.125rem;
+        font-weight: 300;
+        color: #999999;
+        padding: 1% 30%;
+        text-align: center;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    .input {
+        width: 31.25rem;
+        height: 3.75rem;
+        background-color: @background;
+        border: 1px solid #999999;
+        color: #999999;
+        .font_styles;
+        font-size: 1rem;
+        font-weight: 300;
+        padding-left: 5%;
+        text-align: left;
+        margin: 2% 0;
+    }
+    .select {
+        width: 31.25rem;
+        height: 3.75rem;
+        background-color: @background;
+        border-color: #999999;
+        color: #999999;
+        .font_styles;
+        font-size: 1rem;
+        font-weight: 300;
+        text-align: left;
+        padding-left: 5%;
+        margin: 2% 0;
+    }
+    .btn {
+        .center;
+        flex-direction: row;
+        width: 31.25rem;
+        height: 3.75rem;
+        background-color: #4285f4;
+        border-color: #2c6cd6;
+        margin-top: 2%;
+        .img {
+            padding: 0 1%;
+        }
+        .text_btn {
+            .font_styles;
+            font-size: 0.875rem;
+            font-weight: bold;
+            color: @primary-color;
+        }
+    }
+}
+
+/*Contacts*/
+
+.contacts {
+    background-color: #242427;
+    padding: 7.5rem;
+}
+
+.contacts_contain {
+    .margin_padding;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact_label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .head {
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        font-size: 1.875rem;
+        font-weight: bold;
+        font-family: @font-head;
+        color: @primary-color;
+        text-transform: uppercase;
+        padding-top: 10%;
+    }
+    .text {
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        font-size: 0.688rem;
+        font-weight: normal;
+        font-family: @logo_text; 
+        color: rgba(255, 255, 255, 0.5);
+        text-transform: uppercase;
+    }
+}
+
+.contact {
+    .head {
+        .font_styles;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: @primary-color;
+        padding-bottom: 15%;
+    }
+    .text {
+        .font_styles;
+        font-size: 0.875rem;
+        font-weight: normal;
+        color: #999999;
+        padding-bottom: 10%;
+    }
+}
+
+/*Footer*/
+
+.footer {
+    background-color: @background;
+    padding: 2.5rem 0;
+}
+
+.footer_contain {
+    .margin_padding;
+    display: flex;
+    justify-content: space-between;
+    .footer_text {
+        .font_styles;
+        font-size: 0.875rem;
+        font-weight: normal;
+        color: #999999;
+        .span {
+            color: @primary-color;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .form {
+        .center;
+        .input {
+            width: 300px;
+        }
+        .select {
+            width: 300px;
+        }
+        .btn {
+            width: 300px; 
+        }
+    }
+    .contacts_contain{
+        flex-direction: column;
+        .contact_label {
+            text-align: center;
+        }
+        .contact {
+            text-align: center;
+            padding-top: 10%;
+        }
+    }
+    .footer_contain {
+        flex-direction: column;
+    }
+ }
