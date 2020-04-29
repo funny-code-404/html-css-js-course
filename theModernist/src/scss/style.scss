@@ -1,0 +1,43 @@
+@import url(reset.css);
+@import "./__elements/__header/header";
+@import "./__elements/__main/main";
+@import "./__elements/__footer/footer";
+@import "./__fonts/fonts";
+
+html{
+   font-size: 52px;
+}
+
+a{
+   text-decoration: none;
+};
+
+.header__item, .main__item, .footer-projectAbout {
+   width: 80%;
+   margin: 0 auto;
+   font-family: $georgiaFont;
+};
+
+@media only screen and (max-width : 1824px) {
+   html{
+      font-size: 33px;
+   };
+};
+
+@media only screen and (max-width : 1224px) {
+   html{
+      font-size: 30px;
+   };
+};
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+   html{
+      font-size: 20.8px;
+   };
+};
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+   html{
+      font-size: 8.6px;
+   }
+};

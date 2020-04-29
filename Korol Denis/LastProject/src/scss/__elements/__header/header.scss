@@ -1,0 +1,83 @@
+@import "./../../__colors/color.scss";
+.header{
+  width: 100%;
+  &-container{
+    width: 80%;
+    margin: 0 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .logo{
+      width: 20%;
+      padding: 2% 0;
+    }
+    .nav{
+      width: 80%;
+      display: flex;
+      justify-content: flex-end;
+      padding:2% 0;
+      ul{
+        display: flex;
+        flex-direction: row;
+        margin-right: 10%;
+        li{
+          margin: 0 2%;
+          a{
+            font-family: OpenSans;
+            color: $font-color-header;
+            text-decoration: none;
+          }
+          a:hover{
+            color: $font-color-header-hover;
+          }
+        }
+      }
+      a{
+        padding-left: 3%;
+      }
+    }
+  }
+}
+.header-dark{
+  background-color: $bg-header-dark;
+  a{
+    color: $font-color-header-dark;
+  }
+  a:hover{
+    color: $font-color-header-dark-hover;
+  }
+}
+
+@media only screen and (max-width: 1824px) {
+  .header{
+    &-container{
+      flex-direction: column;
+      .logo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .nav{
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .header{
+    &-container{
+      .nav{
+        justify-content: center;
+        ul{
+          justify-content: center;
+          flex-direction: column;
+          width: 100%;
+          align-items: center;
+          
+        }
+      }
+    }
+  }
+}
