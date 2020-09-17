@@ -1,0 +1,27 @@
+table
+ {
+    
+    font-size: 18px;
+    text-align: center;
+    border-collapse: collapse;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+}
+th, td:first-child {
+    font-weight: bold;
+    background-color: #f00a34;
+    padding: 15px 35px;
+    color: #fff;
+    
+}
+
+td {
+    background-color: #f5a4b3;
+}
+td, th {
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    border-color: #fff;
+}
