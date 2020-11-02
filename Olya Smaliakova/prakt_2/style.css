@@ -1,0 +1,28 @@
+.table {
+    border: 5px solid black;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.table tr {
+    border: 1px solid black;
+}
+
+.table tr th {
+    border: 3px solid black;
+    padding: 5px;
+}
+
+/*.vert td {
+    transform: rotate(90deg);
+    transform-origin: left top 0;
+   }*/
+
+.table tr td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.vertical {
+    writing-mode: lr-tb;
+}
