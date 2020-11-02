@@ -1,0 +1,61 @@
+.lala {
+    position: relative;
+    display: block;
+    background-color: rgb(63, 63, 63);
+    border: 3px solid white;
+    color: white;
+    text-align: center;
+    /*font-size: 22px;*/
+}
+
+body > div {
+    position: relative;
+    width: 45%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.contact {
+    padding: 10%;
+}
+
+.form-input {
+    position: relative;
+    display: block;
+    width: 90%;
+    border-radius: 30px;
+    padding: 20px 15px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin: 20px 0;
+    font-weight: bold;
+    box-shadow: inset 5px -5px 44px -15px #020202;
+    color: white;
+}
+
+.input-icon {
+    background-size: 25px 25px;  
+    background-repeat: no-repeat; /*Убираем повтор изображения*/   
+    background-position: 10px; /*Позиционируем*/   
+    outline: none; /*убираем стандартную обводку браузера*/ 
+    padding-left: 15%;
+    width: 80%;
+}
+
+.icon-cont {
+    background-image: url('../image/contact.png');
+}
+
+.icon-tel {
+    background-image: url('../image/call.png');
+}
+
+.button {
+    background-color: black;
+    color: white;
+    width: 100%;
+    box-shadow: inset 0px 0px 56px -22px #ffffff;
+}
