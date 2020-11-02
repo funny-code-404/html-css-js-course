@@ -1,0 +1,33 @@
+p {
+
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 70px;
+    margin: 20px;
+    text-decoration-line: underline;
+    
+    font-size: 26px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: cornflowerblue;
+    border-top-color: blue;
+    border-top-style: double;
+    border-top-width: 10px;
+        
+    border-bottom-color: red;
+    border-bottom-style: dashed;
+    border-bottom-width: 3px;
+
+    border-left-color: green;
+    border-left-style: solid;
+    border-left-width: 3px;
+
+    border-right-color: blue;
+    border-right-style: dotted;
+    border-right-width: 3px;
+    
+} 
+img {
+    border-radius: 30%;
+}
