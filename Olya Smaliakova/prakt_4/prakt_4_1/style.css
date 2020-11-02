@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('19919.ttf');
+}
+
+header {
+    width: 100%;
+    padding: 10px;    
+    border: 1px solid black;
+}
+
+header > * {
+    width: 45%;
+    display: inline-block;
+}
+
+.navig {
+    text-align: end;
+    padding: 10px;
+}
+
+.navig > div {
+    max-width: 100px;
+    display: inline-block;
+    border: 1px solid black;
+    font-family: 'MyFont';
+}
