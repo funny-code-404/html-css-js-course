@@ -1,0 +1,258 @@
+@import "./reset.css";
+
+@font-face {
+  font-family: "MyriadPro-Regular";
+  src: url("../fonts/8143.otf");
+}
+
+@font-face {
+  font-family: "Montserrat bold";
+  src: url("../fonts/ofont.ru_Montserrat.ttf");
+}
+
+@font-face {
+  font-family: "Merriweather-Bold";
+  src: url("../fonts/ofont.ru_Merriweather.ttf");
+}
+
+@font-face {
+  font-family: "Raleway Regular";
+  src: url("../fonts/ofont.ru_Raleway.ttf");
+}
+
+/*H E A D E R*/
+
+.wrapper {
+  background-color: #ffffff;
+  font-family: MyriadPro-Regular;
+  color: #777879;
+  text-align: center;
+}
+
+.header {
+  text-align: center;
+  background-color: #eff0f2;
+  width: 100%;
+  height: 805px;
+}
+
+.header__navigation {
+  display: grid;
+  color: #170f1c;
+  grid-template-columns: repeat(10, 1fr);
+  padding: 65px 120px 0px 150px;
+}
+
+.navigation-greet-item-label {
+  grid-column-start: 1;
+  grid-column-end: 10;
+}
+
+.navigation-button {
+  padding-left: 10px;
+  border: 5px solid black;
+  width: 100px;
+  height: 28px;
+  padding-top: 7px;
+  padding-left: 0;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
+.navigation-button-letter {
+  color: #b2f2ee;
+  font-weight: 100;
+  text-shadow: #c3c4c6 0.5px 0.5px 0, #c3c4c6 -0.5px -0.5px 0,
+    #c3c4c6 -0.5px 0.5px 0, #c3c4c6 0.5px -0.5px 0;
+  font-size: 21px;
+}
+
+.message-hello {
+  font-size: 2rem;
+  padding-top: 200px;
+}
+
+.header-message-hello {
+  text-transform: uppercase;
+  position: relative;
+  line-height: 40px;
+}
+
+.button-contact {
+  margin-top: 150px;
+  height: 50px;
+  width: 225px;
+  border: 1px solid #777879;
+  position: relative;
+  left: 38%;
+}
+
+.icon-glass {
+  position: absolute;
+  background-image: url(../img/Glass.png);
+  width: 85px;
+  height: 85px;
+  background-size: cover;
+  right: 0;
+  margin-right: 17%;
+}
+
+/*H E A D E R*/
+
+/*SECTION ABOUT*/
+
+.about-us {
+  background-color: #f8fafa;
+  height: 985px;
+}
+
+.about-us-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 5% 8.8% 8% 11%;
+}
+
+.about-us-item__image {
+  background-image: url(../img/Group16.png);
+  width: 480px;
+  height: 562px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.big-title,
+.middle-title {
+  text-transform: uppercase;
+  line-height: 3.5rem;
+}
+
+.big-title,
+.middle-title-black {
+  color: #181919;
+  font-weight: bolder;
+}
+
+.big-title {
+  font-size: 2.375rem;
+  padding-top: 125px;
+  font-family: "Montserrat bold";
+}
+
+.middle-title {
+  font-size: 1.25rem;
+  font-family: "Merriweather-Bold";
+}
+
+.about-us-item__text,
+.our-services-item {
+  text-align: left;
+  line-height: 2rem;
+  font-family: "Raleway Regular";
+  font-size: 0.8rem;
+}
+
+/*SECTION featured works*/
+
+.featured-works-image {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 7% 9%;
+  height: 750px;
+}
+
+/*SECTION featured works*/
+
+/*SECTION our services*/
+
+.our-services {
+  background-color: #f9fbfb;
+}
+
+.our-services__table {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 1%;
+  grid-row-gap: 1%;
+  margin: 7% 9%;
+}
+
+.our-services-item {
+  color: white;
+  padding: 0px 65px 0px 65px;
+  padding-top: 60px;
+  height: 310px;
+  background-color: #606060;
+  grid-column-gap: 5%;
+  grid-row-gap: 5%;
+  position: relative;
+}
+
+.our-services-item:hover {
+  color: black;
+  background-color: #70f5eb;
+  cursor: pointer;
+  background-image: none;
+}
+
+.services-item-1,
+.services-item-3 {
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+
+.services-item-2 {
+  background-image: url(../img/Rectangle2.png);
+}
+
+.services-item-2,
+.services-item-4 {
+  grid-column-start: 6;
+  grid-column-end: 10;
+}
+
+.services-item-3 {
+  background-image: url(../img/Rectangle3.png);
+}
+
+.services-item-4 {
+  background-image: url(../img/Rectangle4.png);
+}
+
+.services-item-5 {
+  background-image: url(../img/Rectangle5.png);
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.services-item-6 {
+  background-image: url(../img/Rectangle6.png);
+  grid-column-start: 4;
+  grid-column-end: 10;
+}
+
+.background_icon {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.icon-rectangle {
+  position: absolute;
+  bottom: 55px;
+}
+
+.services-button {
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  position: absolute;
+  bottom: 55px;
+}
+
+.services-button::after {
+  content: url(../img/arrow.png);
+  padding-left: 25px;
+}
+
+/*SECTION our services*/
