@@ -1,0 +1,16 @@
+div a {
+    color: green;
+}
+
+p > a {
+    color: coral;
+}
+
+p ~ a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: indigo;
+}
+
+div + a {
+    text-decoration-color: cornflowerblue;
+}

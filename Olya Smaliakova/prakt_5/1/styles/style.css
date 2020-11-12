@@ -1,0 +1,88 @@
+section {
+    display: block;
+    background-color: rgb(169, 76, 192);
+    width: 65%;
+    padding: 5%;
+}
+
+section > div {
+    display: inline-block;
+}
+
+.ava {
+    position: relative;
+    top: -170px;
+    width: 25%;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.lala {
+    position: relative;
+    width: 60%;
+    background-color: rgb(197, 197, 197);
+    border-radius: 5%;
+    border-color: transparent;
+    padding: 5%;
+}
+
+.form-input {
+    display: block;
+    width: 90%;
+    border-radius: 10px;
+    padding: 20px 15px;
+    background-color: white;
+    border: none;
+    margin: 20px 0;
+    font-weight: bold;
+    color: grey;
+    outline: none;
+}
+
+.kvadr {
+    position: absolute;
+    top: 70px;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: rgb(197, 197, 197);
+    transform: rotate(135deg);
+}
+
+.form-input:focus {
+    border: 2px solid violet;
+}
+
+.lost {
+    background-color: transparent;
+    text-align: center;
+}
+
+.button {
+    background-color: violet;
+    width: 100%;
+}
+
+.input-icon {
+    background-size: 25px 25px;  
+    background-repeat: no-repeat;   
+    background-position: 10px; 
+    outline: none; 
+    padding-left: 15%;
+    width: 80%;
+}
+
+.icon-cont {
+    background-image: url('../image/deliver.png');
+}
+
+.icon-tel {
+    background-image: url('../image/suspect.png');
+}
+
+img {
+    position: relative;
+    width: 80%;
+}
