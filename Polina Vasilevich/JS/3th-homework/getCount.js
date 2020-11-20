@@ -1,14 +1,14 @@
 //2. Написать функцию, котора считает все указанные симоволы в строке, 
 // например: getCount("Строка", "a") - должна вернуть 1.
 
-function getCount(str, symbol) {
+function getCountChar(str, char) {
     let count = 0;
     for(let i = 0; i < str.length; i++) {
-        if(str[i] === symbol) {
+        if(str[i].toLowerCase() === char) {
             count += 1;
         }
     }
-    return `${symbol} --- ${count}`;
+    return `There are ${count} "${char}" in "${str}".`;
 }
 
-console.log(getCount('Ананас', 'а'));
+console.log(getCountChar('Ананас', 'а'));

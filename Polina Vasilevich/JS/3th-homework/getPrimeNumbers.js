@@ -2,9 +2,9 @@
 //     до которого осуществляется поиск, стартует - с 0. результатом должен быть возвращен массив;   
 //     простое число - число, которое делится без остатка только на самого себя и на 1)
 
-function getSimpleNumbers(finishNum) {
+function getPrimeNumbers(lastNum) {
     const numArr = [];
-    for(let i = 0; i < finishNum + 1; i++) {
+    for(let i = 0; i < lastNum + 1; i++) {
         let count = 0;
         for(let j = 0; j < i; j++) {
             if(!(i % j)) {
@@ -21,4 +21,4 @@ function getSimpleNumbers(finishNum) {
 
 num = 12;
 
-console.log(getSimpleNumbers(num));
+console.log(getPrimeNumbers(num));

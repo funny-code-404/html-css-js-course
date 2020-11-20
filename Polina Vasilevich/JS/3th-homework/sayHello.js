@@ -2,7 +2,7 @@
 // (если возраст больше 18 поздороваться "Здравствйте" + имя, если нет - "Привет" + имя).
 
 function sayHello(name, age) {
-    return (age >= 18) ? `Здравстуйте, ${name}` : `Привет, ${name}`;
+    return (age >= 18) ? `Здравствуйте, ${name}` : `Привет, ${name}`;
 }
 
 console.log(sayHello('Polina', 16));

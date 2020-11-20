@@ -2,28 +2,28 @@
 // двузначные - двузначных, трезначные - в массив трех значных чисел. 
 // результатом вернуть двумерный массив (массив из массивов результатов).
 
-function getRankNumber(numArray) {
+function getRankNumber(numArray = []) {
 
-    const firstNumbers = [];
-    const secondNumbers = [];
-    const thirtNumbers = [];
-    const totalNumbers = [];
+    const singleDigitNum = [];
+    const twoDigitNum = [];
+    const threeDigitNum = [];
+    const totalArr = [];
      
     for(let i = 0; i < numArray.length; i++) {
         if(numArray[i].toString().length === 1) {
-            firstNumbers.push(numArray[i]);
+            singleDigitNum .push(numArray[i]);
         } else if(numArray[i].toString().length === 2) {
-            secondNumbers.push(numArray[i]);
+            twoDigitNum.push(numArray[i]);
         } else if(numArray[i].toString().length === 3) {
-            thirtNumbers.push(numArray[i]);
+            threeDigitNum.push(numArray[i]);
         }
     }
 
-    totalNumbers.push(firstNumbers, secondNumbers, thirtNumbers);
-    return totalNumbers;
+    totalArr.push(singleDigitNum, twoDigitNum, threeDigitNum);
+    return totalArr;
 }
 
 arr = [1, 20, 345, 232323, 222, 22, 2];
-console.log(getRankNumber(arr));
+console.log(getRankNumber());
 
 

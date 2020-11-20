@@ -5,18 +5,15 @@
 function getEnding(num) {
     const lastNumber = num % 10;
     const doubleLastNumbers = num % 100;
-    if(doubleLastNumbers === 0 || (doubleLastNumbers > 4 && doubleLastNumbers < 20)) {
-        return `${num} рублЕЙ`
-    } else if(lastNumber > 1 && lastNumber < 5){
-        return `${num} рублЯ`
-    } else if(lastNumber === 1) {
-        return `${num} рублЬ`
-    }
+
+    return  doubleLastNumbers === 0 || doubleLastNumbers > 4 && doubleLastNumbers < 20 ? `${num} рублЕЙ` :
+            lastNumber > 1 && lastNumber < 5 ? `${num} рублЯ`:
+            lastNumber === 1 ? `${num} рублЬ`: `${num} рублЕЙ`;
 }
 
-let testStr1 = 200000021;
+let testStr1 = 20000;
 let testStr2 = 333333;
-let testStr3 = 5;
+let testStr3 = 225;
 
 console.log(getEnding(testStr1));
 console.log(getEnding(testStr2));

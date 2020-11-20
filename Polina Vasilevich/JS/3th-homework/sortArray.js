@@ -2,20 +2,15 @@
 
 function sortArray(arr, isDesc = false) {
     let temp = 0;
-    if(isDesc) {
-        for(let i = 0; i <= arr.length - 1; i++) {
-            for(let j = 0; j <= arr.length - i - 1; j++) {
+    for(let i = 0; i <= arr.length - 1; i++) {
+        for(let j = 0; j <= arr.length - i - 1; j++) {
+            if(isDesc) {
                 if(arr[j] < arr[j + 1]) {
                     temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
                 }
-            }
-    
-        }
-    } else {
-        for(let i = 0; i <= arr.length - 1; i++) {
-            for(let j = 0; j <= arr.length - i - 1; j++) {
+            } else {
                 if(arr[j] > arr[j + 1]) {
                     temp = arr[j];
                     arr[j] = arr[j + 1];
