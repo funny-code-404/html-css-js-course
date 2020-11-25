@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+
+    <script>
+        // JavaScript source code
+        /*1. Написать функцию приветствия, которая принимает имя и возраст (если возраст больше 18 поздороваться "Здравствйте" + имя, если нет - "Привет" + имя).
+        2а. Написать функцию, котора считает все указанные симоволы в строке, например: getCount("Строка", "a") - должна вернуть 1.
+        2. Написать функцию, которая принимает массив, и собирает все однозначные числа в отдельный массив однозначных чисел, двузначные - двузначных, трезначные - в массив трех значных чисел. результатом вернуть двумерный массив (массив из массивов результатов).
+        3. Написать функцию, которая заменяет все пробелы в строке на тире.
+        4. Написать функцию поиска простых чисел в ряде (функция принимает предельное значение, до которого осуществляется поиск, стартует - с 0. результатом должен быть возвращен массив;   простое число - число, которое делится без остатка только на самого себя и на 1)
+        5. Написать функцию сортировки массива (дополнительно, определить параметром, в какую стороу сортировать)
+        6. Написать функцию, которая выводит правильное склонение слова рубль в зависимости от входных параметров суммы: например: getResult(12) - "12 рублЕЙ", getResult(3) - "3 рубля", getResult(71) - "71 рублЬ",
+        7. Написать функцию, которая копирует один объект в другой*/
+
+        function greeting(name, age) {
+            if (age >= 18) alert("Здравствуйте, " + name);
+            else alert("Привет, " + name);
+        }
+        function getCount(str, char) {
+            let kol = 0;
+            for (let i = 0; i < str.length; i++) 
+                if (str[i] === char[0])  kol++; 
+            
+            return kol;
+        }
+        function arrSegment(arr) {
+            mas1 = [];
+            mas2 = [];
+            mas3 = [];
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] < 10) mas1.push(arr[i]);
+                if (arr[i] >= 10 && arr[i] < 100) mas2.push(arr[i]);
+                if (arr[i] >= 100 && arr[i] < 1000) mas3.push(arr[i]);
+            }
+            res = [[],[]];
+            for (let i = 0; i < mas1.length; i++)
+                res[0].push(mas1[i]);
+            for (let i = 0; i < mas2.length; i++)
+                res[1].push(mas2[i]);
+            for (let i = 0; i < mas3.length; i++)
+                res[3].push(mas3[i]);
+            return res;
+        }
+
+        function s_to_d(str) {
+            let res = '';
+            for (let i = 0; i < str.length; i++) {
+                res+=str[i] === ' ' ? '-' : str[i];
+            }
+            return res;
+        }
+        function simpleNumber(end) {
+            let res = [];
+            let flag;
+            for (let i = 0; i <= end; i++) {
+                flag = 0;
+                for (let j = 2; j < i; j++)
+                    if (i % j == 0) flag = 1;
+                if (flag == 0) res.push(i);
+            }
+            return res;
+        }
+        function arrSort(arr, isTop = 1) {
+            let temp;
+            if (isTop) {
+                for (let i = 0; i < arr.length; i++)
+                    for (let j = 0; j < arr.length - i - 1; j++)
+                        if (arr[j] > arr[j + 1]) {
+                            temp = arr[j];
+                            arr[j] = arr[j + 1];
+                            arr[j + 1] = temp;
+                        }
+            }
+            else {
+                for (let i = 0; i < arr.length; i++)
+                    for (let j = 0; j < arr.length -1-i; j++)
+                        if (arr[j] < arr[j + 1]) {
+                            temp = arr[j];
+                            arr[j] = arr[j + 1];
+                            arr[j + 1] = temp;
+                        }
+            }
+            return arr;
+        }
+        function rubles(ammount) {
+            if ((ammount % 100 >= 11 && ammount % 100 <= 19) || ammount % 10 >= 5 || ammount % 10 == 0) return ammount + "рублей";
+            if (ammount % 10 >= 2 && ammount % 10 <= 4) return ammount + "рубля";
+            if (ammount % 10 == 1) return ammount + "рубль";
+        }
+        function copyObject(ob) {
+           
+        }
+
+        let user = {
+            name: "Julia",
+            age: 18,
+            email: "ylia@gmail.com"
+        }
+
+        greeting("Юля", 22);
+        greeting("Алеся", 10);
+
+        console.log("В строке " + getCount("Моя строка содержит символы", "о") + " о");
+        console.log(s_to_d("Ну давайте заменим пробелы в этой строке"));
+        console.log("Простые числа до 100", simpleNumber(100));
+        for (let i = 0; i < 200; i++) {
+            console.log(rubles(i));
+        }
+        let mass = [1,8,34,56,23,89,5,3,7];
+        console.log(arrSort(mass));
+        console.log(arrSort(mass, 0));
+        console.log(arrSegment(mass));
+     
+
+    </script>
+</body>
+</html>
