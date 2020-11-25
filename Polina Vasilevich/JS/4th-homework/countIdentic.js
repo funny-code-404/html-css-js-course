@@ -1,21 +1,44 @@
 // // 3. Напишите функцию countIdentic(arr), которая возвращает
 // //  количество повторяющихся элементов в массиве.
-
-////#1
+/////#1
 function countIdentic(arr) {
-    const doubleNum = [];
+    const countNum = {};
     let count = 0;
-    for(let i = 0; i < arr.length; i++) {
-        for(let j = i + 1; j < arr.length; j++) {
-            if(arr[i] === arr[j] && !doubleNum.includes(arr[i])) {
-                doubleNum.push(arr[i]);   
-                count++;
-            } 
+    arr.forEach(item => {
+        if (!(item in countNum)) {
+            countNum[item] = 1;
+        } else {
+            countNum[item]++;
+        }
+    });
+
+    for (let item in countNum) {
+        if(countNum[item] > 1) {
+            count++;
         }
     }
 
-    console.log(count);
+    return count;
 }
+
+console.log(countIdentic([3, 3, 7, 7, 3, 3, 4, 5, 5, 8, 8, 8])); // 4
+console.log(countIdentic([15,14,13,19,13,14,14,14,7,9,9])); // 3
+
+////#1
+// function countIdentic(arr) {
+//     const doubleNum = [];
+//     let count = 0;
+//     for(let i = 0; i < arr.length; i++) {
+//         for(let j = i + 1; j < arr.length; j++) {
+//             if(arr[i] === arr[j] && !doubleNum.includes(arr[i])) {
+//                 doubleNum.push(arr[i]);   
+//                 count++;
+//             } 
+//         }
+//     }
+
+//     console.log(count);
+// }
 
 
 // /////#2
@@ -71,23 +94,3 @@ function countIdentic(arr) {
 // countIdentic([4, 15, 14, 13, 19, 13, 14, 14, 14, 7, 9, 9, 4, 6]);
 
 
-// /////#4
-// function countIdentic(arr) {
-//     const countNum = {};
-//     arr.forEach(item => {
-//         if (!(item in countNum)) {
-//             countNum[item] = 1;
-//         } else {
-//             countNum[item] += 1;
-//         }
-//     });
-
-//     for (num in countNum) {
-//         console.log(`${num} --- ${countNum[num]}`)
-//     }
-
-
-// }
-
-// console.log(countIdentic([3, 3, 7, 7, 3, 3, 4, 5, 5, 8, 8, 8])); // 4
-// // countIdentic([15,14,13,19,13,14,14,14,7,9,9]) // 3
