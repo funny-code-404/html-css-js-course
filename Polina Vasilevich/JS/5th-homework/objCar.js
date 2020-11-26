@@ -45,22 +45,32 @@ const car = {
         return "very fast";
     }
   },
-
   valueOf() {
+    return this.gear;
+  },
+  // При попытке сложить объект car с числом - число должно складываться в свойство speed и speed
+  // должна возвращаться.
+  // Если скорость больше 5 - должно быть выведено сообщение "Warning! Your speed is too high!"
+
+  add(num) {
+    this.gear = this + num;
+    if (this.gear >= 5) {
+      return "Warning! Your speed is too high!";
+    }
     return this.gear;
   },
 };
 
-console.log(car.gear);
-console.log(car.changeGear());
-console.log(car.changeGear());
-console.log(car.changeGear());
-console.log(car.changeGear(1));
-console.log(car.changeGear(1));
-console.log(car.changeGear(1));
-console.log(car.changeGear(1));
+// console.log(car.gear);
+// console.log(car.changeGear());
+// console.log(car.changeGear());
+// console.log(car.changeGear());
+// console.log(car.changeGear(1));
+// console.log(car.changeGear(1));
+// console.log(car.changeGear(1));
+// console.log(car.changeGear(1));
 console.log(car.changeGear(1));
 console.log(car.changeGear(1));
 console.log(car.getInfo());
 
-// console.log(car + 11);
+console.log(car.add(3));
