@@ -8,11 +8,7 @@
 function getData() {
   const obj = {
     getCountKeys() {
-      let count = 0;
-      for (let in obj) {
-        count++;
-      }
-      return `Object has ${count} keys.`;
+      return `Object has ${Object.keys(obj).length} keys.`;
     },
   };
 
