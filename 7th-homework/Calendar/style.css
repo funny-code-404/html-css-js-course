@@ -1,0 +1,22 @@
+table {
+  border-collapse: collapse;
+  background: #e8edff;
+
+  font-size: 20px;
+}
+
+th {
+  background: #b9c9fe;
+  padding: 10px;
+}
+
+td {
+  padding: 5px;
+  text-align: center;
+}
+
+caption {
+  padding: 10px;
+  font-size: 24px;
+  color: #039;
+}
