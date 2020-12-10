@@ -1,0 +1,33 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* #attempts {
+  height: 50px;
+} */
+
+#map {
+  /* width: 100%; */
+  grid-column: 1 / 4;
+  height: 100vh;
+  background: url(./img/map.jpg) no-repeat center center;
+  background-size: contain;
+
+  position: relative;
+}
+
+#cross {
+  width: 4.5%;
+  height: 6%;
+
+  position: absolute;
+  top: 52%;
+  left: 50.8%;
+
+  /* border: 1px solid red; */
+}
+
+#result {
+  text-align: center;
+}
