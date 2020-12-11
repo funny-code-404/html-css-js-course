@@ -3,31 +3,39 @@
   grid-template-columns: repeat(4, 1fr);
 }
 
-/* #attempts {
-  height: 50px;
-} */
-
 #map {
-  /* width: 100%; */
   grid-column: 1 / 4;
   height: 100vh;
-  background: url(./img/map.jpg) no-repeat center center;
+  background: url(./img/map.png) no-repeat center center;
   background-size: contain;
 
   position: relative;
 }
 
 #cross {
-  width: 4.5%;
-  height: 6%;
+  /* width: 4.5%;
+  height: 6%; */
 
+  width: 40px;
+  height: 40px;
+  background: url(./img/cross.png) no-repeat center center;
+  background-size: contain;
   position: absolute;
-  top: 52%;
-  left: 50.8%;
-
-  /* border: 1px solid red; */
+  /* top: 52%;
+  left: 50.8%; */
+  /* 
+  border: 5px solid red; */
 }
 
 #result {
   text-align: center;
+}
+
+#attempts {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#logs {
+  font-size: 16px;
 }
