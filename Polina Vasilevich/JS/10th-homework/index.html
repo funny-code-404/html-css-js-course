@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Forms</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="main-form">
+      <form id="first-form" class="form-view">
+        <input
+          id="name"
+          name="name"
+          type="text"
+          class="input-view"
+          placeholder="*Name"
+        />
+        <input
+          id="password"
+          name="password"
+          type="password"
+          class="input-view"
+          placeholder="*Password"
+        />
+        <input
+          id="email"
+          name="email"
+          type="email"
+          class="input-view"
+          placeholder="*Email"
+        />
+        <select name="city" id="select" class="input-view">
+          <option disabled selected>City</option>
+          <option name="minsk" value="minsk">Minsk</option>
+          <option name="london" value="london">London</option>
+          <option name="warsaw" value="warsaw">Warsaw</option>
+        </select>
+      </form>
+
+      <form id="secondForm" class="form-view">
+        <label class="label-view">
+          <input type="checkbox" name="option1" />Trial</label
+        >
+
+        <label class="label-view"
+          ><input type="checkbox" name="option2" />Subscribe</label
+        >
+        <label class="label-view"
+          ><input type="checkbox" name="option3" />Terms and conditions</label
+        >
+        <input
+          class="comment input-view"
+          type="text"
+          name="comment"
+          placeholder="Any comment..."
+        />
+      </form>
+
+      <div class="button-container">
+        <button id="send" class="button-view">Send</button>
+        <button id="resetButton" class="button-view">Reset</button>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
