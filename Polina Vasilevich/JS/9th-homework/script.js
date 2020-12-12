@@ -4,6 +4,7 @@ const result = document.getElementById("logs");
 const countAttempts = document.getElementById("attempts");
 let counter = 0;
 
+///задать положение крестика на карте
 function setCrossPosition() {
   const crossWidth = cross.clientWidth;
   const crossHeight = cross.clientHeight;
@@ -18,13 +19,13 @@ function setCrossPosition() {
     Math.random() * (mapHeight - crossHeight)
   )}px`;
 
-  return [positionLeft, positionTop];
+  cross.style.left = positionLeft;
+  cross.style.top = positionTop;
 }
 
-const positionCross = setCrossPosition();
-cross.style.left = positionCross[0];
-cross.style.top = positionCross[1];
+setCrossPosition();
 
+///получить координаты крестика на карте
 function getCordinatesCross() {
   const crossClientRect = cross.getBoundingClientRect();
   const crossClientX1 = crossClientRect.x;
