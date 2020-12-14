@@ -44,14 +44,18 @@ function removeMessageAboutError() {
 const handleBlurInput = (e) => {
   if (e.target.value.length) {
     e.target.style.borderColor = "black";
-    const error = e.target.nextElementSibling;
+    const error = document.getElementById(`${e.target.name}Error`);
     error.style.display = "none";
+    if (e.target.getAttribute("type") === "checkbox") {
+      e.target.style.outlineColor = "transparent";
+    }
   }
 };
 
 name.addEventListener("blur", handleBlurInput);
 password.addEventListener("blur", handleBlurInput);
 email.addEventListener("blur", handleBlurInput);
+termsCheckBox.addEventListener("blur", handleBlurInput);
 
 const handleSendClick = (e) => {
   e.preventDefault();
