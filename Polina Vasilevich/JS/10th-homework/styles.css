@@ -2,22 +2,32 @@
 #secondForm {
   display: grid;
   grid-template-columns: 35% 60%;
-  /* grid-template-rows: repeat(3, 1fr); */
-  grid-template-columns: repeat(auto-fill, 1fr);
   justify-content: space-between;
   column-gap: 20px;
-  row-gap: 20px;
+  row-gap: 10px;
 }
 
-#select {
+.email-container {
+  grid-column: 1;
+}
+
+.city-container {
   grid-column: 2;
   grid-row: 1;
-
   font-size: 20px;
 }
 
-#email {
-  grid-column: 1;
+#first-form input,
+#first-form select {
+  width: 100%;
+}
+
+.error {
+  margin: 0;
+  margin-left: 10px;
+  display: none;
+  color: red;
+  font-size: 18px;
 }
 
 .input-view,
@@ -49,13 +59,17 @@
   text-align: right;
 }
 
+#send:disabled:hover {
+  box-shadow: none;
+  background-color: white;
+}
+
 #send,
 #resetButton {
   padding: 10px;
   width: 20%;
   margin-left: 20px;
   margin-right: 30px;
-
   box-shadow: 3px 3px 10px black;
 }
 
@@ -71,9 +85,11 @@
 }
 
 /* for second form */
+
 #secondForm label:nth-of-type(2) {
   grid-column: 1;
 }
+
 #secondForm label:nth-of-type(3) {
   grid-column: 1;
 }
@@ -81,10 +97,6 @@
 .comment {
   grid-column: 2;
   grid-row: 1 / 4;
-}
-
-.comment::placeholder {
-  text-align: top;
 }
 
 .label-view {

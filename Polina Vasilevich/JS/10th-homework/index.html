@@ -1,66 +1,102 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <title>Forms</title>
+
     <link rel="stylesheet" href="./styles.css" />
   </head>
+
   <body>
-    <div class="main-form">
-      <form id="first-form" class="form-view">
-        <input
-          id="name"
-          name="name"
-          type="text"
-          class="input-view"
-          placeholder="*Name"
-        />
-        <input
-          id="password"
-          name="password"
-          type="password"
-          class="input-view"
-          placeholder="*Password"
-        />
-        <input
-          id="email"
-          name="email"
-          type="email"
-          class="input-view"
-          placeholder="*Email"
-        />
-        <select name="city" id="select" class="input-view">
-          <option disabled selected>City</option>
-          <option name="minsk" value="minsk">Minsk</option>
-          <option name="london" value="london">London</option>
-          <option name="warsaw" value="warsaw">Warsaw</option>
-        </select>
-      </form>
+    <form id="main-form">
+      <fieldset id="first-form" class="form-view">
+        <div class="name-container">
+          <input
+            id="name"
+            name="name"
+            type="text"
+            class="input-view"
+            placeholder="*Name"
+          />
 
-      <form id="secondForm" class="form-view">
+          <p id="nameError" class="error">Please, fill in the field "Name".</p>
+        </div>
+
+        <div class="password-container">
+          <input
+            id="password"
+            name="password"
+            type="password"
+            class="input-view"
+            placeholder="*Password"
+          />
+
+          <p id="passwordError" class="error">
+            Please, fill in the field "Password".
+          </p>
+        </div>
+
+        <div class="email-container">
+          <input
+            id="email"
+            name="email"
+            type="email"
+            class="input-view"
+            placeholder="*Email"
+          />
+
+          <p id="emailError" class="error">
+            Please, fill in the field "Email".
+          </p>
+        </div>
+
+        <div class="city-container">
+          <select name="city" id="select" class="input-view">
+            <option disabled selected>City</option>
+            <option name="minsk" value="minsk">Minsk</option>
+            <option name="london" value="london">London</option>
+            <option name="warsaw" value="warsaw">Warsaw</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <fieldset id="secondForm" class="form-view">
         <label class="label-view">
-          <input type="checkbox" name="option1" />Trial</label
+          <input type="checkbox" name="trial" />Trial</label
         >
+        <label class="label-view"
+          ><input type="checkbox" name="subscribe" />Subscribe</label
+        >
+        <div class="checkbox-container">
+          <label class="label-view"
+            ><input type="checkbox" name="terms" />Terms and conditions</label
+          >
+          <p id="termsError" class="error">
+            Please, check this box if you want to proceed.
+          </p>
+        </div>
 
-        <label class="label-view"
-          ><input type="checkbox" name="option2" />Subscribe</label
-        >
-        <label class="label-view"
-          ><input type="checkbox" name="option3" />Terms and conditions</label
-        >
-        <input
+        <!-- <input
           class="comment input-view"
           type="text"
           name="comment"
           placeholder="Any comment..."
-        />
-      </form>
+        /> -->
+
+        <textarea
+          class="comment input-view"
+          name="comment"
+          placeholder="Any comment..."
+        ></textarea>
+      </fieldset>
 
       <div class="button-container">
         <button id="send" class="button-view">Send</button>
         <button id="resetButton" class="button-view">Reset</button>
       </div>
-    </div>
+    </form>
 
     <script src="./script.js"></script>
   </body>

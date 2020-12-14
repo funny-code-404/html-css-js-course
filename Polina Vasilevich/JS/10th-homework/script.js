@@ -6,62 +6,98 @@ const select = document.forms[0].select;
 const send = document.getElementById("send");
 const reset = document.getElementById("resetButton");
 
-const firstCheckBox = document.forms[1].option1;
-const secondCheckBox = document.forms[1].option2;
-const thirdCheckBox = document.forms[1].option3;
+const trialCheckBox = document.forms[0].trial;
+const subCheckBox = document.forms[0].subscribe;
+const termsCheckBox = document.forms[0].terms;
 
-const comment = document.forms[1].comment;
+const comment = document.forms[0].comment;
 
 let data = {};
 
-function returnNativeColorInput() {
+function setNativeColorInput() {
   const inputs = document.forms[0].querySelectorAll("input");
+
   for (let i = 0; i < inputs.length; i++) {
     inputs[i].style.borderColor = "black";
+    if (inputs[i].getAttribute("type") === "checkbox") {
+      inputs[i].style.outlineColor = "transparent";
+    }
   }
 }
 
-function changeColorInput(fieldNAme) {
-  fieldNAme.style.borderColor = "red";
+function changeColorInput(fieldName) {
+  fieldName.style.borderColor = "red";
 }
+
+function addMessageAboutError(fieldName) {
+  const error = document.getElementById(`${fieldName.name}Error`);
+  error.style.display = "block";
+}
+
+function removeMessageAboutError() {
+  const error = document.forms[0].getElementsByClassName("error");
+  for (let i = 0; i < error.length; i++) {
+    error[i].style.display = "none";
+  }
+}
+
+const handleBlurInput = (e) => {
+  if (e.target.value.length) {
+    e.target.style.borderColor = "black";
+    const error = e.target.nextElementSibling;
+    error.style.display = "none";
+  }
+};
+
+name.addEventListener("blur", handleBlurInput);
+password.addEventListener("blur", handleBlurInput);
+email.addEventListener("blur", handleBlurInput);
 
 const handleSendClick = (e) => {
   e.preventDefault();
-  returnNativeColorInput();
+  setNativeColorInput();
+  removeMessageAboutError();
 
-  if (name.value && password.value && email.value) {
+  if (name.value && password.value && email.value && termsCheckBox.checked) {
     data[name.name] = name.value;
     data[password.name] = password.value;
     data[email.name] = email.value;
+    data[trialCheckBox.name] = trialCheckBox.checked;
+    data[subCheckBox.name] = subCheckBox.checked;
 
-    data[firstCheckBox.name] = firstCheckBox.checked;
-    data[secondCheckBox.name] = secondCheckBox.checked;
-    data[thirdCheckBox.name] = thirdCheckBox.checked;
+    data[termsCheckBox.name] = termsCheckBox.checked;
 
-    data[comment.name] = comment.value;
+    if (comment.value) {
+      data[comment.name] = comment.value;
+    }
   } else {
-    alert("Fill in required fields");
     if (!name.value) {
       changeColorInput(name);
+      addMessageAboutError(name);
     }
 
     if (!password.value) {
       changeColorInput(password);
+      addMessageAboutError(password);
     }
 
     if (!email.value) {
       changeColorInput(email);
+      addMessageAboutError(email);
+    }
+
+    if (!termsCheckBox.checked) {
+      termsCheckBox.style.outline = "3px solid red";
+      addMessageAboutError(termsCheckBox);
     }
   }
 
   const sendingObject = JSON.stringify(data);
-
   console.log(sendingObject);
 };
 
 const handleSelectChange = (e) => {
   e.preventDefault();
-
   data[select.name] = e.target.value;
 };
 
@@ -72,23 +108,20 @@ const handleResetClick = (e) => {
   password.value = "";
   email.value = "";
   select.value = "City";
-  const checkboxs = document.forms[1].querySelectorAll("input");
+
+  const checkboxs = document.forms[0].querySelectorAll("input");
+
   for (let i = 0; i < checkboxs.length; i++) {
     checkboxs[i].checked = false;
   }
-  comment.value = "";
 
+  comment.value = "";
   data = {};
 
-  returnNativeColorInput();
+  setNativeColorInput();
+  removeMessageAboutError();
 };
 
 select.addEventListener("change", handleSelectChange);
 send.addEventListener("click", handleSendClick);
 reset.addEventListener("click", handleResetClick);
-
-comment.addEventListener("keydown", (e) => {
-  if (e.code === "Enter") {
-    e.preventDefault();
-  }
-});
