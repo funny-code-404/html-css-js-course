@@ -19,18 +19,22 @@
                         </select>
                 </div>
             </form>
-            <form class="myForm2 border-style">
-                <input type="checkbox" > Trial
-                <input type="checkbox"> Subscribe
-                <input type="checkbox"> Terms and conditions
-                <div class="border-style">Any comment...</div>
-
+            <form class="myForm myForm2 border-style">
+                <div class="myForm2-input">
+                    <input type="checkbox" > Trial <br>
+                    <input type="checkbox"> Subscribe <br>
+                    <input type="checkbox"> Terms and conditions <br>
+                </div>
+                <div class="myForm2-input">
+                <input type="text" placeholder="Any comment..." class="myForm2-comment border-style" id="">
+                </div>
 
 
             </form>
-
-        <button id="button-send" class="border-style select-city">Send</button>
-        <button id="button-reset" class="border-style select-city">Reset</button>
+        <div class="button-panel">
+            <button id="button-send" class="border-style select-city button">Send</button>
+            <button id="button-reset" class="border-style select-city button">Reset</button>
+        </div>
         <script src="./script/script.js"></script>
     </body>
 </html>
