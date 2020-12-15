@@ -27,6 +27,9 @@ function setNativeColorInput() {
 
 function changeColorInput(fieldName) {
   fieldName.style.borderColor = "red";
+  if (fieldName.getAttribute("type") === "checkbox") {
+    fieldName.style.outline = "3px solid red";
+  }
 }
 
 function addMessageAboutError(fieldName) {
@@ -46,16 +49,22 @@ const handleBlurInput = (e) => {
     e.target.style.borderColor = "black";
     const error = document.getElementById(`${e.target.name}Error`);
     error.style.display = "none";
-    if (e.target.getAttribute("type") === "checkbox") {
-      e.target.style.outlineColor = "transparent";
-    }
   }
 };
 
 name.addEventListener("blur", handleBlurInput);
 password.addEventListener("blur", handleBlurInput);
 email.addEventListener("blur", handleBlurInput);
-termsCheckBox.addEventListener("blur", handleBlurInput);
+
+const handleChangeInput = (e) => {
+  if (e.target.value.length) {
+    const error = document.getElementById(`${e.target.name}Error`);
+    error.style.display = "none";
+    e.target.style.outlineColor = "transparent";
+  }
+};
+
+termsCheckBox.addEventListener("change", handleChangeInput);
 
 const handleSendClick = (e) => {
   e.preventDefault();
@@ -91,7 +100,7 @@ const handleSendClick = (e) => {
     }
 
     if (!termsCheckBox.checked) {
-      termsCheckBox.style.outline = "3px solid red";
+      changeColorInput(termsCheckBox);
       addMessageAboutError(termsCheckBox);
     }
   }
