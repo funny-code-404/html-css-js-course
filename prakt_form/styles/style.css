@@ -1,0 +1,35 @@
+.myForm {
+    width: 700px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.myForm2 {
+    width: 700px;
+    height: 150px;
+
+}
+
+.border-style {
+    border: 3px solid black;
+    border-radius: 20px;
+    margin: 2%;
+}
+
+.form-info-item {
+    margin: 8px;
+    padding: 6px;
+    width: 200px;
+    height: 15px;
+}
+
+.select-city {
+    width: 370px;
+    height: 40px;
+}
+
+.form-info-style {
+    
+}
