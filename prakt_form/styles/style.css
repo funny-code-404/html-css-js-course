@@ -1,0 +1,52 @@
+.myForm {
+    width: 700px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.myForm2 {
+    width: 680px;
+    height: 130px;
+    flex-direction: row;   
+    padding: 10px;
+}
+
+.border-style {
+    border: 3px solid black;
+    border-radius: 20px;
+    margin: 2%;
+}
+
+.form-info-item {
+    margin: 8px;
+    padding: 6px;
+    width: 200px;
+    height: 15px;
+}
+
+.select-city {
+    width: 370px;
+    height: 40px;
+}
+
+.myForm2-input {
+    padding: 35px;
+}
+
+.myForm2-comment {
+    height: 50px;
+    width: 360px;
+}
+
+.button {
+    width: 150px;
+    height: 30px;
+    text-align: left;
+    margin: 1%;
+}
+
+.button-panel {
+    margin-left: 400px;
+} 
