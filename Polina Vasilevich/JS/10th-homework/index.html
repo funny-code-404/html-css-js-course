@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Forms</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <form id="main-form">
+      <fieldset id="first-form" class="form-view">
+        <div class="name-container">
+          <input
+            id="name"
+            name="name"
+            type="text"
+            class="input-view"
+            placeholder="*Name"
+          />
+
+          <p id="nameError" class="error">Please, fill in the field "Name".</p>
+        </div>
+
+        <div class="password-container">
+          <input
+            id="password"
+            name="password"
+            type="password"
+            class="input-view"
+            placeholder="*Password"
+          />
+
+          <p id="passwordError" class="error">
+            Please, fill in the field "Password".
+          </p>
+        </div>
+
+        <div class="email-container">
+          <input
+            id="email"
+            name="email"
+            type="email"
+            class="input-view"
+            placeholder="*Email"
+          />
+
+          <p id="emailError" class="error">
+            Please, fill in the field "Email".
+          </p>
+        </div>
+
+        <div class="city-container">
+          <select name="city" id="select" class="input-view">
+            <option disabled selected>City</option>
+            <option name="minsk" value="minsk">Minsk</option>
+            <option name="london" value="london">London</option>
+            <option name="warsaw" value="warsaw">Warsaw</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <fieldset id="secondForm" class="form-view">
+        <label class="label-view">
+          <input type="checkbox" name="trial" />Trial</label
+        >
+        <label class="label-view"
+          ><input type="checkbox" name="subscribe" />Subscribe</label
+        >
+        <div class="checkbox-container">
+          <label class="label-view"
+            ><input type="checkbox" name="terms" />Terms and conditions</label
+          >
+          <p id="termsError" class="error">
+            Please, check this box if you want to proceed.
+          </p>
+        </div>
+
+        <!-- <input
+          class="comment input-view"
+          type="text"
+          name="comment"
+          placeholder="Any comment..."
+        /> -->
+
+        <textarea
+          class="comment input-view"
+          name="comment"
+          placeholder="Any comment..."
+        ></textarea>
+      </fieldset>
+
+      <div class="button-container">
+        <button id="send" class="button-view">Send</button>
+        <button id="resetButton" class="button-view">Reset</button>
+      </div>
+    </form>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
