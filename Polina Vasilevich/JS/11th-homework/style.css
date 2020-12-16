@@ -1,0 +1,14 @@
+#textTask {
+  width: 500px;
+  padding: 10px;
+
+  font-size: 18px;
+}
+
+/* #textTask::placeholder {
+  font-size: 15px;
+} */
+#addButton {
+  padding: 10px;
+  font-size: 18px;
+}
