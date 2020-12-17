@@ -1,0 +1,22 @@
+.form {
+  padding: 20px;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+#textTask {
+  margin-right: 2%;
+  width: 70%;
+}
+
+#addButton {
+  width: 25%;
+  cursor: pointer;
+}
+
+.font-size-large {
+  font-size: 20px;
+}
+
+.block-view {
+  padding: 10px;
+}
