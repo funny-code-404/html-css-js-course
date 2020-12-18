@@ -21,6 +21,7 @@ const createArticle = (data) => {
     dateCreate.innerHTML = `Date of creation: ${getDateFromStr(
       dateCreateWithTime
     )}`;
+
     dateCreate.classList.add("font-view");
     dateCreate.classList.add("block-position");
     dateCreate.style.left = "20px";
@@ -30,6 +31,7 @@ const createArticle = (data) => {
     dateUpdate.innerHTML = `Date of change: ${getDateFromStr(
       dateUpdateWithTime
     )}`;
+
     dateUpdate.classList.add("font-view");
     dateUpdate.classList.add("block-position");
     dateUpdate.style.right = "20px";
