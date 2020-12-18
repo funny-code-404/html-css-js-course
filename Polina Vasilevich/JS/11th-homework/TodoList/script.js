@@ -5,32 +5,24 @@ class TaskBlock {
     this.color = color;
   }
 
-  addStyles(block) {
-    const styleBlock = block.style;
-    styleBlock.width = "inherit";
-    styleBlock.marginTop = "30px";
-    styleBlock.padding = "50px";
-    styleBlock.border = "1px solid black";
-    styleBlock.borderRadius = "10px";
-    styleBlock.fontSize = "20px";
-    styleBlock.position = "relative";
-
-    styleBlock.background = this.color;
-    return block;
+  setId(block) {
+    block.id = block.previousElementSibling
+      ? (block.id = +block.previousElementSibling.id + 1)
+      : 1;
   }
 
   render() {
-    const blockTask = document.createElement("div");
-    blockTask.id = Math.floor(Math.random() * 100);
-
-    const textTask = this.label.value;
     const container = document.getElementById(this.container);
+    const blockTask = document.createElement("div");
+    const textTask = this.label.value;
     blockTask.innerHTML = textTask;
 
-    const blockTaskWithStyles = this.addStyles(blockTask);
-    container.appendChild(blockTaskWithStyles);
+    blockTask.classList.add("block-task-view");
+    blockTask.style.background = this.color;
 
-    return blockTaskWithStyles;
+    container.appendChild(blockTask);
+    this.setId(blockTask);
+    return blockTask;
   }
 }
 
@@ -42,26 +34,13 @@ class Button {
     this.symbol = symbol;
   }
 
-  addStyles(button) {
-    button.style.fontSize = "40px";
-    button.style.padding = "0";
-    button.style.margin = "0";
-    button.style.position = "absolute";
-    button.style.top = "0";
-    button.style.right = "0";
-
-    button.style.cursor = "pointer";
-
-    return button;
-  }
-
   render() {
     const button = document.createElement("p");
     button.innerHTML = this.symbol;
     button.addEventListener(this.eventType, this.handler);
 
-    const buttonWithStyles = this.addStyles(button);
-    this.container.appendChild(buttonWithStyles);
+    button.classList.add("button-view");
+    this.container.appendChild(button);
   }
 }
 
@@ -78,17 +57,11 @@ class ErrorHandler {
     this.dataField.style.borderColor = "black";
   }
 
-  addStyles(error) {
-    error.style.margin = 0;
-    error.style.color = "red";
-    error.style.fontSize = "18px";
-  }
-
   addError() {
     const error = document.createElement("p");
     error.id = "error";
     error.innerHTML = `Please, fill out this field.`;
-    this.addStyles(error);
+    error.classList.add("error-view");
     this.dataField.before(error);
   }
 
@@ -127,6 +100,7 @@ const onAddNewElement = (e) => {
     });
 
     const task = newTask.render();
+
     const button = new Button({
       symbol: "&times",
       eventType: "click",
