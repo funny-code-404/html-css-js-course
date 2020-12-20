@@ -129,16 +129,20 @@ class Calendar {
 }
 
 const createCalendar = function (container, month, year) {
+  ///////////
   const onClickArrow = (e) => {
     e.preventDefault();
-    if (calendar.month > 0 && calendar.month < 12) {
-      e.target.id === "leftArrow"
-        ? (calendar.month -= 1)
-        : (calendar.month += 1);
-      calendar.render(onClickArrow);
+    console.log(calendar.month);
+
+    e.target.id === "leftArrow" ? (calendar.month -= 1) : (calendar.month += 1);
+    calendar.render(onClickArrow);
+
+    if (calendar.month === 1) {
+      calendar.month = 12;
+      calendar.year -= 1;
     }
   };
-
+  ////////////////////
   const calendar = new Calendar({
     elemHTML: container,
     month: month,
