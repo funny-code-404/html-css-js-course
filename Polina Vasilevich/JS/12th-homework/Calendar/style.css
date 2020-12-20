@@ -1,0 +1,37 @@
+table {
+  position: relative;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: #e8edff;
+
+  font-size: 20px;
+}
+
+table::after {
+  position: absolute;
+  content: "<";
+  top: 60%;
+  left: -20px;
+}
+
+table::before {
+  position: absolute;
+  content: ">";
+  top: 60%;
+  right: -20px;
+}
+th {
+  background: #b9c9fe;
+  padding: 10px;
+}
+
+td {
+  padding: 5px;
+  text-align: center;
+}
+
+caption {
+  padding: 10px;
+  font-size: 24px;
+  color: #039;
+}
