@@ -17,9 +17,12 @@ class Calendar {
 
   createTable() {
     const container = document.getElementById(this.elemHTML);
-    const table = document.createElement("table");
-    table.id = "calendarTable";
-    container.appendChild(table);
+    container.innerHTML =
+      '<div id="containerTable"><table id="calendarTable"></table><span id="leftArrow">&lt</span><span id="rightArrow">&gt</span></div>';
+    // '<table id="calendarTable"></table><span id="leftArrow">&lt</span><span id="rightArrow">&gt</span>';
+    // const table = document.createElement("table");
+    // table.id = "calendarTable";
+    // container.appendChild(table);
   }
 
   createTitleTable() {
@@ -85,7 +88,6 @@ class Calendar {
       tr.appendChild(td);
       dayOfWeek--;
     }
-    console.log(counter);
     for (let i = 1; i < countDaysInMonth + 1; i++) {
       counter++;
 
@@ -111,17 +113,67 @@ class Calendar {
     const dayOfWeek = this.getDayOfWeek();
     this.getDaysMonth(dayOfWeek, countDaysInMonth);
   }
+
+  render(clickHandler) {
+    this.createTable();
+    this.createTitleTable();
+    this.createTitleDaysOfWeek();
+    this.createListDaysMonth();
+
+    const leftArrow = document.getElementById("leftArrow");
+    const rightArrow = document.getElementById("rightArrow");
+
+    leftArrow.addEventListener("click", clickHandler);
+    rightArrow.addEventListener("click", clickHandler);
+  }
 }
 
 const createCalendar = function (container, month, year) {
+  const onClickArrow = (e) => {
+    e.preventDefault();
+    if (calendar.month > 0 && calendar.month < 12) {
+      e.target.id === "leftArrow"
+        ? (calendar.month -= 1)
+        : (calendar.month += 1);
+      calendar.render(onClickArrow);
+    }
+  };
+
   const calendar = new Calendar({
     elemHTML: container,
     month: month,
     year: year,
   });
 
-  calendar.createTable();
-  calendar.createTitleTable();
-  calendar.createTitleDaysOfWeek();
-  calendar.createListDaysMonth();
+  calendar.render(onClickArrow);
+
+  // const onClickLeftArrow = (e) => {
+  //   e.preventDefault();
+  //   const calendar = new Calendar({
+  //     elemHTML: container,
+  //     month: month,
+  //     year: year,
+  //   });
+
+  //   calendar.month -= 1;
+  //   calendar.render();
+  // };
+
+  // const onClickRightArrow = (e) => {
+  //   e.preventDefault();
+
+  //   const calendar = new Calendar({
+  //     elemHTML: container,
+  //     month: month,
+  //     year: year,
+  //   });
+
+  //   calendar.month += 1;
+  //   calendar.render();
+  // };
+  // const leftArrow = document.getElementById("leftArrow");
+  // const rightArrow = document.getElementById("rightArrow");
+
+  // leftArrow.addEventListener("click", onClickArrow);
+  // rightArrow.addEventListener("click", onClickArrow);
 };

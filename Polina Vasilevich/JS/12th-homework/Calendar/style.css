@@ -1,5 +1,4 @@
 table {
-  position: relative;
   margin: 0 auto;
   border-collapse: collapse;
   background: #e8edff;
@@ -7,19 +6,28 @@ table {
   font-size: 20px;
 }
 
-table::after {
-  position: absolute;
-  content: "<";
-  top: 60%;
-  left: -20px;
+#containerTable {
+  position: relative;
 }
 
-table::before {
+#leftArrow {
   position: absolute;
-  content: ">";
-  top: 60%;
-  right: -20px;
+  top: 50%;
+  left: 30%;
+  font-size: 35px;
+  font-weight: bold;
+  color: #039;
 }
+
+#rightArrow {
+  position: absolute;
+  top: 50%;
+  right: 30%;
+  font-size: 35px;
+  font-weight: bold;
+  color: #039;
+}
+
 th {
   background: #b9c9fe;
   padding: 10px;

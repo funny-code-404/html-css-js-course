@@ -4,24 +4,11 @@ class Form {
   }
 
   render() {
-    // const form = document.createElement("form");
-    // const input = document.createElement("input");
-    // input.type = "text";
-    // input.id = "textTask";
-    // input.name = "text";
-    // input.classList.add("font-size-large", "block-view");
-    // input.placeholder = "Enter the text of the task...";
-
     this.container.innerHTML = `<form class="form">
                             <input type="text" id="textTask" class="font-size-large block-view"
                             placeholder="Enter the text of the task..." name="text">
                             <button id="addButton" class="font-size-large block-view">Add task</button>
                          </form>`;
-
-    // form.innerHTML = `<input type="text" id="textTask" class="font-size-large block-view"
-    // placeholder="Enter the text of the task..." name="text">
-    // <button id="addButton" class="font-size-large block-view">Add task</button>`;
-    // this.container.appendChild(form);
   }
 }
 
