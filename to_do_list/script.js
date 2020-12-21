@@ -14,6 +14,7 @@ render() {
     newTask.style.width = '400px'
     newTask.style.height = '100px';
     newTask.style.border = '3px solid black'
+    newTask.style.margin = '10px'
     newTask.style.position = 'relative';
         const deleteTask = document.createElement('div');
         deleteTask.innerHTML = '&#10060;';
