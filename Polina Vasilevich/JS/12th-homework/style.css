@@ -2,7 +2,9 @@
   padding: 10px;
   text-decoration: none;
   border: 1px solid black;
-  font-size: 30px;
+  font-size: 35px;
+  color: black;
+  font-weight: bold;
 }
 
 #navigation {
@@ -17,4 +19,5 @@
 
 #contentContainer {
   padding: 20px;
+  text-align: center;
 }

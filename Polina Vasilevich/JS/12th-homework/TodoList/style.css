@@ -1,6 +1,4 @@
 .form {
-  padding: 20px;
-  /* border: 3px solid black; */
   border-radius: 10px;
 }
 #textTask {
@@ -22,12 +20,12 @@
 }
 
 .block-task-view {
-  width: inherit;
-  margin-top: 30px;
+  /* width: inherit; */
   padding: 50px;
   border: 1px solid black;
   border-radius: 10px;
-  font-size: 20px;
+  font-size: 30px;
+
   position: relative;
 }
 
@@ -45,4 +43,11 @@
   margin: 0;
   color: red;
   font-size: 18px;
+}
+
+#taskContainer {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }

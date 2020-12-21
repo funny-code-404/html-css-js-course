@@ -1,13 +1,3 @@
-// Реализовать функцию drawCalendar, которая
-
-// принимает три аргумента - год, месяц,
-
-// htmlElement и выводит в этот элемент
-
-// календарь на месяц (дни недели начинаются
-
-// с понедельника ).
-
 class Calendar {
   constructor({ month, year, elemHTML }) {
     this.year = year;
@@ -18,11 +8,7 @@ class Calendar {
   createTable() {
     const container = document.getElementById(this.elemHTML);
     container.innerHTML =
-      '<div id="containerTable"><table id="calendarTable"></table><span id="leftArrow">&lt</span><span id="rightArrow">&gt</span></div>';
-    // '<table id="calendarTable"></table><span id="leftArrow">&lt</span><span id="rightArrow">&gt</span>';
-    // const table = document.createElement("table");
-    // table.id = "calendarTable";
-    // container.appendChild(table);
+      '<div id="containerTable"><table id="calendarTable"></table><span id="leftArrow" class="arrow">&laquo</span><span id="rightArrow" class="arrow">&raquo</span></div>';
   }
 
   createTitleTable() {
@@ -62,7 +48,7 @@ class Calendar {
 
     table.appendChild(tr);
   }
-  ///////////////////////////////////////
+
   getDayOfWeek() {
     const firstDayOfWeekInMonth = new Date(
       this.year,
@@ -88,6 +74,7 @@ class Calendar {
       tr.appendChild(td);
       dayOfWeek--;
     }
+
     for (let i = 1; i < countDaysInMonth + 1; i++) {
       counter++;
 
@@ -129,20 +116,22 @@ class Calendar {
 }
 
 const createCalendar = function (container, month, year) {
-  ///////////
   const onClickArrow = (e) => {
     e.preventDefault();
-    console.log(calendar.month);
 
     e.target.id === "leftArrow" ? (calendar.month -= 1) : (calendar.month += 1);
-    calendar.render(onClickArrow);
 
-    if (calendar.month === 1) {
+    if (calendar.month === 0) {
       calendar.month = 12;
       calendar.year -= 1;
+    } else if (calendar.month === 13) {
+      calendar.month = 1;
+      calendar.year += 1;
     }
+
+    calendar.render(onClickArrow);
   };
-  ////////////////////
+
   const calendar = new Calendar({
     elemHTML: container,
     month: month,
@@ -150,34 +139,4 @@ const createCalendar = function (container, month, year) {
   });
 
   calendar.render(onClickArrow);
-
-  // const onClickLeftArrow = (e) => {
-  //   e.preventDefault();
-  //   const calendar = new Calendar({
-  //     elemHTML: container,
-  //     month: month,
-  //     year: year,
-  //   });
-
-  //   calendar.month -= 1;
-  //   calendar.render();
-  // };
-
-  // const onClickRightArrow = (e) => {
-  //   e.preventDefault();
-
-  //   const calendar = new Calendar({
-  //     elemHTML: container,
-  //     month: month,
-  //     year: year,
-  //   });
-
-  //   calendar.month += 1;
-  //   calendar.render();
-  // };
-  // const leftArrow = document.getElementById("leftArrow");
-  // const rightArrow = document.getElementById("rightArrow");
-
-  // leftArrow.addEventListener("click", onClickArrow);
-  // rightArrow.addEventListener("click", onClickArrow);
 };

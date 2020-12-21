@@ -3,29 +3,30 @@ table {
   border-collapse: collapse;
   background: #e8edff;
 
-  font-size: 20px;
+  font-size: 40px;
 }
 
 #containerTable {
   position: relative;
+  display: inline-block;
+  padding: 40px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  font-weight: bold;
+  color: #039;
+  font-size: 60px;
+  cursor: pointer;
 }
 
 #leftArrow {
-  position: absolute;
-  top: 50%;
-  left: 30%;
-  font-size: 35px;
-  font-weight: bold;
-  color: #039;
+  left: 0;
 }
 
 #rightArrow {
-  position: absolute;
-  top: 50%;
-  right: 30%;
-  font-size: 35px;
-  font-weight: bold;
-  color: #039;
+  right: 0;
 }
 
 th {
@@ -34,12 +35,18 @@ th {
 }
 
 td {
-  padding: 5px;
+  padding: 10px;
   text-align: center;
+}
+
+td:hover {
+  background-color: #039;
+  color: #fff;
+  cursor: pointer;
 }
 
 caption {
   padding: 10px;
-  font-size: 24px;
+  font-size: 45px;
   color: #039;
 }

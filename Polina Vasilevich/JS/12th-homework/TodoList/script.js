@@ -26,19 +26,17 @@ class TaskBlock {
   }
 
   render() {
-    const container = document.getElementById("contentContainer");
-    const taskContainer = document.createElement("div");
-    const blockTask = document.createElement("div");
-    const textTask = this.label.value;
-    blockTask.innerHTML = textTask;
+    const container = document.getElementById(this.container.id);
+    const taskBlock = document.createElement("div");
 
-    blockTask.classList.add("block-task-view");
-    blockTask.style.background = this.color;
+    taskBlock.innerHTML = this.label.value;
 
-    taskContainer.appendChild(blockTask);
-    container.appendChild(taskContainer);
-    this.setId(blockTask);
-    return blockTask;
+    taskBlock.classList.add("block-task-view");
+    taskBlock.style.background = this.color;
+
+    container.appendChild(taskBlock);
+    this.setId(taskBlock);
+    return taskBlock;
   }
 }
 
@@ -89,9 +87,12 @@ class ErrorHandler {
 
 const createToDoList = function (container) {
   const mainBlock = document.getElementById(container.id);
-  console.dir(mainBlock);
   const form = new Form(mainBlock);
   form.render();
+
+  const taskContainer = document.createElement("div");
+  taskContainer.id = "taskContainer";
+  mainBlock.appendChild(taskContainer);
 
   const getRandomColor = () => {
     var r = Math.floor(Math.random() * 256),
@@ -118,7 +119,7 @@ const createToDoList = function (container) {
 
       const newTask = new TaskBlock({
         label: textTask,
-        container: container.id,
+        container: taskContainer,
         color: getRandomColor(),
       });
 
