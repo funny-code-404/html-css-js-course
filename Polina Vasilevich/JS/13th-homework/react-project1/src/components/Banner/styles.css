@@ -1,0 +1,30 @@
+.banner {
+  padding: 30px 0;
+  background-image: url("./background.png");
+  background-size: cover;
+  color: white;
+
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner__text {
+  width: 50%;
+  text-align: center;
+}
+
+.button__list {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+
+  list-style-type: none;
+}
+
+.list__item {
+  margin: 0 10px;
+  padding: 10px;
+  border: 1px solid white;
+}

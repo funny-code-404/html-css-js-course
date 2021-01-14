@@ -1,0 +1,21 @@
+.header {
+  background-color: #eee2e0;
+}
+
+.header-nav-list {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-nav-list-item {
+  margin: 5px;
+  padding: 10px;
+}
+
+.header-nav-list {
+  list-style-type: none;
+}
+
+li {
+  cursor: pointer;
+}

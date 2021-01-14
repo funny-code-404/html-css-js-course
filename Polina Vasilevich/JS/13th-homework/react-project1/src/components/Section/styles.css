@@ -1,0 +1,17 @@
+.section {
+  padding: 30px 0;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.section__text {
+  width: 50%;
+  text-align: center;
+}
+
+.article-container {
+  display: flex;
+  justify-content: space-between;
+}
