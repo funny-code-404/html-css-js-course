@@ -14,12 +14,12 @@ class Banner extends React.Component {
           optio ea dignissimos.
         </p>
 
-        <div className="button banner__button">
+        {/* <div className="button banner__button">
           <ul className="list button__list">
             <li className="list__item">Our servies</li>
             <li className="list__item">Hire is now</li>
           </ul>
-        </div>
+        </div> */}
       </div>
     );
   }

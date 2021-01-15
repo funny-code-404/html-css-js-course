@@ -1,4 +1,9 @@
 .footer {
   padding: 30px;
-  /* background-color: #d2d0cf; */
+  /* background-color: #4E738A; */
+  background-color: #6C8BA7;
+}
+
+.footer__content {
+  text-align: center;
 }
