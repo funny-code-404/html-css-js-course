@@ -1,22 +1,28 @@
-import React from 'react';
+import React from "react";
+import PropTypes from "prop-types";
+import List from "./List";
 
-import './styles.css'
-class Header extends React.Component{
-    handleHomeClick() {
-        alert('It\'s button "Home".')
-    }
-    render() {
-        return <header className = "header">
-            <nav className="header-nav">
-                <ul className="header-nav-list">
-                    <li className="header-nav-list-item" onClick={this.handleHomeClick}>Home</li>
-                    <li className="header-nav-list-item">About</li>
-                    <li className="header-nav-list-item">Servicing</li>
-                    <li className="header-nav-list-item">Contact us</li>
-                </ul>
-            </nav>
-        </header>
-    }
+import { HeaderStyle, Nav } from "./styles";
+
+const items = ["Home", "About", "Servicing", "Contact us"];
+class Header extends React.Component {
+  render() {
+    return (
+      <HeaderStyle>
+        <Nav>
+          <List>
+            {items.map((item) => (
+              <List.Item key={item} text={item} />
+            ))}
+          </List>
+        </Nav>
+      </HeaderStyle>
+    );
+  }
 }
+
+// Header.propTypes = {
+//   navItems: PropTypes.arrayOf(PropTypes.string),
+// };
 
 export default Header;

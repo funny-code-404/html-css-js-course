@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import Section from '../Section';
+import SectionComponent from "../Section";
 
 const sectionItems = [
   {
@@ -54,28 +54,25 @@ const sectionItems = [
       },
     ],
   },
-
-  
 ];
 
-
-class Main extends React.Component{
-    render() {
+class Main extends React.Component {
+  render() {
     return (
-    <main>
-          {sectionItems.map(({ title, text, articleItems }, index) => {
-            return (
-              <Section
-                key={index}
-                title={title}
-                text={text}
-                articleItems={articleItems}
-              />
-            );
-          })}
-    </main>
-    )
-    }
+      <main>
+        {sectionItems.map(({ title, text, articleItems }, index) => {
+          return (
+            <SectionComponent
+              key={index}
+              title={title}
+              text={text}
+              articleItems={articleItems}
+            />
+          );
+        })}
+      </main>
+    );
+  }
 }
 
 export default Main;

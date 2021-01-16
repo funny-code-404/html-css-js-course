@@ -1,18 +1,23 @@
 import React from "react";
-import "./styles.css";
+import PropTypes from "prop-types";
 
-class Article extends React.Component {
-  
+import { Article } from "./styles";
+
+class ArticleComponet extends React.Component {
   render() {
-    const { title, text} = this.props;
+    const { title, text } = this.props;
 
     return (
-      <article className="article">
+      <Article>
         <h3 className="article__title">{title}</h3>
         <p className="article__text">{text}</p>
-      </article>
+      </Article>
     );
   }
 }
 
-export default Article;
+ArticleComponet.propTypes = {
+  title: PropTypes.string,
+  text: PropTypes.string,
+};
+export default ArticleComponet;

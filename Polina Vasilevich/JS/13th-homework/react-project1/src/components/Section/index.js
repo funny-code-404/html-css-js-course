@@ -1,29 +1,27 @@
 import React from "react";
 import Article from "../Article";
 
-import "./styles.css";
+import { Section, Title, Text, ArticleContainer } from "./styles";
 
-class Section extends React.Component {
-
+class SectionComponent extends React.Component {
   renderArticle() {
-    const {articleItems} = this.props;
+    const { articleItems } = this.props;
 
-    return (articleItems.map(({ title, text, color }, index) => {
-      return <Article key={index} title={title} text={text} color={color}/>;
-    }));
-  
+    return articleItems.map(({ title, text }, index) => {
+      return <Article key={index} title={title} text={text} />;
+    });
   }
 
   render() {
     const { title, text } = this.props;
     return (
-      <section className="section">
-        <h2 className="section__title">{title}</h2>
-        <p className="section__text">{text}</p>
-        <div className="article-container">{this.renderArticle()}</div>
-      </section>
+      <Section>
+        <Title>{title}</Title>
+        <Text>{text}</Text>
+        <ArticleContainer>{this.renderArticle()}</ArticleContainer>
+      </Section>
     );
   }
 }
 
-export default Section;
+export default SectionComponent;

@@ -1,28 +1,22 @@
 import React from "react";
-import "./styles.css";
+import PropTypes from "prop-types";
 
+import { BannerComponent, Title, Text } from "./styles";
 class Banner extends React.Component {
   render() {
+    const { title, text } = this.props;
     return (
-      <div className="banner">
-        <h1 className="banner__title">Web development project</h1>
-
-        <p className="banner__text">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et nemo eum
-          quidem officia, accusamus ullam excepturi nisi temporibus, inventore
-          autem iste eos perspiciatis cupiditate adipisci, aspernatur libero
-          optio ea dignissimos.
-        </p>
-
-        {/* <div className="button banner__button">
-          <ul className="list button__list">
-            <li className="list__item">Our servies</li>
-            <li className="list__item">Hire is now</li>
-          </ul>
-        </div> */}
-      </div>
+      <BannerComponent>
+        <Title>{title}</Title>
+        <Text>{text}</Text>
+      </BannerComponent>
     );
   }
 }
+
+Banner.propTypes = {
+  title: PropTypes.string,
+  text: PropTypes.string,
+};
 
 export default Banner;
