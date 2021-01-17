@@ -1,28 +1,25 @@
 import React from "react";
 import PropTypes from "prop-types";
-import List from "./List";
 
-import { HeaderStyle, Nav } from "./styles";
+import HeaderList from "./HeaderList";
 
-const items = ["Home", "About", "Servicing", "Contact us"];
-class Header extends React.Component {
+import { Header, Nav } from "./styles";
+
+class HeaderComponet extends React.Component {
   render() {
+    const { headers } = this.props;
     return (
-      <HeaderStyle>
+      <Header>
         <Nav>
-          <List>
-            {items.map((item) => (
-              <List.Item key={item} text={item} />
-            ))}
-          </List>
+          <HeaderList headers={headers} />
         </Nav>
-      </HeaderStyle>
+      </Header>
     );
   }
 }
 
-// Header.propTypes = {
-//   navItems: PropTypes.arrayOf(PropTypes.string),
-// };
+Header.propTypes = {
+  navItems: PropTypes.arrayOf(PropTypes.string),
+};
 
-export default Header;
+export default HeaderComponet;

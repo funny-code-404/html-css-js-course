@@ -14,7 +14,9 @@ export const BannerComponent = styled.div`
   justify-content: center;
 `;
 
-export const Title = styled.h1``;
+export const Title = styled.h1`
+  font-size: 3rem;
+`;
 export const Text = styled.p`
   width: 50%;
   text-align: center;
