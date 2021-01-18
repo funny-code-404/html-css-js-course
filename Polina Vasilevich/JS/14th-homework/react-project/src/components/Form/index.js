@@ -18,6 +18,7 @@ class Form extends Component {
     this.state = {
       tasks: [],
       value: "",
+      isValid: false,
     };
   }
 
@@ -27,13 +28,17 @@ class Form extends Component {
     });
   };
 
-  handleSubmit = (e) => {
+  addTask = (e) => {
     e.preventDefault();
-    const taskArray = this.state.tasks;
-    taskArray.push(this.state.value);
-    this.setState({
-      tasks: taskArray,
-    });
+    if (this.state.value) {
+      const taskArray = this.state.tasks;
+      taskArray.push(this.state.value);
+
+      this.setState({
+        tasks: taskArray,
+        value: "",
+      });
+    }
   };
 
   deleteItem = function (index) {
@@ -62,11 +67,12 @@ class Form extends Component {
         <InputContainer>
           <InputTaskName
             type="text"
-            placeholder="Enter task"
+            value={this.state.value}
+            placeholder="Enter task..."
             onChange={this.handleChange}
           />
           <ButtonContainer>
-            <ButtonAddTask onClick={this.handleSubmit}>Add task</ButtonAddTask>
+            <ButtonAddTask onClick={this.addTask}>Add task</ButtonAddTask>
           </ButtonContainer>
         </InputContainer>
 
