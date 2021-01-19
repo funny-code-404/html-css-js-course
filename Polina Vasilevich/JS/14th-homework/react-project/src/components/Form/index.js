@@ -9,16 +9,16 @@ import {
   ButtonAddTask,
   ButtonContainer,
   TaskContainer,
+  Error,
 } from "./styles";
 
 class Form extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       tasks: [],
       value: "",
-      isValid: false,
+      isValid: true,
     };
   }
 
@@ -30,20 +30,31 @@ class Form extends Component {
 
   addTask = (e) => {
     e.preventDefault();
-    if (this.state.value) {
-      const taskArray = this.state.tasks;
-      taskArray.push(this.state.value);
+    if(this.state.value) {
+      const tasks = this.state.tasks;
+      tasks.push(this.state.value);
 
+      this.setState(
+        {
+          tasks: tasks,
+          value: "",
+          isValid: true,
+        }
+      )
+    } else {
       this.setState({
-        tasks: taskArray,
-        value: "",
-      });
+        isValid: false,
+      })
     }
-  };
+  }
 
-  deleteItem = function (index) {
-    this.state.tasks.splice(index, 1);
-    this.setState({ tasks: this.state.tasks });
+  deleteItem(index) {
+    const taskArray = this.state.tasks;
+    taskArray.splice(index, 1);
+    
+    this.setState({ 
+      tasks: taskArray,
+    });
   };
 
   renderList() {
@@ -62,6 +73,7 @@ class Form extends Component {
   }
 
   render() {
+    const colorInput = this.state.isValid ? '#cacaca' : 'red';
     return (
       <Section>
         <InputContainer>
@@ -70,11 +82,16 @@ class Form extends Component {
             value={this.state.value}
             placeholder="Enter task..."
             onChange={this.handleChange}
+            style = {{borderColor: colorInput}}
           />
           <ButtonContainer>
             <ButtonAddTask onClick={this.addTask}>Add task</ButtonAddTask>
           </ButtonContainer>
         </InputContainer>
+
+        <Error>
+         {this.state.isValid ? '' : 'Please, fill out this field.'}
+        </Error>
 
         <TaskContainer>{this.renderList()}</TaskContainer>
       </Section>

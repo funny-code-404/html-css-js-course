@@ -10,19 +10,27 @@ export const Section = styled.section`
   background-color: #fff;
   box-shadow: 0px 0.25rem 1rem rgba(0, 0, 0, 0.25);
 `;
+
 export const InputContainer = styled.div`
   display: grid;
   grid-template-columns: 80% 20%;
+  grid-gap: 5px;
 `;
 
 export const InputTaskName = styled.textarea`
   width: 100%;
   border: 1px solid #cacaca;
   font-size: 1.5rem;
+  outline: none;
+  &:focus {
+    border: 1px solid #8a8a8a;
+    background-color: #fefefe;
+    box-shadow: 0 0 5px #cacaca;
+  }
 `;
 
 export const ButtonContainer = styled.span`
-  margin-left: 6px;
+  // margin-left: 6px;
 `;
 
 export const ButtonAddTask = styled.button`
@@ -32,42 +40,27 @@ export const ButtonAddTask = styled.button`
   border: 1px solid transparent;
   background-color: #2199e8;
   cursor: pointer;
+  outline: none;
 
   color: #fff;
   font-weight: bold;
   font-size: 1rem;
-`;
 
-export const List = styled.ul`
-  padding: 0;
-  list-style: none;
-`;
+  &:hover {
+    background-color: #1583cc;
+  }
 
-export const ListItem = styled.li`
-  width: 100%;
-  position: relative;
-  margin-bottom: 20px;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  &:active {
+    box-shadow: 0 0 5px #1583cc;
+  }
 
-  overflow-wrap: break-word;
-`;
-
-export const ButtonCross = styled.button`
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  padding: 10px;
-
-  background-color: #ec5840;
-  border-color: transparent;
-  color: #fff;
-
-  cursor: pointer;
 `;
 
 export const TaskContainer = styled.div`
   padding-right: 20px;
 `;
+
+
+export const Error = styled.div`
+  color: red;
+`
