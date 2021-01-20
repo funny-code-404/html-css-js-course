@@ -30,38 +30,36 @@ class Form extends Component {
 
   addTask = (e) => {
     e.preventDefault();
-    if(this.state.value) {
-      const tasks = this.state.tasks;
+    if (this.state.value) {
+      const { tasks } = this.state;
       tasks.push(this.state.value);
 
-      this.setState(
-        {
-          tasks: tasks,
-          value: "",
-          isValid: true,
-        }
-      )
+      this.setState({
+        tasks: tasks,
+        value: "",
+        isValid: true,
+      });
     } else {
       this.setState({
         isValid: false,
-      })
+      });
     }
-  }
-
-  deleteItem(index) {
-    const taskArray = this.state.tasks;
-    taskArray.splice(index, 1);
-    
-    this.setState({ 
-      tasks: taskArray,
-    });
   };
 
+  deleteItem(index) {
+    const { tasks } = this.state;
+    tasks.splice(index, 1);
+
+    this.setState({
+      tasks: tasks,
+    });
+  }
+
   renderList() {
-    const taskList = this.state.tasks;
+    const { tasks } = this.state;
     return (
       <List>
-        {taskList.map((task, index) => (
+        {tasks.map((task, index) => (
           <List.Item
             key={index}
             task={task}
@@ -73,7 +71,7 @@ class Form extends Component {
   }
 
   render() {
-    const colorInput = this.state.isValid ? '#cacaca' : 'red';
+    const colorInput = this.state.isValid ? "#cacaca" : "red";
     return (
       <Section>
         <InputContainer>
@@ -82,7 +80,7 @@ class Form extends Component {
             value={this.state.value}
             placeholder="Enter task..."
             onChange={this.handleChange}
-            style = {{borderColor: colorInput}}
+            style={{ borderColor: colorInput }}
           />
           <ButtonContainer>
             <ButtonAddTask onClick={this.addTask}>Add task</ButtonAddTask>
@@ -90,7 +88,7 @@ class Form extends Component {
         </InputContainer>
 
         <Error>
-         {this.state.isValid ? '' : 'Please, fill out this field.'}
+          {this.state.isValid ? "" : "Please, fill out this field."}
         </Error>
 
         <TaskContainer>{this.renderList()}</TaskContainer>

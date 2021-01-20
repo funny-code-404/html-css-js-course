@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import PropTypes from "prop-types";
 import { ListItem, ButtonCross } from "./styles";
 
 class ListItemComponent extends Component {
@@ -13,5 +13,10 @@ class ListItemComponent extends Component {
     );
   }
 }
+
+ListItemComponent.propTypes = {
+  task: PropTypes.string,
+  handleClick: PropTypes.func,
+};
 
 export default ListItemComponent;
