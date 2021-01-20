@@ -1,0 +1,52 @@
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: #e8edff;
+
+  font-size: 40px;
+}
+
+#containerTable {
+  position: relative;
+  display: inline-block;
+  padding: 40px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  font-weight: bold;
+  color: #039;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+#leftArrow {
+  left: 0;
+}
+
+#rightArrow {
+  right: 0;
+}
+
+th {
+  background: #b9c9fe;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+td:hover {
+  background-color: #039;
+  color: #fff;
+  cursor: pointer;
+}
+
+caption {
+  padding: 10px;
+  font-size: 45px;
+  color: #039;
+}

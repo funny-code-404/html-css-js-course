@@ -1,0 +1,53 @@
+.form {
+  border-radius: 10px;
+}
+#textTask {
+  margin-right: 2%;
+  width: 70%;
+}
+
+#addButton {
+  width: 25%;
+  cursor: pointer;
+}
+
+.font-size-large {
+  font-size: 20px;
+}
+
+.block-view {
+  padding: 10px;
+}
+
+.block-task-view {
+  /* width: inherit; */
+  padding: 50px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 30px;
+
+  position: relative;
+}
+
+.button-view {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.error-view {
+  margin: 0;
+  color: red;
+  font-size: 18px;
+}
+
+#taskContainer {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}

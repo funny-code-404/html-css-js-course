@@ -1,0 +1,23 @@
+#navigation a {
+  padding: 10px;
+  text-decoration: none;
+  border: 1px solid black;
+  font-size: 35px;
+  color: black;
+  font-weight: bold;
+}
+
+#navigation {
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+
+  text-align: center;
+}
+
+#contentContainer {
+  padding: 20px;
+  text-align: center;
+}
