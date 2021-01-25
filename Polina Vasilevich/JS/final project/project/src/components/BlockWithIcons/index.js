@@ -1,17 +1,16 @@
 import React from "react";
 
-import "../../assets/fonts/themify-icons.css";
 import "./styles.css";
 
 class IconBoxes extends React.Component {
   render() {
-    const { icons } = this.props;
+    const { items } = this.props;
 
     return (
-      <section className="icons">
-        {icons.map((item) => {
+      <section className="flexContainer">
+        {items.map((item) => {
           return (
-            <div className="iconContainer">
+            <div className="icnContainer positionCenter" key={item.title}>
               <div className="icon">
                 <i className={item.icon}></i>
               </div>

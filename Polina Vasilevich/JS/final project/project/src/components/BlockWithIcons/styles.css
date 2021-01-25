@@ -1,9 +1,12 @@
+.positionCenter {
+  text-align: center;
+}
+
 .icon {
   margin: 0 auto;
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  /* position: relative; */
   background-color: #69d2e7;
   background-image: linear-gradient(48deg, #00f0ff -22%, #ebacfd 122%);
   display: flex;
@@ -11,17 +14,13 @@
   justify-content: center;
 }
 
-.icons {
-  display: flex;
-  text-align: center;
-}
-
-i {
+.icon i {
   font-size: 36px;
   line-height: 30px;
   font-weight: 400;
-  /* position: absolute;
-  top: 50%;
-  left: 50%; */
   color: #fff;
+}
+
+.icnContainer {
+  width: 23%;
 }

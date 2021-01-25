@@ -12,7 +12,9 @@ import Home from "./pages/Home";
 // import Blog from "./pages/Blog";
 // import Portfolio from "./pages/Portfolio";
 
-import logo from "./assets/logo.png";
+import "./assets/fonts/themify-icons.css";
+import "./assets/fonts/OpenSans/openSans.css";
+import logo from "./assets/img/logo.png";
 
 const routes = [
   {

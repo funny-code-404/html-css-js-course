@@ -1,0 +1,29 @@
+.leftContent {
+  width: 40%;
+}
+
+.rightContent {
+  width: 60%;
+}
+
+.iconsContainer {
+  width: 33%;
+  text-align: center;
+}
+
+.servicesList {
+  list-style-type: none;
+  font-family: OpenSans;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #cccccc;
+}
+
+.servicesList::before {
+  content: "> ";
+}
+
+ul {
+  padding: 0;
+}

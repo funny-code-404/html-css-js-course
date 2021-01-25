@@ -1,39 +1,31 @@
 import React from "react";
 
-import Icons from "../../components/IconBoxes";
+import Icons from "../../components/BlockWithIcons";
+import Introducing from "../../components/Introducing";
+import Portfolio from "../../components/Portfolio";
+import BlockWithIconList from "../../components/BlockWithIconList";
+import Services from "../../components/Services";
+import Partners from "../../components/Partners";
 
-const icons = [
-  {
-    icon: "ti-desktop",
-    title: "100% Responsive",
-    text:
-      "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra.Vehicula nibh vel ante commodo feugiat. Nulla ut enim lobortis orci gravida volutpat.",
-  },
-
-  {
-    icon: "ti-settings",
-    title: "Powerfull Admin",
-    text:
-      "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra.Vehicula nibh vel ante commodo feugiat. Nulla ut enim lobortis orci gravida volutpat. ",
-  },
-
-  {
-    icon: "ti-ruler-pencil",
-    title: "Incredible Design",
-    text:
-      "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra.Vehicula nibh vel ante commodo feugiat. Nulla ut enim lobortis orci gravida volutpat.",
-  },
-
-  {
-    icon: "ti-comment-alt",
-    title: "The Best Support",
-    text:
-      "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra.Vehicula nibh vel ante commodo feugiat. Nulla ut enim lobortis orci gravida volutpat.",
-  },
-];
+import iconsList from "../../assets/const/icons";
+import introducingItems from "../../assets/const/introducingItems";
+import portfolioItems from "../../assets/const/portfolioItems";
+import iconsList2 from "../../assets/const/iconsList";
+import servicesItems from "../../assets/const/servicesItems";
+import partnersItems from "../../assets/const/partnersItems";
 class Home extends React.Component {
   render() {
-    return <Icons icons={icons} />;
+    return (
+      <>
+        <Icons items={iconsList} />
+        <Introducing items={introducingItems} />
+        <Portfolio items={portfolioItems} />
+        <BlockWithIconList items={iconsList2} />
+        <Introducing items={introducingItems} stl={{ marginLeft: "auto" }} />
+        <Services items={servicesItems} />
+        <Partners items={partnersItems} />
+      </>
+    );
   }
 }
 
