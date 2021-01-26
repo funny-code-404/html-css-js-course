@@ -9,7 +9,11 @@ class Portfolio extends React.Component {
     return (
       <section style={{ padding: style }}>
         <div className="contentPortfolio">
-          <BlockText items={items} classContainer="textContainer" />
+          <BlockText
+            items={items}
+            // classContainer="textContainer"
+            isPositionCenter={true}
+          />
           <div className="imgContainer">
             {imgs.map((img, index) => {
               return (

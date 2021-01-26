@@ -1,5 +1,5 @@
 import React from "react";
-import BlockText from '../BlockText';
+import BlockText from "../BlockText";
 import "./styles.css";
 
 class Partners extends React.Component {
@@ -8,11 +8,11 @@ class Partners extends React.Component {
     const { items } = this.props;
     return (
       <section>
-        <BlockText items={items}/>
+        <BlockText items={items} isPositionCenter={true} />
         <div className=" flexContainer positionCenter">
-          {list.map((item) => {
+          {list.map((item, index) => {
             return (
-              <div className="logoContainer">
+              <div key={index} className="logoContainer">
                 <img src={item} alt="" />
               </div>
             );

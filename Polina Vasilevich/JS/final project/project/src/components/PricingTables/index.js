@@ -1,34 +1,38 @@
-import React from 'react';
-import BlockText from '../BlockText';
-import TextBlock from '../TextBlock';
-import Button from '../Button';
+import React from "react";
+import BlockText from "../BlockText";
+import Button from "../Button";
 
 class PricingTables extends React.Component {
-    render() {
-        const {items,buttonLabel} = this.props;
-        return (
-            <section>
-                <BlockText items={items}/>
-                <div className='contentContainer'>
-                    <div className='flex textCenter'>
-                    {
-                        items.list.map(item => {
-                            return (
-                                <div>
-                                    <BlockText items={item}/>
-                                    <BlockText items={item.list} isNotVisible={true}/>
-                                    <Button buttonLabel = {buttonLabel}/>
-                                </div>
-                            )
-                        })
-                    }
-                    </div>
-
+  render() {
+    const { items, buttonLabel } = this.props;
+    const { header } = this.props;
+    console.log(header);
+    return (
+      <section>
+        {/* <BlockText items={header} isPositionCenter={true} />
+        <div className="contentContainer">
+          <div className="flexContainer">
+            {items.list.map((item, index) => {
+              return (
+                <div key={index}>
+                  {console.log(item.list)}
+                  <BlockText items={item} isPositionCenter={true} />
+                  {items.list.map((item) => {
+                    return (
+                      <>
+                        <BlockText items={item.list} isNotVisible={true} />
+                      </>
+                    );
+                  })}
+                  <Button buttonLabel={buttonLabel} />
                 </div>
-            </section>
-            
-        )
-    }
+              );
+            })}
+          </div>
+        </div> */}
+      </section>
+    );
+  }
 }
 
 export default PricingTables;

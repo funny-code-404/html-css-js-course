@@ -1,6 +1,5 @@
 import React from "react";
 import Icon from "./Icon";
-import "./styles.css";
 
 class IconsList extends React.Component {
   render() {

@@ -28,7 +28,7 @@ class Services extends React.Component {
         <div className="rightContent flexContainer">
           <IconsList
             items={rightContent}
-            classContainer="iconBigContainer"
+            classContainer="iconBigContainer positionCenter"
             section="withoutPadding"
           />
         </div>

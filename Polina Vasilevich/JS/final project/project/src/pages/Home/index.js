@@ -17,6 +17,7 @@ import partnersItems from "../../assets/const/partnersItems";
 import pricingTables from "../../assets/const/pricingTables";
 import business from "../../assets/const/business";
 
+const { header } = pricingTables;
 class Home extends React.Component {
   render() {
     return (
@@ -36,7 +37,11 @@ class Home extends React.Component {
         <Introducing items={introducingItems} stl={{ marginLeft: "auto" }} />
         <Services items={servicesItems} />
         <Partners items={partnersItems} />
-        <PricingTables items={pricingTables} buttonLabel="GET STARTED NOW" />
+        <PricingTables
+          items={pricingTables}
+          header={header}
+          buttonLabel="GET STARTED NOW"
+        />
         <Business items={business} />
       </>
     );

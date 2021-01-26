@@ -27,3 +27,13 @@
   font-weight: 400;
   color: #575757;
 }
+
+.positionCenterTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 60%;
+  margin: 0 auto;
+}

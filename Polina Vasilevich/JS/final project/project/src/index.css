@@ -11,13 +11,7 @@ section {
 .flexContainer {
   display: flex;
   flex-wrap: wrap;
-}
-
-.textContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
 }
 
 .positionCenter {
