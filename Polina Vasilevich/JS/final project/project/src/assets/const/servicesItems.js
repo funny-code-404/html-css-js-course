@@ -28,42 +28,42 @@ export default {
 
   rightContent: [
     {
-      icon: webDesign,
+      img: webDesign,
       title: "Web Design",
       text:
         "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra",
     },
 
     {
-      icon: ecommerce,
+      img: ecommerce,
       title: "Ecommerce",
       text:
         "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra",
     },
 
     {
-      icon: video,
+      img: video,
       title: "Video Advertising",
       text:
         "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra",
     },
 
     {
-      icon: photo,
+      img: photo,
       title: "Photography",
       text:
         "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra",
     },
 
     {
-      icon: graphic,
+      img: graphic,
       title: "Graphic Design",
       text:
         "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra",
     },
 
     {
-      icon: support,
+      img: support,
       title: "Support Tools",
       text:
         "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra",

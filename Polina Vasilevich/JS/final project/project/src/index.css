@@ -5,59 +5,12 @@
 
 section {
   padding: 0 15%;
-  margin: 150px 0;
-}
-
-.iconTitle {
-  font-family: OpenSans;
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 600;
-  color: #333333;
-}
-
-.iconText {
-  font-family: OpenSans;
-  font-size: 14px;
-  line-height: 30px;
-  font-weight: 400;
-  color: #575757;
-}
-
-.sectionTitle,
-.sectionSubTitle,
-.sectionText {
-  margin-bottom: 20px;
-}
-
-.sectionTitle {
-  font-family: OpenSans;
-  font-size: 36px;
-  line-height: 30px;
-  font-weight: 300;
-  color: #333333;
-}
-
-.sectionSubTitle {
-  font-family: OpenSans;
-  font-size: 18px;
-  line-height: 36px;
-  font-weight: 300;
-  color: #999999;
-}
-
-.sectionText {
-  font-family: OpenSans;
-  font-size: 14px;
-  line-height: 30px;
-  font-weight: 400;
-  color: #575757;
+  margin-bottom: 150px;
 }
 
 .flexContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .textContainer {
@@ -69,8 +22,52 @@ section {
 
 .positionCenter {
   align-items: center;
+  text-align: center;
 }
 
 .positionRight {
   float: right;
+}
+
+.circleIcon {
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #69d2e7;
+  background-image: linear-gradient(48deg, #00f0ff -22%, #ebacfd 122%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconBigContainer {
+  width: 33%;
+}
+
+.iconMiddleContainer {
+  width: 27%;
+  display: flex;
+}
+
+.iconSmallContainer {
+  width: 24%;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textBlock {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.smallTextBlock {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.withoutPadding {
+  padding: 0;
 }

@@ -1,21 +1,23 @@
 import React from "react";
 import "./styles.css";
-import TitleText from "../BlockWithTitleText";
+import BlockText from "../BlockText";
 
 class Portfolio extends React.Component {
   render() {
     const { imgs } = this.props.items;
-    const { items } = this.props;
+    const { items, style } = this.props;
     return (
-      <section>
+      <section style={{ padding: style }}>
         <div className="contentPortfolio">
-          <TitleText items={items} />
+          <BlockText items={items} classContainer="textContainer" />
           <div className="imgContainer">
             {imgs.map((img, index) => {
               return (
-                <div key={index} className="img">
-                  {img}
-                </div>
+                <div
+                  key={index}
+                  className="img"
+                  style={{ backgroundImage: `url(${img})` }}
+                ></div>
               );
             })}
           </div>

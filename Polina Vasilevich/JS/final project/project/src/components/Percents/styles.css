@@ -1,0 +1,11 @@
+.percentsContainer {
+  width: 100%;
+  height: 10px;
+  background-color: #131313;
+}
+
+.percentsItem {
+  height: 10px;
+  background-color: #ffffff;
+  background-image: linear-gradient(90deg, #00f0ff -24%, #ebacfd 125%);
+}

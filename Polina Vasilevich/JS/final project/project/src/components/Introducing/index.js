@@ -1,5 +1,5 @@
 import React from "react";
-import TitleSubTitleText from "../BlockWithTitleSubTitleText";
+import BlockText from "../BlockText";
 import Button from "../Button";
 import "./styles.css";
 
@@ -11,7 +11,7 @@ class Introducing extends React.Component {
     return (
       <section>
         <div className="content" style={stl}>
-          <TitleSubTitleText items={items} />
+          <BlockText  items={items} />
           <Button buttonIcon={buttonIcon} buttonLabel={buttonLabel} />
         </div>
       </section>

@@ -2,13 +2,15 @@ import React from "react";
 import Line from "../Line";
 import "./styles.css";
 
-class TitleSubTitleText extends React.Component {
+class BlockText extends React.Component {
   render() {
     const { title, subTitle, text } = this.props.items;
+    const { isNotVisible, classContainer } = this.props;
+
     return (
-      <div>
+      <div className={classContainer}>
         <h2 className="sectionBigTitle">{title}</h2>
-        <Line />
+        {!isNotVisible && <Line />}
         <p className="sectionBigSubTitle">{subTitle}</p>
         <p className="sectionBigText">{text}</p>
       </div>
@@ -16,4 +18,4 @@ class TitleSubTitleText extends React.Component {
   }
 }
 
-export default TitleSubTitleText;
+export default BlockText;

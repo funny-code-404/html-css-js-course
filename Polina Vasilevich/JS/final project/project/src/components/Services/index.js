@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../Button";
-import TitleSubTitleText from "../BlockWithTitleSubTitleText";
-
+import BlockText from "../BlockText";
+import IconsList from "../BlockWithIconList";
 import "./styles.css";
 
 class Services extends React.Component {
@@ -10,7 +10,7 @@ class Services extends React.Component {
     return (
       <section className="flexContainer">
         <div className="leftContent">
-          <TitleSubTitleText items={leftContent} />
+          <BlockText items={leftContent} />
           <ul>
             {leftContent.list.map((item, index) => {
               return (
@@ -26,16 +26,11 @@ class Services extends React.Component {
           />
         </div>
         <div className="rightContent flexContainer">
-          {rightContent.map((item) => {
-            return (
-              <div className="iconsContainer">
-                <img src={item.icon} alt={item.title} />
-                <h3 className="iconTitle">{item.title}</h3>
-                <p className="iconText">{item.text}</p>
-                <button></button>
-              </div>
-            );
-          })}
+          <IconsList
+            items={rightContent}
+            classContainer="iconBigContainer"
+            section="withoutPadding"
+          />
         </div>
       </section>
     );
