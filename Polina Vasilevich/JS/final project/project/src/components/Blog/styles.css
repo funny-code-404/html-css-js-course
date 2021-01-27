@@ -1,0 +1,35 @@
+.gridColumns {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.gridItems {
+  background-size: cover;
+  background-position: center center;
+
+  position: relative;
+}
+
+.gridItems:nth-of-type(1) {
+  grid-row: 1 / 3;
+  height: 730px;
+}
+
+.imgTextContainer {
+  padding: 20px 40px;
+  position: absolute;
+  bottom: 0;
+}
+
+.imgTitle {
+  font-family: OpenSans;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.imgDate {
+  font-size: 14px;
+  color: #cccccc;
+}

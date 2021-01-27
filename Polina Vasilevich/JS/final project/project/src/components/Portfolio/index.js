@@ -11,8 +11,7 @@ class Portfolio extends React.Component {
         <div className="contentPortfolio">
           <BlockText
             items={items}
-            // classContainer="textContainer"
-            isPositionCenter={true}
+            styleTextContainer='positionCenterTitle'
           />
           <div className="imgContainer">
             {imgs.map((img, index) => {

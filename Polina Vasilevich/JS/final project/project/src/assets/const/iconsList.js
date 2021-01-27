@@ -35,7 +35,4 @@ export default [
         icon: 'ti-panel',
     },
 
-
 ]
-
-////http://thetheme.io/theadmin/content/icons-themify.html

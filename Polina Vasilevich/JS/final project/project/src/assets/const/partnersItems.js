@@ -9,7 +9,7 @@ import newyork from "../img/partners/LONG ISLAND MEN’S DIVISION@1X.png";
 
 export default {
   title: "The Best Partners",
-  text: "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor vive",
+  subTitle: "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor vive",
   list: [
     cubanese,
     handcraft,

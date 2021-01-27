@@ -25,11 +25,11 @@ class Services extends React.Component {
             buttonIcon={leftContent.buttonIcon}
           />
         </div>
-        <div className="rightContent flexContainer">
+        <div className="rightContent">
           <IconsList
             items={rightContent}
-            classContainer="iconBigContainer positionCenter"
-            section="withoutPadding"
+            styleGridContainer="threeColumnsGrid positionCenter"
+            
           />
         </div>
       </section>

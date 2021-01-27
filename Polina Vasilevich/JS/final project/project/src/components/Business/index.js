@@ -3,19 +3,26 @@ import BlockText from "../BlockText";
 import IconsList from "../BlockWithIconList";
 import Percents from "../Percents";
 
+import "./styles.css";
+
 class Business extends React.Component {
   render() {
     const { leftContent, rightContent } = this.props.items;
 
     return (
-      <section className="flex">
-        <div style={{ width: "60%" }}>
+      <section className="gridWithDifferentColumns">
+        <div>
           <BlockText items={leftContent} />
-          <IconsList items={leftContent.list} />
+          <IconsList
+            items={leftContent.list}
+            styleGridContainer="twoColumnsGrid"
+            styleImg="imgContainerSize"
+            section="withoutPadding"
+          />
         </div>
 
-        <div style={{ width: "40%" }}>
-          <BlockText items={rightContent} isPositionCenter={true} />
+        <div>
+          <BlockText items={rightContent} />
           <Percents items={rightContent.list} />
         </div>
       </section>

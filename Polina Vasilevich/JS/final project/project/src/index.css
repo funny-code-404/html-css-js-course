@@ -1,11 +1,11 @@
 * {
-  paddin: 0;
+  padding: 0;
   margin: 0;
 }
 
 section {
-  padding: 0 15%;
-  margin-bottom: 150px;
+  padding: 0 10%;
+  margin-bottom: 50px;
 }
 
 .flexContainer {
@@ -64,4 +64,36 @@ section {
 
 .withoutPadding {
   padding: 0;
+}
+
+.smallFontSizeText {
+  font-family: OpenSans;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #999999;
+}
+
+.smallFontSizeTitle {
+  font-family: OpenSans;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: #333333;
+}
+
+.positionCenterTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 60%;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
 }

@@ -1,0 +1,9 @@
+.imgContainerSize {
+  height: 290px;
+}
+
+.gridWithDifferentColumns {
+  display: grid;
+  column-gap: 5%;
+  grid-template-columns: 50% 35%;
+}

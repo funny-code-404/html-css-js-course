@@ -9,7 +9,7 @@ import img8 from "../img/portfolio/christopher-gower-m_HRfLhgABo-unsplash.jpg";
 
 export default {
   title: "Selected Case Studies",
-  text:
+  subTitle:
     "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra. Nulla vehicula nibh vel ante commodo feugiat.",
   imgs: [img1, img2, img3, img4, img5, img6, img7, img8],
 };

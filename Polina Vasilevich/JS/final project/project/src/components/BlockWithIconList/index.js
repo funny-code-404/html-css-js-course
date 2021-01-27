@@ -1,24 +1,27 @@
 import React from "react";
 import Icon from "./Icon";
 
+import './styles.css';
+
 class IconsList extends React.Component {
   render() {
-    const { items, classIcon, classContainer, section } = this.props;
+    const { items, styleImg, styleImgContainer, styleGridContainer } = this.props;
     return (
-      <section className={section}>
-        <div className="flexContainer">
+      <div>
+        <div className={`grid ${styleGridContainer}`}>
           {items.map((item) => {
             return (
               <Icon
                 key={item.title}
                 items={item}
-                classIcon={classIcon}
-                classContainer={classContainer}
+                styleImg={styleImg}
+                styleImgContainer={styleImgContainer}
+                styleGridContainer={styleGridContainer}
               />
             );
           })}
         </div>
-      </section>
+      </div>
     );
   }
 }

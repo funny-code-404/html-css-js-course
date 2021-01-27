@@ -1,20 +1,21 @@
 import React from "react";
-import Line from "../Line";
 import "./styles.css";
+
+import {TextContainer, Title, SubTitle, Text, Line} from './styles'
 
 class BlockText extends React.Component {
   render() {
     const { title, subTitle, text } = this.props.items;
-    const { isNotVisible, classContainer, isPositionCenter } = this.props;
+    const { isNotVisibleLine, styleTextContainer} = this.props;
 
-    const positionTitle = isPositionCenter ? "positionCenterTitle" : "";
     return (
-      <div className={`${classContainer} ${positionTitle}`}>
-        <h2 className="sectionBigTitle">{title}</h2>
-        {!isNotVisible && <Line />}
-        <p className="sectionBigSubTitle">{subTitle}</p>
-        <p className="sectionBigText">{text}</p>
-      </div>
+      <TextContainer className={styleTextContainer}>
+          <Title>{title}</Title>
+          {!isNotVisibleLine && <Line></Line>}
+          <SubTitle>{subTitle}</SubTitle>
+          <Text>{text}</Text>
+      </TextContainer>
+
     );
   }
 }

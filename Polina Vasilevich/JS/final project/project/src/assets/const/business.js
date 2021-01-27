@@ -1,23 +1,23 @@
-import cubanese from "../img/partners/Logo 22@1X.png";
-import handcraft from "../img/partners/IN NEW YORK@1X.png";
+import cubanese from "../img/portfolio/christopher-gower-m_HRfLhgABo-unsplash.jpg";
+import handcraft from "../img/portfolio/ux-store-jJT2r2n7lYA-unsplash.jpg";
 
 export default {
   leftContent: {
     title: "Why Choose TheFox Business",
-    text:
+    subTitle:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     list: [
       {
         img: cubanese,
         title: "We Think Different. We Do The Best Ever",
-        text:
+        subTitle:
           "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra. Vehicula nibh vel ante commodo feugiat. Nulla ut enim lobortis orci gravida volutpat.",
       },
 
       {
         img: handcraft,
         title: "We Do What The Customers Desires",
-        text:
+        subTitle:
           "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra. Vehicula nibh vel ante commodo feugiat. Nulla ut enim lobortis orci gravida volutpat.",
       },
     ],

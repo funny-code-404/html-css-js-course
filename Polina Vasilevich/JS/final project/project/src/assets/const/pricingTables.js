@@ -1,13 +1,13 @@
-export const header = {
+export const blockHeader = {
   title: "Pricing Tables",
-  text:
+  subTitle:
     "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra. Nulla vehicula nibh vel ante commodo feugiat.",
 };
 
 export default [
   {
     title: "Personal",
-    text: "From $99 Per Months",
+    subTitle: "From $99 Per Months",
     list: [
       {
         title: "01 PSD Pack",

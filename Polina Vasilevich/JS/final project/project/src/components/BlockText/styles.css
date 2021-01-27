@@ -1,39 +1,17 @@
-.sectionBigTitle,
-.sectionBigSubTitle,
-.sectionBigText {
-  margin-bottom: 20px;
-}
-
-.sectionBigTitle {
-  font-family: OpenSans;
-  font-size: 36px;
-  line-height: 30px;
-  font-weight: 300;
-  color: #333333;
-}
-
-.sectionBigSubTitle {
-  font-family: OpenSans;
-  font-size: 18px;
-  line-height: 36px;
-  font-weight: 300;
-  color: #999999;
-}
-
-.sectionBigText {
-  font-family: OpenSans;
-  font-size: 14px;
-  line-height: 30px;
-  font-weight: 400;
-  color: #575757;
-}
-
 .positionCenterTitle {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
-  width: 60%;
   margin: 0 auto;
+}
+
+.positionRightBlock {
+  margin-left: auto;
+}
+
+.widthTextContainer {
+  width: 50%;
 }

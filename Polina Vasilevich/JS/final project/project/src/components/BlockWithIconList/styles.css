@@ -1,0 +1,23 @@
+.grid {
+  display: grid;
+  grid-column-gap: 20px;
+}
+
+.fourColumnsGrid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.threeColumnsGrid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.twoColumnsGrid {
+  grid-template-columns: repeat(2, 1fr);
+}
+.flex {
+  display: flex;
+}
+
+.positionCenter {
+  text-align: center;
+}

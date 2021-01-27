@@ -8,8 +8,8 @@ class Partners extends React.Component {
     const { items } = this.props;
     return (
       <section>
-        <BlockText items={items} isPositionCenter={true} />
-        <div className=" flexContainer positionCenter">
+        <BlockText items={items}  styleTextContainer='positionCenterTitle'/>
+        <div className="flexContainer positionCenter">
           {list.map((item, index) => {
             return (
               <div key={index} className="logoContainer">
