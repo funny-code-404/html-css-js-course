@@ -7,7 +7,11 @@ function CallToAction(props) {
     <Container>
       <FlexContainer>
         <Text>{text}</Text>
-        <Button buttonLabel={buttonLabel}></Button>
+        <Button
+          buttonLabel={buttonLabel}
+          backgroundColor="#82b440"
+          borderColor="#fff"
+        ></Button>
       </FlexContainer>
     </Container>
   );

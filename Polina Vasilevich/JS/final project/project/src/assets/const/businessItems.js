@@ -1,7 +1,7 @@
 import cubanese from "../img/portfolio/christopher-gower-m_HRfLhgABo-unsplash.jpg";
 import handcraft from "../img/portfolio/ux-store-jJT2r2n7lYA-unsplash.jpg";
 
-export default {
+const businessItems = {
   leftContent: {
     title: "Why Choose TheFox Business",
     subTitle:
@@ -10,14 +10,14 @@ export default {
       {
         img: cubanese,
         title: "We Think Different. We Do The Best Ever",
-        subTitle:
+        text:
           "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra. Vehicula nibh vel ante commodo feugiat. Nulla ut enim lobortis orci gravida volutpat.",
       },
 
       {
         img: handcraft,
         title: "We Do What The Customers Desires",
-        subTitle:
+        text:
           "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra. Vehicula nibh vel ante commodo feugiat. Nulla ut enim lobortis orci gravida volutpat.",
       },
     ],
@@ -52,3 +52,5 @@ export default {
     ],
   },
 };
+
+export default businessItems;

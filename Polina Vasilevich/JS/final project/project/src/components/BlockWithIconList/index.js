@@ -7,8 +7,8 @@ class IconsList extends React.Component {
   render() {
     const { items, styleImg, styleImgContainer, styleGridContainer } = this.props;
     return (
-      <div>
-        <div className={`grid ${styleGridContainer}`}>
+      <section>
+        <div className={`paddingRightLeft grid ${styleGridContainer}`}>
           {items.map((item) => {
             return (
               <Icon
@@ -21,7 +21,7 @@ class IconsList extends React.Component {
             );
           })}
         </div>
-      </div>
+      </section>
     );
   }
 }

@@ -4,6 +4,14 @@
 
 .gridWithDifferentColumns {
   display: grid;
-  column-gap: 5%;
-  grid-template-columns: 50% 35%;
+  grid-column-gap: 20px;
+  grid-template-columns: 60% 40%;
+
+  justify-content: space-between;
+}
+
+.gridImg {
+  height: 290px;
+  background-size: cover;
+  background-position: center center;
 }

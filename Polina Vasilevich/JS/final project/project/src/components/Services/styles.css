@@ -1,9 +1,10 @@
 .leftContent {
-  width: 40%;
+  background-color: #1f252f;
+  padding: 10%;
 }
 
 .rightContent {
-  width: 60%;
+  padding-left: 0;
 }
 
 .servicesList {

@@ -37,6 +37,26 @@ export const Line = styled.div`
     background-image: linear-gradient(90deg, #00f0ff -25%, #ebacfd 125%);
 `
 
+const positionBlock = position => {
+    switch(position) {
+        case 'rigth': 
+            return `
+                margin-left: auto;
+            `
+        case 'center': 
+            return `
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+        `
+        default: 
+            return ``
+    }
+}
+
+
 export const TextContainer = styled.div`
-    // width: 50%;
+    ${(props) => positionBlock(props.position)};
 `

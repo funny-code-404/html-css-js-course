@@ -5,7 +5,7 @@ import photo from "../img/services/photo.png";
 import graphic from "../img/services/graphic.png";
 import support from "../img/services/support.png";
 
-export default {
+const servicesItems = {
   leftContent: {
     title: "What We Do",
     subTitle:
@@ -70,3 +70,5 @@ export default {
     },
   ],
 };
+
+export default servicesItems;

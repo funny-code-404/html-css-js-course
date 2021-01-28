@@ -7,9 +7,11 @@ import img6 from "../img/portfolio/ux-store-jJT2r2n7lYA-unsplash.jpg";
 import img7 from "../img/portfolio/christopher-gower-m_HRfLhgABo-unsplash.jpg";
 import img8 from "../img/portfolio/christopher-gower-m_HRfLhgABo-unsplash.jpg";
 
-export default {
+const portfolioItems = {
   title: "Selected Case Studies",
   subTitle:
     "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra. Nulla vehicula nibh vel ante commodo feugiat.",
   imgs: [img1, img2, img3, img4, img5, img6, img7, img8],
 };
+
+export default portfolioItems;

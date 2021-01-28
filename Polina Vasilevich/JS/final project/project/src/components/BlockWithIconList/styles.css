@@ -14,6 +14,7 @@
 .twoColumnsGrid {
   grid-template-columns: repeat(2, 1fr);
 }
+
 .flex {
   display: flex;
 }

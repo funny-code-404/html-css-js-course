@@ -4,7 +4,7 @@ export const blockHeader = {
     "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra. Nulla vehicula nibh vel ante commodo feugiat.",
 };
 
-export default [
+const pricingTables = [
   {
     title: "Personal",
     subTitle: "From $99 Per Months",
@@ -77,3 +77,5 @@ export default [
     ],
   },
 ];
+
+export default pricingTables;

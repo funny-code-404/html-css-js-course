@@ -1,4 +1,4 @@
-export default {
+const introducingItems = {
   title: "Great Theme for Your Business",
   subTitle:
     "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra. Nulla vehicula nibh vel ante commodo feugiat.",
@@ -7,3 +7,5 @@ export default {
   buttonLabel: "TAKE A TOUR",
   buttonIcon: "ti-light-bulb",
 };
+
+export default introducingItems;

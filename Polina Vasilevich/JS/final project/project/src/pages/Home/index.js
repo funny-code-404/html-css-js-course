@@ -1,61 +1,69 @@
 import React from "react";
 
 import Introducing from "../../components/Introducing";
-import Portfolio from "../../components/Portfolio";
-import IconsList from "../../components/BlockWithIconList";
+import Photos from "../../components/Photos";
 import Services from "../../components/Services";
-import Partners from "../../components/Partners";
-import PricingTables from "../../components/PricingTables";
+import Logos from "../../components/Logos";
+import PricingTables from "../../components/Prices";
 import Business from "../../components/Business";
 import Blog from "../../components/Blog";
 import CallToAction from "../../components/CallToAction";
-import Numbers from "../../components/NumberAnimation";
+import Numbers from "../../components/Numbers";
+import ImgAndText from "../../components/ImgAndText";
 
-import iconsList from "../../assets/const/icons";
+import iconList1 from "../../assets/const/iconList1";
 import introducingItems from "../../assets/const/introducingItems";
 import portfolioItems from "../../assets/const/portfolioItems";
-import iconsList2 from "../../assets/const/iconsList";
+import iconList2 from "../../assets/const/iconList2";
 import servicesItems from "../../assets/const/servicesItems";
 import partnersItems from "../../assets/const/partnersItems";
 import pricingTables, { blockHeader } from "../../assets/const/pricingTables";
-import business from "../../assets/const/business";
+import businessItems from "../../assets/const/businessItems";
 import blogItems from "../../assets/const/blogItems";
 import numbersItems from "../../assets/const/numbersItems";
+
 class Home extends React.Component {
   render() {
     return (
       <>
-        <section>
-          <IconsList
-            items={iconsList}
-            styleImg="circleIcon whiteColor"
-            styleImgContainer="positionCenter"
-            styleGridContainer="fourColumnsGrid"
-          />
-        </section>
+        <ImgAndText
+          items={iconList1}
+          numberColumns="4"
+          colorText="white"
+          positionIcon="center"
+          circleIcon
+        />
+        <Introducing
+          items={introducingItems}
+          buttonBackgroundColor="#4285f4"
+          buttonBorderColor="#2c6cd6"
+        />
 
-        <Introducing items={introducingItems} />
-        <Portfolio items={portfolioItems} style="0" />
+        <Photos items={portfolioItems} numberGridColumns="4" />
+
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"
         />
-        <section>
-          <IconsList
-            items={iconsList2}
-            styleImg="gradientColor"
-            styleImgContainer="flex"
-            styleGridContainer="threeColumnsGrid"
-          />
-        </section>
 
+        <ImgAndText
+          items={iconList2}
+          numberColumns="3"
+          colorText="gradient"
+          positionIcon="left"
+        />
         <Introducing
           items={introducingItems}
-          positionBlock="positionRightBlock"
+          buttonBackgroundColor="#4285f4"
+          buttonBorderColor="#2c6cd6"
+          positionBlockRight
         />
+
         <Numbers items={numbersItems} />
+
         <Services items={servicesItems} />
-        <Partners items={partnersItems} />
+
+        <Logos items={partnersItems} />
         <PricingTables
           items={pricingTables}
           header={blockHeader}
@@ -65,7 +73,7 @@ class Home extends React.Component {
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"
         />
-        <Business items={business} />
+        <Business items={businessItems} />
         <Blog items={blogItems} />
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"

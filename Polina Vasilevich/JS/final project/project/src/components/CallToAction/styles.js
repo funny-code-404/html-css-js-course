@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.section`
-  padding: 0;
+export const Container = styled.div`
   margin-top: 0;
   margin-bottom: 50px;
   width: 100%;
@@ -19,8 +18,8 @@ export const Text = styled.p`
 `;
 
 export const FlexContainer = styled.div`
-  height: 100%;
-  padding: 0 10%;
+  padding: 0 5%;
+  height: 181px;
   display: flex;
   justify-content: space-between;
   align-items: center;

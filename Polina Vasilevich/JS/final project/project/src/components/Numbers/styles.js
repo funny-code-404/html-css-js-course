@@ -1,10 +1,18 @@
 import styled from "styled-components";
 
-export const Container = styled.section`
+export const Section = styled.div`
   height: 280px;
   background-color: #1f252f;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+`;
+
+export const ContentContainer = styled.div`
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 `;
 

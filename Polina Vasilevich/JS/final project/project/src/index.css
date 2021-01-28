@@ -4,8 +4,11 @@
 }
 
 section {
-  padding: 0 10%;
-  margin-bottom: 50px;
+  padding: 5%;
+}
+
+.paddingRightLeft {
+  padding: 0 7%;
 }
 
 .flexContainer {

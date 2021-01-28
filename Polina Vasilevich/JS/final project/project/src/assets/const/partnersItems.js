@@ -7,10 +7,10 @@ import southbeach from "../img/partners/Logo 8@1X.png";
 import hord from "../img/partners/HAUS@1X.png";
 import newyork from "../img/partners/LONG ISLAND MEN’S DIVISION@1X.png";
 
-export default {
+const partnersItems = {
   title: "The Best Partners",
   subTitle: "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor vive",
-  list: [
+  imgs: [
     cubanese,
     handcraft,
     premium,
@@ -21,3 +21,5 @@ export default {
     newyork,
   ],
 };
+
+export default partnersItems;

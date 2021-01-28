@@ -1,16 +1,17 @@
 import React from "react";
 import Button from "../Button";
-import BlockText from "../BlockText";
-import IconsList from "../BlockWithIconList";
+import Title from "../Title";
+import ImgAndText from "../ImgAndText";
+import { GridContainer } from "../../styles";
 import "./styles.css";
 
 class Services extends React.Component {
   render() {
     const { leftContent, rightContent } = this.props.items;
     return (
-      <section className="flexContainer">
+      <GridContainer numberColumns="2">
         <div className="leftContent">
-          <BlockText items={leftContent} />
+          <Title items={leftContent} />
           <ul>
             {leftContent.list.map((item, index) => {
               return (
@@ -26,13 +27,13 @@ class Services extends React.Component {
           />
         </div>
         <div className="rightContent">
-          <IconsList
+          <ImgAndText
             items={rightContent}
-            styleGridContainer="threeColumnsGrid positionCenter"
-            
+            numberColumns="3"
+            positionIcon="center"
           />
         </div>
-      </section>
+      </GridContainer>
     );
   }
 }

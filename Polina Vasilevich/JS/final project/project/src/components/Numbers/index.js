@@ -1,20 +1,20 @@
-import { Title, Text, Line, Container } from "./styles";
+import { Title, Text, Line, Section, ContentContainer} from "./styles";
 
 function Numbers(props) {
   const { items } = props;
   console.log(items);
   return (
-    <Container>
+    <Section>
       {items.map(({ title, text, colorTitle }) => {
         return (
-          <div key={title} className="positionCenterTitle">
+          <ContentContainer key={title}>
             <Title style={{ color: colorTitle }}>{title}</Title>
             <Line></Line>
             <Text>{text}</Text>
-          </div>
+          </ContentContainer>
         );
       })}
-    </Container>
+    </Section>
   );
 }
 

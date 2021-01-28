@@ -1,17 +1,14 @@
 import React from "react";
-import "./styles.css";
-
 import {TextContainer, Title, SubTitle, Text, Line} from './styles'
 
-class BlockText extends React.Component {
+class TitleComponent extends React.Component {
   render() {
     const { title, subTitle, text } = this.props.items;
-    const { isNotVisibleLine, styleTextContainer} = this.props;
-
+    const {width, position} = this.props;
     return (
-      <TextContainer className={styleTextContainer}>
+      <TextContainer width={width} position={position}>
           <Title>{title}</Title>
-          {!isNotVisibleLine && <Line></Line>}
+          <Line></Line>
           <SubTitle>{subTitle}</SubTitle>
           <Text>{text}</Text>
       </TextContainer>
@@ -20,4 +17,4 @@ class BlockText extends React.Component {
   }
 }
 
-export default BlockText;
+export default TitleComponent;
