@@ -1,10 +1,20 @@
-import styled, {css} from 'styled-components';
+import styled, { css } from "styled-components";
 
 const positionBlockRight = css`
-    margin-left: auto;
-`
+  margin-left: auto;
+`;
 
 export const ContentContainer = styled.div`
-    width: 50%;
-    ${props => props.positionBlockRight ? positionBlockRight : ''}
-`
+  width: 46%;
+
+  ${(props) => (props.positionBlockRight ? positionBlockRight : "")};
+`;
+
+export const MainContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 778px;
+  background-size: cover;
+  background-position: center center;
+`;

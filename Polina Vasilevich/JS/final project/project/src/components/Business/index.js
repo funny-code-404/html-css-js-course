@@ -3,8 +3,8 @@ import TitleComponent from "../Title";
 import Percents from "../Percents";
 import { GridContainer } from "../../styles";
 import { SubTitle, Text } from "../Title/styles";
+import { GridImg } from "./styles";
 import Button from "../Button";
-import "./styles.css";
 
 class Business extends React.Component {
   render() {
@@ -21,10 +21,10 @@ class Business extends React.Component {
               {leftContent.list.map(({ title, text, img }) => {
                 return (
                   <div key={title}>
-                    <div
+                    <GridImg
                       className="gridImg"
                       style={{ backgroundImage: `url(${img})` }}
-                    ></div>
+                    ></GridImg>
                     <SubTitle>{title}</SubTitle>
                     <Text>{text}</Text>
                   </div>

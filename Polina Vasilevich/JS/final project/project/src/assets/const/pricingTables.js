@@ -31,7 +31,7 @@ const pricingTables = [
 
   {
     title: "Business",
-    text: "From $599 Per Months",
+    subTitle: "From $599 Per Months",
     list: [
       {
         title: "05 PSD Pack",
@@ -55,7 +55,7 @@ const pricingTables = [
 
   {
     title: "Ultimate",
-    text: "From $999 Per Months",
+    subTitle: "From $999 Per Months",
     list: [
       {
         title: "10 PSD Pack",

@@ -1,7 +1,15 @@
 import React from "react";
+import { GridContainer } from "../../styles";
+import {
+  ContentContainer,
+  Title,
+  Text,
+  Icon,
+  TextContainer,
+  IconWrapper,
+} from "./styles";
 
-import { GridContainer, ContentContainer, Title, Text, Icon } from "./styles";
-
+import { Wrapper } from "../../styles";
 class ImgAndText extends React.Component {
   render() {
     const {
@@ -10,32 +18,37 @@ class ImgAndText extends React.Component {
       colorText,
       positionIcon,
       circleIcon,
+      gridGap,
     } = this.props;
 
     return (
       <section>
-        <GridContainer numberColumns={numberColumns}>
-          {items.map(({ img, icon, title, text }) => {
-            return (
-              <ContentContainer positionIcon={positionIcon}>
-                {img ? (
-                  <img src={img} alt={title} />
-                ) : (
-                  <Icon
-                    colorText={colorText}
-                    circleIcon={circleIcon}
-                    className={`${icon}`}
-                  ></Icon>
-                )}
+        <Wrapper>
+          <GridContainer numberColumns={numberColumns} gridGap={gridGap}>
+            {items.map(({ img, icon, title, text }) => {
+              return (
+                <ContentContainer positionIcon={positionIcon}>
+                  {img ? (
+                    <img src={img} alt={title} />
+                  ) : (
+                    <IconWrapper>
+                      <Icon
+                        colorText={colorText}
+                        circleIcon={circleIcon}
+                        className={`${icon}`}
+                      ></Icon>
+                    </IconWrapper>
+                  )}
 
-                <div className="textContainer">
-                  <Title>{title}</Title>
-                  <Text>{text}</Text>
-                </div>
-              </ContentContainer>
-            );
-          })}
-        </GridContainer>
+                  <TextContainer>
+                    <Title>{title}</Title>
+                    <Text>{text}</Text>
+                  </TextContainer>
+                </ContentContainer>
+              );
+            })}
+          </GridContainer>
+        </Wrapper>
       </section>
     );
   }

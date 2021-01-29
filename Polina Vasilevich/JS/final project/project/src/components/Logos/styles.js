@@ -7,8 +7,8 @@ export const FlexContainer = styled.div`
   align-content: center;
 `;
 export const ContentContainer = styled.div`
-  padding: 40px 0;
-  height: 25px;
+  // padding: 40px 0;
+  // height: 25px;
   width: 25%;
 `;
 

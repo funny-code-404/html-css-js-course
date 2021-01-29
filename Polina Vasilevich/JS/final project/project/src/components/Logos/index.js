@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "../Title";
-import { GridContainer } from "../../styles";
+import { GridContainer, Wrapper } from "../../styles";
 
 import { Logo, ContentContainer, FlexContainer } from "./styles";
 
@@ -11,16 +11,18 @@ class Logos extends React.Component {
 
     return (
       <section>
-        <Title items={items} position="center" />
-        <GridContainer numberColumns="4">
-          {imgs.map((item, index) => {
-            return (
-              <ContentContainer key={index}>
-                <Logo src={item} alt={item} />
-              </ContentContainer>
-            );
-          })}
-        </GridContainer>
+        <Wrapper>
+          <Title items={items} position="center" />
+          <FlexContainer>
+            {imgs.map((item, index) => {
+              return (
+                <ContentContainer key={index}>
+                  <Logo src={item} alt={item} />
+                </ContentContainer>
+              );
+            })}
+          </FlexContainer>
+        </Wrapper>
       </section>
     );
   }

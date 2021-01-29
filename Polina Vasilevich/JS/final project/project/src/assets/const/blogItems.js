@@ -15,14 +15,14 @@ const blogItems = {
     },
 
     {
-      title: "",
-      date: "",
+      title: "Google employee dies in an accident at the Cannes Lions advertising festival",
+      date: "by Robinson Greig / 25th June 2020",
       img: img2,
     },
 
     {
-      title: "",
-      date: "",
+      title: "How a tweet turned Uber's first hire into a billionaire",
+      date: "by Robinson Greig / 25th June 2020",
       img: img3,
     },
   ],

@@ -4,13 +4,8 @@
 }
 
 section {
-  padding: 5%;
+  padding: 50px 0;
 }
-
-.paddingRightLeft {
-  padding: 0 7%;
-}
-
 .flexContainer {
   display: flex;
   flex-wrap: wrap;
