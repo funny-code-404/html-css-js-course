@@ -8,7 +8,10 @@ import {
   LogoImg,
   LogoText,
   Navigation,
+  FlexContainer,
 } from "./styles";
+
+import { Wrapper } from "../../styles";
 
 import "./styles.css";
 
@@ -18,23 +21,27 @@ class HeaderComponent extends React.Component {
 
     return (
       <Header>
-        <LogoContainer>
-          <LogoImg src={logo} alt="" />
-          <LogoText>{textLogo}</LogoText>
-        </LogoContainer>
-        <Navigation>
-          <List>
-            {routes.map((route) => {
-              return (
-                <ListItem>
-                  <Link className="link" key={route.path} to={route.path}>
-                    {route.label}
-                  </Link>
-                </ListItem>
-              );
-            })}
-          </List>
-        </Navigation>
+        <Wrapper>
+          <FlexContainer>
+            <LogoContainer>
+              <LogoImg src={logo} alt="" />
+              <LogoText>{textLogo}</LogoText>
+            </LogoContainer>
+            <Navigation>
+              <List>
+                {routes.map(({ path, label }) => {
+                  return (
+                    <ListItem>
+                      <Link className="link" key={path} to={path}>
+                        {label}
+                      </Link>
+                    </ListItem>
+                  );
+                })}
+              </List>
+            </Navigation>
+          </FlexContainer>
+        </Wrapper>
       </Header>
     );
   }

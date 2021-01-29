@@ -2,11 +2,10 @@ import React from "react";
 import Title from "../Title";
 import Button from "../Button";
 import { GridContainer, Wrapper } from "../../styles";
-import { InfoContainer } from "./styles";
-
+import { InfoContainer, ContentContainer, ItemInfoContainer } from "./styles";
 class Prices extends React.Component {
   render() {
-    const { items, buttonLabel } = this.props;
+    const { items, buttonLabel, backgroundImage } = this.props;
     const { header } = this.props;
 
     return (
@@ -17,20 +16,20 @@ class Prices extends React.Component {
             <GridContainer numberColumns="3">
               {items.map((item) => {
                 return (
-                  <div>
+                  <ContentContainer>
                     <Title key={item.title} items={item} position="center" />
                     <InfoContainer>
                       {item.list.map(({ title, text }) => {
                         return (
-                          <div key={title}>
+                          <ItemInfoContainer key={title}>
                             <h3 className="smallFontSizeTitle">{title}</h3>
                             <p className="smallFontSizeText">{text}</p>
-                          </div>
+                          </ItemInfoContainer>
                         );
                       })}
                       <Button buttonLabel={buttonLabel}></Button>
                     </InfoContainer>
-                  </div>
+                  </ContentContainer>
                 );
               })}
             </GridContainer>

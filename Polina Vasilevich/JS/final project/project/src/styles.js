@@ -34,6 +34,7 @@ export const GridContainer = styled.div`
 `;
 
 export const FlexContainer = styled.div`
+  width: 100%;
   display: flex;
   justify-content: ${(props) =>
     props.justifyContent ? props.justifyContent : "center"};

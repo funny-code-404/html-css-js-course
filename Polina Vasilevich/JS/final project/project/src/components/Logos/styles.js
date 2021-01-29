@@ -7,12 +7,13 @@ export const FlexContainer = styled.div`
   align-content: center;
 `;
 export const ContentContainer = styled.div`
-  // padding: 40px 0;
-  // height: 25px;
-  width: 25%;
+  opacity: 0.24;
+  display: flex;
+  align-items: center;
 `;
 
-export const Logo = styled.img`
-  opacity: 0.24;
-  border-bottom: 1px solid #000000;
+export const Logo = styled.img``;
+
+export const Wrapper = styled.div`
+  padding: 0 24%;
 `;

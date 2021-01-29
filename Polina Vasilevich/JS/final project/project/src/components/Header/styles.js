@@ -1,11 +1,8 @@
 import styled from "styled-components";
 
 export const Header = styled.header`
-  padding: 30px 10%;
   height: 90px;
   background-color: #ffffff;
-  
-  display: flex;
 `;
 
 export const List = styled.ul`
@@ -20,7 +17,7 @@ export const ListItem = styled.li`
 `;
 
 export const LogoContainer = styled.div`
-  width: 40%;
+  // width: 40%;
   display: flex;
 `;
 
@@ -30,7 +27,7 @@ export const LogoImg = styled.img`
 `;
 
 export const LogoText = styled.h2`
-  Text: thefox business;
+  text: thefox business;
   font-family: FuturaPT;
   font-size: 27px;
   line-height: 30px;
@@ -40,5 +37,14 @@ export const LogoText = styled.h2`
 `;
 
 export const Navigation = styled.nav`
-  width: 60%;
+  // width: 60%;
+`;
+
+export const Wrapper = styled.div``;
+
+export const FlexContainer = styled.div`
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
