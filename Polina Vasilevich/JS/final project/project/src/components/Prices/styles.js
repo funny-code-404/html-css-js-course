@@ -6,7 +6,7 @@ export const InfoContainer = styled.div`
   
 }`;
 
-export const ContentContainer = styled.div`
+export const PriceContainer = styled.div`
   padding: 70px 0;
   border: 1px solid #eaeaea;
   border-radius: 3px;

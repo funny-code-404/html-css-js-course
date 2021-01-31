@@ -1,13 +1,14 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
+import "./assets/fonts/OpenSans/openSans.css";
 
 import Header from "./components/Header";
 import Home from "./pages/Home";
 
 // import "normalize.css";
-// import Demos from "./pages/Demos";
-// import Features from "./pages/Features";
-// import Shortcodes from "./pages/Shortcodes";
+import Demos from "./pages/Demos";
+import Features from "./pages/Features";
+import Shortcodes from "./pages/Shortcodes";
 // import Shop from "./pages/Shop";
 // import Blog from "./pages/Blog";
 // import Portfolio from "./pages/Portfolio";
@@ -64,9 +65,11 @@ class App extends React.Component {
         />
         <Switch>
           <Route path="/" exact component={Home} />
-          {/* <Route path="/demos" component={Demos} />
+          <Route path="/demos" component={Demos} />
           <Route path="/features" component={Features} />
           <Route path="/shortcodes" component={Shortcodes} />
+          {/*  />
+          
           <Route path="/shop" component={Shop} />
           <Route path="/blog" component={Blog} />
           <Route path="/portfolio" component={Portfolio} /> */}

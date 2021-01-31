@@ -1,39 +1,36 @@
 import React from "react";
 import Button from "../Button";
-import Title from "../Title";
-import ImgAndText from "../ImgAndText";
-import { GridContainer } from "../../styles";
-import "./styles.css";
+import IconsBoxes from "../IconsBoxes";
+import TwoColumnSection from "../TwoColumSection";
+import TextList from "../TextList";
 
 class Services extends React.Component {
   render() {
     const { leftContent, rightContent } = this.props.items;
+    const firstGridItem = (
+      <>
+        <TextList items={leftContent} />
+        <Button
+          buttonLabel={leftContent.buttonLabel}
+          buttonIcon={leftContent.buttonIcon}
+        />
+      </>
+    );
+
+    const secondGridItem = (
+      <IconsBoxes
+        items={rightContent}
+        numberColumns="3"
+        positionIcon="center"
+        gridGap="240px 0"
+      />
+    );
+
     return (
-      <GridContainer numberColumns="2">
-        <div className="leftContent">
-          <Title items={leftContent} />
-          <ul>
-            {leftContent.list.map((item, index) => {
-              return (
-                <li className="servicesList" key={index}>
-                  {item}
-                </li>
-              );
-            })}
-          </ul>
-          <Button
-            buttonLabel={leftContent.buttonLabel}
-            buttonIcon={leftContent.buttonIcon}
-          />
-        </div>
-        <div className="rightContent">
-          <ImgAndText
-            items={rightContent}
-            numberColumns="3"
-            positionIcon="center"
-          />
-        </div>
-      </GridContainer>
+      <TwoColumnSection
+        firstGridItem={firstGridItem}
+        secondGridItem={secondGridItem}
+      />
     );
   }
 }

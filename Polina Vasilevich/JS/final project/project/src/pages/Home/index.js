@@ -1,16 +1,19 @@
 import React from "react";
 
-import { Section } from "../../styles";
 import Introducing from "../../components/Introducing";
 import Photos from "../../components/Photos";
-import Services from "../../components/Services";
-import Logos from "../../components/Logos";
+import Partners from "../../components/Partners";
 import PricingTables from "../../components/Prices";
 import Business from "../../components/Business";
 import Blog from "../../components/Blog";
 import CallToAction from "../../components/CallToAction";
 import Numbers from "../../components/Numbers";
-import ImgAndText from "../../components/ImgAndText";
+import IconsList from "../../components/IconsList";
+
+import TwoColumnSection from "../../components/TwoColumSection";
+import TextListWithButton from "../../components/TextListWithButton";
+import Percents from "../../components/PercentsBlock";
+
 import Footer from "../../components/Footer";
 
 import iconList1 from "../../assets/const/iconList1";
@@ -26,17 +29,37 @@ import numbersItems from "../../assets/const/numbersItems";
 import { logo, contacts } from "../../assets/const/footerItems";
 import { items } from "../../assets/const/copyRightItems";
 
+import TextWithButton from "../../components/TextListWithButton";
+import TextWithImages from "../../components/TextWithImages";
+
+const firstItemForService = (
+  <TextWithButton items={servicesItems.leftContent} />
+);
+
+const secondItemForService = (
+  <IconsList
+    items={servicesItems.rightContent}
+    numberColumns="3"
+    positionIcon="center"
+    gridGap="240px 0"
+  />
+);
+
+const firstItemForBusiness = (
+  <TextWithImages items={businessItems.leftContent} />
+);
 class Home extends React.Component {
   render() {
     return (
       <>
-        <ImgAndText
+        <IconsList
           items={iconList1}
           numberColumns="4"
           gridGap="20px"
           colorText="white"
           positionIcon="center"
           circleIcon
+          paddingTopBottom="100px"
         />
         <Introducing
           items={introducingItems}
@@ -48,22 +71,28 @@ class Home extends React.Component {
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"
         />
-        <ImgAndText
+        <IconsList
           items={iconList2}
           numberColumns="3"
           gridGap="120px 5%"
           colorText="gradient"
           positionIcon="left"
+          paddingTopBottom="100px"
         />
         <Introducing
           items={introducingItems}
           buttonBackgroundColor="#4285f4"
           buttonBorderColor="#2c6cd6"
-          positionBlockRight
+          positionBlock="right"
         />
         <Numbers items={numbersItems} />
-        <Services items={servicesItems} />
-        <Logos items={partnersItems} />{" "}
+        <TwoColumnSection
+          sizeContainers="40% 60%"
+          firstItem={firstItemForService}
+          secondItem={secondItemForService}
+        />
+
+        <Partners items={partnersItems} />
         <PricingTables
           items={pricingTables}
           header={blockHeader}

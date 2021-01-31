@@ -1,42 +1,20 @@
 import React from "react";
-import Title from "../Title";
+import TitleAndText from "../BlockWithTitleAndText";
 import Button from "../Button";
-import { GridContainer, Wrapper } from "../../styles";
-import { InfoContainer, ContentContainer, ItemInfoContainer } from "./styles";
+import Section from "../Section";
+
+import Table from "../Table";
+
+import { GridContainer } from "../../styles";
+import { InfoContainer, PriceContainer, ItemInfoContainer } from "./styles";
 class Prices extends React.Component {
   render() {
     const { items, buttonLabel, backgroundImage } = this.props;
     const { header } = this.props;
 
-    return (
-      <section>
-        <Wrapper>
-          <Title items={header} position="center" />
-          <div className="contentContainer">
-            <GridContainer numberColumns="3">
-              {items.map((item) => {
-                return (
-                  <ContentContainer>
-                    <Title key={item.title} items={item} position="center" />
-                    <InfoContainer>
-                      {item.list.map(({ title, text }) => {
-                        return (
-                          <ItemInfoContainer key={title}>
-                            <h3 className="smallFontSizeTitle">{title}</h3>
-                            <p className="smallFontSizeText">{text}</p>
-                          </ItemInfoContainer>
-                        );
-                      })}
-                      <Button buttonLabel={buttonLabel}></Button>
-                    </InfoContainer>
-                  </ContentContainer>
-                );
-              })}
-            </GridContainer>
-          </div>
-        </Wrapper>
-      </section>
-    );
+    const contentContainer = <Table items={items} />;
+
+    return <Section items={header} children={contentContainer} />;
   }
 }
 

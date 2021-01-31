@@ -1,29 +1,31 @@
 import React from "react";
 
-import Title from "../Title";
+import Title from "../BlockWithTitleAndText";
+import Section from "../Section";
 import { GridContainer } from "../../styles";
 import { Photo } from "./styles";
 
 class Photos extends React.Component {
   render() {
-    const { imgs } = this.props.items;
     const { items, numberGridColumns } = this.props;
+    const { imgs } = this.props.items;
+
+    const contentContainer = (
+      <GridContainer numberColumns={numberGridColumns}>
+        {imgs.map((img, index) => {
+          return (
+            <Photo
+              key={index}
+              style={{ backgroundImage: `url(${img})` }}
+            ></Photo>
+          );
+        })}
+      </GridContainer>
+    );
+
     return (
-      <div>
-        <Title items={items} position="center" />
-        <GridContainer numberColumns={numberGridColumns}>
-          {imgs.map((img, index) => {
-            return (
-              <Photo
-                key={index}
-                style={{ backgroundImage: `url(${img})` }}
-              ></Photo>
-            );
-          })}
-        </GridContainer>
-      </div>
+      <Section items={items} paddingLeftRight="0" children={contentContainer} />
     );
   }
 }
-
 export default Photos;

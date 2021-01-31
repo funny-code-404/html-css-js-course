@@ -84,7 +84,9 @@ export const Icon = styled.i`
   ${(props) => (props.circleIcon ? circleIcon : "")};
 `;
 
-export const TextContainer = styled.div``;
+export const TextContainer = styled.div`
+  margin: 0 auto;
+`;
 
 export const IconWrapper = styled.div`
   padding-bottom: ${(props) =>

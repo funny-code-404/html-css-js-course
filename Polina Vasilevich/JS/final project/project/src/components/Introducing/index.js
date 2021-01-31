@@ -1,5 +1,5 @@
 import React from "react";
-import Title from "../Title";
+import Title from "../BlockWithTitleAndText";
 import Button from "../Button";
 
 import { ContentContainer, MainContainer } from "./styles";
@@ -9,15 +9,19 @@ class Introducing extends React.Component {
     const { buttonLabel, backgroundImg, buttonIcon } = this.props.items;
     const {
       items,
-      positionBlockRight,
+      positionBlock,
+      positionText,
       buttonBackgroundColor,
       buttonColorColor,
     } = this.props;
-
+    console.log(positionBlock);
     return (
       <MainContainer style={{ backgroundImage: `url(${backgroundImg})` }}>
         <Wrapper>
-          <ContentContainer positionBlockRight={positionBlockRight}>
+          <ContentContainer
+            positionText={positionText}
+            position={positionBlock}
+          >
             <Title items={items} />
             <Button
               buttonIcon={buttonIcon}

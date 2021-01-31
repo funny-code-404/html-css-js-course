@@ -42,10 +42,9 @@ export const FlexContainer = styled.div`
   position: relative;
 `;
 
-export const Section = styled.section`
-  padding: 50px 15%;
-`;
+const paddingTopBottom = (props) =>
+  props.paddingTopBottom ? props.paddingTopBottom : 0;
 
 export const Wrapper = styled.div`
-  padding: 0 19%;
+  padding: ${paddingTopBottom} 19%;
 `;
