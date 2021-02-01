@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import "./assets/fonts/OpenSans/openSans.css";
-
+import "./assets/fonts/themify-icons.css";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 
@@ -13,8 +13,8 @@ import Shortcodes from "./pages/Shortcodes";
 // import Blog from "./pages/Blog";
 // import Portfolio from "./pages/Portfolio";
 
-import "./assets/fonts/themify-icons.css";
-import "./assets/fonts/OpenSans/openSans.css";
+
+
 import logo from "./assets/img/logo.png";
 
 const routes = [

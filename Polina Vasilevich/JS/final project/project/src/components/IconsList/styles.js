@@ -21,7 +21,7 @@ const setPositionIcon = (positionIcon) => {
   }
 };
 
-export const ContentContainer = styled.div`
+export const IconsContainer = styled.div`
   ${(props) => setPositionIcon(props.positionIcon)};
 `;
 

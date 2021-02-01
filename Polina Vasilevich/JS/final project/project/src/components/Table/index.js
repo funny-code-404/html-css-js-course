@@ -18,9 +18,8 @@ export default function Table(props) {
     <GridContainer>
       {items.map((item) => {
         return (
-          <PriceContainer>
-            {console.log(item)}
-            <TitleAndText key={item.title} items={item} />
+          <PriceContainer key={item.title}>
+            <TitleAndText items={item} />
             <InfoContainer>
               <TextContainer>
                 {item.list.map(({ title, text }) => {
@@ -33,7 +32,7 @@ export default function Table(props) {
                 })}
               </TextContainer>
 
-              <Button buttonLabel={items.buttonLabel}></Button>
+              <Button width='220px' buttonLabel={item.buttonLabel} buttonIcon={item.buttonIcon}></Button>
             </InfoContainer>
           </PriceContainer>
         );

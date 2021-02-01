@@ -6,7 +6,9 @@ const businessItems = {
     title: "Why Choose TheFox Business",
     subTitle:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-    list: [
+    buttonLabel: 'Learn more about us',
+    buttonIcon: 'ti-linkedin',
+      list: [
       {
         img: cubanese,
         title: "We Think Different. We Do The Best Ever",
@@ -29,7 +31,9 @@ const businessItems = {
       "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra. Nulla vehicula nibh vel ante commodo feugiat.",
     text:
       "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
-    list: [
+    buttonLabel: 'MEET OUR TEAM',
+    buttonIcon: 'ti-linkedin',
+      list: [
       {
         title: "Web Design",
         percents: "80%",

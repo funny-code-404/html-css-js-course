@@ -1,24 +1,29 @@
 import React from "react";
 import TitleAndText from "../BlockWithTitleAndText";
-import "./styles.css";
+import {Title, PercentsContainer, PercentsItem} from './styles';
+import {ContentContainer, WrapperBlock} from '../../styles';
+import Button from '../Button';
+
 class Percents extends React.Component {
   render() {
-    const { items } = this.props;
-
+    const { items, backgroundColorMainContainer } = this.props;
     return (
-      <div>
-        <TitleAndText items={items} />
-        {items.map(({ title, percents }) => {
-          return (
-            <>
-              <h3>{title}</h3>
-              <div className="percentsContainer">
-                <div className="percentsItem" style={{ width: percents }}></div>
-              </div>
-            </>
-          );
-        })}
-      </div>
+          <ContentContainer backgroundColorMainContainer={backgroundColorMainContainer}>
+            <WrapperBlock>
+              <TitleAndText items={items} />
+              {items.list.map(({ title, percents }) => {
+                return (
+                  <>
+                    <Title>{title}</Title>
+                    <PercentsContainer>
+                      <PercentsItem style={{ width: percents }}></PercentsItem>
+                    </PercentsContainer>
+                  </>
+                );
+              })}
+              <Button buttonLabel={items.buttonLabel} buttonIcon={items.buttonIcon}></Button>
+            </WrapperBlock>
+        </ContentContainer>
     );
   }
 }

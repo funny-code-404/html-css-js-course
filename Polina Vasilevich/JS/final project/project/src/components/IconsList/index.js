@@ -1,19 +1,78 @@
 import React from "react";
+import { GridContainer } from "../../styles";
+import Button from '../Button';
 
-import { Wrapper } from "../../styles";
-import IconsBoxes from "../../components/IconsBoxes";
+import {
+  IconsContainer,
+  Title,
+  Text,
+  Icon,
+  TextContainer,
+  IconWrapper,
+} from "./styles";
 
-class IconsList extends React.Component {
+import {ContentContainer, WrapperBlock} from '../../styles';
+
+class IconsBoxes extends React.Component {
   render() {
-    const { paddingTopBottom } = this.props;
+    const {
+      items,
+      numberColumns,
+      colorText,
+      positionIcon,
+      circleIcon,
+      gridGap,
+      backgroundColorMainContainer,
+      paddingLeft,
+      paddingRight,
+      paddingTop, 
+      paddingBottom,
+    } = this.props;
+
     return (
-      <section>
-        <Wrapper paddingTopBottom={paddingTopBottom}>
-          <IconsBoxes {...this.props} />
-        </Wrapper>
-      </section>
+      <ContentContainer backgroundColorMainContainer={backgroundColorMainContainer}>
+        <WrapperBlock 
+        paddingLeft={paddingLeft} 
+        paddingRight={paddingRight}
+        paddingTop={paddingTop}
+        paddingBottom={paddingBottom}>
+
+        <GridContainer numberColumns={numberColumns} gridGap={gridGap}>
+          {items.map(({ img, icon, title, text, buttonLabel, buttonIcon }) => {
+            return (
+              <IconsContainer positionIcon={positionIcon}>
+                {img ? (
+                  <img src={img} alt={title} />
+                ) : (
+                  <IconWrapper>
+                    <Icon
+                      colorText={colorText}
+                      circleIcon={circleIcon}
+                      className={`${icon}`}
+                    ></Icon>
+                  </IconWrapper>
+                )}
+
+                <TextContainer>
+                  <Title>{title}</Title>
+                  <Text>{text}</Text>
+                </TextContainer>
+                
+                {buttonLabel && <Button backgroundColor='transparent' 
+                                        borderColor='transparent'
+                                        colorText='#4285f4' 
+                                        buttonLabel={buttonLabel}
+                                        buttonIcon={buttonIcon}
+                                        />}
+              </IconsContainer>
+            );
+          })}
+        </GridContainer>
+        </WrapperBlock>
+        
+      </ContentContainer>
     );
   }
 }
 
-export default IconsList;
+export default IconsBoxes;

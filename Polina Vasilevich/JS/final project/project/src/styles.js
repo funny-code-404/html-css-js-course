@@ -48,3 +48,14 @@ const paddingTopBottom = (props) =>
 export const Wrapper = styled.div`
   padding: ${paddingTopBottom} 19%;
 `;
+
+export const WrapperBlock = styled.div`
+    padding-left: ${props => props.paddingLeft ? props.paddingLeft : '10%'};
+    padding-right: ${props => props.paddingRight ? props.paddingRight : '10%'};
+    padding-top: ${props => props.paddingTop ? props.paddingTop : '100px'};
+    padding-bottom: ${props => props.paddingBottom ? props.paddingBottom : '100px'};
+`
+export const ContentContainer = styled.div`
+    height: 100%;
+    background-color: ${props => props.backgroundColorMainContainer ? props.backgroundColorMainContainer : ''};
+`

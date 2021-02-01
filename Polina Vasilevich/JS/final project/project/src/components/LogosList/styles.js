@@ -6,6 +6,7 @@ export const FlexContainer = styled.div`
   justify-content: center;
   align-content: center;
 `;
+
 export const ContentContainer = styled.div`
   padding: 20px 5px;
   width: 23%;

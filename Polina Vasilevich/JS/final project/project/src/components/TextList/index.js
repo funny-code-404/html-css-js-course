@@ -1,13 +1,18 @@
 import TitleAndText from "../BlockWithTitleAndText";
 import { List, ListItem, Icon } from "./styles";
-import { faLessThan } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {ContentContainer, WrapperBlock} from '../../styles';
+import Button from "../Button";
+// import { faLessThan } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function TextList(props) {
-  const { items } = props;
+  const { items, backgroundColorMainContainer, isTransparentButton } = props;
+  const { buttonLabel, buttonIcon } = props.items;
   const { points, icon } = props.items.list;
+
   return (
-    <div>
+    <ContentContainer backgroundColorMainContainer={backgroundColorMainContainer}>
+      <WrapperBlock>
       <TitleAndText items={items} />
       <List>
         {points.map((item, index) => {
@@ -19,6 +24,13 @@ export default function TextList(props) {
           );
         })}
       </List>
-    </div>
+      {!isTransparentButton && <Button
+          buttonLabel={buttonLabel}
+          buttonIcon={buttonIcon}
+          widthButton="221px"
+        />}
+
+      </WrapperBlock>
+    </ContentContainer>
   );
 }
