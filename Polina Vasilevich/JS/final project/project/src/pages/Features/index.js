@@ -1,9 +1,10 @@
 import React from "react";
 
+import IntroSlider from "../../components/IntroSlider";
 import IconsList from "../../components/IconsList";
 import Introducing from "../../components/Introducing";
 import TextList from "../../components/TextList";
-import Section from '../../components/Section';
+import Section from "../../components/Section";
 import Footer from "../../components/Footer";
 import CallToAction from "../../components/CallToAction";
 
@@ -15,7 +16,7 @@ import { items } from "../../assets/const/copyRightItems";
 
 const iconsList = (
   <IconsList
-    paddingLeft='0'
+    paddingLeft="0"
     items={servicesItems.rightContent}
     numberColumns="3"
     positionIcon="center"
@@ -23,14 +24,17 @@ const iconsList = (
   />
 );
 
-
 class Features extends React.Component {
   render() {
     return (
       <>
+        <IntroSlider
+          title="OUR SERVICES"
+          subTitle="Dream Big. Think Different. Do Great"
+        />
         <IconsList
-          paddingLeft='19%'
-          paddingRight='19%'
+          paddingLeft="19%"
+          paddingRight="19%"
           items={iconList1}
           numberColumns="4"
           gridGap="20px"
@@ -44,16 +48,15 @@ class Features extends React.Component {
           buttonBackgroundColor="#4285f4"
           buttonBorderColor="#2c6cd6"
           positionText="right"
-          
         />
 
-        <TextList  items={servicesItems.leftContent} isTransparentButton/>
-        <Section items={servicesItems.leftContent} children={iconsList}/>
+        <TextList items={servicesItems.leftContent} isTransparentButton />
+        <Section items={servicesItems.leftContent} children={iconsList} />
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"
-          backgroundColorButton='#82b440'
-          borderColorButton='#fff'
+          backgroundColorButton="#82b440"
+          borderColorButton="#fff"
         />
 
         <Footer logo={logo} contacts={contacts} copyRight={items} />

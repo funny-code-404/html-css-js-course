@@ -1,5 +1,7 @@
 import React from "react";
 
+import IntroSlider from "../../components/IntroSlider";
+
 import CallToAction from "../../components/CallToAction";
 import Footer from "../../components/Footer";
 
@@ -10,6 +12,7 @@ class Shortcodes extends React.Component {
   render() {
     return (
       <>
+        <IntroSlider title="CONTACT US" subTitle="Dream Big. Think Different" />
         <CallToAction />
         <Footer logo={logo} contacts={contacts} copyRight={items} />
       </>

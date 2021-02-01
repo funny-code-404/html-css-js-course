@@ -9,11 +9,9 @@ import Home from "./pages/Home";
 import Demos from "./pages/Demos";
 import Features from "./pages/Features";
 import Shortcodes from "./pages/Shortcodes";
-// import Shop from "./pages/Shop";
+import Shop from "./pages/Shop";
 // import Blog from "./pages/Blog";
 // import Portfolio from "./pages/Portfolio";
-
-
 
 import logo from "./assets/img/logo.png";
 
@@ -68,9 +66,10 @@ class App extends React.Component {
           <Route path="/demos" component={Demos} />
           <Route path="/features" component={Features} />
           <Route path="/shortcodes" component={Shortcodes} />
+          <Route path="/shop" component={Shop} />
           {/*  />
           
-          <Route path="/shop" component={Shop} />
+         
           <Route path="/blog" component={Blog} />
           <Route path="/portfolio" component={Portfolio} /> */}
         </Switch>

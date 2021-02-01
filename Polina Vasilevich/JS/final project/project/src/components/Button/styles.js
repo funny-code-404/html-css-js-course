@@ -23,6 +23,7 @@ export const Button = styled.button`
   ${styleFont};
 
   color: ${(props) => (props.colorText ? props.colorText : "#fff")};
+  cursor: pointer;
 `;
 
 export const Icon = styled.i`

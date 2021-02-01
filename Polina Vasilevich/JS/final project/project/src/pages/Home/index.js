@@ -30,13 +30,12 @@ import { items } from "../../assets/const/copyRightItems";
 import TextList from "../../components/TextList";
 import TextWithImages from "../../components/TextWithImages";
 
-const firstItemForService = (
-  <TextList items={servicesItems.leftContent} />
-);
+import Video from "../../components/VideoComponent";
+const firstItemForService = <TextList items={servicesItems.leftContent} />;
 
 const secondItemForService = (
   <IconsList
-    paddingLeft='0'
+    paddingLeft="0"
     items={servicesItems.rightContent}
     numberColumns="3"
     positionIcon="center"
@@ -49,7 +48,10 @@ const firstItemForBusiness = (
 );
 
 const secondItemForBusiness = (
-  <Percents items={businessItems.rightContent} backgroundColorMainContainer='#1f252f'/>
+  <Percents
+    items={businessItems.rightContent}
+    backgroundColorMainContainer="#1f252f"
+  />
 );
 
 class Home extends React.Component {
@@ -57,8 +59,8 @@ class Home extends React.Component {
     return (
       <>
         <IconsList
-          paddingLeft='19%'
-          paddingRight='19%'
+          paddingLeft="19%"
+          paddingRight="19%"
           items={iconList1}
           numberColumns="4"
           gridGap="20px"
@@ -78,13 +80,13 @@ class Home extends React.Component {
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"
-          backgroundColorButton='#82b440'
-          borderColorButton='#fff'
+          backgroundColorButton="#82b440"
+          borderColorButton="#fff"
         />
 
         <IconsList
-          paddingLeft='19%'
-          paddingRight='19%'
+          paddingLeft="19%"
+          paddingRight="19%"
           items={iconList2}
           numberColumns="3"
           gridGap="120px 5%"
@@ -110,16 +112,13 @@ class Home extends React.Component {
 
         <Partners items={partnersItems} />
 
-        <PricingTables
-          items={pricingTables}
-          buttonLabel="GET STARTED NOW"
-        />
+        <PricingTables items={pricingTables} buttonLabel="GET STARTED NOW" />
 
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"
-          backgroundColorButton='#82b440'
-          borderColorButton='#fff'
+          backgroundColorButton="#82b440"
+          borderColorButton="#fff"
         />
 
         <TwoColumnSection
@@ -133,6 +132,8 @@ class Home extends React.Component {
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"
+          backgroundColorButton="#82b440"
+          borderColorButton="#fff"
         />
 
         <Footer logo={logo} contacts={contacts} copyRight={items} />
