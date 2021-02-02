@@ -1,19 +1,25 @@
 import styled from "styled-components";
 
 export const Section = styled.div`
-  height: 280px;
+  
   background-color: #1f252f;
+
+`;
+
+export const Wrapper = styled.div`
+height: 280px;
+  padding: 0 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-`;
+`
 
 export const ContentContainer = styled.div`
-  padding: 0 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 `;
 
 export const Title = styled.h2`
@@ -25,6 +31,7 @@ export const Title = styled.h2`
 `;
 
 export const Text = styled.p`
+  font-family: OpenSans;
   margin-bottom: 15px;
   font-size: 14px;
   letter-spacing: 0.05em;

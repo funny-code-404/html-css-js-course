@@ -6,7 +6,7 @@ const generalStyles = `
     margin-bottom: 20px;
 `;
 export const Section = styled.section`
-  margin: 100px 0;
+  padding-top: 100px;
   ${(props) =>
     props.backgroundImage &&
     `
@@ -16,6 +16,7 @@ export const Section = styled.section`
 
   height: ${(props) => (props.height ? props.height : "auto")};
 `;
+
 export const Wrapper = styled.div`
   padding: ${(props) =>
     props.paddingLeftRight ? props.paddingLeftRight : "0 19%"};

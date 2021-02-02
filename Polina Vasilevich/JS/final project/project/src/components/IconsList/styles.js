@@ -71,6 +71,12 @@ const circleIcon = css`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  :hover {
+    background-image: none;
+  }
+
+  cursor: pointer;
 `;
 
 export const Icon = styled.i`
@@ -85,10 +91,21 @@ export const Icon = styled.i`
 `;
 
 export const TextContainer = styled.div`
-  margin: 0 auto;
 `;
 
 export const IconWrapper = styled.div`
-  padding-bottom: ${(props) =>
-    props.paddingBottom ? props.paddingBottom : "40px"};
+  padding-bottom: 40px;
+
 `;
+
+
+export const Img = styled.img`
+    display: inline-block;
+    vertical-align: middle;
+`
+
+export const ImgWrapper = styled.div`
+    height: 65px;
+    margin-bottom: 30px;
+
+`

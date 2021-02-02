@@ -9,6 +9,8 @@ import {
   Icon,
   TextContainer,
   IconWrapper,
+  Img,
+  ImgWrapper,
 } from "./styles";
 
 import {ContentContainer, WrapperBlock} from '../../styles';
@@ -27,6 +29,7 @@ class IconsBoxes extends React.Component {
       paddingRight,
       paddingTop, 
       paddingBottom,
+      
     } = this.props;
 
     return (
@@ -42,7 +45,10 @@ class IconsBoxes extends React.Component {
             return (
               <IconsContainer positionIcon={positionIcon}>
                 {img ? (
-                  <img src={img} alt={title} />
+                    <ImgWrapper>
+                        <Img src={img} alt={title} />
+                    </ImgWrapper>
+                  
                 ) : (
                   <IconWrapper>
                     <Icon

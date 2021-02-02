@@ -61,7 +61,7 @@ class Demos extends React.Component {
           firstItem={firstItem}
           secondItem={secondItem}
         />
-        <LogosList items={logosItems} />
+        <LogosList items={logosItems} oneString/>
 
         <Footer logo={logo} contacts={contacts} copyRight={items} />
       </>

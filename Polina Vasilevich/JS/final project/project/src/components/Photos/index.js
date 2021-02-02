@@ -1,6 +1,5 @@
 import React from "react";
 
-import Title from "../BlockWithTitleAndText";
 import Section from "../Section";
 import { GridContainer } from "../../styles";
 import { Photo } from "./styles";
