@@ -2,12 +2,14 @@ import React from "react";
 import Section from "../Section";
 import LogosList from "../LogosList";
 
+import Icon from "../Icon";
 class Logos extends React.Component {
   render() {
     const { imgs, backgroundImg } = this.props.items;
     const { items } = this.props;
 
     const contentContainer = <LogosList items={items} />;
+
     return (
       <Section
         items={items}
