@@ -3,7 +3,7 @@
   margin: 0;
 }
 
-.flex {
+.oneString {
   padding: 0 5%;
   flex-wrap: nowrap;
   opacity: inherit;

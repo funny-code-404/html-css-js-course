@@ -1,5 +1,9 @@
 import React from "react";
 
+import IconsList from '../../components/IconsList';
+import iconList1 from "../../assets/const/iconList1";
+import iconList2 from "../../assets/const/iconList2";
+
 import Introducing from "../../components/Introducing";
 import Photos from "../../components/Photos";
 import Partners from "../../components/Partners";
@@ -7,7 +11,9 @@ import PricingTables from "../../components/Prices";
 import Blog from "../../components/Blog";
 import CallToAction from "../../components/CallToAction";
 import Numbers from "../../components/Numbers";
-import IconsList from "../../components/IconsList";
+// import IconsList from "../../components/IconsList1";
+
+
 
 import TwoColumnSection from "../../components/TwoColumSection";
 import Percents from "../../components/PercentsBlock";
@@ -16,10 +22,10 @@ import TextWithImages from "../../components/TextWithImages";
 import Video from '../../components/VideoComponent';
 import Footer from "../../components/Footer";
 
-import iconList1 from "../../assets/const/iconList1";
+
 import introducingItems from "../../assets/const/introducingItems";
 import portfolioItems from "../../assets/const/portfolioItems";
-import iconList2 from "../../assets/const/iconList2";
+
 import servicesItems from "../../assets/const/servicesItems";
 import partnersItems from "../../assets/const/partnersItems";
 import pricingTables from "../../assets/const/pricingTables";
@@ -35,13 +41,11 @@ const firstItemForService = (
 );
 
 const secondItemForService = (
-  <IconsList
-    paddingLeft='0'
-    items={servicesItems.rightContent}
-    numberColumns="3"
-    positionIcon="center"
-    gridGap="240px 0"
-  />
+    <IconsList items={servicesItems.rightContent} 
+      paddingLeftRight='5%'
+      gridGap='4%' 
+      widthItemGridContainer='250px'
+    />
 );
 
 const firstItemForBusiness = (
@@ -56,17 +60,12 @@ class Home extends React.Component {
   render() {
     return (
       <>
-        <IconsList
-          paddingLeft='19%'
-          paddingRight='19%'
-          items={iconList1}
-          numberColumns="4"
-          gridGap="20px"
-          colorText="white"
-          positionIcon="center"
-          circleIcon
-        />
-
+        <IconsList items={iconList1} 
+        gridGap='4%' 
+        widthItemGridContainer='200px' 
+        formIcons='circle'
+        gradientColorFormIcon/>
+        
         <Introducing
           items={introducingItems}
           buttonBackgroundColor="#4285f4"
@@ -82,15 +81,13 @@ class Home extends React.Component {
           borderColorButton='#fff'
         />
 
-        <IconsList
-          paddingLeft='19%'
-          paddingRight='19%'
-          items={iconList2}
-          numberColumns="3"
-          gridGap="120px 5%"
-          colorText="gradient"
-          positionIcon="left"
-          paddingTopBottom="100px"
+        <IconsList items={iconList2} 
+          gridGap='4%' 
+          widthItemGridContainer='350px'
+          colorIcon='gradient'
+          positionTextIcons='left'
+          positionIcons='left'
+          fontSizeIcon='42px'
         />
 
         <Introducing

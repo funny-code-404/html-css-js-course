@@ -9,3 +9,5 @@ export const GridItem = styled.div`
         grid-column: 1 / 3;
       }
 `
+
+

@@ -2,9 +2,9 @@ import {GridContainer} from '../../styles';
 import {GridItem} from './styles';
 
 export default function BlockImg(props) {
-    const {imgs} = props.items;
+    const imgs = props.items;
     return (
-        <GridContainer numberColumns='2' numberRows='4'>
+        <GridContainer numberColumns='2' numberRows='4' gridGap='20px'>
             {
                 imgs.map(img => {
                     return (

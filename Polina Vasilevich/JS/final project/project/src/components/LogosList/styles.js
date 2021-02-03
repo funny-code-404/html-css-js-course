@@ -27,6 +27,11 @@ export const FlexContainer = styled.div`
       justify-content: start;
       padding: 30px 0;
     }
+
+    :hover {
+      opacity: 1;
+    }
+    
   `}
 `;
 

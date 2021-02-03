@@ -1,84 +1,41 @@
 import React from "react";
-import { GridContainer } from "../../styles";
-import Button from '../Button';
+import { GridContainer, MainContainer, Wrapper} from "../../mainStyles";
+import {ContentContainer} from './styles';
+import Icon from '../Icon';
+import TextIcon from '../TextIcon';
 
-import {
-  IconsContainer,
-  Title,
-  Text,
-  Icon,
-  TextContainer,
-  IconWrapper,
-  Img,
-  ImgWrapper,
-} from "./styles";
-
-import {ContentContainer, WrapperBlock} from '../../styles';
-
-class IconsBoxes extends React.Component {
+class IconsList extends React.Component {
   render() {
-    const {
-      items,
-      numberColumns,
-      colorText,
-      positionIcon,
-      circleIcon,
-      gridGap,
-      backgroundColorMainContainer,
-      paddingLeft,
-      paddingRight,
-      paddingTop, 
-      paddingBottom,
-      
-    } = this.props;
-
+    const {gridGap, 
+      widthItemGridContainer, 
+      items, 
+      formIcons, 
+      colorIcon, 
+      gradientColorFormIcon, 
+      positionTextIcons, 
+      positionIcons, 
+      fontSizeIcon,
+      paddingTopBottom,
+      paddingLeftRight,
+       } = this.props;
     return (
-      <ContentContainer backgroundColorMainContainer={backgroundColorMainContainer}>
-        <WrapperBlock 
-        paddingLeft={paddingLeft} 
-        paddingRight={paddingRight}
-        paddingTop={paddingTop}
-        paddingBottom={paddingBottom}>
-
-        <GridContainer numberColumns={numberColumns} gridGap={gridGap}>
-          {items.map(({ img, icon, title, text, buttonLabel, buttonIcon }) => {
-            return (
-              <IconsContainer positionIcon={positionIcon}>
-                {img ? (
-                    <ImgWrapper>
-                        <Img src={img} alt={title} />
-                    </ImgWrapper>
-                  
-                ) : (
-                  <IconWrapper>
-                    <Icon
-                      colorText={colorText}
-                      circleIcon={circleIcon}
-                      className={`${icon}`}
-                    ></Icon>
-                  </IconWrapper>
-                )}
-
-                <TextContainer>
-                  <Title>{title}</Title>
-                  <Text>{text}</Text>
-                </TextContainer>
-                
-                {buttonLabel && <Button backgroundColor='transparent' 
-                                        borderColor='transparent'
-                                        colorText='#4285f4' 
-                                        buttonLabel={buttonLabel}
-                                        buttonIcon={buttonIcon}
-                                        />}
-              </IconsContainer>
-            );
-          })}
-        </GridContainer>
-        </WrapperBlock>
-        
-      </ContentContainer>
+        <MainContainer backgroundColorMainContainer={this.props.backgroundColorMainContainer}>
+          <Wrapper paddingTopBottom={paddingTopBottom} paddingLeftRight={paddingLeftRight}>
+            <GridContainer gridGap={gridGap} widthItemGridContainer={widthItemGridContainer}>
+              {items.map((item) => {
+                return (
+                  <ContentContainer positionTextIcons={positionTextIcons} positionIcons={positionIcons}>
+                    <Icon items={item} formIcons={formIcons} colorIcon={colorIcon} gradientColorFormIcon={gradientColorFormIcon} fontSizeIcon={fontSizeIcon}/> 
+                    <TextIcon items={item}/>
+                  </ContentContainer>
+                );
+              })}
+            </GridContainer>
+        </Wrapper>
+    </MainContainer>
+          
     );
   }
 }
 
-export default IconsBoxes;
+export default IconsList;

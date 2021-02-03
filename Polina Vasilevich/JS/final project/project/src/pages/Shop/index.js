@@ -3,11 +3,11 @@ import React from "react";
 import IconsList from "../../components/IconsList";
 import Works from "../../components/Works";
 import CallToAction from "../../components/CallToAction";
-import BlockImg from '../../components/BlockImg';
+import Portfolio from '../../components/Portfolio';
 import Footer from "../../components/Footer";
 
 import iconList1 from "../../assets/const/iconList1";
-import imgs from '../../assets/const/shop/photos';
+import portfolioItems from '../../assets/const/shop/portfolioItems';
 
 import { logo, contacts } from "../../assets/const/footerItems";
 import { items } from "../../assets/const/copyRightItems";
@@ -26,7 +26,8 @@ class Shop extends React.Component {
           circleIcon
         />
 
-        <BlockImg items={imgs}/>
+        <Portfolio items={portfolioItems}/>
+     
         <Works
           title="Let‘s Work Together"
           subTitle="TheFox WordPress is the best in the business. They know we deliver industry leading web design every time. We would love to learn how we can support you too."
