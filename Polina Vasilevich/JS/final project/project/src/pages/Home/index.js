@@ -11,8 +11,6 @@ import PricingTables from "../../components/Prices";
 import Blog from "../../components/Blog";
 import CallToAction from "../../components/CallToAction";
 import Numbers from "../../components/Numbers";
-// import IconsList from "../../components/IconsList1";
-
 
 
 import TwoColumnSection from "../../components/TwoColumSection";

@@ -13,6 +13,8 @@ export const IconContainer = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
+
+      margin-bottom: 25px;
 `
 
 const setFormIcon = formIcons => {

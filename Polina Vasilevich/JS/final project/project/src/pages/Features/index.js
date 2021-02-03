@@ -32,16 +32,12 @@ class Features extends React.Component {
           title="OUR SERVICES"
           subTitle="Dream Big. Think Different. Do Great"
         />
-        <IconsList
-          paddingLeft="19%"
-          paddingRight="19%"
-          items={iconList1}
-          numberColumns="4"
-          gridGap="20px"
-          colorText="white"
-          positionIcon="center"
-          circleIcon
-        />
+        <IconsList items={iconList1} 
+        gridGap='4%' 
+        widthItemGridContainer='200px' 
+        formIcons='circle'
+        gradientColorFormIcon/>
+        
 
         <Introducing
           items={introducingItems}

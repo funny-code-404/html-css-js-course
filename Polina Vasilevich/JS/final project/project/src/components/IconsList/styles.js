@@ -18,14 +18,13 @@ const setPositionTextIcons = positionTextIcons => {
   }
 }
 
-const setPositionIcons = positionTextIcons => {
-  switch(positionTextIcons) {
+const setPositionIcons = positionIcons => {
+  switch(positionIcons) {
     case 'left':
       return `
         display: flex;
         ${IconContainer} {
-            display: block;
-            margin-right: 20px;
+            align-items: start;
         } 
       `
     default:

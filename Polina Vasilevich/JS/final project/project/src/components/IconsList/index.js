@@ -18,6 +18,7 @@ class IconsList extends React.Component {
       paddingTopBottom,
       paddingLeftRight,
        } = this.props;
+       
     return (
         <MainContainer backgroundColorMainContainer={this.props.backgroundColorMainContainer}>
           <Wrapper paddingTopBottom={paddingTopBottom} paddingLeftRight={paddingLeftRight}>

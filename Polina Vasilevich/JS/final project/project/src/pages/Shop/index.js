@@ -1,31 +1,28 @@
 import React from "react";
 
 import IconsList from "../../components/IconsList";
+import iconList1 from "../../assets/const/iconList1";
+
 import Works from "../../components/Works";
 import CallToAction from "../../components/CallToAction";
-import Portfolio from '../../components/Portfolio';
-import Footer from "../../components/Footer";
 
-import iconList1 from "../../assets/const/iconList1";
+import Portfolio from '../../components/Portfolio';
 import portfolioItems from '../../assets/const/shop/portfolioItems';
 
+import Footer from "../../components/Footer";
 import { logo, contacts } from "../../assets/const/footerItems";
 import { items } from "../../assets/const/copyRightItems";
+
 class Shop extends React.Component {
   render() {
     return (
       <>
-        <IconsList
-          paddingLeft="19%"
-          paddingRight="19%"
-          items={iconList1}
-          numberColumns="4"
-          gridGap="20px"
-          colorText="white"
-          positionIcon="center"
-          circleIcon
-        />
-
+      <IconsList items={iconList1} 
+        gridGap='4%' 
+        widthItemGridContainer='200px' 
+        formIcons='circle'
+        gradientColorFormIcon/>
+        
         <Portfolio items={portfolioItems}/>
      
         <Works
@@ -34,6 +31,7 @@ class Shop extends React.Component {
           buttonLabel="GET STARTED NOW"
           buttonIcon="ti-check"
         />
+
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"

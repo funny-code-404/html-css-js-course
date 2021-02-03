@@ -36,16 +36,16 @@ class Demos extends React.Component {
           title="WE DO THE BEST DESIGN"
           subTitle="Dream Big. Think Different. Do Great"
         />
-        <IconsList
-          paddingLeft="19%"
-          paddingRight="19%"
-          items={iconList2}
-          numberColumns="3"
-          gridGap="120px 5%"
-          colorText="gradient"
-          positionIcon="left"
-          backgroundColorMainContainer="#F6F7F8"
+        
+        <IconsList items={iconList2} 
+          gridGap='4%' 
+          widthItemGridContainer='350px'
+          colorIcon='gradient'
+          positionTextIcons='left'
+          positionIcons='left'
+          fontSizeIcon='42px'
         />
+
 
         <TextList items={textListItems.leftContent} isTransparentButton />
         <CallToAction

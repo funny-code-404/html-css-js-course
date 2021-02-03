@@ -13,7 +13,12 @@ class Shortcodes extends React.Component {
     return (
       <>
         <IntroSlider title="CONTACT US" subTitle="Dream Big. Think Different" />
-        <CallToAction />
+        <CallToAction
+          text="Become A Part Of TheFox Business Community Today"
+          buttonLabel="PURCHASE NOW"
+          backgroundColorButton='#82b440'
+          borderColorButton='#fff'
+        />
         <Footer logo={logo} contacts={contacts} copyRight={items} />
       </>
     );
