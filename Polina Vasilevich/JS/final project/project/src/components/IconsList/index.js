@@ -1,8 +1,9 @@
 import React from "react";
 import { GridContainer, MainContainer, Wrapper} from "../../mainStyles";
+
 import {ContentContainer} from './styles';
 import Icon from '../Icon';
-import TextIcon from '../TextIcon';
+import Text from '../Text';
 
 class IconsList extends React.Component {
   render() {
@@ -27,7 +28,7 @@ class IconsList extends React.Component {
                 return (
                   <ContentContainer positionTextIcons={positionTextIcons} positionIcons={positionIcons}>
                     <Icon items={item} formIcons={formIcons} colorIcon={colorIcon} gradientColorFormIcon={gradientColorFormIcon} fontSizeIcon={fontSizeIcon}/> 
-                    <TextIcon items={item}/>
+                    <Text items={item} fontSizeTitle='xs' fontWeightTitle='lg' positionText='center'/>
                   </ContentContainer>
                 );
               })}

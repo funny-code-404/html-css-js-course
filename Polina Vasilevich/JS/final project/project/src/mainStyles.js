@@ -19,6 +19,7 @@ const paddingTopBottom = (props) =>
 const paddingLeftRight = (props) =>
   props.paddingLeftRight ? props.paddingLeftRight : "19%";
 
+
 export const Wrapper = styled.div`
   padding: ${paddingTopBottom} ${paddingLeftRight};
 `;
@@ -30,3 +31,7 @@ export const MainContainer = styled.div`
       ? props.backgroundColorMainContainer
       : ""};
 `;
+
+export const ContentContainer = styled.div`
+    width: ${props => props.widthContentContainer ? props.widthContentContainer: '100%'};
+`

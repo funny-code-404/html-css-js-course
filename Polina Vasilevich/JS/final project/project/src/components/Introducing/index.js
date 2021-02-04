@@ -1,33 +1,36 @@
 import React from "react";
-import Title from "../BlockWithTitleAndText";
+import Text from '../Text';
 import Button from "../Button";
 
-import { ContentContainer, MainContainer } from "./styles";
-import { Wrapper } from "../../styles";
+import {Wrapper, MainContainer, ContentContainer } from "../../mainStyles";
+
 class Introducing extends React.Component {
   render() {
     const { buttonLabel, backgroundImg, buttonIcon } = this.props.items;
     const {
       items,
-      positionBlock,
+      positionTextContainer,
       positionText,
       buttonBackgroundColor,
-      buttonColorColor,
+      buttonColor,
     } = this.props;
-    console.log(positionBlock);
+
+
     return (
       <MainContainer style={{ backgroundImage: `url(${backgroundImg})` }}>
         <Wrapper>
-          <ContentContainer
-            positionText={positionText}
-            position={positionBlock}
-          >
-            <Title items={items} />
+          <ContentContainer widthContentContainer ='50%'>
+            <Text 
+              items={items}
+              isLine
+              positionText={positionText}
+              positionTextContainer={positionTextContainer}
+            />
             <Button
               buttonIcon={buttonIcon}
               buttonLabel={buttonLabel}
               backgroundColor={buttonBackgroundColor}
-              borderColor={buttonColorColor}
+              borderColor={buttonColor}
             />
           </ContentContainer>
         </Wrapper>
