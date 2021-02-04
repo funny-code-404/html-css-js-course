@@ -7,6 +7,3 @@ export const GridTwoColumnContainer = styled.div`
   grid-gap: ${(props) => (props.gridGap ? props.gridGap : "0")};
 `;
 
-export const Wrapper = styled.div`
-  padding: 5%;
-`;

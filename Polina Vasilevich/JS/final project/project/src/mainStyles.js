@@ -24,14 +24,49 @@ export const Wrapper = styled.div`
   padding: ${paddingTopBottom} ${paddingLeftRight};
 `;
 
-export const MainContainer = styled.div`
-  height: 100%;
-  background-color: ${(props) =>
-    props.backgroundColorMainContainer
-      ? props.backgroundColorMainContainer
-      : ""};
-`;
+
+
+const setPositionContentContainer = (positionTextContainer) => {
+  switch (positionTextContainer) {
+    case "right":
+      return `
+                margin-left: auto;
+            `;
+    case "center":
+      return `
+                text-alight: center;
+        `;
+    default:
+      return `margin-right: auto;`;
+  }
+};
+
+const setPositionContent = (positionContent) => {
+  switch (positionContent) {
+    case "right":
+      return `
+                text-align: right;
+            `;
+    case "center":
+      return `
+                text-align: center;
+        `;
+    default:
+      return ` text-align: left;`;
+  }
+};
+
 
 export const ContentContainer = styled.div`
     width: ${props => props.widthContentContainer ? props.widthContentContainer: '100%'};
+    ${props => setPositionContentContainer(props.positionContentContainer)};
+    ${props => setPositionContent(props.positionContent)};
 `
+
+
+export const FlexContainer = styled.div`
+  height: ${props => props.height ? props.height : '181px'};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;

@@ -1,25 +1,25 @@
-import { Title, Text, Line, Section, ContentContainer, Wrapper} from "./styles";
-
+// import { Title, Text, Line } from "./styles";
+import { FlexContainer } from "../../mainStyles";
+import MainContainer from "../MainContainer";
+import Text from '../Text';
 
 function Numbers(props) {
   const { items } = props;
-  console.log(items);
-  return (
-    <Section>
-      <Wrapper>
-        {items.map(({ title, text, colorTitle }) => {
-          return (
-            <ContentContainer key={title}>
-              <Title style={{ color: colorTitle }}>{title}</Title>
-              <Line></Line>
-              <Text>{text}</Text>
-            </ContentContainer>
-          );
-        })}
-      </Wrapper>
-      
-    </Section>
+
+  const contentConteiner = (
+    <FlexContainer>
+      {items.map((item) => {
+        return (
+          <div key={item.title}>
+            <Text items={item} isLine widthLine='31px' colorTitle={item.colorTitle} fontSizeTitle='lg' colorText='#fff'/>
+          </div>
+
+          
+        );
+      })}
+    </FlexContainer>
   );
+  return <MainContainer paddingLeftRight='small' paddingTop='20px' paddingBottom='20px' contentConteiner={contentConteiner} backgroundColorMainContainer='#1f252f'/>;
 }
 
 export default Numbers;

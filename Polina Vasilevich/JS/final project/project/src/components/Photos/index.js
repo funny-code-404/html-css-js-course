@@ -1,30 +1,23 @@
 import React from "react";
 
-import Section from "../Section";
-import { GridContainer } from "../../styles";
-import { Photo } from "./styles";
+import { GridContainer } from "../../mainStyles";
+import { Img } from "./styles";
 
-class Photos extends React.Component {
-  render() {
-    const { items, numberGridColumns } = this.props;
-    const { imgs } = this.props.items;
+export default function Images(props) {
+  const {gridGap, widthItemGridContainer} = props;
+  const {imgs} = props.items;
+  return (
+    <GridContainer gridGap={gridGap} widthItemGridContainer={widthItemGridContainer}>
+      {imgs.map((img, index) => {
+            return (
+              <Img
+                key={index}
+                backgroundImg={img}
+              ></Img>
+            );
+          })}
+    </GridContainer>
+  )
 
-    const contentContainer = (
-      <GridContainer numberColumns={numberGridColumns}>
-        {imgs.map((img, index) => {
-          return (
-            <Photo
-              key={index}
-              style={{ backgroundImage: `url(${img})` }}
-            ></Photo>
-          );
-        })}
-      </GridContainer>
-    );
-
-    return (
-      <Section items={items} paddingLeftRight="0" children={contentContainer} />
-    );
-  }
 }
-export default Photos;
+

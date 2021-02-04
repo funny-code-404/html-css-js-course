@@ -1,13 +1,13 @@
-import { Title, SubTitle, Line, Text, TextContainer } from "../Typography/styles";
+import { Title, SubTitle, Line, Text, TextContainer } from "./styles";
 
 export default function TextComponent(props) {
     const {title, subTitle, text, textList} = props.items;
-    const {fontSizeTitle, fontWeightTitle, positionTextContainer, positionText, isLine} = props;
+    const {fontSizeTitle, fontWeightTitle, isLine, positionText, widthLine, colorTitle, colorText} = props;
     return (
-        <TextContainer positionTextContainer={positionTextContainer} positionText={positionText}>
-            <Title fontSizeTitle={fontSizeTitle} fontWeightTitle={fontWeightTitle}>{title}</Title>
+        <TextContainer positionText = {positionText}>
+            <Title fontSizeTitle={fontSizeTitle} fontWeightTitle={fontWeightTitle} colorTitle={colorTitle}>{title}</Title>
             {
-                isLine && <Line></Line>
+                isLine && <Line widthLine={widthLine}></Line>
             }
 
             {
@@ -15,13 +15,13 @@ export default function TextComponent(props) {
             }
 
 
-            <Text>{text}</Text>
+            <Text colorText={colorText}>{text}</Text>
 
             {
                 textList && 
-                (
-                    textList.map(({icon, text}) => {
-                         <Text><i className={icon}></i> {text}</Text>
+                (   
+                    textList.text.map((item) => {
+                         return <Text colorText={colorText}><i className={textList.icon}></i>{`>  ${item}`}</Text>
                     })
                    
                 )

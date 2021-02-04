@@ -13,6 +13,10 @@ const setFontSizeTitle = fontSizeTitle => {
             `
         case 'sm':
             return `font-size: 18px;`
+
+        case 'lg': 
+            return `font-size: 60px;
+                    line-height: 60px;`
         default:
             return `font-size: 36px`
     }
@@ -34,7 +38,7 @@ export const Title = styled.h2`
   line-height: 30px;
   ${props => setFontSizeTitle(props.fontSizeTitle)};
   ${props => setFontWeightTitle(props.fontWeightTitle)};
-  color: ${(props) => (props.color ? props.color : "#333333")};
+  color: ${(props) => (props.colorTitle ? props.colorTitle : "#333333")};
 `;
 
 export const SubTitle = styled.p`
@@ -48,38 +52,24 @@ export const SubTitle = styled.p`
 
 export const Text = styled.p`
   ${generalStyles}
-  margin-bottom: 20px;
+  margin-bottom: 15px;
     font-size: 14px;
     line-height: 30px;
     font-weight: 400;
-    color: ${(props) => (props.color ? props.color : "#575757")};
+    color: ${(props) => (props.colorText ? props.colorText : "#575757")};
 `;
 
 export const Line = styled.div`
   ${generalStyles}
   display: inline-block;
-  margin: 20px 0;
-  width: 100px;
+  margin: 15px 0;
+  width: ${props => props.widthLine ? props.widthLine : '100px'};
   height: 1px;
   background-color: #000000;
   background-image: linear-gradient(90deg, #00f0ff -25%, #ebacfd 125%);
 `;
 
 
-const setPositionTextContainer = (positionTextContainer) => {
-  switch (positionTextContainer) {
-    case "right":
-      return `
-                margin-left: auto;
-            `;
-    case "center":
-      return `
-                text-alight: center;
-        `;
-    default:
-      return `margin-right: auto;`;
-  }
-};
 
 const setPositionText = (positionText) => {
   switch (positionText) {
@@ -87,18 +77,16 @@ const setPositionText = (positionText) => {
       return `
                 text-align: right;
             `;
-    case "center":
+    case "left":
       return `
-                text-align: center;
+                text-align: left;
         `;
     default:
-      return ` text-align: left;`;
+      return ` text-align: center;`;
   }
 };
 
 export const TextContainer = styled.div`
-    ${props => setPositionTextContainer(props.positionTextContainer)};
-    ${props => setPositionText(props.positionText)};
-`;
-
+     ${props => setPositionText(props.positionText)};
+`
 

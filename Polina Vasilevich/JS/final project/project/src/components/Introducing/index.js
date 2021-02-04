@@ -1,30 +1,30 @@
 import React from "react";
+import MainContainer from '../MainContainer';
 import Text from '../Text';
 import Button from "../Button";
 
-import {Wrapper, MainContainer, ContentContainer } from "../../mainStyles";
+import {ContentContainer } from "../../mainStyles";
 
 class Introducing extends React.Component {
   render() {
     const { buttonLabel, backgroundImg, buttonIcon } = this.props.items;
     const {
       items,
-      positionTextContainer,
+      positionContentContainer,
       positionText,
       buttonBackgroundColor,
       buttonColor,
     } = this.props;
 
-
-    return (
-      <MainContainer style={{ backgroundImage: `url(${backgroundImg})` }}>
-        <Wrapper>
-          <ContentContainer widthContentContainer ='50%'>
+    const contentConteiner = (
+        <ContentContainer 
+          widthContentContainer ='50%'
+          positionContentContainer = {positionContentContainer}
+          >
             <Text 
               items={items}
               isLine
               positionText={positionText}
-              positionTextContainer={positionTextContainer}
             />
             <Button
               buttonIcon={buttonIcon}
@@ -32,9 +32,11 @@ class Introducing extends React.Component {
               backgroundColor={buttonBackgroundColor}
               borderColor={buttonColor}
             />
-          </ContentContainer>
-        </Wrapper>
-      </MainContainer>
+        </ContentContainer>
+    )
+
+    return (
+      <MainContainer contentConteiner={contentConteiner} backgroundImg={backgroundImg}/>
     );
   }
 }

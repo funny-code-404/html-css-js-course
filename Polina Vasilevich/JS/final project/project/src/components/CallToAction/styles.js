@@ -1,8 +1,5 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  background-color: ${props => props.backgroundColor ? props.backgroundColor : '#82b440'};
-`;
 
 export const Text = styled.p`
   font-family: OpenSans;
@@ -10,11 +7,4 @@ export const Text = styled.p`
   line-height: 36px;
   font-weight: 300;
   color: #ffffff;
-`;
-
-export const FlexContainer = styled.div`
-  height: 181px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 `;

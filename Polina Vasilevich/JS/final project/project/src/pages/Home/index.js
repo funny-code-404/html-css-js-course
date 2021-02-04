@@ -1,11 +1,19 @@
 import React from "react";
 
+import Text from '../../components/Text';
+import MainContainer from '../../components/MainContainer';
+
 import IconsList from '../../components/IconsList';
 import iconList1 from "../../assets/const/iconList1";
 import iconList2 from "../../assets/const/iconList2";
 
 import Introducing from "../../components/Introducing";
-import Photos from "../../components/Photos";
+import introducingItems from "../../assets/const/introducingItems";
+
+import Gallery from '../../components/Gallery';
+import portfolioItems from "../../assets/const/portfolioItems";
+
+
 import Partners from "../../components/Partners";
 import PricingTables from "../../components/Prices";
 import Blog from "../../components/Blog";
@@ -15,14 +23,13 @@ import Numbers from "../../components/Numbers";
 
 import TwoColumnSection from "../../components/TwoColumSection";
 import Percents from "../../components/PercentsBlock";
-import TextList from "../../components/TextList";
+
 import TextWithImages from "../../components/TextWithImages";
 import Video from '../../components/VideoComponent';
 import Footer from "../../components/Footer";
 
 
-import introducingItems from "../../assets/const/introducingItems";
-import portfolioItems from "../../assets/const/portfolioItems";
+
 
 import servicesItems from "../../assets/const/servicesItems";
 import partnersItems from "../../assets/const/partnersItems";
@@ -34,8 +41,23 @@ import { logo, contacts } from "../../assets/const/footerItems";
 import { items } from "../../assets/const/copyRightItems";
 import videoItems from '../../assets/const/videoItems';
 
+
 const firstItemForService = (
-  <TextList items={servicesItems.leftContent} backgroundColorMainContainer='#1f252f'/>
+  <MainContainer 
+    backgroundColorMainContainer='#1f252f' 
+    paddingLeftRight='small'
+    contentConteiner=
+    {
+      <Text 
+        items={servicesItems.leftContent} 
+        isLine
+        positionText='left'
+        colorTitle='#fff'
+        colorText='#cccccc'
+        />
+       
+    }/>
+    
 );
 
 const secondItemForService = (
@@ -68,22 +90,26 @@ class Home extends React.Component {
           items={introducingItems}
           buttonBackgroundColor="#4285f4"
           buttonBorderColor="#2c6cd6"
+          positionText='left'
         />
 
-        <Photos items={portfolioItems} numberGridColumns="4" />
+        <Gallery items={portfolioItems} widthItemGridContainer='442px' gridGap='0' paddingLeftRight='none' paddingBottom='0'/>
 
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"
+          backgroundColorMainContainer='#82b440'
           backgroundColorButton='#82b440'
           borderColorButton='#fff'
+          paddingTop='0'
+          paddingBottom='0'
         />
 
         <IconsList items={iconList2} 
           gridGap='4%' 
           widthItemGridContainer='350px'
           colorIcon='gradient'
-          positionTextIcons='left'
+          positionText='left'
           positionIcons='left'
           fontSizeIcon='42px'
         />
@@ -92,7 +118,8 @@ class Home extends React.Component {
           items={introducingItems}
           buttonBackgroundColor="#4285f4"
           buttonBorderColor="#2c6cd6"
-          positionBlock="right"
+          positionContentContainer="right"
+          positionText='left'
         />
 
         <Numbers items={numbersItems} />
