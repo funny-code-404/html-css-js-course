@@ -14,7 +14,7 @@ function CallToAction(props) {
     paddingBottom,
   } = props;
 
-  const contentConteiner = (
+  const contentContainer = (
     <FlexContainer>
       <Text>{text}</Text>
       <Button
@@ -24,13 +24,13 @@ function CallToAction(props) {
       ></Button>
     </FlexContainer>
   );
-  
+
   return (
     <MainContainer
       paddingTop={paddingTop}
       paddingBottom={paddingBottom}
       backgroundColorMainContainer={backgroundColorMainContainer}
-      contentConteiner={contentConteiner}
+      contentContainer={contentContainer}
     />
   );
 }

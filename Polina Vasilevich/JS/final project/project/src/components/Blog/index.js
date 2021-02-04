@@ -1,33 +1,21 @@
-import Title from "../BlockWithTitleAndText";
-import { GridContainer, Wrapper } from "../../styles";
-import { GridItem } from "./styles";
-
-import Section from "../Section";
+import MainContainer from "../MainContainer";
+import Images from "../Photos";
 
 import "./styles.css";
 
 function Blog(props) {
   const { items } = props;
   const contentContainer = (
-    <GridContainer numberColumns="2" numberRows="2" gridGap="35px">
-      {items.list.map((item) => {
-        return (
-          <GridItem
-            key={item.title}
-            height="570px"
-            style={{ backgroundImage: `url(${item.img})` }}
-          >
-            <div className="imgTextContainer">
-              <h3 className="imgTitle">{item.title}</h3>
-              <span className="imgDate">{item.date}</span>
-            </div>
-          </GridItem>
-        );
-      })}
-    </GridContainer>
+    <Images
+      items={items}
+      widthItemGridContainer="400px"
+      heightImg="350px"
+      gridItemRow="1"
+    />
   );
-
-  return <Section items={items} children={contentContainer} />;
+  return (
+    <MainContainer isTitle items={items} contentContainer={contentContainer} />
+  );
 }
 
 export default Blog;

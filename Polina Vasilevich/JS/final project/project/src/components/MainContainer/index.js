@@ -1,13 +1,32 @@
 import React from "react";
-import {MainContainer, Wrapper} from "./styles";
+import { MainContainer, Wrapper } from "./styles";
+import Text from "../Text";
 
 export default function MainContainerComponent(props) {
-    const {backgroundImg, contentConteiner, backgroundColorMainContainer, paddingTop, paddingBottom, paddingLeftRight} = props;
-    return (
-         <MainContainer backgroundColorMainContainer={backgroundColorMainContainer} backgroundImg={backgroundImg}>
-            <Wrapper paddingLeftRight={paddingLeftRight} paddingTop={paddingTop} paddingBottom={paddingBottom}>
-                {contentConteiner}
-            </Wrapper>
-        </MainContainer>
-    )
+  const {
+    items,
+    backgroundImg,
+    contentContainer,
+    backgroundColorMainContainer,
+    paddingTop,
+    paddingBottom,
+    paddingLeftRight,
+    isTitle,
+  } = props;
+  return (
+    <MainContainer
+      backgroundColorMainContainer={backgroundColorMainContainer}
+      backgroundImg={backgroundImg}
+    >
+      <Wrapper
+        paddingLeftRight={paddingLeftRight}
+        paddingTop={paddingTop}
+        paddingBottom={paddingBottom}
+      >
+        {isTitle && <Text items={items} isLine />}
+
+        {contentContainer}
+      </Wrapper>
+    </MainContainer>
+  );
 }

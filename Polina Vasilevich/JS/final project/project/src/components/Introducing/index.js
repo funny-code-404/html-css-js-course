@@ -1,9 +1,9 @@
 import React from "react";
-import MainContainer from '../MainContainer';
-import Text from '../Text';
+import MainContainer from "../MainContainer";
+import Text from "../Text";
 import Button from "../Button";
 
-import {ContentContainer } from "../../mainStyles";
+import { ContentContainer } from "../../mainStyles";
 
 class Introducing extends React.Component {
   render() {
@@ -16,27 +16,26 @@ class Introducing extends React.Component {
       buttonColor,
     } = this.props;
 
-    const contentConteiner = (
-        <ContentContainer 
-          widthContentContainer ='50%'
-          positionContentContainer = {positionContentContainer}
-          >
-            <Text 
-              items={items}
-              isLine
-              positionText={positionText}
-            />
-            <Button
-              buttonIcon={buttonIcon}
-              buttonLabel={buttonLabel}
-              backgroundColor={buttonBackgroundColor}
-              borderColor={buttonColor}
-            />
-        </ContentContainer>
-    )
+    const contentContainer = (
+      <ContentContainer
+        widthContentContainer="50%"
+        positionContentContainer={positionContentContainer}
+      >
+        <Text items={items} isLine positionText={positionText} />
+        <Button
+          buttonIcon={buttonIcon}
+          buttonLabel={buttonLabel}
+          backgroundColor={buttonBackgroundColor}
+          borderColor={buttonColor}
+        />
+      </ContentContainer>
+    );
 
     return (
-      <MainContainer contentConteiner={contentConteiner} backgroundImg={backgroundImg}/>
+      <MainContainer
+        contentContainer={contentContainer}
+        backgroundImg={backgroundImg}
+      />
     );
   }
 }

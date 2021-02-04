@@ -1,5 +1,5 @@
 import React from "react";
-import Section from "../Section";
+import MainContainer from "../MainContainer";
 
 import Table from "../Table";
 
@@ -9,7 +9,13 @@ class Prices extends React.Component {
 
     const contentContainer = <Table items={items} />;
 
-    return <Section items={header} children={contentContainer} />;
+    return (
+      <MainContainer
+        isTitle
+        items={header}
+        contentContainer={contentContainer}
+      />
+    );
   }
 }
 

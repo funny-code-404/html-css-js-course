@@ -1,13 +1,11 @@
-// import { GridContainer } from "../../styles";
-import TitleAndText from "../BlockWithTitleAndText";
+// import TitleAndText from "../BlockWithTitleAndText";
+import { GridContainer } from "../../mainStyles";
+import Text from "../Text";
 import Button from "../Button";
 
 import {
   PriceContainer,
   InfoContainer,
-  Title,
-  Text,
-  GridContainer,
   ItemInfoContainer,
   TextContainer,
 } from "./styles";
@@ -19,20 +17,23 @@ export default function Table(props) {
       {items.map((item) => {
         return (
           <PriceContainer key={item.title}>
-            <TitleAndText items={item} />
+            <Text items={item} isLine />
             <InfoContainer>
               <TextContainer>
-                {item.list.map(({ title, text }) => {
+                {item.list.map((item) => {
                   return (
-                    <ItemInfoContainer key={title}>
-                      <Title>{title}</Title>
-                      <Text>{text}</Text>
+                    <ItemInfoContainer key={item.title}>
+                      <Text items={item} fontSizeTitle="xs" />
                     </ItemInfoContainer>
                   );
                 })}
               </TextContainer>
 
-              <Button width='220px' buttonLabel={item.buttonLabel} buttonIcon={item.buttonIcon}></Button>
+              <Button
+                width="220px"
+                buttonLabel={item.buttonLabel}
+                buttonIcon={item.buttonIcon}
+              ></Button>
             </InfoContainer>
           </PriceContainer>
         );

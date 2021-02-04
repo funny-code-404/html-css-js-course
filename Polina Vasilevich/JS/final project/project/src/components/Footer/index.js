@@ -31,7 +31,7 @@ class FooterComponent extends React.Component {
 
             {contacts.map(({ titleContacts, textContacts }) => {
               return (
-                <FooterContacts>
+                <FooterContacts key={titleContacts}>
                   <ContactsTitle>{titleContacts}</ContactsTitle>
                   <ContactsText>{textContacts}</ContactsText>
                 </FooterContacts>
@@ -45,8 +45,8 @@ class FooterComponent extends React.Component {
             <ContentContainer>
               <CopyRightText>{copyRight.text}</CopyRightText>
               <div>
-                {copyRight.icons.map((icon) => {
-                  return <Icon className={`${icon}`}></Icon>;
+                {copyRight.icons.map((icon, index) => {
+                  return <Icon key={index} className={`${icon}`}></Icon>;
                 })}
               </div>
             </ContentContainer>
