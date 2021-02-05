@@ -1,4 +1,3 @@
-// import TitleAndText from "../BlockWithTitleAndText";
 import { GridContainer } from "../../mainStyles";
 import Text from "../Text";
 import Button from "../Button";
@@ -13,7 +12,7 @@ import {
 export default function Table(props) {
   const { items } = props;
   return (
-    <GridContainer>
+    <GridContainer widthItemGridContainer='250px'>
       {items.map((item) => {
         return (
           <PriceContainer key={item.title}>

@@ -16,8 +16,11 @@ class Shortcodes extends React.Component {
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"
-          backgroundColorButton='#82b440'
-          borderColorButton='#fff'
+          backgroundColorButton="#82b440"
+          backgroundColorMainContainer = "#82b440"
+          paddingTop ='0'
+          paddingBottom='0'
+          borderColorButton="#fff"
         />
         <Footer logo={logo} contacts={contacts} copyRight={items} />
       </>

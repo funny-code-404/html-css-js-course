@@ -1,20 +1,21 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.div`
-  height: 100%;
+  ${props => props.isVerticalCenter && `display: flex; align-items: center;`}
+  height: ${(props) =>
+    props.heightMainContainer
+      ? props.heightMainContainer
+      : "100%"};
   background-color: ${(props) =>
     props.backgroundColorMainContainer
       ? props.backgroundColorMainContainer
       : ""};
 
   background-image: ${(props) =>
-    props.backgroundImg ? `url(${props.backgroundImg})` : ""};
+                      props.backgroundImg ? `url(${props.backgroundImg})` : ""};
   background-size: cover;
   background-position: center center;
 `;
-
-const paddingTopBottom = (props) =>
-  props.paddingTopBottom ? props.paddingTopBottom : "100px";
 
 const setPaddingLeftRight = (paddingLeftRight) => {
   switch (paddingLeftRight) {

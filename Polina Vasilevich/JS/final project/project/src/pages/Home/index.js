@@ -1,8 +1,5 @@
 import React from "react";
 
-import Text from "../../components/Text";
-import MainContainer from "../../components/MainContainer";
-
 import IconsList from "../../components/IconsList";
 import iconList1 from "../../assets/const/iconList1";
 import iconList2 from "../../assets/const/iconList2";
@@ -20,13 +17,17 @@ import CallToAction from "../../components/CallToAction";
 import Numbers from "../../components/Numbers";
 
 import TwoColumnSection from "../../components/TwoColumSection";
+
+import FirstItemForService from '../../components/Services/TextList';
+import servicesItems from "../../assets/const/servicesItems";
+
 import Percents from "../../components/PercentsBlock";
 
 import TextWithImages from "../../components/TextWithImages";
 import Video from "../../components/VideoComponent";
 import Footer from "../../components/Footer";
 
-import servicesItems from "../../assets/const/servicesItems";
+
 import partnersItems from "../../assets/const/partnersItems";
 import pricingTables from "../../assets/const/pricingTables";
 import businessItems from "../../assets/const/businessItems";
@@ -36,23 +37,6 @@ import { logo, contacts } from "../../assets/const/footerItems";
 import { items } from "../../assets/const/copyRightItems";
 import videoItems from "../../assets/const/videoItems";
 
-const firstItemForService = (
-  <Text
-    items={servicesItems.leftContent}
-    isLine
-    positionText="left"
-    colorTitle="#fff"
-    colorText="#cccccc"
-  />
-);
-
-const secondItemForService = (
-  <IconsList
-    items={servicesItems.rightContent}
-    gridGap="4%"
-    widthItemGridContainer="250px"
-  />
-);
 
 const firstItemForBusiness = (
   <TextWithImages items={businessItems.leftContent} />
@@ -82,6 +66,7 @@ class Home extends React.Component {
           buttonBackgroundColor="#4285f4"
           buttonBorderColor="#2c6cd6"
           positionText="left"
+          heightMainContainer='778px'
         />
 
         <Gallery
@@ -118,17 +103,28 @@ class Home extends React.Component {
           buttonBorderColor="#2c6cd6"
           positionContentContainer="right"
           positionText="left"
+          heightMainContainer='778px'
         />
 
         <Numbers items={numbersItems} />
 
         <TwoColumnSection
           sizeContainers="45% 55%"
-          firstItem={firstItemForService}
-          secondItem={secondItemForService}
+
+          firstItem= {<FirstItemForService
+             items={servicesItems.leftContent}
+             backgroundColorMainContainer="#1f252f"/>}
+
+          secondItem={
+            <IconsList 
+              items={servicesItems.rightContent}
+              gridGap="4%"
+              widthItemGridContainer="250px"
+              paddingLeftRight='small'
+            />}
         />
 
-        <Partners items={partnersItems} />
+        <Partners items={partnersItems} heightMainContainer='1277px'/>
 
         <PricingTables items={pricingTables} buttonLabel="GET STARTED NOW" />
 

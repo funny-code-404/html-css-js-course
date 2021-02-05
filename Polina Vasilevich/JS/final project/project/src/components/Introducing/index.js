@@ -14,12 +14,14 @@ class Introducing extends React.Component {
       positionText,
       buttonBackgroundColor,
       buttonColor,
+      heightMainContainer,
     } = this.props;
 
     const contentContainer = (
       <ContentContainer
         widthContentContainer="50%"
         positionContentContainer={positionContentContainer}
+       
       >
         <Text items={items} isLine positionText={positionText} />
         <Button
@@ -35,6 +37,8 @@ class Introducing extends React.Component {
       <MainContainer
         contentContainer={contentContainer}
         backgroundImg={backgroundImg}
+        heightMainContainer={heightMainContainer}
+        isVerticalCenter
       />
     );
   }

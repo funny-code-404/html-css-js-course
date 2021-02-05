@@ -12,18 +12,26 @@ export default function MainContainerComponent(props) {
     paddingBottom,
     paddingLeftRight,
     isTitle,
+    heightMainContainer,
+    isVerticalCenter,
+    positionText,
+    colorTitle,
+    colorText,
   } = props;
+
   return (
     <MainContainer
       backgroundColorMainContainer={backgroundColorMainContainer}
       backgroundImg={backgroundImg}
+      heightMainContainer={heightMainContainer}
+      isVerticalCenter={isVerticalCenter}
     >
       <Wrapper
         paddingLeftRight={paddingLeftRight}
         paddingTop={paddingTop}
         paddingBottom={paddingBottom}
       >
-        {isTitle && <Text items={items} isLine />}
+        {isTitle && <Text items={items} isLine positionText={positionText} colorTitle={colorTitle} colorText={colorText}/>}
 
         {contentContainer}
       </Wrapper>

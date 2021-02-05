@@ -28,6 +28,7 @@ export const PriceContainer = styled.div`
     background-image: linear-gradient(90.0deg, #00f0ff -24%, #ebacfd 125%);
     background-size: 100% 5px;
     background-repeat: no-repeat;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 
     ${Button} {
       background-color: #82b440;

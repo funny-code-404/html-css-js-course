@@ -3,7 +3,7 @@ import React from "react";
 import IntroSlider from "../../components/IntroSlider";
 import IconsList from "../../components/IconsList";
 import Introducing from "../../components/Introducing";
-import TextList from "../../components/TextList";
+import TextList from "../../components/Services/TextList";
 import Section from "../../components/Section";
 import Footer from "../../components/Footer";
 import CallToAction from "../../components/CallToAction";
@@ -32,11 +32,13 @@ class Features extends React.Component {
           title="OUR SERVICES"
           subTitle="Dream Big. Think Different. Do Great"
         />
-        <IconsList items={iconList1} 
-        gridGap='4%' 
-        widthItemGridContainer='200px' 
-        formIcons='circle'
-        gradientColorFormIcon/>
+        <IconsList
+          items={iconList1}
+          gridGap="4%"
+          widthItemGridContainer="200px"
+          formIcons="circle"
+          gradientColorFormIcon
+        />
         
 
         <Introducing
@@ -45,13 +47,15 @@ class Features extends React.Component {
           buttonBorderColor="#2c6cd6"
           positionText="right"
         />
-
         <TextList items={servicesItems.leftContent} isTransparentButton />
-        <Section items={servicesItems.leftContent} children={iconsList} />
+
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"
           backgroundColorButton="#82b440"
+          backgroundColorMainContainer = "#82b440"
+          paddingTop ='0'
+          paddingBottom='0'
           borderColorButton="#fff"
         />
 

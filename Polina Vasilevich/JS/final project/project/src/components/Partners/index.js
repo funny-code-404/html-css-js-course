@@ -5,7 +5,7 @@ import LogosList from "../LogosList";
 class Logos extends React.Component {
   render() {
     const { backgroundImg } = this.props.items;
-    const { items } = this.props;
+    const { items, heightMainContainer } = this.props;
 
     const contentContainer = <LogosList items={items} />;
 
@@ -15,6 +15,7 @@ class Logos extends React.Component {
         items={items}
         backgroundImg={backgroundImg}
         contentContainer={contentContainer}
+        heightMainContainer={heightMainContainer}
       />
     );
   }

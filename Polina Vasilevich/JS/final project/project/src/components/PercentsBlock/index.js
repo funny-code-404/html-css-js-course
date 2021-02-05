@@ -1,36 +1,47 @@
 import React from "react";
-import TitleAndText from "../BlockWithTitleAndText";
-import { Title, PercentsContainer, PercentsItem } from "./styles";
-import { ContentContainer, WrapperBlock } from "../../styles";
+
+import MainContainer from '../MainContainer';
+import Text from '../Text';
 import Button from "../Button";
+
+import { Title, PercentsContainer, PercentsItem } from "./styles";
 
 class Percents extends React.Component {
   render() {
-    const { items, backgroundColorMainContainer } = this.props;
-    return (
-      <ContentContainer
-        backgroundColorMainContainer={backgroundColorMainContainer}
-      >
-        <WrapperBlock>
-          <TitleAndText items={items} />
-          {items.list.map(({ title, percents }) => {
+    const { items, backgroundColorMainContainer,colorTitle, colorText, backgroundColorContainer, backgroundColorItem } = this.props;
+
+    const contentContainer = (
+      <>
+      {items.list.map((item) => {
             return (
-              <div key={title}>
-                <Title>{title}</Title>
-                <PercentsContainer>
-                  <PercentsItem style={{ width: percents }}></PercentsItem>
+              <div key={item.title}>
+                <Text fontSizeTitle='sm' items={item} positionText='left' colorTitle={colorTitle}></Text>
+                <PercentsContainer backgroundColorContainer={backgroundColorContainer}>
+                  <PercentsItem backgroundColorItem={backgroundColorItem} style={{ width: item.percents }}></PercentsItem>
                 </PercentsContainer>
               </div>
             );
-          })}
+          })
+        }
           <Button
             buttonLabel={items.buttonLabel}
             buttonIcon={items.buttonIcon}
-          ></Button>
-        </WrapperBlock>
-      </ContentContainer>
-    );
-  }
+          >
+
+          </Button>
+      </>
+    )
+    return <MainContainer 
+      isTitle 
+      items={items}
+      colorTitle={colorTitle}
+      colorText={colorText}
+      backgroundColorMainContainer={backgroundColorMainContainer}
+      positionText="left"
+      contentContainer={contentContainer}
+      />
+  
+    }
 }
 
 export default Percents;

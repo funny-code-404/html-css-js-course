@@ -1,23 +1,20 @@
 import styled from "styled-components";
 
 export const Header = styled.header`
-  height: 90px;
   background-color: #ffffff;
 `;
 
 export const List = styled.ul`
   list-style: none;
-  display: flex;
-  justify-content: space-between;
 `;
 
 export const ListItem = styled.li`
+  display: inline-block;
   margin-left: 10px;
   font-size: 13px;
 `;
 
 export const LogoContainer = styled.div`
-  // width: 40%;
   display: flex;
 `;
 
@@ -37,14 +34,7 @@ export const LogoText = styled.h2`
 `;
 
 export const Navigation = styled.nav`
-  // width: 60%;
 `;
 
-export const Wrapper = styled.div``;
 
-export const FlexContainer = styled.div`
-  height: 90px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
+
