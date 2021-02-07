@@ -9,7 +9,7 @@ const setFontSizeTitle = (fontSizeTitle) => {
     case "xs":
       return `
                 font-size: 16px;
-                font-weight: 400;
+                font-weight: 600px;
                 letter-spacing: 0.05em;
             `;
     case "sm":
@@ -17,9 +17,10 @@ const setFontSizeTitle = (fontSizeTitle) => {
 
     case "lg":
       return `font-size: 60px;
-                    line-height: 60px;`;
+              line-height: 60px;`;
     default:
-      return `font-size: 36px`;
+      return `font-size: 36px
+      font-weight: 300;`;
   }
 };
 
@@ -28,7 +29,7 @@ const setFontWeightTitle = (fontWeightTitle) => {
     case "lg":
       return `font-weight: 600;`;
     default:
-      return `font-weight: 300;`;
+      return ``;
   }
 };
 

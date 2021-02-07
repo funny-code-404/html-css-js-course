@@ -1,6 +1,7 @@
 import { Title, SubTitle, Line, Text, TextContainer } from "./styles";
 
 export default function TextComponent(props) {
+  const { icon } = props;
   const { title, subTitle, text, textList } = props.items;
   const {
     fontSizeTitle,
@@ -18,6 +19,7 @@ export default function TextComponent(props) {
         fontWeightTitle={fontWeightTitle}
         colorTitle={colorTitle}
       >
+        {icon && <i className={icon} style={{ color: "#9bcb5b" }}></i>}
         {title}
       </Title>
       {isLine && <Line widthLine={widthLine}></Line>}
