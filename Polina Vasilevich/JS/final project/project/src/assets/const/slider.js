@@ -5,7 +5,6 @@ import img4 from "../img/portfolio/neven-krcmarek-V4EOZj7g1gw-unsplash.jpg";
 import img5 from "../img/portfolio/scott-graham-5fNmWej4tAA-unsplash.jpg";
 import img6 from "../img/portfolio/ux-store-jJT2r2n7lYA-unsplash.jpg";
 
-
 const sliderItems = {
   title: "Selected Case Studies",
   subTitle:

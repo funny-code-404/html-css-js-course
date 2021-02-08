@@ -1,99 +1,115 @@
 import React from "react";
+
 import "./styles.css";
 
 class Slider extends React.Component {
   constructor(props) {
     super(props);
     this.imgs = document.getElementsByClassName("img");
-    this.dots = document.getElementsByClassName('slider-dots_item');
+    this.dots = document.getElementsByClassName("slider-dots_item");
     this.state = {
       currentSliderIndex: 1,
       selected: 0,
     };
   }
 
-  
   setOpacity = (indexInvisible, indexVisible) => {
     this.imgs[indexInvisible].style.opacity = "0";
     this.imgs[indexVisible].style.opacity = "1";
-
-  }
-
+  };
 
   nextSlider = (e) => {
     e.preventDefault();
     if (this.state.currentSliderIndex < this.imgs.length) {
-      this.setState(prevState => {
-          this.setOpacity(prevState.currentSliderIndex - 1, prevState.currentSliderIndex )
-          return {currentSliderIndex: prevState.currentSliderIndex + 1,
-                  selected: +e.target.id};
+      this.setState((prevState) => {
+        this.setOpacity(
+          prevState.currentSliderIndex - 1,
+          prevState.currentSliderIndex
+        );
+        return {
+          currentSliderIndex: prevState.currentSliderIndex + 1,
+          selected: +e.target.id,
+        };
       });
-
     } else {
-          this.setState(prevState => {
-            this.setOpacity(this.imgs.length - 1, 0)
-            return {currentSliderIndex: 1,
-            selected: +e.target.id};
+      this.setState((prevState) => {
+        this.setOpacity(this.imgs.length - 1, 0);
+        return {
+          currentSliderIndex: 1,
+          selected: +e.target.id,
+        };
       });
     }
-
   };
 
   prevSlider = (e) => {
     e.preventDefault();
-      if (this.state.currentSliderIndex > 1) {
-        this.setState(prevState => {
-            this.setOpacity(prevState.currentSliderIndex - 1, prevState.currentSliderIndex - 2);
-            return {currentSliderIndex: prevState.currentSliderIndex - 1};
-        });
-
-      } else {
-            this.setState(prevState => {
-              this.setOpacity(prevState.currentSliderIndex - 1, this.imgs.length - 1);
-              return {currentSliderIndex: 1};
-        });
-      }
+    if (this.state.currentSliderIndex > 1) {
+      this.setState((prevState) => {
+        this.setOpacity(
+          prevState.currentSliderIndex - 1,
+          prevState.currentSliderIndex - 2
+        );
+        return { currentSliderIndex: prevState.currentSliderIndex - 1 };
+      });
+    } else {
+      this.setState((prevState) => {
+        this.setOpacity(prevState.currentSliderIndex - 1, this.imgs.length - 1);
+        return { currentSliderIndex: this.imgs.length };
+      });
+    }
   };
-
 
   changeSlider = (e) => {
     e.preventDefault();
-    this.setState(prevState => {
-            this.imgs[prevState.currentSliderIndex - 1].style.display = "none";
-            this.imgs[e.target.id].style.display = "block";
-            
-            // this.dots[prevState.currentSliderIndex - 1].classList.remove('active');
-            // this.dots[e.target.id].classList.add('active');
-            return {currentSliderIndex: +e.target.id + 1,
-                    selected: +e.target.id}
-        });
-  }
+    this.setState((prevState) => {
+      this.setOpacity(prevState.currentSliderIndex - 1, e.target.id);
+      return {
+        currentSliderIndex: +e.target.id + 1,
+      };
+    });
+    console.log(e.target.id);
+  };
 
   render() {
     const { imgs } = this.props.items;
     return (
-      <section>
-        <div id="slider">
-          <div id='imgs'></div>
-          <div id='dots'></div>
+      <div>
+        <div className="slides">
           {imgs.map((img, index) => {
-            const imgsContainer = document.getElementById('imgs');
-            const dotsContainer = document.getElementById('dots');
-            console.dir(imgsContainer);
-            // imgsContainer.appendChild(<img key={img} className='img' src={img} alt="img" />)
-            // dotsContainer.appendChild(<input type='radio' id={index} checked={this.state.selected === 1} onChange={this.changeSlider}/>)
-          })};
+            return <img key={index} className="img" src={img} alt="img" />;
+          })}
 
           <button className="prev" onClick={this.prevSlider}>
             &#10094;
           </button>
-
           <button className="next" onClick={this.nextSlider}>
             &#10095;
           </button>
-
         </div>
-      </section>
+
+        <div className="slider-dots">
+          {imgs.map((img, index) => {
+            return (
+              // <input
+              //   className="slider-dots_item"
+              //   type="radio"
+              //   value={`img${index}`}
+              //   id={index}
+              //   checked={index + 1 === this.state.currentSliderIndex}
+              //   onChange={this.changeSlider}
+              // />
+              <button
+                id={index}
+                className={`slider-dots_item ${
+                  index + 1 === this.state.currentSliderIndex && "active"
+                } `}
+                onClick={this.changeSlider}
+              ></button>
+            );
+          })}
+        </div>
+      </div>
     );
   }
 }
