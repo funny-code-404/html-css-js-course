@@ -37,6 +37,7 @@ import { items } from "../../assets/const/copyRightItems";
 import videoItems from "../../assets/const/videoItems";
 
 import Slider from "../../components/Slider";
+import sliderItems from '../../assets/const/slider';
 
 const firstItemForBusiness = (
   <TextWithImages items={businessItems.leftContent} />
@@ -53,7 +54,7 @@ class Home extends React.Component {
   render() {
     return (
       <>
-        <Slider items={portfolioItems} />
+        <Slider items={sliderItems} />
         <IconsList
           items={iconList1}
           gridGap="4%"
