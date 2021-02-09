@@ -8,8 +8,6 @@ class Slider extends React.Component {
     this.id = props.id;
     this.state = {
       position: 0,
-      firstIndex: 0,
-      lastIndex: 3,
     };
   }
 
@@ -18,16 +16,13 @@ class Slider extends React.Component {
     const imgs = document
       .getElementById(this.id)
       .getElementsByClassName("img1");
-    if (this.state.lastIndex < imgs.length - 1) {
-      const newPosition =
-        this.state.position === imgs.length - 1 ? 0 : this.state.position + 1;
 
-      this.setState((prevState) => {
-        return { position: newPosition, lastIndex: prevState.lastIndex + 1 };
-      });
-    } else {
-      console.log(this.state.position);
-    }
+    const newPosition =
+      this.state.position > imgs.length - 1 ? 0 : this.state.position + 1;
+
+    this.setState((prevState) => {
+      return { position: newPosition };
+    });
   };
 
   prevSlider = (e) => {
@@ -35,13 +30,13 @@ class Slider extends React.Component {
     const imgs = document
       .getElementById(this.id)
       .getElementsByClassName("img1");
-    if (this.state.firstIndex > -1) {
-      const newPosition =
-        this.state.position === 0 ? imgs.length - 1 : this.state.position - 1;
-      this.setState((prevState) => {
-        return { position: newPosition, firstIndex: prevState.firstIndex - 1 };
-      });
-    }
+
+    const newPosition =
+      this.state.position === 0 ? imgs.length - 1 : this.state.position - 1;
+
+    this.setState((prevState) => {
+      return { position: newPosition };
+    });
   };
 
   // changeSlider = (e) => {
@@ -63,6 +58,13 @@ class Slider extends React.Component {
       <div id={id}>
         <div className="slides1">
           {imgs.map((img, index) => {
+            let dx = null;
+            if (this.state.position <= index) {
+              dx = -100 * this.state.position;
+            } else {
+              dx = 100 * (imgs.length - this.state.position);
+            }
+
             return (
               <img
                 key={index}
@@ -70,8 +72,8 @@ class Slider extends React.Component {
                 src={img}
                 alt="img"
                 style={{
-                  transition: "transform ease-out 450ms",
-                  transform: `translateX(-${this.state.position}00%)`,
+                  transition: "transform 0.3s",
+                  transform: `translateX(${dx}%)`,
                 }}
               />
             );
