@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, ItemFrom } from "./styles";
+import { Form, ItemFrom, Select } from "./styles";
 class FormComponent extends React.Component {
   render() {
     const { items } = this.props;
@@ -8,7 +8,7 @@ class FormComponent extends React.Component {
         {items.map(({ type, placeholder }) => {
           return <ItemFrom type={type} placeholder={placeholder}></ItemFrom>;
         })}
-
+        {items.select && <Select></Select>}
         <select>
           <option disabled selected hidden>
             Your Budget

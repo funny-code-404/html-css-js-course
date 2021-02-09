@@ -18,6 +18,10 @@ const formItems = [
     type: "text",
     placeholder: "Company Name",
   },
+
+  {
+    select: [{}],
+  },
 ];
 
 export default formItems;
