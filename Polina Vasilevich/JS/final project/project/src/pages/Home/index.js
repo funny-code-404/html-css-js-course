@@ -37,9 +37,12 @@ import { items } from "../../assets/const/copyRightItems";
 import videoItems from "../../assets/const/videoItems";
 
 import Slider from "../../components/Slider";
-import sliderItems from '../../assets/const/slider';
+import sliderItems from "../../assets/const/slider";
 
-import Slider2 from '../../components/Slider copy';
+import Slider2 from "../../components/Slider copy";
+
+import Form from "../../components/Form";
+import formItems from "../../assets/const/formItems";
 
 const firstItemForBusiness = (
   <TextWithImages items={businessItems.leftContent} />
@@ -56,9 +59,10 @@ class Home extends React.Component {
   render() {
     return (
       <>
+        <Form items={formItems} />
         {/* <Slider items={sliderItems} id='slider1' isDots isArrows/>
         <Slider items={sliderItems} id='slider2' isArrows/> */}
-        <Slider2 items={sliderItems} id='slider3' isArrows/>
+        <Slider2 items={sliderItems} id="slider3" isArrows />
         <IconsList
           items={iconList1}
           gridGap="4%"

@@ -21,9 +21,12 @@ class Slider extends React.Component {
     if (this.state.lastIndex < imgs.length - 1) {
       const newPosition =
         this.state.position === imgs.length - 1 ? 0 : this.state.position + 1;
+
       this.setState((prevState) => {
         return { position: newPosition, lastIndex: prevState.lastIndex + 1 };
       });
+    } else {
+      console.log(this.state.position);
     }
   };
 
