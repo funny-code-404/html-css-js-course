@@ -11,27 +11,14 @@
 
 .img1 {
   object-fit: cover;
-  width: 100%;
+  width: 25%;
   height: 100%;
 
   /* position: absolute;
   opacity: 0;
   z-index: 0; */
-  display: none;
+
   transition: transform ease 0.5s, opacity ease 0.5s;
-  animation: scroll 0.5s linear infinite;
-}
-
-.img1:nth-of-type(1) {
-  display: inline-block;
-}
-
-.img1:nth-of-type(2) {
-  display: inline-block;
-}
-
-.img1:nth-of-type(3) {
-  display: inline-block;
 }
 
 .prev,
