@@ -7,46 +7,23 @@ class Slider extends React.Component {
     super(props);
     this.id = props.id;
     this.state = {
-      currentSliderIndex: 1,
-      selected: 0,
+      lastIndex: 4,
+      firstIndex: 1,
     };
 
   }
   
-  setOpacity = (arr, indexInvisible, indexVisible) => {
-    arr[indexInvisible].style.opacity = "0";
-    arr[indexVisible].style.opacity = "1";
-  };
-
   nextSlider = (e) => {
     e.preventDefault();
-    const imgs = document.getElementById(this.id).getElementsByClassName('img');
-    if (this.state.currentSliderIndex < imgs.length) {
-      this.setState((prevState) => {
-        this.setOpacity(
-          imgs,
-          prevState.currentSliderIndex - 1,
-          prevState.currentSliderIndex
-        );
-        return {
-          currentSliderIndex: prevState.currentSliderIndex + 1,
-          selected: +e.target.id,
-        };
-      });
-    } else {
-      this.setState((prevState) => {
-        this.setOpacity(imgs, imgs.length - 1, 0);
-        return {
-          currentSliderIndex: 1,
-          selected: +e.target.id,
-        };
-      });
-    }
+    const imgs = document.getElementById(this.id).getElementsByClassName('img1');
+  
+    
+
   };
 
   prevSlider = (e) => {
     e.preventDefault();
-    const imgs = document.getElementById(this.id).getElementsByClassName('img');
+    const imgs = document.getElementById(this.id).getElementsByClassName('img1');
     if (this.state.currentSliderIndex > 1) {
       this.setState((prevState) => {
         this.setOpacity(
@@ -64,26 +41,29 @@ class Slider extends React.Component {
     }
   };
 
-  changeSlider = (e) => {
-    e.preventDefault();
-    const imgs = document.getElementById(this.id).getElementsByClassName('img');
-    this.setState((prevState) => {
-      this.setOpacity(imgs, prevState.currentSliderIndex - 1, e.target.id);
-      return {
-        currentSliderIndex: +e.target.id + 1,
-      };
-    });
-    console.log(e.target.id);
-  };
+  // changeSlider = (e) => {
+  //   e.preventDefault();
+  //   const imgs = document.getElementById(this.id).getElementsByClassName('img');
+  //   this.setState((prevState) => {
+  //     this.setOpacity(imgs, prevState.currentSliderIndex - 1, e.target.id);
+  //     return {
+  //       currentSliderIndex: +e.target.id + 1,
+  //     };
+  //   });
+  //   console.log(e.target.id);
+  // };
 
   render() {
     const { imgs} = this.props.items;
     const {id, isDots, isArrows} = this.props;
     return (
       <div id={id}>
-        <div className="slides">
+        <div className="slides1">
           {imgs.map((img, index) => {
-            return <img key={index} className="img" src={img} alt="img" />;
+            return <img key={index} className="img1" src={img} alt="img" style={{
+          transition: 'transform ease-out 450ms', 
+          transform: `translateX(-${this.state.position}00%)`
+        }}/>;
           })}
 
           {isArrows && (
