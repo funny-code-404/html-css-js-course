@@ -3,6 +3,11 @@ import React from "react";
 import IconsList from "../../components/IconsList";
 import iconList1 from "../../assets/const/iconList1";
 
+import Slider from '../../components/Slider';
+import Slider2 from '../../components/Slider copy';
+import slider2Items from '../../assets/const/slider2';
+
+
 import Works from "../../components/Works";
 import CallToAction from "../../components/CallToAction";
 
@@ -24,7 +29,8 @@ class Shop extends React.Component {
         gradientColorFormIcon/>
         
         <Portfolio items={portfolioItems}/>
-     
+        <Slider items={slider2Items} id='slider2' isDots fontSizeTitle='m' isLine/>
+        <Slider2 items={slider2Items} id='slider3' isArrows/>
         <Works
           title="Let‘s Work Together"
           subTitle="TheFox WordPress is the best in the business. They know we deliver industry leading web design every time. We would love to learn how we can support you too."

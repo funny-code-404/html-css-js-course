@@ -157,7 +157,7 @@ class Home extends React.Component {
         />
         <Slider items={slider3Items} id='slider3' isDots fontSizeTitle='m' isLine/>
         <Blog items={blogItems} />
-          <Form items={formItems} backgroundColorMainContainer='#212121' colorTitle='#fff' colorText='#999999'/>
+        <Form items={formItems} backgroundColorMainContainer='#212121' colorTitle='#fff' colorText='#999999'/>
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"

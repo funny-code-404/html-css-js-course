@@ -39,18 +39,6 @@ class Slider extends React.Component {
     });
   };
 
-  // changeSlider = (e) => {
-  //   e.preventDefault();
-  //   const imgs = document.getElementById(this.id).getElementsByClassName('img');
-  //   this.setState((prevState) => {
-  //     this.setOpacity(imgs, prevState.currentSliderIndex - 1, e.target.id);
-  //     return {
-  //       currentSliderIndex: +e.target.id + 1,
-  //     };
-  //   });
-  //   console.log(e.target.id);
-  // };
-
   render() {
     const { imgs } = this.props.items;
     const { id, isDots, isArrows } = this.props;
@@ -72,7 +60,7 @@ class Slider extends React.Component {
                 src={img}
                 alt="img"
                 style={{
-                  transition: "transform 0.3s",
+                  transition: "transition: 0.3s ease-in-out",
                   transform: `translateX(${dx}%)`,
                 }}
               />

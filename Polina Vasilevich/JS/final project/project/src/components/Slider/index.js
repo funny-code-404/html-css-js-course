@@ -78,7 +78,7 @@ class Slider extends React.Component {
               return (
                 <>
                   <Img key={index} backgroundImg={img} id={index} className='img'>
-                    <ContentContainer positionContent='center'  style={{position: 'absolute', zIndex: '2', top: '49%'}}>
+                    <ContentContainer positionContent='center'  style={{position: 'absolute', zIndex: '2', top: '50%',  left: '50%', transform: 'translate(-50%, -50%)'}}>
                       {
                         items.title && (
                           <Text items={items} isLine={isLine} colorTitle='#fff' fontSizeTitle={fontSizeTitle} fontSizeSubTitle='30px ' colorSubTitle='#fff' colorText='#fff'/>
