@@ -16,7 +16,7 @@ export default function MainContainerComponent(props) {
     isVerticalCenter,
     positionText,
     colorTitle,
-    colorText,
+    colorText
   } = props;
 
   return (

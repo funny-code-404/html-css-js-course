@@ -1,24 +1,34 @@
 import React from "react";
-import { Form, ItemFrom, Select } from "./styles";
+import Button from '../Button';
+import MainContainer from '../MainContainer';
+
+import { Form, ItemFrom, Select, Option, Info } from "./styles";
 class FormComponent extends React.Component {
   render() {
-    const { items } = this.props;
-    return (
+    const { input, select, buttonIcon, buttonLabel } = this.props.items;
+    const settings = this.props;
+
+    const contentContainer = (
       <Form>
-        {items.map(({ type, placeholder }) => {
+        {input.map(({ type, placeholder }) => {
           return <ItemFrom type={type} placeholder={placeholder}></ItemFrom>;
         })}
-        {items.select && <Select></Select>}
-        <select>
-          <option disabled selected hidden>
-            Your Budget
-          </option>
-          <option>some option1</option>
-          <option>some option2</option>
-          <option>some option3</option>
-        </select>
+
+        {select && 
+        <Select>
+          <Option disabled selected hidden value={select[0].firstOption}>{select[0].firstOption}</Option>   
+          {select.slice(1).map(({option}) => <Option value={option}>{option}</Option>)}
+        </Select>}
+
+        <Button widthButton='30vw' buttonLabel={buttonLabel} buttonIcon={buttonIcon}/>
+        <Info>All fields are required</Info>
       </Form>
     );
+
+    return <MainContainer isTitle items={this.props.items} contentContainer={contentContainer} 
+    paddingLeftRight='none' backgroundColorMainContainer={settings.backgroundColorMainContainer} 
+    colorTitle={settings.colorTitle} colorText={settings.colorText}/> 
+    
   }
 }
 

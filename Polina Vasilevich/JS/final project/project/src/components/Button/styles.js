@@ -9,12 +9,13 @@ const styleFont = `
 `;
 
 export const Button = styled.button`
+  margin: 10px;
   display: inline-block;
   width: ${(props) => (props.widthButton ? props.widthButton : "270px")};
   height: 55px;
   // box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
-
+  outline: none;
   background-color: ${(props) =>
     props.backgroundColor ? props.backgroundColor : "#4285f4"};
   border: 1px solid

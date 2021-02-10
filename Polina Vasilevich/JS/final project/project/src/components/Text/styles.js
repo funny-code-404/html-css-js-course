@@ -15,11 +15,23 @@ const setFontSizeTitle = (fontSizeTitle) => {
     case "sm":
       return `font-size: 18px;`;
 
+    case 'm':
+      return `
+          font-size: 30px;
+          line-height: 50px;
+          font-weight: 300;
+      `
+
     case "lg":
       return `font-size: 60px;
               line-height: 60px;`;
+    
+    case 'big': 
+      return `
+            font-size: 72px;
+      `
     default:
-      return `font-size: 36px
+      return `font-size: 36px;
       font-weight: 300;`;
   }
 };
@@ -35,7 +47,7 @@ const setFontWeightTitle = (fontWeightTitle) => {
 
 export const Title = styled.h2`
   ${generalStyles}
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   line-height: 30px;
   ${(props) => setFontSizeTitle(props.fontSizeTitle)};
   ${(props) => setFontWeightTitle(props.fontWeightTitle)};
@@ -44,11 +56,11 @@ export const Title = styled.h2`
 
 export const SubTitle = styled.p`
   ${generalStyles}
-  margin-bottom: 10px;
-  font-size: 18px;
+  margin: 20px 0;
+  font-size: ${(props) => (props.fontSizeSubTitle ? props.fontSizeSubTitle : "18px")};
   line-height: 36px;
   font-weight: 300;
-  color: ${(props) => (props.color ? props.color : "#999999")};
+  color: ${(props) => (props.colorSubTitle ? props.colorSubTitle : "#999999")};
 `;
 
 export const Text = styled.p`
@@ -58,6 +70,8 @@ export const Text = styled.p`
   line-height: 30px;
   font-weight: 400;
   color: ${(props) => (props.colorText ? props.colorText : "#575757")};
+
+  white-space: pre-line;
 `;
 
 export const Line = styled.div`

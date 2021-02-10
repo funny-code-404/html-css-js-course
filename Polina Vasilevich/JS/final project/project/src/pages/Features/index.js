@@ -4,25 +4,17 @@ import IntroSlider from "../../components/IntroSlider";
 import IconsList from "../../components/IconsList";
 import Introducing from "../../components/Introducing";
 import TextList from "../../components/Services/TextList";
-import Section from "../../components/Section";
 import Footer from "../../components/Footer";
+import Form from '../../components/Form';
 import CallToAction from "../../components/CallToAction";
 
 import iconList1 from "../../assets/const/iconList1";
 import introducingItems from "../../assets/const/introducingItems";
 import servicesItems from "../../assets/const/servicesItems";
+import formItems from '../../assets/const/formItems';
 import { logo, contacts } from "../../assets/const/footerItems";
 import { items } from "../../assets/const/copyRightItems";
 
-const iconsList = (
-  <IconsList
-    paddingLeft="0"
-    items={servicesItems.rightContent}
-    numberColumns="3"
-    positionIcon="center"
-    gridGap="240px 0"
-  />
-);
 
 class Features extends React.Component {
   render() {
@@ -49,6 +41,7 @@ class Features extends React.Component {
         />
         <TextList items={servicesItems.leftContent} isTransparentButton />
 
+        <Form items={formItems} backgroundColorMainContainer='#212121' colorTitle='#fff' colorText='#999999'/>
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"

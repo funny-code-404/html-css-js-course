@@ -38,8 +38,8 @@ import videoItems from "../../assets/const/videoItems";
 
 import Slider from "../../components/Slider";
 import sliderItems from "../../assets/const/slider";
-
-import Slider2 from "../../components/Slider copy";
+import slider2Items from "../../assets/const/slider2";
+import slider3Items from "../../assets/const/slider3";
 
 import Form from "../../components/Form";
 import formItems from "../../assets/const/formItems";
@@ -59,10 +59,9 @@ class Home extends React.Component {
   render() {
     return (
       <>
-        <Form items={formItems} />
-        {/* <Slider items={sliderItems} id='slider1' isDots isArrows/>
-        <Slider items={sliderItems} id='slider2' isArrows/> */}
-        <Slider2 items={sliderItems} id="slider3" isArrows />
+        <Slider items={sliderItems} id='slider1' isDots isArrows fontSizeTitle='big'/>
+        {/* <Slider items={sliderItems} id='slider2' isArrows/> */}
+        {/* <Slider2 items={sliderItems} id="slider3" isArrows /> */}
         <IconsList
           items={iconList1}
           gridGap="4%"
@@ -117,7 +116,7 @@ class Home extends React.Component {
         />
 
         <Numbers items={numbersItems} />
-
+        <Slider items={slider2Items} id='slider2' isDots fontSizeTitle='m' isLine/>
         <TwoColumnSection
           sizeContainers="45% 55%"
           firstItem={
@@ -156,9 +155,9 @@ class Home extends React.Component {
           firstItem={firstItemForBusiness}
           secondItem={secondItemForBusiness}
         />
-
+        <Slider items={slider3Items} id='slider3' isDots fontSizeTitle='m' isLine/>
         <Blog items={blogItems} />
-
+          <Form items={formItems} backgroundColorMainContainer='#212121' colorTitle='#fff' colorText='#999999'/>
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"
@@ -168,7 +167,7 @@ class Home extends React.Component {
           paddingTop="0"
           paddingBottom="0"
         />
-
+        
         <Footer logo={logo} contacts={contacts} copyRight={items} />
       </>
     );

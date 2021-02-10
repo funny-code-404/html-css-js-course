@@ -1,6 +1,10 @@
 import React from "react";
-
+import {SlidersContainer, Img, ArrowNext, ArrowPrev, DotsContainer, Dot } from './styles';
+import {ContentContainer} from '../../mainStyles';
+import Text from '../Text';
+import MainContainer from "../MainContainer";
 import "./styles.css";
+import Button from "../Button";
 
 class Slider extends React.Component {
   constructor(props) {
@@ -8,114 +12,122 @@ class Slider extends React.Component {
     this.id = props.id;
     this.state = {
       currentSliderIndex: 1,
-      selected: 0,
     };
 
   }
-  
-  setOpacity = (arr, indexInvisible, indexVisible) => {
-    arr[indexInvisible].style.opacity = "0";
-    arr[indexVisible].style.opacity = "1";
+
+  componentDidMount() {
+      this.imgs = document.getElementById(this.id).getElementsByClassName('img');
+    }
+
+
+  setOpacitySlider = (indexInvisible, indexVisible) => {
+    this.imgs[indexInvisible].style.opacity = "0";
+    this.imgs[indexVisible].style.opacity = "1";
   };
 
-  nextSlider = (e) => {
+
+   nextSlider = (e) => {
     e.preventDefault();
-    const imgs = document.getElementById(this.id).getElementsByClassName('img');
-    if (this.state.currentSliderIndex < imgs.length) {
-      this.setState((prevState) => {
-        this.setOpacity(
-          imgs,
+    this.setState((prevState) => {
+      if(this.state.currentSliderIndex < this.imgs.length) {
+        this.setOpacitySlider(
           prevState.currentSliderIndex - 1,
           prevState.currentSliderIndex
         );
-        return {
-          currentSliderIndex: prevState.currentSliderIndex + 1,
-          selected: +e.target.id,
-        };
-      });
-    } else {
-      this.setState((prevState) => {
-        this.setOpacity(imgs, imgs.length - 1, 0);
-        return {
-          currentSliderIndex: 1,
-          selected: +e.target.id,
-        };
-      });
-    }
+       return {currentSliderIndex: prevState.currentSliderIndex + 1}; 
+      } else {
+        this.setOpacitySlider(this.imgs.length - 1, 0);
+        return {currentSliderIndex: 1 };
+      }
+    });
   };
 
-  prevSlider = (e) => {
+  
+   prevSlider = (e) => {
     e.preventDefault();
-    const imgs = document.getElementById(this.id).getElementsByClassName('img');
-    if (this.state.currentSliderIndex > 1) {
-      this.setState((prevState) => {
-        this.setOpacity(
-          imgs,
+    this.setState((prevState) => {
+      if(this.state.currentSliderIndex > 1) {
+        this.setOpacitySlider(
           prevState.currentSliderIndex - 1,
-          prevState.currentSliderIndex - 2
+          prevState.currentSliderIndex - 2,
         );
-        return { currentSliderIndex: prevState.currentSliderIndex - 1 };
-      });
-    } else {
-      this.setState((prevState) => {
-        this.setOpacity(imgs, prevState.currentSliderIndex - 1, imgs.length - 1);
-        return { currentSliderIndex: imgs.length };
-      });
-    }
+       return {currentSliderIndex: prevState.currentSliderIndex - 1}; 
+      } else {
+        this.setOpacitySlider(prevState.currentSliderIndex - 1, this.imgs.length - 1);
+        return {currentSliderIndex: this.imgs.length };
+      }
+    });
   };
+
 
   changeSlider = (e) => {
     e.preventDefault();
-    const imgs = document.getElementById(this.id).getElementsByClassName('img');
     this.setState((prevState) => {
-      this.setOpacity(imgs, prevState.currentSliderIndex - 1, e.target.id);
-      return {
-        currentSliderIndex: +e.target.id + 1,
-      };
+      this.setOpacitySlider(prevState.currentSliderIndex - 1, e.target.id);
+      return {currentSliderIndex: +e.target.id + 1,};
     });
-    console.log(e.target.id);
   };
 
   render() {
-    const { imgs} = this.props.items;
-    const {id, isDots, isArrows} = this.props;
-    return (
-      <div id={id}>
-        <div className="slides">
-          {imgs.map((img, index) => {
-            return <img key={index} className="img" src={img} alt="img" />;
-          })}
+    const { imgs, buttonLabel} = this.props.items;
+    const {id, isDots, isArrows, items, fontSizeTitle, isLine} = this.props;
+    const contentContainer = (
+        <SlidersContainer id={id}>
+            {imgs.map((img, index) => {
+              return (
+                <>
+                  <Img key={index} backgroundImg={img} id={index} className='img'>
+                    <ContentContainer positionContent='center'  style={{position: 'absolute', zIndex: '2', top: '49%'}}>
+                      {
+                        items.title && (
+                          <Text items={items} isLine={isLine} colorTitle='#fff' fontSizeTitle={fontSizeTitle} fontSizeSubTitle='30px ' colorSubTitle='#fff' colorText='#fff'/>
+                        )
+                      }
+                      {
+                        buttonLabel && (
+                          buttonLabel.map(label => <Button buttonLabel={label} borderColor='#fff' widthButton='201px' backgroundColor='transparent'/>)
+                        )
+                      }
+                      </ContentContainer>
+
+                  </Img>
+                  
+                </>
+              ); 
+            })}
+              
 
           {isArrows && (
             <>
-              <button className="prev" onClick={this.prevSlider}>
-              &#10094;
-            </button>
-            <button className="next" onClick={this.nextSlider}>
-              &#10095;
-            </button>
+              <ArrowPrev onClick={this.prevSlider}>&#10094;</ArrowPrev>
+              <ArrowNext onClick={this.nextSlider}>&#10095;</ArrowNext>
           </>
           )}
           
           
           {isDots && (
-            <div className="slider-dots">
+            <DotsContainer>
           {imgs.map((img, index) => {
             return (
-              <button
+              <Dot
+                key={index}
                 id={index}
-                className={`slider-dots_item ${
-                  index + 1 === this.state.currentSliderIndex && "active"
-                } `}
+                className={
+                  (index + 1 === this.state.currentSliderIndex) && "active"
+                }
                 onClick={this.changeSlider}
-              ></button>
+              ></Dot>
             );
           })}
-        </div>
+        </DotsContainer>
           )}
-        </div>
+      
+      </SlidersContainer>
+      )
 
-      </div>
+    return (
+      <MainContainer contentContainer={contentContainer} paddingLeftRight='none' paddingTop='0' paddingBottom='0' />
     );
   }
 }

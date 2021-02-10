@@ -11,7 +11,10 @@ export default function TextComponent(props) {
     widthLine,
     colorTitle,
     colorText,
+    fontSizeSubTitle,
+    colorSubTitle,
   } = props;
+
   return (
     <TextContainer positionText={positionText}>
       <Title
@@ -24,7 +27,7 @@ export default function TextComponent(props) {
       </Title>
       {isLine && <Line widthLine={widthLine}></Line>}
 
-      {subTitle && <SubTitle>{subTitle}</SubTitle>}
+      {subTitle && <SubTitle fontSizeSubTitle={fontSizeSubTitle} colorSubTitle={colorSubTitle}>{subTitle}</SubTitle>}
 
       <Text colorText={colorText}>{text}</Text>
 

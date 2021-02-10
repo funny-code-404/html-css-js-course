@@ -21,7 +21,7 @@
   transition: transform ease 0.5s, opacity ease 0.5s;
 }
 
-.prev,
+/* .prev,
 .next {
   cursor: pointer;
   position: absolute;
@@ -72,4 +72,4 @@
 .active,
 .slider-dots_item:hover {
   background-color: #aaa;
-}
+} */

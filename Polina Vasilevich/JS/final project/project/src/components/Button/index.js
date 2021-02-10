@@ -11,15 +11,20 @@ class ButtonComponent extends React.Component {
       width,
       colorText,
     } = this.props;
+
+    const settings = this.props;
+    
+
     return (
       <Button
-        backgroundColor={backgroundColor}
-        borderColor={borderColor}
-        widthButton={width}
-        colorText={colorText}
+        backgroundColor={settings.backgroundColor}
+        borderColor={settings.borderColor}
+        widthButton={settings.widthButton}
+        colorText={settings.colorText}
       >
-        <Icon className={buttonIcon}></Icon>
-        {buttonLabel}
+        {settings.buttonIcon && <Icon className={settings.buttonIcon}></Icon>}
+        {settings.buttonLabel}
+        
       </Button>
     );
   }

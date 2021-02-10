@@ -15,7 +15,7 @@ export const Img = styled.div`
   }
 
   ${(props) =>
-    props.gridItemColumn &&
+    props.gridItemColumn && 
     `&:nth-of-type(${props.gridItemColumn}) {
     // height: 100%;
     grid-column: 1 / 3;`}
