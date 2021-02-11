@@ -113,9 +113,8 @@ class Slider extends React.Component {
                       <Button
                         buttonLabel={label}
                         settings={{
-                          borderColor: "#fff",
-                          widthButton: "201px",
-                          backgroundColor: "transparent",
+                          widthButton: "s",
+                          colorButton: "transparent",
                         }}
                       />
                     ))}

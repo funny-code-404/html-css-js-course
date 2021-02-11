@@ -1,11 +1,5 @@
 import styled from "styled-components";
-import {Button} from '../Button/styles';
-
-export const GridContainer = styled.div`
-margin: 100px 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-`;
+import { Button } from "../Button/styles";
 
 export const InfoContainer = styled.div`
   text-align: center;
@@ -20,28 +14,27 @@ export const PriceContainer = styled.div`
   border-radius: 3px;
   background-color: #fff;
 
-  
   :hover {
     // transform: scale(1.2);
     // z-index: 1;
     cursor: pointer;
-    background-image: linear-gradient(90.0deg, #00f0ff -24%, #ebacfd 125%);
+    background-image: linear-gradient(90deg, #00f0ff -24%, #ebacfd 125%);
     background-size: 100% 5px;
     background-repeat: no-repeat;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
     ${Button} {
       background-color: #82b440;
       border: 1px solid #75a931;
-      box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
     }
   }
 `;
 
 export const ItemInfoContainer = styled.div`
-  padding: 22px 10%;
+  padding: 35px 10%;
   display: inline-block;
-  width: 70%;
+  // width: 70%;
   border-bottom: 1px solid #eaeaea;
 `;
 

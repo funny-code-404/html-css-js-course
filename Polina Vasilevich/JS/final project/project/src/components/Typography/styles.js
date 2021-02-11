@@ -9,7 +9,7 @@ const setSizeTitle = (sizeTitle) => {
     case "xs":
       return `
                 font-size: 16px;
-                font-weight: 400;
+                font-weight: 600;
                 letter-spacing: 0.05em;
             `;
     case "s":
@@ -82,7 +82,7 @@ const setColorSubTitle = (colorSubTitle) => {
 export const SubTitle = styled.p`
   ${generalStyles}
   max-width: 55ch;
-  margin: 20px auto;
+  // margin: 20px auto;
   font-size: ${(props) =>
     props.fontSizeSubTitle ? props.fontSizeSubTitle : "18px"};
   line-height: 36px;
@@ -151,7 +151,11 @@ const setPositionText = (positionText) => {
                 text-align: left;
         `;
     default:
-      return ` text-align: center;`;
+      return ` text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                `;
   }
 };
 

@@ -157,7 +157,7 @@ class Home extends React.Component {
               settings={{
                 colorButton: "link",
                 paddingLeftRight: "small",
-                gridGap: "4%",
+                gridGap: "8%",
               }}
             />
           }

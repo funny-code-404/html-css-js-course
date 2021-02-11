@@ -2,11 +2,13 @@ import { Title, SubTitle, Line, Text, TextContainer } from "./styles";
 
 export default function TextComponent(props) {
   const { settings, items, isLine } = props;
-  const { title, subTitle, text, textList } = items;
+  const { title, subTitle, text, textList, iconTitle } = items;
   return (
     <TextContainer {...settings}>
       <Title {...settings}>
-        {/* {icon && <i className={icon} style={{ color: "#9bcb5b" }}></i>} */}
+        {iconTitle && (
+          <i className={iconTitle} style={{ color: "#9bcb5b" }}></i>
+        )}
         {title}
       </Title>
       {isLine && <Line {...settings}></Line>}

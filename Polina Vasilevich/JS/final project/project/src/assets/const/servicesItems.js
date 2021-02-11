@@ -36,7 +36,7 @@ const servicesItems = {
       title: "Web Design",
       text:
         "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra",
-      buttonLabel: '> Learn More',
+      buttonLabel: "> Learn More",
     },
 
     {
@@ -44,7 +44,7 @@ const servicesItems = {
       title: "Ecommerce",
       text:
         "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra",
-      buttonLabel: '> Learn More',
+      buttonLabel: "> Learn More",
     },
 
     {
@@ -52,7 +52,7 @@ const servicesItems = {
       title: "Video Advertising",
       text:
         "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra",
-      buttonLabel: '> Learn More',
+      buttonLabel: "> Learn More",
     },
 
     {
@@ -60,8 +60,7 @@ const servicesItems = {
       title: "Photography",
       text:
         "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra",
-      buttonLabel: '> Learn More',
-      
+      buttonLabel: "> Learn More",
     },
 
     {
@@ -69,8 +68,7 @@ const servicesItems = {
       title: "Graphic Design",
       text:
         "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra",
-      buttonLabel: '> Learn More',
-      
+      buttonLabel: "> Learn More",
     },
 
     {
@@ -78,7 +76,8 @@ const servicesItems = {
       title: "Support Tools",
       text:
         "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra",
-      buttonLabel: '> Learn More', 
+      buttonLabel: "Learn More",
+      buttonIcon: "ti-angle-right",
     },
   ],
 };

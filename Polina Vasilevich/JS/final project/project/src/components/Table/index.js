@@ -1,5 +1,5 @@
 import { GridContainer } from "../../mainStyles";
-import Text from "../Text";
+import Typography from "../Typography";
 import Button from "../Button";
 
 import {
@@ -12,23 +12,29 @@ import {
 export default function Table(props) {
   const { items } = props;
   return (
-    <GridContainer widthItemGridContainer="250px">
+    <GridContainer widthItemGridContainer="250px" gridGap="0">
       {items.map((item) => {
         return (
           <PriceContainer key={item.title}>
-            <Text items={item} isLine />
+            <Typography items={item} isLine />
             <InfoContainer>
               <TextContainer>
                 {item.list.map((elem) => {
                   return (
-                    <ItemInfoContainer key={elem.title}>
-                      <Text items={elem} fontSizeTitle="xs" icon={item.icon} />
+                    <ItemInfoContainer>
+                      <Typography
+                        items={elem}
+                        settings={{
+                          sizeTitle: "xs",
+                        }}
+                        icon={item.icon}
+                      />
                     </ItemInfoContainer>
                   );
                 })}
               </TextContainer>
               <Button
-                width="220px"
+                settings={{ widthButton: "m" }}
                 buttonLabel={item.buttonLabel}
                 buttonIcon={item.buttonIcon}
               ></Button>
