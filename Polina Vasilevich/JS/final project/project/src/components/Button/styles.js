@@ -76,7 +76,7 @@ export const Button = styled.button`
 
 export const Icon = styled.i`
   margin-right: 10px;
-  font-size: 16px;
+  // font-size: 16px;
   line-height: 30px;
   // font-weight: 400;
 `;

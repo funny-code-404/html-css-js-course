@@ -13,7 +13,7 @@ const servicesItems = {
     text:
       "TheFox include design that can be used for any type of website: business, corporate, portfolio, blog, products, magazine, etc. Buy TheFox and join our awesome community, let’s make TheFox better together!",
     textList: {
-      icon: "> ",
+      icon: "ti-angle-right",
       text: [
         "Clean, modern, multi-purpose design can be used for any type of website",
         "The New Ultimate Multi-Purpose WordPress Theme",
@@ -36,7 +36,8 @@ const servicesItems = {
       title: "Web Design",
       text:
         "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra",
-      buttonLabel: "> Learn More",
+      buttonLabel: "Learn More",
+      buttonIcon: "ti-angle-right",
     },
 
     {
@@ -44,7 +45,8 @@ const servicesItems = {
       title: "Ecommerce",
       text:
         "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra",
-      buttonLabel: "> Learn More",
+      buttonLabel: "Learn More",
+      buttonIcon: "ti-angle-right",
     },
 
     {
@@ -52,7 +54,8 @@ const servicesItems = {
       title: "Video Advertising",
       text:
         "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra",
-      buttonLabel: "> Learn More",
+      buttonLabel: "Learn More",
+      buttonIcon: "ti-angle-right",
     },
 
     {
@@ -60,7 +63,8 @@ const servicesItems = {
       title: "Photography",
       text:
         "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra",
-      buttonLabel: "> Learn More",
+      buttonLabel: "Learn More",
+      buttonIcon: "ti-angle-right",
     },
 
     {
@@ -68,7 +72,8 @@ const servicesItems = {
       title: "Graphic Design",
       text:
         "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra",
-      buttonLabel: "> Learn More",
+      buttonLabel: "Learn More",
+      buttonIcon: "ti-angle-right",
     },
 
     {

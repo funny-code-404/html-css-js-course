@@ -35,6 +35,7 @@ class IconComponent extends React.Component {
                 <Button
                   items={item}
                   buttonLabel={item.buttonLabel}
+                  buttonIcon={item.buttonIcon}
                   settings={settings}
                 />
               )}
