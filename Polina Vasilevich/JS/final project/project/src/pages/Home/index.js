@@ -44,6 +44,9 @@ import slider3Items from "../../assets/const/slider3";
 import Form from "../../components/Form";
 import formItems from "../../assets/const/formItems";
 
+
+import IconList from '../../components/IconsList';
+
 const firstItemForBusiness = (
   <TextWithImages items={businessItems.leftContent} />
 );
@@ -60,15 +63,16 @@ class Home extends React.Component {
     return (
       <>
         <Slider items={sliderItems} id='slider1' isDots isArrows fontSizeTitle='big'/>
-        {/* <Slider items={sliderItems} id='slider2' isArrows/> */}
-        {/* <Slider2 items={sliderItems} id="slider3" isArrows /> */}
-        <IconsList
-          items={iconList1}
-          gridGap="4%"
-          widthItemGridContainer="200px"
-          formIcons="circle"
-          gradientColorFormIcon
-        />
+
+        <IconList items={iconList1} 
+            settings={{
+              fontSizeIcon: 'l',
+              formIcon: 'circle',
+              colorIconContainer: 'gradient',
+              sizeIconContainer: 'middle',
+              widthItemGridContainer: '270px',
+              
+        }}/>
 
         <Introducing
           items={introducingItems}
@@ -96,7 +100,7 @@ class Home extends React.Component {
           paddingBottom="0"
         />
 
-        <IconsList
+        {/* <IconsList
           items={iconList2}
           gridGap="4%"
           widthItemGridContainer="350px"
@@ -104,7 +108,15 @@ class Home extends React.Component {
           positionText="left"
           positionIcons="left"
           fontSizeIcon="42px"
-        />
+        /> */}
+
+        <IconList items={iconList2} 
+            settings={{
+              fontSizeIcon: 'l',
+              sizeIconContainer: 'middle',
+              widthItemGridContainer: '350px',
+              
+        }}/>
 
         <Introducing
           items={introducingItems}

@@ -21,24 +21,6 @@
   transition: transform ease 0.5s, opacity ease 0.5s;
 }
 
-@keyframes img1 {
-  0% {
-    transform: translateX(-100%);
-  }
-  5.55556% {
-    transform: translateX(0%);
-  }
-  16.66667% {
-    transform: translateX(0%);
-  }
-  22.22222% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
 .prev,
 .next {
   cursor: pointer;

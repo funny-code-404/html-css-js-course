@@ -5,7 +5,7 @@ const widthItemGridContainer = (props) =>
 
 export const GridContainer = styled.div`
   display: grid;
-  grid-gap: ${(props) => (props.gridGap ? props.gridGap : "10px")};
+  grid-gap: ${(props) => (props.gridGap ? props.gridGap : "15px")};
   grid-template-columns: repeat(
     auto-fit,
     minmax(${widthItemGridContainer}, 1fr)
