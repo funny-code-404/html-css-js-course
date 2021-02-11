@@ -44,8 +44,7 @@ import slider3Items from "../../assets/const/slider3";
 import Form from "../../components/Form";
 import formItems from "../../assets/const/formItems";
 
-
-import IconList from '../../components/IconsList';
+import IconList from "../../components/IconsList";
 
 const firstItemForBusiness = (
   <TextWithImages items={businessItems.leftContent} />
@@ -62,73 +61,86 @@ class Home extends React.Component {
   render() {
     return (
       <>
-        <Slider items={sliderItems} id='slider1' isDots isArrows fontSizeTitle='big'/>
+        <Slider
+          items={sliderItems}
+          id="slider1"
+          isDots
+          isArrows
+          sizeTitle="xl"
+        />
 
-        <IconList items={iconList1} 
-            settings={{
-              fontSizeIcon: 'l',
-              formIcon: 'circle',
-              colorIconContainer: 'gradient',
-              sizeIconContainer: 'middle',
-              widthItemGridContainer: '270px',
-              
-        }}/>
+        <IconList
+          items={iconList1}
+          settings={{
+            fontSizeIcon: "l",
+            formIcon: "circle",
+            colorIconContainer: "gradient",
+            sizeIconContainer: "middle",
+            widthItemGridContainer: "270px",
+          }}
+        />
 
         <Introducing
           items={introducingItems}
-          buttonBackgroundColor="#4285f4"
-          buttonBorderColor="#2c6cd6"
-          positionText="left"
-          heightMainContainer="778px"
+          settings={{
+            positionText: "left",
+            widthContentContainer: "50%",
+            heightMainContainer: "778px",
+            isVerticalCenter: "true",
+          }}
         />
 
         <Gallery
           items={portfolioItems}
+          settings={{
+            paddingLeftRight: "none",
+            paddingBottom: "0",
+          }}
           widthItemGridContainer="442px"
           gridGap="0"
-          paddingLeftRight="none"
-          paddingBottom="0"
         />
 
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"
-          backgroundColorMainContainer="#82b440"
-          backgroundColorButton="#82b440"
-          borderColorButton="#fff"
-          paddingTop="0"
-          paddingBottom="0"
+          settings={{
+            backgroundColorMainContainer: "#82b440",
+            backgroundColor: "#82b440",
+            borderColor: "#fff",
+            paddingTop: "0",
+            paddingBottom: "0",
+          }}
         />
 
-        {/* <IconsList
+        <IconList
           items={iconList2}
-          gridGap="4%"
-          widthItemGridContainer="350px"
-          colorIcon="gradient"
-          positionText="left"
-          positionIcons="left"
-          fontSizeIcon="42px"
-        /> */}
-
-        <IconList items={iconList2} 
-            settings={{
-              fontSizeIcon: 'l',
-              sizeIconContainer: 'middle',
-              widthItemGridContainer: '350px',
-              
-        }}/>
+          settings={{
+            fontSizeIcon: "xl",
+            widthItemGridContainer: "350px",
+            colorIcon: "gradient",
+            positionText: "left",
+            positionIcons: "left",
+          }}
+        />
 
         <Introducing
           items={introducingItems}
-          buttonBackgroundColor="#4285f4"
-          buttonBorderColor="#2c6cd6"
-          positionContentContainer="right"
-          positionText="left"
-          heightMainContainer="778px"
+          settings={{
+            positionText: "left",
+            widthContentContainer: "50%",
+            heightMainContainer: "778px",
+            positionContentContainer: "right",
+            isVerticalCenter: "true",
+          }}
         />
-
         <Numbers items={numbersItems} />
-        <Slider items={slider2Items} id='slider2' isDots fontSizeTitle='m' isLine/>
+        <Slider
+          items={slider2Items}
+          id="slider2"
+          isDots
+          fontSizeTitle="m"
+          isLine
+        />
         <TwoColumnSection
           sizeContainers="45% 55%"
           firstItem={
@@ -155,11 +167,13 @@ class Home extends React.Component {
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"
-          backgroundColorMainContainer="#82b440"
-          backgroundColorButton="#82b440"
-          borderColorButton="#fff"
-          paddingTop="0"
-          paddingBottom="0"
+          settings={{
+            backgroundColorMainContainer: "#82b440",
+            backgroundColor: "#82b440",
+            borderColor: "#fff",
+            paddingTop: "0",
+            paddingBottom: "0",
+          }}
         />
 
         <TwoColumnSection
@@ -167,9 +181,20 @@ class Home extends React.Component {
           firstItem={firstItemForBusiness}
           secondItem={secondItemForBusiness}
         />
-        <Slider items={slider3Items} id='slider3' isDots fontSizeTitle='m' isLine/>
+        <Slider
+          items={slider3Items}
+          id="slider3"
+          isDots
+          fontSizeTitle="m"
+          isLine
+        />
         <Blog items={blogItems} />
-        <Form items={formItems} backgroundColorMainContainer='#212121' colorTitle='#fff' colorText='#999999'/>
+        <Form
+          items={formItems}
+          backgroundColorMainContainer="#212121"
+          colorTitle="#fff"
+          colorText="#999999"
+        />
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"
@@ -179,7 +204,7 @@ class Home extends React.Component {
           paddingTop="0"
           paddingBottom="0"
         />
-        
+
         <Footer logo={logo} contacts={contacts} copyRight={items} />
       </>
     );

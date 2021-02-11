@@ -102,6 +102,7 @@ const setFontSizeIcon = (fontSizeIcon) => {
     case "xl":
       return `
         font-size: 44px;
+        
       `;
 
     case "xxl":
@@ -119,8 +120,28 @@ const setFontSizeIcon = (fontSizeIcon) => {
 
 export const Icon = styled.i`
   font-family: themify;
-  line-height: 30px;
+  // line-height: 30px;
   font-weight: 400;
   ${(props) => setFontSizeIcon(props.fontSizeIcon)};
   ${(props) => setColorIcon(props.colorIcon)};
+`;
+
+
+const setPositionIcons = (positionIcons) => {
+  switch (positionIcons) {
+    case "left":
+      return `
+        display: flex;
+        ${IconContainer} {
+            align-items: start;
+            margin-right: 20px;
+        } 
+      `;
+    default:
+      return ``;
+  }
+};
+
+export const ContentContainer = styled.div`
+  ${(props) => setPositionIcons(props.positionIcons)};
 `;

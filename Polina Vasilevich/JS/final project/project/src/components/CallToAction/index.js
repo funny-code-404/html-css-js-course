@@ -4,34 +4,16 @@ import { Text } from "./styles";
 import { FlexContainer } from "../../mainStyles";
 
 function CallToAction(props) {
-  const {
-    text,
-    buttonLabel,
-    backgroundColorMainContainer,
-    backgroundColorButton,
-    borderColorButton,
-    paddingTop,
-    paddingBottom,
-  } = props;
-
+  const { text, buttonLabel, settings } = props;
   const contentContainer = (
     <FlexContainer>
       <Text>{text}</Text>
-      <Button
-        buttonLabel={buttonLabel}
-        backgroundColor={backgroundColorButton}
-        borderColor={borderColorButton}
-      ></Button>
+      <Button buttonLabel={buttonLabel} settings={settings}></Button>
     </FlexContainer>
   );
 
   return (
-    <MainContainer
-      paddingTop={paddingTop}
-      paddingBottom={paddingBottom}
-      backgroundColorMainContainer={backgroundColorMainContainer}
-      contentContainer={contentContainer}
-    />
+    <MainContainer settings={settings} contentContainer={contentContainer} />
   );
 }
 

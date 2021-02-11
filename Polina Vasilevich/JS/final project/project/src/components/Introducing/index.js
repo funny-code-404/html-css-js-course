@@ -1,44 +1,31 @@
 import React from "react";
 import MainContainer from "../MainContainer";
-import Text from "../Text";
+import Typography from "../Typography";
 import Button from "../Button";
 
 import { ContentContainer } from "../../mainStyles";
 
 class Introducing extends React.Component {
   render() {
-    const { buttonLabel, backgroundImg, buttonIcon } = this.props.items;
-    const {
-      items,
-      positionContentContainer,
-      positionText,
-      buttonBackgroundColor,
-      buttonColor,
-      heightMainContainer,
-    } = this.props;
+    const { buttonLabel, buttonIcon, backgroundImg } = this.props.items;
+    const { items, settings } = this.props;
 
     const contentContainer = (
-      <ContentContainer
-        widthContentContainer="50%"
-        positionContentContainer={positionContentContainer}
-       
-      >
-        <Text items={items} isLine positionText={positionText} />
+      <ContentContainer {...settings}>
+        <Typography items={items} isLine settings={settings} />
         <Button
           buttonIcon={buttonIcon}
           buttonLabel={buttonLabel}
-          backgroundColor={buttonBackgroundColor}
-          borderColor={buttonColor}
+          {...settings}
         />
       </ContentContainer>
     );
 
     return (
       <MainContainer
-        contentContainer={contentContainer}
+        settings={settings}
         backgroundImg={backgroundImg}
-        heightMainContainer={heightMainContainer}
-        isVerticalCenter
+        contentContainer={contentContainer}
       />
     );
   }

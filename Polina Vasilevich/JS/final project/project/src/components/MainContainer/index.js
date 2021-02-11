@@ -1,38 +1,13 @@
 import React from "react";
 import { MainContainer, Wrapper } from "./styles";
-import Text from "../Text";
+import Typography from "../Typography";
 
 export default function MainContainerComponent(props) {
-  const {
-    items,
-    backgroundImg,
-    contentContainer,
-    backgroundColorMainContainer,
-    paddingTop,
-    paddingBottom,
-    paddingLeftRight,
-    isTitle,
-    heightMainContainer,
-    isVerticalCenter,
-    positionText,
-    colorTitle,
-    colorText
-  } = props;
-
+  const {items, settings, isTitle, contentContainer, backgroundImg} = props;
   return (
-    <MainContainer
-      backgroundColorMainContainer={backgroundColorMainContainer}
-      backgroundImg={backgroundImg}
-      heightMainContainer={heightMainContainer}
-      isVerticalCenter={isVerticalCenter}
-    >
-      <Wrapper
-        paddingLeftRight={paddingLeftRight}
-        paddingTop={paddingTop}
-        paddingBottom={paddingBottom}
-      >
-        {isTitle && <Text items={items} isLine positionText={positionText} colorTitle={colorTitle} colorText={colorText}/>}
-
+    <MainContainer {...settings} backgroundImg={backgroundImg}>
+      <Wrapper {...settings}>
+        {isTitle && <Typography isLine items={items} {...settings}/>}
         {contentContainer}
       </Wrapper>
     </MainContainer>

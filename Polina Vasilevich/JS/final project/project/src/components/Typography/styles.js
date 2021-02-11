@@ -64,11 +64,11 @@ export const Title = styled.h2`
   ${(props) => setColorTitle(props.colorTitle)};
 `;
 
-const setColorSubTitle = (colorTitle) => {
-  switch (colorTitle) {
+const setColorSubTitle = (colorSubTitle) => {
+  switch (colorSubTitle) {
     case "grey":
       return `
-              color: #999999;
+            color: #999999;
             `;
     case "white":
       return `
@@ -81,7 +81,8 @@ const setColorSubTitle = (colorTitle) => {
 
 export const SubTitle = styled.p`
   ${generalStyles}
-  margin: 20px 0;
+  max-width: 55ch;
+  margin: 20px auto;
   font-size: ${(props) => (props.fontSizeSubTitle ? props.fontSizeSubTitle : "18px")};
   line-height: 36px;
   font-weight: 300;

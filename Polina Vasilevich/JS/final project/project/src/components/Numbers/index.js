@@ -1,7 +1,6 @@
-// import { Title, Text, Line } from "./styles";
 import { FlexContainer } from "../../mainStyles";
 import MainContainer from "../MainContainer";
-import Text from "../Text";
+import Typography from "../Typography";
 
 function Numbers(props) {
   const { items } = props;
@@ -11,13 +10,15 @@ function Numbers(props) {
       {items.map((item) => {
         return (
           <div key={item.title}>
-            <Text
+            <Typography
               items={item}
               isLine
-              widthLine="31px"
-              colorTitle={item.colorTitle}
-              fontSizeTitle="lg"
-              colorText="#fff"
+              settings={{
+                widthLine: "31px",
+                colorText: "white",
+                sizeTitle: "xl",
+                colorTitle: `'${item.colorTitle}'`,
+              }}
             />
           </div>
         );
@@ -26,11 +27,13 @@ function Numbers(props) {
   );
   return (
     <MainContainer
-      paddingLeftRight="small"
-      paddingTop="20px"
-      paddingBottom="20px"
+      settings={{
+        paddingLeftRight: "small",
+        paddingTop: "20px",
+        paddingBottom: "20px",
+        backgroundColorMainContainer: "#1f252f",
+      }}
       contentContainer={contentContainer}
-      backgroundColorMainContainer="#1f252f"
     />
   );
 }

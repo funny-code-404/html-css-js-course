@@ -9,7 +9,7 @@ const styleFont = `
 `;
 
 export const Button = styled.button`
-  margin: 10px;
+  margin-right: 10px;
   display: inline-block;
   width: ${(props) => (props.widthButton ? props.widthButton : "270px")};
   height: 55px;

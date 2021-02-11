@@ -19,12 +19,9 @@ const paddingTopBottom = (props) =>
 const paddingLeftRight = (props) =>
   props.paddingLeftRight ? props.paddingLeftRight : "19%";
 
-
 export const Wrapper = styled.div`
   padding: ${paddingTopBottom} ${paddingLeftRight};
 `;
-
-
 
 const setPositionContentContainer = (positionTextContainer) => {
   switch (positionTextContainer) {
@@ -56,16 +53,15 @@ const setPositionContent = (positionContent) => {
   }
 };
 
-
 export const ContentContainer = styled.div`
-    width: ${props => props.widthContentContainer ? props.widthContentContainer: '100%'};
-    ${props => setPositionContentContainer(props.positionContentContainer)};
-    ${props => setPositionContent(props.positionContent)};
-`
-
+  width: ${(props) =>
+    props.widthContentContainer ? props.widthContentContainer : "100%"};
+  ${(props) => setPositionContentContainer(props.positionContentContainer)};
+  ${(props) => setPositionContent(props.positionContent)};
+`;
 
 export const FlexContainer = styled.div`
-  height: ${props => props.height ? props.height : '181px'};
+  height: ${(props) => (props.height ? props.height : "181px")};
   display: flex;
   justify-content: space-between;
   align-items: center;
