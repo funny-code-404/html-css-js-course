@@ -1,11 +1,10 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const SlidersContainer = styled.div`
   position: relative;
   margin: auto;
   height: 994px;
-  margin-bottom: 15px;
-`
+`;
 export const Img = styled.div`
   width: 100%;
   position: absolute;
@@ -15,7 +14,8 @@ export const Img = styled.div`
   height: inherit;
   background-size: cover;
   background-position: center center;
-  ${(props) => props.backgroundImg && `background-image: url(${props.backgroundImg});`};
+  ${(props) =>
+    props.backgroundImg && `background-image: url(${props.backgroundImg});`};
 
   position: absolute;
   opacity: 0;
@@ -26,7 +26,7 @@ export const Img = styled.div`
     opacity: 1;
     z-index: 1;
   }
-`
+`;
 
 const stylesButton = `
   cursor: pointer;
@@ -49,22 +49,22 @@ const stylesButton = `
   :hover {
     background-color: rgba(0, 0, 0, 0.8);
     }
-`
+`;
 
 export const ArrowNext = styled.button`
   ${stylesButton};
   right: 0;
-`
+`;
 export const ArrowPrev = styled.button`
   ${stylesButton};
-`
+`;
 export const DotsContainer = styled.div`
-position: absolute;
+  position: absolute;
   left: 50%;
   bottom: 0;
   transform: translate(-50%, -50%);
   z-index: 2;
-`
+`;
 export const Dot = styled.button`
   cursor: pointer;
   width: 14px;
@@ -78,11 +78,9 @@ export const Dot = styled.button`
   outline: none;
   border: none;
 
-   transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
 
   :hover {
     background-color: tomato;
   }
-
-
-`
+`;

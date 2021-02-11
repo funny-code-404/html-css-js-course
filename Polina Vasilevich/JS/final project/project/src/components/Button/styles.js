@@ -8,18 +8,65 @@ const styleFont = `
   
 `;
 
+const setWidthButton = (widthButton) => {
+  switch (widthButton) {
+    case "basic":
+      return `width: 270px`;
+
+    case "s":
+      return `width: 201px`;
+
+    case "m":
+      return `width: 221px`;
+    default:
+      return `width: 270px`;
+  }
+};
+
+const setColorButton = (colorButton) => {
+  switch (colorButton) {
+    case "basic":
+      return `
+        background-color: #4285f4;
+        border: 1px solid #2c6cd6;
+      `;
+
+    case "green":
+      return `
+          background-color: #82B440;
+          border: 1px solid #fff;
+        `;
+
+    case "transparent":
+      return `
+              background-color: transparent;
+              border: 1px solid #fff;
+            `;
+
+    case "link":
+      return `
+              background-color: transparent;
+              border: transparent;
+              color: #4285F4 !important;
+              width: 100%;
+              height: auto;
+            `;
+    default:
+      return `
+        background-color: #4285f4;
+        border: 1px solid #2c6cd6;
+      `;
+  }
+};
 export const Button = styled.button`
   margin-right: 10px;
   display: inline-block;
-  width: ${(props) => (props.widthButton ? props.widthButton : "270px")};
+  ${(props) => setWidthButton(props.widthButton)};
   height: 55px;
-  // box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   outline: none;
-  background-color: ${(props) =>
-    props.backgroundColor ? props.backgroundColor : "#4285f4"};
-  border: 1px solid
-    ${(props) => (props.borderColor ? props.borderColor : "#2c6cd6")};
+
+  ${(props) => setColorButton(props.colorButton)};
 
   ${styleFont};
 

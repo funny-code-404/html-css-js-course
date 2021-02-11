@@ -5,14 +5,12 @@ import Icons from "../Icon copy";
 
 class IconsList extends React.Component {
   render() {
-    const {settings} = this.props;
+    const { settings } = this.props;
 
-    const contentContainer = (
-      <Icons {...this.props}/>
-    );
+    const contentContainer = <Icons {...this.props} />;
 
     return (
-      <MainContainer {...settings} contentContainer={contentContainer}/>
+      <MainContainer settings={settings} contentContainer={contentContainer} />
     );
   }
 }

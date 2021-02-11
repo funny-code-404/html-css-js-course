@@ -17,24 +17,24 @@ const setSizeTitle = (sizeTitle) => {
               font-weight: 600;
               `;
 
-    case 'm':
+    case "m":
       return `
           font-size: 33px;
           font-weight: 300;
-      `
+      `;
 
     case "l":
       return `font-size: 36px;
               font-weight: 300;
               `;
-    
-    case 'xl': 
+
+    case "xl":
       return `
             font-size: 72px;
             line-height: 60px;
             font-weight: 400;
             letter-spacing: 0.05em;
-      `
+      `;
     default:
       return `font-size: 36px;
               font-weight: 300;`;
@@ -83,7 +83,8 @@ export const SubTitle = styled.p`
   ${generalStyles}
   max-width: 55ch;
   margin: 20px auto;
-  font-size: ${(props) => (props.fontSizeSubTitle ? props.fontSizeSubTitle : "18px")};
+  font-size: ${(props) =>
+    props.fontSizeSubTitle ? props.fontSizeSubTitle : "18px"};
   line-height: 36px;
   font-weight: 300;
   ${(props) => setColorSubTitle(props.colorSubTitle)};
@@ -138,7 +139,6 @@ export const Line = styled.div`
   background-color: #000000;
   background-image: linear-gradient(90deg, #00f0ff -25%, #ebacfd 125%);
 `;
-
 
 const setPositionText = (positionText) => {
   switch (positionText) {

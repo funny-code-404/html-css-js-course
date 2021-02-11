@@ -49,13 +49,13 @@ const setSizeIconContainer = (sizeIconContainer) => {
 };
 
 export const IconContainer = styled.div`
-  ${(props) => setFormIcon(props.formIcon)}; 
+  ${(props) => setFormIcon(props.formIcon)};
   background-color: ${(props) =>
     props.backgroundColor ? props.backgroundColor : ""};
   ${(props) => setFormIcon(props.formIcons)};
   ${(props) => setColorIconContainer(props.colorIconContainer)};
   ${(props) => setSizeIconContainer(props.sizeIconContainer)};
-  
+
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -63,7 +63,6 @@ export const IconContainer = styled.div`
   margin-bottom: 25px;
   cursor: pointer;
 `;
-
 
 const setColorIcon = (colorIcon) => {
   switch (colorIcon) {
@@ -109,14 +108,13 @@ const setFontSizeIcon = (fontSizeIcon) => {
       return `
         font-size: 72px;
       `;
-        
+
     default:
       return `
         font-size: 36px;
       `;
   }
 };
-
 
 export const Icon = styled.i`
   font-family: themify;
@@ -126,6 +124,22 @@ export const Icon = styled.i`
   ${(props) => setColorIcon(props.colorIcon)};
 `;
 
+const setPositionTextIcons = (positionTextIcons) => {
+  switch (positionTextIcons) {
+    case "left":
+      return `
+        text-align: left;
+      `;
+    case "rigth":
+      return `
+        text-align: right;
+      `;
+    default:
+      return `
+        text-align: center;
+      `;
+  }
+};
 
 const setPositionIcons = (positionIcons) => {
   switch (positionIcons) {
@@ -143,5 +157,16 @@ const setPositionIcons = (positionIcons) => {
 };
 
 export const ContentContainer = styled.div`
+  ${(props) => setPositionTextIcons(props.positionTextIcons)};
   ${(props) => setPositionIcons(props.positionIcons)};
+`;
+
+export const Img = styled.div`
+  display: inline-block;
+  width: ${(props) => (props.widthImg ? props.widthImg : "64px")};
+  height: ${(props) => (props.heightImg ? props.heightImg : "64px")};
+  background-size: cover;
+  background-position: center center;
+  background-image: ${(props) =>
+    props.backgroundImg ? `url(${props.backgroundImg})` : ""};
 `;

@@ -2,7 +2,7 @@ import { Title, SubTitle, Line, Text, TextContainer } from "./styles";
 
 export default function TextComponent(props) {
   const { settings, items, isLine } = props;
-  const { title, subTitle, text } = items;
+  const { title, subTitle, text, textList } = items;
   return (
     <TextContainer {...settings}>
       <Title {...settings}>
@@ -15,15 +15,15 @@ export default function TextComponent(props) {
 
       {text && <Text {...settings}>{text}</Text>}
 
-      {/* {textList &&
+      {textList &&
         textList.text.map((item) => {
           return (
-            <Text colorText={colorText}>
+            <Text {...settings}>
               <i className={textList.icon}></i>
               {`>  ${item}`}
             </Text>
           );
-        })} */}
+        })}
     </TextContainer>
   );
 }

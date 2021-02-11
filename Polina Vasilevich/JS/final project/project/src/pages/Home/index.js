@@ -104,9 +104,8 @@ class Home extends React.Component {
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"
           settings={{
-            backgroundColorMainContainer: "#82b440",
-            backgroundColor: "#82b440",
-            borderColor: "#fff",
+            backgroundColorMainContainer: "green",
+            colorButton: "green",
             paddingTop: "0",
             paddingBottom: "0",
           }}
@@ -146,15 +145,20 @@ class Home extends React.Component {
           firstItem={
             <FirstItemForService
               items={servicesItems.leftContent}
-              backgroundColorMainContainer="#1f252f"
+              settings={{
+                backgroundColorMainContainer: "dark",
+                paddingLeftRight: "small",
+              }}
             />
           }
           secondItem={
             <IconsList
               items={servicesItems.rightContent}
-              gridGap="4%"
-              widthItemGridContainer="250px"
-              paddingLeftRight="small"
+              settings={{
+                colorButton: "link",
+                paddingLeftRight: "small",
+                gridGap: "4%",
+              }}
             />
           }
         />
@@ -168,9 +172,8 @@ class Home extends React.Component {
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"
           settings={{
-            backgroundColorMainContainer: "#82b440",
-            backgroundColor: "#82b440",
-            borderColor: "#fff",
+            backgroundColorMainContainer: "green",
+            colorButton: "green",
             paddingTop: "0",
             paddingBottom: "0",
           }}
@@ -195,14 +198,16 @@ class Home extends React.Component {
           colorTitle="#fff"
           colorText="#999999"
         />
+
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"
-          backgroundColorMainContainer="#82b440"
-          backgroundColorButton="#82b440"
-          borderColorButton="#fff"
-          paddingTop="0"
-          paddingBottom="0"
+          settings={{
+            backgroundColorMainContainer: "green",
+            colorButton: "green",
+            paddingTop: "0",
+            paddingBottom: "0",
+          }}
         />
 
         <Footer logo={logo} contacts={contacts} copyRight={items} />

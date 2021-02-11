@@ -1,18 +1,26 @@
 import styled from "styled-components";
 
+const setBackgroundColorMainContainer = (backgroundColorMainContainer) => {
+  switch (backgroundColorMainContainer) {
+    case "dark":
+      return `background-color: #1F252F;`;
+    case "green":
+      return `background-color:#82b440;`;
+    default:
+      break;
+  }
+};
+
 export const MainContainer = styled.div`
-  ${props => props.isVerticalCenter && `display: flex; align-items: center;`}
+  ${(props) => props.isVerticalCenter && `display: flex; align-items: center;`}
   height: ${(props) =>
-    props.heightMainContainer
-      ? props.heightMainContainer
-      : "100%"};
-  background-color: ${(props) =>
-    props.backgroundColorMainContainer
-      ? props.backgroundColorMainContainer
-      : ""};
+    props.heightMainContainer ? props.heightMainContainer : "100%"};
+
+  ${(props) =>
+    setBackgroundColorMainContainer(props.backgroundColorMainContainer)}
 
   background-image: ${(props) =>
-                      props.backgroundImg ? `url(${props.backgroundImg})` : ""};
+    props.backgroundImg ? `url(${props.backgroundImg})` : ""};
   background-size: cover;
   background-position: center center;
 `;
@@ -21,8 +29,8 @@ const setPaddingLeftRight = (paddingLeftRight) => {
   switch (paddingLeftRight) {
     case "small":
       return `
-                padding-right: 5%;
-                padding-left: 5%;
+                padding-right: 10%;
+                padding-left: 10%;
             `;
     case "none":
       return `
