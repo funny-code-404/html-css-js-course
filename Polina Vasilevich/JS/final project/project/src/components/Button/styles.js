@@ -12,7 +12,12 @@ const setWidthButton = (widthButton) => {
   switch (widthButton) {
     case "basic":
       return `width: 270px`;
-
+    case "auto":
+      return `
+        width: auto;
+        padding: 0 15px;
+        height: 40px !important;
+      `;
     case "s":
       return `width: 201px`;
 
@@ -42,15 +47,12 @@ const setColorButton = (colorButton) => {
               background-color: transparent;
               border: 1px solid #fff;
             `;
-
-    case "link":
+    case "grey":
       return `
-              background-color: transparent;
-              border: transparent;
-              color: #4285F4 !important;
-              width: auto !important;
-              height: auto !important;
-            `;
+      background-color: #f6f7f8;
+      border: 1px solid #e6e6e6;
+        `;
+
     default:
       return `
         background-color: #4285f4;
@@ -58,6 +60,35 @@ const setColorButton = (colorButton) => {
       `;
   }
 };
+
+const setTypeButton = (typeButton) => {
+  switch (typeButton) {
+    case "link":
+      return ` background-color: transparent;
+      border: transparent;
+      width: auto !important;
+      height: auto !important;
+    `;
+
+    default:
+      break;
+  }
+};
+
+const setColorTextButton = (colorTextButton) => {
+  switch (colorTextButton) {
+    case "blue":
+      return `
+              color: #4285F4;
+            `;
+    case "grey":
+      return `
+        color: #999999;`;
+    default:
+      return `color: #fff;`;
+  }
+};
+
 export const Button = styled.button`
   margin-right: 10px;
   display: inline-block;
@@ -66,11 +97,10 @@ export const Button = styled.button`
   border-radius: 3px;
   outline: none;
 
-  ${(props) => setColorButton(props.colorButton)};
-
   ${styleFont};
-
-  color: ${(props) => (props.colorText ? props.colorText : "#fff")};
+  ${(props) => setColorButton(props.colorButton)};
+  ${(props) => setColorTextButton(props.colorTextButton)};
+  ${(props) => setTypeButton(props.typeButton)};
   cursor: pointer;
 `;
 

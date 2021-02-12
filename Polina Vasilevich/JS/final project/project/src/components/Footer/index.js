@@ -44,13 +44,6 @@ class FooterComponent extends React.Component {
     const secondContentContainer = (
       <FlexContainer style={{ height: "38px" }}>
         <Typography items={copyRight} />
-        {/* <IconsList
-          items={copyRight.icons}
-          deletePadding
-          settings={{
-            widthItemGridContainer: "10px",
-          }}
-        /> */}
       </FlexContainer>
     );
     return (
@@ -66,8 +59,8 @@ class FooterComponent extends React.Component {
         <MainContainer
           contentContainer={secondContentContainer}
           settings={{
-            backgroundColorMainContainer: "green",
-            heightMainContainer: "100%",
+            backgroundColorMainContainer: "copyRight",
+            heightMainContainer: "90px",
             isVerticalCenter: "true",
             paddingBottom: "0",
             paddingTop: "0",

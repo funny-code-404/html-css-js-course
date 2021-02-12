@@ -13,13 +13,13 @@ class IconComponent extends React.Component {
         {items.map((item, index) => {
           return (
             <ContentContainer key={index} {...settings}>
-              {item.img ? (
-                <Img {...settings} backgroundImg={item.img} />
-              ) : (
-                <IconContainer key={item.title} {...settings}>
+              <IconContainer key={item.title} {...settings}>
+                {item.img ? (
+                  <Img {...settings} backgroundImg={item.img} />
+                ) : (
                   <Icon {...settings} className={item.icon}></Icon>
-                </IconContainer>
-              )}
+                )}
+              </IconContainer>
 
               {item.title && (
                 <Typography

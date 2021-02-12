@@ -1,33 +1,48 @@
 import React from "react";
-import { IconContainer, Icon } from "./styles";
+import { IconContainer, Icon, ContentContainer, Img } from "./styles";
+import Typography from "../Typography";
+import { GridContainer } from "../../mainStyles";
+import Button from "../Button";
 
 class IconComponent extends React.Component {
   render() {
-    const {
-      formIcons,
-      gradientColorFormIcon,
-      fontSizeIcon,
-      colorIcon,
-    } = this.props;
-    const { img, icon, backgroundColor } = this.props.items;
+    const { settings, items } = this.props;
 
     return (
-      <IconContainer
-        backgroundColor={backgroundColor}
-        formIcons={formIcons}
-        gradientColorFormIcon={gradientColorFormIcon}
-        fontSize={fontSizeIcon}
-      >
-        {img ? (
-          <img src={img} alt={img} style={{ height: "6vh" }} />
-        ) : (
-          <Icon
-            className={icon}
-            fontSizeIcon={fontSizeIcon}
-            colorIcon={colorIcon}
-          ></Icon>
-        )}
-      </IconContainer>
+      <GridContainer {...settings}>
+        {items.map((item, index) => {
+          return (
+            <ContentContainer key={index} {...settings}>
+              <IconContainer key={item.title} {...settings}>
+                {item.img ? (
+                  <Img {...settings} backgroundImg={item.img} />
+                ) : (
+                  <Icon {...settings} className={item.icon}></Icon>
+                )}
+              </IconContainer>
+
+              {item.title && (
+                <Typography
+                  items={item}
+                  key={item.title}
+                  settings={{
+                    sizeTitle: "s",
+                    ...settings,
+                  }}
+                />
+              )}
+              {item.buttonLabel && (
+                <Button
+                  items={item}
+                  buttonLabel={item.buttonLabel}
+                  buttonIcon={item.buttonIcon}
+                  settings={settings}
+                />
+              )}
+            </ContentContainer>
+          );
+        })}
+      </GridContainer>
     );
   }
 }

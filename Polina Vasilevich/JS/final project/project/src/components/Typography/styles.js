@@ -17,6 +17,12 @@ const setSizeTitle = (sizeTitle) => {
               font-weight: 300;
               `;
 
+    case "ss":
+      return `font-size: 30px;
+              font-weight: 300;
+              line-height: 50px;
+              `;
+
     case "m":
       return `
           font-size: 33px;

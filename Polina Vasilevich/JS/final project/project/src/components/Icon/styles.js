@@ -1,47 +1,69 @@
 import styled from "styled-components";
+import { Wrapper } from "../MainContainer/styles";
 
-const gradientColorFormIcon = `
-    background-image: linear-gradient(48deg, #00f0ff -22%, #ebacfd 122%);
-`;
+const setColorIconContainer = (colorIconContainer) => {
+  switch (colorIconContainer) {
+    case "gradient":
+      return `
+              background-image: linear-gradient(48deg, #00f0ff -22%, #ebacfd 122%)
 
-export const IconContainer = styled.div`
-  background-color: ${(props) =>
-    props.backgroundColor ? props.backgroundColor : ""};
-  ${(props) => setFormIcon(props.formIcons)};
-  ${(props) => props.gradientColorFormIcon && gradientColorFormIcon};
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+            `;
 
-  margin-bottom: 25px;
-`;
+    default:
+      return "";
+  }
+};
 
-const setFormIcon = (formIcons) => {
-  switch (formIcons) {
+const setFormIcon = (formIcon) => {
+  switch (formIcon) {
     case "circle":
       return `
-                    width: 150px;
-                    height: 150px;
-                    border-radius: 50%;
-
-                    :hover {
-                        background-image: none;
-                        background-color: #69d2e7;
-                    }
-
-                    cursor: pointer;
+              border-radius: 50%;
             `;
     case "rectangle":
       return `      
-                    width: 100%;
-                    height: 40px;
-                    border-radius: 3px;
+              width: 100%;
+              height: 40px;
+              border-radius: 3px;
             `;
     default:
       return "";
   }
 };
+
+const setSizeIconContainer = (sizeIconContainer) => {
+  switch (sizeIconContainer) {
+    case "small":
+      return `      
+                    width: 50px;
+                    height: 50px;
+        
+            `;
+    case "middle":
+      return `      
+                    width: 150px;
+                    height: 150px;
+            `;
+    default:
+      return "";
+  }
+};
+
+export const IconContainer = styled.div`
+  ${(props) => setFormIcon(props.formIcon)};
+  background-color: ${(props) =>
+    props.backgroundColor ? props.backgroundColor : ""};
+  ${(props) => setFormIcon(props.formIcons)};
+  ${(props) => setColorIconContainer(props.colorIconContainer)};
+  ${(props) => setSizeIconContainer(props.sizeIconContainer)};
+
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  cursor: pointer;
+`;
 
 const setColorIcon = (colorIcon) => {
   switch (colorIcon) {
@@ -51,17 +73,101 @@ const setColorIcon = (colorIcon) => {
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     background-image: linear-gradient(48deg, #00f0ff -21%, #ebacfd 121%);
-
             `;
 
     default:
-      return "";
+      return `
+        color: #fff;
+      `;
+  }
+};
+
+const setFontSizeIcon = (fontSizeIcon) => {
+  switch (fontSizeIcon) {
+    case "s":
+      return `
+        font-size: 18px;
+        `;
+
+    case "m":
+      return `
+        font-size: 20px;
+      `;
+
+    case "l":
+      return `
+        font-size: 36px;
+      `;
+
+    case "xl":
+      return `
+        font-size: 44px;
+        
+      `;
+
+    case "xxl":
+      return `
+        font-size: 72px;
+      `;
+
+    default:
+      return `
+        font-size: 36px;
+      `;
   }
 };
 
 export const Icon = styled.i`
   font-family: themify;
-  font-size: ${(props) => (props.fontSizeIcon ? props.fontSizeIcon : "36px")};
-  color: #fff;
+  // line-height: 30px;
+  font-weight: 400;
+  ${(props) => setFontSizeIcon(props.fontSizeIcon)};
   ${(props) => setColorIcon(props.colorIcon)};
+`;
+
+const setPositionTextIcons = (positionTextIcons) => {
+  switch (positionTextIcons) {
+    case "left":
+      return `
+        text-align: left;
+      `;
+    case "rigth":
+      return `
+        text-align: right;
+      `;
+    default:
+      return `
+        text-align: center;
+      `;
+  }
+};
+
+const setPositionIcons = (positionIcons) => {
+  switch (positionIcons) {
+    case "left":
+      return `
+        display: flex;
+        ${IconContainer} {
+            align-items: start;
+            margin-right: 20px;
+        } 
+      `;
+    default:
+      return ``;
+  }
+};
+
+export const ContentContainer = styled.div`
+  ${(props) => setPositionTextIcons(props.positionTextIcons)};
+  ${(props) => setPositionIcons(props.positionIcons)};
+`;
+
+export const Img = styled.div`
+  display: inline-block;
+  width: ${(props) => (props.widthImg ? props.widthImg : "100%")};
+  height: ${(props) => (props.heightImg ? props.heightImg : "64px")};
+  background-size: cover;
+  background-position: center center;
+  background-image: ${(props) =>
+    props.backgroundImg ? `url(${props.backgroundImg})` : ""};
 `;

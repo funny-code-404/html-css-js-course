@@ -143,7 +143,8 @@ class Home extends React.Component {
             <IconsList
               items={servicesItems.rightContent}
               settings={{
-                colorButton: "link",
+                typeButton: "link",
+                colorTextButton: "blue",
                 paddingLeftRight: "small",
                 gridGap: "8%",
                 widthImg: "64px",
