@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Wrapper } from "../MainContainer/styles";
 
 const setColorIconContainer = (colorIconContainer) => {
   switch (colorIconContainer) {
@@ -163,7 +164,7 @@ export const ContentContainer = styled.div`
 
 export const Img = styled.div`
   display: inline-block;
-  width: ${(props) => (props.widthImg ? props.widthImg : "64px")};
+  width: ${(props) => (props.widthImg ? props.widthImg : "100%")};
   height: ${(props) => (props.heightImg ? props.heightImg : "64px")};
   background-size: cover;
   background-position: center center;

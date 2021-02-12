@@ -1,8 +1,9 @@
 import { Title, SubTitle, Line, Text, TextContainer } from "./styles";
 
 export default function TextComponent(props) {
-  const { settings, items, isLine } = props;
-  const { title, subTitle, text, textList, iconTitle, icon } = items;
+  const { settings, isLine } = props;
+  const { title, subTitle, text, textList, iconTitle } = props.items;
+
   return (
     <TextContainer {...settings}>
       <Title {...settings}>

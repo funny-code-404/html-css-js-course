@@ -17,7 +17,7 @@ function Numbers(props) {
                 widthLine: "31px",
                 colorText: "white",
                 sizeTitle: "xl",
-                colorTitle: `'${item.colorTitle}'`,
+                colorTitle: item.colorTitle,
               }}
             />
           </div>
@@ -31,7 +31,7 @@ function Numbers(props) {
         paddingLeftRight: "small",
         paddingTop: "20px",
         paddingBottom: "20px",
-        backgroundColorMainContainer: "#1f252f",
+        backgroundColorMainContainer: "dark",
       }}
       contentContainer={contentContainer}
     />

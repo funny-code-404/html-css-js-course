@@ -1,23 +1,23 @@
-import { ContentContainer, TextContainer } from "./styles";
-import { Title, SubTitle, Line } from "../BlockWithTitleAndText/styles";
+// import { ContentContainer, TextContainer } from "./styles";
+// import { Title, SubTitle, Line } from "../BlockWithTitleAndText/styles";
 
-import Button from "../Button";
+// import Button from "../Button";
 
-export default function Works(props) {
-  const { title, subTitle, buttonIcon, buttonLabel } = props;
-  return (
-    <ContentContainer>
-      <TextContainer>
-        <Title color="#fff">{title}</Title>
-        <Line></Line>
-        <SubTitle color="">{subTitle}</SubTitle>
-        <Button
-          backgroundColor="#82B440"
-          borderColor="#82B440"
-          buttonLabel={buttonLabel}
-          buttonIcon={buttonIcon}
-        />
-      </TextContainer>
-    </ContentContainer>
-  );
-}
+// export default function Works(props) {
+//   const { title, subTitle, buttonIcon, buttonLabel } = props;
+//   return (
+//     <ContentContainer>
+//       <TextContainer>
+//         <Title color="#fff">{title}</Title>
+//         <Line></Line>
+//         <SubTitle color="">{subTitle}</SubTitle>
+//         <Button
+//           backgroundColor="#82B440"
+//           borderColor="#82B440"
+//           buttonLabel={buttonLabel}
+//           buttonIcon={buttonIcon}
+//         />
+//       </TextContainer>
+//     </ContentContainer>
+//   );
+// }

@@ -23,8 +23,8 @@ import servicesItems from "../../assets/const/servicesItems";
 
 import Percents from "../../components/PercentsBlock";
 
-import TextWithImages from "../../components/TextWithImages";
 import Video from "../../components/VideoComponent";
+import videoItems from "../../assets/const/videoItems";
 import Footer from "../../components/Footer";
 
 import partnersItems from "../../assets/const/partnersItems";
@@ -34,7 +34,6 @@ import blogItems from "../../assets/const/blogItems";
 import numbersItems from "../../assets/const/numbersItems";
 import { logo, contacts } from "../../assets/const/footerItems";
 import { items } from "../../assets/const/copyRightItems";
-import videoItems from "../../assets/const/videoItems";
 
 import Slider from "../../components/Slider";
 import sliderItems from "../../assets/const/slider";
@@ -44,18 +43,7 @@ import slider3Items from "../../assets/const/slider3";
 import Form from "../../components/Form";
 import formItems from "../../assets/const/formItems";
 
-import IconList from "../../components/IconsList";
-
-const firstItemForBusiness = (
-  <TextWithImages items={businessItems.leftContent} />
-);
-
-const secondItemForBusiness = (
-  <Percents
-    items={businessItems.rightContent}
-    backgroundColorMainContainer="#1f252f"
-  />
-);
+import Articles from "../../components/Services/Articles";
 
 class Home extends React.Component {
   render() {
@@ -69,7 +57,7 @@ class Home extends React.Component {
           sizeTitle="xl"
         />
 
-        <IconList
+        <IconsList
           items={iconList1}
           settings={{
             fontSizeIcon: "l",
@@ -111,7 +99,7 @@ class Home extends React.Component {
           }}
         />
 
-        <IconList
+        <IconsList
           items={iconList2}
           settings={{
             fontSizeIcon: "xl",
@@ -132,7 +120,10 @@ class Home extends React.Component {
             isVerticalCenter: "true",
           }}
         />
-        <Numbers items={numbersItems} />
+        <Numbers
+          items={numbersItems}
+          settings={{ backgroundColorMainContainer: "dark" }}
+        />
         <Slider
           items={slider2Items}
           id="slider2"
@@ -158,6 +149,7 @@ class Home extends React.Component {
                 colorButton: "link",
                 paddingLeftRight: "small",
                 gridGap: "8%",
+                widthImg: "64px",
               }}
             />
           }
@@ -181,8 +173,17 @@ class Home extends React.Component {
 
         <TwoColumnSection
           sizeContainers="55% 45%"
-          firstItem={firstItemForBusiness}
-          secondItem={secondItemForBusiness}
+          firstItem={<Articles items={businessItems.leftContent} />}
+          secondItem={
+            <Percents
+              items={businessItems.rightContent}
+              settings={{
+                backgroundColorMainContainer: "dark",
+                positionText: "left",
+                colorTitle: "white",
+              }}
+            />
+          }
         />
         <Slider
           items={slider3Items}
@@ -194,9 +195,11 @@ class Home extends React.Component {
         <Blog items={blogItems} />
         <Form
           items={formItems}
-          backgroundColorMainContainer="#212121"
-          colorTitle="#fff"
-          colorText="#999999"
+          settings={{
+            backgroundColorMainContainer: "dark",
+            colorTitle: "#fff",
+            colorText: "grey",
+          }}
         />
 
         <CallToAction

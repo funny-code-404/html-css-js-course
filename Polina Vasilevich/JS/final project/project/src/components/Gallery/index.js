@@ -5,7 +5,7 @@ import Images from "../Photos";
 
 class Gallery extends React.Component {
   render() {
-    const {items, settings, gridGap, widthItemGridContainer} = this.props;
+    const { items, settings, gridGap, widthItemGridContainer } = this.props;
     const contentContainer = (
       <Images
         items={items}

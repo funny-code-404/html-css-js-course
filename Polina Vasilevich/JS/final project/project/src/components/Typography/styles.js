@@ -14,7 +14,7 @@ const setSizeTitle = (sizeTitle) => {
             `;
     case "s":
       return `font-size: 18px;
-              font-weight: 600;
+              font-weight: 300;
               `;
 
     case "m":
@@ -32,7 +32,7 @@ const setSizeTitle = (sizeTitle) => {
       return `
             font-size: 72px;
             line-height: 60px;
-            font-weight: 400;
+            font-weight: 300;
             letter-spacing: 0.05em;
       `;
     default:
@@ -61,7 +61,8 @@ export const Title = styled.h2`
   margin-bottom: 15px;
   line-height: 30px;
   ${(props) => setSizeTitle(props.sizeTitle)};
-  ${(props) => setColorTitle(props.colorTitle)};
+  // ${(props) => setColorTitle(props.colorTitle)};
+  color: ${(props) => (props.colorTitle ? props.colorTitle : "#000")};
 `;
 
 const setColorSubTitle = (colorSubTitle) => {
@@ -149,6 +150,7 @@ const setPositionText = (positionText) => {
     case "left":
       return `
                 text-align: left;
+                 align-items: start;
         `;
     default:
       return ` text-align: center;

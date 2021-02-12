@@ -1,47 +1,52 @@
 import React from "react";
 
-import MainContainer from '../MainContainer';
-import Text from '../Text';
+import MainContainer from "../MainContainer";
+import Typography from "../Typography";
 import Button from "../Button";
 
-import { Title, PercentsContainer, PercentsItem } from "./styles";
+import { PercentsContainer, PercentsItem } from "./styles";
 
 class Percents extends React.Component {
   render() {
-    const { items, backgroundColorMainContainer,colorTitle, colorText, backgroundColorContainer, backgroundColorItem } = this.props;
-
+    const { items, settings } = this.props;
     const contentContainer = (
       <>
-      {items.list.map((item) => {
-            return (
-              <div key={item.title}>
-                <Text fontSizeTitle='sm' items={item} positionText='left' colorTitle={colorTitle}></Text>
-                <PercentsContainer backgroundColorContainer={backgroundColorContainer}>
-                  <PercentsItem backgroundColorItem={backgroundColorItem} style={{ width: item.percents }}></PercentsItem>
-                </PercentsContainer>
-              </div>
-            );
-          })
-        }
-          <Button
-            buttonLabel={items.buttonLabel}
-            buttonIcon={items.buttonIcon}
-          >
-
-          </Button>
+        {items.list.map((item) => {
+          return (
+            <div key={item.title}>
+              <Typography
+                items={item}
+                settings={{
+                  positionText: "left",
+                  colorTitle: "white",
+                  sizeTitle: "s",
+                }}
+              ></Typography>
+              <PercentsContainer {...settings}>
+                <PercentsItem
+                  {...settings}
+                  style={{ width: item.percents }}
+                ></PercentsItem>
+              </PercentsContainer>
+            </div>
+          );
+        })}
+        <Button
+          buttonLabel={items.buttonLabel}
+          buttonIcon={items.buttonIcon}
+          settings={settings}
+        ></Button>
       </>
-    )
-    return <MainContainer 
-      isTitle 
-      items={items}
-      colorTitle={colorTitle}
-      colorText={colorText}
-      backgroundColorMainContainer={backgroundColorMainContainer}
-      positionText="left"
-      contentContainer={contentContainer}
+    );
+    return (
+      <MainContainer
+        isTitle
+        items={items}
+        settings={settings}
+        contentContainer={contentContainer}
       />
-  
-    }
+    );
+  }
 }
 
 export default Percents;

@@ -47,7 +47,10 @@ const setPaddingLeftRight = (paddingLeftRight) => {
 
 export const Wrapper = styled.div`
   ${(props) => setPaddingLeftRight(props.paddingLeftRight)};
+  ${(props) => props.deletePadding && ``}
   padding-top: ${(props) => (props.paddingTop ? props.paddingTop : "100px")};
   padding-bottom: ${(props) =>
     props.paddingBottom ? props.paddingBottom : "100px"};
+
+  ${(props) => props.deletePadding && `padding 0 !important;`}
 `;

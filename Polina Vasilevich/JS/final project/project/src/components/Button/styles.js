@@ -48,8 +48,8 @@ const setColorButton = (colorButton) => {
               background-color: transparent;
               border: transparent;
               color: #4285F4 !important;
-              width: 100%;
-              height: auto;
+              width: auto !important;
+              height: auto !important;
             `;
     default:
       return `

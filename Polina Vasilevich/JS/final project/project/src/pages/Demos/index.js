@@ -8,7 +8,7 @@ import CallToAction from "../../components/CallToAction";
 
 import TwoColumnSection from "../../components/TwoColumSection";
 import Percents from "../../components/PercentsBlock";
-import TextWithImages from "../../components/TextWithImages";
+// import TextWithImages from "../../components/TextWithImages";
 
 import LogosList from "../../components/LogosList";
 
@@ -19,7 +19,6 @@ import logosItems from "../../assets/const/partnersItems";
 import { logo, contacts } from "../../assets/const/footerItems";
 import { items } from "../../assets/const/copyRightItems";
 
-
 class Demos extends React.Component {
   render() {
     return (
@@ -28,7 +27,7 @@ class Demos extends React.Component {
           title="WE DO THE BEST DESIGN"
           subTitle="Dream Big. Think Different. Do Great"
         />
-        
+
         <IconsList
           items={iconList2}
           gridGap="4%"
@@ -39,7 +38,10 @@ class Demos extends React.Component {
           fontSizeIcon="42px"
         />
 
-        <TextList items={textListItems.leftContent} positionContentContainer="right"/>
+        <TextList
+          items={textListItems.leftContent}
+          positionContentContainer="right"
+        />
 
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"
@@ -55,17 +57,17 @@ class Demos extends React.Component {
           sizeContainers="45% 55%"
           firstItem={
             <Percents
-            items={businessItems.rightContent}
-            backgroundColorMainContainer="#F6F7F8"
-            colorTitle='#333333'
-            backgroundColorContainer='#fff'
-            backgroundColorMainContaine="#F6F7F8"
+              items={businessItems.rightContent}
+              backgroundColorMainContainer="#F6F7F8"
+              colorTitle="#333333"
+              backgroundColorContainer="#fff"
+              backgroundColorMainContaine="#F6F7F8"
             />
           }
-          secondItem={<TextWithImages items={businessItems.leftContent} />}
+          // secondItem={<TextWithImages items={businessItems.leftContent} />}
         />
 
-        <LogosList items={logosItems} oneString/>
+        <LogosList items={logosItems} oneString />
 
         <Footer logo={logo} contacts={contacts} copyRight={items} />
       </>
