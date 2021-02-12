@@ -3,9 +3,9 @@ import { Switch, Route } from "react-router-dom";
 import "./assets/fonts/OpenSans/openSans.css";
 import "./assets/fonts/themify-icons.css";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { footerItems } from "./assets/const/footerItems";
 import Home from "./pages/Home";
-
-// import "normalize.css";
 import Demos from "./pages/Demos";
 import Features from "./pages/Features";
 import Shortcodes from "./pages/Shortcodes";
@@ -70,6 +70,7 @@ class App extends React.Component {
           <Route path="/portfolio" component={Portfolio} />
           <Route path="/blog" component={Blog} />
         </Switch>
+        <Footer items={footerItems} />
       </div>
     );
   }

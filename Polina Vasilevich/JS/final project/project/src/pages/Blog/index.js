@@ -13,7 +13,6 @@ class Blog extends React.Component {
     return (
       <>
         <Tweets items={tweetsItems} />
-        <Footer logo={logo} contacts={contacts} copyRight={items} />
       </>
     );
   }

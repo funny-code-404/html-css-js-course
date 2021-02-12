@@ -20,7 +20,11 @@ export default function Articles(props) {
   );
   return (
     <MainContainer
-      settings={{ positionText: "left", paddingLeftRight: "small" }}
+      settings={{
+        positionText: "left",
+        paddingLeftRight: "small",
+        ...settings,
+      }}
       isTitle
       items={items}
       contentContainer={contentContainer}

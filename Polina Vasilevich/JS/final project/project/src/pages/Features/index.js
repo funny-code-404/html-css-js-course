@@ -5,16 +5,15 @@ import IconsList from "../../components/IconsList";
 import Introducing from "../../components/Introducing";
 import TextList from "../../components/Services/TextList";
 import Footer from "../../components/Footer";
-import Form from '../../components/Form';
+import Form from "../../components/Form";
 import CallToAction from "../../components/CallToAction";
 
 import iconList1 from "../../assets/const/iconList1";
 import introducingItems from "../../assets/const/introducingItems";
 import servicesItems from "../../assets/const/servicesItems";
-import formItems from '../../assets/const/formItems';
+import formItems from "../../assets/const/formItems";
 import { logo, contacts } from "../../assets/const/footerItems";
 import { items } from "../../assets/const/copyRightItems";
-
 
 class Features extends React.Component {
   render() {
@@ -26,33 +25,44 @@ class Features extends React.Component {
         />
         <IconsList
           items={iconList1}
-          gridGap="4%"
-          widthItemGridContainer="200px"
-          formIcons="circle"
-          gradientColorFormIcon
+          settings={{
+            fontSizeIcon: "l",
+            formIcon: "circle",
+            colorIconContainer: "gradient",
+            sizeIconContainer: "middle",
+            widthItemGridContainer: "270px",
+          }}
         />
-        
 
         <Introducing
           items={introducingItems}
-          buttonBackgroundColor="#4285f4"
-          buttonBorderColor="#2c6cd6"
-          positionText="right"
+          settings={{
+            positionText: "left",
+            widthContentContainer: "50%",
+            heightMainContainer: "778px",
+            isVerticalCenter: "true",
+          }}
         />
-        <TextList items={servicesItems.leftContent} isTransparentButton />
 
-        <Form items={formItems} backgroundColorMainContainer='#212121' colorTitle='#fff' colorText='#999999'/>
+        <TextList items={servicesItems.leftContent} />
+
+        <Form
+          items={formItems}
+          backgroundColorMainContainer="#212121"
+          colorTitle="#fff"
+          colorText="#999999"
+        />
+
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"
-          backgroundColorButton="#82b440"
-          backgroundColorMainContainer = "#82b440"
-          paddingTop ='0'
-          paddingBottom='0'
-          borderColorButton="#fff"
+          settings={{
+            backgroundColorMainContainer: "green",
+            colorButton: "green",
+            paddingTop: "0",
+            paddingBottom: "0",
+          }}
         />
-
-        <Footer logo={logo} contacts={contacts} copyRight={items} />
       </>
     );
   }

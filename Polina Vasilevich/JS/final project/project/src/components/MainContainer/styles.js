@@ -6,6 +6,8 @@ const setBackgroundColorMainContainer = (backgroundColorMainContainer) => {
       return `background-color: #1F252F;`;
     case "green":
       return `background-color:#82b440;`;
+    case "blue":
+      return `background-color:#82b440;`;
     default:
       break;
   }

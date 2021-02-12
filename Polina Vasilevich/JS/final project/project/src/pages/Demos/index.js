@@ -8,7 +8,7 @@ import CallToAction from "../../components/CallToAction";
 
 import TwoColumnSection from "../../components/TwoColumSection";
 import Percents from "../../components/PercentsBlock";
-// import TextWithImages from "../../components/TextWithImages";
+import Articles from "../../components/Services/Articles";
 
 import LogosList from "../../components/LogosList";
 
@@ -30,27 +30,29 @@ class Demos extends React.Component {
 
         <IconsList
           items={iconList2}
-          gridGap="4%"
-          widthItemGridContainer="350px"
-          colorIcon="gradient"
-          positionText="left"
-          positionIcons="left"
-          fontSizeIcon="42px"
+          settings={{
+            fontSizeIcon: "xl",
+            widthItemGridContainer: "350px",
+            colorIcon: "gradient",
+            positionText: "left",
+            positionIcons: "left",
+          }}
         />
 
         <TextList
           items={textListItems.leftContent}
-          positionContentContainer="right"
+          settings={{ positionContentContainer: "right" }}
         />
 
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"
-          backgroundColorMainContainer="#35C2EA"
-          paddingTop="0"
-          paddingBottom="0"
-          backgroundColorButton="#35C2EA"
-          borderColorButton="#fff"
+          settings={{
+            backgroundColorMainContainer: "green",
+            colorButton: "green",
+            paddingTop: "0",
+            paddingBottom: "0",
+          }}
         />
 
         <TwoColumnSection
@@ -58,18 +60,23 @@ class Demos extends React.Component {
           firstItem={
             <Percents
               items={businessItems.rightContent}
-              backgroundColorMainContainer="#F6F7F8"
-              colorTitle="#333333"
-              backgroundColorContainer="#fff"
-              backgroundColorMainContaine="#F6F7F8"
+              settings={{
+                positionText: "left",
+                colorTitle: "white",
+              }}
             />
           }
-          // secondItem={<TextWithImages items={businessItems.leftContent} />}
+          secondItem={
+            <Articles
+              items={businessItems.leftContent}
+              settings={{
+                backgroundColorMainContainer: "dark",
+              }}
+            />
+          }
         />
 
         <LogosList items={logosItems} oneString />
-
-        <Footer logo={logo} contacts={contacts} copyRight={items} />
       </>
     );
   }

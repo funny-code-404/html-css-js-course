@@ -25,15 +25,12 @@ import Percents from "../../components/PercentsBlock";
 
 import Video from "../../components/VideoComponent";
 import videoItems from "../../assets/const/videoItems";
-import Footer from "../../components/Footer";
 
 import partnersItems from "../../assets/const/partnersItems";
 import pricingTables from "../../assets/const/pricingTables";
 import businessItems from "../../assets/const/businessItems";
 import blogItems from "../../assets/const/blogItems";
 import numbersItems from "../../assets/const/numbersItems";
-import { logo, contacts } from "../../assets/const/footerItems";
-import { items } from "../../assets/const/copyRightItems";
 
 import Slider from "../../components/Slider";
 import sliderItems from "../../assets/const/slider";
@@ -212,8 +209,6 @@ class Home extends React.Component {
             paddingBottom: "0",
           }}
         />
-
-        <Footer logo={logo} contacts={contacts} copyRight={items} />
       </>
     );
   }

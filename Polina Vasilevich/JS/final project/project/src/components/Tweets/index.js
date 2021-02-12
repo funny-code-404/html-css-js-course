@@ -1,31 +1,28 @@
-// import React from "react";
-// import { Avatar } from "./styles";
-// import Text from "../Text";
+import React from "react";
+import Typography from "../Typography";
+import IconsList from "../IconsList";
+import { Avatar } from "./styles";
+class TweetsComponent extends React.Component {
+  render() {
+    const settings = this.props;
+    return (
+      <div className="tweets">
+        <div className="info">
+          <div>
+            <Avatar backgroundImg={settings.backgroundImg}></Avatar>
+            <div className="container">
+              <Typography items={this.props.items.info} />
+            </div>
+            <div className="tag"></div>
+          </div>
+        </div>
 
-// class TweetsComponent extends React.Component {
-//   render() {
-//     const settings = this.props;
-//     return (
-//       <div className="tweets">
-//         <div className="info">
-//           <div>
-//             <Avatar backgroundImg={settings.backgroundImg}></Avatar>
-//             <div className="container">
-//               <Text items={this.props.items.info} />
-//             </div>
-//             <div className="tag"></div>
-//           </div>
-//         </div>
+        <IconsList />
 
-//         <div className="content">
-//           <img></img>
-//           <Text items={this.props.items.content} />
-//         </div>
+        <div className="buttons"></div>
+      </div>
+    );
+  }
+}
 
-//         <div className="buttons"></div>
-//       </div>
-//     );
-//   }
-// }
-
-// export default TweetsComponent;
+export default TweetsComponent;
