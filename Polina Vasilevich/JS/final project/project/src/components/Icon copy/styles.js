@@ -146,6 +146,7 @@ const setPositionIcons = (positionIcons) => {
     case "left":
       return `
         display: flex;
+        align-items: start;
         ${IconContainer} {
             align-items: start;
             margin-right: 20px;
@@ -158,7 +159,7 @@ const setPositionIcons = (positionIcons) => {
 
 export const ContentContainer = styled.div`
   ${(props) => setPositionTextIcons(props.positionTextIcons)};
-  ${(props) => setPositionIcons(props.positionIcons)};
+  // ${(props) => setPositionIcons(props.positionIcons)};
 `;
 
 export const Img = styled.div`
