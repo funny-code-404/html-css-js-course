@@ -1,13 +1,36 @@
 import styled from "styled-components";
-
+import { Title, SubTitle, Text } from "../Typography/styles";
+import { Button } from "../Button/styles";
 const setBackgroundColorMainContainer = (backgroundColorMainContainer) => {
   switch (backgroundColorMainContainer) {
     case "dark":
-      return `background-color: #1F252F;`;
+      return `
+              background-color: #1F252F;
+              ${Title} {
+                color: #ffffff;
+              }
+              ${SubTitle} {
+                color: #b9b9b9;
+              }
+              ${Text} {
+                color: #cccccc;
+              } 
+            `;
+
     case "green":
-      return `background-color:#82b440;`;
+      return `background-color:#82b440;
+              ${Button} {
+                background-color:#82b440;
+                border: 1px solid #fff;
+              }
+      `;
     case "blue":
-      return `background-color:#37ceff;`;
+      return `background-color:#37ceff;
+              ${Button} {
+                background-color:#37ceff;
+                border: 1px solid #fff;
+              }
+          `;
 
     case "copyRight":
       return `background-color:#1A1A1D;`;
