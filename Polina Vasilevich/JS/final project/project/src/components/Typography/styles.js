@@ -64,11 +64,13 @@ const setColorTitle = (colorTitle) => {
 
 export const Title = styled.h2`
   ${generalStyles}
+  margin-top: -7px;
   margin-bottom: 15px;
   line-height: 30px;
   ${(props) => setSizeTitle(props.sizeTitle)};
-  // ${(props) => setColorTitle(props.colorTitle)};
-  color: ${(props) => (props.colorTitle ? props.colorTitle : "#000")};
+  ${(props) => setColorTitle(props.colorTitle)};
+
+  ${(props) => props.multicoloredTitle && `color: ${props.multicoloredTitle}`}
 `;
 
 const setColorSubTitle = (colorSubTitle) => {
@@ -89,7 +91,7 @@ const setColorSubTitle = (colorSubTitle) => {
 export const SubTitle = styled.p`
   ${generalStyles}
   max-width: 55ch;
-  // margin: 20px auto;
+
   font-size: ${(props) =>
     props.fontSizeSubTitle ? props.fontSizeSubTitle : "18px"};
   line-height: 36px;
@@ -169,4 +171,62 @@ const setPositionText = (positionText) => {
 
 export const TextContainer = styled.div`
   ${(props) => setPositionText(props.positionText)};
+  ${(props) => setStylesText(props.stylesText)};
 `;
+
+const setStylesText = (stylesText) => {
+  switch (stylesText) {
+    case "icons":
+      return `
+      ${Title} {
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: 600;
+        color: #333333;
+      }
+      ${Text} {
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 400;
+        color: #575757;
+      }
+
+    `;
+
+    case "mainTitle":
+      return `
+      ${Title} {
+        font-size: 36px;
+        line-height: 30px;
+        font-weight: 300;
+        color: #333333;
+      }
+      ${SubTitle} {
+        font-size: 18px;
+        line-height: 36px;
+        font-weight: 300;
+        color: #999999;
+      }
+      ${Text} {
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 400;
+        color: #575757;
+      }
+    `;
+
+    case "Button":
+      return `
+      ${Text} {
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 700;
+        color: #ffffff;
+      }
+     
+    `;
+
+    default:
+      break;
+  }
+};

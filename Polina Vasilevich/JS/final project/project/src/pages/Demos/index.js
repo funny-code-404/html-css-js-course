@@ -48,8 +48,8 @@ class Demos extends React.Component {
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"
           settings={{
-            backgroundColorMainContainer: "green",
-            colorButton: "green",
+            backgroundColorMainContainer: "blue",
+            colorButton: "blue",
             paddingTop: "0",
             paddingBottom: "0",
           }}
@@ -66,17 +66,14 @@ class Demos extends React.Component {
               }}
             />
           }
-          secondItem={
-            <Articles
-              items={businessItems.leftContent}
-              settings={{
-                backgroundColorMainContainer: "dark",
-              }}
-            />
-          }
+          secondItem={<Articles items={businessItems.leftContent} />}
         />
 
-        <LogosList items={logosItems} oneString />
+        <LogosList
+          items={logosItems}
+          oneString
+          settings={{ backgroundColorMainContainer: "blue" }}
+        />
       </>
     );
   }

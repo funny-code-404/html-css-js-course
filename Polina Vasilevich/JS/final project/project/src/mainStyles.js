@@ -60,8 +60,23 @@ export const ContentContainer = styled.div`
   ${(props) => setPositionContent(props.positionContent)};
 `;
 
+const setHeightFlexContainer = (heightFlexContainer) => {
+  switch (heightFlexContainer) {
+    case "header":
+      return `height: 92px;`;
+    case "callTo":
+      return `height: 180px;`;
+
+    case "numbers":
+      return `height: 280px;`;
+
+    default:
+      return `height: fit-content;`;
+  }
+};
+
 export const FlexContainer = styled.div`
-  // height: ${(props) => (props.height ? props.height : "181px")};
+  ${(props) => setHeightFlexContainer(props.heightFlexContainer)};
   display: flex;
   justify-content: space-between;
   align-items: center;

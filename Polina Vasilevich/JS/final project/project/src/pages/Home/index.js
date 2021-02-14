@@ -70,7 +70,7 @@ class Home extends React.Component {
           settings={{
             positionText: "left",
             widthContentContainer: "50%",
-            heightMainContainer: "778px",
+            heightMainContainer: "intro",
             isVerticalCenter: "true",
           }}
         />
@@ -93,6 +93,7 @@ class Home extends React.Component {
             colorButton: "green",
             paddingTop: "0",
             paddingBottom: "0",
+            heightFlexContainer: "callTo",
           }}
         />
 
@@ -115,12 +116,10 @@ class Home extends React.Component {
             heightMainContainer: "778px",
             positionContentContainer: "right",
             isVerticalCenter: "true",
+            heightMainContainer: "intro",
           }}
         />
-        <Numbers
-          items={numbersItems}
-          settings={{ backgroundColorMainContainer: "dark" }}
-        />
+        <Numbers items={numbersItems} />
         <Slider
           items={slider2Items}
           id="slider2"

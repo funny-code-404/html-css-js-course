@@ -6,7 +6,7 @@ import { FlexContainer } from "../../mainStyles";
 function CallToAction(props) {
   const { text, buttonLabel, settings } = props;
   const contentContainer = (
-    <FlexContainer>
+    <FlexContainer heightFlexContainer="callTo">
       <Text>{text}</Text>
       <Button buttonLabel={buttonLabel} settings={settings}></Button>
     </FlexContainer>

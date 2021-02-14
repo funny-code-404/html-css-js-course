@@ -13,23 +13,20 @@ import CallToAction from "../../components/CallToAction";
 import Portfolio from "../../components/Portfolio";
 import portfolioItems from "../../assets/const/shop/portfolioItems";
 
-import Footer from "../../components/Footer";
-import { logo, contacts } from "../../assets/const/footerItems";
-import { items } from "../../assets/const/copyRightItems";
-
 class Shop extends React.Component {
   render() {
     return (
       <>
         <IconsList
           items={iconList1}
-          gridGap="4%"
-          widthItemGridContainer="200px"
-          formIcons="circle"
-          gradientColorFormIcon
+          settings={{
+            fontSizeIcon: "l",
+            formIcon: "circle",
+            colorIconContainer: "gradient",
+            sizeIconContainer: "middle",
+            widthItemGridContainer: "270px",
+          }}
         />
-
-        <Portfolio items={portfolioItems} />
         <Slider
           items={slider2Items}
           id="slider2"
@@ -38,6 +35,27 @@ class Shop extends React.Component {
           isLine
         />
         <Slider2 items={slider2Items} id="slider3" isArrows />
+
+        <CallToAction
+          text="Become A Part Of TheFox Business Community Today"
+          buttonLabel="PURCHASE NOW"
+          settings={{
+            backgroundColorMainContainer: "green",
+
+            paddingTop: "0",
+            paddingBottom: "0",
+            heightFlexContainer: "callTo",
+          }}
+        />
+        {/* <Portfolio items={portfolioItems} />
+        <Slider
+          items={slider2Items}
+          id="slider2"
+          isDots
+          fontSizeTitle="m"
+          isLine
+        />
+        
         <Works
           title="Let‘s Work Together"
           subTitle="TheFox WordPress is the best in the business. They know we deliver industry leading web design every time. We would love to learn how we can support you too."
@@ -50,7 +68,7 @@ class Shop extends React.Component {
           buttonLabel="PURCHASE NOW"
           backgroundColorContainer="#4285F4"
           borderColorButton="#fff"
-        />
+        /> */}
       </>
     );
   }

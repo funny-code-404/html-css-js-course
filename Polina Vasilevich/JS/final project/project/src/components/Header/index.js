@@ -21,7 +21,7 @@ class HeaderComponent extends React.Component {
     const { routes, logo, textLogo } = this.props;
 
     const contentContainer = (
-      <FlexContainer height="91px">
+      <FlexContainer heightFlexContainer="header">
         <LogoContainer>
           <LogoImg src={logo} alt={logo} />
           <LogoText>{textLogo}</LogoText>
@@ -46,7 +46,10 @@ class HeaderComponent extends React.Component {
       <Header>
         <MainContainer
           contentContainer={contentContainer}
-          settings={{ paddingTop: "0", paddingBottom: "0" }}
+          settings={{
+            paddingTop: "0",
+            paddingBottom: "0",
+          }}
         />
       </Header>
     );

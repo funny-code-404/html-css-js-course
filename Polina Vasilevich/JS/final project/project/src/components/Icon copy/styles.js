@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Wrapper } from "../MainContainer/styles";
 
 const setColorIconContainer = (colorIconContainer) => {
   switch (colorIconContainer) {

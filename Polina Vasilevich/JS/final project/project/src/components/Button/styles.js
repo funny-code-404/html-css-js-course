@@ -53,6 +53,12 @@ const setColorButton = (colorButton) => {
       border: 1px solid #e6e6e6;
         `;
 
+    case "blue":
+      return `
+      background-color: #37ceff;
+      border: 1px solid #fff;
+        `;
+
     default:
       return `
         background-color: #4285f4;

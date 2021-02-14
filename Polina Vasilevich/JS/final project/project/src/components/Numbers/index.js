@@ -6,7 +6,7 @@ function Numbers(props) {
   const { items } = props;
 
   const contentContainer = (
-    <FlexContainer>
+    <FlexContainer heightFlexContainer="numbers">
       {items.map((item) => {
         return (
           <div key={item.title}>
@@ -17,7 +17,7 @@ function Numbers(props) {
                 widthLine: "31px",
                 colorText: "white",
                 sizeTitle: "xl",
-                colorTitle: item.colorTitle,
+                multicoloredTitle: item.colorTitle,
               }}
             />
           </div>

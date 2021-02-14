@@ -1,13 +1,11 @@
 import img from "../../assets/img/footer/logo.png";
 
 export const footerItems = {
-  logo: [
-    {
-      imgLogo: img,
-      titleLogo: "thefox PLUS",
-      textLogo: "MADE FOR BUSINESS",
-    },
-  ],
+  logo: {
+    imgLogo: img,
+    title: "thefox PLUS",
+    text: "MADE FOR BUSINESS",
+  },
 
   contacts: [
     {
@@ -39,25 +37,11 @@ export const footerItems = {
     text:
       "© 2015 All Rights Reserved Tranmautritam - Envato Pty Ltd. Contact the Envato Market Help Team.",
     icons: [
-      {
-        icon: "ti-facebook",
-      },
-
-      {
-        icon: "ti-linkedin",
-      },
-
-      {
-        icon: "ti-tumblr-alt",
-      },
-
-      {
-        icon: "ti-vimeo-alt",
-      },
-
-      {
-        icon: "ti-pinterest",
-      },
+      "ti-facebook",
+      "ti-linkedin",
+      "ti-tumblr-alt",
+      "ti-vimeo-alt",
+      "ti-pinterest",
     ],
   },
 };

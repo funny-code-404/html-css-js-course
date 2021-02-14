@@ -26,7 +26,7 @@ class IconComponent extends React.Component {
                   items={item}
                   key={item.title}
                   settings={{
-                    sizeTitle: "s",
+                    stylesText: "icons",
                     ...settings,
                   }}
                 />

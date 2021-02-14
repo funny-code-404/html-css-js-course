@@ -16,18 +16,34 @@ const setBackgroundColorMainContainer = (backgroundColorMainContainer) => {
   }
 };
 
+const setHeightMainContainer = (heightMainContainer) => {
+  switch (heightMainContainer) {
+    case "header":
+      return `height: 92px;`;
+    case "intro":
+      return `height: 777px;`;
+    case "callTo":
+      return `height: 180px;`;
+
+    case "numbers":
+      return `height: 280px;`;
+
+    default:
+      return `height: fit-content;`;
+  }
+};
+
 export const MainContainer = styled.div`
-  ${(props) => props.isVerticalCenter && `display: flex; align-items: center;`}
-  height: ${(props) =>
-    props.heightMainContainer ? props.heightMainContainer : "100%"};
-
-  ${(props) =>
-    setBackgroundColorMainContainer(props.backgroundColorMainContainer)}
-
+  ${(props) => props.isVerticalCenter && `display: flex; align-items: center; `}
   background-image: ${(props) =>
     props.backgroundImg ? `url(${props.backgroundImg})` : ""};
   background-size: cover;
   background-position: center center;
+
+  ${(props) =>
+    setBackgroundColorMainContainer(props.backgroundColorMainContainer)}
+
+  ${(props) => setHeightMainContainer(props.heightMainContainer)};
 `;
 
 const setPaddingLeftRight = (paddingLeftRight) => {
