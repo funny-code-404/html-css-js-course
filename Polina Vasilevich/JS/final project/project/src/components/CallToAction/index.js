@@ -2,7 +2,7 @@ import MainContainer from "../MainContainer";
 import Button from "../Button";
 import { Text } from "./styles";
 import { FlexContainer } from "../../mainStyles";
-
+import { handleLink } from "../Button/handlers";
 function CallToAction(props) {
   const { text, buttonLabel, settings } = props;
   const contentContainer = (
@@ -11,7 +11,7 @@ function CallToAction(props) {
       <Button
         buttonLabel={buttonLabel}
         settings={settings}
-        handleButton="link"
+        handleButton={handleLink}
         link="blog"
       ></Button>
     </FlexContainer>

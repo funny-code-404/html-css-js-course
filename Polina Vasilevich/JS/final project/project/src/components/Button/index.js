@@ -9,6 +9,7 @@ class ButtonComponent extends React.Component {
       buttonLabel,
       handleButton,
       link,
+      id,
     } = this.props;
 
     return (
@@ -17,6 +18,7 @@ class ButtonComponent extends React.Component {
         // onClick={setHandleButton(handleButton)}
         onClick={handleButton}
         value={link}
+        id={id}
       >
         {buttonIcon && <Icon className={buttonIcon}></Icon>}
         {buttonLabel}

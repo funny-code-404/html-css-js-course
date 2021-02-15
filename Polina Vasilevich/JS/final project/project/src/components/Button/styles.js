@@ -11,7 +11,7 @@ const styleFont = `
 const setWidthButton = (widthButton) => {
   switch (widthButton) {
     case "basic":
-      return `width: 270px`;
+      return `width: 270px;`;
     case "auto":
       return `
         width: auto;
@@ -19,12 +19,16 @@ const setWidthButton = (widthButton) => {
         height: 40px !important;
       `;
     case "s":
-      return `width: 201px`;
+      return `width: 201px;`;
 
     case "m":
-      return `width: 221px`;
+      return `width: 221px;`;
+
+    case "form":
+      return `width: 30vw !important;`;
+
     default:
-      return `width: 270px`;
+      return `width: 270px;`;
   }
 };
 
@@ -96,7 +100,7 @@ const setColorTextButton = (colorTextButton) => {
 };
 
 export const Button = styled.button`
-  margin-right: 10px;
+  // margin-right: 10px;
   display: inline-block;
   ${(props) => setWidthButton(props.widthButton)};
   height: 55px;

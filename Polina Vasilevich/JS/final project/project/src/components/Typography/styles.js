@@ -126,6 +126,18 @@ export const Text = styled.p`
   white-space: pre-line;
 `;
 
+export const ExtraText = styled.p`
+  ${generalStyles}
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  ${(props) => setColorText(props.colorText)};
+
+  white-space: pre-line;
+  display: none;
+`;
+
 const setWidthLine = (widthLine) => {
   switch (widthLine) {
     case "small":

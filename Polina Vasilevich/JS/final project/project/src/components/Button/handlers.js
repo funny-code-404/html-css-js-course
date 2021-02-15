@@ -9,15 +9,20 @@ export const handleLink = (e, page = "shop") => {
   window.location.href = `/${e.target.value}`;
 };
 
-export const setHandleButton = (typeHandle) => {
-  switch (typeHandle) {
-    case "scrollDown":
-      return handleScrollDown;
-
-    case "link":
-      return handleLink;
-
-    default:
-      break;
-  }
+export const handleReadMore = (e) => {
+  e.preventDefault();
+  console.dir(e.target.parentNode);
 };
+
+// export const setHandleButton = (typeHandle) => {
+//   switch (typeHandle) {
+//     case "scrollDown":
+//       return handleScrollDown;
+
+//     case "link":
+//       return handleLink;
+
+//     default:
+//       break;
+//   }
+// };

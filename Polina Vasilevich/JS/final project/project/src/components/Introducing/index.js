@@ -4,7 +4,7 @@ import Typography from "../Typography";
 import Button from "../Button";
 
 import { ContentContainer } from "../../mainStyles";
-
+import { handleLink } from "../Button/handlers";
 class Introducing extends React.Component {
   render() {
     const { buttonLabel, buttonIcon, backgroundImg } = this.props.items;
@@ -17,7 +17,7 @@ class Introducing extends React.Component {
           buttonIcon={buttonIcon}
           buttonLabel={buttonLabel}
           {...settings}
-          handleButton="link"
+          handleButton={handleLink}
           link="features"
         />
       </ContentContainer>

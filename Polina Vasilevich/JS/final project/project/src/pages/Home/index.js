@@ -80,6 +80,8 @@ class Home extends React.Component {
           settings={{
             paddingLeftRight: "none",
             paddingBottom: "0",
+            gridGap: "0",
+            widthItemGridContainer: "442px",
           }}
         />
 

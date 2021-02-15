@@ -125,7 +125,7 @@ class Slider extends React.Component {
                           widthButton: "s",
                           colorButton: "transparent",
                         }}
-                        handleButton="scrollDown"
+                        handleButton={handleScrollDown}
                       />
                       <Button
                         buttonLabel={buttonLabel[1]}
@@ -133,7 +133,7 @@ class Slider extends React.Component {
                           widthButton: "s",
                           colorButton: "transparent",
                         }}
-                        handleButton="link"
+                        handleButton={handleLink}
                         link="blog"
                       />
                     </>

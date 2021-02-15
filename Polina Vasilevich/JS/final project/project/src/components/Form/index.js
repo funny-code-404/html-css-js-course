@@ -93,10 +93,10 @@ class FormComponent extends React.Component {
         )}
 
         <Button
-          widthButton="30vw"
           buttonLabel={buttonLabel}
           buttonIcon={buttonIcon}
           handleButton={this.handleClick.bind(this)}
+          settings={{ widthButton: "form" }}
         />
 
         <Info>All fields are required</Info>
