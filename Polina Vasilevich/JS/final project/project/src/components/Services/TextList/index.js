@@ -12,9 +12,6 @@ export default function TextList(props) {
         isLine
         settings={{
           positionText: "left",
-          colorTitle: "white",
-          colorSubTitle: "white",
-          colorText: "white",
         }}
       />
       <Button {...items} />

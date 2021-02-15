@@ -13,7 +13,10 @@ class IconComponent extends React.Component {
         {items.map((item, index) => {
           return (
             <ContentContainer key={index} {...settings}>
-              <IconContainer key={item.title} {...settings}>
+              <IconContainer
+                {...settings}
+                multicoloredIcon={item.backgroundColor}
+              >
                 {item.img ? (
                   <Img {...settings} backgroundImg={item.img} />
                 ) : (

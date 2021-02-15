@@ -8,21 +8,25 @@ const formItems = {
     {
       type: "text",
       placeholder: "Name",
+      name: "name",
     },
 
     {
       type: "email",
       placeholder: "Email",
+      name: "email",
     },
 
     {
       type: "phone",
       placeholder: "Phone",
+      name: "phone",
     },
 
     {
       type: "text",
       placeholder: "Company Name",
+      name: "company",
     },
   ],
 

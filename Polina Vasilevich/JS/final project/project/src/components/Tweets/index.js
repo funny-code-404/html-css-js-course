@@ -3,18 +3,19 @@ import MainContainer from "../MainContainer";
 import Typography from "../Typography";
 
 import Button from "../Button";
-import { FlexContainer, GridContainer } from "../../mainStyles";
 import { GridTwoColumnContainer } from "../TwoColumSection/styles";
 import { Img, ContentContainer } from "../Icon copy/styles";
 
 import IconsList from "../IconsList";
+import Form from "../Form";
+import Photos from "../Photos";
 
 class TweetsComponent extends React.Component {
   render() {
     const { settings } = this.props;
     const { buttons, list } = this.props.items.tweets;
-    const { items, tags, photos } = this.props.items.asideItems;
-
+    const { items, tags, photos, input } = this.props.items.asideItems;
+    console.log(this.props.items.asideItems.imgs);
     const contentContainer = (
       <GridTwoColumnContainer sizeContainers="65% 25%" gridGap="5%">
         <div>
@@ -117,6 +118,11 @@ class TweetsComponent extends React.Component {
               );
             })}
           </div>
+          {/* <Form items={this.props.items.asideItems} /> */}
+          <Photos
+            items={this.props.items.asideItems}
+            settings={{ heightImg: "70px", widthItemGridContainer: "70px" }}
+          />
         </div>
       </GridTwoColumnContainer>
     );

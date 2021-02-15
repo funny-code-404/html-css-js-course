@@ -2,10 +2,9 @@ import React from "react";
 
 import IntroSlider from "../../components/IntroSlider";
 import IconsList from "../../components/IconsList";
-import Footer from "../../components/Footer";
 import TextList from "../../components/Services/TextList";
 import CallToAction from "../../components/CallToAction";
-
+import Slider from "../../components/Slider";
 import TwoColumnSection from "../../components/TwoColumSection";
 import Percents from "../../components/PercentsBlock";
 import Articles from "../../components/Services/Articles";
@@ -16,8 +15,7 @@ import iconList2 from "../../assets/const/iconList2";
 import textListItems from "../../assets/const/servicesItems";
 import businessItems from "../../assets/const/businessItems";
 import logosItems from "../../assets/const/partnersItems";
-import { logo, contacts } from "../../assets/const/footerItems";
-import { items } from "../../assets/const/copyRightItems";
+import slider3Items from "../../assets/const/slider3";
 
 class Demos extends React.Component {
   render() {
@@ -62,17 +60,23 @@ class Demos extends React.Component {
               items={businessItems.rightContent}
               settings={{
                 positionText: "left",
-                colorTitle: "white",
               }}
             />
           }
           secondItem={<Articles items={businessItems.leftContent} />}
         />
 
+        <Slider
+          items={slider3Items}
+          id="slider3"
+          isDots
+          fontSizeTitle="m"
+          isLine
+        />
         <LogosList
           items={logosItems}
           oneString
-          settings={{ backgroundColorMainContainer: "blue" }}
+          settings={{ backgroundColorMainContainer: "dark" }}
         />
       </>
     );

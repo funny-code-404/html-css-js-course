@@ -4,16 +4,16 @@ import IntroSlider from "../../components/IntroSlider";
 import IconsList from "../../components/IconsList";
 import Introducing from "../../components/Introducing";
 import TextList from "../../components/Services/TextList";
-import Footer from "../../components/Footer";
+import Slider from "../../components/Slider";
 import Form from "../../components/Form";
 import CallToAction from "../../components/CallToAction";
 
 import iconList1 from "../../assets/const/iconList1";
+
 import introducingItems from "../../assets/const/introducingItems";
 import servicesItems from "../../assets/const/servicesItems";
 import formItems from "../../assets/const/formItems";
-import { logo, contacts } from "../../assets/const/footerItems";
-import { items } from "../../assets/const/copyRightItems";
+import slider3Items from "../../assets/const/slider3";
 
 class Features extends React.Component {
   render() {
@@ -44,13 +44,39 @@ class Features extends React.Component {
           }}
         />
 
-        <TextList items={servicesItems.leftContent} />
+        <TextList
+          items={servicesItems.leftContent}
+          settings={{
+            positionText: "right",
+            widthContentContainer: "50%",
+            heightMainContainer: "778px",
+            isVerticalCenter: "true",
+          }}
+        />
 
+        <Slider
+          items={slider3Items}
+          id="slider3"
+          isDots
+          fontSizeTitle="m"
+          isLine
+        />
+
+        <IconsList
+          items={servicesItems.rightContent}
+          settings={{
+            typeButton: "link",
+            colorTextButton: "blue",
+            gridGap: "8%",
+            widthImg: "64px",
+          }}
+        />
         <Form
           items={formItems}
           backgroundColorMainContainer="#212121"
           colorTitle="#fff"
           colorText="#999999"
+          settings={{ backgroundColorMainContainer: "dark" }}
         />
 
         <CallToAction

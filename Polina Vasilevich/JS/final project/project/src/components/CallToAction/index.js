@@ -8,7 +8,12 @@ function CallToAction(props) {
   const contentContainer = (
     <FlexContainer heightFlexContainer="callTo">
       <Text>{text}</Text>
-      <Button buttonLabel={buttonLabel} settings={settings}></Button>
+      <Button
+        buttonLabel={buttonLabel}
+        settings={settings}
+        handleButton="link"
+        link="blog"
+      ></Button>
     </FlexContainer>
   );
 

@@ -15,8 +15,8 @@ export const PriceContainer = styled.div`
   background-color: #fff;
 
   :hover {
-    // transform: scale(1.2);
-    // z-index: 1;
+    transform: scale(1.05);
+    z-index: 1;
     cursor: pointer;
     background-image: linear-gradient(90deg, #00f0ff -24%, #ebacfd 125%);
     background-size: 100% 5px;

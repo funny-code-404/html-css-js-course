@@ -1,30 +1,37 @@
 import React from "react";
-
-import { GridContainer, Wrapper } from "../../mainStyles";
-// import Imgs from "../BlockImg";
-import Icon from "../Icon";
-
-import { TextContainer, Title, Text } from "./styles";
+import MainContainer from "../MainContainer";
+import Photos from "../Photos";
+import Typography from "../Typography";
+import IconsList from "../IconsList";
 
 class Portfolio extends React.Component {
   render() {
-    const { imgs, title, text, icons } = this.props.items;
-    return (
-      <Wrapper>
-        {/* <Imgs items={imgs} /> */}
-        <TextContainer>
-          <Title>{title}</Title>
-          <Text>{text}</Text>
-        </TextContainer>
-        <GridContainer widthItemGridContainer="100px">
-          {icons.map((icon) => {
-            return (
-              <Icon items={icon} formIcons="rectangle" fontSizeIcon="14px" />
-            );
-          })}
-        </GridContainer>
-      </Wrapper>
+    const { items } = this.props;
+    const contentContainer = (
+      <>
+        <Photos
+          items={items}
+          settings={{
+            widthItemGridContainer: "400px",
+            gridItemColumn: "3",
+          }}
+        />
+        <Typography
+          items={items}
+          settings={{ positionText: "left", sizeTitle: "s" }}
+        />
+        <IconsList
+          items={items.icons}
+          settings={{
+            paddingLeftRight: "none",
+            formIcons: "rectangle",
+            fontSizeIcon: "xs",
+            widthItemGridContainer: "100px",
+          }}
+        />
+      </>
     );
+    return <MainContainer contentContainer={contentContainer} />;
   }
 }
 export default Portfolio;

@@ -50,11 +50,11 @@ const setSizeIconContainer = (sizeIconContainer) => {
 
 export const IconContainer = styled.div`
   ${(props) => setFormIcon(props.formIcon)};
-  background-color: ${(props) =>
-    props.backgroundColor ? props.backgroundColor : ""};
   ${(props) => setFormIcon(props.formIcons)};
   ${(props) => setColorIconContainer(props.colorIconContainer)};
   ${(props) => setSizeIconContainer(props.sizeIconContainer)};
+  ${(props) =>
+    props.multicoloredIcon && `background-color: ${props.multicoloredIcon};`}
 
   margin: 0 auto;
   display: flex;
@@ -83,6 +83,10 @@ const setColorIcon = (colorIcon) => {
 
 const setFontSizeIcon = (fontSizeIcon) => {
   switch (fontSizeIcon) {
+    case "xs":
+      return `
+        font-size: 14px;
+        `;
     case "s":
       return `
         font-size: 18px;

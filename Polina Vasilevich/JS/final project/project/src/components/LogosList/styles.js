@@ -19,13 +19,15 @@ export const FlexContainer = styled.div`
   justify-content: center;
   align-content: center;
 
-  ${props => props.oneString && `
-    padding: 0 5%;
+  ${(props) =>
+    props.oneString &&
+    `
     flex-wrap: nowrap;
     justify-content: space-between;
+    opacity: 1;
     ${ContentContainer} {
       justify-content: start;
-      padding: 30px 0;
+     
     }
 
     :hover {

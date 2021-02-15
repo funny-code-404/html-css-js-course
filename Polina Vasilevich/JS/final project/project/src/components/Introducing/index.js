@@ -17,6 +17,8 @@ class Introducing extends React.Component {
           buttonIcon={buttonIcon}
           buttonLabel={buttonLabel}
           {...settings}
+          handleButton="link"
+          link="features"
         />
       </ContentContainer>
     );

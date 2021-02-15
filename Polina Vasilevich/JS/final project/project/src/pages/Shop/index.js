@@ -27,6 +27,9 @@ class Shop extends React.Component {
             widthItemGridContainer: "270px",
           }}
         />
+
+        <Portfolio items={portfolioItems} />
+
         <Slider
           items={slider2Items}
           id="slider2"

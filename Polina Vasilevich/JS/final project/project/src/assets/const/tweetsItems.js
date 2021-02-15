@@ -138,7 +138,19 @@ const tweetsItems = {
 
     tags: ["Tech", "Commercial", "Tech", "Commercial", "Tech", "Commercial"],
 
-    photos: [img1, img2, img3, img1, img2, img3, img1, img2, img3],
+    input: [
+      {
+        type: "text",
+        placeholder: "Name",
+      },
+
+      {
+        type: "email",
+        placeholder: "Email",
+      },
+    ],
+
+    imgs: [img1, img2, img3, img1, img2, img3, img1, img2, img3],
   },
 };
 

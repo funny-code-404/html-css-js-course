@@ -81,8 +81,6 @@ class Home extends React.Component {
             paddingLeftRight: "none",
             paddingBottom: "0",
           }}
-          widthItemGridContainer="442px"
-          gridGap="0"
         />
 
         <CallToAction

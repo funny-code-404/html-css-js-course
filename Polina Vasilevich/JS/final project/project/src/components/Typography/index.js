@@ -2,7 +2,7 @@ import { Title, SubTitle, Line, Text, TextContainer } from "./styles";
 
 export default function TextComponent(props) {
   const { settings, isLine } = props;
-  const { title, subTitle, text, textList, iconTitle } = props.items;
+  const { title, subTitle, text, textList, iconTitle, extraText } = props.items;
 
   return (
     <TextContainer {...settings}>
@@ -17,6 +17,7 @@ export default function TextComponent(props) {
       {subTitle && <SubTitle {...settings}>{subTitle}</SubTitle>}
 
       {text && <Text {...settings}>{text}</Text>}
+      {extraText && <Text {...settings}>{extraText}</Text>}
 
       {textList &&
         textList.text.map((item) => {

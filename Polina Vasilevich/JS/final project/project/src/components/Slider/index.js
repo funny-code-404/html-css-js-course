@@ -13,6 +13,7 @@ import Typography from "../Typography";
 import MainContainer from "../MainContainer";
 import "./styles.css";
 import Button from "../Button";
+import { handleScrollDown, handleLink } from "../Button/handlers";
 
 class Slider extends React.Component {
   constructor(props) {
@@ -77,7 +78,15 @@ class Slider extends React.Component {
 
   render() {
     const { imgs, buttonLabel } = this.props.items;
-    const { id, isDots, isArrows, items, sizeTitle, isLine } = this.props;
+    const {
+      id,
+      isDots,
+      isArrows,
+      items,
+      sizeTitle,
+      isLine,
+      typeHandle,
+    } = this.props;
     const contentContainer = (
       <SlidersContainer id={id}>
         {imgs.map((img, index) => {
@@ -108,16 +117,27 @@ class Slider extends React.Component {
                       }}
                     />
                   )}
-                  {buttonLabel &&
-                    buttonLabel.map((label) => (
+                  {buttonLabel && (
+                    <>
                       <Button
-                        buttonLabel={label}
+                        buttonLabel={buttonLabel[0]}
                         settings={{
                           widthButton: "s",
                           colorButton: "transparent",
                         }}
+                        handleButton="scrollDown"
                       />
-                    ))}
+                      <Button
+                        buttonLabel={buttonLabel[1]}
+                        settings={{
+                          widthButton: "s",
+                          colorButton: "transparent",
+                        }}
+                        handleButton="link"
+                        link="blog"
+                      />
+                    </>
+                  )}
                 </ContentContainer>
               </Img>
             </>
