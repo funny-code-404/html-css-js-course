@@ -42,7 +42,9 @@ class FormComponent extends React.Component {
       },
     })
       .then((response) => response.json())
-      .then((json) => console.log(json));
+
+      .then((json) => console.log(json))
+      .then(() => this.setState({ name: "" }));
 
     // fetch("https://jsonplaceholder.typicode.com/posts", {
     //   method: "GET",
