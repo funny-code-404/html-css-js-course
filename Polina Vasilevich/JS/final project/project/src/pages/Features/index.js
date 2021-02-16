@@ -37,14 +37,15 @@ class Features extends React.Component {
         <Introducing
           items={introducingItems}
           settings={{
-            positionText: "left",
+            positionContent: "right",
+            positionText: "right",
             widthContentContainer: "50%",
             heightMainContainer: "778px",
             isVerticalCenter: "true",
           }}
         />
 
-        <TextList
+        {/* <TextList
           items={servicesItems.leftContent}
           settings={{
             positionText: "right",
@@ -52,6 +53,11 @@ class Features extends React.Component {
             heightMainContainer: "778px",
             isVerticalCenter: "true",
           }}
+        /> */}
+
+        <TextList
+          items={servicesItems.leftContent}
+          settings={{ positionContentContainer: "right", positionText: "left" }}
         />
 
         <Slider
@@ -65,18 +71,20 @@ class Features extends React.Component {
         <IconsList
           items={servicesItems.rightContent}
           settings={{
+            widthItemGridContainer: "300px",
             typeButton: "link",
             colorTextButton: "blue",
-            gridGap: "8%",
+            gridGap: "4%",
             widthImg: "64px",
           }}
         />
         <Form
           items={formItems}
-          backgroundColorMainContainer="#212121"
-          colorTitle="#fff"
-          colorText="#999999"
-          settings={{ backgroundColorMainContainer: "dark" }}
+          settings={{
+            backgroundColorMainContainer: "dark",
+            colorButton: "green",
+            widthButton: "form",
+          }}
         />
 
         <CallToAction

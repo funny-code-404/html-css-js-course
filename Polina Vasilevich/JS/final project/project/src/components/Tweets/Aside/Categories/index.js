@@ -7,8 +7,8 @@ export default function Categories(props) {
     <div>
       {items.map((item) => {
         return (
-          <div style={{ paddingTop: "20px", borderBottom: "1px solid grey" }}>
-            <Title sizeTitle="s">{item}</Title>
+          <div style={{ padding: "5px", borderBottom: "1px solid #EBEBEB" }}>
+            <Title sizeTitle="categories">{item}</Title>
           </div>
         );
       })}

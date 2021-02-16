@@ -11,7 +11,16 @@ const portfolioItems = {
   title: "Selected Case Studies",
   subTitle:
     "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra. Nulla vehicula nibh vel ante commodo feugiat.",
-  imgs: [img1, img2, img3, img4, img5, img6, img7, img8],
+  imgs: [
+    { img: img1 },
+    { img: img2 },
+    { img: img3 },
+    { img: img4 },
+    { img: img5 },
+    { img: img6 },
+    { img: img7 },
+    { img: img8 },
+  ],
 };
 
 export default portfolioItems;

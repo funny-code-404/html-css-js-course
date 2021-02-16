@@ -55,8 +55,10 @@ export default function Aside(props) {
         settings={{
           sizeTitle: "tweets",
           paddingLeftRight: "none",
+          paddingTop: "0",
           paddingBottom: "40px",
           positionText: "left",
+          alignItems: "left",
           sizeInput: "tweets",
           widthButton: "tweets",
           heightMainContainer: "tweets",

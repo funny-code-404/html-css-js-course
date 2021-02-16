@@ -12,7 +12,7 @@ import CallToAction from "../../components/CallToAction";
 
 import Portfolio from "../../components/Portfolio";
 import portfolioItems from "../../assets/const/shop/portfolioItems";
-
+import MainContainer from "../../components/MainContainer";
 class Shop extends React.Component {
   render() {
     return (
@@ -37,13 +37,23 @@ class Shop extends React.Component {
           fontSizeTitle="m"
           isLine
         />
-        <Slider2 items={slider2Items} id="slider3" isArrows />
+        <MainContainer
+          items={slider2Items}
+          settings={{
+            paddingLeftRight: "none",
+            paddingTop: "0",
+            paddingBottom: "0",
+          }}
+          contentContainer={
+            <Slider2 items={slider2Items} id="slider3" isArrows />
+          }
+        />
 
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"
           settings={{
-            backgroundColorMainContainer: "green",
+            backgroundColorMainContainer: "blog",
 
             paddingTop: "0",
             paddingBottom: "0",

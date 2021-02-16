@@ -28,6 +28,8 @@ const setPositionContentContainer = (positionTextContainer) => {
     case "right":
       return `
                 margin-left: auto;
+                width: 50%;
+                
             `;
     case "center":
       return `

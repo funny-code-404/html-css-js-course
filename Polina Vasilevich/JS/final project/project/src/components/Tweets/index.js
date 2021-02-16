@@ -27,7 +27,7 @@ class TweetsComponent extends React.Component {
                       backgroundImg={info.img}
                       heightImg="51px"
                       widthImg="51px"
-                      style={{ borderRadius: "50%" }}
+                      style={{ borderRadius: "50%", marginRight: "20px" }}
                     />
                     <Typography
                       items={info}

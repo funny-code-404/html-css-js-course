@@ -12,7 +12,7 @@ import portfolioItems from "../../assets/const/portfolioItems";
 
 import Partners from "../../components/Partners";
 import PricingTables from "../../components/Prices";
-import Blog from "../../components/Blog";
+
 import CallToAction from "../../components/CallToAction";
 import Numbers from "../../components/Numbers";
 
@@ -41,7 +41,8 @@ import Form from "../../components/Form";
 import formItems from "../../assets/const/formItems";
 
 import Articles from "../../components/Services/Articles";
-
+import Photos from "../../components/Photos";
+import MainContainerComponent from "../../components/MainContainer";
 class Home extends React.Component {
   render() {
     return (
@@ -75,14 +76,22 @@ class Home extends React.Component {
           }}
         />
 
-        <Gallery
+        <MainContainerComponent
+          isTitle
           items={portfolioItems}
           settings={{
             paddingLeftRight: "none",
             paddingBottom: "0",
-            gridGap: "0",
-            widthItemGridContainer: "442px",
           }}
+          contentContainer={
+            <Photos
+              items={portfolioItems}
+              settings={{
+                widthItemGridContainer: "442px",
+                gridGap: "0",
+              }}
+            />
+          }
         />
 
         <CallToAction
@@ -199,7 +208,21 @@ class Home extends React.Component {
           fontSizeTitle="m"
           isLine
         />
-        <Blog items={blogItems} />
+
+        <MainContainerComponent
+          isTitle
+          items={blogItems}
+          contentContainer={
+            <Photos
+              items={blogItems}
+              settings={{
+                widthItemGridContainer: "400px",
+                gridItemRow: "1",
+              }}
+            />
+          }
+        />
+
         <Form
           items={formItems}
           settings={{

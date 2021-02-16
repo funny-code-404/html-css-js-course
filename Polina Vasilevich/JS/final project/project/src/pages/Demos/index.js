@@ -39,7 +39,7 @@ class Demos extends React.Component {
 
         <TextList
           items={textListItems.leftContent}
-          settings={{ positionContentContainer: "right" }}
+          settings={{ positionContentContainer: "right", positionText: "left" }}
         />
 
         <CallToAction
@@ -54,7 +54,12 @@ class Demos extends React.Component {
         />
 
         <TwoColumnSection
-          sizeContainers="45% 55%"
+          settings={{
+            sizeContainers: "45% 55%",
+            paddingLeftRight: "none",
+            paddingTop: "0",
+            paddingBottom: "0",
+          }}
           firstItem={
             <Percents
               items={businessItems.rightContent}
@@ -76,7 +81,10 @@ class Demos extends React.Component {
         <LogosList
           items={logosItems}
           oneString
-          settings={{ backgroundColorMainContainer: "dark" }}
+          settings={{
+            backgroundColorMainContainer: "logos",
+            heightMainContainer: "callTo",
+          }}
         />
       </>
     );

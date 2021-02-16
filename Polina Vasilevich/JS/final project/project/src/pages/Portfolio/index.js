@@ -24,7 +24,7 @@ class Portfolio extends React.Component {
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"
           settings={{
-            backgroundColorMainContainer: "green",
+            backgroundColorMainContainer: "blog",
             colorButton: "green",
             paddingTop: "0",
             paddingBottom: "0",

@@ -162,7 +162,14 @@ const tweetsItems = {
 
     photos: {
       title: "PHOTO FROM UNSPLASH",
-      imgs: [img1, img2, img3, img1, img2, img3, img1, img2, img3],
+      imgs: [
+        { img: img1 },
+        { img: img2 },
+        { img: img3 },
+        { img: img1 },
+        { img: img2 },
+        { img: img3 },
+      ],
     },
 
     categories: {

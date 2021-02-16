@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Img = styled.div`
+  position: relative;
   height: ${(props) => (props.heightImg ? props.heightImg : "420px")};
   background-size: cover;
   background-position: center center;
@@ -15,7 +16,7 @@ export const Img = styled.div`
   }
 
   ${(props) =>
-    props.gridItemColumn && 
+    props.gridItemColumn &&
     `&:nth-of-type(${props.gridItemColumn}) {
     // height: 100%;
     grid-column: 1 / 3;`}

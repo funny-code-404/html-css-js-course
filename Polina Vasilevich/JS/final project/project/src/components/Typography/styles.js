@@ -11,10 +11,12 @@ const setSizeTitle = (sizeTitle) => {
                 font-size: 16px;
                 font-weight: 600;
                 letter-spacing: 0.05em;
+                
             `;
     case "s":
       return `font-size: 18px;
               font-weight: 300;
+              margin: 0;
               `;
 
     case "ss":
@@ -44,10 +46,29 @@ const setSizeTitle = (sizeTitle) => {
 
     case "tweets":
       return `
-            font-size: 13px;
-            margin-bottom: 0;
+      font-size: 13px;
+      line-height: 30px;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      color: #333333;
+      margin: 0;
             
       `;
+
+    case "categories":
+      return `
+      font-size: 14px;
+      line-height: 50px;
+      font-weight: 400;
+      color: #333333;
+      margin: 0;
+      `;
+
+    case "photos":
+      return `font-size: 24px;
+      line-height: 36px;
+      font-weight: 600;
+      color: #ffffff !important;`;
 
     default:
       return `font-size: 36px;
@@ -73,7 +94,7 @@ const setColorTitle = (colorTitle) => {
 export const Title = styled.h2`
   ${generalStyles}
   margin-top: -7px;
-  margin-bottom: 15px;
+  // margin-bottom: 15px;
   line-height: 30px;
   ${(props) => setSizeTitle(props.sizeTitle)};
   ${(props) => setColorTitle(props.colorTitle)};
@@ -180,6 +201,12 @@ const setPositionText = (positionText) => {
                 text-align: left;
                  align-items: start;
         `;
+
+    case "bottom":
+      return `
+                    position: absolute;
+                    bottom: 0;
+            `;
     default:
       return ` text-align: center;
                 display: flex;
@@ -192,6 +219,7 @@ const setPositionText = (positionText) => {
 export const TextContainer = styled.div`
   ${(props) => setPositionText(props.positionText)};
   ${(props) => setStylesText(props.stylesText)};
+  ${(props) => props.setPadding && "padding: 40px;"}
 `;
 
 const setStylesText = (stylesText) => {

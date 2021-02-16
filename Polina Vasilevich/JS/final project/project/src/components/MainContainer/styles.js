@@ -34,6 +34,18 @@ const setBackgroundColorMainContainer = (backgroundColorMainContainer) => {
 
     case "copyRight":
       return `background-color:#1A1A1D;`;
+
+    case "logos":
+      return `background-color: #373C46;`;
+
+    case "blog":
+      return `background-color: #4285F4;
+              ${Button} {
+                background-color: #4285F4;
+                border: 1px solid #fff;
+              }
+          `;
+
     default:
       break;
   }
