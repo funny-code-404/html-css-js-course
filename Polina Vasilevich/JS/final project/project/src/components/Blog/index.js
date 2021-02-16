@@ -8,9 +8,11 @@ function Blog(props) {
   const contentContainer = (
     <Images
       items={items}
-      widthItemGridContainer="400px"
-      heightImg="350px"
-      gridItemRow="1"
+      settings={{
+        widthItemGridContainer: "400px",
+        heightImg: "350px",
+        gridItemRow: "1",
+      }}
     />
   );
   return (

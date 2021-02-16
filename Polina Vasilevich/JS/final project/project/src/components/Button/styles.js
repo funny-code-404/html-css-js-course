@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Icon } from "../Icon copy/styles";
 const styleFont = `
   font-family: OpenSans;
   font-size: 14px;
@@ -25,7 +25,10 @@ const setWidthButton = (widthButton) => {
       return `width: 221px;`;
 
     case "form":
-      return `width: 30vw !important;`;
+      return `width: 30vw;`;
+
+    case "tweets":
+      return `width: 20vw;`;
 
     default:
       return `width: 270px;`;
@@ -90,10 +93,19 @@ const setColorTextButton = (colorTextButton) => {
     case "blue":
       return `
               color: #4285F4;
+              ${Icon} {
+                color: #4285F4;
+              }
             `;
     case "grey":
       return `
-        color: #999999;`;
+        color: #999999;
+        ${Icon} {
+                color: #4285F4;
+              }
+            
+        `;
+
     default:
       return `color: #fff;`;
   }
@@ -112,11 +124,4 @@ export const Button = styled.button`
   ${(props) => setColorTextButton(props.colorTextButton)};
   ${(props) => setTypeButton(props.typeButton)};
   cursor: pointer;
-`;
-
-export const Icon = styled.i`
-  margin-right: 10px;
-  // font-size: 16px;
-  line-height: 30px;
-  // font-weight: 400;
 `;

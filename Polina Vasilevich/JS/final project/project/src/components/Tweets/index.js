@@ -1,21 +1,17 @@
 import React from "react";
 import MainContainer from "../MainContainer";
 import Typography from "../Typography";
-
 import Button from "../Button";
 import { GridTwoColumnContainer } from "../TwoColumSection/styles";
 import { Img, ContentContainer } from "../Icon copy/styles";
 
-import IconsList from "../IconsList";
-import Form from "../Form";
-import Photos from "../Photos";
+import Aside from "./Aside";
 
 class TweetsComponent extends React.Component {
   render() {
     const { settings } = this.props;
     const { buttons, list } = this.props.items.tweets;
-    const { items, tags, photos, input } = this.props.items.asideItems;
-    console.log(this.props.items.asideItems.imgs);
+
     const contentContainer = (
       <GridTwoColumnContainer sizeContainers="65% 25%" gridGap="5%">
         <div>
@@ -91,39 +87,7 @@ class TweetsComponent extends React.Component {
             );
           })}
         </div>
-        <div>
-          <IconsList
-            items={items}
-            settings={{
-              heightImg: "81px",
-              widthImg: "111px",
-              positionIcons: "left",
-              positionText: "left",
-
-              paddingTop: "0",
-              paddingLeftRight: "none",
-            }}
-          />
-          <div className="buttons">
-            {tags.map((tag) => {
-              return (
-                <Button
-                  buttonLabel={tag}
-                  settings={{
-                    widthButton: "auto",
-                    colorButton: "grey",
-                    colorTextButton: "grey",
-                  }}
-                />
-              );
-            })}
-          </div>
-          {/* <Form items={this.props.items.asideItems} /> */}
-          <Photos
-            items={this.props.items.asideItems}
-            settings={{ heightImg: "70px", widthItemGridContainer: "70px" }}
-          />
-        </div>
+        <Aside items={this.props.items.asideItems} />
       </GridTwoColumnContainer>
     );
     return <MainContainer contentContainer={contentContainer} />;

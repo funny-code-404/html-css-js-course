@@ -37,8 +37,10 @@ const servicesItems = {
       title: "Web Design",
       text:
         "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra",
-      extraText:
-        "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra",
+      extraText: `Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra
+        Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra
+        Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra
+        Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra`,
       buttonLabel: "Learn More",
       buttonIcon: "ti-angle-right",
     },

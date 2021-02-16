@@ -51,8 +51,11 @@ const setHeightMainContainer = (heightMainContainer) => {
     case "numbers":
       return `height: 280px;`;
 
-    default:
+    case "tweets":
       return `height: fit-content;`;
+
+    default:
+      return `height: 100%;`;
   }
 };
 
@@ -80,6 +83,12 @@ const setPaddingLeftRight = (paddingLeftRight) => {
       return `
                 padding-right: 0;
                 padding-left: 0;
+                `;
+
+    case "deletePadding":
+      return `
+                padding:0;
+
                 `;
     default:
       return `

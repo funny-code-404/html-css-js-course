@@ -41,6 +41,14 @@ const setSizeTitle = (sizeTitle) => {
             font-weight: 300;
             letter-spacing: 0.05em;
       `;
+
+    case "tweets":
+      return `
+            font-size: 13px;
+            margin-bottom: 0;
+            
+      `;
+
     default:
       return `font-size: 36px;
               font-weight: 300;`;

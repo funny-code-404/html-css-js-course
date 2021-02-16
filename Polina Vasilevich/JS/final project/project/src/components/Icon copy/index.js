@@ -10,7 +10,7 @@ class IconComponent extends React.Component {
     super(props);
     this.state = {
       showText: false,
-      id: -1,
+
       items: [],
     };
   }
@@ -21,9 +21,15 @@ class IconComponent extends React.Component {
     if (!items.includes(+e.target.id)) {
       items.push(+e.target.id);
       this.setState({
-        id: e.target.id,
         items: items,
       });
+      console.log("+", items);
+    } else {
+      items.splice(items.indexOf(+e.target.id), 1);
+      this.setState({
+        items: items,
+      });
+      console.log("-", items);
     }
   }
 
@@ -59,13 +65,16 @@ class IconComponent extends React.Component {
               {this.state.items.includes(index) && (
                 <Text>{item.extraText}</Text>
               )}
-              {console.log(this.state.items)}
-              {console.log(index)}
+
               {item.buttonLabel && (
                 <Button
                   id={index}
                   items={item}
-                  buttonLabel={item.buttonLabel}
+                  buttonLabel={
+                    this.state.items.includes(index)
+                      ? "Read Less"
+                      : item.buttonLabel
+                  }
                   buttonIcon={item.buttonIcon}
                   settings={settings}
                   handleButton={this.handleShowText.bind(this)}

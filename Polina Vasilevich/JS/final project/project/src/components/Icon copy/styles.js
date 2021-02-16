@@ -18,6 +18,7 @@ const setFormIcon = (formIcon) => {
     case "circle":
       return `
               border-radius: 50%;
+              margin: 0 auto;
             `;
     case "rectangle":
       return `      
@@ -56,7 +57,6 @@ export const IconContainer = styled.div`
   ${(props) =>
     props.multicoloredIcon && `background-color: ${props.multicoloredIcon};`}
 
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,6 +112,12 @@ const setFontSizeIcon = (fontSizeIcon) => {
       return `
         font-size: 72px;
       `;
+
+    case "button":
+      return `
+          font-size: 14px;
+          margin-right: 10px;
+        `;
 
     default:
       return `

@@ -128,7 +128,12 @@ class Home extends React.Component {
           isLine
         />
         <TwoColumnSection
-          sizeContainers="45% 55%"
+          settings={{
+            paddingLeftRight: "none",
+            paddingTop: "0",
+            paddingBottom: "0",
+            sizeContainers: "45% 55%",
+          }}
           firstItem={
             <FirstItemForService
               items={servicesItems.leftContent}
@@ -145,7 +150,7 @@ class Home extends React.Component {
                 typeButton: "link",
                 colorTextButton: "blue",
                 paddingLeftRight: "small",
-                gridGap: "8%",
+                gridGap: "10px",
                 widthImg: "64px",
               }}
             />
@@ -169,7 +174,12 @@ class Home extends React.Component {
         />
 
         <TwoColumnSection
-          sizeContainers="55% 45%"
+          settings={{
+            paddingLeftRight: "none",
+            paddingTop: "0",
+            paddingBottom: "0",
+            sizeContainers: "55% 45%",
+          }}
           firstItem={<Articles items={businessItems.leftContent} />}
           secondItem={
             <Percents
@@ -196,6 +206,7 @@ class Home extends React.Component {
             backgroundColorMainContainer: "dark",
             colorTitle: "#fff",
             colorText: "grey",
+            widthButton: "form",
           }}
         />
 

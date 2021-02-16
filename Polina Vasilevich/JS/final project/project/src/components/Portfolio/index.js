@@ -2,6 +2,7 @@ import React from "react";
 import MainContainer from "../MainContainer";
 import Photos from "../Photos";
 import Typography from "../Typography";
+import Button from "../Button";
 import IconsList from "../IconsList";
 
 class Portfolio extends React.Component {
@@ -29,6 +30,11 @@ class Portfolio extends React.Component {
             widthItemGridContainer: "100px",
           }}
         />
+        {/* {items.icons.map((icon) => {
+          return (
+            <Button buttonIcon={icon} settings={{ widthButton: "blog" }} />
+          );
+        })} */}
       </>
     );
     return <MainContainer contentContainer={contentContainer} />;

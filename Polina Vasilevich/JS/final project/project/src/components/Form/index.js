@@ -19,19 +19,6 @@ class FormComponent extends React.Component {
 
   handleClick(e) {
     e.preventDefault();
-
-    // fetch("https://jsonplaceholder.typicode.com/todos/1", {
-    //   method: "POST",
-    //   headers: {
-    //     Accept: "application/json",
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({
-    //     firstParam: this.state.name,
-    //     secondParam: this.state.password,
-    //   }),
-    // });
-
     fetch("https://jsonplaceholder.typicode.com/posts", {
       method: "POST",
       body: JSON.stringify({
@@ -42,39 +29,65 @@ class FormComponent extends React.Component {
       },
     })
       .then((response) => response.json())
+      .then((data) => {
+        console.log("Request succeeded with JSON response", data);
+      })
+      .catch((error) => {
+        console.log("Request failed", error);
+      });
 
-      .then((json) => console.log(json))
-      .then(() => this.setState({ name: "" }));
-
-    // fetch("https://jsonplaceholder.typicode.com/posts", {
-    //   method: "GET",
-    //   headers: { "Content-type": "application/json;charset=UTF-8" },
-    // })
-    //   .then((response) => response.json())
-    //   .then((json) => console.log(json))
-    //   .catch((err) => console.log(err));
+    document.querySelectorAll("input").forEach((input) => {
+      if (input.value) {
+        input.value = "";
+        this.setState((prevState) => ({
+          ...prevState,
+          [input.name]: "",
+        }));
+      }
+    });
   }
 
-  // handleInput = (event) => {
-  //   const { value, name } = event.currentTarget;
-  //   this.setState(({ data, errors }) => ({
-  //     data: {
-  //       ...data,
-  //       [name]: value,
-  //     },
-  //     errors: {
-  //       ...errors,
-  //       [name]: "",
-  //     },
-  //   }));
-  // };
+  //   // fetch("https://jsonplaceholder.typicode.com/todos/1", {
+  //   //   method: "POST",
+  //   //   headers: {
+  //   //     Accept: "application/json",
+  //   //     "Content-Type": "application/json",
+  //   //   },
+  //   //   body: JSON.stringify({
+  //   //     firstParam: this.state.name,
+  //   //     secondParam: this.state.password,
+  //   //   }),
+  //   // });
+
+  //   // fetch("https://jsonplaceholder.typicode.com/posts", {
+  //   //   method: "GET",
+  //   //   headers: { "Content-type": "application/json;charset=UTF-8" },
+  //   // })
+  //   //   .then((response) => response.json())
+  //   //   .then((json) => console.log(json))
+  //   //   .catch((err) => console.log(err));
+  // }
+
+  // // handleInput = (event) => {
+  // //   const { value, name } = event.currentTarget;
+  // //   this.setState(({ data, errors }) => ({
+  // //     data: {
+  // //       ...data,
+  // //       [name]: value,
+  // //     },
+  // //     errors: {
+  // //       ...errors,
+  // //       [name]: "",
+  // //     },
+  // //   }));
+  // // };
 
   render() {
-    const { input, select, buttonIcon, buttonLabel } = this.props.items;
-    const settings = this.props;
+    const { inputs, select, buttonIcon, buttonLabel } = this.props.items;
+    const { settings } = this.props;
     const contentContainer = (
-      <Form onChange={this.handleChange}>
-        {input.map(({ type, placeholder, name }) => {
+      <Form onChange={this.handleChange} {...settings}>
+        {inputs.map(({ type, placeholder, name }) => {
           return (
             <ItemFrom
               type={type}
@@ -98,7 +111,7 @@ class FormComponent extends React.Component {
           buttonLabel={buttonLabel}
           buttonIcon={buttonIcon}
           handleButton={this.handleClick.bind(this)}
-          settings={{ widthButton: "form" }}
+          settings={settings}
         />
 
         <Info>All fields are required</Info>
@@ -110,7 +123,7 @@ class FormComponent extends React.Component {
         isTitle
         items={this.props.items}
         contentContainer={contentContainer}
-        {...settings}
+        settings={settings}
       />
     );
   }

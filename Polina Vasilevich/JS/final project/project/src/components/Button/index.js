@@ -1,6 +1,7 @@
 import React from "react";
-import { Button, Icon } from "./styles";
-import { setHandleButton } from "./handlers";
+import { Button } from "./styles";
+
+import { Icon } from "../Icon copy/styles";
 class ButtonComponent extends React.Component {
   render() {
     const {
@@ -20,7 +21,9 @@ class ButtonComponent extends React.Component {
         value={link}
         id={id}
       >
-        {buttonIcon && <Icon className={buttonIcon}></Icon>}
+        {buttonIcon && (
+          <Icon className={buttonIcon} fontSizeIcon="button"></Icon>
+        )}
         {buttonLabel}
       </Button>
     );

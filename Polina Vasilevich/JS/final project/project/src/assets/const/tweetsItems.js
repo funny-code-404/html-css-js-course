@@ -108,49 +108,79 @@ const tweetsItems = {
   },
 
   asideItems: {
-    items: [
-      {
-        img: img1,
-        title: "Brian Alvarado",
-        text: "June, 25th 2020",
-      },
-      {
-        img: img1,
-        title: "Brian Alvarado",
-        text: "June, 25th 2020",
-      },
-      {
-        img: img1,
-        title: "Brian Alvarado",
-        text: "June, 25th 2020",
-      },
-      {
-        img: img1,
-        title: "Brian Alvarado",
-        text: "June, 25th 2020",
-      },
-      {
-        img: img1,
-        title: "Brian Alvarado",
-        text: "June, 25th 2020",
-      },
-    ],
+    posts: {
+      title: "POPULAR POST",
+      items: [
+        {
+          img: img1,
+          title: "Brian Alvarado",
+          text: "June, 25th 2020",
+        },
+        {
+          img: img1,
+          title: "Brian Alvarado",
+          text: "June, 25th 2020",
+        },
+        {
+          img: img1,
+          title: "Brian Alvarado",
+          text: "June, 25th 2020",
+        },
+        {
+          img: img1,
+          title: "Brian Alvarado",
+          text: "June, 25th 2020",
+        },
+        {
+          img: img1,
+          title: "Brian Alvarado",
+          text: "June, 25th 2020",
+        },
+      ],
+    },
 
-    tags: ["Tech", "Commercial", "Tech", "Commercial", "Tech", "Commercial"],
+    tags: {
+      title: "TRENDING TAGS",
+      items: ["Tech", "Commercial", "Tech", "Commercial", "Tech", "Commercial"],
+    },
 
-    input: [
-      {
-        type: "text",
-        placeholder: "Name",
-      },
+    form: {
+      title: "NEWSLETTER",
+      buttonLabel: "SUBMIT NOW",
+      inputs: [
+        {
+          type: "text",
+          placeholder: "Name",
+        },
 
-      {
-        type: "email",
-        placeholder: "Email",
-      },
-    ],
+        {
+          type: "email",
+          placeholder: "Email",
+        },
+      ],
+    },
 
-    imgs: [img1, img2, img3, img1, img2, img3, img1, img2, img3],
+    photos: {
+      title: "PHOTO FROM UNSPLASH",
+      imgs: [img1, img2, img3, img1, img2, img3, img1, img2, img3],
+    },
+
+    categories: {
+      title: "CATEGORIES",
+      items: [
+        "Design",
+        "Tech",
+        "Strategy",
+        "Read",
+        "Markets",
+        "Life",
+        "Finance",
+      ],
+    },
+    archive: {
+      title: "ARCHIVE",
+      items: ["January", "February", "March", "April", "May", "June"],
+    },
   },
 };
 
