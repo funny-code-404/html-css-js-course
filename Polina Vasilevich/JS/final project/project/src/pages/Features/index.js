@@ -37,11 +37,11 @@ class Features extends React.Component {
         <Introducing
           items={introducingItems}
           settings={{
-            positionContent: "right",
             positionText: "right",
             widthContentContainer: "50%",
-            heightMainContainer: "778px",
+            heightMainContainer: "intro",
             isVerticalCenter: "true",
+            stylesText: "textList",
           }}
         />
 
@@ -57,7 +57,11 @@ class Features extends React.Component {
 
         <TextList
           items={servicesItems.leftContent}
-          settings={{ positionContentContainer: "right", positionText: "left" }}
+          settings={{
+            positionContentContainer: "right",
+            positionText: "left",
+            stylesText: "textList",
+          }}
         />
 
         <Slider

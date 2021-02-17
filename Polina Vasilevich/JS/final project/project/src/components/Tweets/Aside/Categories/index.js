@@ -8,7 +8,12 @@ export default function Categories(props) {
       {items.map((item) => {
         return (
           <div style={{ padding: "5px", borderBottom: "1px solid #EBEBEB" }}>
-            <Title sizeTitle="categories">{item}</Title>
+            <a
+              href="https://qna.habr.com/q/600318"
+              style={{ pointer: "cursor", textDecoration: "none" }}
+            >
+              <Title sizeTitle="categories">{item}</Title>
+            </a>
           </div>
         );
       })}

@@ -94,7 +94,7 @@ const setColorTitle = (colorTitle) => {
 
 export const Title = styled.h2`
   ${generalStyles}
-  margin-top: -7px;
+  // margin-top: -7px;
   // margin-bottom: 15px;
   line-height: 30px;
   ${(props) => setSizeTitle(props.sizeTitle)};
@@ -121,7 +121,7 @@ const setColorSubTitle = (colorSubTitle) => {
 
 export const SubTitle = styled.p`
   ${generalStyles}
-  max-width: 55ch;
+  max-width: 80ch;
 
   font-size: ${(props) =>
     props.fontSizeSubTitle ? props.fontSizeSubTitle : "18px"};
@@ -283,6 +283,77 @@ const setStylesText = (stylesText) => {
       }
      
     `;
+
+    case "numbers":
+      return `
+      ${Title} {
+        font-size: 60px;
+        line-height: 60px;
+        font-weight: 300;
+      }
+     
+    `;
+
+    case "mainTable":
+      return `
+      ${Title} {
+        font-size: 33px;
+        line-height: 30px;
+        font-weight: 300;
+        color: #333333;
+      }
+
+      ${SubTitle} {
+        font-size: 20px;
+        line-height: 36px;
+        font-weight: 300;
+      }
+     
+    `;
+
+    case "table":
+      return `
+      ${Title} {
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 400;
+      }
+      `;
+
+    case "footer":
+      return `
+        ${Title} {
+          font-size: 18px;
+          line-height: 30px;
+          font-weight: 600;
+        }  
+      `;
+
+    case "postAuthor":
+      return `
+      ${Title} {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 600;
+      }  
+      `;
+
+    case "postTitle":
+      return `
+      ${Title} {font-size: 30px;
+      line-height: 50px;
+      font-weight: 300;
+      color: #333333;
+      margin: 20px 0;
+      }`;
+
+    case "tweets":
+      return `
+      ${Title} {font-size: 13px;
+        line-height: 30px;
+        font-weight: 700;
+        letter-spacing: 0.13em;
+      }`;
 
     default:
       return `

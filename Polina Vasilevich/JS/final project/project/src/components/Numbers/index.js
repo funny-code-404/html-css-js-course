@@ -16,7 +16,7 @@ function Numbers(props) {
               settings={{
                 widthLine: "31px",
                 colorText: "white",
-                sizeTitle: "xl",
+                stylesText: "numbers",
                 multicoloredTitle: item.colorTitle,
               }}
             />

@@ -18,7 +18,6 @@ export default function LogosList(props) {
   );
   return (
     <MainContainer
-      isTitle
       items={props.items}
       isVerticalCenter
       contentContainer={contentContainer}

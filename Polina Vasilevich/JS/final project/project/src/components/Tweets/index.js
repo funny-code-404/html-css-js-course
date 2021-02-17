@@ -31,7 +31,10 @@ class TweetsComponent extends React.Component {
                     />
                     <Typography
                       items={info}
-                      settings={{ positionText: "left", sizeTitle: "xs" }}
+                      settings={{
+                        positionText: "left",
+                        stylesText: "postAuthor",
+                      }}
                     />
                   </ContentContainer>
 
@@ -63,7 +66,7 @@ class TweetsComponent extends React.Component {
                       items={content}
                       settings={{
                         positionText: "left",
-                        sizeTitle: "ss",
+                        stylesText: "postTitle",
                         colorTitle: "grey",
                       }}
                     />

@@ -58,6 +58,11 @@ const setColorButton = (colorButton) => {
       return `
       background-color: #f6f7f8;
       border: 1px solid #e6e6e6;
+      margin-left: 10px;
+
+      :hover{
+        color: #000;
+      }
         `;
 
     case "blue":
@@ -81,6 +86,11 @@ const setTypeButton = (typeButton) => {
       border: transparent;
       width: auto !important;
       height: auto !important;
+      margin-right: 15px;
+
+      :hover{
+        color: #4285f4;
+      }
     `;
 
     default:

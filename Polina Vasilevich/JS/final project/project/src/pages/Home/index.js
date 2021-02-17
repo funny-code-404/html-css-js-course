@@ -243,8 +243,8 @@ class Home extends React.Component {
           items={formItems}
           settings={{
             backgroundColorMainContainer: "dark",
-            colorTitle: "#fff",
-            colorText: "grey",
+            // colorTitle: "#fff",
+            // colorText: "grey",
             widthButton: "form",
           }}
         />

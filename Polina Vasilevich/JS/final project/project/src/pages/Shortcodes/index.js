@@ -11,7 +11,7 @@ class Shortcodes extends React.Component {
     return (
       <>
         <IntroSlider title="CONTACT US" subTitle="Dream Big. Think Different" />
-        <Form items={formItems} />
+        <Form items={formItems} settings={{ widthButton: "form" }} />
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"

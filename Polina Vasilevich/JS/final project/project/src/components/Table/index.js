@@ -16,7 +16,13 @@ export default function Table(props) {
       {items.map((item) => {
         return (
           <PriceContainer key={item.title}>
-            <Typography items={item} isLine />
+            <Typography
+              items={item}
+              isLine
+              settings={{
+                stylesText: "mainTable",
+              }}
+            />
             <InfoContainer>
               <TextContainer>
                 {item.list.map((elem) => {
@@ -25,7 +31,7 @@ export default function Table(props) {
                       <Typography
                         items={elem}
                         settings={{
-                          sizeTitle: "xs",
+                          stylesText: "table",
                         }}
                         icon={item.icon}
                       />

@@ -34,6 +34,7 @@ class FooterComponent extends React.Component {
                 colorTitle: "white",
                 colorText: "grey",
                 positionText: "left",
+                stylesText: "footer",
               }}
             />
           );

@@ -53,7 +53,7 @@ export default function Aside(props) {
       <Form
         items={form}
         settings={{
-          sizeTitle: "tweets",
+          stylesText: "tweets",
           paddingLeftRight: "none",
           paddingTop: "0",
           paddingBottom: "40px",

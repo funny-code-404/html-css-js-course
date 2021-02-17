@@ -14,7 +14,7 @@ import LogosList from "../../components/LogosList";
 import iconList2 from "../../assets/const/iconList2";
 import textListItems from "../../assets/const/servicesItems";
 import businessItems from "../../assets/const/businessItems";
-import logosItems from "../../assets/const/partnersItems";
+import logosItems from "../../assets/const/demos/logos";
 import slider3Items from "../../assets/const/slider3";
 
 class Demos extends React.Component {
@@ -34,12 +34,17 @@ class Demos extends React.Component {
             colorIcon: "gradient",
             positionText: "left",
             positionIcons: "left",
+            gridGap: "3%",
           }}
         />
 
         <TextList
           items={textListItems.leftContent}
-          settings={{ positionContentContainer: "right", positionText: "left" }}
+          settings={{
+            positionContentContainer: "right",
+            positionText: "left",
+            stylesText: "textList",
+          }}
         />
 
         <CallToAction
@@ -55,16 +60,20 @@ class Demos extends React.Component {
 
         <TwoColumnSection
           settings={{
-            sizeContainers: "45% 55%",
             paddingLeftRight: "none",
             paddingTop: "0",
             paddingBottom: "0",
+
+            sizeContainers: "40% 60%",
           }}
           firstItem={
             <Percents
               items={businessItems.rightContent}
               settings={{
                 positionText: "left",
+                colorTitle: "white",
+                stylesText: "textList",
+                paddingLeftRight: "small",
               }}
             />
           }
@@ -82,8 +91,11 @@ class Demos extends React.Component {
           items={logosItems}
           oneString
           settings={{
-            backgroundColorMainContainer: "logos",
             heightMainContainer: "callTo",
+            paddingBottom: "20px",
+            paddingTop: "20px",
+            paddingLeftRight: "small",
+            backgroundColorMainContainer: "dark",
           }}
         />
       </>
