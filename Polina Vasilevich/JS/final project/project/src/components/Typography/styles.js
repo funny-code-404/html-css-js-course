@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Button } from "../Button/styles";
 
 const generalStyles = css`
   font-family: OpenSans;
@@ -99,7 +100,8 @@ export const Title = styled.h2`
   ${(props) => setSizeTitle(props.sizeTitle)};
   ${(props) => setColorTitle(props.colorTitle)};
 
-  ${(props) => props.multicoloredTitle && `color: ${props.multicoloredTitle}`}
+  ${(props) =>
+    props.multicoloredTitle && `color: ${props.multicoloredTitle} !important;`}
 `;
 
 const setColorSubTitle = (colorSubTitle) => {
@@ -146,7 +148,7 @@ const setColorText = (colorText) => {
 
 export const Text = styled.p`
   ${generalStyles}
-  margin-bottom: 15px;
+  // margin-bottom: 15px;
   font-size: 14px;
   line-height: 30px;
   font-weight: 400;
@@ -231,36 +233,44 @@ const setStylesText = (stylesText) => {
         line-height: 30px;
         font-weight: 600;
         color: #333333;
+        margin-bottom: 15px;
       }
       ${Text} {
         font-size: 14px;
         line-height: 30px;
         font-weight: 400;
         color: #575757;
+        margin-bottom: 15px;
       }
 
     `;
 
-    case "mainTitle":
+    case "textList":
       return `
       ${Title} {
         font-size: 36px;
         line-height: 30px;
         font-weight: 300;
         color: #333333;
+        margin: 20px 0;
       }
       ${SubTitle} {
         font-size: 18px;
         line-height: 36px;
         font-weight: 300;
         color: #999999;
+        margin-bottom: 10px;
       }
       ${Text} {
         font-size: 14px;
         line-height: 30px;
         font-weight: 400;
         color: #575757;
+        // margin-bottom: 15px;
       }
+
+    
+
     `;
 
     case "Button":
@@ -275,6 +285,23 @@ const setStylesText = (stylesText) => {
     `;
 
     default:
-      break;
+      return `
+      ${Title} {
+        font-size: 36px;
+        line-height: 30px;
+        font-weight: 300;
+        color: #333333;
+        margin-bottom: 20px;
+        margin-top: 10px;
+      }
+      ${SubTitle} {
+        font-size: 18px;
+        line-height: 36px;
+        font-weight: 300;
+        color: #999999;
+        margin-bottom: 87px;
+      }
+
+    `;
   }
 };

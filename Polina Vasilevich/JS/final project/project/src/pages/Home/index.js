@@ -22,7 +22,7 @@ import FirstItemForService from "../../components/Services/TextList";
 import servicesItems from "../../assets/const/servicesItems";
 
 import Percents from "../../components/PercentsBlock";
-
+import LogosList from "../../components/LogosList";
 import Video from "../../components/VideoComponent";
 import videoItems from "../../assets/const/videoItems";
 
@@ -63,6 +63,8 @@ class Home extends React.Component {
             colorIconContainer: "gradient",
             sizeIconContainer: "middle",
             widthItemGridContainer: "270px",
+
+            gridGap: "3%",
           }}
         />
 
@@ -73,6 +75,7 @@ class Home extends React.Component {
             widthContentContainer: "50%",
             heightMainContainer: "intro",
             isVerticalCenter: "true",
+            stylesText: "textList",
           }}
         />
 
@@ -114,6 +117,7 @@ class Home extends React.Component {
             colorIcon: "gradient",
             positionText: "left",
             positionIcons: "left",
+            gridGap: "3%",
           }}
         />
 
@@ -126,6 +130,7 @@ class Home extends React.Component {
             positionContentContainer: "right",
             isVerticalCenter: "true",
             heightMainContainer: "intro",
+            stylesText: "textList",
           }}
         />
         <Numbers items={numbersItems} />
@@ -141,7 +146,7 @@ class Home extends React.Component {
             paddingLeftRight: "none",
             paddingTop: "0",
             paddingBottom: "0",
-            sizeContainers: "45% 55%",
+            sizeContainers: "40% 55%",
           }}
           firstItem={
             <FirstItemForService
@@ -149,6 +154,9 @@ class Home extends React.Component {
               settings={{
                 backgroundColorMainContainer: "dark",
                 paddingLeftRight: "small",
+                positionContentContainer: "left",
+                positionText: "left",
+                stylesText: "textList",
               }}
             />
           }
@@ -159,15 +167,20 @@ class Home extends React.Component {
                 typeButton: "link",
                 colorTextButton: "blue",
                 paddingLeftRight: "small",
-                gridGap: "10px",
+                gridGap: "5%",
                 widthImg: "64px",
               }}
             />
           }
         />
 
-        <Partners items={partnersItems} heightMainContainer="1277px" />
-
+        <LogosList
+          items={partnersItems}
+          settings={{
+            heightMainContainer: "logos",
+          }}
+          backgroundImg={partnersItems.backgroundImg}
+        />
         <PricingTables items={pricingTables} buttonLabel="GET STARTED NOW" />
 
         {/* <Video items={videoItems}/> */}
@@ -187,7 +200,8 @@ class Home extends React.Component {
             paddingLeftRight: "none",
             paddingTop: "0",
             paddingBottom: "0",
-            sizeContainers: "55% 45%",
+
+            sizeContainers: "60% 40%",
           }}
           firstItem={<Articles items={businessItems.leftContent} />}
           secondItem={
@@ -197,6 +211,8 @@ class Home extends React.Component {
                 backgroundColorMainContainer: "dark",
                 positionText: "left",
                 colorTitle: "white",
+                stylesText: "textList",
+                paddingLeftRight: "small",
               }}
             />
           }

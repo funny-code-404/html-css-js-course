@@ -25,7 +25,7 @@ const setWidthButton = (widthButton) => {
       return `width: 221px;`;
 
     case "form":
-      return `width: 30vw;`;
+      return `width: 26vw;`;
 
     case "tweets":
       return `width: 20vw;`;
@@ -112,7 +112,7 @@ const setColorTextButton = (colorTextButton) => {
 };
 
 export const Button = styled.button`
-  // margin-right: 10px;
+  margin-top: 15px;
   display: inline-block;
   ${(props) => setWidthButton(props.widthButton)};
   height: 55px;

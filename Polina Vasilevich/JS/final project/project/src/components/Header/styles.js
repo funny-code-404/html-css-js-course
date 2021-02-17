@@ -10,7 +10,7 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 40px;
   font-size: 13px;
 `;
 
@@ -33,8 +33,4 @@ export const LogoText = styled.h2`
   color: #1c1c1c;
 `;
 
-export const Navigation = styled.nav`
-`;
-
-
-
+export const Navigation = styled.nav``;

@@ -13,7 +13,7 @@ const setSizeInput = (sizeInput) => {
 
     default:
       return `
-        width: 30vw;
+        width: 26vw;
         height: 61px;
 
       `;

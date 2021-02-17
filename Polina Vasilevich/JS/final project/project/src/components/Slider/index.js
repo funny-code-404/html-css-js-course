@@ -177,6 +177,7 @@ class Slider extends React.Component {
           paddingTop: "0",
           paddingBottom: "0",
           paddingLeftRight: "none",
+          heightMainContainer: "slider",
         }}
       />
     );

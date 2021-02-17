@@ -3,7 +3,7 @@ import MainContainer from "../MainContainer";
 
 export default function LogosList(props) {
   const { imgs } = props.items;
-  const { oneString, settings } = props;
+  const { oneString, settings, backgroundImg } = props;
 
   const contentContainer = (
     <FlexContainer oneString={oneString}>
@@ -17,6 +17,13 @@ export default function LogosList(props) {
     </FlexContainer>
   );
   return (
-    <MainContainer contentContainer={contentContainer} settings={settings} />
+    <MainContainer
+      isTitle
+      items={props.items}
+      isVerticalCenter
+      contentContainer={contentContainer}
+      backgroundImg={backgroundImg}
+      settings={settings}
+    />
   );
 }

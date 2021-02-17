@@ -7,7 +7,7 @@ const setBackgroundColorMainContainer = (backgroundColorMainContainer) => {
       return `
               background-color: #1F252F;
               ${Title} {
-                color: #ffffff;
+                color: #ffffff ;
               }
               ${SubTitle} {
                 color: #b9b9b9;
@@ -63,8 +63,14 @@ const setHeightMainContainer = (heightMainContainer) => {
     case "numbers":
       return `height: 280px;`;
 
+    case "logos":
+      return `height: 1277px;`;
+
     case "tweets":
       return `height: fit-content;`;
+
+    case "slider":
+      return `height: 994px;`;
 
     default:
       return `height: 100%;`;
@@ -100,8 +106,13 @@ const setPaddingLeftRight = (paddingLeftRight) => {
     case "deletePadding":
       return `
                 padding:0;
-
                 `;
+
+    case "iconsList":
+      return `
+        padding-top: 88px;
+        padding-bottom: 105px;
+      `;
     default:
       return `
             padding-right: 19%;
@@ -113,9 +124,9 @@ const setPaddingLeftRight = (paddingLeftRight) => {
 export const Wrapper = styled.div`
   ${(props) => setPaddingLeftRight(props.paddingLeftRight)};
   ${(props) => props.deletePadding && ``}
-  padding-top: ${(props) => (props.paddingTop ? props.paddingTop : "100px")};
+  padding-top: ${(props) => (props.paddingTop ? props.paddingTop : "88px")};
   padding-bottom: ${(props) =>
-    props.paddingBottom ? props.paddingBottom : "100px"};
+    props.paddingBottom ? props.paddingBottom : "105px"};
 
   ${(props) => props.deletePadding && `padding 0 !important;`}
 `;

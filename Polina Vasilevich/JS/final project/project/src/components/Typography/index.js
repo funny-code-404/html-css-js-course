@@ -10,15 +10,9 @@ import {
 } from "./styles";
 
 class TextComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showText: "false",
-    };
-  }
-
   render() {
     const { settings, isLine } = this.props;
+
     const {
       title,
       subTitle,
@@ -36,7 +30,7 @@ class TextComponent extends React.Component {
           )}
           {title}
         </Title>
-        {isLine && <Line {...settings}></Line>}
+        {this.props.isLine && <Line {...settings}></Line>}
 
         {subTitle && <SubTitle {...settings}>{subTitle}</SubTitle>}
 

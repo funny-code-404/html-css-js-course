@@ -23,13 +23,11 @@ class IconComponent extends React.Component {
       this.setState({
         items: items,
       });
-      console.log("+", items);
     } else {
       items.splice(items.indexOf(+e.target.id), 1);
       this.setState({
         items: items,
       });
-      console.log("-", items);
     }
   }
 

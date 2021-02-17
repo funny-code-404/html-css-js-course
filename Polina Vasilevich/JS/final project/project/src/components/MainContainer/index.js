@@ -15,7 +15,14 @@ export default function MainContainerComponent(props) {
   return (
     <MainContainer {...settings} backgroundImg={backgroundImg}>
       <Wrapper {...settings} deletePadding={deletePadding}>
-        {isTitle && <Typography isLine items={items} settings={settings} />}
+        {isTitle && (
+          <Typography
+            isLine
+            items={items}
+            settings={settings}
+            stylesText="main"
+          />
+        )}
         {contentContainer}
       </Wrapper>
     </MainContainer>
