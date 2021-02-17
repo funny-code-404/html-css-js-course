@@ -181,25 +181,3 @@ export const Img = styled.div`
   background-image: ${(props) =>
     props.backgroundImg ? `url(${props.backgroundImg})` : ""};
 `;
-
-// const setPositionIcons = (positionIcons) => {
-//   switch (positionIcons) {
-//     case "center":
-//       return `
-//         ${ContentContainer} {
-//           text-align: center;
-//         }
-//       `;
-
-//     case "left":
-//       return `
-//         display: flex;
-//         ${IconContainer} {
-//             align-items: start;
-//             margin-right: 20px;
-//         }
-//         `;
-//     default:
-//       break;
-//   }
-// };

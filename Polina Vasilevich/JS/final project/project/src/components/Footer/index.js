@@ -3,6 +3,7 @@ import MainContainer from "../MainContainer";
 import { GridContainer, FlexContainer } from "../../mainStyles";
 import { Icon, Img, IconContainer } from "../Icon copy/styles";
 import Typography from "../Typography";
+import { Text } from "../Typography/styles";
 import Button from "../Button";
 
 class FooterComponent extends React.Component {
@@ -48,12 +49,22 @@ class FooterComponent extends React.Component {
         <div>
           {copyRight.icons.map((icon) => {
             return (
-              // <Icon
-              //   className={icon}
-              //   fontSizeIcon="s"
-              //   style={{ padding: "0 20px", opacity: "0.5" }}
-              // ></Icon>
-              <Button buttonIcon={icon} settings={{ typeButton: "link" }} />
+              <a
+                href="https://qna.habr.com/q/600318"
+                style={{ textDecoration: "none" }}
+              >
+                <Icon
+                  className={icon}
+                  fontSizeIcon="s"
+                  style={{
+                    padding: "0 30px",
+                    opacity: "0.5",
+                    cursor: "pointer",
+                  }}
+                ></Icon>
+              </a>
+
+              // <Button buttonIcon={icon} settings={{ typeButton: "link" }} />
             );
           })}
         </div>

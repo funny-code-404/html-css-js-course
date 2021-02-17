@@ -179,6 +179,7 @@ class Home extends React.Component {
           settings={{
             heightMainContainer: "logos",
           }}
+          isTitle
           backgroundImg={partnersItems.backgroundImg}
         />
         <PricingTables items={pricingTables} buttonLabel="GET STARTED NOW" />

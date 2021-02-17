@@ -53,6 +53,7 @@ const setColorButton = (colorButton) => {
       return `
               background-color: transparent;
               border: 1px solid #fff;
+              margin-left: 10px;
             `;
     case "grey":
       return `

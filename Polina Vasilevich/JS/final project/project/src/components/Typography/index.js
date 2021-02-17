@@ -24,12 +24,14 @@ class TextComponent extends React.Component {
 
     return (
       <TextContainer {...settings}>
-        <Title {...settings}>
-          {iconTitle && (
-            <i className={iconTitle} style={{ color: "#9bcb5b" }}></i>
-          )}
-          {title}
-        </Title>
+        {title && (
+          <Title {...settings}>
+            {iconTitle && (
+              <i className={iconTitle} style={{ color: "#9bcb5b" }}></i>
+            )}
+            {title}
+          </Title>
+        )}
         {this.props.isLine && <Line {...settings}></Line>}
 
         {subTitle && <SubTitle {...settings}>{subTitle}</SubTitle>}
