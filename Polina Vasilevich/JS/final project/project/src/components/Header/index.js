@@ -20,13 +20,27 @@ class HeaderComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentPage: +0,
+      currentPageId: 0,
     };
   }
 
   handleClick = (e) => {
+    // const newLink = document.getElementById(e.target.id);
+    // this.setState((prevState) => {
+    //   if (this.state.currentIdPage === e.target.id) {
+    //     newLink.classList.add("active");
+    //   }
+    // });
+
     this.setState({
-      currentIdPage: +e.target.id,
+      currentPageId: +e.target.id,
+    });
+    console.dir(window.location.pathname);
+  };
+
+  handleChange = (e) => {
+    this.setState({
+      currentPageId: +e.target.id,
     });
   };
 
@@ -39,22 +53,25 @@ class HeaderComponent extends React.Component {
           <LogoText>{textLogo}</LogoText>
         </LogoContainer>
         <Navigation>
-          <List
-            id="headerList"
-            onClick={this.handleClick}
-            onChange={console.log(1)}
-          >
+          <List id="headerList" onClick={this.handleClick}>
             {routes.map(({ path, label }, index) => {
               return (
                 <ListItem key={path}>
-                  <Link
-                    id={index}
-                    className="link"
-                    to={path}
-                    style={{ color: "red" }}
-                  >
-                    {label}
-                  </Link>
+                  {window.location.pathname === path ? (
+                    <Link
+                      id={index}
+                      className="link"
+                      style={{ color: "#4285F4" }}
+                      to={path}
+                      onChange={this.handleChange}
+                    >
+                      {label}
+                    </Link>
+                  ) : (
+                    <Link id={index} className="link" to={path}>
+                      {label}
+                    </Link>
+                  )}
                 </ListItem>
               );
             })}

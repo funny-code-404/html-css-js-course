@@ -411,6 +411,18 @@ const setStylesText = (stylesText) => {
         color: #ffffff;
       }
     `;
+    case "percentBasic":
+      return `
+      ${Title} {
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: 400;
+        margin-top: 50px;
+        margin-bottom: 15px;
+      }
+
+    `;
+
     default:
       return `
       ${Title} {

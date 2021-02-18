@@ -68,7 +68,7 @@ class Features extends React.Component {
           items={slider3Items}
           id="slider3"
           isDots
-          fontSizeTitle="m"
+          stylesText="basicSlider"
           isLine
         />
 

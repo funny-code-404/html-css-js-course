@@ -32,6 +32,26 @@ const setBackgroundColorMainContainer = (backgroundColorMainContainer) => {
               }
           `;
 
+    case "grey":
+      return `background-color:#f6f7f8;
+              // ${Title} {
+              //   color: #ffffff ;
+              // }
+              // ${SubTitle} {
+              //   color: #b9b9b9;
+              // }
+              // ${Text} {
+              //   color: #cccccc;
+              // } 
+              // ${Button} {
+              //   background-color:#37ceff;
+              //   border: 1px solid #fff;
+              // }
+                `;
+
+    case "footer":
+      return `background-color: #242427;`;
+
     case "copyRight":
       return `background-color:#1A1A1D;`;
 

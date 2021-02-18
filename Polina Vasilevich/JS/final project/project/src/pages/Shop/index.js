@@ -28,13 +28,16 @@ class Shop extends React.Component {
           }}
         />
 
-        <Portfolio items={portfolioItems} />
+        <Portfolio
+          items={portfolioItems}
+          settings={{ paddingTop: "0", paddingBottom: "0" }}
+        />
 
         <Slider
           items={slider2Items}
           id="slider2"
           isDots
-          fontSizeTitle="m"
+          stylesText="basicSlider"
           isLine
         />
         <MainContainer

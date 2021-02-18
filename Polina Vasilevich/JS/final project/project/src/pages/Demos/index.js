@@ -74,6 +74,7 @@ class Demos extends React.Component {
                 colorTitle: "white",
                 stylesText: "textList",
                 paddingLeftRight: "small",
+                backgroundColorMainContainer: "grey",
               }}
             />
           }
@@ -84,9 +85,10 @@ class Demos extends React.Component {
           items={slider3Items}
           id="slider3"
           isDots
-          fontSizeTitle="m"
+          stylesText="basicSlider"
           isLine
         />
+
         <LogosList
           items={logosItems}
           oneString

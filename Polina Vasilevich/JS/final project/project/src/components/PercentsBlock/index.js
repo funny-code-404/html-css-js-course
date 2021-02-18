@@ -18,7 +18,7 @@ class Percents extends React.Component {
                 items={item}
                 settings={{
                   positionText: "left",
-                  sizeTitle: "s",
+                  stylesText: "percentBasic",
                 }}
               ></Typography>
               <PercentsContainer {...settings}>

@@ -7,7 +7,7 @@ import IconsList from "../IconsList";
 
 class Portfolio extends React.Component {
   render() {
-    const { items } = this.props;
+    const { items, settings } = this.props;
     const contentContainer = (
       <>
         <Photos
@@ -19,7 +19,10 @@ class Portfolio extends React.Component {
         />
         <Typography
           items={items}
-          settings={{ positionText: "left", sizeTitle: "s" }}
+          settings={{
+            positionText: "left",
+            sizeTitle: "s",
+          }}
         />
         <IconsList
           items={items.icons}
@@ -28,6 +31,8 @@ class Portfolio extends React.Component {
             formIcons: "rectangle",
             fontSizeIcon: "xs",
             widthItemGridContainer: "100px",
+            paddingTop: "30px",
+            paddingBottom: "50px",
           }}
         />
         {/* {items.icons.map((icon) => {
@@ -37,7 +42,9 @@ class Portfolio extends React.Component {
         })} */}
       </>
     );
-    return <MainContainer contentContainer={contentContainer} />;
+    return (
+      <MainContainer settings={settings} contentContainer={contentContainer} />
+    );
   }
 }
 export default Portfolio;

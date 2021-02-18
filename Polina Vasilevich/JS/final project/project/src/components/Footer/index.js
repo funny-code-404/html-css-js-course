@@ -76,7 +76,7 @@ class FooterComponent extends React.Component {
         <MainContainer
           contentContainer={firstContentContainer}
           settings={{
-            backgroundColorMainContainer: "dark",
+            backgroundColorMainContainer: "footer",
             heightMainContainer: "100%",
           }}
         />
