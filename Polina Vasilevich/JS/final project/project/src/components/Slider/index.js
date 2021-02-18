@@ -78,15 +78,7 @@ class Slider extends React.Component {
 
   render() {
     const { imgs, buttonLabel } = this.props.items;
-    const {
-      id,
-      isDots,
-      isArrows,
-      items,
-      sizeTitle,
-      isLine,
-      typeHandle,
-    } = this.props;
+    const { id, isDots, isArrows, items, isLine, stylesText } = this.props;
     const contentContainer = (
       <SlidersContainer id={id}>
         {imgs.map((img, index) => {
@@ -104,13 +96,13 @@ class Slider extends React.Component {
                     transform: "translate(-50%, -50%)",
                   }}
                 >
-                  {items.title && (
+                  {(items.title || items.subTitle) && (
                     <Typography
                       items={items}
                       isLine={isLine}
                       settings={{
                         colorTitle: "white",
-                        sizeTitle: `'${sizeTitle}'`,
+                        stylesText: `${stylesText}`,
                         fontSizeSubTitle: "30px ",
                         colorSubTitle: "white",
                         colorText: "#fff",

@@ -17,9 +17,21 @@ import {
 import "./styles.css";
 
 class HeaderComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentPage: +0,
+    };
+  }
+
+  handleClick = (e) => {
+    this.setState({
+      currentIdPage: +e.target.id,
+    });
+  };
+
   render() {
     const { routes, logo, textLogo } = this.props;
-
     const contentContainer = (
       <FlexContainer heightFlexContainer="header">
         <LogoContainer>
@@ -27,11 +39,20 @@ class HeaderComponent extends React.Component {
           <LogoText>{textLogo}</LogoText>
         </LogoContainer>
         <Navigation>
-          <List>
-            {routes.map(({ path, label }) => {
+          <List
+            id="headerList"
+            onClick={this.handleClick}
+            onChange={console.log(1)}
+          >
+            {routes.map(({ path, label }, index) => {
               return (
                 <ListItem key={path}>
-                  <Link className="link" to={path}>
+                  <Link
+                    id={index}
+                    className="link"
+                    to={path}
+                    style={{ color: "red" }}
+                  >
                     {label}
                   </Link>
                 </ListItem>

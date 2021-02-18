@@ -52,7 +52,7 @@ class Home extends React.Component {
           id="slider1"
           isDots
           isArrows
-          sizeTitle="xl"
+          stylesText="bigSlider"
         />
 
         <IconsList
@@ -138,7 +138,7 @@ class Home extends React.Component {
           items={slider2Items}
           id="slider2"
           isDots
-          fontSizeTitle="m"
+          stylesText="basicSlider"
           isLine
         />
         <TwoColumnSection
@@ -222,7 +222,7 @@ class Home extends React.Component {
           items={slider3Items}
           id="slider3"
           isDots
-          fontSizeTitle="m"
+          stylesText="basicSlider"
           isLine
         />
 
@@ -244,8 +244,6 @@ class Home extends React.Component {
           items={formItems}
           settings={{
             backgroundColorMainContainer: "dark",
-            // colorTitle: "#fff",
-            // colorText: "grey",
             widthButton: "form",
           }}
         />

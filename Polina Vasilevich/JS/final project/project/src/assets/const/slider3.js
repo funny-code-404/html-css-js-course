@@ -6,9 +6,9 @@ import img5 from "../img/portfolio/scott-graham-5fNmWej4tAA-unsplash.jpg";
 import img6 from "../img/portfolio/ux-store-jJT2r2n7lYA-unsplash.jpg";
 
 const sliderItems = {
-  title: "Check this Premium #WordPress #Theme 'TheFox | Ultimate Multi-Purpose WP' by @tranmautritam on #themeforest!!! http://bit.ly/1HmOFSv",
-  text:
-    `TRANMAUTRITAM
+  subTitle:
+    "Check this Premium #WordPress #Theme 'TheFox | Ultimate Multi-Purpose WP' by @tranmautritam on #themeforest!!! http://bit.ly/1HmOFSv",
+  text: `TRANMAUTRITAM
      59 mins ago`,
   imgs: [img1, img2, img3, img4, img5, img6],
 };

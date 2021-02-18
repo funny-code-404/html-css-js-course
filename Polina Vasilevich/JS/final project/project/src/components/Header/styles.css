@@ -9,3 +9,7 @@
   color: #333333;
   text-decoration: none;
 }
+
+.active {
+  color: red;
+}

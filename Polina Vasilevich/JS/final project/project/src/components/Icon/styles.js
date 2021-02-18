@@ -119,10 +119,14 @@ const setFontSizeIcon = (fontSizeIcon) => {
 
 export const Icon = styled.i`
   font-family: themify;
-  // line-height: 30px;
+
   font-weight: 400;
   ${(props) => setFontSizeIcon(props.fontSizeIcon)};
   ${(props) => setColorIcon(props.colorIcon)};
+
+  :hover {
+    opacity: 1;
+  }
 `;
 
 const setPositionTextIcons = (positionTextIcons) => {

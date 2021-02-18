@@ -355,6 +355,62 @@ const setStylesText = (stylesText) => {
         letter-spacing: 0.13em;
       }`;
 
+    case "bigSlider":
+      return `
+      ${Title} {
+        font-size: 72px;
+        line-height: 60px;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        color: #ffffff;
+        margin-bottom: 15px;
+      }
+
+      ${SubTitle} {
+        font-size: 36px;
+        line-height: 30px;
+        font-weight: 300;
+        color: #ffffff;
+
+         margin-bottom: 15px;
+      }
+    `;
+
+    case "basicSlider":
+      return `
+      ${SubTitle} {
+        font-size: 30px;
+        line-height: 50px;
+        font-weight: 300;
+        color: #ffffff;
+        margin-bottom: 15px;
+      }
+      ${Text} {
+        color: #ffffff;
+      } 
+    `;
+
+    case "footerLogo":
+      return `
+      ${Title} {
+        // font-family: FuturaPT;
+        font-size: 30px;
+        line-height: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #ffffff;
+        
+      }
+      ${Text} {
+        opacity: 0.5;
+        // font-family: CenturyGothic;
+        font-size: 11px;
+        line-height: 18px;
+        font-weight: 400;
+        letter-spacing: 0.2em;
+        color: #ffffff;
+      }
+    `;
     default:
       return `
       ${Title} {

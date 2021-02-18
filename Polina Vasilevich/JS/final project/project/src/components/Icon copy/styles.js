@@ -60,7 +60,7 @@ export const IconContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 36px;
+  margin-bottom: 20px;
   cursor: pointer;
 `;
 

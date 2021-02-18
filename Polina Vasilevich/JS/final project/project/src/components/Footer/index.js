@@ -3,8 +3,6 @@ import MainContainer from "../MainContainer";
 import { GridContainer, FlexContainer } from "../../mainStyles";
 import { Icon, Img, IconContainer } from "../Icon copy/styles";
 import Typography from "../Typography";
-import { Text } from "../Typography/styles";
-import Button from "../Button";
 
 class FooterComponent extends React.Component {
   render() {
@@ -12,7 +10,13 @@ class FooterComponent extends React.Component {
 
     const firstContentContainer = (
       <GridContainer>
-        <div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
           <IconContainer>
             <Img
               backgroundImg={logo.imgLogo}
@@ -21,10 +25,7 @@ class FooterComponent extends React.Component {
             />
           </IconContainer>
 
-          <Typography
-            items={logo}
-            settings={{ colorTitle: "white", colorText: "grey" }}
-          />
+          <Typography items={logo} settings={{ stylesText: "footerLogo" }} />
         </div>
         {contacts.map((item) => {
           return (
