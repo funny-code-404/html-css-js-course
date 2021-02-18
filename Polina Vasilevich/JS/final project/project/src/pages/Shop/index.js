@@ -5,7 +5,7 @@ import iconList1 from "../../assets/const/iconList1";
 
 import Slider from "../../components/Slider";
 import Slider2 from "../../components/Slider copy";
-import slider2Items from "../../assets/const/slider2";
+import slider2Items from "../../assets/const/slider4";
 
 import Works from "../../components/Works";
 import CallToAction from "../../components/CallToAction";
@@ -42,9 +42,9 @@ class Shop extends React.Component {
         />
         <MainContainer
           items={slider2Items}
+          isTitle
           settings={{
             paddingLeftRight: "none",
-            paddingTop: "0",
             paddingBottom: "0",
           }}
           contentContainer={

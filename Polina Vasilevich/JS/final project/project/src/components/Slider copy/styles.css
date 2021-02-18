@@ -1,9 +1,8 @@
 .slides1 {
-  max-width: 90%;
   position: relative;
-  margin: auto;
+  /* margin: auto; */
   height: 300px;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
 
   display: flex;
   overflow: hidden;
