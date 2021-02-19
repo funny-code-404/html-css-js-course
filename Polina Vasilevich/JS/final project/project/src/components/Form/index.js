@@ -3,13 +3,13 @@ import axios from "axios";
 
 import Button from "../Button";
 import MainContainer from "../MainContainer";
-
+import { Text } from "../Typography/styles";
 import { Form, ItemFrom, Select, Option, Info } from "./styles";
 class FormComponent extends React.Component {
   constructor(props) {
     super(props);
     this.id = props.idForm;
-    this.state = { isValid: false };
+    this.state = { isValid: true };
   }
 
   handleChange = (e) => {
@@ -29,44 +29,55 @@ class FormComponent extends React.Component {
 
   clearForm = () => {
     Array.prototype.forEach.call(this.inputs, (input) => {
-      if (input.value) {
+      if (input.value && input.tagName === "INPUT") {
         input.value = "";
         this.setState((prevState) => ({
           ...prevState,
           [input.name]: "",
         }));
       }
+
+      if (input.value && input.tagName === "SELECT") {
+        input.value = input[0].value;
+        this.setState((prevState) => ({
+          ...prevState,
+          [input.name]: input[0].value,
+        }));
+      }
     });
   };
 
-  // validateForm = () => {
-  //   const notFilledInputs = Array.prototype.filter.call(
-  //     this.inputs,
-  //     (input) => input.required && !input.value
+  // removeClassError = () => {
+  //   Array.prototype.map.call(this.inputs, (input) =>
+  //     input.classList.remove("notValid")
   //   );
-
-  //   const isValid = notFilledInputs.length ? false : true;
-
-  //   this.setState((prevState) => {
-  //     return {
-  //       ...prevState,
-  //       isValid: isValid,
-  //     };
-  //   });
   // };
+
+  validateForm = () => {
+    let isValid = true;
+    Array.prototype.filter.call(this.inputs, (input) => {
+      if (
+        (input.tagName === "INPUT" && !input.value) ||
+        (input.tagName === "SELECT" && input.value === input[0].value)
+      ) {
+        input.classList.add("notValid");
+        isValid = false;
+      } else {
+        input.classList.remove("notValid");
+      }
+    });
+
+    this.setState((prevState) => ({
+      ...prevState,
+      isValid: isValid,
+    }));
+
+    return isValid;
+  };
 
   handleClick(e) {
     e.preventDefault();
-
-    const notFilledInputs = Array.prototype.filter.call(
-      this.inputs,
-      (input) => input.required && !input.value
-    );
-
-    const isValid = notFilledInputs.length ? false : true;
-
-    this.inputs.map((input) => input.classList.remove("notValid"));
-    if (isValid) {
+    if (this.validateForm()) {
       this.clearForm();
       axios
         .post("https://jsonplaceholder.typicode.com/posts", {
@@ -76,8 +87,6 @@ class FormComponent extends React.Component {
           console.log("Request succeeded with JSON response", response.data);
         })
         .catch((e) => console.log(e));
-    } else {
-      notFilledInputs.map((input) => input.classList.add("notValid"));
     }
   }
 
@@ -99,62 +108,6 @@ class FormComponent extends React.Component {
   //     console.log("Request failed", error);
   //   });
 
-  // Array.prototype.forEach.call(inputs, (input) => {
-  //   if (input.name === "name" || input.name === "name") {
-  //     input.value = "";
-  //     this.setState((prevState) => ({
-  //       ...prevState,
-  //       [input.name]: "",
-  //     }));
-  //   }
-  // });
-
-  // handleSubmit = (event) => {
-  //   axios
-  //     .post("https://jsonplaceholder.typicode.com/posts", {
-  //       data: { ...this.state },
-  //     })
-  //     .then((r) => console.log(r))
-  //     .catch((e) => console.log(e));
-
-  //   event.preventDefault();
-  // };
-
-  //   // fetch("https://jsonplaceholder.typicode.com/todos/1", {
-  //   //   method: "POST",
-  //   //   headers: {
-  //   //     Accept: "application/json",
-  //   //     "Content-Type": "application/json",
-  //   //   },
-  //   //   body: JSON.stringify({
-  //   //     firstParam: this.state.name,
-  //   //     secondParam: this.state.password,
-  //   //   }),
-  //   // });
-
-  //   // fetch("https://jsonplaceholder.typicode.com/posts", {
-  //   //   method: "GET",
-  //   //   headers: { "Content-type": "application/json;charset=UTF-8" },
-  //   // })
-  //   //   .then((response) => response.json())
-  //   //   .then((json) => console.log(json))
-  //   //   .catch((err) => console.log(err));
-  // }
-
-  // // handleInput = (event) => {
-  // //   const { value, name } = event.currentTarget;
-  // //   this.setState(({ data, errors }) => ({
-  // //     data: {
-  // //       ...data,
-  // //       [name]: value,
-  // //     },
-  // //     errors: {
-  // //       ...errors,
-  // //       [name]: "",
-  // //     },
-  // //   }));
-  // // };
-
   render() {
     const { inputs, select, buttonIcon, buttonLabel } = this.props.items;
     const { settings } = this.props;
@@ -163,7 +116,7 @@ class FormComponent extends React.Component {
         {inputs.map(({ type, placeholder, name, required }) => {
           return (
             <ItemFrom
-              required={required}
+              required
               className="input"
               type={type}
               placeholder={placeholder}
@@ -172,7 +125,7 @@ class FormComponent extends React.Component {
           );
         })}
         {select && (
-          <Select name={select[0].firstOption} className="input">
+          <Select name={select[0].firstOption} className="input" required>
             <Option disabled selected hidden value={select[0].firstOption}>
               {select[0].firstOption}
             </Option>
@@ -190,7 +143,11 @@ class FormComponent extends React.Component {
         />
 
         <Info>All fields are required</Info>
-        <span style={{ display: "none" }}>Error</span>
+        {!this.state.isValid && (
+          <Text className="error" style={{ color: "red" }}>
+            Fill in required fields!
+          </Text>
+        )}
       </Form>
     );
 
