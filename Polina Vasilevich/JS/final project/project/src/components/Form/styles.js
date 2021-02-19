@@ -37,6 +37,10 @@ export const ItemFrom = styled.input`
     props.colorTextInput ? props.colorTextInput : "#999999"};
   border: 1px solid
     ${(props) => (props.borderColorInput ? props.borderColorInput : "#999999")};
+
+  &.notValid {
+    border: 1px solid red;
+  }
 `;
 
 export const Select = styled.select`

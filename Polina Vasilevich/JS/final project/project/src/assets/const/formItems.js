@@ -9,12 +9,14 @@ const formItems = {
       type: "text",
       placeholder: "Name",
       name: "name",
+      required: true,
     },
 
     {
       type: "email",
       placeholder: "Email",
       name: "email",
+      required: true,
     },
 
     {

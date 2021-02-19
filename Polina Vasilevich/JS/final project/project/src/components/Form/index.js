@@ -1,4 +1,6 @@
 import React from "react";
+import axios from "axios";
+
 import Button from "../Button";
 import MainContainer from "../MainContainer";
 
@@ -6,37 +8,27 @@ import { Form, ItemFrom, Select, Option, Info } from "./styles";
 class FormComponent extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.id = props.idForm;
+    this.state = { isValid: false };
   }
 
   handleChange = (e) => {
     const { value, name } = e.target;
+
     this.setState((prevState) => ({
       ...prevState,
       [name]: value,
     }));
   };
 
-  handleClick(e) {
-    e.preventDefault();
-    fetch("https://jsonplaceholder.typicode.com/posts", {
-      method: "POST",
-      body: JSON.stringify({
-        ...this.state,
-      }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Request succeeded with JSON response", data);
-      })
-      .catch((error) => {
-        console.log("Request failed", error);
-      });
+  componentDidMount() {
+    this.inputs = document
+      .getElementById(this.id)
+      .getElementsByClassName("input");
+  }
 
-    document.querySelectorAll("input").forEach((input) => {
+  clearForm = () => {
+    Array.prototype.forEach.call(this.inputs, (input) => {
       if (input.value) {
         input.value = "";
         this.setState((prevState) => ({
@@ -45,7 +37,88 @@ class FormComponent extends React.Component {
         }));
       }
     });
+  };
+
+  // validateForm = () => {
+  //   const notFilledInputs = Array.prototype.filter.call(
+  //     this.inputs,
+  //     (input) => input.required && !input.value
+  //   );
+
+  //   const isValid = notFilledInputs.length ? false : true;
+
+  //   this.setState((prevState) => {
+  //     return {
+  //       ...prevState,
+  //       isValid: isValid,
+  //     };
+  //   });
+  // };
+
+  handleClick(e) {
+    e.preventDefault();
+
+    const notFilledInputs = Array.prototype.filter.call(
+      this.inputs,
+      (input) => input.required && !input.value
+    );
+
+    const isValid = notFilledInputs.length ? false : true;
+
+    this.inputs.map((input) => input.classList.remove("notValid"));
+    if (isValid) {
+      this.clearForm();
+      axios
+        .post("https://jsonplaceholder.typicode.com/posts", {
+          data: { ...this.state },
+        })
+        .then((response) => {
+          console.log("Request succeeded with JSON response", response.data);
+        })
+        .catch((e) => console.log(e));
+    } else {
+      notFilledInputs.map((input) => input.classList.add("notValid"));
+    }
   }
+
+  // e.preventDefault();
+  // fetch("https://jsonplaceholder.typicode.com/posts", {
+  //   method: "POST",
+  //   body: JSON.stringify({
+  //     ...this.state,
+  //   }),
+  //   headers: {
+  //     "Content-type": "application/json; charset=UTF-8",
+  //   },
+  // })
+  //   .then((response) => response.json())
+  //   .then((data) => {
+  //     console.log("Request succeeded with JSON response", data);
+  //   })
+  //   .catch((error) => {
+  //     console.log("Request failed", error);
+  //   });
+
+  // Array.prototype.forEach.call(inputs, (input) => {
+  //   if (input.name === "name" || input.name === "name") {
+  //     input.value = "";
+  //     this.setState((prevState) => ({
+  //       ...prevState,
+  //       [input.name]: "",
+  //     }));
+  //   }
+  // });
+
+  // handleSubmit = (event) => {
+  //   axios
+  //     .post("https://jsonplaceholder.typicode.com/posts", {
+  //       data: { ...this.state },
+  //     })
+  //     .then((r) => console.log(r))
+  //     .catch((e) => console.log(e));
+
+  //   event.preventDefault();
+  // };
 
   //   // fetch("https://jsonplaceholder.typicode.com/todos/1", {
   //   //   method: "POST",
@@ -86,10 +159,12 @@ class FormComponent extends React.Component {
     const { inputs, select, buttonIcon, buttonLabel } = this.props.items;
     const { settings } = this.props;
     const contentContainer = (
-      <Form onChange={this.handleChange} {...settings}>
-        {inputs.map(({ type, placeholder, name }) => {
+      <Form id={this.props.idForm} onChange={this.handleChange} {...settings}>
+        {inputs.map(({ type, placeholder, name, required }) => {
           return (
             <ItemFrom
+              required={required}
+              className="input"
               type={type}
               placeholder={placeholder}
               name={name}
@@ -97,7 +172,7 @@ class FormComponent extends React.Component {
           );
         })}
         {select && (
-          <Select name={select[0].firstOption}>
+          <Select name={select[0].firstOption} className="input">
             <Option disabled selected hidden value={select[0].firstOption}>
               {select[0].firstOption}
             </Option>
@@ -115,6 +190,7 @@ class FormComponent extends React.Component {
         />
 
         <Info>All fields are required</Info>
+        <span style={{ display: "none" }}>Error</span>
       </Form>
     );
 

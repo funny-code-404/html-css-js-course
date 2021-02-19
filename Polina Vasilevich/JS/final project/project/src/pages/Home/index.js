@@ -242,6 +242,7 @@ class Home extends React.Component {
 
         <Form
           items={formItems}
+          idForm="form1"
           settings={{
             backgroundColorMainContainer: "dark",
             widthButton: "form",
