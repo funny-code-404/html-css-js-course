@@ -2,9 +2,3 @@
   padding: 0;
   margin: 0;
 }
-
-.oneString {
-  padding: 0 5%;
-  flex-wrap: nowrap;
-  opacity: inherit;
-}

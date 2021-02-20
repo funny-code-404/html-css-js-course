@@ -10,10 +10,12 @@ import CallToAction from "../../components/CallToAction";
 
 import iconList1 from "../../assets/const/iconList1";
 
-import introducingItems from "../../assets/const/introducingItems";
+import introducingItems from "../../assets/const/features/introItems";
 import servicesItems from "../../assets/const/servicesItems";
+import textListItems from "../../assets/const/features/textListItems.js";
 import formItems from "../../assets/const/formItems";
 import slider3Items from "../../assets/const/slider3";
+import textList from "../../assets/const/demos/textListItems";
 
 class Features extends React.Component {
   render() {
@@ -38,6 +40,7 @@ class Features extends React.Component {
           items={introducingItems}
           settings={{
             positionText: "right",
+            positionContent: "right",
             widthContentContainer: "50%",
             heightMainContainer: "intro",
             isVerticalCenter: "true",
@@ -45,20 +48,11 @@ class Features extends React.Component {
           }}
         />
 
-        {/* <TextList
-          items={servicesItems.leftContent}
-          settings={{
-            positionText: "right",
-            widthContentContainer: "50%",
-            heightMainContainer: "778px",
-            isVerticalCenter: "true",
-          }}
-        /> */}
-
         <TextList
-          items={servicesItems.leftContent}
+          items={textListItems}
           settings={{
             positionContentContainer: "right",
+
             positionText: "left",
             stylesText: "textList",
           }}
@@ -83,10 +77,10 @@ class Features extends React.Component {
           }}
         />
         <Form
+          idForm="form2"
           items={formItems}
           settings={{
             backgroundColorMainContainer: "dark",
-            colorButton: "green",
             widthButton: "form",
           }}
         />
@@ -95,7 +89,7 @@ class Features extends React.Component {
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"
           settings={{
-            backgroundColorMainContainer: "green",
+            backgroundColorMainContainer: "lightBlue",
             colorButton: "green",
             paddingTop: "0",
             paddingBottom: "0",

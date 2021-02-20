@@ -32,6 +32,14 @@ const setBackgroundColorMainContainer = (backgroundColorMainContainer) => {
               }
           `;
 
+    case "lightBlue":
+      return `background-color:#49b0f1;
+              ${Button} {
+                background-color:#49b0f1;
+                border: 1px solid #fff;
+              }
+          `;
+
     case "grey":
       return `background-color:#f6f7f8;
               // ${Title} {
@@ -56,7 +64,7 @@ const setBackgroundColorMainContainer = (backgroundColorMainContainer) => {
       return `background-color:#1A1A1D;`;
 
     case "logos":
-      return `background-color: #373C46;`;
+      return `background-color: #373c46;`;
 
     case "blog":
       return `background-color: #4285F4;

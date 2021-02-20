@@ -151,11 +151,13 @@ const tweetsItems = {
         {
           type: "text",
           placeholder: "Name",
+          name: "name",
         },
 
         {
           type: "email",
           placeholder: "Email",
+          name: "email",
         },
       ],
     },

@@ -27,10 +27,15 @@ export const FlexContainer = styled.div`
     height: 181px;
     ${ContentContainer} {
       justify-content: start;
-      opacity: 1;
+      opacity: 0.7;
+
+      :hover{
+        opacity: 1;
+      }
     
     }
- 
+    
+
   `}
 `;
 

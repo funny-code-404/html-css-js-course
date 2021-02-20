@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  position: relative;
   height: 990px;
   background-color: #3c444b;
   display: flex;
@@ -30,4 +31,28 @@ export const SubTitle = styled.p`
   line-height: 30px;
   font-weight: 300;
   color: #ffffff;
+`;
+
+export const Arrow = styled.button`
+  width: 60px;
+  height: 40px;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%, -50%);
+
+  z-index: 2;
+
+  color: #fff;
+  font-weight: bold;
+  font-size: 25px;
+
+  transition: 0.6s ease;
+  outline: none;
+
+  opacity: 0.3;
+  background-color: #000;
+  border-color: transparent;
+  border-radius: 3px 3px 0px 0px;
 `;

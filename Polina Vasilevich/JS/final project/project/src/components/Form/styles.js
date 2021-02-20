@@ -66,6 +66,18 @@ export const Info = styled.span`
   color: #666666;
 `;
 
+export const Textarea = styled.textarea`
+  ${styles}
+  color: ${(props) =>
+    props.colorTextInput ? props.colorTextInput : "#999999"};
+  border: 1px solid
+    ${(props) => (props.borderColorInput ? props.borderColorInput : "#999999")};
+
+  &.notValid {
+    border: 1px solid red;
+  }
+`;
+
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
@@ -76,6 +88,10 @@ export const Form = styled.form`
   }
 
   ${Select} {
+    ${(props) => setSizeInput(props.sizeInput)};
+  }
+
+  ${Textarea} {
     ${(props) => setSizeInput(props.sizeInput)};
   }
 `;

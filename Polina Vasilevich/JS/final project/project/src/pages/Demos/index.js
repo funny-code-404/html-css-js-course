@@ -12,11 +12,12 @@ import Articles from "../../components/Services/Articles";
 import LogosList from "../../components/LogosList";
 
 import iconList2 from "../../assets/const/iconList2";
-import textListItems from "../../assets/const/servicesItems";
+import textListItems from "../../assets/const/demos/textListItems";
 import businessItems from "../../assets/const/businessItems";
 import logosItems from "../../assets/const/demos/logos";
 import slider3Items from "../../assets/const/slider3";
-
+import Video from "../../components/VideoComponent";
+import videoItems from "../../assets/const/videoItems";
 class Demos extends React.Component {
   render() {
     return (
@@ -39,7 +40,7 @@ class Demos extends React.Component {
         />
 
         <TextList
-          items={textListItems.leftContent}
+          items={textListItems}
           settings={{
             positionContentContainer: "right",
             positionText: "left",
@@ -57,7 +58,7 @@ class Demos extends React.Component {
             paddingBottom: "0",
           }}
         />
-
+        <Video items={videoItems} />
         <TwoColumnSection
           settings={{
             paddingLeftRight: "none",
@@ -97,7 +98,7 @@ class Demos extends React.Component {
             paddingBottom: "20px",
             paddingTop: "20px",
             paddingLeftRight: "small",
-            backgroundColorMainContainer: "dark",
+            backgroundColorMainContainer: "logos",
           }}
         />
       </>

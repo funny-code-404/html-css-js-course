@@ -1,7 +1,30 @@
 export const handleScrollDown = (e) => {
   e.preventDefault();
+
+  // const scrollTarget = e.target;
+
+  // const topOffset = document.querySelector("footer").offsetHeight;
+
+  // const elementPosition = scrollTarget.getBoundingClientRect().top;
+  // const offsetPosition = elementPosition - topOffset;
+
+  // window.scrollBy({
+  //   top: offsetPosition,
+  //   behavior: "smooth",
+  // });
   const windowCoords = document.documentElement.scrollHeight;
-  window.scrollBy(0, windowCoords);
+  window.scroll({
+    top: windowCoords,
+    behavior: "smooth",
+  });
+
+  // const windowCoords = document.documentElement.scrollHeight;
+  // // window.scrollBy(0, windowCoords);
+  // window.scrollTo(0, windowCoords);
+  // window.scrollTo({
+  //   top: windowCoords,
+  //   behavior: "smooth",
+  // });
 };
 
 export const handleLink = (e, page = "shop") => {
@@ -11,7 +34,6 @@ export const handleLink = (e, page = "shop") => {
 
 export const handleReadMore = (e) => {
   e.preventDefault();
-  console.dir(e.target.parentNode);
 };
 
 // export const setHandleButton = (typeHandle) => {

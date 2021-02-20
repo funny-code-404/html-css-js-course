@@ -1,18 +1,13 @@
 import React from "react";
-import "./styles.css";
+import { VideoContainer, Video } from "./styles";
 
 class VideoComponent extends React.Component {
   render() {
-    const {poster, src} = this.props.items;
+    const { src } = this.props.items;
     return (
-      <video 
-        controls
-        poster={poster}
-        preload="none">
-          <source 
-                  src='src'
-                  type="video/mp4"/>
-      </video>
+      <VideoContainer>
+        <Video src={src} frameborder="0" allowfullscreen></Video>
+      </VideoContainer>
     );
   }
 }

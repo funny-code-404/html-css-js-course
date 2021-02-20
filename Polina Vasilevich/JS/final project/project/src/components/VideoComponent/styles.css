@@ -1,5 +1,5 @@
-video {
+iframe {
   width: 100%;
-  height: auto;
+  height: 500px;
   max-height: 100%;
 }

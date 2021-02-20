@@ -51,6 +51,7 @@ export default function Aside(props) {
       />
 
       <Form
+        idForm="form4"
         items={form}
         settings={{
           stylesText: "tweets",

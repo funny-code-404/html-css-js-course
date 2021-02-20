@@ -184,7 +184,7 @@ class Home extends React.Component {
         />
         <PricingTables items={pricingTables} buttonLabel="GET STARTED NOW" />
 
-        {/* <Video items={videoItems}/> */}
+        <Video items={videoItems} />
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"

@@ -2,6 +2,7 @@ import React from "react";
 
 import IconsList from "../../components/IconsList";
 import iconList1 from "../../assets/const/iconList1";
+import IntroSlider from "../../components/IntroSlider";
 
 import Slider from "../../components/Slider";
 import Slider2 from "../../components/Slider copy";
@@ -17,6 +18,11 @@ class Shop extends React.Component {
   render() {
     return (
       <>
+        <IntroSlider
+          title="CREATIVE MESS"
+          subTitle="We make the best design around"
+          isArrow
+        />
         <IconsList
           items={iconList1}
           settings={{
@@ -51,7 +57,12 @@ class Shop extends React.Component {
             <Slider2 items={slider2Items} id="slider3" isArrows />
           }
         />
-
+        <Works
+          title="Let‘s Work Together"
+          subTitle="TheFox WordPress is the best in the business. They know we deliver industry leading web design every time. We would love to learn how we can support you too."
+          buttonLabel="GET STARTED NOW"
+          buttonIcon="ti-check"
+        />
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"
