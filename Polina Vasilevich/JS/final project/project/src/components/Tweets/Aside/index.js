@@ -5,12 +5,13 @@ import Button from "../../Button";
 import Form from "../../Form";
 import Photos from "../../Photos";
 
-export default function Aside(props) {
-  const { settings } = props;
+import { Aside } from "./styles";
+export default function AsideComponent(props) {
+  const { settings, style } = props;
   const { posts, tags, photos, form, categories, archive } = props.items;
 
   return (
-    <aside>
+    <Aside id="aside" style={style}>
       <Article
         items={posts}
         contentContainer={
@@ -88,6 +89,6 @@ export default function Aside(props) {
         items={archive}
         contentContainer={<Categories items={archive.items} />}
       />
-    </aside>
+    </Aside>
   );
 }

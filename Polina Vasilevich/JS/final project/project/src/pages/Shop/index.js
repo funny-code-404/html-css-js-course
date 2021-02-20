@@ -9,6 +9,7 @@ import Slider2 from "../../components/Slider copy";
 import slider2Items from "../../assets/const/slider4";
 
 import Works from "../../components/Works";
+import workItems from "../../assets/const/shop/workItems";
 import CallToAction from "../../components/CallToAction";
 
 import Portfolio from "../../components/Portfolio";
@@ -57,12 +58,7 @@ class Shop extends React.Component {
             <Slider2 items={slider2Items} id="slider3" isArrows />
           }
         />
-        <Works
-          title="Let‘s Work Together"
-          subTitle="TheFox WordPress is the best in the business. They know we deliver industry leading web design every time. We would love to learn how we can support you too."
-          buttonLabel="GET STARTED NOW"
-          buttonIcon="ti-check"
-        />
+        <Works items={workItems} />
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"

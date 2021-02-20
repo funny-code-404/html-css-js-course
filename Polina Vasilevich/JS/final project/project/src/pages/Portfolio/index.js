@@ -2,12 +2,13 @@ import React from "react";
 
 import IntroSlider from "../../components/IntroSlider";
 
-import Photos from "../../components/Photos";
-import portfolioItems from "../../assets/const/portfolioItems";
+import Photos from "../../components/Photos copy";
+import portfolioItems from "../../assets/const/portfolio/portfolioItems";
 
 import CallToAction from "../../components/CallToAction";
-import iconList1 from "../../assets/const/iconList1";
 
+import Works from "../../components/Works";
+import workItems from "../../assets/const/shop/workItems";
 class Portfolio extends React.Component {
   render() {
     return (
@@ -20,6 +21,8 @@ class Portfolio extends React.Component {
             widthItemGridContainer: "442px",
           }}
         />
+
+        <Works items={workItems} />
         <CallToAction
           text="Become A Part Of TheFox Business Community Today"
           buttonLabel="PURCHASE NOW"

@@ -72,6 +72,26 @@ const setColorButton = (colorButton) => {
       border: 1px solid #fff;
         `;
 
+    case "portfolio":
+      return `
+          font-family: OpenSans;
+          font-size: 16px;
+          line-height: 30px;
+          font-weight: 300;
+          color: #ffffff;
+          opacity: 0.5;
+          margin: 0;
+
+          background-color: transparent;
+          border: transparent;
+          width: auto !important;
+          height: auto !important;
+
+          :hover{
+            color: #4285f4;
+          }
+            `;
+
     default:
       return `
         background-color: #4285f4;
@@ -87,7 +107,7 @@ const setTypeButton = (typeButton) => {
       border: transparent;
       width: auto !important;
       height: auto !important;
-      margin-right: 15px;
+      margin-right: 20px;
 
       :hover{
         color: #4285f4;

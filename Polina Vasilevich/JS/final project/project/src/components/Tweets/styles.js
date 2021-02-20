@@ -12,3 +12,8 @@ export const Avatar = styled.div`
   background-image: ${(props) =>
     props.backgroundImg ? `url(${props.backgroundImg})` : ""};
 `;
+
+export const FlexContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
