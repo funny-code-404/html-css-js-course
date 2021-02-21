@@ -15,6 +15,8 @@ class Portfolio extends React.Component {
           settings={{
             widthItemGridContainer: "400px",
             gridItemColumn: "3",
+            gridRowGap: "0",
+            gridGap: "0",
           }}
         />
         <Typography

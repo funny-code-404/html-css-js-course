@@ -5,7 +5,9 @@ const widthItemGridContainer = (props) =>
 
 export const GridContainer = styled.div`
   display: grid;
-  grid-gap: ${(props) => (props.gridGap ? props.gridGap : "15px")};
+  grid-column-gap: ${(props) => (props.gridGap ? props.gridGap : "15px")};
+  grid-row-gap: ${(props) => (props.gridRowGap ? props.gridRowGap : "25px")};
+
   grid-template-columns: repeat(
     auto-fit,
     minmax(${widthItemGridContainer}, 1fr)
@@ -27,8 +29,10 @@ const setPositionContentContainer = (positionTextContainer) => {
   switch (positionTextContainer) {
     case "right":
       return `
+                // position: absolute;
+                // left: 50%;
+                // top: 25%;
                 margin-left: auto;
-                width: 50%;
                 
             `;
     case "center":

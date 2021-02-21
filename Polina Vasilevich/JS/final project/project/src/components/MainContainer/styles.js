@@ -73,6 +73,10 @@ const setBackgroundColorMainContainer = (backgroundColorMainContainer) => {
                 border: 1px solid #fff;
               }
           `;
+    case "aside":
+      return `
+      background-color: #f7f7f7;
+      `;
 
     default:
       break;
@@ -84,7 +88,7 @@ const setHeightMainContainer = (heightMainContainer) => {
     case "header":
       return `height: 92px;`;
     case "intro":
-      return `height: 777px;`;
+      return `height: 757px;`;
     case "callTo":
       return `height: 180px;`;
 
@@ -97,15 +101,101 @@ const setHeightMainContainer = (heightMainContainer) => {
     case "tweets":
       return `height: fit-content;`;
 
-    case "slider":
+    case "slider1":
       return `height: 994px;`;
+
+    case "slider2":
+      return `height: 800px;`;
 
     default:
       return `height: 100%;`;
   }
 };
 
+const setPaddingBlock = (padding) => {
+  switch (padding) {
+    case "posts":
+      return `  
+        padding-left:32%;
+        padding-right:0;
+        padding-top: 0;
+      }`;
+
+    case "aside":
+      return `
+      padding-top: 0;
+        padding-left:0;  
+        // padding-right:27%; 
+        
+      `;
+
+    case "asideIconsList":
+      return `
+    
+        padding-left:0;
+        padding-right:0;
+        padding-top:0 !important;
+        padding-bottom:0 !important;
+      `;
+
+    case "photos":
+      return `
+      
+          padding-left:0;
+          padding-right:0;
+         
+          padding-bottom:0;
+        }`;
+
+    default:
+      return `
+           
+           `;
+  }
+};
+
+const setStylesBlock = (stylesBlock) => {
+  switch (stylesBlock) {
+    case "posts":
+      return `  
+        padding-left:26%;
+        padding-right:0;
+      }`;
+
+    case "aside":
+      return `
+      width: 40%;
+  
+        padding-left:0;   
+      `;
+
+    case "asideIconsList":
+      return `
+    
+        padding-left:0;
+        padding-right:0;
+        padding-top:0 !important;
+        padding-bottom:0 !important;
+      `;
+
+    case "photos":
+      return `
+      
+          padding-left:0;
+          padding-right:0;
+          padding-top:0;
+          padding-bottom:0;
+        }`;
+
+    default:
+      return `
+           
+           `;
+  }
+};
+
 export const MainContainer = styled.div`
+  position: relative;
   ${(props) => props.isVerticalCenter && `display: flex; align-items: center; `}
   background-image: ${(props) =>
     props.backgroundImg ? `url(${props.backgroundImg})` : ""};
@@ -151,10 +241,13 @@ const setPaddingLeftRight = (paddingLeftRight) => {
 
 export const Wrapper = styled.div`
   ${(props) => setPaddingLeftRight(props.paddingLeftRight)};
+
   ${(props) => props.deletePadding && ``}
   padding-top: ${(props) => (props.paddingTop ? props.paddingTop : "88px")};
   padding-bottom: ${(props) =>
     props.paddingBottom ? props.paddingBottom : "105px"};
 
   ${(props) => props.deletePadding && `padding 0 !important;`}
+
+  ${(props) => setPaddingBlock(props.padding)};
 `;

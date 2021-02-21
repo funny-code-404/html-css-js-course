@@ -11,6 +11,7 @@ class IconsList extends React.Component {
     );
     return (
       <MainContainer
+        id={this.props.id}
         settings={settings}
         contentContainer={contentContainer}
         deletePadding={deletePadding}

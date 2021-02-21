@@ -9,7 +9,11 @@ export default function IntroSlider(props) {
       <TextContainer>
         <Title>{title}</Title>
         <SubTitle>{subTitle}</SubTitle>
-        {isArrow && <Arrow onClick={handleScrollDown}>&#709;</Arrow>}
+        {isArrow && (
+          <Arrow onClick={handleScrollDown} value="footer">
+            &#709;
+          </Arrow>
+        )}
       </TextContainer>
     </Container>
   );

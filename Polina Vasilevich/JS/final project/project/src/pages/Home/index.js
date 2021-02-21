@@ -53,17 +53,16 @@ class Home extends React.Component {
           isDots
           isArrows
           stylesText="bigSlider"
+          heightSliderContainer="slider1"
         />
 
         <IconsList
           items={iconList1}
           settings={{
-            fontSizeIcon: "l",
             formIcon: "circle",
             colorIconContainer: "gradient",
             sizeIconContainer: "middle",
             widthItemGridContainer: "270px",
-
             gridGap: "3%",
           }}
         />
@@ -72,7 +71,7 @@ class Home extends React.Component {
           items={introducingItems}
           settings={{
             positionText: "left",
-            widthContentContainer: "50%",
+            widthContentContainer: "70ch",
             heightMainContainer: "intro",
             isVerticalCenter: "true",
             stylesText: "textList",
@@ -83,8 +82,7 @@ class Home extends React.Component {
           isTitle
           items={portfolioItems}
           settings={{
-            paddingLeftRight: "none",
-            paddingBottom: "0",
+            padding: "photos",
           }}
           contentContainer={
             <Photos
@@ -92,6 +90,7 @@ class Home extends React.Component {
               settings={{
                 widthItemGridContainer: "442px",
                 gridGap: "0",
+                gridRowGap: "0",
               }}
             />
           }
@@ -111,13 +110,16 @@ class Home extends React.Component {
 
         <IconsList
           items={iconList2}
+          id="iconsList2"
           settings={{
-            fontSizeIcon: "xl",
+            paddingTop: "94px",
+            paddingBottom: "82px",
             widthItemGridContainer: "350px",
             colorIcon: "gradient",
             positionText: "left",
             positionIcons: "left",
             gridGap: "3%",
+            gridRowGap: "38px",
           }}
         />
 
@@ -125,7 +127,7 @@ class Home extends React.Component {
           items={introducingItems}
           settings={{
             positionText: "left",
-            widthContentContainer: "50%",
+            widthContentContainer: "70ch",
             heightMainContainer: "778px",
             positionContentContainer: "right",
             isVerticalCenter: "true",
@@ -140,13 +142,14 @@ class Home extends React.Component {
           isDots
           stylesText="basicSlider"
           isLine
+          heightSliderContainer="slider2"
         />
         <TwoColumnSection
           settings={{
             paddingLeftRight: "none",
             paddingTop: "0",
             paddingBottom: "0",
-            sizeContainers: "40% 55%",
+            sizeContainers: "40% 60%",
           }}
           firstItem={
             <FirstItemForService
@@ -167,7 +170,8 @@ class Home extends React.Component {
                 typeButton: "link",
                 colorTextButton: "blue",
                 paddingLeftRight: "small",
-                gridGap: "5%",
+                gridGap: "17%",
+                gridRowGap: "120px",
                 widthImg: "64px",
               }}
             />
@@ -224,6 +228,7 @@ class Home extends React.Component {
           isDots
           stylesText="basicSlider"
           isLine
+          heightSliderContainer="slider2"
         />
 
         <MainContainerComponent

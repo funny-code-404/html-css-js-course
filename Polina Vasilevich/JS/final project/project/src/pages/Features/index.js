@@ -41,7 +41,7 @@ class Features extends React.Component {
           settings={{
             positionText: "right",
             positionContent: "right",
-            widthContentContainer: "50%",
+            widthContentContainer: "70ch",
             heightMainContainer: "intro",
             isVerticalCenter: "true",
             stylesText: "textList",
@@ -52,7 +52,7 @@ class Features extends React.Component {
           items={textListItems}
           settings={{
             positionContentContainer: "right",
-
+            widthContentContainer: "70ch",
             positionText: "left",
             stylesText: "textList",
           }}
@@ -64,6 +64,7 @@ class Features extends React.Component {
           isDots
           stylesText="basicSlider"
           isLine
+          heightSliderContainer="slider2"
         />
 
         <IconsList

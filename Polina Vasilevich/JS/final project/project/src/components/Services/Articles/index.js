@@ -1,7 +1,7 @@
 import MainContainer from "../../MainContainer";
 import Button from "../../Button";
 import IconsList from "../../IconsList";
-
+import { handleLink } from "../../Button/handlers";
 export default function Articles(props) {
   const { items, settings } = props;
   const contentContainer = (
@@ -12,6 +12,8 @@ export default function Articles(props) {
         deletePadding
       />
       <Button
+        handleButton={handleLink}
+        link="features"
         buttonLabel={items.buttonLabel}
         buttonIcon={items.buttonIcon}
         settings={{ typeButton: "link", colorTextButton: "blue" }}

@@ -72,7 +72,7 @@ class FooterComponent extends React.Component {
       </FlexContainer>
     );
     return (
-      <footer>
+      <footer id="footer">
         <MainContainer
           contentContainer={firstContentContainer}
           settings={{

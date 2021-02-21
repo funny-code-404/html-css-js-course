@@ -1,9 +1,22 @@
 import styled from "styled-components";
 
+const setHeightSliderContainer = (heightSliderContainer) => {
+  switch (heightSliderContainer) {
+    case "slider1":
+      return `height: 994px`;
+    case "slider2":
+      return `height: 800px`;
+
+    default:
+      break;
+  }
+};
+
 export const SlidersContainer = styled.div`
   position: relative;
   margin: auto;
-  height: 994px;
+
+  ${(props) => setHeightSliderContainer(props.heightSliderContainer)}
 `;
 export const Img = styled.div`
   width: 100%;

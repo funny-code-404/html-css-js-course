@@ -29,8 +29,8 @@ function Numbers(props) {
     <MainContainer
       settings={{
         paddingLeftRight: "small",
-        paddingTop: "20px",
-        paddingBottom: "20px",
+        paddingTop: "0",
+        paddingBottom: "0",
         backgroundColorMainContainer: "dark",
       }}
       contentContainer={contentContainer}

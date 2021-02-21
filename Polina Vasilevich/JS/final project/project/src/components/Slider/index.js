@@ -78,9 +78,17 @@ class Slider extends React.Component {
 
   render() {
     const { imgs, buttonLabel } = this.props.items;
-    const { id, isDots, isArrows, items, isLine, stylesText } = this.props;
+    const {
+      id,
+      isDots,
+      isArrows,
+      items,
+      isLine,
+      stylesText,
+      heightSliderContainer,
+    } = this.props;
     const contentContainer = (
-      <SlidersContainer id={id}>
+      <SlidersContainer id={id} heightSliderContainer={heightSliderContainer}>
         {imgs.map((img, index) => {
           return (
             <>
@@ -118,6 +126,7 @@ class Slider extends React.Component {
                           colorButton: "transparent",
                         }}
                         handleButton={handleScrollDown}
+                        link="iconsList2"
                       />
                       <Button
                         buttonLabel={buttonLabel[1]}
@@ -169,7 +178,6 @@ class Slider extends React.Component {
           paddingTop: "0",
           paddingBottom: "0",
           paddingLeftRight: "none",
-          heightMainContainer: "slider",
         }}
       />
     );

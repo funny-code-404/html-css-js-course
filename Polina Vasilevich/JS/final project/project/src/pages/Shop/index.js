@@ -46,6 +46,7 @@ class Shop extends React.Component {
           isDots
           stylesText="basicSlider"
           isLine
+          heightSliderContainer="slider2"
         />
         <MainContainer
           items={slider2Items}

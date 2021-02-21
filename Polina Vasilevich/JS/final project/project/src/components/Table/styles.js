@@ -3,7 +3,7 @@ import { Button } from "../Button/styles";
 
 export const InfoContainer = styled.div`
   text-align: center;
-  margin-top: 75px;
+  margin-top: 50px;
 }`;
 
 export const PriceContainer = styled.div`
@@ -32,7 +32,7 @@ export const PriceContainer = styled.div`
 `;
 
 export const ItemInfoContainer = styled.div`
-  padding: 35px 10%;
+  padding: 33px 10% 20px 10%;
   display: inline-block;
   // width: 70%;
   border-bottom: 1px solid #eaeaea;

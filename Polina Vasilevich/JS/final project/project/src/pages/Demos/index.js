@@ -30,7 +30,6 @@ class Demos extends React.Component {
         <IconsList
           items={iconList2}
           settings={{
-            fontSizeIcon: "xl",
             widthItemGridContainer: "350px",
             colorIcon: "gradient",
             positionText: "left",
@@ -45,6 +44,7 @@ class Demos extends React.Component {
             positionContentContainer: "right",
             positionText: "left",
             stylesText: "textList",
+            widthContentContainer: "70ch",
           }}
         />
 
@@ -88,6 +88,7 @@ class Demos extends React.Component {
           isDots
           stylesText="basicSlider"
           isLine
+          heightSliderContainer="slider1"
         />
 
         <LogosList
@@ -95,8 +96,8 @@ class Demos extends React.Component {
           oneString
           settings={{
             heightMainContainer: "callTo",
-            paddingBottom: "20px",
-            paddingTop: "20px",
+            paddingBottom: "0",
+            paddingTop: "0",
             paddingLeftRight: "small",
             backgroundColorMainContainer: "logos",
           }}

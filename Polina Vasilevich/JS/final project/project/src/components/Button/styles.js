@@ -28,7 +28,7 @@ const setWidthButton = (widthButton) => {
       return `width: 26vw;`;
 
     case "tweets":
-      return `width: 20vw;`;
+      return `width: 17vw;`;
 
     default:
       return `width: 270px;`;
@@ -59,7 +59,8 @@ const setColorButton = (colorButton) => {
       return `
       background-color: #f6f7f8;
       border: 1px solid #e6e6e6;
-      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 12px !important;
 
       :hover{
         color: #000;

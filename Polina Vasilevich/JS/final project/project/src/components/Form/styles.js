@@ -1,13 +1,18 @@
 import styled from "styled-components";
-
+import { Button } from "../Button/styles";
 const setSizeInput = (sizeInput) => {
   switch (sizeInput) {
     case "tweets":
       return `
-        width: 20vw;
-        height: 51px;
+      width: 17vw;
+      height: 50px;
+      margin-bottom: 7px;
         ${Form} {
           align-items: start;
+        }
+        ${Button} {
+          width: 17vw !important;
+          height: 51px;
         }
       `;
 

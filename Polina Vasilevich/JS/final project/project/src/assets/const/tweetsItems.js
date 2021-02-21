@@ -141,7 +141,19 @@ const tweetsItems = {
 
     tags: {
       title: "TRENDING TAGS",
-      items: ["Tech", "Commercial", "Tech", "Commercial", "Tech", "Commercial"],
+      items: [
+        "Recruitment",
+        "Tech",
+        "Android",
+        "TheFox WordPress",
+        "Photography",
+        "Envato",
+        "Themeforest",
+        "Art work",
+        "Fonts",
+        "WordPress Theme",
+        "Design",
+      ],
     },
 
     form: {
@@ -165,6 +177,9 @@ const tweetsItems = {
     photos: {
       title: "PHOTO FROM UNSPLASH",
       imgs: [
+        { img: img1 },
+        { img: img2 },
+        { img: img3 },
         { img: img1 },
         { img: img2 },
         { img: img3 },

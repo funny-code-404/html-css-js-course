@@ -1,7 +1,7 @@
 import React from "react";
 import Typography from "../../Typography";
 import Button from "../../Button";
-
+import MainContainer from "../../MainContainer";
 import { Img, ContentContainer } from "../../Icon copy/styles";
 import { Posts, Arrow } from "./styles";
 
@@ -10,11 +10,20 @@ class PostsComponent extends React.Component {
     const { buttons, list } = this.props.items;
 
     return (
-      <Posts style={this.props.style}>
-        <Arrow onClick={this.props.handleClick}></Arrow>
+      <Posts>
+        <Arrow onClick={this.props.handleClick}>
+          <i className={this.props.icon}></i>
+        </Arrow>
         {list.map(({ info, content }) => {
           return (
-            <div className="article" style={{ marginBottom: "50px" }}>
+            <div
+              className="article"
+              style={{
+                marginBottom: "60px",
+                borderBottom: "1px solid grey",
+                paddingBottom: "53px",
+              }}
+            >
               <div
                 className="info"
                 style={{ display: "flex", justifyContent: "space-between" }}
@@ -50,6 +59,7 @@ class PostsComponent extends React.Component {
                   })}
                 </div>
               </div>
+
               <div className="container">
                 {content.img && (
                   <Img

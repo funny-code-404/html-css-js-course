@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import { Button } from "../Button/styles";
 
 const generalStyles = css`
   font-family: OpenSans;
@@ -422,6 +421,17 @@ const setStylesText = (stylesText) => {
       }
 
     `;
+
+    case "postsTitle":
+      return `
+      ${Title} {
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 600;
+        color: #333333;
+      }
+
+      `;
 
     default:
       return `

@@ -10,10 +10,11 @@ export default function MainContainerComponent(props) {
     contentContainer,
     backgroundImg,
     deletePadding,
+    id,
   } = props;
 
   return (
-    <MainContainer {...settings} backgroundImg={backgroundImg}>
+    <MainContainer {...settings} backgroundImg={backgroundImg} id={id}>
       <Wrapper {...settings} deletePadding={deletePadding}>
         {isTitle && (
           <Typography
