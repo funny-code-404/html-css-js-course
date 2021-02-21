@@ -19,6 +19,11 @@ export const handleLink = (e, page = "shop") => {
   window.location.href = `/${e.target.value}`;
 };
 
-export const handleReadMore = (e) => {
+export const handleContinueRead = (e, href) => {
+  e.preventDefault();
+  window.open(href);
+};
+
+export const Like = (e) => {
   e.preventDefault();
 };

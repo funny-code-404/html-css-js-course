@@ -11,10 +11,12 @@ class ButtonComponent extends React.Component {
       handleButton,
       link,
       id,
+      styles,
     } = this.props;
 
     return (
       <Button
+        style={styles}
         {...settings}
         // onClick={setHandleButton(handleButton)}
         onClick={handleButton}

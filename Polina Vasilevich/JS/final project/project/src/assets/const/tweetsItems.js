@@ -19,6 +19,8 @@ const tweetsItems = {
             "11 Impossible Tech Interview Questions You Don't Want To Be Asked",
           text:
             "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
+          href:
+            "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
         },
       },
 
@@ -36,6 +38,8 @@ const tweetsItems = {
             "The World's First Commercial Jetpack Will Arrive In 2016, And It'll Cost You $150,000",
           text:
             "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
+          href:
+            "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
         },
       },
 
@@ -66,6 +70,8 @@ const tweetsItems = {
             "The World's First Commercial Jetpack Will Arrive In 2016, And It'll Cost You $150,000",
           text:
             "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
+          href:
+            "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
         },
       },
 
@@ -83,6 +89,8 @@ const tweetsItems = {
             "The World's First Commercial Jetpack Will Arrive In 2016, And It'll Cost You $150,000",
           text:
             "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
+          href:
+            "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
         },
       },
 
@@ -101,6 +109,8 @@ const tweetsItems = {
             "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra. Nulla vehicula nibh vel ante commodo feugiat.",
           text:
             "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
+          href:
+            "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
         },
       },
     ],

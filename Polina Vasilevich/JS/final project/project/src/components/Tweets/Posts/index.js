@@ -4,11 +4,32 @@ import Button from "../../Button";
 import MainContainer from "../../MainContainer";
 import { Img, ContentContainer } from "../../Icon copy/styles";
 import { Posts, Arrow } from "./styles";
-
+import { handleContinueRead } from "../../Button/handlers";
 class PostsComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isActiveButtonLike: false,
+    };
+  }
+
+  handleLike = (e) => {
+    e.preventDefault();
+    this.setState((prevState) => ({
+      ...prevState,
+      isActiveButtonLike: !prevState.isActiveButtonLike,
+    }));
+  };
+
   render() {
     const { buttons, list } = this.props.items;
+    const styleButtonLike = this.state.isActiveButtonLike
+      ? { fontWeight: "bold", color: "#000" }
+      : {};
 
+    const buttonLikeLabel = !this.state.isActiveButtonLike
+      ? "Like this"
+      : "Like";
     return (
       <Posts>
         <Arrow onClick={this.props.handleClick}>
@@ -81,7 +102,7 @@ class PostsComponent extends React.Component {
               </div>
 
               <div className="buttons">
-                {buttons.map((button) => {
+                {/* {buttons.map((button) => {
                   return (
                     <Button
                       buttonLabel={button}
@@ -91,7 +112,35 @@ class PostsComponent extends React.Component {
                       }}
                     />
                   );
-                })}
+                })} */}
+                {content.href && (
+                  <Button
+                    handleButton={(e) => handleContinueRead(e, content.href)}
+                    buttonLabel="Continue Reading"
+                    settings={{
+                      typeButton: "link",
+                      colorTextButton: "grey",
+                    }}
+                  />
+                )}
+
+                <Button
+                  styles={styleButtonLike}
+                  handleButton={this.handleLike}
+                  buttonLabel={buttonLikeLabel}
+                  settings={{
+                    typeButton: "link",
+                    colorTextButton: "grey",
+                  }}
+                />
+
+                <Button
+                  buttonLabel="Share this"
+                  settings={{
+                    typeButton: "link",
+                    colorTextButton: "grey",
+                  }}
+                />
               </div>
             </div>
           );
