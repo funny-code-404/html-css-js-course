@@ -17,7 +17,7 @@ const setMediaGridBlock = (mediaGridBlock) => {
       return setMediaWidthItemGridBlock("1418px", "280px");
 
     case "photos1":
-      return setMediaWidthItemGridBlock("1418px", "280px");
+      return setMediaWidthItemGridBlock("1560px", "560px");
 
     case "footer":
       return `
@@ -120,7 +120,7 @@ const setMediaFlexBlock = (mediaFlexBlock) => {
       }`;
 
     case "numbers":
-      return `@media(max-width: 900px) {
+      return `@media(max-width: 1000px) {
         display:none;
       }`;
 

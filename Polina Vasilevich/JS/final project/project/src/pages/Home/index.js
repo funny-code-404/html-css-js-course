@@ -89,7 +89,7 @@ class Home extends React.Component {
             <Photos
               items={portfolioItems}
               settings={{
-                widthItemGridContainer: "220px",
+                widthItemGridContainer: "390px",
                 gridGap: "0",
                 gridRowGap: "0",
                 mediaGridBlock: "photos1",

@@ -1,20 +1,21 @@
 import styled from "styled-components";
 
-const setInVisibleBlock = (numberInVisibleBlock) => {
-  return `&:nth-of-type(1) {
-            @media(max-width: 900px) {
-              display: none;
-            }
-        }`;
-};
-
-export const GridItem = styled.div`
-  ${(props) => setInVisibleBlock(props.numberInVisibleBlock)};
-`;
+export const GridItem = styled.div``;
 
 export const GridTwoColumnContainer = styled.div`
   display: grid;
   grid-template-columns: ${(props) =>
     props.sizeContainers ? props.sizeContainers : ""};
   grid-gap: ${(props) => (props.gridGap ? props.gridGap : "0")};
+
+  @media (max-width: 1100px) {
+    grid-template-columns: 100%;
+  }
+
+  ${GridItem}:nth-of-type(${(props) =>
+    props.numberInVisibleBlock && props.numberInVisibleBlock}) {
+    @media (max-width: 1100px) {
+      display: none;
+    }
+  }
 `;

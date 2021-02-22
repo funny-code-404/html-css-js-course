@@ -3,41 +3,70 @@ import Typography from "../../Typography";
 import Button from "../../Button";
 import MainContainer from "../../MainContainer";
 import { Img, ContentContainer } from "../../Icon copy/styles";
-import { Posts, Arrow } from "./styles";
+import { Posts, Arrow, Icon } from "./styles";
 import { handleContinueRead } from "../../Button/handlers";
+
 class PostsComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isActiveButtonLike: false,
+      activeButtonLike: [],
+      buttonsShareThis: [],
     };
   }
 
-  handleLike = (e) => {
+  handleActiveButton = (e, items) => {
     e.preventDefault();
-    this.setState((prevState) => ({
-      ...prevState,
-      isActiveButtonLike: !prevState.isActiveButtonLike,
-    }));
+    if (!items.includes(e.target.id)) {
+      items.push(e.target.id);
+      this.setState({
+        items: items,
+      });
+    } else {
+      items.splice(items.indexOf(e.target.id), 1);
+      this.setState({
+        items: items,
+      });
+    }
   };
 
-  render() {
-    const { buttons, list } = this.props.items;
-    const styleButtonLike = this.state.isActiveButtonLike
-      ? { fontWeight: "bold", color: "#000" }
-      : {};
+  // handleActiveButtonLike = (e) => {
+  //   e.preventDefault();
+  //   this.setState((prevState) => ({
+  //     ...prevState,
+  //     isActiveButtonLike: !prevState.isActiveButtonLike,
+  //   }));
+  // };
 
-    const buttonLikeLabel = !this.state.isActiveButtonLike
-      ? "Like this"
-      : "Like";
+  // handleActiveButtonShareThis = (e) => {
+  //   e.preventDefault();
+  //   this.setState((prevState) => ({
+  //     ...prevState,
+  //     showButtonsShareThis: !prevState.showButtonsShareThis,
+  //   }));
+  // };
+
+  render() {
+    const { buttons, list, icons } = this.props.items;
+
     return (
       <Posts>
         <Arrow onClick={this.props.handleClick}>
           <i className={this.props.icon}></i>
         </Arrow>
-        {list.map(({ info, content }) => {
+        {list.map(({ info, content }, index) => {
+          const condition = this.state.activeButtonLike.includes(
+            `like${index}`
+          );
+          const styleButtonLike = condition
+            ? { fontWeight: "bold", color: "#000" }
+            : {};
+
+          const buttonLikeLabel = !condition ? "Like this" : "Like";
+
           return (
             <div
+              key={index}
               className="article"
               style={{
                 marginBottom: "60px",
@@ -125,8 +154,11 @@ class PostsComponent extends React.Component {
                 )}
 
                 <Button
+                  id={`like${index}`}
                   styles={styleButtonLike}
-                  handleButton={this.handleLike}
+                  handleButton={(e) =>
+                    this.handleActiveButton(e, this.state.activeButtonLike)
+                  }
                   buttonLabel={buttonLikeLabel}
                   settings={{
                     typeButton: "link",
@@ -135,12 +167,22 @@ class PostsComponent extends React.Component {
                 />
 
                 <Button
+                  id={`shareThis${index}`}
+                  handleButton={(e) =>
+                    this.handleActiveButton(e, this.state.buttonsShareThis)
+                  }
                   buttonLabel="Share this"
                   settings={{
                     typeButton: "link",
                     colorTextButton: "grey",
                   }}
                 />
+                {this.state.buttonsShareThis.includes(`shareThis${index}`) &&
+                  icons.map(({ icon, href }) => (
+                    <Icon href={href}>
+                      <i className={icon}></i>
+                    </Icon>
+                  ))}
               </div>
             </div>
           );

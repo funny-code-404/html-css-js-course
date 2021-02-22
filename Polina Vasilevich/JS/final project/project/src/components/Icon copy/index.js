@@ -10,7 +10,6 @@ class IconComponent extends React.Component {
     super(props);
     this.state = {
       showText: false,
-
       items: [],
     };
   }

@@ -6,7 +6,7 @@ function Numbers(props) {
   const { items } = props;
 
   const contentContainer = (
-    <FlexContainer heightFlexContainer="numbers">
+    <FlexContainer heightFlexContainer="numbers" mediaFlexBlock="numbers">
       {items.map((item) => {
         return (
           <div key={item.title}>
