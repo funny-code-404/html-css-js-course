@@ -1,12 +1,13 @@
 import { ContentContainer, Logo, FlexContainer } from "./styles";
 import MainContainer from "../MainContainer";
+import { GridContainer } from "../../mainStyles";
 
 export default function LogosList(props) {
   const { imgs } = props.items;
-  const { oneString, settings, backgroundImg, isTitle } = props;
+  const { settings, backgroundImg, isTitle } = props;
 
   const contentContainer = (
-    <FlexContainer oneString={oneString}>
+    <GridContainer {...settings}>
       {imgs.map((item, index) => {
         return (
           <ContentContainer key={index}>
@@ -14,7 +15,7 @@ export default function LogosList(props) {
           </ContentContainer>
         );
       })}
-    </FlexContainer>
+    </GridContainer>
   );
   return (
     <MainContainer

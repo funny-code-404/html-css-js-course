@@ -44,8 +44,13 @@ class HeaderComponent extends React.Component {
     });
   };
 
+  setStylesNavigation = (condition) => {
+    return condition ? { color: "#4285F4" } : {};
+  };
+
   render() {
     const { routes, logo, textLogo } = this.props;
+
     const contentContainer = (
       <FlexContainer heightFlexContainer="header">
         <LogoContainer>
@@ -55,23 +60,20 @@ class HeaderComponent extends React.Component {
         <Navigation>
           <List id="headerList" onClick={this.handleClick}>
             {routes.map(({ path, label }, index) => {
+              const styles = this.setStylesNavigation(
+                window.location.pathname === path
+              );
               return (
                 <ListItem key={path}>
-                  {window.location.pathname === path ? (
-                    <Link
-                      id={index}
-                      className="link"
-                      style={{ color: "#4285F4" }}
-                      to={path}
-                      onChange={this.handleChange}
-                    >
-                      {label}
-                    </Link>
-                  ) : (
-                    <Link id={index} className="link" to={path}>
-                      {label}
-                    </Link>
-                  )}
+                  <Link
+                    id={index}
+                    className="link"
+                    style={styles}
+                    to={path}
+                    onChange={this.handleChange}
+                  >
+                    {label}
+                  </Link>
                 </ListItem>
               );
             })}

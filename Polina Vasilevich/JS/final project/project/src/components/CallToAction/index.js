@@ -6,7 +6,7 @@ import { handleLink } from "../Button/handlers";
 function CallToAction(props) {
   const { text, buttonLabel, settings } = props;
   const contentContainer = (
-    <FlexContainer heightFlexContainer="callTo">
+    <FlexContainer heightFlexContainer="callTo" mediaFlexBlock="callTo">
       <Text>{text}</Text>
       <Button
         buttonLabel={buttonLabel}

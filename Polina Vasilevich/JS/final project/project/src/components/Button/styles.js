@@ -22,7 +22,7 @@ const setWidthButton = (widthButton) => {
       return `width: 201px;`;
 
     case "m":
-      return `width: 221px;`;
+      return `width: 15vw;`;
 
     case "form":
       return `width: 26vw;`;

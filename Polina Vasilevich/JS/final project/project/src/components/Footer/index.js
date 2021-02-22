@@ -1,6 +1,6 @@
 import React from "react";
 import MainContainer from "../MainContainer";
-import { GridContainer, FlexContainer } from "../../mainStyles";
+import { GridContainer, FlexContainer, GridItem } from "../../mainStyles";
 import { Icon, Img, IconContainer } from "../Icon copy/styles";
 import Typography from "../Typography";
 
@@ -9,8 +9,8 @@ class FooterComponent extends React.Component {
     const { logo, contacts, copyRight } = this.props.items;
 
     const firstContentContainer = (
-      <GridContainer>
-        <div
+      <GridContainer mediaGridBlock="footer">
+        <GridItem
           style={{
             display: "flex",
             flexDirection: "column",
@@ -26,7 +26,7 @@ class FooterComponent extends React.Component {
           </IconContainer>
 
           <Typography items={logo} settings={{ stylesText: "footerLogo" }} />
-        </div>
+        </GridItem>
         {contacts.map((item) => {
           return (
             <Typography
@@ -37,6 +37,7 @@ class FooterComponent extends React.Component {
                 colorText: "grey",
                 positionText: "left",
                 stylesText: "footer",
+                gridGap: "1.3vw",
               }}
             />
           );
@@ -58,7 +59,7 @@ class FooterComponent extends React.Component {
                   className={icon}
                   fontSizeIcon="s"
                   style={{
-                    padding: "0 30px",
+                    padding: "0 1.3vw",
                     opacity: "0.5",
                     cursor: "pointer",
                   }}

@@ -31,6 +31,10 @@ export const LogoText = styled.h2`
   font-weight: 700;
   text-transform: uppercase;
   color: #1c1c1c;
+
+  @media (max-width: 1418px) {
+    display: none;
+  }
 `;
 
 export const Navigation = styled.nav``;

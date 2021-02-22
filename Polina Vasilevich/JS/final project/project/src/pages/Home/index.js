@@ -62,7 +62,8 @@ class Home extends React.Component {
             formIcon: "circle",
             colorIconContainer: "gradient",
             sizeIconContainer: "middle",
-            widthItemGridContainer: "270px",
+            // widthItemGridContainer: "200px",
+            mediaGridBlock: "iconsList1",
             gridGap: "3%",
           }}
         />
@@ -88,9 +89,10 @@ class Home extends React.Component {
             <Photos
               items={portfolioItems}
               settings={{
-                widthItemGridContainer: "442px",
+                widthItemGridContainer: "220px",
                 gridGap: "0",
                 gridRowGap: "0",
+                mediaGridBlock: "photos1",
               }}
             />
           }
@@ -104,7 +106,6 @@ class Home extends React.Component {
             colorButton: "green",
             paddingTop: "0",
             paddingBottom: "0",
-            heightFlexContainer: "callTo",
           }}
         />
 
@@ -150,6 +151,7 @@ class Home extends React.Component {
             paddingTop: "0",
             paddingBottom: "0",
             sizeContainers: "40% 60%",
+            numberInVisibleBlock: "1",
           }}
           firstItem={
             <FirstItemForService
@@ -182,6 +184,9 @@ class Home extends React.Component {
           items={partnersItems}
           settings={{
             heightMainContainer: "logos",
+            widthItemGridContainer: "240px",
+            gridGap: 0,
+            gridRowGap: "77px",
           }}
           isTitle
           backgroundImg={partnersItems.backgroundImg}
@@ -207,6 +212,7 @@ class Home extends React.Component {
             paddingBottom: "0",
 
             sizeContainers: "60% 40%",
+            inVisibleBlock: "2",
           }}
           firstItem={<Articles items={businessItems.leftContent} />}
           secondItem={
@@ -238,7 +244,7 @@ class Home extends React.Component {
             <Photos
               items={blogItems}
               settings={{
-                widthItemGridContainer: "400px",
+                widthItemGridContainer: "392px",
                 gridItemRow: "1",
               }}
             />

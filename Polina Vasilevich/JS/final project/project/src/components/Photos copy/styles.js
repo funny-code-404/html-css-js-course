@@ -11,8 +11,9 @@ export const Img = styled.div`
   ${(props) =>
     props.gridItemRow &&
     `&:nth-of-type(${props.gridItemRow}) {
-    height: 100%;
-    grid-row: 1 / 3;`}
+    // height: 100%;
+    grid-row: 1 / 3;
+    `}
   }
 
   ${(props) =>
@@ -21,6 +22,8 @@ export const Img = styled.div`
     
     grid-column: 1 / 3;`}
   }
+
+
 
 `;
 

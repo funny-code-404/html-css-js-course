@@ -12,7 +12,7 @@ import {
 export default function Table(props) {
   const { items } = props;
   return (
-    <GridContainer widthItemGridContainer="250px" gridGap="0">
+    <GridContainer widthItemGridContainer="220px" gridGap="0">
       {items.map((item) => {
         return (
           <PriceContainer key={item.title}>

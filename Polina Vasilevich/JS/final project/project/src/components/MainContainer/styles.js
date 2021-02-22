@@ -194,6 +194,18 @@ const setStylesBlock = (stylesBlock) => {
   }
 };
 
+const setMediaBlock = (mediaBlock) => {
+  switch (mediaBlock) {
+    case "numbers":
+      return `@media(max-width: 900px) {
+        display:none;
+      }`;
+
+    default:
+      break;
+  }
+};
+
 export const MainContainer = styled.div`
   position: relative;
   ${(props) => props.isVerticalCenter && `display: flex; align-items: center; `}
@@ -206,6 +218,7 @@ export const MainContainer = styled.div`
     setBackgroundColorMainContainer(props.backgroundColorMainContainer)}
 
   ${(props) => setHeightMainContainer(props.heightMainContainer)};
+  ${(props) => setMediaBlock(props.mediaBlock)};
 `;
 
 const setPaddingLeftRight = (paddingLeftRight) => {

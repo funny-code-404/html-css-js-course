@@ -1,7 +1,37 @@
 import styled from "styled-components";
 
+export const GridItem = styled.div``;
 const widthItemGridContainer = (props) =>
   props.widthItemGridContainer ? props.widthItemGridContainer : "200px";
+
+const setMediaWidthItemGridBlock = (breakpoint, mediaWidthItemGridBlock) => {
+  return `@media(max-width: ${breakpoint}) {
+              grid-template-columns: repeat(
+              auto-fit,
+              minmax(${mediaWidthItemGridBlock}, 1fr));`;
+};
+
+const setMediaGridBlock = (mediaGridBlock) => {
+  switch (mediaGridBlock) {
+    case "iconsList1":
+      return setMediaWidthItemGridBlock("1418px", "280px");
+
+    case "photos1":
+      return setMediaWidthItemGridBlock("1418px", "280px");
+
+    case "footer":
+      return `
+        ${GridItem}:nth-of-type(1) {
+          @media(max-width: 1418px) {
+            grid-column: 1/5;
+          }
+        }    
+    `;
+
+    default:
+      break;
+  }
+};
 
 export const GridContainer = styled.div`
   display: grid;
@@ -12,7 +42,9 @@ export const GridContainer = styled.div`
     auto-fit,
     minmax(${widthItemGridContainer}, 1fr)
   );
+
   justify-content: space-between;
+  ${(props) => setMediaGridBlock(props.mediaGridBlock)}
 `;
 
 const paddingTopBottom = (props) =>
@@ -29,9 +61,6 @@ const setPositionContentContainer = (positionTextContainer) => {
   switch (positionTextContainer) {
     case "right":
       return `
-                // position: absolute;
-                // left: 50%;
-                // top: 25%;
                 margin-left: auto;
                 
             `;
@@ -81,9 +110,30 @@ const setHeightFlexContainer = (heightFlexContainer) => {
   }
 };
 
+const setMediaFlexBlock = (mediaFlexBlock) => {
+  switch (mediaFlexBlock) {
+    case "callTo":
+      return `@media(max-width: 1418px) {
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+      }`;
+
+    case "numbers":
+      return `@media(max-width: 900px) {
+        display:none;
+      }`;
+
+    default:
+      break;
+  }
+};
+
 export const FlexContainer = styled.div`
   ${(props) => setHeightFlexContainer(props.heightFlexContainer)};
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  ${(props) => setMediaFlexBlock(props.mediaFlexBlock)};
 `;

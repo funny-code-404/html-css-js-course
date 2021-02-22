@@ -32,6 +32,7 @@ function Numbers(props) {
         paddingTop: "0",
         paddingBottom: "0",
         backgroundColorMainContainer: "dark",
+        mediaFlexBlock: "numbers",
       }}
       contentContainer={contentContainer}
     />
