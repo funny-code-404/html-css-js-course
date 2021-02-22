@@ -31,89 +31,94 @@ class AsideComponent extends React.Component {
     const { posts, tags, photos, form, categories, archive } = this.props.items;
 
     return (
-      <Aside id="aside" style={style}>
-        <Search
-          type="search"
-          placeholder="Search..."
-          onChange={this.handleFilterList}
-        ></Search>
-        <Article
-          items={posts}
-          contentContainer={
-            <IconsList
-              items={this.state.items}
+      <MainContainer
+        settings={{
+          stylesBlock: "aside",
+          backgroundColorMainContainer: "aside",
+          heightMainContainer: "tweets",
+        }}
+        styles={style}
+        contentContainer={
+          <Aside id="aside">
+            <Search
+              type="search"
+              placeholder="Search..."
+              onChange={this.handleFilterList}
+            ></Search>
+            <Article
+              items={posts}
+              contentContainer={
+                <IconsList
+                  items={this.state.items}
+                  settings={{
+                    heightImg: "81px",
+                    widthImg: "111px",
+                    positionIcons: "left",
+                    positionText: "left",
+                    heightMainContainer: "tweets",
+                    stylesText: "postsTitle",
+                    padding: "asideIconsList",
+                  }}
+                />
+              }
+            />
+            <Article
+              items={tags}
+              contentContainer={
+                <div>
+                  {tags.items.map((tag) => {
+                    return (
+                      <Button
+                        buttonLabel={tag}
+                        settings={{
+                          widthButton: "auto",
+                          colorButton: "grey",
+                          colorTextButton: "grey",
+                        }}
+                      />
+                    );
+                  })}
+                </div>
+              }
+            />
+            <Form
+              idForm="form4"
+              items={form}
               settings={{
-                heightImg: "81px",
-                widthImg: "111px",
-                positionIcons: "left",
+                stylesText: "tweets",
+                paddingLeftRight: "none",
+                paddingTop: "20px",
+                paddingBottom: "70px",
                 positionText: "left",
-                heightMainContainer: "tweets",
-                stylesText: "postsTitle",
-                padding: "asideIconsList",
+                alignItems: "left",
+                sizeInput: "tweets",
+                widthButton: "tweets",
               }}
+              style={{ margin: "20px 0" }}
             />
-          }
-        />
-
-        <Article
-          items={tags}
-          contentContainer={
-            <div>
-              {tags.items.map((tag) => {
-                return (
-                  <Button
-                    buttonLabel={tag}
-                    settings={{
-                      widthButton: "auto",
-                      colorButton: "grey",
-                      colorTextButton: "grey",
-                    }}
-                  />
-                );
-              })}
-            </div>
-          }
-        />
-
-        <Form
-          idForm="form4"
-          items={form}
-          settings={{
-            stylesText: "tweets",
-            paddingLeftRight: "none",
-            paddingTop: "20px",
-            paddingBottom: "70px",
-            positionText: "left",
-            alignItems: "left",
-            sizeInput: "tweets",
-            widthButton: "tweets",
-          }}
-          style={{ margin: "20px 0" }}
-        />
-
-        <Article
-          items={photos}
-          contentContainer={
-            <Photos
+            <Article
               items={photos}
-              settings={{
-                heightImg: "100px",
-                widthItemGridContainer: "100px",
-              }}
+              contentContainer={
+                <Photos
+                  items={photos}
+                  settings={{
+                    heightImg: "100px",
+                    widthItemGridContainer: "100px",
+                  }}
+                />
+              }
             />
-          }
-        />
-
-        <Article
-          items={categories}
-          contentContainer={<Categories items={categories.items} />}
-        />
-
-        <Article
-          items={archive}
-          contentContainer={<Categories items={archive.items} />}
-        />
-      </Aside>
+            <Article
+              items={categories}
+              contentContainer={<Categories items={categories.items} />}
+            />
+            <Article
+              items={archive}
+              contentContainer={<Categories items={archive.items} />}
+            />
+          </Aside>
+        }
+      />
     );
   }
 }

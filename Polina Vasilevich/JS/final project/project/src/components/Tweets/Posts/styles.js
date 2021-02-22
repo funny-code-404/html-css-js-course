@@ -15,8 +15,8 @@ export const Arrow = styled.button`
   // transform: rotate(45deg);
 
   position: absolute;
-  top: 20px;
-  right: -3vw;
+
+  right: -7vw;
   font-size: 25px;
   color: #999999;
   z-index: 1;

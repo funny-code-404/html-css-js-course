@@ -5,7 +5,7 @@ export const Aside = styled.aside`
   z-index: 2;
 
   //   background-color: #f7f7f7;
-  //   padding: 30px;
+  padding: 0 25px;
 
   .isInVisible {
     display: none;
@@ -24,4 +24,5 @@ export const Search = styled.input`
   line-height: 30px;
   font-weight: 400;
   color: #575757;
+  margin-bottom: 60px;
 `;

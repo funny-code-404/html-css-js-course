@@ -4,7 +4,7 @@ import TwoColumnSection from "../TwoColumSection";
 
 import Posts from "./Posts";
 import Aside from "./Aside";
-
+import { InVisible } from "./styles";
 class TweetsComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -24,18 +24,29 @@ class TweetsComponent extends React.Component {
     const { settings } = this.props;
     const stylesMainBlock = !this.state.isVisible
       ? {
-          gridTemplateColumns: "80%",
+          // gridTemplateColumns: "80%",
           justifyContent: "center",
         }
       : {};
     const stylesAside = !this.state.isVisible ? { display: "none" } : {};
 
-    const icon = !this.state.isVisible ? "ti-menu" : "ti-shift-right-alt";
+    // const icon = !this.state.isVisible ? "ti-menu" : "ti-shift-right-alt";
+
+    const icon = !this.state.isVisible ? (
+      <i className="ti-menu"></i>
+    ) : (
+      <InVisible />
+    );
+
     return (
       <TwoColumnSection
         settings={{
-          sizeContainers: " 60% 29%",
-          gridGap: "11%",
+          paddingLeftRight: "none",
+          paddingTop: "0",
+          paddingBottom: "0",
+
+          sizeContainers: "55% 40%",
+          gridGap: "6.5%",
         }}
         style={stylesMainBlock}
         firstItem={

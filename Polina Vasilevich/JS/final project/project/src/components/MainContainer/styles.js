@@ -157,16 +157,18 @@ const setPaddingBlock = (padding) => {
 const setStylesBlock = (stylesBlock) => {
   switch (stylesBlock) {
     case "posts":
-      return `  
-        padding-left:26%;
+      return ` 
+      padding-top: 120px;
+        padding-left:36%;
         padding-right:0;
-      }`;
+      `;
 
     case "aside":
       return `
-      width: 40%;
-  
-        padding-left:0;   
+      padding-top: 33px;
+    padding-bottom: 105px;
+    padding-left: 0;
+    padding-right: 47%;
       `;
 
     case "asideIconsList":
@@ -263,4 +265,5 @@ export const Wrapper = styled.div`
   ${(props) => props.deletePadding && `padding 0 !important;`}
 
   ${(props) => setPaddingBlock(props.padding)};
+  ${(props) => setStylesBlock(props.stylesBlock)};
 `;
