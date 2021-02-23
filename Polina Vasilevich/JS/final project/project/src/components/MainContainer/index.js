@@ -21,7 +21,7 @@ export default function MainContainerComponent(props) {
       id={id}
       style={styles}
     >
-      <Wrapper {...settings} deletePadding={deletePadding}>
+      <Wrapper {...settings} style={styles} deletePadding={deletePadding}>
         {isTitle && (
           <Typography
             isLine

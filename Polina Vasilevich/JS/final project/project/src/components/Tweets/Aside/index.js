@@ -57,7 +57,7 @@ class AsideComponent extends React.Component {
                     positionText: "left",
                     heightMainContainer: "tweets",
                     stylesText: "postsTitle",
-                    padding: "asideIconsList",
+                    stylesBlock: "asideIconsList",
                   }}
                 />
               }

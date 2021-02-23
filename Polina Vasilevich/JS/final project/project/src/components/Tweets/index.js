@@ -9,7 +9,7 @@ class TweetsComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isVisible: true,
+      isVisible: false,
     };
   }
 
@@ -22,44 +22,50 @@ class TweetsComponent extends React.Component {
 
   render() {
     const { settings } = this.props;
-    const stylesMainBlock = !this.state.isVisible
+    const condition = !this.state.isVisible;
+    const stylesGridBlock = !condition
       ? {
-          // gridTemplateColumns: "80%",
+          gridTemplateColumns: "100%",
           justifyContent: "center",
         }
       : {};
-    const stylesAside = !this.state.isVisible ? { display: "none" } : {};
 
-    // const icon = !this.state.isVisible ? "ti-menu" : "ti-shift-right-alt";
+    const stylesMainBlock = !condition
+      ? {
+          paddingTop: "50px",
+          paddingLeft: "11%",
+          paddingRight: "11%",
+        }
+      : {};
+    const stylesAside = !condition ? { opacity: "0" } : {};
 
-    const icon = !this.state.isVisible ? (
-      <i className="ti-menu"></i>
-    ) : (
-      <InVisible />
-    );
+    const icon = !condition ? <i className="ti-menu"></i> : <InVisible />;
 
     return (
-      <TwoColumnSection
-        settings={{
-          paddingLeftRight: "none",
-          paddingTop: "0",
-          paddingBottom: "0",
+      <>
+        <TwoColumnSection
+          settings={{
+            paddingLeftRight: "none",
+            paddingTop: "0",
+            paddingBottom: "0",
 
-          sizeContainers: "55% 40%",
-          gridGap: "6.5%",
-        }}
-        style={stylesMainBlock}
-        firstItem={
-          <Posts
-            items={this.props.items.tweets}
-            handleClick={this.handleInvisibleBlock.bind(this)}
-            icon={icon}
-          />
-        }
-        secondItem={
-          <Aside items={this.props.items.asideItems} style={stylesAside} />
-        }
-      />
+            sizeContainers: "55% 40%",
+            gridGap: "6.5%",
+          }}
+          styles={stylesGridBlock}
+          firstItem={
+            <Posts
+              items={this.props.items.tweets}
+              handleClick={this.handleInvisibleBlock.bind(this)}
+              icon={icon}
+              styles={stylesMainBlock}
+            />
+          }
+          secondItem={
+            <Aside items={this.props.items.asideItems} style={stylesAside} />
+          }
+        />
+      </>
     );
   }
 }

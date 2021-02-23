@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Posts = styled.div`
   position: relative;
-
-  .isInVisible {
+  z-index: 2;
+  .inVisible {
     width: 100%;
   }
 `;

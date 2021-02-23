@@ -62,7 +62,6 @@ class Home extends React.Component {
             formIcon: "circle",
             colorIconContainer: "gradient",
             sizeIconContainer: "middle",
-            // widthItemGridContainer: "200px",
             mediaGridBlock: "iconsList1",
             gridGap: "3%",
           }}
@@ -83,7 +82,7 @@ class Home extends React.Component {
           isTitle
           items={portfolioItems}
           settings={{
-            padding: "photos",
+            stylesBlock: "photos",
           }}
           contentContainer={
             <Photos

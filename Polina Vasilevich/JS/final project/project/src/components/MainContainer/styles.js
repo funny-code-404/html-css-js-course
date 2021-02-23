@@ -112,50 +112,13 @@ const setHeightMainContainer = (heightMainContainer) => {
   }
 };
 
-const setPaddingBlock = (padding) => {
-  switch (padding) {
-    case "posts":
-      return `  
-        padding-left:32%;
-        padding-right:0;
-        padding-top: 0;
-      }`;
-
-    case "aside":
-      return `
-      padding-top: 0;
-        padding-left:0;  
-        // padding-right:27%; 
-        
-      `;
-
-    case "asideIconsList":
-      return `
-    
-        padding-left:0;
-        padding-right:0;
-        padding-top:0 !important;
-        padding-bottom:0 !important;
-      `;
-
-    case "photos":
-      return `
-      
-          padding-left:0;
-          padding-right:0;
-         
-          padding-bottom:0;
-        }`;
-
-    default:
-      return `
-           
-           `;
-  }
-};
-
 const setStylesBlock = (stylesBlock) => {
   switch (stylesBlock) {
+    case "withoutPaddingLeftRight":
+      return ` 
+        padding-left:0;
+        padding-right:0;
+      `;
     case "posts":
       return ` 
       padding-top: 120px;
@@ -166,9 +129,9 @@ const setStylesBlock = (stylesBlock) => {
     case "aside":
       return `
       padding-top: 33px;
-    padding-bottom: 105px;
-    padding-left: 0;
-    padding-right: 47%;
+      padding-bottom: 105px;
+      padding-left: 0;
+      padding-right: 47%;
       `;
 
     case "asideIconsList":
@@ -221,6 +184,7 @@ export const MainContainer = styled.div`
 
   ${(props) => setHeightMainContainer(props.heightMainContainer)};
   ${(props) => setMediaBlock(props.mediaBlock)};
+  transition: opacity ease 0.5s;
 `;
 
 const setPaddingLeftRight = (paddingLeftRight) => {
@@ -264,6 +228,5 @@ export const Wrapper = styled.div`
 
   ${(props) => props.deletePadding && `padding 0 !important;`}
 
-  ${(props) => setPaddingBlock(props.padding)};
   ${(props) => setStylesBlock(props.stylesBlock)};
 `;
