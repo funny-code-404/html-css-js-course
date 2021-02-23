@@ -5,66 +5,74 @@ import MainContainer from "../../MainContainer";
 import { Img, ContentContainer } from "../../Icon copy/styles";
 import { Posts, Arrow, Icon } from "./styles";
 import { handleContinueRead } from "../../Button/handlers";
-
+import Pagination from "./Pagination";
+import Info from "./Info";
 class PostsComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      indices: [],
       activeButtonLike: [],
       buttonsShareThis: [],
+
       currentPage: 0,
-      beginIndexList: 0,
-      endIndexList: 5,
-      list: props.items.list,
+      limit: 5,
+      items: props.items.list,
     };
   }
 
   nextPage = (e) => {
     e.preventDefault();
-    if (this.state.currentPage + 1 < Math.round(this.state.list.length / 5)) {
+    const { items, currentPage, limit } = this.state;
+    const amountOfPages = Math.round(items.length / limit);
+    if (currentPage + 1 < amountOfPages) {
       this.setState((prevState) => ({
         currentPage: prevState.currentPage + 1,
-        beginIndexList: prevState.beginIndexList + 5,
-        endIndexList: prevState.endIndexList + 5,
       }));
     }
   };
 
-  previousPage = (e) => {
+  previousPage(e) {
     e.preventDefault();
     if (this.state.currentPage !== 0) {
       this.setState((prevState) => ({
         currentPage: prevState.currentPage - 1,
-        beginIndexList: prevState.beginIndexList - 5,
-        endIndexList: prevState.endIndexList - 5,
       }));
     }
-  };
+  }
+
+  setCurrentPage(e) {
+    e.preventDefault();
+
+    this.setState((prevState) => ({
+      ...prevState,
+      currentPage: +e.target.value,
+    }));
+  }
 
   handleActiveButton = (e, items) => {
     e.preventDefault();
     if (!items.includes(e.target.id)) {
       items.push(e.target.id);
       this.setState({
-        items: items,
+        indices: items,
       });
     } else {
       items.splice(items.indexOf(e.target.id), 1);
       this.setState({
-        items: items,
+        indices: items,
       });
     }
   };
 
   render() {
     const { icons } = this.props.items;
-    const { list, beginIndexList, endIndexList, currentPage } = this.state;
-    const styleButtonPrevious = !currentPage ? { opacity: "0" } : {};
-    const styleButtonNext =
-      this.state.currentPage + 1 >= Math.round(this.state.list.length / 5)
-        ? { opacity: "0" }
-        : {};
+    const { currentPage, limit, items } = this.state;
+    const amountOfPages = Math.round(items.length / limit);
+    const beginIndexList = currentPage * limit;
+    const endIndexList = beginIndexList + limit;
 
+    console.log(items);
     return (
       <MainContainer
         settings={{ stylesBlock: "posts" }}
@@ -72,31 +80,9 @@ class PostsComponent extends React.Component {
         contentContainer={
           <>
             <Posts>
-              <div className="pagination" style={{ display: "flex" }}>
-                <button style={styleButtonNext} onClick={this.nextPage}>
-                  Next
-                </button>
-                <div style={{ display: "flex" }}>
-                  {this.state.list
-                    .slice(0, Math.round(this.state.list.length / 5))
-                    .map((item, index) => {
-                      const styles =
-                        currentPage === index ? { fontWeight: "bold" } : {};
-                      return (
-                        <p style={styles} id={`pagination${index}`}>
-                          {index + 1}
-                        </p>
-                      );
-                    })}
-                </div>
-
-                <button style={styleButtonPrevious} onClick={this.previousPage}>
-                  Previous
-                </button>
-              </div>
-
               <Arrow onClick={this.props.handleClick}>{this.props.icon}</Arrow>
-              {list
+
+              {items
                 .slice(beginIndexList, endIndexList)
                 .map(({ info, content }, index) => {
                   const condition = this.state.activeButtonLike.includes(
@@ -114,48 +100,11 @@ class PostsComponent extends React.Component {
                       className="article"
                       style={{
                         marginBottom: "60px",
-                        borderBottom: "1px solid grey",
+                        borderBottom: "1px solid #ebebeb",
                         paddingBottom: "53px",
                       }}
                     >
-                      <div
-                        className="info"
-                        style={{
-                          display: "flex",
-                          justifyContent: "space-between",
-                        }}
-                      >
-                        <ContentContainer positionIcons="left">
-                          <Img
-                            backgroundImg={info.img}
-                            heightImg="51px"
-                            widthImg="51px"
-                            style={{ borderRadius: "50%", marginRight: "20px" }}
-                          />
-                          <Typography
-                            items={info}
-                            settings={{
-                              positionText: "left",
-                              stylesText: "postAuthor",
-                            }}
-                          />
-                        </ContentContainer>
-
-                        <div className="tag">
-                          {info.tags.map((tag) => {
-                            return (
-                              <Button
-                                buttonLabel={tag}
-                                settings={{
-                                  widthButton: "auto",
-                                  colorButton: "grey",
-                                  colorTextButton: "grey",
-                                }}
-                              />
-                            );
-                          })}
-                        </div>
-                      </div>
+                      <Info items={info} />
 
                       <div className="container">
                         {content.img && (
@@ -178,17 +127,6 @@ class PostsComponent extends React.Component {
                       </div>
 
                       <div className="buttons">
-                        {/* {buttons.map((button) => {
-                  return (
-                    <Button
-                      buttonLabel={button}
-                      settings={{
-                        typeButton: "link",
-                        colorTextButton: "grey",
-                      }}
-                    />
-                  );
-                })} */}
                         {content.href && (
                           <Button
                             handleButton={(e) =>
@@ -245,17 +183,15 @@ class PostsComponent extends React.Component {
                   );
                 })}
             </Posts>
-            {/* <div className="pagination">
-          <button style={{ cursor: "pointer" }} onClick={this.nextPage}>
-            Next
-          </button>
-          <button onClick={this.previousPage}>Previous</button>
-          {this.state.list
-            .slice(this.state.list.length / 3)
-            .map((item, index) => (
-              <p id={`pagination${index}`}>{index + 1}</p>
-            ))}
-        </div> */}
+            <Pagination
+              items={items}
+              currentPage={currentPage}
+              limit={limit}
+              amountOfPages={amountOfPages}
+              handleClickButtonPrevious={this.previousPage.bind(this)}
+              handleClickButtonNext={this.nextPage.bind(this)}
+              handleClickNumberPage={this.setCurrentPage.bind(this)}
+            />
           </>
         }
       />

@@ -93,6 +93,19 @@ const setColorButton = (colorButton) => {
           }
             `;
 
+    case "postInfo":
+      return `
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 400;
+      color: #999999;
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.07);
+
+
+        `;
+
     default:
       return `
         background-color: #4285f4;
