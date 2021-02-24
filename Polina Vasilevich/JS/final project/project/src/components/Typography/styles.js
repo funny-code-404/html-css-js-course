@@ -55,13 +55,16 @@ const setSizeTitle = (sizeTitle) => {
             
       `;
 
-    case "categories":
+    case "asideCategories":
       return `
       font-size: 14px;
       line-height: 50px;
       font-weight: 400;
       color: #333333;
       margin: 0;
+       :hover {
+          color: #4285f4;
+       }
       `;
 
     case "photos":
@@ -328,8 +331,11 @@ const setStylesText = (stylesText) => {
         }  
       `;
 
+    ///posts
     case "postAuthor":
       return `
+      text-align: left;
+      align-items: start;
       ${Title} {
         font-size: 16px;
         line-height: 24px;
@@ -337,14 +343,16 @@ const setStylesText = (stylesText) => {
       }  
       `;
 
-    case "postTitle":
+    case "postsContentText":
       return `
-      ${Title} {font-size: 30px;
-      line-height: 50px;
-      font-weight: 300;
-      color: #333333;
-      margin: 20px 0;
-      }`;
+      text-align: left;
+      ${Title} {
+        font-size: 30px;
+        line-height: 50px;
+        font-weight: 300;
+        color: #333333;
+       }  
+      `;
 
     case "tweets":
       return `
@@ -353,6 +361,36 @@ const setStylesText = (stylesText) => {
         font-weight: 700;
         letter-spacing: 0.13em;
       }`;
+
+    case "asidePostsTitle":
+      return `
+      text-align: left;
+      align-items: start;
+      ${Title} {
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 600;
+        color: #333333;
+        
+        :hover {
+          color: #4285f4;
+        }
+      }`;
+
+    case "asideCategories":
+      return `
+          ${Title} {
+            font-size: 14px;
+            line-height: 50px;
+            font-weight: 400;
+            color: #333333;
+            margin: 0;
+          }
+          :hover {
+          color: #4285f4;
+        }
+
+      `;
 
     case "bigSlider":
       return `
@@ -421,17 +459,6 @@ const setStylesText = (stylesText) => {
       }
 
     `;
-
-    case "postsTitle":
-      return `
-      ${Title} {
-        font-size: 14px;
-        line-height: 30px;
-        font-weight: 600;
-        color: #333333;
-      }
-
-      `;
 
     default:
       return `

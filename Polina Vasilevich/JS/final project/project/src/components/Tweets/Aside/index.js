@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import Article from "./Article";
 import Categories from "./Categories";
 import IconsList from "../../IconsList";
@@ -54,9 +56,8 @@ class AsideComponent extends React.Component {
                     heightImg: "81px",
                     widthImg: "111px",
                     positionIcons: "left",
-                    positionText: "left",
                     heightMainContainer: "tweets",
-                    stylesText: "postsTitle",
+                    stylesText: "asidePostsTitle",
                     stylesBlock: "asideIconsList",
                   }}
                 />
@@ -122,5 +123,23 @@ class AsideComponent extends React.Component {
     );
   }
 }
+
+AsideComponent.propTypes = {
+  items: PropTypes.array,
+  style: PropTypes.object,
+};
+
+AsideComponent.defaulfProps = {
+  items: {
+    posts: [],
+    tags: [],
+    photos: [],
+    form: [],
+    categories: [],
+    archive: [],
+  },
+
+  style: {},
+};
 
 export default AsideComponent;

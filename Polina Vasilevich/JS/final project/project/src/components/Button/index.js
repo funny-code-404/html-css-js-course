@@ -12,6 +12,7 @@ class ButtonComponent extends React.Component {
       link,
       id,
       styles,
+      className,
     } = this.props;
 
     return (

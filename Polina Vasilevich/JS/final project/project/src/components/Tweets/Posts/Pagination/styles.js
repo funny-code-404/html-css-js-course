@@ -40,8 +40,15 @@ export const NumberPage = styled.button`
   border-radius: 3px;
   outline: none;
   cursor: pointer;
-  .active {
+
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #999999;
+
+  &.activePage {
     background-color: #4285f4;
     border-radius: 3px;
+    color: #fff;
   }
 `;

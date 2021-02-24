@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Button } from "../../Button/styles";
 
 export const Posts = styled.div`
   position: relative;
@@ -6,6 +7,27 @@ export const Posts = styled.div`
   .inVisible {
     width: 100%;
   }
+
+  ${Button} {
+    .postInfo {
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 400;
+      color: #999999;
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+
+      :hover {
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.07);
+      }
+    }
+  }
+`;
+
+export const PostsItem = styled.div`
+  margin-bottom: 60px;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 53px;
 `;
 
 export const Arrow = styled.button`
@@ -26,18 +48,4 @@ export const Arrow = styled.button`
 
   background-color: transparent;
   border-color: transparent;
-`;
-
-export const Icon = styled.a`
-  text-decoration: none;
-  font-family: themify;
-  font-size: 13px;
-  line-height: 30px;
-  font-weight: 400;
-  color: #666666;
-  padding: 10px;
-
-  :hover {
-    color: #55d0fe;
-  }
 `;

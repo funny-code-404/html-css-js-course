@@ -1,15 +1,19 @@
-import React from "react";
+import PropTypes from "prop-types";
 import { VideoContainer, Video } from "./styles";
 
-class VideoComponent extends React.Component {
-  render() {
-    const { src } = this.props.items;
-    return (
-      <VideoContainer>
-        <Video src={src} frameborder="0" allowfullscreen></Video>
-      </VideoContainer>
-    );
-  }
-}
+VideoComponent.propTypes = {
+  items: PropTypes.string,
+};
 
-export default VideoComponent;
+VideoComponent.defaultProps = {
+  items: "https://www.youtube.com/embed/tgbNymZ7vqY",
+};
+
+export default function VideoComponent(props) {
+  const { src } = props.items;
+  return (
+    <VideoContainer>
+      <Video src={src} frameborder="0" allowfullscreen></Video>
+    </VideoContainer>
+  );
+}

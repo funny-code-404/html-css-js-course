@@ -1,26 +1,33 @@
+import PropTypes from "prop-types";
+
 import { Title } from "../../../Typography/styles";
+import { CategoriesContainer, Link, CategoriesItem } from "./styles";
+
+Categories.propTypes = {
+  items: PropTypes.array,
+};
+
+Categories.defaultProps = {
+  items: {
+    title: "",
+    href: "",
+  },
+};
 
 export default function Categories(props) {
-  const { settings, items } = props;
+  const { items } = props;
 
   return (
-    <div style={{ marginBottom: "20px" }}>
-      {items.map((item) => {
+    <CategoriesContainer>
+      {items.map(({ title, href }, index) => {
         return (
-          <div
-            style={{
-              borderBottom: "1px solid #EBEBEB",
-            }}
-          >
-            <a
-              href="https://qna.habr.com/q/600318"
-              style={{ pointer: "cursor", textDecoration: "none" }}
-            >
-              <Title sizeTitle="categories">{item}</Title>
-            </a>
-          </div>
+          <CategoriesItem key={`categories${index}`}>
+            <Link href={href}>
+              <Title sizeTitle="asideCategories">{title}</Title>
+            </Link>
+          </CategoriesItem>
         );
       })}
-    </div>
+    </CategoriesContainer>
   );
 }

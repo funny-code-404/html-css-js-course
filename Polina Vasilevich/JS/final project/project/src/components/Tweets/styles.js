@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const Tweets = styled.div`
+  display: grid;
+  grid-template-columns: 55% 40%;
+  grid-gap: 6.5%;
+`;
 export const Avatar = styled.div`
   width: 50px;
   height: 50px;

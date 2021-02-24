@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { Info, ContentContainer, Avatar, TagsContainer } from "./styles";
 import Typography from "../../../Typography";
 import Button from "../../../Button";
+
 InfoComponent.propTypes = {
   info: PropTypes.array,
 };
@@ -12,7 +13,6 @@ InfoComponent.defaultProps = {
 
 export default function InfoComponent(props) {
   const info = props.items;
-  console.log(info.img);
   return (
     <Info>
       <ContentContainer>
@@ -20,7 +20,6 @@ export default function InfoComponent(props) {
         <Typography
           items={info}
           settings={{
-            positionText: "left",
             stylesText: "postAuthor",
           }}
         />
@@ -30,6 +29,7 @@ export default function InfoComponent(props) {
         {info.tags.map((tag, index) => {
           return (
             <Button
+              className="postInfo"
               key={`tagsPostInfo${index}`}
               buttonLabel={tag}
               settings={{

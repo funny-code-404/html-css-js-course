@@ -545,18 +545,69 @@ const tweetsItems = {
     categories: {
       title: "CATEGORIES",
       items: [
-        "Design",
-        "Tech",
-        "Strategy",
-        "Read",
-        "Markets",
-        "Life",
-        "Finance",
+        {
+          title: "Design",
+          href: "https://qna.habr.com/q/600318",
+        },
+
+        {
+          title: "Strategy",
+          href: "https://qna.habr.com/q/600318",
+        },
+
+        {
+          title: "Read",
+          href: "https://qna.habr.com/q/600318",
+        },
+
+        {
+          title: "Markets",
+          href: "https://qna.habr.com/q/600318",
+        },
+
+        {
+          title: "Life",
+          href: "https://qna.habr.com/q/600318",
+        },
+
+        {
+          title: "Finance",
+          href: "https://qna.habr.com/q/600318",
+        },
       ],
     },
     archive: {
       title: "ARCHIVE",
-      items: ["January", "February", "March", "April", "May", "June"],
+      items: [
+        {
+          title: "January",
+          href: "https://qna.habr.com/q/600318",
+        },
+        {
+          title: "February",
+          href: "https://qna.habr.com/q/600318",
+        },
+
+        {
+          title: "March",
+          href: "https://qna.habr.com/q/600318",
+        },
+
+        {
+          title: "April",
+          href: "https://qna.habr.com/q/600318",
+        },
+
+        {
+          title: "May",
+          href: "https://qna.habr.com/q/600318",
+        },
+
+        {
+          title: "June",
+          href: "https://qna.habr.com/q/600318",
+        },
+      ],
     },
   },
 };

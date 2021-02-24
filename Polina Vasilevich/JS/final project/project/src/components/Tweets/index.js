@@ -1,10 +1,10 @@
 import React from "react";
 
 import TwoColumnSection from "../TwoColumSection";
-
 import Posts from "./Posts";
 import Aside from "./Aside";
-import { InVisible } from "./styles";
+import { InVisible, Tweets } from "./styles";
+
 class TweetsComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -25,8 +25,9 @@ class TweetsComponent extends React.Component {
     const condition = !this.state.isVisible;
     const stylesGridBlock = !condition
       ? {
-          gridTemplateColumns: "100%",
-          justifyContent: "center",
+          display: "block",
+          width: "65%",
+          margin: "0 auto",
         }
       : {};
 
@@ -43,28 +44,15 @@ class TweetsComponent extends React.Component {
 
     return (
       <>
-        <TwoColumnSection
-          settings={{
-            paddingLeftRight: "none",
-            paddingTop: "0",
-            paddingBottom: "0",
-
-            sizeContainers: "55% 40%",
-            gridGap: "6.5%",
-          }}
-          styles={stylesGridBlock}
-          firstItem={
-            <Posts
-              items={this.props.items.tweets}
-              handleClick={this.handleInvisibleBlock.bind(this)}
-              icon={icon}
-              styles={stylesMainBlock}
-            />
-          }
-          secondItem={
-            <Aside items={this.props.items.asideItems} style={stylesAside} />
-          }
-        />
+        <Tweets style={stylesGridBlock}>
+          <Posts
+            items={this.props.items.tweets}
+            handleClick={this.handleInvisibleBlock.bind(this)}
+            icon={icon}
+            styles={stylesMainBlock}
+          />
+          <Aside items={this.props.items.asideItems} style={stylesAside} />
+        </Tweets>
       </>
     );
   }

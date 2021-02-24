@@ -1,20 +1,18 @@
 import React from "react";
-import Typography from "../../Typography";
-import Button from "../../Button";
+import PropTypes from "prop-types";
+
 import MainContainer from "../../MainContainer";
-import { Img, ContentContainer } from "../../Icon copy/styles";
-import { Posts, Arrow, Icon } from "./styles";
-import { handleContinueRead } from "../../Button/handlers";
+import { Posts, Arrow, PostsItem } from "./styles";
+
 import Pagination from "./Pagination";
 import Info from "./Info";
+import Content from "./Content";
+import Buttons from "./Buttons";
+
 class PostsComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      indices: [],
-      activeButtonLike: [],
-      buttonsShareThis: [],
-
       currentPage: 0,
       limit: 5,
       items: props.items.list,
@@ -50,136 +48,31 @@ class PostsComponent extends React.Component {
     }));
   }
 
-  handleActiveButton = (e, items) => {
-    e.preventDefault();
-    if (!items.includes(e.target.id)) {
-      items.push(e.target.id);
-      this.setState({
-        indices: items,
-      });
-    } else {
-      items.splice(items.indexOf(e.target.id), 1);
-      this.setState({
-        indices: items,
-      });
-    }
-  };
-
   render() {
+    const { styles, handleClick, icon } = this.props;
     const { icons } = this.props.items;
     const { currentPage, limit, items } = this.state;
     const amountOfPages = Math.round(items.length / limit);
     const beginIndexList = currentPage * limit;
     const endIndexList = beginIndexList + limit;
 
-    console.log(items);
     return (
       <MainContainer
         settings={{ stylesBlock: "posts" }}
-        styles={this.props.styles}
+        styles={styles}
         contentContainer={
           <>
             <Posts>
-              <Arrow onClick={this.props.handleClick}>{this.props.icon}</Arrow>
-
+              <Arrow onClick={handleClick}>{icon}</Arrow>
               {items
                 .slice(beginIndexList, endIndexList)
                 .map(({ info, content }, index) => {
-                  const condition = this.state.activeButtonLike.includes(
-                    `like${index}`
-                  );
-                  const styleButtonLike = condition
-                    ? { fontWeight: "bold", color: "#000" }
-                    : {};
-
-                  const buttonLikeLabel = !condition ? "Like this" : "Like";
-
                   return (
-                    <div
-                      key={index}
-                      className="article"
-                      style={{
-                        marginBottom: "60px",
-                        borderBottom: "1px solid #ebebeb",
-                        paddingBottom: "53px",
-                      }}
-                    >
+                    <PostsItem key={`postsItem${index}`}>
                       <Info items={info} />
-
-                      <div className="container">
-                        {content.img && (
-                          <Img
-                            backgroundImg={content.img}
-                            style={{ marginTop: "20px" }}
-                            heightImg="401px"
-                          />
-                        )}
-                        {content.title && (
-                          <Typography
-                            items={content}
-                            settings={{
-                              positionText: "left",
-                              stylesText: "postTitle",
-                              colorTitle: "grey",
-                            }}
-                          />
-                        )}
-                      </div>
-
-                      <div className="buttons">
-                        {content.href && (
-                          <Button
-                            handleButton={(e) =>
-                              handleContinueRead(e, content.href)
-                            }
-                            buttonLabel="Continue Reading"
-                            settings={{
-                              typeButton: "link",
-                              colorTextButton: "grey",
-                            }}
-                          />
-                        )}
-
-                        <Button
-                          id={`like${index}`}
-                          styles={styleButtonLike}
-                          handleButton={(e) =>
-                            this.handleActiveButton(
-                              e,
-                              this.state.activeButtonLike
-                            )
-                          }
-                          buttonLabel={buttonLikeLabel}
-                          settings={{
-                            typeButton: "link",
-                            colorTextButton: "grey",
-                          }}
-                        />
-
-                        <Button
-                          id={`shareThis${index}`}
-                          handleButton={(e) =>
-                            this.handleActiveButton(
-                              e,
-                              this.state.buttonsShareThis
-                            )
-                          }
-                          buttonLabel="Share this"
-                          settings={{
-                            typeButton: "link",
-                            colorTextButton: "grey",
-                          }}
-                        />
-                        {this.state.buttonsShareThis.includes(
-                          `shareThis${index}`
-                        ) &&
-                          icons.map(({ icon, href }) => (
-                            <Icon href={href}>
-                              <i className={icon}></i>
-                            </Icon>
-                          ))}
-                      </div>
-                    </div>
+                      <Content items={content} />
+                      <Buttons items={content} icons={icons} index={index} />
+                    </PostsItem>
                   );
                 })}
             </Posts>
@@ -198,5 +91,25 @@ class PostsComponent extends React.Component {
     );
   }
 }
+
+PostsComponent.propTypes = {
+  items: PropTypes.array,
+  styles: PropTypes.array,
+  handleClick: PropTypes.func,
+  icon: PropTypes.string,
+};
+
+PostsComponent.defaultProps = {
+  items: {
+    list: {
+      content: {},
+      info: {},
+    },
+  },
+
+  styles: {},
+  handleClick: "",
+  icon: "",
+};
 
 export default PostsComponent;

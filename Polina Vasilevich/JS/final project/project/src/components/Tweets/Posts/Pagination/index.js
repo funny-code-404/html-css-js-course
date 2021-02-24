@@ -66,7 +66,8 @@ class PaginationComponent extends React.Component {
         </Button>
         <ButtonContainer onClick={handleClickNumberPage}>
           {items.slice(0, amountOfPages).map((item, index) => {
-            const classNameNumberPage = currentPage === index ? "active" : "";
+            const classNameNumberPage =
+              currentPage === index ? "activePage" : "";
             return (
               <NumberPage
                 key={`pagination${index}`}

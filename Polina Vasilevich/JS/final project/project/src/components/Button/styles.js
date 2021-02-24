@@ -95,15 +95,18 @@ const setColorButton = (colorButton) => {
 
     case "postInfo":
       return `
+      margin: 0;
+      margin-left: 1vw;
       font-size: 14px;
       line-height: 24px;
       font-weight: 400;
-      color: #999999;
+      color: #999999 !important;
       background-color: #ffffff;
       border: 1px solid #e8e8e8;
-      box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.07);
-
-
+      :hover {
+         box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.07);
+         color: #000 !important;
+      }
         `;
 
     default:
