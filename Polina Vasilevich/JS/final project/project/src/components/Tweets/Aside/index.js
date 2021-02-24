@@ -73,8 +73,7 @@ class AsideComponent extends React.Component {
                         buttonLabel={tag}
                         settings={{
                           widthButton: "auto",
-                          colorButton: "grey",
-                          colorTextButton: "grey",
+                          stylesButton: "grey",
                         }}
                       />
                     );

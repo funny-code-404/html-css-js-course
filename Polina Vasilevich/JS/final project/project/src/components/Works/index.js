@@ -4,35 +4,25 @@ import { ContentContainer } from "../../mainStyles";
 import Button from "../Button";
 
 export default function Works(props) {
-  const contentContainer = (
-    <ContentContainer positionContent="center">
-      <Typography items={props.items} isLine />
-      <Button
-        buttonLabel={props.items.buttonLabel}
-        buttonIcon={props.items.buttonIcon}
-        settings={{ colorButton: "green" }}
-      />
-    </ContentContainer>
-  );
   return (
     <MainContainer
       settings={{
         backgroundColorMainContainer: "copyRight",
       }}
-      contentContainer={contentContainer}
+      contentContainer={
+        <ContentContainer positionContent="center">
+          <Typography
+            settings={{ stylesText: "work" }}
+            items={props.items}
+            isLine
+          />
+          <Button
+            buttonLabel={props.items.buttonLabel}
+            buttonIcon={props.items.buttonIcon}
+            settings={{ stylesButton: "work" }}
+          />
+        </ContentContainer>
+      }
     />
-    // <ContentContainer>
-    //   <TextContainer>
-    //     <Title color="#fff">{title}</Title>
-    //     <Line></Line>
-    //     <SubTitle color="">{subTitle}</SubTitle>
-    //     <Button
-    //       backgroundColor="#82B440"
-    //       borderColor="#82B440"
-    //       buttonLabel={buttonLabel}
-    //       buttonIcon={buttonIcon}
-    //     />
-    //   </TextContainer>
-    // </ContentContainer>
   );
 }

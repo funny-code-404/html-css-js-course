@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import PropTypes from "prop-types";
 
 import Button from "../Button";
 import MainContainer from "../MainContainer";
@@ -86,24 +87,6 @@ class FormComponent extends React.Component {
     }
   }
 
-  // e.preventDefault();
-  // fetch("https://jsonplaceholder.typicode.com/posts", {
-  //   method: "POST",
-  //   body: JSON.stringify({
-  //     ...this.state,
-  //   }),
-  //   headers: {
-  //     "Content-type": "application/json; charset=UTF-8",
-  //   },
-  // })
-  //   .then((response) => response.json())
-  //   .then((data) => {
-  //     console.log("Request succeeded with JSON response", data);
-  //   })
-  //   .catch((error) => {
-  //     console.log("Request failed", error);
-  //   });
-
   render() {
     const {
       inputs,
@@ -112,68 +95,95 @@ class FormComponent extends React.Component {
       buttonIcon,
       buttonLabel,
     } = this.props.items;
+
     const { settings } = this.props;
-
-    const contentContainer = (
-      <Form id={this.props.idForm} onChange={this.handleChange} {...settings}>
-        {inputs.map(({ type, placeholder, name, required }) => {
-          return (
-            <ItemFrom
-              required
-              className="input"
-              type={type}
-              placeholder={placeholder}
-              name={name}
-            ></ItemFrom>
-          );
-        })}
-        {select && (
-          <Select name={select[0].firstOption} className="input" required>
-            <Option disabled selected hidden value={select[0].firstOption}>
-              {select[0].firstOption}
-            </Option>
-            {select.slice(1).map(({ option }) => (
-              <Option value={option}>{option}</Option>
-            ))}
-          </Select>
-        )}
-
-        {textarea && (
-          <Textarea className="input" style={{ height: "201px" }}></Textarea>
-        )}
-
-        <Button
-          buttonLabel={buttonLabel}
-          buttonIcon={buttonIcon}
-          handleButton={this.handleClick.bind(this)}
-          settings={settings}
-        />
-
-        {!this.state.isValid ? (
-          <Info className="info" style={{ color: "red" }}>
-            All fields are required
-          </Info>
-        ) : (
-          <Info className="info">All fields are required</Info>
-        )}
-
-        {/* {!this.state.isValid && (
-          <Text className="error" style={{ color: "red" }}>
-            Fill in required fields!
-          </Text>
-        )} */}
-      </Form>
-    );
+    const stylesInfoForm = !this.state.isValid
+      ? { color: "red", fontWeigth: "bold" }
+      : {};
 
     return (
       <MainContainer
         isTitle
         items={this.props.items}
-        contentContainer={contentContainer}
         settings={settings}
+        contentContainer={
+          <Form
+            id={this.props.idForm}
+            onChange={this.handleChange}
+            {...settings}
+          >
+            {inputs.map(({ type, placeholder, name, required }, index) => {
+              return (
+                <ItemFrom
+                  key={`itemForm${index}`}
+                  required
+                  className="input"
+                  type={type}
+                  placeholder={placeholder}
+                  name={name}
+                ></ItemFrom>
+              );
+            })}
+            {select && (
+              <Select name={select[0].firstOption} className="input" required>
+                <Option disabled selected hidden value={select[0].firstOption}>
+                  {select[0].firstOption}
+                </Option>
+                {select.slice(1).map(({ option }) => (
+                  <Option value={option}>{option}</Option>
+                ))}
+              </Select>
+            )}
+
+            {textarea && (
+              <Textarea
+                className="input"
+                style={{ height: "201px" }}
+              ></Textarea>
+            )}
+
+            <Button
+              buttonLabel={buttonLabel}
+              buttonIcon={buttonIcon}
+              handleButton={this.handleClick.bind(this)}
+              settings={settings}
+            />
+
+            <Info className="info" style={stylesInfoForm}>
+              All fields are required
+            </Info>
+          </Form>
+        }
       />
     );
   }
 }
+
+FormComponent.propTypes = {
+  idForm: PropTypes.number,
+  settings: PropTypes.object,
+  items: PropTypes.array,
+};
+
+FormComponent.defaultProps = {
+  items: [
+    {
+      inputs: [
+        {
+          type: "",
+          placeholder: "",
+          name: "",
+          required: false,
+        },
+      ],
+      select: [],
+      buttonIcon: "",
+      buttonLabel: "",
+    },
+  ],
+
+  idForm: 0,
+  settings: {},
+};
 
 export default FormComponent;

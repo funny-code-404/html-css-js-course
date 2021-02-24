@@ -6,7 +6,7 @@ const styleFont = `
   line-height: 30px;
   font-weight: 500;
   color: #fff;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   
 `;
 
@@ -46,7 +46,7 @@ const setColorTextButton = (colorTextButton) => {
                 color: #4285F4;
               }
             `;
-    case "grey":
+    case "linkGrey":
       return `
         color: #999999;
         ${Icon} {
@@ -122,6 +122,7 @@ const setStylesButton = (stylesButton) => {
 
     case "grey":
       return `
+      color: #999999 ;
       background-color: #f6f7f8;
       border: 1px solid #e6e6e6;
       margin-right: 10px;
@@ -173,6 +174,12 @@ const setStylesButton = (stylesButton) => {
          color: #000 !important;
       }
         `;
+
+    case "work":
+      return `
+          background-color: #82b440;
+   
+            `;
 
     default:
       return `

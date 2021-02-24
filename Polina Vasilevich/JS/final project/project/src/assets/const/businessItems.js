@@ -36,22 +36,22 @@ const businessItems = {
     list: [
       {
         title: "Web Design",
-        percents: "80%",
+        percents: 80,
       },
 
       {
         title: "WordPress Development",
-        percents: "95%",
+        percents: 95,
       },
 
       {
         title: "SEO & Online Marketing",
-        percents: "70%",
+        percents: 70,
       },
 
       {
         title: "Mobile Apps",
-        percents: "75%",
+        percents: 75,
       },
     ],
   },

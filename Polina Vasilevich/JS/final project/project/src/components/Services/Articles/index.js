@@ -12,11 +12,10 @@ export default function Articles(props) {
         deletePadding
       />
       <Button
-        handleButton={handleLink}
-        link="features"
+        handleButton={(e) => handleLink(e, "features")}
         buttonLabel={items.buttonLabel}
         buttonIcon={items.buttonIcon}
-        settings={{ stylesButton: "link", colorTextButton: "blue" }}
+        settings={{ stylesButton: "link", colorTextButton: "linkBlue" }}
       />
     </>
   );

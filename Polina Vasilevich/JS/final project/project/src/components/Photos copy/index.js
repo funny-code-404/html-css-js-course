@@ -39,7 +39,7 @@ class ImagesList extends React.Component {
                     onClick={this.handleClick}
                     key={index}
                     id={index}
-                    settings={{ colorButton: "portfolio" }}
+                    settings={{ stylesButton: "portfolio" }}
                     buttonLabel={button}
                   ></Button>
                 </Wrapper>

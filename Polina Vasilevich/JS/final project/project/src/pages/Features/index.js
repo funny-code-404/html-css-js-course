@@ -15,7 +15,7 @@ import servicesItems from "../../assets/const/servicesItems";
 import textListItems from "../../assets/const/features/textListItems.js";
 import formItems from "../../assets/const/formItems";
 import slider3Items from "../../assets/const/slider3";
-
+import callToItems from "../../assets/const/callToActionItems";
 class Features extends React.Component {
   render() {
     return (
@@ -69,9 +69,11 @@ class Features extends React.Component {
         <IconsList
           items={servicesItems.rightContent}
           settings={{
+            stylesButton: "link",
+            colorTextButton: "linkBlue",
+
             widthItemGridContainer: "300px",
-            typeButton: "link",
-            colorTextButton: "blue",
+
             gridGap: "4%",
             widthImg: "64px",
           }}
@@ -86,13 +88,10 @@ class Features extends React.Component {
         />
 
         <CallToAction
-          text="Become A Part Of TheFox Business Community Today"
-          buttonLabel="PURCHASE NOW"
+          items={callToItems}
           settings={{
-            backgroundColorMainContainer: "lightBlue",
-            colorButton: "green",
-            paddingTop: "0",
-            paddingBottom: "0",
+            backgroundColorMainContainer: "callToLightBlue",
+            stylesBlock: "callTo",
           }}
         />
       </>

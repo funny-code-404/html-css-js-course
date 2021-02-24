@@ -5,7 +5,7 @@ import Form from "../../components/Form";
 import CallToAction from "../../components/CallToAction";
 
 import formItems from "../../assets/const/shortcodes/formItems";
-
+import callToItems from "../../assets/const/callToActionItems";
 class Shortcodes extends React.Component {
   render() {
     return (
@@ -17,12 +17,10 @@ class Shortcodes extends React.Component {
           settings={{ widthButton: "form" }}
         />
         <CallToAction
-          text="Become A Part Of TheFox Business Community Today"
-          buttonLabel="PURCHASE NOW"
+          items={callToItems}
           settings={{
-            backgroundColorMainContainer: "blue",
-            paddingTop: "0",
-            paddingBottom: "0",
+            backgroundColorMainContainer: "callToLightBlue",
+            stylesBlock: "callTo",
           }}
         />
       </>

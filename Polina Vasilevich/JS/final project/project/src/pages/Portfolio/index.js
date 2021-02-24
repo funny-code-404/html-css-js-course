@@ -6,7 +6,7 @@ import Photos from "../../components/Photos copy";
 import portfolioItems from "../../assets/const/portfolio/portfolioItems";
 
 import CallToAction from "../../components/CallToAction";
-
+import callToItems from "../../assets/const/callToActionItems";
 import Works from "../../components/Works";
 import workItems from "../../assets/const/shop/workItems";
 class Portfolio extends React.Component {
@@ -25,14 +25,10 @@ class Portfolio extends React.Component {
 
         <Works items={workItems} />
         <CallToAction
-          text="Become A Part Of TheFox Business Community Today"
-          buttonLabel="PURCHASE NOW"
+          items={callToItems}
           settings={{
-            backgroundColorMainContainer: "blog",
-            colorButton: "green",
-            paddingTop: "0",
-            paddingBottom: "0",
-            heightFlexContainer: "callTo",
+            stylesBlock: "callTo",
+            backgroundColorMainContainer: "callToGreen",
           }}
         />
       </>

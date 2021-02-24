@@ -15,6 +15,7 @@ import CallToAction from "../../components/CallToAction";
 import Portfolio from "../../components/Portfolio";
 import portfolioItems from "../../assets/const/shop/portfolioItems";
 import MainContainer from "../../components/MainContainer";
+import callToItems from "../../assets/const/callToActionItems";
 class Shop extends React.Component {
   render() {
     return (
@@ -60,39 +61,14 @@ class Shop extends React.Component {
           }
         />
         <Works items={workItems} />
+
         <CallToAction
-          text="Become A Part Of TheFox Business Community Today"
-          buttonLabel="PURCHASE NOW"
+          items={callToItems}
           settings={{
             backgroundColorMainContainer: "blog",
-
-            paddingTop: "0",
-            paddingBottom: "0",
-            heightFlexContainer: "callTo",
+            stylesBlock: "callTo",
           }}
         />
-        {/* <Portfolio items={portfolioItems} />
-        <Slider
-          items={slider2Items}
-          id="slider2"
-          isDots
-          fontSizeTitle="m"
-          isLine
-        />
-        
-        <Works
-          title="Let‘s Work Together"
-          subTitle="TheFox WordPress is the best in the business. They know we deliver industry leading web design every time. We would love to learn how we can support you too."
-          buttonLabel="GET STARTED NOW"
-          buttonIcon="ti-check"
-        />
-
-        <CallToAction
-          text="Become A Part Of TheFox Business Community Today"
-          buttonLabel="PURCHASE NOW"
-          backgroundColorContainer="#4285F4"
-          borderColorButton="#fff"
-        /> */}
       </>
     );
   }

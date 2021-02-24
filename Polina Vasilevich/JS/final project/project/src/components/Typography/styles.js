@@ -249,6 +249,8 @@ const setStylesText = (stylesText) => {
 
     case "textList":
       return `
+      // text-align: left;
+      // align-items: start;
       ${Title} {
         font-size: 36px;
         line-height: 30px;
@@ -453,6 +455,8 @@ const setStylesText = (stylesText) => {
     `;
     case "percentBasic":
       return `
+      text-align: left;
+      align-items: start;
       ${Title} {
         font-size: 18px;
         line-height: 30px;
@@ -460,7 +464,19 @@ const setStylesText = (stylesText) => {
         margin-top: 50px;
         margin-bottom: 15px;
       }
+    `;
 
+    case "progressBarSkills":
+      return `
+      text-align: left;
+      align-items: start;
+    `;
+
+    case "work":
+      return `
+      ${Title} {
+        color: #fff;
+      }
     `;
 
     default:

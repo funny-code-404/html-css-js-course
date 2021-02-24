@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Button } from "../Button/styles";
+
 const setSizeInput = (sizeInput) => {
   switch (sizeInput) {
     case "tweets":
@@ -10,10 +11,7 @@ const setSizeInput = (sizeInput) => {
         ${Form} {
           align-items: start;
         }
-        ${Button} {
-          width: 17vw !important;
-          height: 51px;
-        }
+       
       `;
 
     default:
@@ -69,6 +67,7 @@ export const Info = styled.span`
   line-height: 36px;
   font-weight: 300;
   color: #666666;
+  text-align: center;
 `;
 
 export const Textarea = styled.textarea`
@@ -97,6 +96,9 @@ export const Form = styled.form`
   }
 
   ${Textarea} {
+    ${(props) => setSizeInput(props.sizeInput)};
+  }
+  ${Button} {
     ${(props) => setSizeInput(props.sizeInput)};
   }
 `;

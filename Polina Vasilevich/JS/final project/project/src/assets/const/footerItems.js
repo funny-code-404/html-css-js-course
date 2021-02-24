@@ -46,6 +46,10 @@ export const footerItems = {
         icon: "ti-linkedin",
         href: "https://www.linkedin.com/",
       },
+      {
+        icon: "ti-twitter-alt",
+        href: "https://twitter.com/tweeter",
+      },
 
       {
         icon: "ti-vimeo-alt",

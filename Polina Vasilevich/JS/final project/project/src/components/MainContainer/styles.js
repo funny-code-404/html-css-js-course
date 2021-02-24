@@ -24,7 +24,7 @@ const setBackgroundColorMainContainer = (backgroundColorMainContainer) => {
                 border: 1px solid #fff;
               }
       `;
-    case "blue":
+    case "callToBlue":
       return `background-color:#37ceff;
               ${Button} {
                 background-color:#37ceff;
@@ -32,7 +32,7 @@ const setBackgroundColorMainContainer = (backgroundColorMainContainer) => {
               }
           `;
 
-    case "lightBlue":
+    case "callToLightBlue":
       return `background-color:#49b0f1;
               ${Button} {
                 background-color:#49b0f1;
@@ -40,21 +40,9 @@ const setBackgroundColorMainContainer = (backgroundColorMainContainer) => {
               }
           `;
 
-    case "grey":
+    case "progressBarLight":
       return `background-color:#f6f7f8;
-              // ${Title} {
-              //   color: #ffffff ;
-              // }
-              // ${SubTitle} {
-              //   color: #b9b9b9;
-              // }
-              // ${Text} {
-              //   color: #cccccc;
-              // } 
-              // ${Button} {
-              //   background-color:#37ceff;
-              //   border: 1px solid #fff;
-              // }
+
                 `;
 
     case "footer":
@@ -225,7 +213,7 @@ const setStylesBlock = (stylesBlock) => {
       return `
           padding-top:0;
           padding-bottom:0;
-        }`;
+        `;
 
     case "iconsList2":
       return `
@@ -257,4 +245,11 @@ export const Wrapper = styled.div`
   ${(props) => props.deletePadding && `padding 0 !important;`}
 
   ${(props) => setStylesBlock(props.stylesBlock)};
+
+  ${(props) =>
+    props.oneStringLogosList &&
+    `    height: 180px;
+         display: flex;
+         align-items: center;
+         padding: 0 5%;`};
 `;

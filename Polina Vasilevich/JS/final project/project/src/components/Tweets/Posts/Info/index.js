@@ -34,7 +34,7 @@ export default function InfoComponent(props) {
               buttonLabel={tag}
               settings={{
                 widthButton: "auto",
-                colorButton: "postInfo",
+                stylesButton: "postInfo",
               }}
             />
           );

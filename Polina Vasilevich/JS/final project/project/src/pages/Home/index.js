@@ -20,7 +20,7 @@ import TwoColumnSection from "../../components/TwoColumSection";
 import FirstItemForService from "../../components/Services/TextList";
 import servicesItems from "../../assets/const/servicesItems";
 
-import Percents from "../../components/PercentsBlock";
+import ProgressBar from "../../components/ProgressBar";
 import LogosList from "../../components/LogosList";
 import Video from "../../components/VideoComponent";
 import videoItems from "../../assets/const/videoItems";
@@ -202,22 +202,18 @@ class Home extends React.Component {
 
         <TwoColumnSection
           settings={{
-            paddingLeftRight: "none",
-            paddingTop: "0",
-            paddingBottom: "0",
+            stylesBlock: "withoutPadding",
 
             sizeContainers: "60% 40%",
             inVisibleBlock: "2",
           }}
           firstItem={<Articles items={businessItems.leftContent} />}
           secondItem={
-            <Percents
+            <ProgressBar
               items={businessItems.rightContent}
               settings={{
+                stylesText: "progressBarSkills",
                 backgroundColorMainContainer: "dark",
-                positionText: "left",
-                colorTitle: "white",
-                stylesText: "textList",
                 paddingLeftRight: "small",
               }}
             />

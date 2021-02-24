@@ -6,7 +6,7 @@ import TextList from "../../components/Services/TextList";
 import CallToAction from "../../components/CallToAction";
 import Slider from "../../components/Slider";
 import TwoColumnSection from "../../components/TwoColumSection";
-import Percents from "../../components/PercentsBlock";
+import ProgressBar from "../../components/ProgressBar";
 import Articles from "../../components/Services/Articles";
 
 import LogosList from "../../components/LogosList";
@@ -18,6 +18,7 @@ import logosItems from "../../assets/const/demos/logos";
 import slider3Items from "../../assets/const/slider3";
 import Video from "../../components/VideoComponent";
 import videoItems from "../../assets/const/videoItems";
+import callToItems from "../../assets/const/callToActionItems";
 class Demos extends React.Component {
   render() {
     return (
@@ -26,7 +27,6 @@ class Demos extends React.Component {
           title="WE DO THE BEST DESIGN"
           subTitle="Dream Big. Think Different. Do Great"
         />
-
         <IconsList
           items={iconList2}
           settings={{
@@ -37,7 +37,6 @@ class Demos extends React.Component {
             gridGap: "3%",
           }}
         />
-
         <TextList
           items={textListItems}
           settings={{
@@ -47,41 +46,34 @@ class Demos extends React.Component {
             widthContentContainer: "70ch",
           }}
         />
-
         <CallToAction
-          text="Become A Part Of TheFox Business Community Today"
-          buttonLabel="PURCHASE NOW"
+          items={callToItems}
           settings={{
-            backgroundColorMainContainer: "blue",
-            colorButton: "blue",
-            paddingTop: "0",
-            paddingBottom: "0",
+            backgroundColorMainContainer: "callToLightBlue",
+            stylesBlock: "callTo",
           }}
         />
+
         <Video items={videoItems} />
         <TwoColumnSection
           settings={{
-            paddingLeftRight: "none",
-            paddingTop: "0",
-            paddingBottom: "0",
+            stylesBlock: "withoutPadding",
 
             sizeContainers: "40% 60%",
           }}
           firstItem={
-            <Percents
+            <ProgressBar
               items={businessItems.rightContent}
               settings={{
-                positionText: "left",
-                colorTitle: "white",
-                stylesText: "textList",
-                paddingLeftRight: "small",
-                backgroundColorMainContainer: "grey",
+                stylesText: "progressBarSkills",
+                backgroundColorMainContainer: "progressBarLight",
+                stylesProgressBar: "light",
+                stylesBlock: "twoColumns",
               }}
             />
           }
           secondItem={<Articles items={businessItems.leftContent} />}
         />
-
         <Slider
           items={slider3Items}
           id="slider3"
@@ -90,7 +82,6 @@ class Demos extends React.Component {
           isLine
           heightSliderContainer="slider1"
         />
-
         <LogosList
           items={logosItems}
           oneString
@@ -98,8 +89,10 @@ class Demos extends React.Component {
             heightMainContainer: "callTo",
             paddingBottom: "0",
             paddingTop: "0",
-            paddingLeftRight: "small",
+            stylesBlock: "twoColumns",
             backgroundColorMainContainer: "logos",
+            oneStringLogosList: "true",
+            widthItemGridContainer: "11%",
           }}
         />
       </>

@@ -34,6 +34,7 @@ const setMediaGridBlock = (mediaGridBlock) => {
 };
 
 export const GridContainer = styled.div`
+  width: 100%;
   display: grid;
   grid-column-gap: ${(props) => (props.gridGap ? props.gridGap : "15px")};
   grid-row-gap: ${(props) => (props.gridRowGap ? props.gridRowGap : "25px")};

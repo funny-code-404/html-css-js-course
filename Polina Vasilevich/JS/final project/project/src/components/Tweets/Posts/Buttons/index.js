@@ -46,8 +46,8 @@ class Buttons extends React.Component {
             handleButton={(e) => handleContinueRead(e, items.href)}
             buttonLabel="Continue Reading"
             settings={{
-              typeButton: "link",
-              colorTextButton: "grey",
+              stylesButton: "link",
+              colorTextButton: "linkGrey",
             }}
           />
         )}
@@ -60,8 +60,8 @@ class Buttons extends React.Component {
           }
           buttonLabel={buttonLikeLabel}
           settings={{
-            typeButton: "link",
-            colorTextButton: "grey",
+            stylesButton: "link",
+            colorTextButton: "linkGrey",
           }}
         />
 
@@ -72,8 +72,8 @@ class Buttons extends React.Component {
           }
           buttonLabel="Share this"
           settings={{
-            typeButton: "link",
-            colorTextButton: "grey",
+            stylesButton: "link",
+            colorTextButton: "linkGrey",
           }}
         />
         {this.state.buttonsShareThis.includes(`shareThis${index}`) &&
