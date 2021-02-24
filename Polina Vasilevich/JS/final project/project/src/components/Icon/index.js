@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { IconContainer, Icon, ContentContainer, Img } from "./styles";
 import Typography from "../Typography";
 import { Text } from "../Typography/styles";
@@ -65,6 +66,7 @@ class IconComponent extends React.Component {
 
               {item.buttonLabel && (
                 <Button
+                  key={item.buttonLabel + index}
                   id={index}
                   items={item}
                   buttonLabel={
@@ -84,5 +86,15 @@ class IconComponent extends React.Component {
     );
   }
 }
+
+IconComponent.propsTypes = {
+  settings: PropTypes.object,
+  items: PropTypes.array,
+};
+
+IconComponent.defaultProps = {
+  settings: {},
+  items: [{ img: "", title: "", icon: "", buttonLabel: "", extraText: "" }],
+};
 
 export default IconComponent;

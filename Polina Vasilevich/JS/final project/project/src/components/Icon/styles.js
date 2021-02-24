@@ -72,6 +72,11 @@ const setColorIcon = (colorIcon) => {
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     background-image: linear-gradient(48deg, #00f0ff -21%, #ebacfd 121%);
+
+                    &:hover {
+                      background-image: none;
+                      background-color: blue;
+                    }
             `;
 
     default:

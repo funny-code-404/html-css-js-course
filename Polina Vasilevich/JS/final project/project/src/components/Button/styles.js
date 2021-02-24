@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Icon } from "../Icon copy/styles";
+import { Icon } from "../Icon/styles";
 const styleFont = `
   font-family: OpenSans;
   font-size: 14px;

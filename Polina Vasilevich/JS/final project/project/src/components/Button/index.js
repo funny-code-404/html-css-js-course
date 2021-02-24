@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { Button } from "./styles";
-import { Icon } from "../Icon copy/styles";
+import { Icon } from "../Icon/styles";
 
 class ButtonComponent extends React.Component {
   render() {

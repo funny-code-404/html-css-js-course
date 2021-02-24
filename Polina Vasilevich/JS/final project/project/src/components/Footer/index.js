@@ -1,7 +1,7 @@
 import React from "react";
 import MainContainer from "../MainContainer";
 import { GridContainer, FlexContainer, GridItem } from "../../mainStyles";
-import { Icon, Img, IconContainer } from "../Icon copy/styles";
+import { Icon, Img, IconContainer } from "../Icon/styles";
 import Typography from "../Typography";
 
 class FooterComponent extends React.Component {
