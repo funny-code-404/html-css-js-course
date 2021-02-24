@@ -4,7 +4,9 @@ const styleFont = `
   font-family: OpenSans;
   font-size: 14px;
   line-height: 30px;
-  // font-weight: 700;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
   
 `;
 
@@ -35,26 +37,89 @@ const setWidthButton = (widthButton) => {
   }
 };
 
-const setColorButton = (colorButton) => {
-  switch (colorButton) {
+const setColorTextButton = (colorTextButton) => {
+  switch (colorTextButton) {
+    case "linkBlue":
+      return `
+              color: #4285F4;
+              ${Icon} {
+                color: #4285F4;
+              }
+            `;
+    case "grey":
+      return `
+        color: #999999;
+        ${Icon} {
+                color: #4285F4;
+              }
+            
+        `;
+
+    default:
+      return ``;
+  }
+};
+
+const setTypeButton = (typeButton) => {
+  switch (typeButton) {
+    case "link":
+      return ` background-color: transparent;
+      border: transparent;
+      width: auto !important;
+      height: auto !important;
+      margin-right: 20px;
+
+      :hover{
+        color: #4285f4;
+      }
+    `;
+
+    default:
+      break;
+  }
+};
+
+const setStylesButton = (stylesButton) => {
+  switch (stylesButton) {
     case "basic":
       return `
         background-color: #4285f4;
         border: 1px solid #2c6cd6;
       `;
 
-    case "green":
+    case "link":
+      return ` 
+      background-color: transparent ;
+      border: transparent;
+      width: auto !important;
+      height: auto !important;
+      margin-right: 20px;
+      text-transform: none;
+      
+      :hover{
+        color: #4285f4;
+      }
+    `;
+
+    case "priceTable":
       return `
-          background-color: #82B440;
-          border: 1px solid #fff;
+          width: 15vw;
+          background-color: #4285f4;
+          border: 1px solid #2c6cd6;
+          :hover {
+            background-color: #82B440;
+            border: 1px solid #fff;
+          }
+          
         `;
 
-    case "transparent":
+    case "sliderTransparent":
       return `
               background-color: transparent;
               border: 1px solid #fff;
               margin-left: 10px;
             `;
+
     case "grey":
       return `
       background-color: #f6f7f8;
@@ -111,65 +176,25 @@ const setColorButton = (colorButton) => {
 
     default:
       return `
+        width: 270px;
         background-color: #4285f4;
         border: 1px solid #2c6cd6;
       `;
   }
 };
 
-const setTypeButton = (typeButton) => {
-  switch (typeButton) {
-    case "link":
-      return ` background-color: transparent;
-      border: transparent;
-      width: auto !important;
-      height: auto !important;
-      margin-right: 20px;
-
-      :hover{
-        color: #4285f4;
-      }
-    `;
-
-    default:
-      break;
-  }
-};
-
-const setColorTextButton = (colorTextButton) => {
-  switch (colorTextButton) {
-    case "blue":
-      return `
-              color: #4285F4;
-              ${Icon} {
-                color: #4285F4;
-              }
-            `;
-    case "grey":
-      return `
-        color: #999999;
-        ${Icon} {
-                color: #4285F4;
-              }
-            
-        `;
-
-    default:
-      return `color: #fff;`;
-  }
-};
-
 export const Button = styled.button`
   margin-top: 15px;
   display: inline-block;
+  ${styleFont};
+
   ${(props) => setWidthButton(props.widthButton)};
   height: 55px;
   border-radius: 3px;
   outline: none;
 
-  ${styleFont};
-  ${(props) => setColorButton(props.colorButton)};
-  ${(props) => setColorTextButton(props.colorTextButton)};
   ${(props) => setTypeButton(props.typeButton)};
+  ${(props) => setColorTextButton(props.colorTextButton)};
+  ${(props) => setStylesButton(props.stylesButton)};
   cursor: pointer;
 `;

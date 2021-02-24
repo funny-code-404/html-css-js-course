@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Pagination = styled.div`
   font-family: OpenSans;
   display: flex;
+  justify-content: flex-end;
 `;
 
 export const ButtonContainer = styled.div`

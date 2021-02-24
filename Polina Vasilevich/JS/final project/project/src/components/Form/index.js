@@ -51,7 +51,6 @@ class FormComponent extends React.Component {
       .getElementsByClassName("input");
     let isValid = true;
     Array.prototype.filter.call(inputs, (input) => {
-      console.log(input.tagName);
       if (
         ((input.tagName === "INPUT" || input.tagName === "TEXTAREA") &&
           !input.value) ||

@@ -11,7 +11,7 @@ import {
 
 class TextComponent extends React.Component {
   render() {
-    const { settings, isLine } = this.props;
+    const { settings } = this.props;
 
     const {
       title,

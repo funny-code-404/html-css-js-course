@@ -324,10 +324,13 @@ const setStylesText = (stylesText) => {
 
     case "footer":
       return `
+        text-align: left;
+        align-items: start;
         ${Title} {
           font-size: 18px;
           line-height: 30px;
           font-weight: 600;
+          color: #cccccc;
         }  
       `;
 

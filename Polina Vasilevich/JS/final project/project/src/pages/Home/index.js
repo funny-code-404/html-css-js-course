@@ -7,13 +7,12 @@ import iconList2 from "../../assets/const/iconList2";
 import Introducing from "../../components/Introducing";
 import introducingItems from "../../assets/const/introducingItems";
 
-import Gallery from "../../components/Gallery";
 import portfolioItems from "../../assets/const/portfolioItems";
 
-import Partners from "../../components/Partners";
 import PricingTables from "../../components/Prices";
 
 import CallToAction from "../../components/CallToAction";
+import callToItems from "../../assets/const/callToActionItems";
 import Numbers from "../../components/Numbers";
 
 import TwoColumnSection from "../../components/TwoColumSection";
@@ -98,13 +97,10 @@ class Home extends React.Component {
         />
 
         <CallToAction
-          text="Become A Part Of TheFox Business Community Today"
-          buttonLabel="PURCHASE NOW"
+          items={callToItems}
           settings={{
-            backgroundColorMainContainer: "green",
-            colorButton: "green",
-            paddingTop: "0",
-            paddingBottom: "0",
+            backgroundColorMainContainer: "callToGreen",
+            stylesBlock: "callTo",
           }}
         />
 
@@ -112,8 +108,7 @@ class Home extends React.Component {
           items={iconList2}
           id="iconsList2"
           settings={{
-            paddingTop: "94px",
-            paddingBottom: "82px",
+            stylesBlock: "iconsList2",
             widthItemGridContainer: "350px",
             colorIcon: "gradient",
             positionText: "left",
@@ -128,7 +123,7 @@ class Home extends React.Component {
           settings={{
             positionText: "left",
             widthContentContainer: "70ch",
-            heightMainContainer: "778px",
+
             positionContentContainer: "right",
             isVerticalCenter: "true",
             heightMainContainer: "intro",
@@ -144,11 +139,10 @@ class Home extends React.Component {
           isLine
           heightSliderContainer="slider2"
         />
+
         <TwoColumnSection
           settings={{
-            paddingLeftRight: "none",
-            paddingTop: "0",
-            paddingBottom: "0",
+            stylesBlock: "withoutPadding",
             sizeContainers: "40% 60%",
             numberInVisibleBlock: "1",
           }}
@@ -157,7 +151,8 @@ class Home extends React.Component {
               items={servicesItems.leftContent}
               settings={{
                 backgroundColorMainContainer: "dark",
-                paddingLeftRight: "small",
+                stylesBlock: "twoColumns",
+
                 positionContentContainer: "left",
                 positionText: "left",
                 stylesText: "textList",
@@ -168,12 +163,14 @@ class Home extends React.Component {
             <IconsList
               items={servicesItems.rightContent}
               settings={{
-                typeButton: "link",
-                colorTextButton: "blue",
-                paddingLeftRight: "small",
+                stylesBlock: "twoColumns",
+
                 gridGap: "17%",
                 gridRowGap: "120px",
                 widthImg: "64px",
+
+                stylesButton: "link",
+                colorTextButton: "linkBlue",
               }}
             />
           }
@@ -190,17 +187,16 @@ class Home extends React.Component {
           isTitle
           backgroundImg={partnersItems.backgroundImg}
         />
+
         <PricingTables items={pricingTables} buttonLabel="GET STARTED NOW" />
 
         <Video items={videoItems} />
+
         <CallToAction
-          text="Become A Part Of TheFox Business Community Today"
-          buttonLabel="PURCHASE NOW"
+          items={callToItems}
           settings={{
-            backgroundColorMainContainer: "green",
-            colorButton: "green",
-            paddingTop: "0",
-            paddingBottom: "0",
+            backgroundColorMainContainer: "callToGreen",
+            stylesBlock: "callTo",
           }}
         />
 
@@ -260,13 +256,10 @@ class Home extends React.Component {
         />
 
         <CallToAction
-          text="Become A Part Of TheFox Business Community Today"
-          buttonLabel="PURCHASE NOW"
+          items={callToItems}
           settings={{
-            backgroundColorMainContainer: "green",
-            colorButton: "green",
-            paddingTop: "0",
-            paddingBottom: "0",
+            backgroundColorMainContainer: "callToGreen",
+            stylesBlock: "callTo",
           }}
         />
       </>

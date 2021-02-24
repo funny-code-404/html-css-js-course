@@ -16,7 +16,7 @@ export default function Images(props) {
               <Typography
                 items={item}
                 settings={{
-                  positionText: "left",
+                  // positionText: "left",
                   sizeTitle: "photos",
                   colorText: "white",
                   setPadding: true,

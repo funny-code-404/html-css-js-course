@@ -1,4 +1,4 @@
-import { ContentContainer, Logo, FlexContainer } from "./styles";
+import { ContentContainer, Logo } from "./styles";
 import MainContainer from "../MainContainer";
 import { GridContainer } from "../../mainStyles";
 

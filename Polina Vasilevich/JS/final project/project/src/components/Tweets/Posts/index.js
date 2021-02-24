@@ -108,7 +108,6 @@ PostsComponent.defaultProps = {
   },
 
   styles: {},
-  handleClick: "",
   icon: "",
 };
 

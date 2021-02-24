@@ -40,7 +40,7 @@ export default function Table(props) {
                 })}
               </TextContainer>
               <Button
-                settings={{ widthButton: "m" }}
+                settings={{ stylesButton: "priceTable" }}
                 buttonLabel={item.buttonLabel}
                 buttonIcon={item.buttonIcon}
               ></Button>

@@ -16,7 +16,7 @@ export default function Articles(props) {
         link="features"
         buttonLabel={items.buttonLabel}
         buttonIcon={items.buttonIcon}
-        settings={{ typeButton: "link", colorTextButton: "blue" }}
+        settings={{ stylesButton: "link", colorTextButton: "blue" }}
       />
     </>
   );

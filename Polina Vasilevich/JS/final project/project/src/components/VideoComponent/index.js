@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { VideoContainer, Video } from "./styles";
 
 VideoComponent.propTypes = {
-  items: PropTypes.string,
+  items: PropTypes.object,
 };
 
 VideoComponent.defaultProps = {

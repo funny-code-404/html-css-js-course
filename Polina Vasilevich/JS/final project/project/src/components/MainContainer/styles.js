@@ -17,10 +17,10 @@ const setBackgroundColorMainContainer = (backgroundColorMainContainer) => {
               } 
             `;
 
-    case "green":
+    case "callToGreen":
       return `background-color:#82b440;
               ${Button} {
-                background-color:#82b440;
+                background-color:#82b440 !important;
                 border: 1px solid #fff;
               }
       `;
@@ -78,6 +78,11 @@ const setBackgroundColorMainContainer = (backgroundColorMainContainer) => {
       background-color: #f7f7f7;
       `;
 
+    case "header":
+      return `
+      background-color: #f7f7f7;
+      `;
+
     default:
       break;
   }
@@ -112,8 +117,72 @@ const setHeightMainContainer = (heightMainContainer) => {
   }
 };
 
+const setMediaBlock = (mediaBlock) => {
+  switch (mediaBlock) {
+    case "numbers":
+      return `@media(max-width: 900px) {
+        display:none;
+      }`;
+
+    default:
+      break;
+  }
+};
+
+export const MainContainer = styled.div`
+  position: relative;
+  ${(props) => props.isVerticalCenter && `display: flex; align-items: center; `}
+  background-image: ${(props) =>
+    props.backgroundImg ? `url(${props.backgroundImg})` : ""};
+  background-size: cover;
+  background-position: center center;
+
+  ${(props) =>
+    setBackgroundColorMainContainer(props.backgroundColorMainContainer)};
+
+  ${(props) => setHeightMainContainer(props.heightMainContainer)};
+  ${(props) => setMediaBlock(props.mediaBlock)};
+  transition: opacity ease 0.5s;
+`;
+
+const setPaddingLeftRight = (paddingLeftRight) => {
+  switch (paddingLeftRight) {
+    case "small":
+      return `
+                padding-right: 10%;
+                padding-left: 10%;
+            `;
+    case "none":
+      return `
+                padding-right: 0;
+                padding-left: 0;
+                `;
+
+    case "deletePadding":
+      return `
+                padding:0;
+                `;
+
+    case "iconsList":
+      return `
+        padding-top: 88px;
+        padding-bottom: 105px;
+      `;
+    default:
+      return `
+            padding-right: 19%;
+            padding-left: 19%;
+           `;
+  }
+};
+
 const setStylesBlock = (stylesBlock) => {
   switch (stylesBlock) {
+    case "withoutPadding":
+      return `
+        padding: 0;
+      `;
+
     case "withoutPaddingLeftRight":
       return ` 
         padding-left:0;
@@ -152,68 +221,27 @@ const setStylesBlock = (stylesBlock) => {
           padding-bottom:0;
         }`;
 
+    case "callTo":
+      return `
+          padding-top:0;
+          padding-bottom:0;
+        }`;
+
+    case "iconsList2":
+      return `
+            paddingTop: "94px",
+            paddingBottom: "82px",
+        `;
+
+    case "twoColumns":
+      return `
+              padding-right: 10%;
+              padding-left: 10%;
+            `;
+
     default:
       return `
            
-           `;
-  }
-};
-
-const setMediaBlock = (mediaBlock) => {
-  switch (mediaBlock) {
-    case "numbers":
-      return `@media(max-width: 900px) {
-        display:none;
-      }`;
-
-    default:
-      break;
-  }
-};
-
-export const MainContainer = styled.div`
-  position: relative;
-  ${(props) => props.isVerticalCenter && `display: flex; align-items: center; `}
-  background-image: ${(props) =>
-    props.backgroundImg ? `url(${props.backgroundImg})` : ""};
-  background-size: cover;
-  background-position: center center;
-
-  ${(props) =>
-    setBackgroundColorMainContainer(props.backgroundColorMainContainer)}
-
-  ${(props) => setHeightMainContainer(props.heightMainContainer)};
-  ${(props) => setMediaBlock(props.mediaBlock)};
-  transition: opacity ease 0.5s;
-`;
-
-const setPaddingLeftRight = (paddingLeftRight) => {
-  switch (paddingLeftRight) {
-    case "small":
-      return `
-                padding-right: 10%;
-                padding-left: 10%;
-            `;
-    case "none":
-      return `
-                padding-right: 0;
-                padding-left: 0;
-                `;
-
-    case "deletePadding":
-      return `
-                padding:0;
-                `;
-
-    case "iconsList":
-      return `
-        padding-top: 88px;
-        padding-bottom: 105px;
-      `;
-    default:
-      return `
-            padding-right: 19%;
-            padding-left: 19%;
            `;
   }
 };

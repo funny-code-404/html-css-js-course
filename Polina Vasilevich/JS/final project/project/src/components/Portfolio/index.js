@@ -2,7 +2,7 @@ import React from "react";
 import MainContainer from "../MainContainer";
 import Photos from "../Photos";
 import Typography from "../Typography";
-import Button from "../Button";
+
 import IconsList from "../IconsList";
 
 class Portfolio extends React.Component {

@@ -1,7 +1,9 @@
 import React from "react";
-import { Button } from "./styles";
+import PropTypes from "prop-types";
 
+import { Button } from "./styles";
 import { Icon } from "../Icon copy/styles";
+
 class ButtonComponent extends React.Component {
   render() {
     const {
@@ -12,14 +14,12 @@ class ButtonComponent extends React.Component {
       link,
       id,
       styles,
-      className,
     } = this.props;
 
     return (
       <Button
         style={styles}
         {...settings}
-        // onClick={setHandleButton(handleButton)}
         onClick={handleButton}
         value={link}
         id={id}
@@ -32,5 +32,22 @@ class ButtonComponent extends React.Component {
     );
   }
 }
+
+ButtonComponent.propTypes = {
+  settings: PropTypes.object,
+  buttonIcon: PropTypes.string,
+  buttonLabel: PropTypes.string,
+  handleButton: PropTypes.func,
+  id: PropTypes.number,
+  styles: PropTypes.object,
+};
+
+ButtonComponent.defaultProps = {
+  settings: {},
+  buttonIcon: "",
+  buttonLabel: "",
+  id: 0,
+  styles: {},
+};
 
 export default ButtonComponent;

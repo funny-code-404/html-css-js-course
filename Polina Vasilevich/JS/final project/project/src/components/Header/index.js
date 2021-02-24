@@ -1,8 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 import MainContainer from "../MainContainer";
-import { FlexContainer, GridContainer } from "../../mainStyles";
+import { FlexContainer } from "../../mainStyles";
 
 import {
   Header,
@@ -25,17 +26,9 @@ class HeaderComponent extends React.Component {
   }
 
   handleClick = (e) => {
-    // const newLink = document.getElementById(e.target.id);
-    // this.setState((prevState) => {
-    //   if (this.state.currentIdPage === e.target.id) {
-    //     newLink.classList.add("active");
-    //   }
-    // });
-
     this.setState({
       currentPageId: +e.target.id,
     });
-    console.dir(window.location.pathname);
   };
 
   handleChange = (e) => {
@@ -49,13 +42,13 @@ class HeaderComponent extends React.Component {
   };
 
   render() {
-    const { routes, logo, textLogo } = this.props;
+    const { routes, logoImg, logoText } = this.props;
 
     const contentContainer = (
       <FlexContainer heightFlexContainer="header">
         <LogoContainer>
-          <LogoImg src={logo} alt={logo} />
-          <LogoText>{textLogo}</LogoText>
+          <LogoImg src={logoImg} alt={logoImg} />
+          <LogoText>{logoText}</LogoText>
         </LogoContainer>
         <Navigation>
           <List id="headerList" onClick={this.handleClick}>
@@ -67,7 +60,7 @@ class HeaderComponent extends React.Component {
                 <ListItem key={path}>
                   <Link
                     id={index}
-                    className="link"
+                    className="headerLink"
                     style={styles}
                     to={path}
                     onChange={this.handleChange}
@@ -87,13 +80,29 @@ class HeaderComponent extends React.Component {
         <MainContainer
           contentContainer={contentContainer}
           settings={{
-            paddingTop: "0",
-            paddingBottom: "0",
+            stylesBlock: "callTo",
           }}
         />
       </Header>
     );
   }
 }
+
+HeaderComponent.propsType = {
+  routes: PropTypes.array,
+  logoImg: PropTypes.string,
+  logoText: PropTypes.string,
+};
+
+HeaderComponent.defaultProps = {
+  routes: [
+    {
+      path: "",
+      label: "",
+    },
+  ],
+  logoImg: "",
+  logoText: "",
+};
 
 export default HeaderComponent;

@@ -13,7 +13,7 @@ import Shop from "./pages/Shop";
 import Blog from "./pages/Blog";
 import Portfolio from "./pages/Portfolio";
 
-import logo from "./assets/img/logo.png";
+import logo from "./assets/img/header/logo.png";
 
 const routes = [
   {
@@ -58,8 +58,8 @@ class App extends React.Component {
       <div className="App">
         <Header
           routes={routes}
-          logo={logo}
-          textLogo={"thefox business".toUpperCase()}
+          logoImg={logo}
+          logoText={"thefox business".toUpperCase()}
         />
         <Switch>
           <Route path="/" exact component={Home} />

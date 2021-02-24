@@ -126,12 +126,35 @@ const setFontSizeIcon = (fontSizeIcon) => {
   }
 };
 
+const setStylesIcon = (stylesIcon) => {
+  switch (stylesIcon) {
+    case "footer":
+      return `
+            padding: 0 1.3vw;
+            opacity: 0.5;
+            font-size: 18px;
+            cursor: pointer;
+
+            &:hover{
+              opacity: 1;
+            }
+
+            `;
+
+    default:
+      return `
+        color: #fff;
+      `;
+  }
+};
+
 export const Icon = styled.i`
   font-family: themify;
   // line-height: 30px;
   font-weight: 400;
   ${(props) => setFontSizeIcon(props.fontSizeIcon)};
   ${(props) => setColorIcon(props.colorIcon)};
+  ${(props) => setStylesIcon(props.stylesIcon)};
 `;
 
 const setPositionTextIcons = (positionTextIcons) => {

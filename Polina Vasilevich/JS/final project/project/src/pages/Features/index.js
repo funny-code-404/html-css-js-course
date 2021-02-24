@@ -15,7 +15,6 @@ import servicesItems from "../../assets/const/servicesItems";
 import textListItems from "../../assets/const/features/textListItems.js";
 import formItems from "../../assets/const/formItems";
 import slider3Items from "../../assets/const/slider3";
-import textList from "../../assets/const/demos/textListItems";
 
 class Features extends React.Component {
   render() {

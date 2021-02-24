@@ -27,15 +27,12 @@ class FooterComponent extends React.Component {
 
           <Typography items={logo} settings={{ stylesText: "footerLogo" }} />
         </GridItem>
-        {contacts.map((item) => {
+        {contacts.map((item, index) => {
           return (
             <Typography
+              key={`copyRight${index}`}
               items={item}
               settings={{
-                sizeTitle: "s",
-                colorTitle: "white",
-                colorText: "grey",
-                positionText: "left",
                 stylesText: "footer",
                 gridGap: "1.3vw",
               }}
@@ -49,24 +46,11 @@ class FooterComponent extends React.Component {
       <FlexContainer heightFlexContainer="header">
         <Typography items={copyRight} />
         <div>
-          {copyRight.icons.map((icon) => {
+          {copyRight.icons.map(({ icon, href }) => {
             return (
-              <a
-                href="https://qna.habr.com/q/600318"
-                style={{ textDecoration: "none" }}
-              >
-                <Icon
-                  className={icon}
-                  fontSizeIcon="s"
-                  style={{
-                    padding: "0 1.3vw",
-                    opacity: "0.5",
-                    cursor: "pointer",
-                  }}
-                ></Icon>
+              <a key={href} href={href} style={{ textDecoration: "none" }}>
+                <Icon className={icon} stylesIcon="footer"></Icon>
               </a>
-
-              // <Button buttonIcon={icon} settings={{ typeButton: "link" }} />
             );
           })}
         </div>

@@ -16,7 +16,8 @@ export const handleScrollDown = (e, elemId) => {
 
 export const handleLink = (e, page = "shop") => {
   e.preventDefault();
-  window.location.href = `/${e.target.value}`;
+  // window.location.href = `/${e.target.value}`;
+  window.location.href = `/${page}`;
 };
 
 export const handleContinueRead = (e, href) => {

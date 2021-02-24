@@ -1,18 +1,34 @@
+import PropTypes from "prop-types";
+
 import MainContainer from "../MainContainer";
 import Button from "../Button";
 import { Text } from "./styles";
 import { FlexContainer } from "../../mainStyles";
 import { handleLink } from "../Button/handlers";
-function CallToAction(props) {
-  const { text, buttonLabel, settings } = props;
+
+CallToAction.propTypes = {
+  items: PropTypes.object,
+  settings: PropTypes.object,
+};
+
+CallToAction.defaultProps = {
+  items: {
+    text: "",
+    buttonLabel: "",
+  },
+  settings: {},
+};
+
+export default function CallToAction(props) {
+  const { items, settings } = props;
+
   const contentContainer = (
     <FlexContainer heightFlexContainer="callTo" mediaFlexBlock="callTo">
-      <Text>{text}</Text>
+      <Text>{items.text}</Text>
       <Button
-        buttonLabel={buttonLabel}
+        buttonLabel={items.buttonLabel}
         settings={settings}
-        handleButton={handleLink}
-        link="blog"
+        handleButton={(e) => handleLink(e, "blog")}
       ></Button>
     </FlexContainer>
   );
@@ -21,5 +37,3 @@ function CallToAction(props) {
     <MainContainer settings={settings} contentContainer={contentContainer} />
   );
 }
-
-export default CallToAction;

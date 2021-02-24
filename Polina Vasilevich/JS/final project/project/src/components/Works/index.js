@@ -4,8 +4,6 @@ import { ContentContainer } from "../../mainStyles";
 import Button from "../Button";
 
 export default function Works(props) {
-  const { settings } = props;
-
   const contentContainer = (
     <ContentContainer positionContent="center">
       <Typography items={props.items} isLine />

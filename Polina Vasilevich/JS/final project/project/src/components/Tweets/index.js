@@ -1,6 +1,5 @@
 import React from "react";
 
-import TwoColumnSection from "../TwoColumSection";
 import Posts from "./Posts";
 import Aside from "./Aside";
 import { InVisible, Tweets } from "./styles";
