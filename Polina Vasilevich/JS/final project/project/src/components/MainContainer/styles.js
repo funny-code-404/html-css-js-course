@@ -10,10 +10,10 @@ const setBackgroundColorMainContainer = (backgroundColorMainContainer) => {
                 color: #ffffff ;
               }
               ${SubTitle} {
-                color: #b9b9b9;
+                color: #b9b9b9 !important;
               }
               ${Text} {
-                color: #cccccc;
+                color: #cccccc !important;
               } 
             `;
 
@@ -70,6 +70,13 @@ const setBackgroundColorMainContainer = (backgroundColorMainContainer) => {
       return `
       background-color: #f7f7f7;
       `;
+    case "featuresForm":
+      return `
+        background-color: #212121;
+        ${Title} {
+          color: #ffffff ;
+        }
+          `;
 
     default:
       break;
@@ -104,6 +111,8 @@ const setHeightMainContainer = (heightMainContainer) => {
 
     case "footer":
       return `height: 385px;`;
+    case "work":
+      return `height: 701px;`;
 
     default:
       return `height: 100%`;
@@ -165,6 +174,7 @@ const setPaddingLeftRight = (paddingLeftRight) => {
       return `
             padding-right: 19%;
             padding-left: 19%;
+            
            `;
   }
 };
@@ -248,11 +258,19 @@ const setStylesBlock = (stylesBlock) => {
                       padding-bottom:0;
                     `;
 
-    case "homeIconsList":
+    case "featuresIconsListBlock":
       return `
-      padding-top: 95px;
-      padding-bottom: 71px
+      padding-top: 83px;
+      padding-bottom: 71px;
+      padding-right: 0;
+      padding-left: 0;
             `;
+
+    case "featuresIconsList":
+      return `
+              padding-top: 60px;
+              padding-bottom: 71px;
+                    `;
 
     case "homeIconsList2":
       return `
@@ -260,6 +278,12 @@ const setStylesBlock = (stylesBlock) => {
               padding-bottom: 105px;
               padding-right: 6%;
               padding-left: 6%;
+                    `;
+
+    case "shopPortfolio":
+      return `padding-top: 0;
+              padding-bottom: 55px;
+
                     `;
 
     default:

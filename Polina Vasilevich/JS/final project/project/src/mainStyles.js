@@ -105,6 +105,11 @@ const setHeightFlexContainer = (heightFlexContainer) => {
 
     case "numbers":
       return `height: 280px;`;
+    case "footer":
+      return `height: 385px;`;
+
+    case "work":
+      return `height: 701px;`;
 
     default:
       return `height: fit-content;`;

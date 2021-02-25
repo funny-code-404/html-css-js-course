@@ -38,7 +38,7 @@ class Shop extends React.Component {
 
         <Portfolio
           items={portfolioItems}
-          settings={{ paddingTop: "0", paddingBottom: "0" }}
+          settings={{ stylesBlock: "shopPortfolio" }}
         />
 
         <Slider

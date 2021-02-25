@@ -14,6 +14,12 @@ const setSizeInput = (sizeInput) => {
        
       `;
 
+    case "shortcodes":
+      return `
+      width: 33vw;
+      height: 61px;
+        `;
+
     default:
       return `
         width: 26vw;
@@ -23,9 +29,37 @@ const setSizeInput = (sizeInput) => {
   }
 };
 
+// const setStylesInput = (stylesInput) => {
+//   switch (stylesInput) {
+//     case "featuresDarkForm":
+//       return `
+
+//         ${ItemFrom} {
+//           background-color: #444957;
+//         }
+
+//         ${Select} {
+//           background-color: #444957;
+//         }
+
+//         ${Textarea} {
+//           background-color: #444957;
+//         }
+
+//       `;
+
+//     default:
+//       return `
+//         width: 26vw;
+//         height: 61px;
+
+//       `;
+//   }
+// };
+
 const styles = `
   margin-bottom: 19px;
-
+  height: 61px;
   font-family: OpenSans;
   font-size: 16px;
   outline: none;
@@ -68,6 +102,8 @@ export const Info = styled.span`
   font-weight: 300;
   color: #666666;
   text-align: center;
+
+  margin-top: 13px;
 `;
 
 export const Textarea = styled.textarea`

@@ -11,11 +11,12 @@ import CallToAction from "../../components/CallToAction";
 import iconList1 from "../../assets/const/iconList1";
 
 import introducingItems from "../../assets/const/features/introItems";
-import servicesItems from "../../assets/const/servicesItems";
+import iconsListItems from "../../assets/const/features/iconsListItems";
 import textListItems from "../../assets/const/features/textListItems.js";
 import formItems from "../../assets/const/formItems";
 import slider3Items from "../../assets/const/slider3";
 import callToItems from "../../assets/const/callToActionItems";
+import MainContainer from "../../components/MainContainer";
 class Features extends React.Component {
   render() {
     return (
@@ -34,7 +35,6 @@ class Features extends React.Component {
             widthItemGridContainer: "270px",
           }}
         />
-
         <Introducing
           items={introducingItems}
           settings={{
@@ -46,7 +46,6 @@ class Features extends React.Component {
             stylesText: "textList",
           }}
         />
-
         <TextList
           items={textListItems}
           settings={{
@@ -54,9 +53,9 @@ class Features extends React.Component {
             widthContentContainer: "70ch",
             positionText: "left",
             stylesText: "textList",
+            heightMainContainer: "intro",
           }}
         />
-
         <Slider
           items={slider3Items}
           id="slider3"
@@ -65,28 +64,38 @@ class Features extends React.Component {
           isLine
           heightSliderContainer="slider2"
         />
-
-        <IconsList
-          items={servicesItems.rightContent}
+        <MainContainer
+          isTitle
+          items={iconsListItems}
           settings={{
-            stylesButton: "link",
-            colorTextButton: "linkBlue",
-
-            widthItemGridContainer: "300px",
-
-            gridGap: "4%",
-            widthImg: "64px",
+            stylesBlock: "featuresIconsListBlock",
           }}
+          contentContainer={
+            <IconsList
+              items={iconsListItems.list}
+              settings={{
+                stylesBlock: "featuresIconsList",
+                stylesIcon: "iconsList3",
+                gridGap: "4%",
+                gridRowGap: "144px",
+                widthImg: "64px",
+                widthItemGridContainer: "300px",
+
+                stylesButton: "link",
+                colorTextButton: "linkBlue",
+              }}
+            />
+          }
         />
+
         <Form
           idForm="form2"
           items={formItems}
           settings={{
-            backgroundColorMainContainer: "dark",
+            backgroundColorMainContainer: "featuresForm",
             widthButton: "form",
           }}
         />
-
         <CallToAction
           items={callToItems}
           settings={{

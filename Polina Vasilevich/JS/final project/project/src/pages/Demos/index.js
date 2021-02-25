@@ -29,14 +29,19 @@ class Demos extends React.Component {
         />
         <IconsList
           items={iconList2}
+          id="iconsList2"
           settings={{
+            stylesBlock: "homeIconsList",
             widthItemGridContainer: "350px",
             colorIcon: "gradient",
+            stylesIcon: "gradientIcons",
             positionText: "left",
             positionIcons: "left",
             gridGap: "3%",
+            gridRowGap: "38px",
           }}
         />
+
         <TextList
           items={textListItems}
           settings={{
@@ -80,7 +85,7 @@ class Demos extends React.Component {
           isDots
           stylesText="basicSlider"
           isLine
-          heightSliderContainer="slider1"
+          heightSliderContainer="slider2"
         />
         <LogosList
           items={logosItems}

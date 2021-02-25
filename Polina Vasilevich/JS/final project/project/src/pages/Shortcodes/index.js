@@ -14,7 +14,7 @@ class Shortcodes extends React.Component {
         <Form
           idForm="form3"
           items={formItems}
-          settings={{ widthButton: "form" }}
+          settings={{ widthButton: "form", sizeInput: "shortcodes" }}
         />
         <CallToAction
           items={callToItems}

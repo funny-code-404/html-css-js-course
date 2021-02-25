@@ -16,42 +16,45 @@ class FooterComponent extends React.Component {
           settings={{
             backgroundColorMainContainer: "footer",
             heightMainContainer: "footer",
+            stylesBlock: "callTo",
           }}
           contentContainer={
-            <GridContainer mediaGridBlock="footer">
-              <GridItem
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                }}
-              >
-                <IconContainer>
-                  <Img
-                    backgroundImg={logo.imgLogo}
-                    heightImg="38px"
-                    widthImg="80px"
-                  />
-                </IconContainer>
+            <FlexContainer heightFlexContainer="footer">
+              <GridContainer mediaGridBlock="footer">
+                <GridItem
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                  }}
+                >
+                  <IconContainer>
+                    <Img
+                      backgroundImg={logo.imgLogo}
+                      heightImg="38px"
+                      widthImg="80px"
+                    />
+                  </IconContainer>
 
-                <Typography
-                  items={logo}
-                  settings={{ stylesText: "footerLogo" }}
-                />
-              </GridItem>
-              {contacts.map((item, index) => {
-                return (
                   <Typography
-                    key={`copyRight${index}`}
-                    items={item}
-                    settings={{
-                      stylesText: "footer",
-                      gridGap: "1.3vw",
-                    }}
+                    items={logo}
+                    settings={{ stylesText: "footerLogo" }}
                   />
-                );
-              })}
-            </GridContainer>
+                </GridItem>
+                {contacts.map((item, index) => {
+                  return (
+                    <Typography
+                      key={`copyRight${index}`}
+                      items={item}
+                      settings={{
+                        stylesText: "footer",
+                        gridGap: "1.3vw",
+                      }}
+                    />
+                  );
+                })}
+              </GridContainer>
+            </FlexContainer>
           }
         />
 

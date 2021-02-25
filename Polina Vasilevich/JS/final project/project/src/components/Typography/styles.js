@@ -74,8 +74,7 @@ const setSizeTitle = (sizeTitle) => {
       color: #ffffff !important;`;
 
     default:
-      return `font-size: 36px;
-              font-weight: 400;`;
+      return ``;
   }
 };
 
@@ -99,6 +98,9 @@ export const Title = styled.h2`
   // margin-top: -7px;
   // margin-bottom: 15px;
   line-height: 30px;
+  font-size: 36px;
+
+  font-weight: 300;
   ${(props) => setSizeTitle(props.sizeTitle)};
   ${(props) => setColorTitle(props.colorTitle)};
 
@@ -254,21 +256,22 @@ const setStylesText = (stylesText) => {
       ${Title} {
         font-size: 36px;
         line-height: 30px;
-        font-weight: 300;
+        font-weight: 400;
         color: #333333;
         margin: 20px 0;
       }
       ${SubTitle} {
         font-size: 18px;
         line-height: 36px;
-        font-weight: 300;
+      
         color: #999999;
         margin-bottom: 10px;
       }
       ${Text} {
+        margin-bottom: 10px;
         font-size: 14px;
         line-height: 30px;
-        font-weight: 400;
+      
         color: #575757;
         // margin-bottom: 15px;
       }
@@ -501,8 +504,11 @@ const setStylesText = (stylesText) => {
       align-items: start;
       font-size: 18px;
       font-weight: 300;
-      margin: 0
-
+      margin: 0;
+      ${SubTitle} {
+        color: #333333 !important;
+        font-weight: 600;
+      }
       `;
 
     default:

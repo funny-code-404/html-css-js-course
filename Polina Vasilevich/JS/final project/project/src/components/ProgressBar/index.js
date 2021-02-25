@@ -35,7 +35,7 @@ class ProgressBar extends React.Component {
         items={items}
         settings={settings}
         contentContainer={
-          <div style={{ marginTop: "96px" }}>
+          <div style={{ marginTop: "62px" }}>
             {items.list.map((item) => {
               return (
                 <div key={item.title}>
