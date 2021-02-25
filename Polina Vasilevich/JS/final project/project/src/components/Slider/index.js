@@ -109,7 +109,7 @@ class Slider extends React.Component {
                     <ContentContainer
                       positionContent="center"
                       style={{
-                        width: "50%",
+                        // width: "50%",
                         position: "absolute",
                         zIndex: "2",
                         top: "50%",
@@ -120,7 +120,7 @@ class Slider extends React.Component {
                       {(items.title || items.subTitle) && (
                         <Typography
                           items={items}
-                          isLine={isLine}
+                          // isLine={isLine}
                           settings={{
                             colorTitle: "white",
                             stylesText: `${stylesText}`,

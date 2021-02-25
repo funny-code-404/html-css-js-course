@@ -4,3 +4,11 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "FuturaPT";
+  src: url("../Fatura/FuturaPT-Bold.ttf");
+
+  font-weight: normal;
+  font-style: normal;
+}

@@ -103,7 +103,7 @@ const setStylesButton = (stylesButton) => {
 
     case "priceTable":
       return `
-          width: 15vw;
+          width: 12vw;
           background-color: #4285f4;
           border: 1px solid #2c6cd6;
           :hover {
@@ -115,9 +115,15 @@ const setStylesButton = (stylesButton) => {
 
     case "sliderTransparent":
       return `
+              width: 200px;
               background-color: transparent;
               border: 1px solid #fff;
               margin-left: 10px;
+              margin-right: 10px;
+
+              :hover {
+                background-color: red;
+              }
             `;
 
     case "grey":
@@ -180,6 +186,9 @@ const setStylesButton = (stylesButton) => {
           background-color: #82b440;
    
             `;
+
+    case "intro":
+      return ` margin-top: 50px;`;
 
     default:
       return `

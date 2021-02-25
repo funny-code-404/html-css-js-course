@@ -15,7 +15,7 @@ class FooterComponent extends React.Component {
         <MainContainer
           settings={{
             backgroundColorMainContainer: "footer",
-            heightMainContainer: "100%",
+            heightMainContainer: "footer",
           }}
           contentContainer={
             <GridContainer mediaGridBlock="footer">

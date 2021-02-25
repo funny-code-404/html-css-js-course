@@ -81,7 +81,9 @@ const setHeightMainContainer = (heightMainContainer) => {
     case "header":
       return `height: 92px;`;
     case "intro":
-      return `height: 757px;`;
+      return `height: 777px;`;
+    case "homeIntro2":
+      return `height: 760px;`;
     case "callTo":
       return `height: 180px;`;
 
@@ -100,8 +102,11 @@ const setHeightMainContainer = (heightMainContainer) => {
     case "slider2":
       return `height: 800px;`;
 
+    case "footer":
+      return `height: 385px;`;
+
     default:
-      return `height: 100%;`;
+      return `height: 100%`;
   }
 };
 
@@ -229,11 +234,33 @@ const setStylesBlock = (stylesBlock) => {
 
     case "numbers":
       return `
-              padding-right: 10%;
-              padding-left: 10%;
-              padding-top:0;
-              padding-bottom:0;
+      padding-right: 5%;
+      padding-left: 5%;
+      padding-top: 0;
+      padding-bottom: 0;
             `;
+
+    case "homePhotos":
+      return `
+                      padding-right: 0;
+                      padding-left: 0;
+                      padding-top:89px;
+                      padding-bottom:0;
+                    `;
+
+    case "homeIconsList":
+      return `
+      padding-top: 95px;
+      padding-bottom: 71px
+            `;
+
+    case "homeIconsList2":
+      return `
+              padding-top: 82px;
+              padding-bottom: 105px;
+              padding-right: 6%;
+              padding-left: 6%;
+                    `;
 
     default:
       return `

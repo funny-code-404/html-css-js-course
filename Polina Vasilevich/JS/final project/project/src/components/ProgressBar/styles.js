@@ -17,7 +17,7 @@ const setStylesProgressBar = (stylesProgressBar) => {
 };
 
 export const ProgressBarContainer = styled.div`
-  margin-bottom: 42px;
+  margin-bottom: 30px;
 
   height: ${(props) =>
     props.heightContainer ? props.heightContainer : "100%"};

@@ -75,7 +75,7 @@ const setSizeTitle = (sizeTitle) => {
 
     default:
       return `font-size: 36px;
-              font-weight: 300;`;
+              font-weight: 400;`;
   }
 };
 
@@ -295,7 +295,10 @@ const setStylesText = (stylesText) => {
         line-height: 60px;
         font-weight: 300;
       }
-     
+      ${Line} {
+        width: 30px;
+        
+      }
     `;
 
     case "mainTable":
@@ -461,8 +464,7 @@ const setStylesText = (stylesText) => {
         font-size: 18px;
         line-height: 30px;
         font-weight: 400;
-        margin-top: 50px;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
       }
     `;
 

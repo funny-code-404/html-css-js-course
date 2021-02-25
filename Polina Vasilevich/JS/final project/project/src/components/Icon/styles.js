@@ -60,7 +60,7 @@ export const IconContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 12px;
+  margin-bottom: 32px;
   cursor: pointer;
 `;
 
@@ -135,16 +135,17 @@ const setStylesIcon = (stylesIcon) => {
   switch (stylesIcon) {
     case "footer":
       return `
-            padding: 0 1.3vw;
+            padding: 0 0.8vw;
             opacity: 0.5;
             font-size: 18px;
             cursor: pointer;
 
             &:hover{
               opacity: 1;
-            }
+            }`;
 
-            `;
+    case "gradientIcons":
+      return `font-size: 44px;`;
 
     default:
       return `

@@ -72,6 +72,7 @@ class Home extends React.Component {
             positionText: "left",
             widthContentContainer: "70ch",
             heightMainContainer: "intro",
+            stylesButton: "intro",
             isVerticalCenter: "true",
             stylesText: "textList",
           }}
@@ -81,7 +82,7 @@ class Home extends React.Component {
           isTitle
           items={portfolioItems}
           settings={{
-            stylesBlock: "photos",
+            stylesBlock: "homePhotos",
           }}
           contentContainer={
             <Photos
@@ -108,9 +109,10 @@ class Home extends React.Component {
           items={iconList2}
           id="iconsList2"
           settings={{
-            stylesBlock: "iconsList2",
+            stylesBlock: "homeIconsList",
             widthItemGridContainer: "350px",
             colorIcon: "gradient",
+            stylesIcon: "gradientIcons",
             positionText: "left",
             positionIcons: "left",
             gridGap: "3%",
@@ -123,10 +125,9 @@ class Home extends React.Component {
           settings={{
             positionText: "left",
             widthContentContainer: "70ch",
-
             positionContentContainer: "right",
             isVerticalCenter: "true",
-            heightMainContainer: "intro",
+            heightMainContainer: "homeIntro2",
             stylesText: "textList",
           }}
         />
@@ -163,10 +164,10 @@ class Home extends React.Component {
             <IconsList
               items={servicesItems.rightContent}
               settings={{
-                stylesBlock: "twoColumns",
-
-                gridGap: "17%",
-                gridRowGap: "120px",
+                stylesBlock: "homeIconsList2",
+                stylesIcon: "iconsList3",
+                gridGap: "14%",
+                gridRowGap: "135px",
                 widthImg: "64px",
 
                 stylesButton: "link",
@@ -242,7 +243,7 @@ class Home extends React.Component {
             />
           }
         />
-        {/*
+
         <Form
           items={formItems}
           idForm="form1"
@@ -258,7 +259,7 @@ class Home extends React.Component {
             backgroundColorMainContainer: "callToGreen",
             stylesBlock: "callTo",
           }}
-        /> */}
+        />
       </>
     );
   }

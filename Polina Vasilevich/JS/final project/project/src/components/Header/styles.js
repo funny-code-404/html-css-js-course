@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 export const Header = styled.header`
   background-color: #ffffff;
 `;
@@ -24,7 +23,6 @@ export const LogoImg = styled.img`
 `;
 
 export const LogoText = styled.h2`
-  text: thefox business;
   font-family: FuturaPT;
   font-size: 27px;
   line-height: 30px;
