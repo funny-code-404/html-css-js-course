@@ -227,6 +227,14 @@ const setStylesBlock = (stylesBlock) => {
               padding-left: 10%;
             `;
 
+    case "numbers":
+      return `
+              padding-right: 10%;
+              padding-left: 10%;
+              padding-top:0;
+              padding-bottom:0;
+            `;
+
     default:
       return `
            
