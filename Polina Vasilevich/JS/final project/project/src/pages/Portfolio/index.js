@@ -2,7 +2,7 @@ import React from "react";
 
 import IntroSlider from "../../components/IntroSlider";
 
-import Photos from "../../components/Photos copy";
+import Photos from "../../components/Photos";
 import portfolioItems from "../../assets/const/portfolio/portfolioItems";
 
 import CallToAction from "../../components/CallToAction";

@@ -11,13 +11,8 @@ export const Img = styled.div`
   ${(props) =>
     props.gridItemRow &&
     `&:nth-of-type(${props.gridItemRow}) {
-    height: 100%;
+    // height: 100%;
     grid-row: 1 / 3;
-    
-    @media(max-width: 1288px) {
-      height: 420px;};
-    }
-    
     `}
   }
 
@@ -28,4 +23,25 @@ export const Img = styled.div`
     grid-column: 1 / 3;`}
   }
 
+
+
+`;
+
+export const ButtonsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  background-color: #000000;
+`;
+
+export const Wrapper = styled.div`
+  width: 10%;
+  margin-right: 3%;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid transparent;
 `;

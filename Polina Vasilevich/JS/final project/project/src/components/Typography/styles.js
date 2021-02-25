@@ -479,6 +479,30 @@ const setStylesText = (stylesText) => {
       }
     `;
 
+    case "photos":
+      return `
+        text-align: left;
+        align-items: start;
+        position: absolute;
+        bottom: 0;
+      ${Title} {
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 600;
+        color: #ffffff !important;
+      }
+    `;
+
+    case "potrfolio":
+      return `
+      text-align: left;
+      align-items: start;
+      font-size: 18px;
+      font-weight: 300;
+      margin: 0
+
+      `;
+
     default:
       return `
       ${Title} {

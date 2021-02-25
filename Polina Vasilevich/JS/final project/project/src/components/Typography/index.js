@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import {
   Title,
@@ -52,4 +53,25 @@ class TextComponent extends React.Component {
     );
   }
 }
+
+TextComponent.propTypes = {
+  settings: PropTypes.object,
+  items: PropTypes.object,
+};
+
+TextComponent.defaultProps = {
+  settings: {},
+  items: {
+    title: "",
+    subTitle: "",
+    text: "",
+    textList: {
+      text: "",
+      icon: "",
+    },
+    iconTitle: "",
+    extraText: "",
+  },
+};
+
 export default TextComponent;

@@ -219,6 +219,7 @@ class Home extends React.Component {
             />
           }
         />
+
         <Slider
           items={slider3Items}
           id="slider3"
@@ -241,7 +242,7 @@ class Home extends React.Component {
             />
           }
         />
-
+        {/*
         <Form
           items={formItems}
           idForm="form1"
@@ -257,7 +258,7 @@ class Home extends React.Component {
             backgroundColorMainContainer: "callToGreen",
             stylesBlock: "callTo",
           }}
-        />
+        /> */}
       </>
     );
   }

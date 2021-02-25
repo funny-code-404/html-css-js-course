@@ -96,4 +96,8 @@ export const Dot = styled.button`
   :hover {
     background-color: tomato;
   }
+  &.active {
+    opacity: 1;
+    background-color: tomato !important;
+  }
 `;

@@ -1,7 +1,19 @@
+import PropTypes from "prop-types";
 import MainContainer from "../MainContainer";
 import Typography from "../Typography";
 import { ContentContainer } from "../../mainStyles";
 import Button from "../Button";
+
+Works.propTypes = {
+  items: PropTypes.object,
+};
+
+Works.defaultProps = {
+  items: {
+    buttonLabel: "",
+    buttonIcon: "",
+  },
+};
 
 export default function Works(props) {
   return (

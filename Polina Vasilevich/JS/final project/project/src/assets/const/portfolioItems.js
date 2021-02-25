@@ -12,14 +12,16 @@ const portfolioItems = {
   subTitle:
     "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra. Nulla vehicula nibh vel ante commodo feugiat.",
   imgs: [
-    { img: img1 },
-    { img: img2 },
-    { img: img3 },
-    { img: img4 },
-    { img: img5 },
-    { img: img6 },
-    { img: img7 },
-    { img: img8 },
+    [
+      { img: img1 },
+      { img: img2 },
+      { img: img3 },
+      { img: img4 },
+      { img: img5 },
+      { img: img6 },
+      { img: img7 },
+      { img: img8 },
+    ],
   ],
 };
 

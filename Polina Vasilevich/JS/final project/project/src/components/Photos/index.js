@@ -1,32 +1,87 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import { GridContainer } from "../../mainStyles";
-import { Img } from "./styles";
+import { Img, Wrapper, ButtonsContainer } from "./styles";
 import Typography from "../Typography";
+import Button from "../Button";
 
-export default function Images(props) {
-  const { items, settings } = props;
+class ImagesList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentImgList: 0,
+    };
+  }
 
-  return (
-    <GridContainer {...settings}>
-      {items.imgs.map((item, index) => {
-        return (
-          <Img key={index} backgroundImg={item.img} {...settings}>
-            {item.title && (
-              <Typography
-                items={item}
-                settings={{
-                  // positionText: "left",
-                  sizeTitle: "photos",
-                  colorText: "white",
-                  setPadding: true,
-                  positionText: "bottom",
-                }}
-              />
-            )}
-          </Img>
-        );
-      })}
-    </GridContainer>
-  );
+  handleClick = (e) => {
+    e.preventDefault();
+    this.setState({
+      currentImgList: +e.target.id,
+    });
+  };
+
+  render() {
+    const { imgs, buttons } = this.props.items;
+    const { settings } = this.props;
+    return (
+      <>
+        {buttons && (
+          <ButtonsContainer onClick={this.handleClick}>
+            {buttons.map((button, index) => {
+              const styles =
+                this.state.currentImgList === index
+                  ? { borderTopColor: "#4285f4" }
+                  : {};
+
+              return (
+                <Wrapper style={styles}>
+                  <Button
+                    onClick={this.handleClick}
+                    key={`portfolio ${index}`}
+                    id={index}
+                    settings={{ stylesButton: "portfolio" }}
+                    buttonLabel={button}
+                  ></Button>
+                </Wrapper>
+              );
+            })}
+          </ButtonsContainer>
+        )}
+        <GridContainer {...settings}>
+          {imgs[this.state.currentImgList].map((item, index) => {
+            return (
+              <Img
+                key={`portfolioItems${index}`}
+                backgroundImg={item.img}
+                {...settings}
+              >
+                {item.title && (
+                  <Typography
+                    items={item}
+                    settings={{
+                      stylesText: "photos",
+                      setPadding: true,
+                    }}
+                  />
+                )}
+              </Img>
+            );
+          })}
+        </GridContainer>
+      </>
+    );
+  }
 }
+
+ImagesList.propTypes = {
+  items: PropTypes.array,
+  settings: PropTypes.object,
+};
+
+ImagesList.defaultProps = {
+  items: [{ imgs: [], buttons: "" }],
+  settings: {},
+};
+
+export default ImagesList;

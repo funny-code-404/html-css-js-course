@@ -51,7 +51,7 @@ const setSizeIconContainer = (sizeIconContainer) => {
 
 export const IconContainer = styled.div`
   ${(props) => setFormIcon(props.formIcon)};
-  ${(props) => setFormIcon(props.formIcons)};
+
   ${(props) => setColorIconContainer(props.colorIconContainer)};
   ${(props) => setSizeIconContainer(props.sizeIconContainer)};
   ${(props) =>

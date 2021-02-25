@@ -8,13 +8,15 @@ import img7 from "../../img/portfolio/christopher-gower-m_HRfLhgABo-unsplash.jpg
 
 const portfolioItems = {
   imgs: [
-    { img: img1 },
-    { img: img2 },
-    { img: img3 },
-    { img: img4 },
-    { img: img5 },
-    { img: img6 },
-    { img: img7 },
+    [
+      { img: img1 },
+      { img: img2 },
+      { img: img3 },
+      { img: img4 },
+      { img: img5 },
+      { img: img6 },
+      { img: img7 },
+    ],
   ],
   title: "This Is Portfolio Detail Page",
   text:

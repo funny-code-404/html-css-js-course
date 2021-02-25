@@ -1,24 +1,33 @@
+import PropTypes from "prop-types";
 import MainContainer from "../../MainContainer";
 import Button from "../../Button";
 import IconsList from "../../IconsList";
 import { handleLink } from "../../Button/handlers";
+
+Articles.propTypes = {
+  items: PropTypes.object,
+  settings: PropTypes.object,
+};
+
+Articles.defaultProps = {
+  items: {
+    title: "",
+    subTitle: "",
+    buttonLabel: "",
+    buttonIcon: "",
+    list: [
+      {
+        img: "",
+        title: "",
+        text: "",
+      },
+    ],
+  },
+};
+
 export default function Articles(props) {
   const { items, settings } = props;
-  const contentContainer = (
-    <>
-      <IconsList
-        items={items.list}
-        settings={{ heightImg: "290px", positionText: "left" }}
-        deletePadding
-      />
-      <Button
-        handleButton={(e) => handleLink(e, "features")}
-        buttonLabel={items.buttonLabel}
-        buttonIcon={items.buttonIcon}
-        settings={{ stylesButton: "link", colorTextButton: "linkBlue" }}
-      />
-    </>
-  );
+
   return (
     <MainContainer
       settings={{
@@ -28,7 +37,21 @@ export default function Articles(props) {
       }}
       isTitle
       items={items}
-      contentContainer={contentContainer}
+      contentContainer={
+        <>
+          <IconsList
+            items={items.list}
+            settings={{ heightImg: "290px", positionText: "left" }}
+            deletePadding
+          />
+          <Button
+            handleButton={(e) => handleLink(e, "features")}
+            buttonLabel={items.buttonLabel}
+            buttonIcon={items.buttonIcon}
+            settings={{ stylesButton: "link", colorTextButton: "linkBlue" }}
+          />
+        </>
+      }
     />
   );
 }

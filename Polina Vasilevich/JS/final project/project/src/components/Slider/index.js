@@ -11,7 +11,6 @@ import {
 import { ContentContainer } from "../../mainStyles";
 import Typography from "../Typography";
 import MainContainer from "../MainContainer";
-import "./styles.css";
 import Button from "../Button";
 import { handleScrollDown, handleLink } from "../Button/handlers";
 
@@ -87,96 +86,101 @@ class Slider extends React.Component {
       stylesText,
       heightSliderContainer,
     } = this.props;
-    const contentContainer = (
-      <SlidersContainer id={id} heightSliderContainer={heightSliderContainer}>
-        {imgs.map((img, index) => {
-          return (
-            <>
-              <Img key={index} backgroundImg={img} id={index} className="img">
-                <ContentContainer
-                  positionContent="center"
-                  style={{
-                    width: "50%",
-                    position: "absolute",
-                    zIndex: "2",
-                    top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%)",
-                  }}
-                >
-                  {(items.title || items.subTitle) && (
-                    <Typography
-                      items={items}
-                      isLine={isLine}
-                      settings={{
-                        colorTitle: "white",
-                        stylesText: `${stylesText}`,
-                        fontSizeSubTitle: "30px ",
-                        colorSubTitle: "white",
-                        colorText: "#fff",
-                      }}
-                    />
-                  )}
-                  {buttonLabel && (
-                    <>
-                      <Button
-                        buttonLabel={buttonLabel[0]}
-                        settings={{
-                          stylesButton: "sliderTransparent",
-                        }}
-                        handleButton={handleScrollDown}
-                        link="iconsList2"
-                      />
-                      <Button
-                        buttonLabel={buttonLabel[1]}
-                        settings={{
-                          stylesButton: "sliderTransparent",
-                        }}
-                        handleButton={handleLink}
-                        link="blog"
-                      />
-                    </>
-                  )}
-                </ContentContainer>
-              </Img>
-            </>
-          );
-        })}
-
-        {isArrows && (
-          <>
-            <ArrowPrev onClick={this.prevSlider}>&#10094;</ArrowPrev>
-            <ArrowNext onClick={this.nextSlider}>&#10095;</ArrowNext>
-          </>
-        )}
-
-        {isDots && (
-          <DotsContainer>
-            {imgs.map((img, index) => {
-              return (
-                <Dot
-                  key={index}
-                  id={index}
-                  className={
-                    index + 1 === this.state.currentSliderIndex && "active"
-                  }
-                  onClick={this.changeSlider}
-                ></Dot>
-              );
-            })}
-          </DotsContainer>
-        )}
-      </SlidersContainer>
-    );
 
     return (
       <MainContainer
-        contentContainer={contentContainer}
         settings={{
-          paddingTop: "0",
-          paddingBottom: "0",
-          paddingLeftRight: "none",
+          stylesBlock: "withoutPadding",
         }}
+        contentContainer={
+          <SlidersContainer
+            id={id}
+            heightSliderContainer={heightSliderContainer}
+          >
+            {imgs.map((img, index) => {
+              return (
+                <>
+                  <Img
+                    key={index}
+                    backgroundImg={img}
+                    id={index}
+                    className="img"
+                  >
+                    <ContentContainer
+                      positionContent="center"
+                      style={{
+                        width: "50%",
+                        position: "absolute",
+                        zIndex: "2",
+                        top: "50%",
+                        left: "50%",
+                        transform: "translate(-50%, -50%)",
+                      }}
+                    >
+                      {(items.title || items.subTitle) && (
+                        <Typography
+                          items={items}
+                          isLine={isLine}
+                          settings={{
+                            colorTitle: "white",
+                            stylesText: `${stylesText}`,
+                            fontSizeSubTitle: "30px ",
+                            colorSubTitle: "white",
+                            colorText: "#fff",
+                          }}
+                        />
+                      )}
+                      {buttonLabel && (
+                        <>
+                          <Button
+                            buttonLabel={buttonLabel[0]}
+                            settings={{
+                              stylesButton: "sliderTransparent",
+                            }}
+                            handleButton={handleScrollDown}
+                            link="iconsList2"
+                          />
+                          <Button
+                            buttonLabel={buttonLabel[1]}
+                            settings={{
+                              stylesButton: "sliderTransparent",
+                            }}
+                            handleButton={handleLink}
+                            link="blog"
+                          />
+                        </>
+                      )}
+                    </ContentContainer>
+                  </Img>
+                </>
+              );
+            })}
+
+            {isArrows && (
+              <>
+                <ArrowPrev onClick={this.prevSlider}>&#10094;</ArrowPrev>
+                <ArrowNext onClick={this.nextSlider}>&#10095;</ArrowNext>
+              </>
+            )}
+
+            {isDots && (
+              <DotsContainer>
+                {imgs.map((img, index) => {
+                  return (
+                    <Dot
+                      key={index}
+                      id={index}
+                      className={
+                        index + 1 === this.state.currentSliderIndex && "active"
+                      }
+                      onClick={this.changeSlider}
+                    ></Dot>
+                  );
+                })}
+              </DotsContainer>
+            )}
+          </SlidersContainer>
+        }
       />
     );
   }
