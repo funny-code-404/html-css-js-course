@@ -6,6 +6,13 @@ import { GridContainer, FlexContainer, GridItem } from "../../mainStyles";
 import { Icon, Img, IconContainer } from "../Icon/styles";
 import Typography from "../Typography";
 
+import {
+  FooterColumnsContainer,
+  FooterColumn,
+  CopyRightIconsContainer,
+  CopyRightIcon,
+} from "./styles";
+
 class FooterComponent extends React.Component {
   render() {
     const { logo, contacts, copyRight } = this.props.items;
@@ -20,8 +27,8 @@ class FooterComponent extends React.Component {
           }}
           contentContainer={
             <FlexContainer heightFlexContainer="footer">
-              <GridContainer mediaGridBlock="footer">
-                <GridItem
+              <FooterColumnsContainer mediaGridBlock="footer">
+                <FooterColumn
                   style={{
                     display: "flex",
                     flexDirection: "column",
@@ -40,20 +47,23 @@ class FooterComponent extends React.Component {
                     items={logo}
                     settings={{ stylesText: "footerLogo" }}
                   />
-                </GridItem>
+                </FooterColumn>
+
                 {contacts.map((item, index) => {
                   return (
-                    <Typography
-                      key={`copyRight${index}`}
-                      items={item}
-                      settings={{
-                        stylesText: "footer",
-                        gridGap: "1.3vw",
-                      }}
-                    />
+                    <FooterColumn>
+                      <Typography
+                        key={`copyRight${index}`}
+                        items={item}
+                        settings={{
+                          stylesText: "footer",
+                          gridGap: "1.3vw",
+                        }}
+                      />
+                    </FooterColumn>
                   );
                 })}
-              </GridContainer>
+              </FooterColumnsContainer>
             </FlexContainer>
           }
         />
@@ -66,19 +76,21 @@ class FooterComponent extends React.Component {
           contentContainer={
             <FlexContainer heightFlexContainer="header">
               <Typography items={copyRight} />
-              <div>
+              <CopyRightIconsContainer>
                 {copyRight.icons.map(({ icon, href }) => {
                   return (
-                    <a
-                      key={href}
-                      href={href}
-                      style={{ textDecoration: "none" }}
-                    >
-                      <Icon className={icon} stylesIcon="footer"></Icon>
-                    </a>
+                    <CopyRightIcon>
+                      <a
+                        key={href}
+                        href={href}
+                        style={{ textDecoration: "none" }}
+                      >
+                        <Icon className={icon} stylesIcon="footer"></Icon>
+                      </a>
+                    </CopyRightIcon>
                   );
                 })}
-              </div>
+              </CopyRightIconsContainer>
             </FlexContainer>
           }
         />

@@ -13,6 +13,9 @@ export const Img = styled.div`
     `&:nth-of-type(${props.gridItemRow}) {
     height: 100%;
     grid-row: 1 / 3;
+     @media(max-width: 1418px) {
+            height: 420px;
+          }
     `}
   }
 
@@ -20,7 +23,10 @@ export const Img = styled.div`
     props.gridItemColumn &&
     `&:nth-of-type(${props.gridItemColumn}) {
     
-    grid-column: 1 / 3;`}
+    grid-column: 1 / 3;
+   
+    
+    `}
 
 `;
 

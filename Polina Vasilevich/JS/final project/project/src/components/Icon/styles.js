@@ -135,7 +135,7 @@ const setStylesIcon = (stylesIcon) => {
   switch (stylesIcon) {
     case "footer":
       return `
-            padding: 0 0.8vw;
+            // padding: 0 0.8vw;
             opacity: 0.5;
             font-size: 18px;
             cursor: pointer;

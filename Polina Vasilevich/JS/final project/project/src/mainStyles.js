@@ -38,12 +38,10 @@ export const GridContainer = styled.div`
   display: grid;
   grid-column-gap: ${(props) => (props.gridGap ? props.gridGap : "15px")};
   grid-row-gap: ${(props) => (props.gridRowGap ? props.gridRowGap : "25px")};
-
   grid-template-columns: repeat(
     auto-fit,
     minmax(${widthItemGridContainer}, 1fr)
   );
-
   justify-content: space-between;
   ${(props) => setMediaGridBlock(props.mediaGridBlock)}
 `;
@@ -140,6 +138,5 @@ export const FlexContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   ${(props) => setMediaFlexBlock(props.mediaFlexBlock)};
 `;
