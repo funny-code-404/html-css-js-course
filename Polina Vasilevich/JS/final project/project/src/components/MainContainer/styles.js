@@ -126,11 +126,32 @@ const setMediaBlock = (mediaBlock) => {
         display:none;
       }`;
 
+    case "aside":
+      return `@media(max-width: 1030px) {
+          display:none;
+        }`;
+
+    case "posts":
+      return `@media(max-width: 1030px) {
+        padding-top: 50px;
+        padding-left: 11%;
+        padding-right: 11%;
+            }`;
+
     default:
       break;
   }
 };
 
+const setpositionContentBlock = (positionContentBlock) => {
+  switch (positionContentBlock) {
+    case "right":
+      return `justify-content: flex-end;`;
+
+    default:
+      break;
+  }
+};
 export const MainContainer = styled.div`
   position: relative;
   ${(props) => props.isVerticalCenter && `display: flex; align-items: center; `}
@@ -145,6 +166,7 @@ export const MainContainer = styled.div`
   ${(props) => setHeightMainContainer(props.heightMainContainer)};
   ${(props) => setMediaBlock(props.mediaBlock)};
   transition: opacity ease 0.5s;
+  ${(props) => setpositionContentBlock(props.positionContentBlock)};
 `;
 
 const setPaddingLeftRight = (paddingLeftRight) => {
@@ -311,4 +333,6 @@ export const Wrapper = styled.div`
          display: flex;
          align-items: center;
          padding: 0 5%;`};
+
+  ${(props) => setMediaBlock(props.mediaBlock)};
 `;

@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
-import { ContentContainer, Logo } from "./styles";
+import { ContentContainer, Logo, GridContainer } from "./styles";
 import MainContainer from "../MainContainer";
-import { GridContainer } from "../../mainStyles";
 
 LogosList.propTypes = {
   items: PropTypes.array,

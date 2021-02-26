@@ -8,10 +8,6 @@ export const GridTwoColumnContainer = styled.div`
     props.sizeContainers ? props.sizeContainers : ""};
   grid-gap: ${(props) => (props.gridGap ? props.gridGap : "0")};
 
-  @media (max-width: 1100px) {
-    grid-template-columns: 100%;
-  }
-
   ${GridItem}:nth-of-type(${(props) =>
     props.numberInVisibleBlock && props.numberInVisibleBlock}) {
     @media (max-width: 1100px) {

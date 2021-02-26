@@ -85,47 +85,58 @@ export const FooterColumnsContainer = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2%;
 
-  @media (max-width: 1418px) {
-    grid-template-columns: repeat(8, 1fr);
+  @media (max-width: 1440px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 956px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 
+// &:nth-of-type(n + 2) {
+//   grid-row: 2;
+// }
+// &:nth-of-type(1) {
+//   grid-column: 2/8;
+// }
+
+// &:nth-of-type(2) {
+//   grid-column: 1/4;
+// }
+
+// &:nth-of-type(3) {
+//   grid-column: 4/7;
+// }
+
+// &:nth-of-type(4) {
+//   grid-column: 7/10;
+// }
+
+// @media (max-width: 847px) {
+// &:nth-of-type(2) {
+//   display: none;
+// }
+
+// &:nth-of-type(3) {
+//   grid-column: 2/6;
+// }
+
+// &:nth-of-type(4) {
+//   grid-column: 6/10;
+// }
+
 export const FooterColumn = styled.div`
-    @media (max-width: 1418px) {
-      &:nth-of-type(n + 2) {
-          grid-row: 2;
-      }
-      &:nth-of-type(1) {
-          grid-column: 2/8;
+  @media (max-width: 1418px) {
+    &:nth-of-type(2) {
+      display: none;
     }
 
-      &:nth-of-type(2) {
-          grid-column: 1/4;
-    }
-
+    @media (max-width: 956px) {
       &:nth-of-type(3) {
-          grid-column: 4/7;
-    }
-
-    &:nth-of-type(4) {
-          grid-column: 7/10;
-    }
-
-    @media (max-width: 847px) {
-      &:nth-of-type(2) {
-          display: none;
-      }
-
-      &:nth-of-type(3) {
-          grid-column: 2/6;
-      }
-
-    &:nth-of-type(4) {
-          grid-column: 6/10;
+        display: none;
       }
   }
-    
-    
 `;
 
 export const CopyRightIconsContainer = styled.div`
@@ -133,31 +144,11 @@ export const CopyRightIconsContainer = styled.div`
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 2vw;
 
-  @media (max-width: 1449px) {
+  @media (max-width: 1440px) {
   }
 `;
 
 export const CopyRightIcon = styled.div`
-  @media (max-width: 1449px) {
-    &:nth-of-type(n + 4) {
-      grid-row: 2;
-    }
-
-    // &:nth-of-type(2) {
-    //   grid-column: 3;
-    // }
-
-    // &:nth-of-type(3) {
-    //   grid-column: 5;
-    // }
-
-    // &:nth-of-type(4) {
-    //   grid-column: 2;
-    // }
-
-    // &:nth-of-type(5) {
-    //   grid-column: 4;
-    // }
-
-
+  @media (max-width: 1369px) {
+  }
 `;

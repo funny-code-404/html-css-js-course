@@ -4,6 +4,10 @@ export const Tweets = styled.div`
   display: grid;
   grid-template-columns: 55% 40%;
   grid-gap: 6.5%;
+
+  @media (max-width: 1030px) {
+    grid-template-columns: 1fr;
+  }
 `;
 export const Avatar = styled.div`
   width: 50px;

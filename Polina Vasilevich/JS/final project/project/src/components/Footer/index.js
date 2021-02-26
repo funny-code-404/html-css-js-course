@@ -75,7 +75,10 @@ class FooterComponent extends React.Component {
           }}
           contentContainer={
             <FlexContainer heightFlexContainer="header">
-              <Typography items={copyRight} />
+              <Typography
+                items={copyRight}
+                settings={{ mediaText: "copyRigth" }}
+              />
               <CopyRightIconsContainer>
                 {copyRight.icons.map(({ icon, href }) => {
                   return (

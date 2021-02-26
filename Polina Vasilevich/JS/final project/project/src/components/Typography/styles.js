@@ -222,10 +222,26 @@ const setPositionText = (positionText) => {
   }
 };
 
+const setMediaText = (mediaText) => {
+  switch (mediaText) {
+    case "copyRight":
+      return `
+            @media (max-width: 1369px) {
+              width: 49ch;
+            }
+            `;
+
+    default:
+      return `
+                `;
+  }
+};
+
 export const TextContainer = styled.div`
   ${(props) => setPositionText(props.positionText)};
   ${(props) => setStylesText(props.stylesText)};
   ${(props) => props.setPadding && "padding: 40px;"}
+  ${(props) => setMediaText(props.mediaText)};
 `;
 
 const setStylesText = (stylesText) => {

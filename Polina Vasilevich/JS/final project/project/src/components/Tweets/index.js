@@ -24,9 +24,7 @@ class TweetsComponent extends React.Component {
     const condition = !this.state.isVisible;
     const stylesGridBlock = !condition
       ? {
-          display: "block",
-          width: "65%",
-          margin: "0 auto",
+          gridTemplateColumns: "1fr",
         }
       : {};
 

@@ -21,8 +21,9 @@ class Portfolio extends React.Component {
               settings={{
                 widthItemGridContainer: "400px",
                 gridItemColumn: "3",
-                gridRowGap: "2%",
-                gridGap: "2%",
+                gridRowGap: "10px",
+                gridGap: "10px",
+                heightMainContainer: "tweets",
               }}
             />
             <div style={{ marginTop: "200px", marginBottom: "82px" }}>
@@ -46,7 +47,11 @@ class Portfolio extends React.Component {
                       href={href}
                       style={{ textDecoration: "none" }}
                     >
-                      <Icon className={icon} stylesIcon="footer"></Icon>
+                      <Icon
+                        className={icon}
+                        stylesIcon="footer"
+                        style={{ opacity: "1" }}
+                      ></Icon>
                     </a>
                   </IconsContainer>
                 );

@@ -24,7 +24,9 @@ export const Img = styled.div`
     `&:nth-of-type(${props.gridItemColumn}) {
     
     grid-column: 1 / 3;
-   
+      @media(max-width: 1320px) {
+        grid-column: auto;
+      }
     
     `}
 

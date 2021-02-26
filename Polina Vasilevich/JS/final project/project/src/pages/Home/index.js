@@ -125,7 +125,7 @@ class Home extends React.Component {
           settings={{
             positionText: "left",
             widthContentContainer: "70ch",
-            positionContentContainer: "right",
+            positionContentBlock: "right",
             isVerticalCenter: "true",
             heightMainContainer: "homeIntro2",
             stylesText: "textList",
@@ -153,7 +153,7 @@ class Home extends React.Component {
               settings={{
                 backgroundColorMainContainer: "dark",
                 stylesBlock: "twoColumns",
-
+                widthItemGridContainer: "350px",
                 positionContentContainer: "left",
                 positionText: "left",
                 stylesText: "textList",

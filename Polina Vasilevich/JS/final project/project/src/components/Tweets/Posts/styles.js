@@ -48,4 +48,8 @@ export const Arrow = styled.button`
 
   background-color: transparent;
   border-color: transparent;
+
+  @media (max-width: 1030px) {
+    display: none;
+  }
 `;

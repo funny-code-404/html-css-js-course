@@ -25,41 +25,49 @@ const portfolioItems = {
     {
       icon: "ti-facebook",
       backgroundColor: "#2164b6",
+      href: "https://www.facebook.com/",
     },
 
     {
       icon: "ti-linkedin",
       backgroundColor: "#2a8fdd",
+      href: "https://www.linkedin.com/",
     },
 
     {
-      icon: "ti-tumblr-alt",
+      icon: "ti-twitter-alt",
+      href: "https://twitter.com/tweeter",
       backgroundColor: "#43d0fe",
     },
 
     {
       icon: "ti-pinterest",
+      href: "https://www.pinterest.com/",
       backgroundColor: "#df5643",
     },
 
     {
-      icon: "ti-vimeo-alt",
+      icon: "ti-google",
       backgroundColor: "#484540",
+      href: "https://www.google.com/",
     },
 
     {
-      icon: "ti-pinterest",
+      icon: "ti-dribbble",
       backgroundColor: "#ee4c66",
+      href: "https://dribbble.com/tuti",
     },
 
     {
-      icon: "ti-vimeo-alt",
+      icon: "ti-instagram",
       backgroundColor: "#3b9dc2",
+      href: "https://www.instagram.com/",
     },
 
     {
-      icon: "ti-pinterest",
+      icon: "ti-tumblr-alt",
       backgroundColor: "#547885",
+      href: "https://www.tumblr.com/",
     },
   ],
 };

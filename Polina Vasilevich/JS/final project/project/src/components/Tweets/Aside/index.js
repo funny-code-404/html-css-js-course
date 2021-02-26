@@ -38,6 +38,7 @@ class AsideComponent extends React.Component {
           stylesBlock: "aside",
           backgroundColorMainContainer: "aside",
           heightMainContainer: "tweets",
+          mediaBlock: "aside",
         }}
         styles={style}
         contentContainer={

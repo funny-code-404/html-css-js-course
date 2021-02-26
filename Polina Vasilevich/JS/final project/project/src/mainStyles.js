@@ -125,7 +125,7 @@ const setMediaFlexBlock = (mediaFlexBlock) => {
 
     case "numbers":
       return `@media(max-width: 1000px) {
-        display:none;
+        display: none;
       }`;
 
     default:

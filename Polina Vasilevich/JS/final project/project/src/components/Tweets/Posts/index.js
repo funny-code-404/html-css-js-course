@@ -58,7 +58,7 @@ class PostsComponent extends React.Component {
 
     return (
       <MainContainer
-        settings={{ stylesBlock: "posts" }}
+        settings={{ stylesBlock: "posts", mediaBlock: "posts" }}
         styles={styles}
         contentContainer={
           <>

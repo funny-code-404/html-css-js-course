@@ -41,7 +41,11 @@ export default function Articles(props) {
         <>
           <IconsList
             items={items.list}
-            settings={{ heightImg: "290px", positionText: "left" }}
+            settings={{
+              heightImg: "290px",
+              positionText: "left",
+              widthItemGridContainer: "350px",
+            }}
             deletePadding
           />
           <Button

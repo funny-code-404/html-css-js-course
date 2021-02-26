@@ -103,7 +103,7 @@ const setStylesButton = (stylesButton) => {
 
     case "priceTable":
       return `
-          width: 12vw;
+          width: 50%;
           background-color: #4285f4;
           border: 1px solid #2c6cd6;
           :hover {
