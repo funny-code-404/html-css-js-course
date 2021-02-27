@@ -11,7 +11,7 @@ export default function IntroSlider(props) {
         <SubTitle>{subTitle}</SubTitle>
         {isArrow && (
           <Arrow onClick={handleScrollDown} value="footer">
-            &#709;
+            <i className="ti-angle-down"></i>
           </Arrow>
         )}
       </TextContainer>

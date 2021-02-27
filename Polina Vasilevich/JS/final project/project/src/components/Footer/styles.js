@@ -127,7 +127,7 @@ export const FooterColumnsContainer = styled.div`
 // }
 
 export const FooterColumn = styled.div`
-  @media (max-width: 1418px) {
+  @media (max-width: 1443px) {
     &:nth-of-type(2) {
       display: none;
     }

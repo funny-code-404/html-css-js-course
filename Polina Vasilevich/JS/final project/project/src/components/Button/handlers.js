@@ -1,6 +1,5 @@
-export const handleScrollDown = (e, elemId) => {
+export const handleScrollDown = (e) => {
   e.preventDefault();
-  // const windowCoords = document.documentElement.scrollHeight;
   let windowCoords = null;
   if (e.target.value === "footer") {
     windowCoords = document.documentElement.scrollHeight;
@@ -14,6 +13,17 @@ export const handleScrollDown = (e, elemId) => {
   });
 };
 
+export const handleScrollTop = (e) => {
+  e.preventDefault();
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+
+  console.log(1);
+};
+
 export const handleLink = (e, page = "shop") => {
   e.preventDefault();
   // window.location.href = `/${e.target.value}`;
@@ -23,8 +33,4 @@ export const handleLink = (e, page = "shop") => {
 export const handleContinueRead = (e, href) => {
   e.preventDefault();
   window.open(href);
-};
-
-export const Like = (e) => {
-  e.preventDefault();
 };

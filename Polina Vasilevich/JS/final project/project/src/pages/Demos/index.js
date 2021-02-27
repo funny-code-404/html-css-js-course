@@ -94,10 +94,9 @@ class Demos extends React.Component {
             heightMainContainer: "callTo",
             paddingBottom: "0",
             paddingTop: "0",
-            stylesBlock: "twoColumns",
+            stylesBlock: "demosLogosList",
             backgroundColorMainContainer: "logos",
-            oneStringLogosList: "true",
-            widthItemGridContainer: "11%",
+            stylesGridContainer: "demos",
           }}
         />
       </>

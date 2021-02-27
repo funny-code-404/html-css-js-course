@@ -201,11 +201,12 @@ const setPositionText = (positionText) => {
     case "right":
       return `
                 text-align: right;
+                align-items: flex-end;
             `;
     case "left":
       return `
                 text-align: left;
-                 align-items: start;
+                align-items: start;
         `;
 
     case "bottom":
@@ -215,8 +216,6 @@ const setPositionText = (positionText) => {
             `;
     default:
       return ` text-align: center;
-                display: flex;
-                flex-direction: column;
                 align-items: center;
                 `;
   }
@@ -230,7 +229,16 @@ const setMediaText = (mediaText) => {
               width: 49ch;
             }
             `;
-
+    case "intro": {
+      return `
+      @media (max-width: 868px) {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        
+      }
+      `;
+    }
     default:
       return `
                 `;
@@ -238,9 +246,12 @@ const setMediaText = (mediaText) => {
 };
 
 export const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
   ${(props) => setPositionText(props.positionText)};
   ${(props) => setStylesText(props.stylesText)};
-  ${(props) => props.setPadding && "padding: 40px;"}
+  ${(props) => props.setPadding && "padding: 40px;"};
   ${(props) => setMediaText(props.mediaText)};
 `;
 

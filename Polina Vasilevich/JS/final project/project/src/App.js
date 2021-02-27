@@ -5,6 +5,7 @@ import "./assets/fonts/themify-icons.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { footerItems } from "./assets/const/footerItems";
+import { Arrow } from "./mainStyles";
 import Home from "./pages/Home";
 import Demos from "./pages/Demos";
 import Features from "./pages/Features";
@@ -14,6 +15,7 @@ import Blog from "./pages/Blog";
 import Portfolio from "./pages/Portfolio";
 
 import logo from "./assets/img/header/logo.png";
+import { handleScrollTop } from "./components/Button/handlers";
 
 const routes = [
   {
@@ -56,11 +58,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Header
-          routes={routes}
-          logoImg={logo}
-          logoText={"thefox business".toUpperCase()}
-        />
+        <Header routes={routes} logoImg={logo} logoText={"THEFOX BUSINESS"} />
+        <Arrow onClick={handleScrollTop}>
+          <i className="ti-angle-up"></i>
+        </Arrow>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/demos" component={Demos} />

@@ -8,10 +8,17 @@ export const GridTwoColumnContainer = styled.div`
     props.sizeContainers ? props.sizeContainers : ""};
   grid-gap: ${(props) => (props.gridGap ? props.gridGap : "0")};
 
-  ${GridItem}:nth-of-type(${(props) =>
-    props.numberInVisibleBlock && props.numberInVisibleBlock}) {
-    @media (max-width: 1100px) {
-      display: none;
-    }
+  @media (max-width: 1350px) {
+    grid-template-columns: 1fr;
+
+    ${GridItem}:nth-of-type(${(props) =>
+  props.numberInVisibleBlock && props.numberInVisibleBlock}) {
+      
+        display: none;
+      }
+  } 
+
+  
+    
   }
 `;

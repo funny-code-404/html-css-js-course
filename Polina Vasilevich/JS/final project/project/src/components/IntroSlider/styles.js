@@ -54,5 +54,9 @@ export const Arrow = styled.button`
   opacity: 0.3;
   background-color: #000;
   border-color: transparent;
-  border-radius: 3px 3px 0px 0px;
+  border-radius: 3px;
+
+  :hover {
+    opacity: 0.5;
+  }
 `;

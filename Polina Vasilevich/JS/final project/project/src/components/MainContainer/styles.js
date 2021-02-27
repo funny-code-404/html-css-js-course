@@ -22,6 +22,12 @@ const setBackgroundColorMainContainer = (backgroundColorMainContainer) => {
               ${Button} {
                 background-color:#82b440 !important;
                 border: 1px solid #fff;
+                :hover {
+                  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.07);
+                  
+                  color: #000 !important;
+                  border-color: #000;
+               }
               }
       `;
     case "callToBlue":
@@ -29,6 +35,11 @@ const setBackgroundColorMainContainer = (backgroundColorMainContainer) => {
               ${Button} {
                 background-color:#37ceff;
                 border: 1px solid #fff;
+                :hover {
+                  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.07);
+                  color: #000 !important;
+                  border-color: #000;
+               }
               }
           `;
 
@@ -37,6 +48,12 @@ const setBackgroundColorMainContainer = (backgroundColorMainContainer) => {
               ${Button} {
                 background-color:#49b0f1;
                 border: 1px solid #fff;
+
+                :hover {
+                  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.07);
+                  color: #000 !important;
+                  border-color: #000;
+               }
               }
           `;
 
@@ -59,6 +76,12 @@ const setBackgroundColorMainContainer = (backgroundColorMainContainer) => {
               ${Button} {
                 background-color: #4285F4;
                 border: 1px solid #fff;
+
+                :hover {
+                  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.07);
+                  color: #000 !important;
+                  border-color: #000;
+               }
               }
           `;
     case "aside":
@@ -263,6 +286,12 @@ const setStylesBlock = (stylesBlock) => {
               padding-right: 10%;
               padding-left: 10%;
             `;
+
+    case "demosLogosList":
+      return `padding-top: 60px;
+              padding-bottom: 0;
+              padding-right: 2%;
+              padding-left: 2%;`;
 
     case "numbers":
       return `

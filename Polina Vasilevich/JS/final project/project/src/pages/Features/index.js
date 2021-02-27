@@ -28,11 +28,11 @@ class Features extends React.Component {
         <IconsList
           items={iconList1}
           settings={{
-            fontSizeIcon: "l",
             formIcon: "circle",
             colorIconContainer: "gradient",
             sizeIconContainer: "middle",
-            widthItemGridContainer: "270px",
+            mediaGridBlock: "iconsList1",
+            gridGap: "3%",
           }}
         />
         <Introducing

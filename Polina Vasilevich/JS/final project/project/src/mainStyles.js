@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { TextContainer } from "./components/Typography/styles";
 export const GridItem = styled.div``;
 const widthItemGridContainer = (props) =>
   props.widthItemGridContainer ? props.widthItemGridContainer : "200px";
@@ -77,21 +77,40 @@ const setPositionContent = (positionContent) => {
     case "right":
       return `
                 text-align: right;
+                align-items: flex-end;
+                  
+                }
             `;
     case "center":
       return `
                 text-align: center;
+                align-items: center;
         `;
     default:
-      return ` text-align: left;`;
+      return ` text-align: left;
+      
+        
+      }
+              `;
   }
 };
 
 export const ContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   width: ${(props) =>
     props.widthContentContainer ? props.widthContentContainer : "100%"};
   ${(props) => setPositionContentContainer(props.positionContentContainer)};
   ${(props) => setPositionContent(props.positionContent)};
+
+  @media (max-width: 868px) {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  ${TextContainer} {
+    text-align: center;
+    align-items: center;
+  }
 `;
 
 const setHeightFlexContainer = (heightFlexContainer) => {
@@ -139,4 +158,32 @@ export const FlexContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   ${(props) => setMediaFlexBlock(props.mediaFlexBlock)};
+`;
+
+export const Arrow = styled.button`
+  position: fixed;
+  right: 70px;
+  z-index: 2;
+
+  width: 40px;
+  height: 50px;
+
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  font-size: 25px;
+
+  transition: 0.6s ease;
+  outline: none;
+
+  opacity: 0.3;
+  background-color: #000;
+  border-color: transparent;
+  border-radius: 3px;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.05);
+    opacity: 0.5;
+  }
 `;

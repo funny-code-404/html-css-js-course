@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import classnames from "classnames";
 
 import MainContainer from "../MainContainer";
 import { FlexContainer } from "../../mainStyles";
@@ -13,6 +14,7 @@ import {
   LogoImg,
   LogoText,
   Navigation,
+  NavigationButton,
 } from "./styles";
 
 import "./styles.css";
@@ -22,12 +24,14 @@ class HeaderComponent extends React.Component {
     super(props);
     this.state = {
       currentPageId: 0,
+      showMenu: false,
     };
   }
 
   handleClick = (e) => {
     this.setState({
       currentPageId: +e.target.id,
+      showMenu: false,
     });
   };
 
@@ -37,13 +41,18 @@ class HeaderComponent extends React.Component {
     });
   };
 
+  handleShowMenu = (e) => {
+    e.preventDefault();
+    this.setState({ showMenu: !this.state.showMenu });
+  };
+
   setStylesNavigation = (condition) => {
     return condition ? { color: "#4285F4" } : {};
   };
 
   render() {
     const { routes, logoImg, logoText } = this.props;
-
+    const { showMenu } = this.state;
     const contentContainer = (
       <FlexContainer heightFlexContainer="header">
         <LogoContainer>
@@ -51,7 +60,15 @@ class HeaderComponent extends React.Component {
           <LogoText>{logoText}</LogoText>
         </LogoContainer>
         <Navigation>
-          <List id="headerList" onClick={this.handleClick}>
+          <NavigationButton onClick={this.handleShowMenu}>
+            <i className="ti-menu"></i>
+          </NavigationButton>
+
+          <List
+            id="headerList"
+            onClick={this.handleClick}
+            className={classnames("hideMenu", { showMenu: showMenu })}
+          >
             {routes.map(({ path, label }, index) => {
               const styles = this.setStylesNavigation(
                 window.location.pathname === path

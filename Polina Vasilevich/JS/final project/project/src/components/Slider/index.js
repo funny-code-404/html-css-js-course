@@ -131,7 +131,7 @@ class Slider extends React.Component {
                         />
                       )}
                       {buttonLabel && (
-                        <>
+                        <div>
                           <Button
                             buttonLabel={buttonLabel[0]}
                             settings={{
@@ -145,10 +145,9 @@ class Slider extends React.Component {
                             settings={{
                               stylesButton: "sliderTransparent",
                             }}
-                            handleButton={handleLink}
-                            link="blog"
+                            handleButton={(e) => handleLink(e, "blog")}
                           />
-                        </>
+                        </div>
                       )}
                     </ContentContainer>
                   </Img>

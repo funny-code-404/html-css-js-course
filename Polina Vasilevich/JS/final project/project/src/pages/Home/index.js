@@ -129,6 +129,7 @@ class Home extends React.Component {
             isVerticalCenter: "true",
             heightMainContainer: "homeIntro2",
             stylesText: "textList",
+            mediaText: "intro",
           }}
         />
         <Numbers items={numbersItems} />
@@ -184,6 +185,7 @@ class Home extends React.Component {
             widthItemGridContainer: "240px",
             gridGap: 0,
             gridRowGap: "77px",
+            stylesGridContainer: "home",
           }}
           isTitle
           backgroundImg={partnersItems.backgroundImg}

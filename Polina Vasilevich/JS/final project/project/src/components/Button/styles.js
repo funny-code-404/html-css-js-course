@@ -121,8 +121,10 @@ const setStylesButton = (stylesButton) => {
               margin-left: 10px;
               margin-right: 10px;
 
-              :hover {
-                background-color: red;
+              &:hover {
+                background-color: #575757;
+                border-color: #575757;
+               
               }
             `;
 
@@ -213,4 +215,8 @@ export const Button = styled.button`
   ${(props) => setColorTextButton(props.colorTextButton)};
   ${(props) => setStylesButton(props.stylesButton)};
   cursor: pointer;
+  :hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.05);
+  }
 `;

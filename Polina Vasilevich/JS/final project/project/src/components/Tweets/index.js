@@ -35,7 +35,7 @@ class TweetsComponent extends React.Component {
           paddingRight: "11%",
         }
       : {};
-    const stylesAside = !condition ? { opacity: "0" } : {};
+    const stylesAside = !condition ? { opacity: "0", display: "none" } : {};
 
     const icon = !condition ? <i className="ti-menu"></i> : <InVisible />;
 

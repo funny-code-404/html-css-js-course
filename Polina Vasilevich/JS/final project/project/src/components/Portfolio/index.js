@@ -4,8 +4,7 @@ import MainContainer from "../MainContainer";
 import Photos from "../Photos";
 import Typography from "../Typography";
 import { Icon } from "../Icon/styles";
-import { IconsContainer } from "./styles";
-import { GridContainer } from "../../mainStyles";
+import { IconsContainer, GridContainer } from "./styles";
 
 class Portfolio extends React.Component {
   render() {
@@ -26,7 +25,7 @@ class Portfolio extends React.Component {
                 heightMainContainer: "tweets",
               }}
             />
-            <div style={{ marginTop: "200px", marginBottom: "82px" }}>
+            <div style={{ marginTop: "58px", marginBottom: "75px" }}>
               <Typography
                 items={items}
                 settings={{

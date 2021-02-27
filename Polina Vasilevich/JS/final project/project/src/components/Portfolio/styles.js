@@ -7,9 +7,19 @@ export const IconsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  //   margin-bottom: 12px;
+
   cursor: pointer;
 
   ${(props) =>
     props.backgroundColor && `background-color: ${props.backgroundColor}`};
+`;
+
+export const GridContainer = styled.div`
+  width: 100%;
+  display: grid;
+  column-gap: 2%;
+  justify-content: space-between;
+
+  grid-template-columns: repeat(8, 1fr);
+  column-gap: 1%;
 `;
