@@ -156,10 +156,9 @@ export const CopyRightIconsContainer = styled.div`
     text-align: center;
     position: absolute;
     width: 16vw;
-    top: 63px;
-    right: -9%;
+    top: 51px;
+    right: 13%;
 
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 2;
   }
 `;
@@ -169,8 +168,9 @@ export const FooterIconsButton = styled.button`
   cursor: pointer;
 
   position: absolute;
-  right: 10px;
-  font-size: 25px;
+  top: 20px;
+  right: 19%;
+  font-size: 20px;
   color: #999999;
   z-index: 1;
 
@@ -188,4 +188,9 @@ export const FooterIconsButton = styled.button`
 export const CopyRightIcon = styled.div`
   display: inline-block;
   margin-left: 5%;
+  &:hover {
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.2);
+  }
 `;

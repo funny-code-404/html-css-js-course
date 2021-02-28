@@ -238,7 +238,7 @@ const setStylesBlock = (stylesBlock) => {
       `;
     case "posts":
       return ` 
-      padding-top: 120px;
+        padding-top: 105px;
         padding-left:36%;
         padding-right:0;
       `;

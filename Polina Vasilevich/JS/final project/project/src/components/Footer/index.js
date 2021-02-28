@@ -32,6 +32,9 @@ class FooterComponent extends React.Component {
   render() {
     const { logo, contacts, copyRight } = this.props.items;
     const { showIcons } = this.state;
+    const classNameCopyRightIcons = showIcons
+      ? "ti-angle-double-up"
+      : "ti-angle-double-down";
     return (
       <footer id="footer">
         <MainContainer
@@ -89,15 +92,11 @@ class FooterComponent extends React.Component {
             stylesBlock: "callTo",
           }}
           contentContainer={
-            <FlexContainer
-              heightFlexContainer="header"
-              style={{ position: "relative" }}
-              mediaFlexBlock="footer"
-            >
+            <FlexContainer heightFlexContainer="header" mediaFlexBlock="footer">
               <Text>{copyRight.text}</Text>
 
               <FooterIconsButton onClick={this.handleShowIcons}>
-                <i className="ti-angle-double-down"></i>
+                <i className={classNameCopyRightIcons}></i>
               </FooterIconsButton>
               <CopyRightIconsContainer
                 className={classnames("hideIcons", {

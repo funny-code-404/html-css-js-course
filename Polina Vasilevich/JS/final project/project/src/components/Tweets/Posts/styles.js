@@ -25,7 +25,7 @@ export const Posts = styled.div`
 `;
 
 export const PostsItem = styled.div`
-  margin-bottom: 60px;
+  margin-bottom: 70px;
   border-bottom: 1px solid #ebebeb;
   padding-bottom: 53px;
 `;

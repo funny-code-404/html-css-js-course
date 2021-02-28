@@ -135,13 +135,13 @@ const setStylesIcon = (stylesIcon) => {
   switch (stylesIcon) {
     case "footer":
       return `
-            // padding: 0 0.8vw;
             opacity: 0.5;
             font-size: 18px;
             cursor: pointer;
 
             &:hover{
               opacity: 1;
+             
             }`;
 
     case "gradientIcons":

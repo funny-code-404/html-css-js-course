@@ -15,8 +15,12 @@ export default function ContentComponent(props) {
   const content = props.items;
   return (
     <Content>
-      {content.img && <ContentImage backgroundContentImage={content.img} />}
-      {content.video && <Video />}
+      <div style={{ marginBottom: "26px" }}>
+        {content.img && <ContentImage backgroundContentImage={content.img} />}
+        {content.video && (
+          <Video heightVideo="posts" items={{ src: content.video }} />
+        )}
+      </div>
       {content.title && (
         <Typography
           items={content}

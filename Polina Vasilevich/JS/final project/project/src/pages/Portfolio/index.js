@@ -17,9 +17,10 @@ class Portfolio extends React.Component {
         <Photos
           items={portfolioItems}
           settings={{
+            widthItemGridContainer: "390px",
             gridGap: "0",
             gridRowGap: "0",
-            widthItemGridContainer: "442px",
+            mediaGridBlock: "photos1",
           }}
         />
 

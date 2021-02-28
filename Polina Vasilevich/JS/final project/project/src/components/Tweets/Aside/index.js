@@ -54,7 +54,7 @@ class AsideComponent extends React.Component {
                 <IconsList
                   items={this.state.items}
                   settings={{
-                    heightImg: "81px",
+                    heightImg: "111px",
                     widthImg: "111px",
                     positionIcons: "left",
                     heightMainContainer: "tweets",
@@ -103,8 +103,12 @@ class AsideComponent extends React.Component {
                 <Photos
                   items={photos}
                   settings={{
-                    heightImg: "100px",
+                    heightImg: "105px",
+                    widthImg: "100%",
                     widthItemGridContainer: "100px",
+                    gridGap: "10px",
+                    gridRowGap: "10px",
+                    justifyContent: "start",
                   }}
                 />
               }

@@ -1,9 +1,24 @@
 import styled from "styled-components";
 
+const setHeightVideo = (heightVideo) => {
+  switch (heightVideo) {
+    case "posts":
+      return `
+          height: 401px;
+    `;
+
+    default:
+      return `
+          height: 775px;
+    `;
+  }
+};
+
 export const VideoContainer = styled.div`
   position: relative;
   overflow: hidden;
-  height: 775px;
+
+  ${(props) => setHeightVideo(props.heightVideo)};
 `;
 
 export const Video = styled.iframe`

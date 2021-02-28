@@ -282,7 +282,7 @@ const setStylesText = (stylesText) => {
       // align-items: start;
       ${Title} {
         font-size: 36px;
-        line-height: 30px;
+        line-height: 35px;
         font-weight: 400;
         color: #333333;
         margin: 20px 0;
@@ -385,6 +385,7 @@ const setStylesText = (stylesText) => {
       return `
       text-align: left;
       ${Title} {
+        margin-bottom: 10px;
         font-size: 30px;
         line-height: 50px;
         font-weight: 300;
@@ -404,6 +405,8 @@ const setStylesText = (stylesText) => {
       return `
       text-align: left;
       align-items: start;
+      width: 56%;
+      margin-top: -9px;
       ${Title} {
         font-size: 14px;
         line-height: 30px;
@@ -411,6 +414,7 @@ const setStylesText = (stylesText) => {
         color: #333333;
         
         :hover {
+          cursor: pointer;
           color: #4285f4;
         }
       }`;
@@ -542,7 +546,7 @@ const setStylesText = (stylesText) => {
       return `
       ${Title} {
         font-size: 36px;
-        line-height: 30px;
+        line-height: 35px;
         font-weight: 300;
         color: #333333;
         margin-bottom: 20px;

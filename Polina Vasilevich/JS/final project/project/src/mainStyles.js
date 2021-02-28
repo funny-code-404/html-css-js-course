@@ -43,7 +43,8 @@ export const GridContainer = styled.div`
     auto-fit,
     minmax(${widthItemGridContainer}, 1fr)
   );
-  justify-content: space-between;
+  justify-content: ${(props) =>
+    props.justifyContent ? props.justifyContent : "space-between"};
   ${(props) => setMediaGridBlock(props.mediaGridBlock)}
 `;
 

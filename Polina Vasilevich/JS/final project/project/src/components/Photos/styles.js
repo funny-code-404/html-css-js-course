@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Img = styled.div`
   position: relative;
   height: ${(props) => (props.heightImg ? props.heightImg : "420px")};
+  width: ${(props) => (props.widthImg ? props.widthImg : "")};
   background-size: cover;
   background-position: center center;
   background-image: ${(props) =>
