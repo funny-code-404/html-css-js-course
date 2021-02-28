@@ -43,7 +43,7 @@ class HeaderComponent extends React.Component {
 
   handleShowMenu = (e) => {
     e.preventDefault();
-    this.setState({ showMenu: !this.state.showMenu });
+    this.setState((prevState) => ({ showMenu: !prevState.showMenu }));
   };
 
   setStylesNavigation = (condition) => {

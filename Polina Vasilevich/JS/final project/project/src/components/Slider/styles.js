@@ -101,3 +101,11 @@ export const Dot = styled.button`
     background-color: tomato !important;
   }
 `;
+
+export const ButtonsContainer = styled.div`
+  position: absolute;
+  z-index: 2;
+  top: 61%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;

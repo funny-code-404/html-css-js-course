@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Text } from "../Typography/styles";
 
 export const Footer = styled.footer`
   background-color: ${(props) =>
@@ -144,11 +145,47 @@ export const CopyRightIconsContainer = styled.div`
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 2vw;
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1370px) {
+    &.hideIcons {
+      display: none;
+    }
+  }
+
+  &.showIcons {
+    display: block;
+    text-align: center;
+    position: absolute;
+    width: 16vw;
+    top: 63px;
+    right: -9%;
+
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+  }
+`;
+
+export const FooterIconsButton = styled.button`
+  display: none;
+  cursor: pointer;
+
+  position: absolute;
+  right: 10px;
+  font-size: 25px;
+  color: #999999;
+  z-index: 1;
+
+  transition: 0.6s ease;
+  outline: none;
+
+  background-color: transparent;
+  border-color: transparent;
+
+  @media (max-width: 1370px) {
+    display: block;
   }
 `;
 
 export const CopyRightIcon = styled.div`
-  @media (max-width: 1369px) {
-  }
+  display: inline-block;
+  margin-left: 5%;
 `;

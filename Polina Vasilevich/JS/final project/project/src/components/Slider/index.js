@@ -6,6 +6,7 @@ import {
   ArrowPrev,
   DotsContainer,
   Dot,
+  ButtonsContainer,
 } from "./styles";
 
 import { ContentContainer } from "../../mainStyles";
@@ -130,30 +131,31 @@ class Slider extends React.Component {
                           }}
                         />
                       )}
-                      {buttonLabel && (
-                        <div>
-                          <Button
-                            buttonLabel={buttonLabel[0]}
-                            settings={{
-                              stylesButton: "sliderTransparent",
-                            }}
-                            handleButton={handleScrollDown}
-                            link="iconsList2"
-                          />
-                          <Button
-                            buttonLabel={buttonLabel[1]}
-                            settings={{
-                              stylesButton: "sliderTransparent",
-                            }}
-                            handleButton={(e) => handleLink(e, "blog")}
-                          />
-                        </div>
-                      )}
                     </ContentContainer>
                   </Img>
                 </>
               );
             })}
+
+            {buttonLabel && (
+              <ButtonsContainer>
+                <Button
+                  buttonLabel={buttonLabel[0]}
+                  settings={{
+                    stylesButton: "sliderTransparent",
+                  }}
+                  handleButton={handleScrollDown}
+                  link="iconsList2"
+                />
+                <Button
+                  buttonLabel={buttonLabel[1]}
+                  settings={{
+                    stylesButton: "sliderTransparent",
+                  }}
+                  handleButton={(e) => handleLink(e, "blog")}
+                />
+              </ButtonsContainer>
+            )}
 
             {isArrows && (
               <>

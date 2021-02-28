@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { TextContainer } from "./components/Typography/styles";
+import { TextContainer, Text } from "./components/Typography/styles";
+
 export const GridItem = styled.div``;
 const widthItemGridContainer = (props) =>
   props.widthItemGridContainer ? props.widthItemGridContainer : "200px";
@@ -146,6 +147,14 @@ const setMediaFlexBlock = (mediaFlexBlock) => {
       return `@media(max-width: 1000px) {
         display: none;
       }`;
+
+    case "footer":
+      return `@media(max-width: 1440px) {
+          ${Text} {
+            text-align: center; 
+            width: 49ch;
+          }
+        }`;
 
     default:
       break;

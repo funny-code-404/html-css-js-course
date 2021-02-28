@@ -1,22 +1,37 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classnames from "classnames";
 
 import MainContainer from "../MainContainer";
-import { GridContainer, FlexContainer, GridItem } from "../../mainStyles";
+import { FlexContainer } from "../../mainStyles";
 import { Icon, Img, IconContainer } from "../Icon/styles";
 import Typography from "../Typography";
+import { Text } from "../Typography/styles";
 
 import {
   FooterColumnsContainer,
   FooterColumn,
   CopyRightIconsContainer,
   CopyRightIcon,
+  FooterIconsButton,
 } from "./styles";
 
 class FooterComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showIcons: false,
+    };
+  }
+
+  handleShowIcons = (e) => {
+    e.preventDefault();
+    this.setState((prevState) => ({ showIcons: !prevState.showIcons }));
+  };
+
   render() {
     const { logo, contacts, copyRight } = this.props.items;
-
+    const { showIcons } = this.state;
     return (
       <footer id="footer">
         <MainContainer
@@ -74,12 +89,21 @@ class FooterComponent extends React.Component {
             stylesBlock: "callTo",
           }}
           contentContainer={
-            <FlexContainer heightFlexContainer="header">
-              <Typography
-                items={copyRight}
-                settings={{ mediaText: "copyRigth" }}
-              />
-              <CopyRightIconsContainer>
+            <FlexContainer
+              heightFlexContainer="header"
+              style={{ position: "relative" }}
+              mediaFlexBlock="footer"
+            >
+              <Text>{copyRight.text}</Text>
+
+              <FooterIconsButton onClick={this.handleShowIcons}>
+                <i className="ti-angle-double-down"></i>
+              </FooterIconsButton>
+              <CopyRightIconsContainer
+                className={classnames("hideIcons", {
+                  showIcons: showIcons,
+                })}
+              >
                 {copyRight.icons.map(({ icon, href }) => {
                   return (
                     <CopyRightIcon>
