@@ -108,4 +108,8 @@ export const ButtonsContainer = styled.div`
   top: 61%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media (max-width: 897px) {
+    transform: translate(-20%, -10%);
+  }
 `;
