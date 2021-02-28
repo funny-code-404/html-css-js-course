@@ -17,10 +17,10 @@ import Slider from "../../components/Slider";
 import sliderItems from "../../assets/const/features/slider1";
 
 import Form from "../../components/Form";
-import CallToAction from "../../components/CallToAction";
-import callToItems from "../../assets/const/callToActionItems";
+import formItems from "../../assets/const/features/formItems";
 
-import formItems from "../../assets/const/formItems";
+import CallToAction from "../../components/CallToAction";
+import callToItems from "../../assets/const/features/callToActionItems";
 
 import MainContainer from "../../components/MainContainer";
 class Features extends React.Component {

@@ -2,7 +2,9 @@ import React from "react";
 
 import IconsList from "../../components/IconsList";
 import iconList1 from "../../assets/const/iconList1";
+
 import IntroSlider from "../../components/IntroSlider";
+import introSlider from "../../assets/const/shop/introSlider";
 
 import Slider from "../../components/Slider";
 import Slider2 from "../../components/Slider copy";
@@ -10,21 +12,20 @@ import slider2Items from "../../assets/const/slider4";
 
 import Works from "../../components/Works";
 import workItems from "../../assets/const/shop/workItems";
+
 import CallToAction from "../../components/CallToAction";
+import callToItems from "../../assets/const/shop/callToActionItems";
 
 import Portfolio from "../../components/Portfolio";
 import portfolioItems from "../../assets/const/shop/portfolioItems";
+
 import MainContainer from "../../components/MainContainer";
-import callToItems from "../../assets/const/callToActionItems";
+
 class Shop extends React.Component {
   render() {
     return (
       <>
-        <IntroSlider
-          title="CREATIVE MESS"
-          subTitle="We make the best design around"
-          isArrow
-        />
+        <IntroSlider items={introSlider} isArrow />
         <IconsList
           items={iconList1}
           settings={{

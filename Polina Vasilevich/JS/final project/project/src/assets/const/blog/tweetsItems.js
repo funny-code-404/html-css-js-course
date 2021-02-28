@@ -11,6 +11,22 @@ import img4 from "../../img/blog/info/content/imgs/christin-hume-slbqShqAhEo-uns
 import img5 from "../../img/blog/info/content/imgs/studio-republic-fotKKqWNMQ4-unsplash.jpg";
 import img6 from "../../img/blog/info/content/imgs/avi-richards-Z3ownETsdNQ-unsplash.jpg";
 
+import post1 from "../../img/blog/aside/posts/brooke-cagle-yIgdB7l8PaU-unsplash.jpg";
+import post2 from "../../img/blog/aside/posts/brooke-cagle-ZCSc8hoZrtw-unsplash.jpg";
+import post3 from "../../img/blog/aside/posts/emre-1UFtVObjt1U-unsplash.jpg";
+import post4 from "../../img/blog/aside/posts/jose-aljovin-Kfk-TPxLVL0-unsplash.jpg";
+import post5 from "../../img/blog/aside/posts/parker-byrd-gxD8hCmi0IQ-unsplash.jpg";
+import post6 from "../../img/blog/aside/posts/thought-catalog-505eectW54k-unsplash.jpg";
+
+import photo1 from "../../img/blog/aside/photos/annie-spratt-QckxruozjRg-unsplash.jpg";
+import photo2 from "../../img/blog/aside/photos/brandon-hall-VivsxaizzVE-unsplash.jpg";
+import photo3 from "../../img/blog/aside/photos/brooke-cagle-n1m25jvupEU-unsplash.jpg";
+import photo4 from "../../img/blog/aside/photos/carl-heyerdahl-KE0nC8-58MQ-unsplash.jpg";
+import photo5 from "../../img/blog/aside/photos/ilyuza-mingazova-HaTIYO87qWQ-unsplash.jpg";
+import photo6 from "../../img/blog/aside/photos/joshua-sun-brq6r83uD8U-unsplash.jpg";
+import photo7 from "../../img/blog/aside/photos/ruijia-wang-B1AZIfb18Cc-unsplash.jpg";
+import photo8 from "../../img/blog/aside/photos/icons8-team-yTwXpLO5HAA-unsplash.jpg";
+
 const tweetsItems = {
   tweets: {
     list: [
@@ -42,7 +58,7 @@ const tweetsItems = {
         },
 
         content: {
-          video: "https://www.youtube.com/embed/xJZa2_aldDs",
+          video: "https://www.youtube.com/embed/lYxCXKwP09U",
           title:
             "The World's First Commercial Jetpack Will Arrive In 2016, And It'll Cost You $150,000",
           text:
@@ -93,9 +109,130 @@ const tweetsItems = {
         },
 
         content: {
+          img: img1,
+          title:
+            "How E-Commerce Is Finally Disrupting The $600 Billion-A-Year Grocery Industry",
+          text:
+            "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
+          href:
+            "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
+        },
+      },
+
+      {
+        info: {
+          img: avatar5,
+          title: "Jesse Harris",
+          date: new Date(2021, 1, 27),
+          tags: ["Recruitment"],
+        },
+
+        content: {
           img: img4,
           title:
             "How E-Commerce Is Finally Disrupting The $600 Billion-A-Year Grocery Industry",
+          text:
+            "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
+          href:
+            "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
+        },
+      },
+
+      {
+        info: {
+          img: avatar1,
+          title: "Meg Conley",
+          date: new Date(2021, 1, 15),
+          tags: ["Recruitment"],
+        },
+
+        content: {
+          img: img5,
+          title:
+            "11 Impossible Tech Interview Questions You Don't Want To Be Asked",
+          text:
+            "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
+          href:
+            "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
+        },
+      },
+
+      {
+        info: {
+          img: avatar4,
+          title: "Usan Baker",
+          date: new Date(2021, 1, 10),
+          tags: ["Recruitment"],
+        },
+
+        content: {
+          img: img1,
+          title:
+            "People Are Tweeting Their Rage At Scalia - But They're Making One Crucial Mistake",
+          text:
+            "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
+          href:
+            "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
+        },
+      },
+
+      {
+        info: {
+          img: avatar3,
+          title: "Thomas Clark",
+          date: new Date(2021, 1, 25),
+          tags: ["Quote", "Hardwork"],
+        },
+
+        content: {
+          img: img3,
+        },
+      },
+
+      {
+        info: {
+          img: avatar2,
+          title: "Sara Porro",
+          date: new Date(2021, 1, 28),
+          tags: ["Tech", "Commercial"],
+        },
+
+        content: {
+          video: "https://www.youtube.com/embed/lYxCXKwP09U",
+          title:
+            "The World's First Commercial Jetpack Will Arrive In 2016, And It'll Cost You $150,000",
+          text:
+            "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
+          href:
+            "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
+        },
+      },
+
+      {
+        info: {
+          img: avatar3,
+          title: "Thomas Clark",
+          date: new Date(2021, 1, 25),
+          tags: ["Quote", "Hardwork"],
+        },
+
+        content: {
+          img: img3,
+        },
+      },
+
+      {
+        info: {
+          img: avatar4,
+          title: "Usan Baker",
+          date: new Date(2021, 1, 10),
+          tags: ["Recruitment"],
+        },
+
+        content: {
+          img: img1,
+          title:
+            "People Are Tweeting Their Rage At Scalia - But They're Making One Crucial Mistake",
           text:
             "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
           href:
@@ -131,7 +268,63 @@ const tweetsItems = {
         },
 
         content: {
-          video: "https://www.youtube.com/embed/xJZa2_aldDs",
+          video: "https://www.youtube.com/embed/lYxCXKwP09U",
+          title:
+            "The World's First Commercial Jetpack Will Arrive In 2016, And It'll Cost You $150,000",
+          text:
+            "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
+          href:
+            "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
+        },
+      },
+
+      {
+        info: {
+          img: avatar1,
+          title: "Meg Conley",
+          date: new Date(2021, 1, 15),
+          tags: ["Recruitment"],
+        },
+
+        content: {
+          img: img5,
+          title:
+            "11 Impossible Tech Interview Questions You Don't Want To Be Asked",
+          text:
+            "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
+          href:
+            "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
+        },
+      },
+
+      {
+        info: {
+          img: avatar4,
+          title: "Usan Baker",
+          date: new Date(2021, 1, 10),
+          tags: ["Recruitment"],
+        },
+
+        content: {
+          img: img1,
+          title:
+            "People Are Tweeting Their Rage At Scalia - But They're Making One Crucial Mistake",
+          text:
+            "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
+          href:
+            "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
+        },
+      },
+      {
+        info: {
+          img: avatar2,
+          title: "Sara Porro",
+          date: new Date(2021, 1, 28),
+          tags: ["Tech", "Commercial"],
+        },
+
+        content: {
+          video: "https://www.youtube.com/embed/lYxCXKwP09U",
           title:
             "The World's First Commercial Jetpack Will Arrive In 2016, And It'll Cost You $150,000",
           text:
@@ -150,410 +343,9 @@ const tweetsItems = {
         },
 
         content: {
-          img: img2,
+          img: img3,
         },
       },
-
-      {
-        info: {
-          img: avatar4,
-          title: "Usan Baker",
-          date: new Date(2021, 1, 10),
-          tags: ["Recruitment"],
-        },
-
-        content: {
-          img: img2,
-          title:
-            "People Are Tweeting Their Rage At Scalia - But They're Making One Crucial Mistake",
-          text:
-            "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
-          href:
-            "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
-        },
-      },
-
-      {
-        info: {
-          img: avatar5,
-          title: "Jesse Harris",
-          date: new Date(2021, 1, 27),
-          tags: ["Recruitment"],
-        },
-
-        content: {
-          img: img2,
-          title:
-            "How E-Commerce Is Finally Disrupting The $600 Billion-A-Year Grocery Industry",
-          text:
-            "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
-          href:
-            "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
-        },
-      },
-      //   {
-      //     info: {
-      //       img: img1,
-      //       title: "Brian Alvarado",
-      //       text: "June, 25th 2020",
-      //       tags: ["Recruitment"],
-      //     },
-
-      //     content: {
-      //       title:
-      //         "The World's First Commercial Jetpack Will Arrive In 2016, And It'll Cost You $150,000",
-      //       subTitle:
-      //         "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra. Nulla vehicula nibh vel ante commodo feugiat.",
-      //       text:
-      //         "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
-      //       href:
-      //         "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
-      //     },
-      //   },
-      //   {
-      //     info: {
-      //       img: img1,
-      //       title: "Brian Alvarado",
-      //       text: "June, 25th 2020",
-      //       tags: ["Recruitment"],
-      //     },
-
-      //     content: {
-      //       img: img2,
-      //       title:
-      //         "11 Impossible Tech Interview Questions You Don't Want To Be Asked",
-      //       text:
-      //         "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
-      //       href:
-      //         "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
-      //     },
-      //   },
-
-      //   {
-      //     info: {
-      //       img: img1,
-      //       title: "Justin Smith",
-      //       text: "June, 25th 2020",
-      //       tags: ["Tech", "Commercial"],
-      //     },
-
-      //     content: {
-      //       video: img2,
-      //       title:
-      //         "The World's First Commercial Jetpack Will Arrive In 2016, And It'll Cost You $150,000",
-      //       text:
-      //         "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
-      //       href:
-      //         "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
-      //     },
-      //   },
-
-      //   {
-      //     info: {
-      //       img: img1,
-      //       title: "Thomas Clark",
-      //       text: "June, 25th 2020",
-      //       tags: ["Quote", "Hardwork"],
-      //     },
-
-      //     content: {
-      //       img: img2,
-      //     },
-      //   },
-
-      //   {
-      //     info: {
-      //       img: img1,
-      //       title: "Brian Alvarado",
-      //       text: "June, 25th 2020",
-      //       tags: ["Recruitment"],
-      //     },
-
-      //     content: {
-      //       img: img2,
-      //       title:
-      //         "The World's First Commercial Jetpack Will Arrive In 2016, And It'll Cost You $150,000",
-      //       text:
-      //         "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
-      //       href:
-      //         "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
-      //     },
-      //   },
-
-      //   {
-      //     info: {
-      //       img: img1,
-      //       title: "Brian Alvarado",
-      //       text: "June, 25th 2020",
-      //       tags: ["Recruitment"],
-      //     },
-
-      //     content: {
-      //       img: img2,
-      //       title:
-      //         "The World's First Commercial Jetpack Will Arrive In 2016, And It'll Cost You $150,000",
-      //       text:
-      //         "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
-      //       href:
-      //         "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
-      //     },
-      //   },
-
-      //   {
-      //     info: {
-      //       img: img1,
-      //       title: "Brian Alvarado",
-      //       text: "June, 25th 2020",
-      //       tags: ["Recruitment"],
-      //     },
-
-      //     content: {
-      //       title:
-      //         "The World's First Commercial Jetpack Will Arrive In 2016, And It'll Cost You $150,000",
-      //       subTitle:
-      //         "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra. Nulla vehicula nibh vel ante commodo feugiat.",
-      //       text:
-      //         "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
-      //       href:
-      //         "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
-      //     },
-      //   },
-      //   {
-      //     info: {
-      //       img: img1,
-      //       title: "Brian Alvarado",
-      //       text: "June, 25th 2020",
-      //       tags: ["Recruitment"],
-      //     },
-
-      //     content: {
-      //       img: img2,
-      //       title:
-      //         "11 Impossible Tech Interview Questions You Don't Want To Be Asked",
-      //       text:
-      //         "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
-      //       href:
-      //         "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
-      //     },
-      //   },
-
-      //   {
-      //     info: {
-      //       img: img1,
-      //       title: "Justin Smith",
-      //       text: "June, 25th 2020",
-      //       tags: ["Tech", "Commercial"],
-      //     },
-
-      //     content: {
-      //       video: img2,
-      //       title:
-      //         "The World's First Commercial Jetpack Will Arrive In 2016, And It'll Cost You $150,000",
-      //       text:
-      //         "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
-      //       href:
-      //         "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
-      //     },
-      //   },
-
-      //   {
-      //     info: {
-      //       img: img1,
-      //       title: "Thomas Clark",
-      //       text: "June, 25th 2020",
-      //       tags: ["Quote", "Hardwork"],
-      //     },
-
-      //     content: {
-      //       img: img2,
-      //     },
-      //   },
-
-      //   {
-      //     info: {
-      //       img: img1,
-      //       title: "Brian Alvarado",
-      //       text: "June, 25th 2020",
-      //       tags: ["Recruitment"],
-      //     },
-
-      //     content: {
-      //       img: img2,
-      //       title:
-      //         "The World's First Commercial Jetpack Will Arrive In 2016, And It'll Cost You $150,000",
-      //       text:
-      //         "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
-      //       href:
-      //         "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
-      //     },
-      //   },
-
-      //   {
-      //     info: {
-      //       img: img1,
-      //       title: "Brian Alvarado",
-      //       text: "June, 25th 2020",
-      //       tags: ["Recruitment"],
-      //     },
-
-      //     content: {
-      //       img: img2,
-      //       title:
-      //         "The World's First Commercial Jetpack Will Arrive In 2016, And It'll Cost You $150,000",
-      //       text:
-      //         "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
-      //       href:
-      //         "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
-      //     },
-      //   },
-
-      //   {
-      //     info: {
-      //       img: img1,
-      //       title: "Brian Alvarado",
-      //       text: "June, 25th 2020",
-      //       tags: ["Recruitment"],
-      //     },
-
-      //     content: {
-      //       title:
-      //         "The World's First Commercial Jetpack Will Arrive In 2016, And It'll Cost You $150,000",
-      //       subTitle:
-      //         "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra. Nulla vehicula nibh vel ante commodo feugiat.",
-      //       text:
-      //         "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
-      //       href:
-      //         "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
-      //     },
-      //   },
-      //   {
-      //     info: {
-      //       img: img1,
-      //       title: "Brian Alvarado",
-      //       text: "June, 25th 2020",
-      //       tags: ["Recruitment"],
-      //     },
-
-      //     content: {
-      //       img: img2,
-      //       title:
-      //         "11 Impossible Tech Interview Questions You Don't Want To Be Asked",
-      //       text:
-      //         "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
-      //       href:
-      //         "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
-      //     },
-      //   },
-
-      //   {
-      //     info: {
-      //       img: img1,
-      //       title: "Justin Smith",
-      //       text: "June, 25th 2020",
-      //       tags: ["Tech", "Commercial"],
-      //     },
-
-      //     content: {
-      //       video: img2,
-      //       title:
-      //         "The World's First Commercial Jetpack Will Arrive In 2016, And It'll Cost You $150,000",
-      //       text:
-      //         "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
-      //       href:
-      //         "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
-      //     },
-      //   },
-
-      //   {
-      //     info: {
-      //       img: img1,
-      //       title: "Thomas Clark",
-      //       text: "June, 25th 2020",
-      //       tags: ["Quote", "Hardwork"],
-      //     },
-
-      //     content: {
-      //       img: img2,
-      //     },
-      //   },
-
-      //   {
-      //     info: {
-      //       img: img1,
-      //       title: "Brian Alvarado",
-      //       text: "June, 25th 2020",
-      //       tags: ["Recruitment"],
-      //     },
-
-      //     content: {
-      //       img: img2,
-      //       title:
-      //         "The World's First Commercial Jetpack Will Arrive In 2016, And It'll Cost You $150,000",
-      //       text:
-      //         "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
-      //       href:
-      //         "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
-      //     },
-      //   },
-
-      //   {
-      //     info: {
-      //       img: img1,
-      //       title: "Brian Alvarado",
-      //       text: "June, 25th 2020",
-      //       tags: ["Recruitment"],
-      //     },
-
-      //     content: {
-      //       img: img2,
-      //       title:
-      //         "The World's First Commercial Jetpack Will Arrive In 2016, And It'll Cost You $150,000",
-      //       text:
-      //         "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
-      //       href:
-      //         "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
-      //     },
-      //   },
-
-      //   {
-      //     info: {
-      //       img: img1,
-      //       title: "Brian Alvarado",
-      //       text: "June, 25th 2020",
-      //       tags: ["Recruitment"],
-      //     },
-
-      //     content: {
-      //       img: img2,
-      //       title:
-      //         "The World's First Commercial Jetpack Will Arrive In 2016, And It'll Cost You $150,000",
-      //       text:
-      //         "Cras gravida arcu tincidunt, suscipit velit sed, porta sapien. Maecenas a aliquam lectus. Vivamus consequat purus quis ligula vestibulum, eget mattis ex fermentum. Donec placerat felis sit amet venenatis faucibus. Praesent aliquet convallis.",
-      //       href:
-      //         "https://only-to-top.ru/blog/coding/2018-06-08-plavnyj-skroll-do-elementa.html",
-      //     },
-      //   },
-      // ],
-      // buttons: ["Continue Reading", "Like this", "Share this"],
-      // icons: [
-      //   {
-      //     icon: "ti-facebook",
-      //     href: "https://www.facebook.com/",
-      //   },
-
-      //   {
-      //     icon: "ti-linkedin",
-      //     href: "https://www.linkedin.com/",
-      //   },
-
-      //   {
-      //     icon: "ti-vimeo-alt",
-      //     href: "https://vimeo.com/",
-      //   },
-      //   {
-      //     icon: "ti-pinterest",
-      //     href: "https://www.pinterest.com/",
-      //   },
     ],
   },
 
@@ -562,29 +354,29 @@ const tweetsItems = {
       title: "POPULAR POST",
       items: [
         {
-          img: img1,
+          img: post6,
           title: "Totally Free Photos For Personal And Commercial Use",
-          text: "1 day ago",
+          date: new Date(2021, 0, 15),
         },
         {
-          img: img1,
+          img: post2,
           title: "Comments tab redesign and Author Response Time",
-          text: "June 28th, 2015",
+          date: new Date(2021, 1, 28),
         },
         {
-          img: img1,
+          img: post3,
           title: "Wallpaper Design Contest #4: Urban - Winner Announced",
-          text: "1 day ago",
+          date: new Date(2021, 1, 4),
         },
         {
-          img: img1,
+          img: post4,
           title: "Envato's Most Wanted Winners: Micro Niche Themes",
-          text: "June 28th, 2015",
+          date: new Date(2021, 0, 29),
         },
         {
-          img: img1,
+          img: post5,
           title: "Envato's Most Wanted Winners: Micro Niche Themes",
-          text: "June 28th, 2015",
+          date: new Date(2021, 1, 5),
         },
       ],
     },
@@ -628,12 +420,14 @@ const tweetsItems = {
       title: "PHOTO FROM UNSPLASH",
       imgs: [
         [
-          { img: img1 },
-          { img: img2 },
-          { img: img3 },
-          { img: img4 },
-          { img: img5 },
-          { img: img6 },
+          { img: photo1 },
+          { img: photo2 },
+          { img: photo3 },
+          { img: photo4 },
+          { img: photo5 },
+          { img: photo6 },
+          { img: photo7 },
+          { img: photo8 },
         ],
       ],
     },

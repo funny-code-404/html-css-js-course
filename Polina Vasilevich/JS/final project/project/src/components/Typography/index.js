@@ -10,6 +10,7 @@ import {
   ExtraText,
 } from "./styles";
 
+import { parseDate } from "../Tweets/scripts";
 class TextComponent extends React.Component {
   render() {
     const { settings } = this.props;
@@ -21,6 +22,7 @@ class TextComponent extends React.Component {
       textList,
       iconTitle,
       extraText,
+      date,
     } = this.props.items;
 
     return (
@@ -39,7 +41,7 @@ class TextComponent extends React.Component {
 
         {text && <Text {...settings}>{text}</Text>}
         {extraText && <ExtraText {...settings}>{extraText}</ExtraText>}
-
+        {date && <Text {...settings}>{parseDate(date)}</Text>}
         {textList &&
           textList.text.map((item) => {
             return (
@@ -71,6 +73,7 @@ TextComponent.defaultProps = {
     },
     iconTitle: "",
     extraText: "",
+    date: "",
   },
 };
 

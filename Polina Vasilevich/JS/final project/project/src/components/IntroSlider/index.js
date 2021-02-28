@@ -1,6 +1,21 @@
+import PropTypes from "prop-types";
+
 import { Container, Title, SubTitle, TextContainer } from "./styles";
 import { Arrow } from "./styles";
 import { handleScrollDown } from "../Button/handlers";
+
+IntroSlider.propTypes = {
+  items: PropTypes.object,
+  backgroundImg: PropTypes.string,
+};
+
+IntroSlider.defaultProps = {
+  items: {
+    title: "",
+    text: "",
+  },
+  backgroundImg: "",
+};
 
 export default function IntroSlider(props) {
   const { items, isArrow } = props;

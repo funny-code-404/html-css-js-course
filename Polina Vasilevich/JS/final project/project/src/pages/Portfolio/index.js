@@ -1,19 +1,20 @@
 import React from "react";
 
 import IntroSlider from "../../components/IntroSlider";
-
+import introSlider from "../../assets/const/portfolio/introSlider";
 import Photos from "../../components/Photos";
 import portfolioItems from "../../assets/const/portfolio/portfolioItems";
 
 import CallToAction from "../../components/CallToAction";
-import callToItems from "../../assets/const/callToActionItems";
+import callToItems from "../../assets/const/portfolio/callToActionItems";
+
 import Works from "../../components/Works";
-import workItems from "../../assets/const/shop/workItems";
+import workItems from "../../assets/const/portfolio/workItems";
 class Portfolio extends React.Component {
   render() {
     return (
       <>
-        <IntroSlider title="CONTACT US" subTitle="Dream Big. Think Different" />
+        <IntroSlider items={introSlider} />
         <Photos
           items={portfolioItems}
           settings={{

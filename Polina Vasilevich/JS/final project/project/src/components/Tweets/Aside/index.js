@@ -18,10 +18,35 @@ class AsideComponent extends React.Component {
 
   handleFilterList = (e) => {
     const posts = this.props.items.posts.items;
-    const filteredList = posts.filter(({ title, text }) => {
+
+    const filteredList = posts.filter(({ title, date }) => {
+      const filterDate = (date) => {
+        const months = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+
+        return (
+          String(date.getFullYear()).search(e.target.value.toLowerCase()) !==
+            -1 ||
+          months[date.getMonth()].search(e.target.value.toLowerCase()) !== -1 ||
+          String(date.getDate()).search(e.target.value.toLowerCase()) !== -1
+        );
+      };
+
       return (
         title.toLowerCase().search(e.target.value.toLowerCase()) !== -1 ||
-        text.toLowerCase().search(e.target.value.toLowerCase()) !== -1
+        filterDate(date)
       );
     });
 

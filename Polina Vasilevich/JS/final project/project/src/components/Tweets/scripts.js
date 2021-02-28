@@ -25,7 +25,7 @@ export const parseDate = (date) => {
   );
 
   if (dayDiff === 0) {
-    return "today";
+    return "Today";
   } else if (dayDiff <= 5 && dayDiff) {
     const condition = dayDiff === 1;
     return condition ? "1 day ago" : `${dayDiff} days ago`;

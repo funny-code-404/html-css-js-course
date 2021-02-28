@@ -1,16 +1,19 @@
 import React from "react";
 
 import IntroSlider from "../../components/IntroSlider";
-import Form from "../../components/Form";
-import CallToAction from "../../components/CallToAction";
+import introSlider from "../../assets/const/shortcodes/introSlider";
 
+import Form from "../../components/Form";
 import formItems from "../../assets/const/shortcodes/formItems";
-import callToItems from "../../assets/const/callToActionItems";
+
+import CallToAction from "../../components/CallToAction";
+import callToItems from "../../assets/const/shortcodes/callToActionItems";
+
 class Shortcodes extends React.Component {
   render() {
     return (
       <>
-        <IntroSlider title="CONTACT US" subTitle="Dream Big. Think Different" />
+        <IntroSlider items={introSlider} />
         <Form
           idForm="form3"
           items={formItems}
