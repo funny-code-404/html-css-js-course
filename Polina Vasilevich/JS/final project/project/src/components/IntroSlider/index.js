@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 
 import { Container, Title, SubTitle, TextContainer } from "./styles";
 import { Arrow } from "./styles";
-import { handleScrollDown } from "../Button/handlers";
 
 IntroSlider.propTypes = {
   items: PropTypes.object,
@@ -15,6 +14,15 @@ IntroSlider.defaultProps = {
     text: "",
   },
   backgroundImg: "",
+};
+
+const handleScrollDown = (e) => {
+  e.preventDefault();
+
+  window.scroll({
+    top: document.documentElement.scrollHeight,
+    behavior: "smooth",
+  });
 };
 
 export default function IntroSlider(props) {

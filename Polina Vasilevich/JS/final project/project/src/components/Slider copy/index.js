@@ -8,14 +8,14 @@ class Slider extends React.Component {
     this.id = props.id;
     this.state = {
       position: 0,
+      imgs: props.items.imgs,
+      currentSliderIndex: 3,
     };
   }
 
   nextSlider = (e) => {
     e.preventDefault();
-    const imgs = document
-      .getElementById(this.id)
-      .getElementsByClassName("img1");
+    const imgs = this.state.imgs;
 
     const newPosition =
       this.state.position > imgs.length - 1 ? 0 : this.state.position + 1;
@@ -23,13 +23,13 @@ class Slider extends React.Component {
     this.setState((prevState) => {
       return { position: newPosition };
     });
+
+    console.log(this.state.position);
   };
 
   prevSlider = (e) => {
     e.preventDefault();
-    const imgs = document
-      .getElementById(this.id)
-      .getElementsByClassName("img1");
+    const imgs = this.state.imgs;
 
     const newPosition =
       this.state.position === 0 ? imgs.length - 1 : this.state.position - 1;
@@ -47,6 +47,7 @@ class Slider extends React.Component {
         <div className="slides1">
           {imgs.map((img, index) => {
             let dx = null;
+
             if (this.state.position <= index) {
               dx = -100 * this.state.position;
             } else {

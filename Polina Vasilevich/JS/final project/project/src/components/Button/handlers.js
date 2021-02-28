@@ -1,11 +1,7 @@
 export const handleScrollDown = (e) => {
   e.preventDefault();
-  let windowCoords = null;
-  if (e.target.value === "footer") {
-    windowCoords = document.documentElement.scrollHeight;
-  } else {
-    windowCoords = document.getElementById(e.target.value).scrollHeight;
-  }
+
+  const windowCoords = document.getElementById(e.target.value).scrollHeight;
 
   window.scroll({
     top: windowCoords,
@@ -20,8 +16,6 @@ export const handleScrollTop = (e) => {
     left: 0,
     behavior: "smooth",
   });
-
-  console.log(1);
 };
 
 export const handleLink = (e, page = "shop") => {

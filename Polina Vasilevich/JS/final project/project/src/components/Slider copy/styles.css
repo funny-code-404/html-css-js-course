@@ -1,8 +1,6 @@
 .slides1 {
   position: relative;
-  /* margin: auto; */
   height: 300px;
-  /* margin-bottom: 15px; */
 
   display: flex;
   overflow: hidden;
@@ -13,11 +11,10 @@
   width: 25%;
   height: 100%;
 
-  /* position: absolute;
-  opacity: 0;
-  z-index: 0; */
+  position: relative;
+  z-index: 1;
 
-  transition: transform ease 0.5s, opacity ease 0.5s;
+  transition: transform ease 0.3s, opacity ease 0.5s;
 }
 
 .prev,
