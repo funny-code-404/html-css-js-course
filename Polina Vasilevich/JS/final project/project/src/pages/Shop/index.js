@@ -8,7 +8,8 @@ import introSlider from "../../assets/const/shop/introSlider";
 
 import Slider from "../../components/Slider";
 import Slider2 from "../../components/Slider copy";
-import slider2Items from "../../assets/const/slider4";
+
+import sliderItems from "../../assets/const/shop/slider1";
 
 import Works from "../../components/Works";
 import workItems from "../../assets/const/shop/workItems";
@@ -43,7 +44,7 @@ class Shop extends React.Component {
         />
 
         <Slider
-          items={slider2Items}
+          items={sliderItems}
           id="slider2"
           isDots
           stylesText="basicSlider"
@@ -51,16 +52,17 @@ class Shop extends React.Component {
           heightSliderContainer="slider2"
         />
         <MainContainer
-          items={slider2Items}
+          items={sliderItems}
           isTitle
           settings={{
             paddingLeftRight: "none",
             paddingBottom: "0",
           }}
           contentContainer={
-            <Slider2 items={slider2Items} id="slider3" isArrows />
+            <Slider2 items={sliderItems} id="slider3" isArrows />
           }
         />
+
         <Works items={workItems} />
 
         <CallToAction
