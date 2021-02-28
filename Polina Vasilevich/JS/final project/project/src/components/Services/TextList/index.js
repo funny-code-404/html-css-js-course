@@ -26,10 +26,11 @@ TextList.defaultProps = {
 
 export default function TextList(props) {
   const { items, settings } = props;
-
+  console.log(items.backgroundImg);
   return (
     <MainContainer
       settings={settings}
+      backgroundImg={items.backgroundImg}
       contentContainer={
         <ContentContainer {...settings}>
           <Typography items={items} isLine settings={settings} />

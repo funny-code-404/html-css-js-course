@@ -8,6 +8,11 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   text-align: center;
+
+  background-image: ${(props) =>
+    props.backgroundImg ? `url(${props.backgroundImg})` : ""};
+  background-size: cover;
+  background-position: center center;
 `;
 
 export const TextContainer = styled.div`

@@ -1,30 +1,34 @@
 import React from "react";
 
 import IntroSlider from "../../components/IntroSlider";
+import introSlider from "../../assets/const/features/introSlider";
+
 import IconsList from "../../components/IconsList";
+import iconsListItems from "../../assets/const/features/iconsListItems";
+import iconList1 from "../../assets/const/features/iconList1";
+
 import Introducing from "../../components/Introducing";
+import introducingItems from "../../assets/const/features/introItems";
+
 import TextList from "../../components/Services/TextList";
+import textListItems from "../../assets/const/features/textListItems.js";
+
 import Slider from "../../components/Slider";
+import sliderItems from "../../assets/const/features/slider1";
+
 import Form from "../../components/Form";
 import CallToAction from "../../components/CallToAction";
-
-import iconList1 from "../../assets/const/iconList1";
-
-import introducingItems from "../../assets/const/features/introItems";
-import iconsListItems from "../../assets/const/features/iconsListItems";
-import textListItems from "../../assets/const/features/textListItems.js";
-import formItems from "../../assets/const/formItems";
-import slider3Items from "../../assets/const/slider3";
 import callToItems from "../../assets/const/callToActionItems";
+
+import formItems from "../../assets/const/formItems";
+
 import MainContainer from "../../components/MainContainer";
 class Features extends React.Component {
   render() {
     return (
       <>
-        <IntroSlider
-          title="OUR SERVICES"
-          subTitle="Dream Big. Think Different. Do Great"
-        />
+        <IntroSlider items={introSlider} />
+
         <IconsList
           items={iconList1}
           settings={{
@@ -53,11 +57,10 @@ class Features extends React.Component {
             widthContentContainer: "70ch",
             positionText: "left",
             stylesText: "textList",
-            heightMainContainer: "intro",
           }}
         />
         <Slider
-          items={slider3Items}
+          items={sliderItems}
           id="slider3"
           isDots
           stylesText="basicSlider"

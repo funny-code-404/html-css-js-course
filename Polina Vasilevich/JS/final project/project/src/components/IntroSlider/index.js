@@ -3,12 +3,12 @@ import { Arrow } from "./styles";
 import { handleScrollDown } from "../Button/handlers";
 
 export default function IntroSlider(props) {
-  const { title, subTitle, isArrow } = props;
+  const { items, isArrow } = props;
   return (
-    <Container>
+    <Container backgroundImg={items.backgroundImg}>
       <TextContainer>
-        <Title>{title}</Title>
-        <SubTitle>{subTitle}</SubTitle>
+        <Title>{items.title}</Title>
+        <SubTitle>{items.subTitle}</SubTitle>
         {isArrow && (
           <Arrow onClick={handleScrollDown} value="footer">
             <i className="ti-angle-down"></i>

@@ -1,7 +1,10 @@
+import img from "../../img/demos/first-intro/sincerely-media-R308gX3g4h8-unsplash.jpg";
+
 const textList = {
   title: "What We Do",
   subTitle:
     "Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra. Nulla vehicula nibh vel ante commodo feugiat.",
+  backgroundImg: img,
   text:
     "TheFox include design that can be used for any type of website: business, corporate, portfolio, blog, products, magazine, etc. Buy TheFox and join our awesome community, let’s make TheFox better together!",
   textList: {

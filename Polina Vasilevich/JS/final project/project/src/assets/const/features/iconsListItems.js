@@ -1,9 +1,9 @@
-import webDesign from "../../img/services/web.png";
-import ecommerce from "../../img/services/ecommerce.png";
-import video from "../../img/services/video.png";
-import photo from "../../img/services/photo.png";
-import graphic from "../../img/services/graphic.png";
-import support from "../../img/services/support.png";
+import webDesign from "../../img/features/services/web.png";
+import ecommerce from "../../img/features/services/ecommerce.png";
+import video from "../../img/features/services/video.png";
+import photo from "../../img/features/services/photo.png";
+import graphic from "../../img/features/services/graphic.png";
+import support from "../../img/features/services/support.png";
 
 const items = {
   title: "The Best Services",

@@ -1,4 +1,4 @@
-import img from "../../assets/img/home/first-intro/bench-accounting-nvzvOPQW0gc-unsplash.jpg";
+import img from "../../assets/img/home/first-intro/leone-venter-VieM9BdZKFo-unsplash.jpg";
 
 const introducingItems = {
   title: "Great Theme for Your Business",

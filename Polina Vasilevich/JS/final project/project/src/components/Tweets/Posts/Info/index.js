@@ -1,14 +1,21 @@
 import PropTypes from "prop-types";
 import { Info, ContentContainer, Avatar, TagsContainer } from "./styles";
 import Typography from "../../../Typography";
+import { TextContainer, Title, Text } from "../../../Typography/styles";
 import Button from "../../../Button";
+
+import { parseDate } from "../../scripts";
 
 InfoComponent.propTypes = {
   info: PropTypes.array,
 };
 
 InfoComponent.defaultProps = {
-  info: [],
+  info: [
+    {
+      date: new Date(),
+    },
+  ],
 };
 
 export default function InfoComponent(props) {
@@ -17,12 +24,11 @@ export default function InfoComponent(props) {
     <Info>
       <ContentContainer>
         <Avatar backgroundImage={info.img} />
-        <Typography
-          items={info}
-          settings={{
-            stylesText: "postAuthor",
-          }}
-        />
+
+        <TextContainer stylesText="postAuthor">
+          <Title>{info.title}</Title>
+          <Text>{parseDate(info.date)}</Text>
+        </TextContainer>
       </ContentContainer>
 
       <TagsContainer>

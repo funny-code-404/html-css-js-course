@@ -1,4 +1,4 @@
-import img from "../../../assets/img/intro/background1.png";
+import img from "../../../assets/img/features/intro1/nordwood-themes-kRNZiGKtz48-unsplash.jpg";
 
 const introducingItems = {
   title: "WordPress Development",

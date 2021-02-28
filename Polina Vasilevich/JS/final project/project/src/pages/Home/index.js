@@ -1,43 +1,47 @@
 import React from "react";
 
 import IconsList from "../../components/IconsList";
-import iconList1 from "../../assets/const/iconList1";
-import iconList2 from "../../assets/const/iconList2";
+import iconList1 from "../../assets/const/home/iconList1";
+import iconList2 from "../../assets/const/home/iconList2";
 
 import Introducing from "../../components/Introducing";
-import introducingItems from "../../assets/const/introducingItems";
+import introducingItems from "../../assets/const/home/introducingItems";
+import introducingItems2 from "../../assets/const/home/introducingItems2";
 
-import portfolioItems from "../../assets/const/portfolioItems";
+import portfolioItems from "../../assets/const/home/portfolioItems";
 
 import PricingTables from "../../components/Prices";
+import pricingTables from "../../assets/const/home/pricingTables";
 
 import CallToAction from "../../components/CallToAction";
 import callToItems from "../../assets/const/callToActionItems";
+
 import Numbers from "../../components/Numbers";
+import numbersItems from "../../assets/const/home/numbersItems";
 
 import TwoColumnSection from "../../components/TwoColumSection";
 
 import FirstItemForService from "../../components/Services/TextList";
-import servicesItems from "../../assets/const/servicesItems";
+import servicesItems from "../../assets/const/home/servicesItems";
 
 import ProgressBar from "../../components/ProgressBar";
-import LogosList from "../../components/LogosList";
-import Video from "../../components/VideoComponent";
-import videoItems from "../../assets/const/videoItems";
 
-import partnersItems from "../../assets/const/partnersItems";
-import pricingTables from "../../assets/const/pricingTables";
-import businessItems from "../../assets/const/businessItems";
-import blogItems from "../../assets/const/blogItems";
-import numbersItems from "../../assets/const/numbersItems";
+import LogosList from "../../components/LogosList";
+import partnersItems from "../../assets/const/home/partnersItems";
+
+import Video from "../../components/VideoComponent";
+import videoItems from "../../assets/const/home/videoItems";
+
+import businessItems from "../../assets/const/home/businessItems";
+import blogItems from "../../assets/const/home/blogItems";
 
 import Slider from "../../components/Slider";
-import sliderItems from "../../assets/const/slider";
-import slider2Items from "../../assets/const/slider2";
-import slider3Items from "../../assets/const/slider3";
+import sliderItems from "../../assets/const/home/slider1";
+import slider2Items from "../../assets/const/home/slider2";
+import slider3Items from "../../assets/const/home/slider3";
 
 import Form from "../../components/Form";
-import formItems from "../../assets/const/formItems";
+import formItems from "../../assets/const/home/formItems";
 
 import Articles from "../../components/Services/Articles";
 import Photos from "../../components/Photos";
@@ -121,7 +125,7 @@ class Home extends React.Component {
         />
 
         <Introducing
-          items={introducingItems}
+          items={introducingItems2}
           settings={{
             positionText: "left",
             widthContentContainer: "70ch",
