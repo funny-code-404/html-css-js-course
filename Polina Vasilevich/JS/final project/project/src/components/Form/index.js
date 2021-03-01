@@ -81,7 +81,8 @@ class FormComponent extends React.Component {
           data: { ...this.state.data },
         })
         .then((response) => {
-          console.log("Request succeeded with JSON response", response.data);
+          // console.log("Request succeeded with JSON response", response.data);
+          alert("Request completed successfully!");
         })
         .catch((e) => console.log(e));
     }

@@ -38,19 +38,15 @@ const formItems = {
     },
 
     {
-      option: "some option1",
+      option: "Econom",
     },
 
     {
-      option: "some option2",
+      option: "Business",
     },
 
     {
-      option: "some option3",
-    },
-
-    {
-      option: "some option4",
+      option: "Lux",
     },
   ],
 };

@@ -154,7 +154,7 @@ class Slider extends React.Component {
                   settings={{
                     stylesButton: "sliderTransparent",
                   }}
-                  handleButton={(e) => handleLink(e, "blog")}
+                  handleButton={(e) => handleLink(e, "shop")}
                 />
               </ButtonsContainer>
             )}

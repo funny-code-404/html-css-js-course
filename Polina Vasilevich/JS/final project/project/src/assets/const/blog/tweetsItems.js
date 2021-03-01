@@ -23,9 +23,9 @@ import photo2 from "../../img/blog/aside/photos/brandon-hall-VivsxaizzVE-unsplas
 import photo3 from "../../img/blog/aside/photos/brooke-cagle-n1m25jvupEU-unsplash.jpg";
 import photo4 from "../../img/blog/aside/photos/carl-heyerdahl-KE0nC8-58MQ-unsplash.jpg";
 import photo5 from "../../img/blog/aside/photos/ilyuza-mingazova-HaTIYO87qWQ-unsplash.jpg";
-import photo6 from "../../img/blog/aside/photos/joshua-sun-brq6r83uD8U-unsplash.jpg";
-import photo7 from "../../img/blog/aside/photos/ruijia-wang-B1AZIfb18Cc-unsplash.jpg";
-import photo8 from "../../img/blog/aside/photos/icons8-team-yTwXpLO5HAA-unsplash.jpg";
+import photo6 from "../../img/blog/aside/photos/annie-spratt-ITE_nXIDQ_A-unsplash.jpg";
+import photo7 from "../../img/blog/aside/photos/priscilla-du-preez-XkKCui44iM0-unsplash.jpg";
+import photo8 from "../../img/blog/aside/photos/chris-benson-hH6sYIS6PqY-unsplash.jpg";
 
 const tweetsItems = {
   tweets: {

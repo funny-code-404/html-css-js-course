@@ -3,7 +3,7 @@ import MainContainer from "../MainContainer";
 import Typography from "../Typography";
 import { ContentContainer, FlexContainer } from "../../mainStyles";
 import Button from "../Button";
-
+import { handleLink } from "../Button/handlers";
 Works.propTypes = {
   items: PropTypes.object,
 };
@@ -34,6 +34,7 @@ export default function Works(props) {
             <Button
               buttonLabel={props.items.buttonLabel}
               buttonIcon={props.items.buttonIcon}
+              handleButton={(e) => handleLink(e, "shortcodes")}
               settings={{ stylesButton: "work" }}
             />
           </ContentContainer>

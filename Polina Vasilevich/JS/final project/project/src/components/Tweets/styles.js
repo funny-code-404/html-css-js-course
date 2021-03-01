@@ -24,7 +24,7 @@ export const Avatar = styled.div`
 
 export const InVisible = styled.div`
   border-top: 30px solid transparent;
-  border-right: 30px solid #f7f7f7;
+  border-right: 30px solid #e3e3e3;
   border-bottom: 30px solid transparent;
   border-left: 30px solid transparent;
 

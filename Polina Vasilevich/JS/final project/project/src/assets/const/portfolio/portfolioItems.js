@@ -7,15 +7,6 @@ import img6 from "../../img/portfolio/photos/free-portfolio-wordpress-theme.jpg"
 import img7 from "../../img/portfolio/photos/yosemite-800x420.png";
 import img8 from "../../img/portfolio/photos/лучшие-корпоративные-шаблоны-сайтов-на-wordpress-01.jpg";
 
-import img11 from "../../img/portfolio/photos/second/preview-5e514987-fff0-4493-afce-2c870a14153b-xhJ5r.jpg";
-import img12 from "../../img/portfolio/photos/second/featured.png";
-import img13 from "../../img/portfolio/photos/second/liste-inspirante-des-20-meilleurs-modeles-de-sites-web-commerciaux-drupal-1.jpg";
-import img14 from "../../img/portfolio/photos/second/screenshot.png";
-import img15 from "../../img/portfolio/photos/second/screenshot1.png";
-import img16 from "../../img/portfolio/photos/second/Theme-collage-desktop.jpg";
-import img17 from "../../img/portfolio/photos/second/urbane-free-wordpress-theme.jpg";
-import img18 from "../../img/portfolio/photos/second/wordpress-theme-for-writers-with-bookstore.jpg";
-
 const portfolioItems = {
   imgs: [
     [

@@ -86,7 +86,7 @@ const setBackgroundColorMainContainer = (backgroundColorMainContainer) => {
           `;
     case "aside":
       return `
-      background-color: #f7f7f7;
+      background-color: #e3e3e3;
       `;
 
     case "header":

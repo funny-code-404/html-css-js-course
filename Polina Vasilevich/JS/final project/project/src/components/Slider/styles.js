@@ -105,11 +105,11 @@ export const Dot = styled.button`
 export const ButtonsContainer = styled.div`
   position: absolute;
   z-index: 2;
-  top: 61%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
 
   @media (max-width: 897px) {
-    transform: translate(-20%, -10%);
+    transform: translate(-30%, -10%);
   }
 `;
