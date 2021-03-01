@@ -9,7 +9,7 @@ import { handleLink } from "../Button/handlers";
 
 class Introducing extends React.Component {
   render() {
-    const { items, settings } = this.props;
+    const { items, settings, id } = this.props;
     const { buttonLabel, buttonIcon, backgroundImg } = items;
 
     return (
@@ -17,7 +17,7 @@ class Introducing extends React.Component {
         settings={settings}
         backgroundImg={backgroundImg}
         contentContainer={
-          <ContentContainer {...settings}>
+          <ContentContainer {...settings} id={id}>
             <Typography items={items} isLine settings={settings} />
             <Button
               buttonIcon={buttonIcon}
@@ -35,6 +35,7 @@ class Introducing extends React.Component {
 Introducing.propsTypes = {
   items: PropTypes.array,
   settings: PropTypes.object,
+  id: PropTypes.string,
 };
 
 Introducing.defaultProps = {
@@ -46,6 +47,8 @@ Introducing.defaultProps = {
     },
   ],
   settings: {},
+
+  id: "",
 };
 
 export default Introducing;

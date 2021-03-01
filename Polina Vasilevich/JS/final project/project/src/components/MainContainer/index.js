@@ -4,7 +4,7 @@ import { MainContainer, Wrapper } from "./styles";
 import Typography from "../Typography";
 
 MainContainerComponent.propTypes = {
-  items: PropTypes.array,
+  items: PropTypes.object,
   settings: PropTypes.object,
   isTitle: PropTypes.bool,
   contentContainer: PropTypes.object,
@@ -15,7 +15,7 @@ MainContainerComponent.propTypes = {
 };
 
 MainContainerComponent.defaultProps = {
-  items: [],
+  items: {},
   settings: {},
   isTitle: false,
   contentContainer: {},

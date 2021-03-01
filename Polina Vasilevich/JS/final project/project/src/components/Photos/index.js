@@ -75,12 +75,12 @@ class ImagesList extends React.Component {
 }
 
 ImagesList.propTypes = {
-  items: PropTypes.array,
+  items: PropTypes.object,
   settings: PropTypes.object,
 };
 
 ImagesList.defaultProps = {
-  items: [{ imgs: [], buttons: "" }],
+  items: { imgs: [], buttons: "" },
   settings: {},
 };
 

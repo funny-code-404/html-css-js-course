@@ -102,7 +102,7 @@ class Slider extends React.Component {
               return (
                 <>
                   <Img
-                    key={index}
+                    key={`img${index}`}
                     backgroundImg={img}
                     id={index}
                     className="img"
@@ -145,7 +145,7 @@ class Slider extends React.Component {
                     stylesButton: "sliderTransparent",
                   }}
                   handleButton={handleScrollDown}
-                  link="iconsList2"
+                  link="intro1"
                 />
                 <Button
                   buttonLabel={buttonLabel[1]}
@@ -169,7 +169,7 @@ class Slider extends React.Component {
                 {imgs.map((img, index) => {
                   return (
                     <Dot
-                      key={index}
+                      key={`dots ${index}`}
                       id={index}
                       className={
                         index + 1 === this.state.currentSliderIndex && "active"

@@ -347,6 +347,31 @@ const tweetsItems = {
         },
       },
     ],
+
+    buttons: ["Continue Reading", "Like this", "Share this"],
+    icons: [
+      {
+        icon: "ti-facebook",
+        href: "https://www.facebook.com/",
+      },
+
+      {
+        icon: "ti-linkedin",
+        href: "https://www.linkedin.com/",
+      },
+      {
+        icon: "ti-twitter",
+        href: "https://vimeo.com/",
+      },
+      {
+        icon: "ti-vimeo-alt",
+        href: "https://vimeo.com/",
+      },
+      {
+        icon: "ti-pinterest",
+        href: "https://www.pinterest.com/",
+      },
+    ],
   },
 
   asideItems: {

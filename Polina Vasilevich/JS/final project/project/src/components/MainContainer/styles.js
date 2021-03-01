@@ -150,12 +150,12 @@ const setMediaBlock = (mediaBlock) => {
       }`;
 
     case "aside":
-      return `@media(max-width: 1030px) {
+      return `@media(max-width: 900px) {
           display:none;
         }`;
 
     case "posts":
-      return `@media(max-width: 1030px) {
+      return `@media(max-width: 900px) {
         padding-top: 50px;
         padding-left: 11%;
         padding-right: 11%;

@@ -65,6 +65,11 @@ class Prices extends React.Component {
 }
 
 Prices.propTypes = {
+  header: PropTypes.object,
+  items: PropTypes.object,
+};
+
+Prices.defaultProps = {
   header: {
     title: "",
     subTitle: "",
@@ -84,5 +89,4 @@ Prices.propTypes = {
     },
   ],
 };
-
 export default Prices;

@@ -160,29 +160,27 @@ class FormComponent extends React.Component {
 }
 
 FormComponent.propTypes = {
-  idForm: PropTypes.number,
+  idForm: PropTypes.string,
   settings: PropTypes.object,
-  items: PropTypes.array,
+  items: PropTypes.object,
 };
 
 FormComponent.defaultProps = {
-  items: [
-    {
-      inputs: [
-        {
-          type: "",
-          placeholder: "",
-          name: "",
-          required: false,
-        },
-      ],
-      select: [],
-      buttonIcon: "",
-      buttonLabel: "",
-    },
-  ],
+  items: {
+    inputs: [
+      {
+        type: "",
+        placeholder: "",
+        name: "",
+        required: false,
+      },
+    ],
+    select: [],
+    buttonIcon: "",
+    buttonLabel: "",
+  },
 
-  idForm: 0,
+  idForm: "",
   settings: {},
 };
 

@@ -138,7 +138,7 @@ const setHeightFlexContainer = (heightFlexContainer) => {
 const setMediaFlexBlock = (mediaFlexBlock) => {
   switch (mediaFlexBlock) {
     case "callTo":
-      return `@media(max-width: 1418px) {
+      return `@media(max-width: 1100px) {
         text-align: center;
         flex-direction: column;
         justify-content: center;

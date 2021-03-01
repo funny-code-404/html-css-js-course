@@ -5,7 +5,7 @@ export const Tweets = styled.div`
   grid-template-columns: 55% 40%;
   grid-gap: 6.5%;
 
-  @media (max-width: 1030px) {
+  @media (max-width: 900px) {
     grid-template-columns: 1fr;
   }
 `;

@@ -26,7 +26,7 @@ TextList.defaultProps = {
 
 export default function TextList(props) {
   const { items, settings } = props;
-  console.log(items.backgroundImg);
+
   return (
     <MainContainer
       settings={settings}

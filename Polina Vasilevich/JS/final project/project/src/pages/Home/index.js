@@ -68,6 +68,7 @@ class Home extends React.Component {
             mediaGridBlock: "iconsList1",
             gridGap: "3%",
           }}
+          id="intro1"
         />
 
         <Introducing

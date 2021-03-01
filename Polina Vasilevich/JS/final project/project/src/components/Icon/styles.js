@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { TextContainer } from "../Typography/styles";
 
 const setColorIconContainer = (colorIconContainer) => {
   switch (colorIconContainer) {
@@ -173,6 +174,7 @@ const setPositionTextIcons = (positionTextIcons) => {
       return `
         text-align: right;
       `;
+
     default:
       return `
         text-align: center;
@@ -189,6 +191,7 @@ const setPositionIcons = (positionIcons) => {
         ${IconContainer} {
             align-items: start;
             margin-right: 20px;
+            width: 100%;
         }
       `;
     default:
@@ -196,9 +199,31 @@ const setPositionIcons = (positionIcons) => {
   }
 };
 
+const setAdaptiveIcons = (adaptiveIcons) => {
+  switch (adaptiveIcons) {
+    case "aside":
+      return `  
+      @media(max-width: 1400px) {
+        flex-direction: column;
+        ${TextContainer} {
+          width: 100%;
+          
+        }
+        ${Img} {
+            width: 100%;
+          }
+      }
+      `;
+
+    default:
+      break;
+  }
+};
+
 export const ContentContainer = styled.div`
+  ${(props) => setPositionIcons(props.positionIcons)};
   ${(props) => setPositionTextIcons(props.positionTextIcons)};
-  // ${(props) => setPositionIcons(props.positionIcons)};
+  ${(props) => setAdaptiveIcons(props.adaptiveIcons)};
 `;
 
 export const Img = styled.div`

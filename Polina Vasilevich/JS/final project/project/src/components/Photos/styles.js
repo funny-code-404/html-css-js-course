@@ -31,6 +31,8 @@ export const Img = styled.div`
     
     `}
 
+
+
 `;
 
 export const ButtonsContainer = styled.div`

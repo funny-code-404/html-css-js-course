@@ -85,6 +85,7 @@ class AsideComponent extends React.Component {
                     heightMainContainer: "tweets",
                     stylesText: "asidePostsTitle",
                     stylesBlock: "asideIconsList",
+                    adaptiveIcons: "aside",
                   }}
                 />
               }

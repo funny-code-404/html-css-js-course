@@ -9,28 +9,33 @@ export const List = styled.ul`
     &.hideMenu {
       display: none;
     }
-  }
-
-  &.showMenu {
-    display: block;
-    position: absolute;
-    background-color: #f1f1f1;
-    width: 16vw;
-    top: 11px;
-
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 999999;
-
-    li {
-      margin: 0;
-      width: 75%;
-      padding: 2vw;
+    &.showMenu {
+      display: block;
     }
 
-    a {
-      :hover {
-        cursor: pointer;
-        color: #4285f4;
+    &.menu {
+      position: absolute;
+      background-color: #f1f1f1;
+
+      top: 11px;
+
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 999999;
+
+      li {
+        margin: 0;
+        width: 100%;
+      }
+
+      a {
+        display: inline-block;
+        padding: 10px 3vw;
+        width: 10vw;
+        :hover {
+          cursor: pointer;
+
+          background-color: #ccc;
+        }
       }
     }
   }

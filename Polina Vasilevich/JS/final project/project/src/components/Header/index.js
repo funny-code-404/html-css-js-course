@@ -43,7 +43,14 @@ class HeaderComponent extends React.Component {
 
   handleShowMenu = (e) => {
     e.preventDefault();
-    this.setState((prevState) => ({ showMenu: !prevState.showMenu }));
+
+    if (!e.target.matches("#navigationButton")) {
+      this.setState({
+        showMenu: false,
+      });
+    } else {
+      this.setState((prevState) => ({ showMenu: !prevState.showMenu }));
+    }
   };
 
   setStylesNavigation = (condition) => {
@@ -54,20 +61,19 @@ class HeaderComponent extends React.Component {
     const { routes, logoImg, logoText } = this.props;
     const { showMenu } = this.state;
     const contentContainer = (
-      <FlexContainer heightFlexContainer="header">
+      <FlexContainer heightFlexContainer="header" onClick={this.handleShowMenu}>
         <LogoContainer>
           <LogoImg src={logoImg} alt={logoImg} />
           <LogoText>{logoText}</LogoText>
         </LogoContainer>
         <Navigation>
-          <NavigationButton onClick={this.handleShowMenu}>
-            <i className="ti-menu"></i>
+          <NavigationButton>
+            <i className="ti-menu" id="navigationButton"></i>
           </NavigationButton>
 
           <List
             id="headerList"
-            onClick={this.handleClick}
-            className={classnames("hideMenu", { showMenu: showMenu })}
+            className={`${classnames("hideMenu", { showMenu: showMenu })} menu`}
           >
             {routes.map(({ path, label }, index) => {
               const styles = this.setStylesNavigation(

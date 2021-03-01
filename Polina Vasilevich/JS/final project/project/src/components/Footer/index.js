@@ -126,7 +126,7 @@ class FooterComponent extends React.Component {
 }
 
 FooterComponent.propTypes = {
-  items: PropTypes.array,
+  items: PropTypes.object,
 };
 
 FooterComponent.defaultProps = {

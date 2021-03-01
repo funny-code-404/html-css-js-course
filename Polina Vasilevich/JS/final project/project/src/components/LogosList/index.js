@@ -3,18 +3,17 @@ import { ContentContainer, Logo, GridContainer } from "./styles";
 import MainContainer from "../MainContainer";
 
 LogosList.propTypes = {
-  items: PropTypes.array,
+  items: PropTypes.object,
   settings: PropTypes.object,
   backgroundImg: PropTypes.string,
   isTitle: PropTypes.bool,
 };
 
 LogosList.defaultProps = {
-  items: [
-    {
-      imgs: [],
-    },
-  ],
+  items: {
+    imgs: [],
+  },
+
   settings: {},
   backgroundImg: "",
   isTitle: false,
