@@ -14,7 +14,7 @@ import PricingTables from "../../components/Prices";
 import pricingTables from "../../assets/const/home/pricingTables";
 
 import CallToAction from "../../components/CallToAction";
-import callToItems from "../../assets/const/callToActionItems";
+import callToItems from "../../assets/const/home/callToActionItems";
 
 import Numbers from "../../components/Numbers";
 import numbersItems from "../../assets/const/home/numbersItems";

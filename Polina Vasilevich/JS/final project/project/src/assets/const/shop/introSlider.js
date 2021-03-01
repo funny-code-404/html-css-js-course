@@ -1,4 +1,4 @@
-import img from "../../img/shop/intro/andrew-neel-fkalryO4dUI-unsplash.jpg";
+import img from "../../img/shop/intro/ilyuza-mingazova-HaTIYO87qWQ-unsplash.jpg";
 
 const introSlider = {
   title: "CREATIVE MESS",

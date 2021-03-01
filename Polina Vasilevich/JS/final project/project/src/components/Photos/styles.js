@@ -53,3 +53,8 @@ export const Wrapper = styled.div`
 
   border: 1px solid transparent;
 `;
+
+export const Container = styled.div`
+  ${(props) =>
+    props.containerImgsColor && `background-color: ${props.containerImgsColor}`}
+`;

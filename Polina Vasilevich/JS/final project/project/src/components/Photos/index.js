@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { GridContainer } from "../../mainStyles";
-import { Img, Wrapper, ButtonsContainer } from "./styles";
+import { Img, Wrapper, ButtonsContainer, Container } from "./styles";
 import Typography from "../Typography";
 import Button from "../Button";
 
@@ -25,7 +25,7 @@ class ImagesList extends React.Component {
     const { imgs, buttons } = this.props.items;
     const { settings } = this.props;
     return (
-      <>
+      <Container {...settings}>
         {buttons && (
           <ButtonsContainer onClick={this.handleClick}>
             {buttons.map((button, index) => {
@@ -69,7 +69,7 @@ class ImagesList extends React.Component {
             );
           })}
         </GridContainer>
-      </>
+      </Container>
     );
   }
 }

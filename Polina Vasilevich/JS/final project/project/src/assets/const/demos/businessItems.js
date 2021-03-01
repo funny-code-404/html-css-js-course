@@ -1,5 +1,5 @@
-import img1 from "../../img/demos/article/roman-bozhko-PypjzKTUqLo-unsplash.jpg";
-import img2 from "../../img/demos/article/oli-dale-xjSkI_seiZY-unsplash.jpg";
+import img1 from "../../img/demos/acticles/annie-spratt-QckxruozjRg-unsplash.jpg";
+import img2 from "../../img/demos/acticles/priscilla-du-preez-XkKCui44iM0-unsplash.jpg";
 
 const businessItems = {
   leftContent: {

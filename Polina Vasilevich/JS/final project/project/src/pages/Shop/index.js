@@ -1,7 +1,7 @@
 import React from "react";
 
 import IconsList from "../../components/IconsList";
-import iconList1 from "../../assets/const/iconList1";
+import iconList1 from "../../assets/const/shop/iconList1";
 
 import IntroSlider from "../../components/IntroSlider";
 import introSlider from "../../assets/const/shop/introSlider";

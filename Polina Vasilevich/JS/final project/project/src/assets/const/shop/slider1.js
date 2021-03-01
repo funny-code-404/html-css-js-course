@@ -1,9 +1,9 @@
-import img1 from "../../img/shop/slider1/thought-catalog-505eectW54k-unsplash.jpg";
-import img2 from "../../img/shop/slider1/annie-spratt-ITE_nXIDQ_A-unsplash.jpg";
-import img3 from "../../img/shop/slider1/brandon-hall-VivsxaizzVE-unsplash.jpg";
-import img4 from "../../img/shop/slider1/ilyuza-mingazova-HaTIYO87qWQ-unsplash.jpg";
-import img5 from "../../img/shop/slider1/jose-aljovin-Kfk-TPxLVL0-unsplash.jpg";
-import img6 from "../../img/shop/slider1/phil-desforges-cGJdXOBC9io-unsplash.jpg";
+import img1 from "../../img/home/first-slider/christin-hume-Hcfwew744z4-unsplash.jpg";
+import img2 from "../../img/home/first-slider/dan-schiumarini-dcL8ESbsGis-unsplash.jpg";
+import img3 from "../../img/home/first-slider/1920x1080_1553055_[www.ArtFile.ru].jpg";
+import img4 from "../../img/home/first-slider/neven-krcmarek-V4EOZj7g1gw-unsplash.jpg";
+import img5 from "../../img/home/first-slider/luca-bravo-9l_326FISzk-unsplash.jpg";
+import img6 from "../../img/home/first-slider/cup-of-coffee-1280537_1920.jpg";
 
 const sliderItems = {
   title: "Multiple Layouts",

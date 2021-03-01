@@ -19,9 +19,10 @@ class Portfolio extends React.Component {
           items={portfolioItems}
           settings={{
             widthItemGridContainer: "390px",
-            gridGap: "0",
-            gridRowGap: "0",
+            gridGap: "10px",
+            gridRowGap: "10px",
             mediaGridBlock: "photos1",
+            containerImgsColor: "#1A1A1D",
           }}
         />
 

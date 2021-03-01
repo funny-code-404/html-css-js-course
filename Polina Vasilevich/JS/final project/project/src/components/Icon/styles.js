@@ -191,7 +191,7 @@ const setPositionIcons = (positionIcons) => {
         ${IconContainer} {
             align-items: start;
             margin-right: 20px;
-            width: 100%;
+            
         }
       `;
     default:
@@ -209,6 +209,10 @@ const setAdaptiveIcons = (adaptiveIcons) => {
           width: 100%;
           
         }
+        ${IconContainer} {
+          width: 100%;
+          
+      }
         ${Img} {
             width: 100%;
           }

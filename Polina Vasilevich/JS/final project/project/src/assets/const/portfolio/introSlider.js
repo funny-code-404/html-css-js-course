@@ -1,4 +1,4 @@
-import img from "../../img/features/slider/brandon-hall-VivsxaizzVE-unsplash.jpg";
+import img from "../../img/portfolio/intro/hero.jpg";
 
 const introSlider = {
   title: "CONTACT US",

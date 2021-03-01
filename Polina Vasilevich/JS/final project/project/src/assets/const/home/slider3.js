@@ -1,9 +1,9 @@
-import img1 from "../../img/home/third-slider/emile-perron-xrVDYZRGdw4-unsplash.jpg";
-import img2 from "../../img/home/third-slider/chris-benson-hH6sYIS6PqY-unsplash.jpg";
-import img3 from "../../img/home/third-slider/parker-byrd-gxD8hCmi0IQ-unsplash.jpg";
-import img4 from "../../img/home/third-slider/seth-schwiet-WB3ujiKLJwQ-unsplash.jpg";
-import img5 from "../../img/home/third-slider/vadim-sherbakov-Hi9GSwWkCJk-unsplash.jpg";
-import img6 from "../../img/home/third-slider/thought-catalog-505eectW54k-unsplash.jpg";
+import img1 from "../../img/home/third-slider/laptop-5842509_1920.jpg";
+import img2 from "../../img/home/third-slider/notepad-691250_1920.jpg";
+import img3 from "../../img/home/third-slider/patrick-fore-mMcqMYJfopo-unsplash.jpg";
+import img4 from "../../img/home/third-slider/pawel-janiak-InHiw4hXuCE-unsplash.jpg";
+import img5 from "../../img/home/third-slider/stock-1863880_1920.jpg";
+import img6 from "../../img/home/third-slider/joanna-kosinska-1_CMoFsPfso-unsplash.jpg";
 
 const sliderItems = {
   subTitle:

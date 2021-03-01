@@ -1,5 +1,5 @@
-import img1 from "../../img/home/acticles/andrew-neel-cckf4TsHAuw-unsplash1.jpg";
-import img2 from "../../img/home/acticles/andrew-neel-cckf4TsHAuw-unsplash2.jpg";
+import img1 from "../../img/home/acticles/annie-spratt-QckxruozjRg-unsplash.jpg";
+import img2 from "../../img/home/acticles/priscilla-du-preez-XkKCui44iM0-unsplash.jpg";
 
 const businessItems = {
   leftContent: {

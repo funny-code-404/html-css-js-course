@@ -118,19 +118,21 @@ class Slider extends React.Component {
                         transform: "translate(-50%, -50%)",
                       }}
                     >
-                      {(items.title || items.subTitle) && (
-                        <Typography
-                          items={items}
-                          // isLine={isLine}
-                          settings={{
-                            colorTitle: "white",
-                            stylesText: `${stylesText}`,
-                            fontSizeSubTitle: "30px ",
-                            colorSubTitle: "white",
-                            colorText: "#fff",
-                          }}
-                        />
-                      )}
+                      <div style={{ width: "70%" }}>
+                        {(items.title || items.subTitle) && (
+                          <Typography
+                            items={items}
+                            // isLine={isLine}
+                            settings={{
+                              colorTitle: "white",
+                              stylesText: `${stylesText}`,
+                              fontSizeSubTitle: "30px ",
+                              colorSubTitle: "white",
+                              colorText: "#fff",
+                            }}
+                          />
+                        )}
+                      </div>
                     </ContentContainer>
                   </Img>
                 </>

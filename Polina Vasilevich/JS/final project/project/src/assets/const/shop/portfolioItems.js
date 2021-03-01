@@ -1,10 +1,10 @@
-import img1 from "../../img/portfolio/christopher-gower-m_HRfLhgABo-unsplash.jpg";
-import img2 from "../../img/portfolio/domenico-loia-hGV2TfOh0ns-unsplash.jpg";
-import img3 from "../../img/portfolio/john-jennings-fg7J6NnebBc-unsplash.jpg";
-import img4 from "../../img/portfolio/neven-krcmarek-V4EOZj7g1gw-unsplash.jpg";
-import img5 from "../../img/portfolio/scott-graham-5fNmWej4tAA-unsplash.jpg";
-import img6 from "../../img/portfolio/ux-store-jJT2r2n7lYA-unsplash.jpg";
-import img7 from "../../img/portfolio/nick-morrison-FHnnjk1Yj7Y-unsplash.jpg";
+import img1 from "../../img/portfolio/photos/59454-original-1200.jpg";
+import img2 from "../../img/portfolio/photos/b2c2a6aa8ab0367084c1a0d78c16f2c7.jpg";
+import img3 from "../../img/portfolio/photos/Book-Festival-Website-Design-Tubik.png";
+import img4 from "../../img/portfolio/photos/coup-lite-free-minimalist-clean-wp-theme-840x524.jpg";
+import img5 from "../../img/portfolio/photos/лучшие-корпоративные-шаблоны-сайтов-на-wordpress-01.jpg";
+import img6 from "../../img/portfolio/photos/website-portfolio-crazy-web-studio-phuket.jpg";
+import img7 from "../../img/portfolio/photos/screenshot.jpg";
 
 const portfolioItems = {
   imgs: [
