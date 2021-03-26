@@ -122,9 +122,7 @@ const setStylesButton = (stylesButton) => {
               margin-right: 10px;
 
               &:hover {
-                background-color: #575757;
-                border-color: #575757;
-               
+                color: rgb(66, 133, 244);
               }
             `;
 

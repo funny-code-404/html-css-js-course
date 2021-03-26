@@ -17,15 +17,17 @@ class Introducing extends React.Component {
         settings={settings}
         backgroundImg={backgroundImg}
         contentContainer={
-          <ContentContainer {...settings} id={id}>
-            <Typography items={items} isLine settings={settings} />
-            <Button
-              buttonIcon={buttonIcon}
-              buttonLabel={buttonLabel}
-              {...settings}
-              handleButton={(e) => handleLink(e, "features")}
-            />
-          </ContentContainer>
+          <div id="intro1">
+            <ContentContainer {...settings}>
+              <Typography items={items} isLine settings={settings} />
+              <Button
+                buttonIcon={buttonIcon}
+                buttonLabel={buttonLabel}
+                {...settings}
+                handleButton={(e) => handleLink(e, "features")}
+              />
+            </ContentContainer>
+          </div>
         }
       />
     );

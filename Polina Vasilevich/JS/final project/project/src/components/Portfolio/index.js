@@ -7,6 +7,16 @@ import { Icon } from "../Icon/styles";
 import { IconsContainer, GridContainer } from "./styles";
 
 class Portfolio extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  handleClick(e, href) {
+    e.preventDefault();
+    // document.location = `${href}`;
+    window.open(href);
+  }
+
   render() {
     const { items, settings } = this.props;
 
@@ -40,18 +50,22 @@ class Portfolio extends React.Component {
             >
               {items.icons.map(({ icon, href, backgroundColor }) => {
                 return (
-                  <IconsContainer backgroundColor={backgroundColor}>
-                    <a
+                  <IconsContainer
+                    backgroundColor={backgroundColor}
+                    onClick={(e) => this.handleClick(e, href)}
+                  >
+                    {/* <a
                       key={href}
                       href={href}
                       style={{ textDecoration: "none" }}
-                    >
-                      <Icon
-                        className={icon}
-                        stylesIcon="footer"
-                        style={{ opacity: "1" }}
-                      ></Icon>
-                    </a>
+                      target="_blank"
+                    > */}
+                    <Icon
+                      className={icon}
+                      stylesIcon="footer"
+                      style={{ opacity: "1" }}
+                    ></Icon>
+                    {/* </a> */}
                   </IconsContainer>
                 );
               })}

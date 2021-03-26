@@ -110,6 +110,7 @@ class FooterComponent extends React.Component {
                         key={href}
                         href={href}
                         style={{ textDecoration: "none" }}
+                        target="_blank"
                       >
                         <Icon className={icon} stylesIcon="footer"></Icon>
                       </a>

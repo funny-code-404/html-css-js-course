@@ -9,3 +9,7 @@
   color: #333333;
   text-decoration: none;
 }
+
+.headerLink:hover {
+  font-weight: 500;
+}

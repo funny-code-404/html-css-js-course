@@ -12,6 +12,11 @@ export const IconsContainer = styled.div`
 
   ${(props) =>
     props.backgroundColor && `background-color: ${props.backgroundColor}`};
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.05);
+  }
 `;
 
 export const GridContainer = styled.div`
