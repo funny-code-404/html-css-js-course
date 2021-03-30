@@ -31,13 +31,13 @@ export const Img = styled.div`
     props.backgroundImg && `background-image: url(${props.backgroundImg});`};
 
   position: absolute;
-  opacity: 0;
-  z-index: 0;
+  opacity: 1;
+  z-index: 1;
   transition: transform ease 0.5s, opacity ease 0.5s;
 
-  :nth-of-type(1) {
-    opacity: 1;
-    z-index: 1;
+  &.opacity {
+    opacity: 0;
+    z-index: 0;
   }
 `;
 

@@ -1,92 +1,76 @@
 import React from "react";
-import axios from "axios";
+import classnames from "classnames";
 import PropTypes from "prop-types";
 
 import Button from "../Button";
 import MainContainer from "../MainContainer";
-import { Form, ItemFrom, Select, Option, Info, Textarea } from "./styles";
+import API from "./api";
+
+import { Form, Input, Select, Option, Info, Textarea } from "./styles";
+
 class FormComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.id = props.idForm;
-    this.state = { isValid: true, data: [] };
+  state = {
+    data: {},
+    errors: {},
+    isValid: true,
+  };
+
+  fields = this.props.items.inputs;
+
+  clearForm() {
+    const data = {};
+    this.fields.map(({ name }) => {
+      data[name] = "";
+    });
+
+    this.setState({
+      data,
+    });
+  }
+
+  validate() {
+    const { data } = this.state;
+    let isValid = true;
+    const errors = {};
+
+    this.fields.map(({ name }) => {
+      if (!data[name]) {
+        isValid = false;
+        errors[name] = `Please enter your ${name}.`;
+      }
+    });
+
+    this.setState({
+      errors,
+      isValid,
+    });
+
+    return isValid;
   }
 
   handleChange = (e) => {
-    e.target.classList.remove("notValid");
     const { value, name } = e.target;
-
-    this.setState((prevState) => ({
-      ...prevState,
-      data: { ...this.state.data, [name]: value },
-    }));
-  };
-
-  clearForm = () => {
-    const inputs = document
-      .getElementById(this.id)
-      .getElementsByClassName("input");
-
-    Array.prototype.forEach.call(inputs, (input) => {
-      if (input.value && input.tagName === "INPUT") {
-        input.value = "";
-        this.setState((prevState) => ({
-          ...prevState,
-          [input.name]: "",
-        }));
-      }
-
-      if (input.value && input.tagName === "SELECT") {
-        input.value = input[0].value;
-        this.setState((prevState) => ({
-          ...prevState,
-          [input.name]: input[0].value,
-        }));
-      }
+    const { data } = this.state;
+    data[name] = value;
+    this.setState({
+      data,
     });
   };
 
-  validateForm = () => {
-    const inputs = document
-      .getElementById(this.id)
-      .getElementsByClassName("input");
-    let isValid = true;
-    Array.prototype.filter.call(inputs, (input) => {
-      if (
-        ((input.tagName === "INPUT" || input.tagName === "TEXTAREA") &&
-          !input.value) ||
-        (input.tagName === "SELECT" && input.value === input[0].value)
-      ) {
-        input.classList.add("notValid");
-        isValid = false;
-      } else {
-        input.classList.remove("notValid");
-      }
-    });
-
-    this.setState((prevState) => ({
-      ...prevState,
-      isValid: isValid,
-    }));
-
-    return isValid;
-  };
-
-  handleClick(e) {
+  handleSubmit = (e) => {
     e.preventDefault();
-    if (this.validateForm()) {
+    const data = {
+      ...this.state.data,
+    };
+
+    if (this.validate()) {
+      API.post(`posts`, { data })
+        .then((res) => console.log(res.data))
+        .catch((error) => console.log(error));
+
       this.clearForm();
-      axios
-        .post("https://jsonplaceholder.typicode.com/posts", {
-          data: { ...this.state.data },
-        })
-        .then((response) => {
-          // console.log("Request succeeded with JSON response", response.data);
-          alert("Request completed successfully!");
-        })
-        .catch((e) => console.log(e));
     }
-  }
+  };
 
   render() {
     const {
@@ -98,9 +82,7 @@ class FormComponent extends React.Component {
     } = this.props.items;
 
     const { settings } = this.props;
-    const stylesInfoForm = !this.state.isValid
-      ? { color: "red", fontWeigth: "bold" }
-      : {};
+    const { errors, isValid, data } = this.state;
 
     return (
       <MainContainer
@@ -115,14 +97,19 @@ class FormComponent extends React.Component {
           >
             {inputs.map(({ type, placeholder, name, required }, index) => {
               return (
-                <ItemFrom
-                  key={`itemForm${index}`}
-                  required
-                  className="input"
-                  type={type}
-                  placeholder={placeholder}
-                  name={name}
-                ></ItemFrom>
+                <>
+                  <Input
+                    key={`itemForm${index}`}
+                    required
+                    className={classnames("input", { notValid: errors[name] })}
+                    type={type}
+                    placeholder={placeholder}
+                    name={name}
+                    value={data[name]}
+                  ></Input>
+                  {/* 
+                  <span style={{ color: "red" }}>{errors[`${name}`]}</span> */}
+                </>
               );
             })}
             {select && (
@@ -146,11 +133,14 @@ class FormComponent extends React.Component {
             <Button
               buttonLabel={buttonLabel}
               buttonIcon={buttonIcon}
-              handleButton={this.handleClick.bind(this)}
+              handleButton={this.handleSubmit.bind(this)}
               settings={settings}
             />
 
-            <Info className="info" style={stylesInfoForm}>
+            <Info
+              className="info"
+              className={classnames({ notValid: !isValid })}
+            >
               All fields are required
             </Info>
           </Form>

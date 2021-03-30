@@ -1,4 +1,5 @@
 import React from "react";
+import classnames from "classnames";
 import {
   SlidersContainer,
   Img,
@@ -16,74 +17,44 @@ import Button from "../Button";
 import { handleScrollDown, handleLink } from "../Button/handlers";
 
 class Slider extends React.Component {
-  constructor(props) {
-    super(props);
-    this.id = props.id;
-    this.state = {
-      currentSliderIndex: 1,
-    };
-  }
+  state = { currentSliderIndex: 1 };
+  countImgs = this.props.items.imgs.length;
 
-  componentDidMount() {
-    this.imgs = document.getElementById(this.id).getElementsByClassName("img");
-  }
-
-  setOpacitySlider = (indexInvisible, indexVisible) => {
-    this.imgs[indexInvisible].style.opacity = "0";
-    this.imgs[indexVisible].style.opacity = "1";
+  setCurrentSliderIndex = (sliderIndex) => {
+    this.setState((prevState) => ({
+      ...prevState,
+      currentSliderIndex: sliderIndex,
+    }));
   };
 
-  nextSlider = (e) => {
-    e.preventDefault();
-    this.setState((prevState) => {
-      if (this.state.currentSliderIndex < this.imgs.length) {
-        this.setOpacitySlider(
-          prevState.currentSliderIndex - 1,
-          prevState.currentSliderIndex
-        );
-        return { currentSliderIndex: prevState.currentSliderIndex + 1 };
-      } else {
-        this.setOpacitySlider(this.imgs.length - 1, 0);
-        return { currentSliderIndex: 1 };
-      }
-    });
+  nextSlider = () => {
+    const { currentSliderIndex } = this.state;
+    const sliderIndex =
+      currentSliderIndex === this.countImgs ? 1 : currentSliderIndex + 1;
+    this.setCurrentSliderIndex(sliderIndex);
   };
 
-  prevSlider = (e) => {
-    e.preventDefault();
-    this.setState((prevState) => {
-      if (this.state.currentSliderIndex > 1) {
-        this.setOpacitySlider(
-          prevState.currentSliderIndex - 1,
-          prevState.currentSliderIndex - 2
-        );
-        return { currentSliderIndex: prevState.currentSliderIndex - 1 };
-      } else {
-        this.setOpacitySlider(
-          prevState.currentSliderIndex - 1,
-          this.imgs.length - 1
-        );
-        return { currentSliderIndex: this.imgs.length };
-      }
-    });
+  prevSlider = () => {
+    const { currentSliderIndex } = this.state;
+    const sliderIndex =
+      currentSliderIndex === 1 ? this.countImgs : currentSliderIndex - 1;
+    this.setCurrentSliderIndex(sliderIndex);
   };
 
   changeSlider = (e) => {
-    e.preventDefault();
-    this.setState((prevState) => {
-      this.setOpacitySlider(prevState.currentSliderIndex - 1, e.target.id);
-      return { currentSliderIndex: +e.target.id + 1 };
+    this.setState({
+      currentSliderIndex: +e.target.id + 1,
     });
   };
 
   render() {
     const { imgs, buttonLabel } = this.props.items;
+    const { currentSliderIndex } = this.state;
     const {
       id,
       isDots,
       isArrows,
       items,
-      isLine,
       stylesText,
       heightSliderContainer,
     } = this.props;
@@ -105,12 +76,13 @@ class Slider extends React.Component {
                     key={`img${index}`}
                     backgroundImg={img}
                     id={index}
-                    className="img"
+                    className={classnames("img", {
+                      opacity: !(currentSliderIndex === index + 1),
+                    })}
                   >
                     <ContentContainer
                       positionContent="center"
                       style={{
-                        // width: "50%",
                         position: "absolute",
                         zIndex: "2",
                         top: "50%",
@@ -173,9 +145,9 @@ class Slider extends React.Component {
                     <Dot
                       key={`dots ${index}`}
                       id={index}
-                      className={
-                        index + 1 === this.state.currentSliderIndex && "active"
-                      }
+                      className={classnames({
+                        active: index + 1 === this.state.currentSliderIndex,
+                      })}
                       onClick={this.changeSlider}
                     ></Dot>
                   );

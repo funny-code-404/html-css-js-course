@@ -29,37 +29,9 @@ const setSizeInput = (sizeInput) => {
   }
 };
 
-// const setStylesInput = (stylesInput) => {
-//   switch (stylesInput) {
-//     case "featuresDarkForm":
-//       return `
-
-//         ${ItemFrom} {
-//           background-color: #444957;
-//         }
-
-//         ${Select} {
-//           background-color: #444957;
-//         }
-
-//         ${Textarea} {
-//           background-color: #444957;
-//         }
-
-//       `;
-
-//     default:
-//       return `
-//         width: 26vw;
-//         height: 61px;
-
-//       `;
-//   }
-// };
-
 const styles = `
+  text-indent: 20px;
   margin-bottom: 19px;
-  height: 61px;
   font-family: OpenSans;
   font-size: 16px;
   outline: none;
@@ -68,7 +40,7 @@ const styles = `
   
 `;
 
-export const ItemFrom = styled.input`
+export const Input = styled.input`
   ${styles};
   color: ${(props) =>
     props.colorTextInput ? props.colorTextInput : "#999999"};
@@ -93,7 +65,9 @@ export const Select = styled.select`
   }
 `;
 
-export const Option = styled.option``;
+export const Option = styled.option`
+  padding-left: 20px;
+`;
 
 export const Info = styled.span`
   font-family: OpenSans;
@@ -104,6 +78,9 @@ export const Info = styled.span`
   text-align: center;
 
   margin-top: 13px;
+  &.notValid {
+    color: red;
+  }
 `;
 
 export const Textarea = styled.textarea`
@@ -123,7 +100,7 @@ export const Form = styled.form`
   flex-direction: column;
   justify-content: center;
   align-items: ${(props) => (props.alignItems ? props.alignItems : "center")};
-  ${ItemFrom} {
+  ${Input} {
     ${(props) => setSizeInput(props.sizeInput)};
   }
 
@@ -134,7 +111,10 @@ export const Form = styled.form`
   ${Textarea} {
     ${(props) => setSizeInput(props.sizeInput)};
   }
+
   ${Button} {
     ${(props) => setSizeInput(props.sizeInput)};
   }
 `;
+
+export const Error = styled.span``;
