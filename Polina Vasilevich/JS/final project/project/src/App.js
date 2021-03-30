@@ -55,13 +55,33 @@ const routes = [
 ];
 
 class App extends React.Component {
+  state = { hiddenArrow: true };
+
+  handleScroll = () => {
+    const hiddenArrow =
+      window.pageYOffset < document.documentElement.clientHeight * 3;
+    this.setState({
+      hiddenArrow,
+    });
+  };
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
   render() {
     return (
       <div className="App">
         <Header routes={routes} logoImg={logo} logoText={"THEFOX BUSINESS"} />
-        <Arrow onClick={handleScrollTop}>
-          <i className="ti-angle-up"></i>
-        </Arrow>
+        {!this.state.hiddenArrow && (
+          <Arrow onClick={handleScrollTop}>
+            <i className="ti-angle-up"></i>
+          </Arrow>
+        )}
+
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/demos" component={Demos} />

@@ -172,7 +172,8 @@ export const FlexContainer = styled.div`
 
 export const Arrow = styled.button`
   position: fixed;
-  right: 70px;
+  right: 20px;
+  bottom: 30px;
   z-index: 2;
 
   width: 40px;
