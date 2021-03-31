@@ -188,7 +188,7 @@ export const MainContainer = styled.div`
 
   ${(props) => setHeightMainContainer(props.heightMainContainer)};
   ${(props) => setMediaBlock(props.mediaBlock)};
-  transition: opacity ease 0.5s;
+  transition: visibility 0s, opacity 0.5s linear;
   ${(props) => setpositionContentBlock(props.positionContentBlock)};
 `;
 
@@ -245,10 +245,12 @@ const setStylesBlock = (stylesBlock) => {
 
     case "aside":
       return `
-      padding-top: 33px;
-      padding-bottom: 105px;
-      padding-left: 0;
-      padding-right: 47%;
+        padding-top: 33px;
+        padding-bottom: 105px;
+        padding-left: 0;
+        padding-right: 47%;
+
+
       `;
 
     case "asideIconsList":

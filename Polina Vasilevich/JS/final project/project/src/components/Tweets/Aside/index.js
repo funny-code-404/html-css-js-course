@@ -9,18 +9,27 @@ import Form from "../../Form";
 import Photos from "../../Photos";
 import MainContainer from "../../MainContainer";
 
-import { Aside, Search } from "./styles";
+import { Aside, Search, Arrow } from "./styles";
 class AsideComponent extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { items: this.props.items.posts.items };
+    this.state = { posts: this.props.items.posts.items };
   }
 
   handleFilterList = (e) => {
     const posts = this.props.items.posts.items;
+    let { value } = e.target;
 
-    const filteredList = posts.filter(({ title, date }) => {
-      const filterDate = (date) => {
+    const searchByTitle = (title) => {
+      return title.toLowerCase().includes(value.toLowerCase());
+    };
+
+    const searchByDate = (date) => {
+      function searchByYear() {
+        return String(date.getFullYear()).includes(value);
+      }
+
+      function searchByMonth() {
         const months = [
           "January",
           "February",
@@ -35,26 +44,27 @@ class AsideComponent extends React.Component {
           "November",
           "December",
         ];
+        return String(months[date.getMonth()])
+          .toLowerCase()
+          .includes(value.toLowerCase());
+      }
 
-        return (
-          String(date.getFullYear()).search(e.target.value.toLowerCase()) !==
-            -1 ||
-          months[date.getMonth()].search(e.target.value.toLowerCase()) !== -1 ||
-          String(date.getDate()).search(e.target.value.toLowerCase()) !== -1
-        );
-      };
+      function searchByDay() {
+        return String(date.getDate()).includes(value);
+      }
 
-      return (
-        title.toLowerCase().search(e.target.value.toLowerCase()) !== -1 ||
-        filterDate(date)
-      );
-    });
+      return searchByYear() || searchByMonth() || searchByDay();
+    };
 
-    this.setState({ items: filteredList });
+    const filteredPosts = posts.filter(
+      ({ title, date }) => searchByTitle(title) || searchByDate(date)
+    );
+
+    this.setState({ posts: filteredPosts });
   };
 
   render() {
-    const { settings, style } = this.props;
+    const { settings, style, handleClick } = this.props;
     const { posts, tags, photos, form, categories, archive } = this.props.items;
 
     return (
@@ -68,6 +78,7 @@ class AsideComponent extends React.Component {
         styles={style}
         contentContainer={
           <Aside id="aside">
+            <Arrow onClick={handleClick}></Arrow>
             <Search
               type="search"
               placeholder="Search..."
@@ -77,7 +88,7 @@ class AsideComponent extends React.Component {
               items={posts}
               contentContainer={
                 <IconsList
-                  items={this.state.items}
+                  items={this.state.posts}
                   settings={{
                     heightImg: "111px",
                     widthImg: "111px",

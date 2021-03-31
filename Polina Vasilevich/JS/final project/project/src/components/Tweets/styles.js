@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Tweets = styled.div`
+  position: relative;
   display: grid;
   grid-template-columns: 55% 40%;
   grid-gap: 6.5%;
@@ -22,12 +23,17 @@ export const Avatar = styled.div`
     props.backgroundImg ? `url(${props.backgroundImg})` : ""};
 `;
 
-export const InVisible = styled.div`
-  border-top: 30px solid transparent;
-  border-right: 30px solid #e3e3e3;
-  border-bottom: 30px solid transparent;
-  border-left: 30px solid transparent;
+export const ButtonAside = styled.button`
+  position: absolute;
+  top: 110px;
+  right: 10vw;
+  z-index: 1;
 
-  transition: 0.6s ease;
+  font-size: 25px;
+  color: #999999;
+  background-color: transparent;
+  border-color: transparent;
   outline: none;
+
+  cursor: pointer;
 `;

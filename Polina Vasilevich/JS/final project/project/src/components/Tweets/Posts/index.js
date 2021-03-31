@@ -63,7 +63,6 @@ class PostsComponent extends React.Component {
         contentContainer={
           <>
             <Posts>
-              <Arrow onClick={handleClick}>{icon}</Arrow>
               {items
                 .slice(beginIndexList, endIndexList)
                 .map(({ info, content }, index) => {

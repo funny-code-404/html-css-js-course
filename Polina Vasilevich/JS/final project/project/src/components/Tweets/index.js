@@ -1,27 +1,27 @@
 import React from "react";
-
 import Posts from "./Posts";
 import Aside from "./Aside";
-import { InVisible, Tweets } from "./styles";
+import { Tweets, ButtonAside } from "./styles";
 
 class TweetsComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isVisible: false,
+      hidden: false,
     };
   }
 
   handleInvisibleBlock(e) {
     e.preventDefault();
     this.setState((prevState) => ({
-      isVisible: !prevState.isVisible,
+      hidden: !prevState.hidden,
     }));
   }
 
   render() {
     const { settings } = this.props;
-    const condition = !this.state.isVisible;
+    const condition = !this.state.hidden;
+
     const stylesGridBlock = !condition
       ? {
           gridTemplateColumns: "1fr",
@@ -35,20 +35,29 @@ class TweetsComponent extends React.Component {
           paddingRight: "11%",
         }
       : {};
-    const stylesAside = !condition ? { opacity: "0", display: "none" } : {};
 
-    const icon = !condition ? <i className="ti-menu"></i> : <InVisible />;
+    const styleAside = !condition
+      ? {
+          visibility: "hidden",
+          opacity: "0",
+          position: "fixed",
+        }
+      : {};
 
     return (
       <>
         <Tweets style={stylesGridBlock}>
-          <Posts
-            items={this.props.items.tweets}
+          <Posts items={this.props.items.tweets} styles={stylesMainBlock} />
+          {!condition && (
+            <ButtonAside onClick={this.handleInvisibleBlock.bind(this)}>
+              <i className="ti-menu"></i>
+            </ButtonAside>
+          )}
+          <Aside
+            items={this.props.items.asideItems}
+            style={styleAside}
             handleClick={this.handleInvisibleBlock.bind(this)}
-            icon={icon}
-            styles={stylesMainBlock}
           />
-          <Aside items={this.props.items.asideItems} style={stylesAside} />
         </Tweets>
       </>
     );

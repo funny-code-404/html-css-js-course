@@ -43,7 +43,7 @@ export const Arrow = styled.button`
   color: #999999;
   z-index: 1;
 
-  transition: 0.6s ease;
+  transition: all 0.2s ease-in-out;
   outline: none;
 
   background-color: transparent;

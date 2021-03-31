@@ -190,7 +190,5 @@ export const CopyRightIcon = styled.div`
   margin-left: 5%;
   &:hover {
     opacity: 1;
-    transition: all 0.2s ease-in-out;
-    transform: scale(1.2);
   }
 `;
