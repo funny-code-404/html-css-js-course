@@ -42,9 +42,28 @@ class HeaderComponent extends React.Component {
     });
   };
 
-  handleShowMenu = (e) => {
+  handleShowMenu = () => {
     this.setState((prevState) => ({ showMenu: !prevState.showMenu }));
   };
+
+  handleClickOutside = (e) => {
+    // if (
+    //   this.state.showMenu &&
+    //   !e.target.id.includes("headerList") &&
+    //   !e.target.parentElement.id.includes("headerList")
+    // ) {
+    //   this.setState({
+    //     showMenu: false,
+    //   });
+    // }
+  };
+
+  componentDidMount() {
+    document.addEventListener("mousedown", this.handleClickOutside);
+  }
+  componentWillUnmount() {
+    document.removeEventListener("mousedown", this.handleClickOutside);
+  }
 
   setStylesNavigation = (condition) => {
     return condition ? { color: "#4285F4" } : {};
@@ -81,6 +100,7 @@ class HeaderComponent extends React.Component {
                     style={styles}
                     to={path}
                     onChange={this.handleChange}
+                    onClick={this.handleClick}
                   >
                     {label}
                   </Link>

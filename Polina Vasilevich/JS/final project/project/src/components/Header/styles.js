@@ -97,7 +97,6 @@ export const NavigationButton = styled.button`
   color: #999999;
   z-index: 1;
 
-  transition: 0.6s ease;
   outline: none;
 
   background-color: transparent;
@@ -105,6 +104,10 @@ export const NavigationButton = styled.button`
 
   @media (max-width: 1345px) {
     display: block;
+  }
+
+  :hover {
+    color: #4285f4;
   }
 `;
 
