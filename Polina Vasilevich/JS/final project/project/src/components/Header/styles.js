@@ -4,22 +4,30 @@ export const Header = styled.header`
 `;
 
 export const List = styled.ul`
+  position: relative;
   list-style: none;
   @media (max-width: 1345px) {
     &.hideMenu {
-      display: none;
+      transform: translateX(-100%);
+      transition: transform 0.2s ease-in-out;
     }
     &.showMenu {
-      display: block;
+      transform: none;
     }
 
     &.menu {
-      position: absolute;
-      background-color: #f1f1f1;
+      padding-top: 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      max-width: 30vw;
+      min-height: 100vh;
 
-      top: 11px;
+      background-color: #fff;
 
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      // box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 16px rgb(0 0 0 / 15%);
       z-index: 999999;
 
       li {
@@ -30,11 +38,9 @@ export const List = styled.ul`
       a {
         display: inline-block;
         padding: 10px 3vw;
-        width: 10vw;
+
         :hover {
           cursor: pointer;
-
-          background-color: #ccc;
         }
       }
     }
@@ -49,7 +55,7 @@ export const ListItem = styled.li`
 
 export const LogoContainer = styled.div`
   display: flex;
-  @media (max-width: 1500px) {
+  @media (max-width: 1480px) {
     flex-direction: column;
     align-items: center;
   }
@@ -73,6 +79,12 @@ export const Navigation = styled.nav`
   position: relative;
   display: flex;
   align-items: center;
+
+  @media (max-width: 1345px) {
+    position: absolute;
+    left: 10%;
+    bottom: 29px;
+  }
 `;
 
 export const NavigationButton = styled.button`
@@ -93,5 +105,25 @@ export const NavigationButton = styled.button`
 
   @media (max-width: 1345px) {
     display: block;
+  }
+`;
+
+export const CrossButton = styled.button`
+  cursor: pointer;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+
+  font-size: 20px;
+  color: #999999;
+
+  background-color: transparent;
+  border: transparent;
+  outline: none;
+
+  :hover {
+    color: #4285f4;
   }
 `;

@@ -133,7 +133,7 @@ const setHeightMainContainer = (heightMainContainer) => {
       return `height: 800px;`;
 
     case "footer":
-      return `height: 385px;`;
+      return `height: 100%;`;
     case "work":
       return `height: 701px;`;
 
@@ -188,7 +188,7 @@ export const MainContainer = styled.div`
 
   ${(props) => setHeightMainContainer(props.heightMainContainer)};
   ${(props) => setMediaBlock(props.mediaBlock)};
-  transition: visibility 0s, opacity 0.5s linear;
+  transition: transform 0.2s ease-in-out;
   ${(props) => setpositionContentBlock(props.positionContentBlock)};
 `;
 

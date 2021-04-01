@@ -22,25 +22,14 @@ class TweetsComponent extends React.Component {
     const { settings } = this.props;
     const condition = !this.state.hidden;
 
-    const stylesGridBlock = !condition
-      ? {
-          gridTemplateColumns: "1fr",
-        }
-      : {};
+    const stylesGridBlock = !condition ? {} : {};
 
-    const stylesMainBlock = !condition
-      ? {
-          paddingTop: "50px",
-          paddingLeft: "11%",
-          paddingRight: "11%",
-        }
-      : {};
+    const stylesMainBlock = !condition ? { width: "100%" } : {};
 
     const styleAside = !condition
       ? {
-          visibility: "hidden",
-          opacity: "0",
-          position: "fixed",
+          transform: "translateX(1000%)",
+          transition: "transform 0.5s ease-in-out",
         }
       : {};
 

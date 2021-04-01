@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Text } from "../Typography/styles";
 
 export const Footer = styled.footer`
   background-color: ${(props) =>
@@ -79,6 +78,7 @@ export const Icon = styled.i`
   font-weight: 400;
   color: #999999;
 `;
+export const FooterColumn = styled.div``;
 
 export const FooterColumnsContainer = styled.div`
   width: 100%;
@@ -88,55 +88,39 @@ export const FooterColumnsContainer = styled.div`
 
   @media (max-width: 1440px) {
     grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    ${FooterColumn}:nth-of-type(1) {
+      grid-row: 1;
+      grid-column: 2;
+    }
+
+    ${FooterColumn}:nth-of-type(n + 2) {
+      grid-row: 2;
+    }
   }
 
   @media (max-width: 956px) {
     grid-template-columns: repeat(2, 1fr);
-  }
-`;
-
-// &:nth-of-type(n + 2) {
-//   grid-row: 2;
-// }
-// &:nth-of-type(1) {
-//   grid-column: 2/8;
-// }
-
-// &:nth-of-type(2) {
-//   grid-column: 1/4;
-// }
-
-// &:nth-of-type(3) {
-//   grid-column: 4/7;
-// }
-
-// &:nth-of-type(4) {
-//   grid-column: 7/10;
-// }
-
-// @media (max-width: 847px) {
-// &:nth-of-type(2) {
-//   display: none;
-// }
-
-// &:nth-of-type(3) {
-//   grid-column: 2/6;
-// }
-
-// &:nth-of-type(4) {
-//   grid-column: 6/10;
-// }
-
-export const FooterColumn = styled.div`
-  @media (max-width: 1443px) {
-    &:nth-of-type(2) {
-      display: none;
+    ${FooterColumn}:nth-of-type(1) {
+      grid-row: 2;
+      grid-column: 1;
     }
 
-    @media (max-width: 956px) {
-      &:nth-of-type(3) {
-        display: none;
-      }
+    ${FooterColumn}:nth-of-type(n + 2) {
+      grid-column: 2;
+    }
+
+    ${FooterColumn}:nth-of-type(2) {
+      grid-row: 1;
+    }
+
+    ${FooterColumn}:nth-of-type(3) {
+      grid-row: 2;
+    }
+
+    ${FooterColumn}:nth-of-type(4) {
+      grid-row: 3;
+    }
   }
 `;
 
@@ -145,21 +129,7 @@ export const CopyRightIconsContainer = styled.div`
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 2vw;
 
-  @media (max-width: 1370px) {
-    &.hideIcons {
-      display: none;
-    }
-  }
-
-  &.showIcons {
-    display: block;
-    text-align: center;
-    position: absolute;
-    width: 16vw;
-    top: 51px;
-    right: 13%;
-
-    z-index: 2;
+  @media (max-width: 1440) {
   }
 `;
 

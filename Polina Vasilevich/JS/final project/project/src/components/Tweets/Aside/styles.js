@@ -3,13 +3,7 @@ import styled from "styled-components";
 export const Aside = styled.aside`
   position: relative;
   z-index: 2;
-
   padding: 0 25px;
-
-  &.inVisible {
-        visibility: hidden,
-        opacity: 0,
-  }
 `;
 
 export const Search = styled.input`
@@ -35,10 +29,10 @@ export const Arrow = styled.div`
   right: 20vw;
   z-index: 1;
 
-  border-top: 30px solid transparent;
-  border-right: 30px solid #e3e3e3;
-  border-bottom: 30px solid transparent;
-  border-left: 30px solid transparent;
+  border-top: 35px solid transparent;
+  border-right: 35px solid #e3e3e3;
+  border-bottom: 35px solid transparent;
+  border-left: 35px solid transparent;
 
   outline: none;
 `;

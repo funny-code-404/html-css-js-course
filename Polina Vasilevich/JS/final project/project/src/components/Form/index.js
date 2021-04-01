@@ -72,6 +72,15 @@ class FormComponent extends React.Component {
     }
   };
 
+  deleteErrorsInput = (e) => {
+    const { errors } = this.state;
+    errors[e.target.name] = "";
+
+    this.setState({
+      errors,
+    });
+  };
+
   render() {
     const {
       inputs,
@@ -94,6 +103,7 @@ class FormComponent extends React.Component {
             id={this.props.idForm}
             onChange={this.handleChange}
             {...settings}
+            onFocus={this.deleteErrorsInput}
           >
             {inputs.map(({ type, placeholder, name, required }, index) => {
               return (

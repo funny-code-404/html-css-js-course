@@ -15,6 +15,7 @@ import {
   LogoText,
   Navigation,
   NavigationButton,
+  CrossButton,
 } from "./styles";
 
 import "./styles.css";
@@ -42,15 +43,7 @@ class HeaderComponent extends React.Component {
   };
 
   handleShowMenu = (e) => {
-    e.preventDefault();
-
-    if (!e.target.matches("#navigationButton")) {
-      this.setState({
-        showMenu: false,
-      });
-    } else {
-      this.setState((prevState) => ({ showMenu: !prevState.showMenu }));
-    }
+    this.setState((prevState) => ({ showMenu: !prevState.showMenu }));
   };
 
   setStylesNavigation = (condition) => {
@@ -61,13 +54,13 @@ class HeaderComponent extends React.Component {
     const { routes, logoImg, logoText } = this.props;
     const { showMenu } = this.state;
     const contentContainer = (
-      <FlexContainer heightFlexContainer="header" onClick={this.handleShowMenu}>
+      <FlexContainer heightFlexContainer="header" mediaFlexBlock="header">
         <LogoContainer>
           <LogoImg src={logoImg} alt={logoImg} />
           <LogoText>{logoText}</LogoText>
         </LogoContainer>
         <Navigation>
-          <NavigationButton>
+          <NavigationButton onClick={this.handleShowMenu}>
             <i className="ti-menu" id="navigationButton"></i>
           </NavigationButton>
 
@@ -75,6 +68,7 @@ class HeaderComponent extends React.Component {
             id="headerList"
             className={`${classnames("hideMenu", { showMenu: showMenu })} menu`}
           >
+            <CrossButton onClick={this.handleShowMenu}>&#10060;</CrossButton>
             {routes.map(({ path, label }, index) => {
               const styles = this.setStylesNavigation(
                 window.location.pathname === path

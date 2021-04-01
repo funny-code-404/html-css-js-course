@@ -44,7 +44,10 @@ class FooterComponent extends React.Component {
             stylesBlock: "callTo",
           }}
           contentContainer={
-            <FlexContainer heightFlexContainer="footer">
+            <FlexContainer
+              heightFlexContainer="footer"
+              mediaFlexBlock="footerIconsContainer"
+            >
               <FooterColumnsContainer mediaGridBlock="footer">
                 <FooterColumn
                   style={{
@@ -95,9 +98,6 @@ class FooterComponent extends React.Component {
             <FlexContainer heightFlexContainer="header" mediaFlexBlock="footer">
               <Text>{copyRight.text}</Text>
 
-              <FooterIconsButton onClick={this.handleShowIcons}>
-                <i className={classNameCopyRightIcons}></i>
-              </FooterIconsButton>
               <CopyRightIconsContainer
                 className={classnames("hideIcons", {
                   showIcons: showIcons,

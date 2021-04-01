@@ -155,7 +155,27 @@ const setMediaFlexBlock = (mediaFlexBlock) => {
             text-align: center; 
             width: 49ch;
           }
-        }`;
+        }
+        @media (max-width: 956px) {
+          padding: 20px 0;
+          flex-direction: column;
+          align-items: center;
+        }
+        `;
+
+    case "footerIconsContainer":
+      return `
+        @media (max-width: 956px) {
+          height: 600px;
+        }
+        `;
+
+    case "header":
+      return `
+        @media (max-width: 1345px) {
+          justify-content: center;
+        }
+        `;
 
     default:
       break;
