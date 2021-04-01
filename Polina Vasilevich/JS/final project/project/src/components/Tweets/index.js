@@ -22,7 +22,11 @@ class TweetsComponent extends React.Component {
     const { settings } = this.props;
     const condition = !this.state.hidden;
 
-    const stylesGridBlock = !condition ? {} : {};
+    const stylesGridBlock = !condition
+      ? {
+          overflow: "hidden",
+        }
+      : {};
 
     const stylesMainBlock = !condition ? { width: "100%" } : {};
 

@@ -87,7 +87,9 @@ class HeaderComponent extends React.Component {
             id="headerList"
             className={`${classnames("hideMenu", { showMenu: showMenu })} menu`}
           >
-            <CrossButton onClick={this.handleShowMenu}>&#10060;</CrossButton>
+            {showMenu && (
+              <CrossButton onClick={this.handleShowMenu}>&#x2715;</CrossButton>
+            )}
             {routes.map(({ path, label }, index) => {
               const styles = this.setStylesNavigation(
                 window.location.pathname === path

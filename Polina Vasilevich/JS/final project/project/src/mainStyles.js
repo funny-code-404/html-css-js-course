@@ -194,7 +194,7 @@ export const Arrow = styled.button`
   position: fixed;
   right: 20px;
   bottom: 30px;
-  z-index: 2;
+  z-index: 999999;
 
   width: 40px;
   height: 50px;
