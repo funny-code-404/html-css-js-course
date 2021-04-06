@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<head>
+    
+
+    <title>01</title>
+    <link rel="stylesheet" href="./style.ccs" />
+    <link rel="stylesheet" href="./script.js" />
+</head>
+
+<body>
+    <script>
+
+        for (var i = 1; i <= 100; i++) {
+            if (i % 15) {
+                if (i % 5) {
+                    if (i % 3) {
+                        console.log(i);
+                        continue;
+                    }
+                    console.log('Fizz');
+                    continue;
+                }
+                console.log('Buzz');
+                continue;
+            }
+            console.log('FizzBuzz');
+        }
+
+        /*var str = 'Лето удалось очень жарким, было много ягод и фруктов, лучшим местом для отдыха была речка';
+        console.log(str);
+        var str1 = str.slice(0, 25);
+        var str2 = str.slice(26, 52);
+        var str3 = str.slice(53);
+
+        var w1 = str2.slice(5);
+        var w2 = str3.slice(7);
+
+
+        var world = str2.slice(1, 5);
+
+        var b = world.charAt(0).toUpperCase(1);
+        var y = world.charAt(1);
+        var L = world.charAt(2);
+        var O = world.charAt(3);
+        var str4 = b.concat((y + L + O) + w1);
+
+        var world1 = str3.slice(1, 7);
+
+        var l = world1.charAt(0).toUpperCase(0);
+        var u = world1.charAt(1);
+        var ch = world1.charAt(2);
+        var sh = world1.charAt(3);
+        var y = world1.charAt(4);
+        var m = world1.charAt(5);
+        var str6 = l.concat((u + ch + sh + y + m) + w2);
+
+        var str5 = str1.concat('.' + ' ' + str4 + '.' + ' ' + str6 + '.');
+        console.log(str5);*/
+
+        var string = 'Антон, Дима и Женя пришли на День рождения cразу, а Миша пришел позже'
+        console.log(string);
+        var path1 = string.slice(26, 42);
+        var pretext1 = path1.slice(0, 1).charAt(0).toUpperCase(0);
+        var string1 = pretext1.concat(path1.slice(1));
+        var path2 = string.slice(19, 25);
+        var path3 = string.slice(0, 11);
+        var path4 = string.slice(14, 18);
+        var path5 = string.slice(52, 56);
+        var finish = string1.concat(' ' + path2 + ':' + ' ' + path3 + ',' + ' ' + path4 + ',' + ' ' + path5 + '.');
+        console.log(finish);
+
+    </script>
+</body>
+
+</html>
