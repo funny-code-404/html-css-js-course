@@ -47,16 +47,10 @@ let arr_1 = Array.from(new Set(numArr));
 console.log(arr_1);
 
 
-
-
-
 // вывести число повторяющихся элементов
 const numArr2 = ['1', '1', '3', '1', '3', '3', '7', '7', '5', '5', '5'];
 let arr_2 = Array.from(new Set(numArr2));
 console.log(numArr2.length - arr_2.length);
-
-
-
 
 
 // как тебя зовут
@@ -66,7 +60,6 @@ function sayHello() {
     alert(`Привет ${Name}`);
 }
 sayHello(Name);
-
 
 
 // min max
@@ -91,9 +84,6 @@ function minMax(arr) {
 }
 
 console.log(minMax(arr111));
-
-
-
 
 
 // калькулятор
@@ -147,5 +137,4 @@ function calculate(o1, o2, z) {
     }
 
 }
-
 calculate(oper1, oper2, getZnak());
