@@ -7,10 +7,6 @@ import { Icon } from "../Icon/styles";
 import { IconsContainer, GridContainer } from "./styles";
 
 class Portfolio extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   handleClick(e, href) {
     e.preventDefault();
     // document.location = `${href}`;

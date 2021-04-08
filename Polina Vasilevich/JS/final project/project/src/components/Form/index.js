@@ -15,12 +15,19 @@ class FormComponent extends React.Component {
     isValid: true,
   };
 
-  fields = this.props.items.inputs;
+  inputs = this.props.items.inputs;
+  select = this.props.items.select[0];
+
+  fields = [...this.inputs, this.select];
 
   clearForm() {
     const data = {};
-    this.fields.map(({ name }) => {
-      data[name] = "";
+    this.fields.map(({ type, name }) => {
+      if (type === "select") {
+        data[name] = this.props.items.select[0].placeholder;
+      } else {
+        data[name] = "";
+      }
     });
 
     this.setState({
@@ -123,19 +130,31 @@ class FormComponent extends React.Component {
               );
             })}
             {select && (
-              <Select name={select[0].firstOption} className="input" required>
-                <Option disabled selected hidden value={select[0].firstOption}>
-                  {select[0].firstOption}
+              <Select
+                name={select[0].name}
+                value={data[select[0].name]}
+                className={classnames("input", {
+                  notValid: errors[select[0].name],
+                })}
+              >
+                <Option disabled selected hidden value={select[0].placeholder}>
+                  {select[0].placeholder}
                 </Option>
-                {select.slice(1).map(({ option }) => (
-                  <Option value={option}>{option}</Option>
+                {select.slice(1).map(({ option }, index) => (
+                  <Option key={index} value={option}>
+                    {option}
+                  </Option>
                 ))}
               </Select>
             )}
 
             {textarea && (
               <Textarea
-                className="input"
+                name={textarea.name}
+                value={data[textarea.name]}
+                className={classnames("input", {
+                  notValid: errors[textarea.name],
+                })}
                 style={{ height: "201px" }}
               ></Textarea>
             )}
@@ -147,10 +166,7 @@ class FormComponent extends React.Component {
               settings={settings}
             />
 
-            <Info
-              className="info"
-              className={classnames({ notValid: !isValid })}
-            >
+            <Info className={classnames("info", { notValid: !isValid })}>
               All fields are required
             </Info>
           </Form>
@@ -176,7 +192,8 @@ FormComponent.defaultProps = {
         required: false,
       },
     ],
-    select: [],
+    select: [{ name: "", type: "", placeholder: "" }],
+    textarea: [{ name: "" }],
     buttonIcon: "",
     buttonLabel: "",
   },

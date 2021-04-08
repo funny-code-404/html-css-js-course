@@ -34,9 +34,9 @@ class Prices extends React.Component {
                   />
                   <InfoContainer>
                     <TextContainer>
-                      {item.list.map((elem) => {
+                      {item.list.map((elem, index) => {
                         return (
-                          <ItemInfoContainer>
+                          <ItemInfoContainer key={index}>
                             <Typography
                               items={elem}
                               settings={{

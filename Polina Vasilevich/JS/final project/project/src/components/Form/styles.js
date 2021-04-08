@@ -14,34 +14,32 @@ const setSizeInput = (sizeInput) => {
        
       `;
 
-    case "shortcodes":
-      return `
-      width: 33vw;
-      height: 61px;
-        `;
-
     default:
       return `
-        width: 26vw;
+        width: 550px;
         height: 61px;
+        @media(max-width: 1000px) {
+          width: 450px;
+        }
 
       `;
   }
 };
 
 const styles = `
-  text-indent: 20px;
+  
   margin-bottom: 19px;
   font-family: OpenSans;
   font-size: 16px;
   outline: none;
-  background-color: inherit;
+  background-color: transparent;
   border-radius: 3px;
   
 `;
 
 export const Input = styled.input`
   ${styles};
+  text-indent: 20px;
   color: ${(props) =>
     props.colorTextInput ? props.colorTextInput : "#999999"};
   border: 1px solid
@@ -54,6 +52,8 @@ export const Input = styled.input`
 
 export const Select = styled.select`
   ${styles};
+  padding-left: 20px;
+  opacity: 0.7;
   cursor: pointer;
   color: ${(props) =>
     props.colorTextInput ? props.colorTextInput : "#999999"};
@@ -66,7 +66,8 @@ export const Select = styled.select`
 `;
 
 export const Option = styled.option`
-  padding-left: 20px;
+  cursor: pointer;
+  color: #000;
 `;
 
 export const Info = styled.span`
@@ -85,6 +86,7 @@ export const Info = styled.span`
 
 export const Textarea = styled.textarea`
   ${styles}
+  padding: 20px 0;
   color: ${(props) =>
     props.colorTextInput ? props.colorTextInput : "#999999"};
   border: 1px solid

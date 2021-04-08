@@ -9,9 +9,7 @@ import img2 from "../../img/blog/info/content/imgs/brooke-cagle-WHWYBmtn3_0-unsp
 import img3 from "../../img/blog/info/content/imgs/carlos-muza-hpjSkU2UYSU-unsplash.jpg";
 import img4 from "../../img/blog/info/content/imgs/christin-hume-slbqShqAhEo-unsplash.jpg";
 import img5 from "../../img/blog/info/content/imgs/studio-republic-fotKKqWNMQ4-unsplash.jpg";
-import img6 from "../../img/blog/info/content/imgs/avi-richards-Z3ownETsdNQ-unsplash.jpg";
 
-import post1 from "../../img/blog/aside/posts/brooke-cagle-yIgdB7l8PaU-unsplash.jpg";
 import post2 from "../../img/blog/aside/posts/brooke-cagle-ZCSc8hoZrtw-unsplash.jpg";
 import post3 from "../../img/blog/aside/posts/emre-1UFtVObjt1U-unsplash.jpg";
 import post4 from "../../img/blog/aside/posts/jose-aljovin-Kfk-TPxLVL0-unsplash.jpg";

@@ -43,9 +43,9 @@ class TextComponent extends React.Component {
         {extraText && <ExtraText {...settings}>{extraText}</ExtraText>}
         {date && <Text {...settings}>{parseDate(date)}</Text>}
         {textList &&
-          textList.text.map((item) => {
+          textList.text.map((item, index) => {
             return (
-              <Text {...settings}>
+              <Text key={index} {...settings}>
                 <i className={textList.icon}></i>
                 {`  ${item}`}
               </Text>

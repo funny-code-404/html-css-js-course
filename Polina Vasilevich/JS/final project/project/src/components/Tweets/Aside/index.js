@@ -64,7 +64,7 @@ class AsideComponent extends React.Component {
   };
 
   render() {
-    const { settings, style, handleClick } = this.props;
+    const { style, handleClick } = this.props;
     const { posts, tags, photos, form, categories, archive } = this.props.items;
 
     return (

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import MainContainer from "../../MainContainer";
-import { Posts, Arrow, PostsItem } from "./styles";
+import { Posts, PostsItem } from "./styles";
 
 import Pagination from "./Pagination";
 import Info from "./Info";
@@ -49,7 +49,7 @@ class PostsComponent extends React.Component {
   }
 
   render() {
-    const { styles, handleClick, icon } = this.props;
+    const { styles } = this.props;
     const { icons } = this.props.items;
     const { currentPage, limit, items } = this.state;
     const amountOfPages = Math.round(items.length / limit);

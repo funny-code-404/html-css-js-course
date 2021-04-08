@@ -27,7 +27,7 @@ const setWidthButton = (widthButton) => {
       return `width: 15vw;`;
 
     case "form":
-      return `width: 26vw;`;
+      return `width: 70%;`;
 
     case "tweets":
       return `width: 17vw;`;

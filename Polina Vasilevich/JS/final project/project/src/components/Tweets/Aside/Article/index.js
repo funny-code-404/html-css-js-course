@@ -14,7 +14,7 @@ Article.defaultProps = {
 };
 
 export default function Article(props) {
-  const { settings, items, contentContainer } = props;
+  const { items, contentContainer } = props;
 
   return (
     <article style={{ marginBottom: "35px" }}>

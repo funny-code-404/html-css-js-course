@@ -34,7 +34,9 @@ const formItems = {
 
   select: [
     {
-      firstOption: "Your Budget",
+      type: "select",
+      placeholder: "Your Budget",
+      name: "budget",
     },
 
     {
@@ -50,9 +52,11 @@ const formItems = {
     },
   ],
 
-  textarea: {
-    name: "comment",
-  },
+  textarea: [
+    {
+      name: "comment",
+    },
+  ],
 };
 
 export default formItems;

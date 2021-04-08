@@ -9,7 +9,7 @@ import { handleLink } from "../Button/handlers";
 
 class Introducing extends React.Component {
   render() {
-    const { items, settings, id } = this.props;
+    const { items, settings } = this.props;
     const { buttonLabel, buttonIcon, backgroundImg } = items;
 
     return (

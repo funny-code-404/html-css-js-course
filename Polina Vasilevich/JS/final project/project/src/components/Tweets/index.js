@@ -19,7 +19,6 @@ class TweetsComponent extends React.Component {
   }
 
   render() {
-    const { settings } = this.props;
     const condition = !this.state.hidden;
 
     const stylesGridBlock = !condition

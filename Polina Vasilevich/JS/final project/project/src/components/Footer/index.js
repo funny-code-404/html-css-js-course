@@ -13,7 +13,6 @@ import {
   FooterColumn,
   CopyRightIconsContainer,
   CopyRightIcon,
-  FooterIconsButton,
 } from "./styles";
 
 class FooterComponent extends React.Component {
@@ -32,9 +31,7 @@ class FooterComponent extends React.Component {
   render() {
     const { logo, contacts, copyRight } = this.props.items;
     const { showIcons } = this.state;
-    const classNameCopyRightIcons = showIcons
-      ? "ti-angle-double-up"
-      : "ti-angle-double-down";
+
     return (
       <footer id="footer">
         <MainContainer
@@ -72,9 +69,8 @@ class FooterComponent extends React.Component {
 
                 {contacts.map((item, index) => {
                   return (
-                    <FooterColumn>
+                    <FooterColumn key={`copyRight${index}`}>
                       <Typography
-                        key={`copyRight${index}`}
                         items={item}
                         settings={{
                           stylesText: "footer",
@@ -111,6 +107,7 @@ class FooterComponent extends React.Component {
                         href={href}
                         style={{ textDecoration: "none" }}
                         target="_blank"
+                        rel="noreferrer"
                       >
                         <Icon className={icon} stylesIcon="footer"></Icon>
                       </a>

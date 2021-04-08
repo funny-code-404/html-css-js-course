@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import { Info, ContentContainer, Avatar, TagsContainer } from "./styles";
-import Typography from "../../../Typography";
 import { TextContainer, Title, Text } from "../../../Typography/styles";
 import Button from "../../../Button";
 
