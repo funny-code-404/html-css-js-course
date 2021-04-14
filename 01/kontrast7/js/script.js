@@ -98,18 +98,22 @@ console.log(isPalindrom('abba'));
 
 
 
-for (let i = 0; i < 100; i++) {
-    while (i % 3 == 0) {
-        console.log('fizz');
-        break;
+// _____________________________ FIZZBUZZ
+
+for (let x = 0; x < 100; x++) {
+
+    while (x % 3 === 0 && x % 5 === 0) {
+        console.log(x + ' Fizbuzz');
+        x++;
     }
-    while (i % 5 == 0) {
-        console.log('buzz');
-        break;
+    while (x % 3 === 0) {
+        console.log(x + ' Fizz');
+        x++;
     }
-    while (i % 5 == 0 && i % 3 == 0) {
-        console.log('fizzbuzz');
-        break;
+    while (x % 5 === 0) {
+        console.log(x + ' Buzz');
+        x++;
     }
-    console.log(i);
+    console.log(x.toString());
+
 }
