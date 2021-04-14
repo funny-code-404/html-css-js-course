@@ -91,13 +91,15 @@ const oper1 = +prompt('1 операнд', '');
 const oper2 = +prompt('2 операнд', '');
 
 function getZnak() {
-    for (var i = 1; i <= 2; i++) {
+    let i = 1
+    while (i <= 2) {
         let znak = prompt('что сделать?', '');
         if (znak == '+' || znak == '-' || znak == '*' || znak == '/') {
             return znak;
         } else {
             i--;
         }
+        i++
     }
 }
 
