@@ -28,6 +28,7 @@ console.log(str3);
 let str4 = strHello.replace(/l/g, '-');
 console.log(str4);
 
+
 var newStr = "";
 for (let i = 0; i < strHello.length; i++) {
 
@@ -38,6 +39,18 @@ for (let i = 0; i < strHello.length; i++) {
     }
 }
 console.log(newStr);
+
+// _____________________________ Решение через CharCodeAt
+let str = '';
+for (let i = 0; i < strHello.length; i++) {
+    if (strHello[i].charCodeAt() >= 65 && strHello[i].charCodeAt() <= 90) {
+        str += String.fromCharCode(strHello[i].charCodeAt() + 32);
+        console.log(strHello[i].charCodeAt());
+    } else if (strHello[i].charCodeAt() >= 97 && strHello[i].charCodeAt() <= 122) {
+        str += String.fromCharCode(strHello[i].charCodeAt() - 32);
+    }
+}
+console.log(str);
 
 
 
@@ -61,8 +74,9 @@ console.log(newLeto);
 // NAME____________________________________________________
 let strName = "Антон, Дима и Женя пришли на День рождения сразу, а Миша пришел позже".split(" ");
 let arr = [];
+
 for (let i = 0; i < strName.length; i++) {
-    if ((strName[i].charAt(0) >= 'А') && (strName[i].charAt(0) < 'Я') && (strName[i] != 'День')) {
+    if ((strName[i].charAt(0) >= 'А') && (strName[i].charAt(0) <= 'Я') && (strName[i] != 'День')) {
         arr[i] = strName[i];
     }
 }
