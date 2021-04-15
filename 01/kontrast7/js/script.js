@@ -88,14 +88,14 @@ console.log(strNameFin);
 
 // PALINDROME_____________________________________________
 function isPalindrom(str) {
-    if (str === str.split("").reverse().join("")) {
+    let a = str.replace(/\s/g, '');
+    if (a.toLowerCase() === a.split("").reverse().join("").toLowerCase()) {
         return true;
     } else {
         return false;
     }
 }
-console.log(isPalindrom('abba'));
-
+console.log(isPalindrom('А роза упала на лапу Азора'));
 
 
 // _____________________________ FIZZBUZZ

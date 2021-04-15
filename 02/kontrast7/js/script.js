@@ -22,12 +22,14 @@ console.log(newStr2);
 
 
 // удалить ложные значения из массива
-const falsyArr = [NaN, 0, '', 15, -17];
+const falsyArr = [NaN, 0, '', 15, -17, 0, 0, false, false, true, false, 0, 0, 1, 2, 0, 0, 1, -1];
 // trueOnly = falsyArr.filter(Boolean);
 // console.log(trueOnly);
 for (let i = 0; i < falsyArr.length; i++) {
-    if (falsyArr[i] === "" || !falsyArr[i]) {
-        falsyArr.shift();
+    if (falsyArr[i] == 0 || Number.isNaN(falsyArr[i]) || falsyArr[i] == null || falsyArr[i] == false || falsyArr[i] == "" || falsyArr[i] == undefined) {
+        console.log(falsyArr[i]);
+        falsyArr.splice(i, 1);
+        i--;
     }
 }
 console.log(falsyArr);
