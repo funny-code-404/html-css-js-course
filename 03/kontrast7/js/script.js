@@ -245,3 +245,14 @@ let counterModule = (function () {
     }
 
 })();
+
+
+
+// ____________________________ DATE
+function sleep(num){
+    
+    setTimeout(() => {  console.log(new Date()); }, num * 1000);
+}
+
+console.log(new Date());
+sleep(9);
