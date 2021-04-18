@@ -14,9 +14,7 @@ Categories.defaultProps = {
   },
 };
 
-export default function Categories(props) {
-  const { items } = props;
-
+export default function Categories({ items }) {
   return (
     <CategoriesContainer>
       {items.map(({ title, href }, index) => {

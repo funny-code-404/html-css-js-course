@@ -15,20 +15,17 @@ class FormComponent extends React.Component {
     isValid: true,
   };
 
-  inputs = this.props.items.inputs;
-  select = this.props.items.select[0];
-
-  fields = [...this.inputs, this.select];
-
   clearForm() {
     const data = {};
-    this.fields.map(({ type, name }) => {
-      if (type === "select") {
-        data[name] = this.props.items.select[0].placeholder;
-      } else {
-        data[name] = "";
+    [...this.props.items.inputs, this.props.items.select[0]].map(
+      ({ type, name }) => {
+        if (type === "select") {
+          data[name] = this.props.items.select[0].placeholder;
+        } else {
+          data[name] = "";
+        }
       }
-    });
+    );
 
     this.setState({
       data,
@@ -40,7 +37,7 @@ class FormComponent extends React.Component {
     let isValid = true;
     const errors = {};
 
-    this.fields.map(({ name }) => {
+    [...this.props.items.inputs, this.props.items.select[0]].map(({ name }) => {
       if (!data[name]) {
         isValid = false;
         errors[name] = `Please enter your ${name}.`;
@@ -96,37 +93,31 @@ class FormComponent extends React.Component {
       buttonIcon,
       buttonLabel,
     } = this.props.items;
-
-    const { settings } = this.props;
     const { errors, isValid, data } = this.state;
 
     return (
       <MainContainer
         isTitle
         items={this.props.items}
-        settings={settings}
+        settings={this.props.settings}
         contentContainer={
           <Form
             id={this.props.idForm}
             onChange={this.handleChange}
-            {...settings}
+            {...this.props.settings}
             onFocus={this.deleteErrorsInput}
           >
             {inputs.map(({ type, placeholder, name, required }, index) => {
               return (
-                <>
-                  <Input
-                    key={`itemForm${index}`}
-                    required
-                    className={classnames("input", { notValid: errors[name] })}
-                    type={type}
-                    placeholder={placeholder}
-                    name={name}
-                    value={data[name]}
-                  ></Input>
-                  {/* 
-                  <span style={{ color: "red" }}>{errors[`${name}`]}</span> */}
-                </>
+                <Input
+                  key={`itemForm${index}`}
+                  required
+                  className={classnames("input", { notValid: errors[name] })}
+                  type={type}
+                  placeholder={placeholder}
+                  name={name}
+                  value={data[name]}
+                />
               );
             })}
             {select && (
@@ -141,7 +132,7 @@ class FormComponent extends React.Component {
                   {select[0].placeholder}
                 </Option>
                 {select.slice(1).map(({ option }, index) => (
-                  <Option key={index} value={option}>
+                  <Option key={`optionForm${index}`} value={option}>
                     {option}
                   </Option>
                 ))}
@@ -163,7 +154,7 @@ class FormComponent extends React.Component {
               buttonLabel={buttonLabel}
               buttonIcon={buttonIcon}
               handleButton={this.handleSubmit.bind(this)}
-              settings={settings}
+              settings={this.props.settings}
             />
 
             <Info className={classnames("info", { notValid: !isValid })}>

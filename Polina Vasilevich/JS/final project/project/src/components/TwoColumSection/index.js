@@ -16,16 +16,19 @@ TwoColumnSection.defaultProps = {
   secondItem: {},
 };
 
-export default function TwoColumnSection(props) {
-  const { settings, styles } = props;
-
+export default function TwoColumnSection({
+  settings,
+  styles,
+  firstItem,
+  secondItem,
+}) {
   return (
     <MainContainer
       settings={settings}
       contentContainer={
         <GridTwoColumnContainer {...settings} style={styles}>
-          <GridItem {...settings}>{props.firstItem}</GridItem>
-          <GridItem {...settings}>{props.secondItem}</GridItem>
+          <GridItem {...settings}>{firstItem}</GridItem>
+          <GridItem {...settings}>{secondItem}</GridItem>
         </GridTwoColumnContainer>
       }
     />

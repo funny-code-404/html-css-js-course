@@ -56,7 +56,7 @@ class Slider extends React.Component {
 
             return (
               <img
-                key={index}
+                key={`slider${index}`}
                 className="img1"
                 src={img}
                 alt="img"
@@ -84,6 +84,7 @@ class Slider extends React.Component {
               {imgs.map((img, index) => {
                 return (
                   <button
+                    key={`dotsSlider${index}`}
                     id={index}
                     className={`slider-dots_item ${
                       index + 1 === this.state.currentSliderIndex && "active"

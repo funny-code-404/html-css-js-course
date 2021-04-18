@@ -25,18 +25,16 @@ MainContainerComponent.defaultProps = {
   styles: {},
 };
 
-export default function MainContainerComponent(props) {
-  const {
-    items,
-    settings,
-    isTitle,
-    contentContainer,
-    backgroundImg,
-    deletePadding,
-    id,
-    styles,
-  } = props;
-
+export default function MainContainerComponent({
+  items,
+  settings,
+  isTitle,
+  contentContainer,
+  backgroundImg,
+  deletePadding,
+  id,
+  styles,
+}) {
   return (
     <MainContainer
       {...settings}

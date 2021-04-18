@@ -4,12 +4,9 @@ import Aside from "./Aside";
 import { Tweets, ButtonAside } from "./styles";
 
 class TweetsComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      hidden: false,
-    };
-  }
+  state = {
+    hidden: false,
+  };
 
   handleInvisibleBlock(e) {
     e.preventDefault();

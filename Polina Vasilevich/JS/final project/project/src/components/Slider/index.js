@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import classnames from "classnames";
 import {
   SlidersContainer,
@@ -18,7 +20,6 @@ import { handleScrollDown, handleLink } from "../Button/handlers";
 
 class Slider extends React.Component {
   state = { currentSliderIndex: 1 };
-  countImgs = this.props.items.imgs.length;
 
   setCurrentSliderIndex = (sliderIndex) => {
     this.setState((prevState) => ({
@@ -30,14 +31,18 @@ class Slider extends React.Component {
   nextSlider = () => {
     const { currentSliderIndex } = this.state;
     const sliderIndex =
-      currentSliderIndex === this.countImgs ? 1 : currentSliderIndex + 1;
+      currentSliderIndex === this.props.items.imgs.length
+        ? 1
+        : currentSliderIndex + 1;
     this.setCurrentSliderIndex(sliderIndex);
   };
 
   prevSlider = () => {
     const { currentSliderIndex } = this.state;
     const sliderIndex =
-      currentSliderIndex === 1 ? this.countImgs : currentSliderIndex - 1;
+      currentSliderIndex === 1
+        ? this.props.items.imgs.length
+        : currentSliderIndex - 1;
     this.setCurrentSliderIndex(sliderIndex);
   };
 
@@ -73,7 +78,7 @@ class Slider extends React.Component {
               return (
                 <>
                   <Img
-                    key={`img${index}`}
+                    key={`img${index}${id}`}
                     backgroundImg={img}
                     id={index}
                     className={classnames("img", {
@@ -94,7 +99,6 @@ class Slider extends React.Component {
                         {(items.title || items.subTitle) && (
                           <Typography
                             items={items}
-                            // isLine={isLine}
                             settings={{
                               colorTitle: "white",
                               stylesText: `${stylesText}`,
@@ -143,7 +147,7 @@ class Slider extends React.Component {
                 {imgs.map((img, index) => {
                   return (
                     <Dot
-                      key={`dots ${index}`}
+                      key={`dots${index}${id}`}
                       id={index}
                       className={classnames({
                         active: index + 1 === this.state.currentSliderIndex,
@@ -160,5 +164,26 @@ class Slider extends React.Component {
     );
   }
 }
+
+Slider.propTypes = {
+  id: PropTypes.string,
+  isDots: PropTypes.bool,
+  isArrows: PropTypes.bool,
+  items: PropTypes.object,
+  stylesText: PropTypes.string,
+  heightSliderContainer: PropTypes.string,
+};
+
+Slider.defaulfProps = {
+  id: "",
+  isDots: false,
+  isArrows: false,
+  items: {
+    imgs: [],
+    buttonLabel: [],
+  },
+  stylesText: "",
+  heightSliderContainer: "",
+};
 
 export default Slider;

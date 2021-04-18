@@ -4,6 +4,7 @@ import Typography from "../Typography";
 import { ContentContainer, FlexContainer } from "../../mainStyles";
 import Button from "../Button";
 import { handleLink } from "../Button/handlers";
+
 Works.propTypes = {
   items: PropTypes.object,
 };
@@ -15,7 +16,7 @@ Works.defaultProps = {
   },
 };
 
-export default function Works(props) {
+export default function Works({ items }) {
   return (
     <MainContainer
       settings={{
@@ -28,12 +29,12 @@ export default function Works(props) {
           <ContentContainer positionContent="center">
             <Typography
               settings={{ stylesText: "work" }}
-              items={props.items}
+              items={items}
               isLine
             />
             <Button
-              buttonLabel={props.items.buttonLabel}
-              buttonIcon={props.items.buttonIcon}
+              buttonLabel={items.buttonLabel}
+              buttonIcon={items.buttonIcon}
               handleButton={(e) => handleLink(e, "shortcodes")}
               settings={{ stylesButton: "work" }}
             />

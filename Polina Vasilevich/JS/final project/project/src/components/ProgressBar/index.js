@@ -12,16 +12,9 @@ import {
 } from "./styles";
 
 class ProgressBar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: props.items.list,
-    };
-  }
-
   getMaxProgress = () => {
     const progressList = [];
-    this.state.items.map(({ percents }) => progressList.push(+percents));
+    this.props.items.list.map(({ percents }) => progressList.push(+percents));
     return Math.max(...progressList);
   };
 

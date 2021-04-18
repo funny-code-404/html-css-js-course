@@ -16,12 +16,9 @@ import {
 } from "./styles";
 
 class FooterComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showIcons: false,
-    };
-  }
+  state = {
+    showIcons: false,
+  };
 
   handleShowIcons = (e) => {
     e.preventDefault();

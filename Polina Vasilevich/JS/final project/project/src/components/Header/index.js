@@ -21,13 +21,10 @@ import {
 import "./styles.css";
 
 class HeaderComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentPageId: 0,
-      showMenu: false,
-    };
-  }
+  state = {
+    currentPageId: 0,
+    showMenu: false,
+  };
 
   handleClick = (e) => {
     this.setState({
@@ -46,27 +43,8 @@ class HeaderComponent extends React.Component {
     this.setState((prevState) => ({ showMenu: !prevState.showMenu }));
   };
 
-  handleClickOutside = (e) => {
-    // if (
-    //   this.state.showMenu &&
-    //   !e.target.id.includes("headerList") &&
-    //   !e.target.parentElement.id.includes("headerList")
-    // ) {
-    //   this.setState({
-    //     showMenu: false,
-    //   });
-    // }
-  };
-
-  componentDidMount() {
-    document.addEventListener("mousedown", this.handleClickOutside);
-  }
-  componentWillUnmount() {
-    document.removeEventListener("mousedown", this.handleClickOutside);
-  }
-
   setStylesNavigation = (condition) => {
-    return condition ? { color: "#4285F4" } : {};
+    return { ...(condition && { color: "#4285F4" }) };
   };
 
   render() {

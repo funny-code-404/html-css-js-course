@@ -7,13 +7,10 @@ import { GridContainer } from "../../mainStyles";
 import Button from "../Button";
 
 class IconComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showText: false,
-      items: [],
-    };
-  }
+  state = {
+    showText: false,
+    items: [],
+  };
 
   handleShowText(e) {
     e.preventDefault();

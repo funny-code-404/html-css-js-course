@@ -9,7 +9,6 @@ import { IconsContainer, GridContainer } from "./styles";
 class Portfolio extends React.Component {
   handleClick(e, href) {
     e.preventDefault();
-    // document.location = `${href}`;
     window.open(href);
   }
 
@@ -47,21 +46,15 @@ class Portfolio extends React.Component {
               {items.icons.map(({ icon, href, backgroundColor }) => {
                 return (
                   <IconsContainer
+                    key={icon}
                     backgroundColor={backgroundColor}
                     onClick={(e) => this.handleClick(e, href)}
                   >
-                    {/* <a
-                      key={href}
-                      href={href}
-                      style={{ textDecoration: "none" }}
-                      target="_blank"
-                    > */}
                     <Icon
                       className={icon}
                       stylesIcon="footer"
                       style={{ opacity: "1" }}
                     ></Icon>
-                    {/* </a> */}
                   </IconsContainer>
                 );
               })}

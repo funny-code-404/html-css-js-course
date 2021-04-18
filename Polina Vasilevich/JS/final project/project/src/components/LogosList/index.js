@@ -19,21 +19,18 @@ LogosList.defaultProps = {
   isTitle: false,
 };
 
-export default function LogosList(props) {
-  const { imgs } = props.items;
-  const { settings, backgroundImg, isTitle } = props;
-
+export default function LogosList({ items, settings, backgroundImg, isTitle }) {
   return (
     <MainContainer
-      items={props.items}
+      items={items}
       backgroundImg={backgroundImg}
       settings={settings}
       isTitle={isTitle}
       contentContainer={
         <GridContainer {...settings}>
-          {imgs.map((item, index) => {
+          {items.imgs.map((item, index) => {
             return (
-              <ContentContainer key={index}>
+              <ContentContainer key={`logo ${index}`}>
                 <Logo src={item} alt={item} />
               </ContentContainer>
             );

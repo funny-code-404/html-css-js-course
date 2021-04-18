@@ -6,14 +6,11 @@ import Button from "../../../Button";
 import { handleContinueRead } from "../../../Button/handlers";
 
 class Buttons extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      indices: [],
-      activeButtonLike: [],
-      buttonsShareThis: [],
-    };
-  }
+  state = {
+    indices: [],
+    activeButtonLike: [],
+    buttonsShareThis: [],
+  };
 
   handleActiveButton = (e, items) => {
     e.preventDefault();

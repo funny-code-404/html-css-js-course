@@ -7,31 +7,26 @@ import Button from "../Button";
 import { ContentContainer } from "../../mainStyles";
 import { handleLink } from "../Button/handlers";
 
-class Introducing extends React.Component {
-  render() {
-    const { items, settings } = this.props;
-    const { buttonLabel, buttonIcon, backgroundImg } = items;
-
-    return (
-      <MainContainer
-        settings={settings}
-        backgroundImg={backgroundImg}
-        contentContainer={
-          <div id="intro1">
-            <ContentContainer {...settings}>
-              <Typography items={items} isLine settings={settings} />
-              <Button
-                buttonIcon={buttonIcon}
-                buttonLabel={buttonLabel}
-                {...settings}
-                handleButton={(e) => handleLink(e, "features")}
-              />
-            </ContentContainer>
-          </div>
-        }
-      />
-    );
-  }
+export default function Introducing({ items, settings }) {
+  return (
+    <MainContainer
+      settings={settings}
+      backgroundImg={items.backgroundImg}
+      contentContainer={
+        <div id="intro1">
+          <ContentContainer {...settings}>
+            <Typography items={items} isLine settings={settings} />
+            <Button
+              buttonIcon={items.buttonIcon}
+              buttonLabel={items.buttonLabel}
+              {...settings}
+              handleButton={(e) => handleLink(e, "features")}
+            />
+          </ContentContainer>
+        </div>
+      }
+    />
+  );
 }
 
 Introducing.propsTypes = {
@@ -52,5 +47,3 @@ Introducing.defaultProps = {
 
   id: "",
 };
-
-export default Introducing;

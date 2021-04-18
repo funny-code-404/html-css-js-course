@@ -25,8 +25,7 @@ const handleScrollDown = (e) => {
   });
 };
 
-export default function IntroSlider(props) {
-  const { items, isArrow } = props;
+export default function IntroSlider({ items, isArrow }) {
   return (
     <Container backgroundImg={items.backgroundImg}>
       <TextContainer>

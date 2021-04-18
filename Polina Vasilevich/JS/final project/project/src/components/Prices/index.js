@@ -13,55 +13,52 @@ import {
   TextContainer,
 } from "./styles";
 
-class Prices extends React.Component {
-  render() {
-    const { header, items } = this.props.items;
-    return (
-      <MainContainer
-        isTitle
-        items={header}
-        contentContainer={
-          <GridContainer widthItemGridContainer="220px" gridGap="0">
-            {items.map((item) => {
-              return (
-                <PriceContainer key={item.title}>
-                  <Typography
-                    items={item}
-                    isLine
-                    settings={{
-                      stylesText: "mainTable",
-                    }}
-                  />
-                  <InfoContainer>
-                    <TextContainer>
-                      {item.list.map((elem, index) => {
-                        return (
-                          <ItemInfoContainer key={index}>
-                            <Typography
-                              items={elem}
-                              settings={{
-                                stylesText: "table",
-                              }}
-                              icon={item.icon}
-                            />
-                          </ItemInfoContainer>
-                        );
-                      })}
-                    </TextContainer>
-                    <Button
-                      settings={{ stylesButton: "priceTable" }}
-                      buttonLabel={item.buttonLabel}
-                      buttonIcon={item.buttonIcon}
-                    ></Button>
-                  </InfoContainer>
-                </PriceContainer>
-              );
-            })}
-          </GridContainer>
-        }
-      />
-    );
-  }
+export default function Prices({ items }) {
+  return (
+    <MainContainer
+      isTitle
+      items={items.header}
+      contentContainer={
+        <GridContainer widthItemGridContainer="220px" gridGap="0">
+          {items.items.map((item) => {
+            return (
+              <PriceContainer key={item.title}>
+                <Typography
+                  items={item}
+                  isLine
+                  settings={{
+                    stylesText: "mainTable",
+                  }}
+                />
+                <InfoContainer>
+                  <TextContainer>
+                    {item.list.map((elem, index) => {
+                      return (
+                        <ItemInfoContainer key={`tablePrice${index}`}>
+                          <Typography
+                            items={elem}
+                            settings={{
+                              stylesText: "table",
+                            }}
+                            icon={item.icon}
+                          />
+                        </ItemInfoContainer>
+                      );
+                    })}
+                  </TextContainer>
+                  <Button
+                    settings={{ stylesButton: "priceTable" }}
+                    buttonLabel={item.buttonLabel}
+                    buttonIcon={item.buttonIcon}
+                  ></Button>
+                </InfoContainer>
+              </PriceContainer>
+            );
+          })}
+        </GridContainer>
+      }
+    />
+  );
 }
 
 Prices.propTypes = {
@@ -89,4 +86,3 @@ Prices.defaultProps = {
     },
   ],
 };
-export default Prices;

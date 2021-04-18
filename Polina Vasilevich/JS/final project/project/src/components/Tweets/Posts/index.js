@@ -10,14 +10,11 @@ import Content from "./Content";
 import Buttons from "./Buttons";
 
 class PostsComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentPage: 0,
-      limit: 5,
-      items: props.items.list,
-    };
-  }
+  state = {
+    currentPage: 0,
+    limit: 5,
+    items: this.props.items.list,
+  };
 
   nextPage = (e) => {
     e.preventDefault();
@@ -49,8 +46,6 @@ class PostsComponent extends React.Component {
   }
 
   render() {
-    const { styles } = this.props;
-    const { icons } = this.props.items;
     const { currentPage, limit, items } = this.state;
     const amountOfPages = Math.round(items.length / limit);
     const beginIndexList = currentPage * limit;
@@ -59,7 +54,7 @@ class PostsComponent extends React.Component {
     return (
       <MainContainer
         settings={{ stylesBlock: "posts", mediaBlock: "posts" }}
-        styles={styles}
+        styles={this.props.styles}
         contentContainer={
           <>
             <Posts>
@@ -70,7 +65,11 @@ class PostsComponent extends React.Component {
                     <PostsItem key={`postsItem${index}`}>
                       <Info items={info} />
                       <Content items={content} />
-                      <Buttons items={content} icons={icons} index={index} />
+                      <Buttons
+                        items={content}
+                        icons={this.props.items.icons}
+                        index={index}
+                      />
                     </PostsItem>
                   );
                 })}

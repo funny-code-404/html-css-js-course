@@ -25,9 +25,7 @@ Articles.defaultProps = {
   },
 };
 
-export default function Articles(props) {
-  const { items, settings } = props;
-
+export default function Articles({ items, settings }) {
   return (
     <MainContainer
       settings={{

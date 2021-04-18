@@ -3,46 +3,7 @@ import PropTypes from "prop-types";
 import { Pagination, Button, ButtonContainer, NumberPage } from "./styles";
 
 class PaginationComponent extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     items: props.items,
-  //     currentPage: props.currentPage,
-  //     limit: props.currentPage,
-  //     amountOfPages: props.amountOfPages,
-  //   };
-  // }
-
-  // nextPage = (e) => {
-  //   e.preventDefault();
-  //   const { currentPage, amountOfPages } = this.state;
-  //   if (currentPage + 1 < amountOfPages) {
-  //     this.setState((prevState) => ({
-  //       currentPage: prevState.currentPage + 1,
-  //     }));
-  //   }
-  // };
-
-  // previousPage = (e) => {
-  //   e.preventDefault();
-  //   if (this.state.currentPage !== 0) {
-  //     this.setState((prevState) => ({
-  //       currentPage: prevState.currentPage - 1,
-  //     }));
-  //   }
-  // };
-
-  // setCurrentPage = (e) => {
-  //   e.preventDefault();
-
-  //   this.setState((prevState) => ({
-  //     ...prevState,
-  //     currentPage: +e.target.value,
-  //   }));
-  // };
-
   render() {
-    // const { items, amountOfPages } = this.state;
     const {
       items,
       amountOfPages,

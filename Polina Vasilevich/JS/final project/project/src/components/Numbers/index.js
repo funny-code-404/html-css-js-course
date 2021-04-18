@@ -16,8 +16,7 @@ Numbers.defaultProps = {
   ],
 };
 
-export default function Numbers(props) {
-  const { items } = props;
+export default function Numbers({ items }) {
   return (
     <MainContainer
       settings={{

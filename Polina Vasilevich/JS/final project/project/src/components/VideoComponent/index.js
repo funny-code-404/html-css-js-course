@@ -11,11 +11,10 @@ VideoComponent.defaultProps = {
   heightVideo: "",
 };
 
-export default function VideoComponent(props) {
-  const { src } = props.items;
+export default function VideoComponent({ items, heightVideo }) {
   return (
-    <VideoContainer heightVideo={props.heightVideo}>
-      <Video src={src} frameborder="0" allowfullscreen></Video>
+    <VideoContainer heightVideo={heightVideo}>
+      <Video src={items.src} frameborder="0" allowfullscreen></Video>
     </VideoContainer>
   );
 }

@@ -24,9 +24,7 @@ TextList.defaultProps = {
   },
 };
 
-export default function TextList(props) {
-  const { items, settings } = props;
-
+export default function TextList({ items, settings }) {
   return (
     <MainContainer
       settings={settings}

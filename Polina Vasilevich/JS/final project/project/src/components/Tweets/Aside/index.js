@@ -11,53 +11,43 @@ import MainContainer from "../../MainContainer";
 
 import { Aside, Search, Arrow } from "./styles";
 class AsideComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { posts: this.props.items.posts.items };
-  }
+  state = { posts: this.props.items.posts.items };
+
+  searchByTitle = (title, value) => {
+    return title.toLowerCase().includes(value.toLowerCase());
+  };
+
+  searchByDate = (date, value) => {
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+
+    return (
+      String(date.getFullYear()).includes(value) ||
+      String(months[date.getMonth()])
+        .toLowerCase()
+        .includes(value.toLowerCase()) ||
+      String(date.getDate()).includes(value)
+    );
+  };
 
   handleFilterList = (e) => {
-    const posts = this.props.items.posts.items;
     let { value } = e.target;
 
-    const searchByTitle = (title) => {
-      return title.toLowerCase().includes(value.toLowerCase());
-    };
-
-    const searchByDate = (date) => {
-      function searchByYear() {
-        return String(date.getFullYear()).includes(value);
-      }
-
-      function searchByMonth() {
-        const months = [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
-          "August",
-          "September",
-          "October",
-          "November",
-          "December",
-        ];
-        return String(months[date.getMonth()])
-          .toLowerCase()
-          .includes(value.toLowerCase());
-      }
-
-      function searchByDay() {
-        return String(date.getDate()).includes(value);
-      }
-
-      return searchByYear() || searchByMonth() || searchByDay();
-    };
-
-    const filteredPosts = posts.filter(
-      ({ title, date }) => searchByTitle(title) || searchByDate(date)
+    const filteredPosts = this.props.items.posts.items.filter(
+      ({ title, date }) =>
+        this.searchByTitle(title, value) || this.searchByDate(date, value)
     );
 
     this.setState({ posts: filteredPosts });
@@ -108,6 +98,7 @@ class AsideComponent extends React.Component {
                   {tags.items.map((tag) => {
                     return (
                       <Button
+                        key={tag}
                         buttonLabel={tag}
                         settings={{
                           widthButton: "auto",

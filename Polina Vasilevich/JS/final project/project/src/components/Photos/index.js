@@ -7,12 +7,9 @@ import Typography from "../Typography";
 import Button from "../Button";
 
 class ImagesList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentImgList: 0,
-    };
-  }
+  state = {
+    currentImgList: 0,
+  };
 
   handleClick = (e) => {
     e.preventDefault();
