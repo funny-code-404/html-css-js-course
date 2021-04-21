@@ -5,11 +5,17 @@ const li2 = ul.children[1].firstElementChild;
 const li3 = ul.children[2].firstElementChild;
 const li4 = ul.children[3].firstElementChild;
 
-
 li1.style.color = 'red';
 li2.style.color = 'red';
 li3.style.color = 'red';
 li4.style.color = 'red';
+
+
+// решение массивом
+for (let i = 0; i < ul.children.length; i++) {
+    ul.children[i].firstElementChild.style.color = 'red';
+}
+
 
 
 function showNotification(options) {
@@ -23,6 +29,10 @@ function showNotification(options) {
 showNotification('123')
 
 
+
+
+
+// TABLE_______________________________________________
 class Td {
     constructor(id, text, container = document.body) {
         this.td = document.createElement('td');
