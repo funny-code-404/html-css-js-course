@@ -1,0 +1,15 @@
+.primary {
+    background-color: green;
+}
+
+.warning {
+    background-color: red;
+}
+
+.error {
+    background-color: orange;
+}
+
+.default {
+    background-color: blue;
+}
