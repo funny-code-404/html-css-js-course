@@ -17,7 +17,7 @@ for (let i = 0; i < ul.children.length; i++) {
 }
 
 
-
+// пропадающий блок
 function showNotification(options) {
     let div = document.createElement('div');
     div.className = "notification";
@@ -46,18 +46,24 @@ class Td {
     }
 }
 
-
 function createTd(countTd, text, way) {
     for (let i = 1; i <= countTd; i++) {
         const t = new Td(`idTd${i}`, text, way);
     }
+    return countTd;
 }
-createTd(4, "", main)
+
+const tdCount = createTd(6, "1234", main);
+
+
 
 // const td1 = new Td('i1', '1', main);
 // const td2 = new Td('i2', '2', main);
 // const td3 = new Td('i3', '3', main);
 // const td4 = new Td('i4', '4', main);
+
+
+
 
 
 class Tr {
@@ -74,21 +80,30 @@ class Tr {
 }
 
 
-function createTr(countTd, text1 = 1, text2 = 2, text3 = 3, text4 = 4) {
-    for (let i = 1; i <= countTd; i++) {
-        const tr1 = new Tr(`idTr${i}`, text1, idTd1);
-    }
-    for (let j = 1; j <= countTd; j++) {
-        const tr2 = new Tr(`idTr${j}`, text2, idTd2);
-    }
-    for (let i = 1; i <= countTd; i++) {
-        const tr3 = new Tr(`idTr${i}`, text3, idTd3);
-    }
-    for (let i = 1; i <= countTd; i++) {
-        const tr4 = new Tr(`idTr${i}`, text4, idTd4);
-    }
+function createTr(countTr, text = '') {
+    for (let i = 1; i <= tdCount; i++) {
+        for (let j = 1; j <= countTr; j++) {
+            let string = `idTd${i}`;
+            let object = eval("(" + string + ")");
+            const tr = new Tr(`idTr${i}`, text, object);
+
+        };
+    };
+
+    // for (let i = 1; i <= countTr; i++) {
+    //     const tr1 = new Tr(`idTr${i}`, text, idTd1);
+    // };
+    // for (let j = 1; j <= countTr; j++) {
+    //     const tr2 = new Tr(`idTr${j}`, text, idTd2);
+    // };
+    // for (let i = 1; i <= countTr; i++) {
+    //     const tr3 = new Tr(`idTr${i}`, text, idTd3);
+    // };
+    // for (let i = 1; i <= countTr; i++) {
+    //     const tr4 = new Tr(`idTr${i}`, text, idTd4);
+    // };
 }
-createTr(4, '111', '222', '333', '444')
+createTr(6, 'ячейка');
 
 
 
