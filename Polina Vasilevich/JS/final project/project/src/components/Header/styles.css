@@ -1,0 +1,15 @@
+.headerLink {
+  font-family: OpenSans;
+  font-size: 13px;
+  line-height: 30px;
+
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: #333333;
+  text-decoration: none;
+}
+
+.headerLink:hover {
+  color: #4285f4;
+}

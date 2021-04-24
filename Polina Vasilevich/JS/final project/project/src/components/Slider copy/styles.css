@@ -1,0 +1,47 @@
+.slides1 {
+  position: relative;
+  height: 300px;
+
+  display: flex;
+  overflow: hidden;
+}
+
+.img1 {
+  object-fit: cover;
+  width: 25%;
+  height: 100%;
+
+  position: relative;
+  z-index: 1;
+
+  transition: transform ease 0.3s, opacity ease 0.5s;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 25px;
+  transition: 0.6s ease;
+
+  background-color: transparent;
+  border-color: transparent;
+  outline: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
