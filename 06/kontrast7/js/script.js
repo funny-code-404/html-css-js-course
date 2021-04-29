@@ -64,6 +64,16 @@ const todoItems = document.getElementById('todo-items');
 const btnTodo = document.getElementById('todo-submit');
 const inputTodo = document.getElementById('todo-input');
 
+let todos;
+
+function toLocal() {
+    todos = todoItems.innerHTML;
+    localStorage.setItem('todos', todos);
+}
+
+if (localStorage.getItem('todos')) {
+    todoItems.innerHTML = localStorage.getItem('todos');
+}
 
 function add(e) {
     const div = document.createElement('div');
@@ -84,16 +94,16 @@ function add(e) {
     for (let i = 0; i <= count; i++) {
         let els = document.querySelectorAll(".item")[i];
         let els2 = document.querySelectorAll(".closeVisible")[i];
-        els2.addEventListener('click', ()=>{
+        els2.addEventListener('click', () => {
             els.remove();
+            toLocal();
         })
     }
+    toLocal();
 };
 
 
-
 inputTodo.addEventListener('change', add);
-
 
 btnTodo.addEventListener('click', (e) => {
     e.preventDefault();
