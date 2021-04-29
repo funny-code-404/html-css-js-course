@@ -6,8 +6,10 @@ const review = document.querySelector("input[name=review]");
 const addReview = document.getElementById("addButton");
 const list = document.getElementById("todoList");
 
-function createNode(element) {
-  return document.createElement(element);
+function createNode(element, classname) {
+  const elem = document.createElement(element);
+  elem.classList.add(classname);
+  return elem
 }
 
 function append(parent, el) {
@@ -21,19 +23,16 @@ function loadTodos() {
     .then((json) => {
       let reviews = json.reviews;
       return reviews.forEach((review) => {
-        let card = createNode("div");
-        card.classList.add("card");
-        // let span = createNode("span");
-        let buttonDel = createNode("button");
-        let buttonEdit = createNode("button");
-        buttonDel.classList.add("todoDel");
-        buttonDel.innerHTML = "Удалить";
-        buttonEdit.innerHTML = "Изменить";
-        buttonEdit.classList.add("todoEdit");
+        let card = createNode("div", "card");
         card.innerHTML = `<div class="card-title">${review.name}</div>
-          <div class="card-subtitle">${review.email}</div>
-          <div class="card-desc">${review.review}</div>`;
-        // append(card, span);
+        <div class="card-subtitle">${review.email}</div>
+        <div class="card-desc">${review.review}</div>`;
+
+        let buttonDel = createNode("button", "todoDel");
+        buttonDel.innerHTML = "Удалить";
+
+        let buttonEdit = createNode("button", "todoEdit");
+        buttonEdit.innerHTML = "Изменить";
 
         append(card, buttonEdit);
         append(card, buttonDel);
@@ -106,6 +105,7 @@ function editTodo(id) {
   const editBtn = document.querySelectorAll(".todoEdit");
   editBtn.forEach((item) =>
     item.addEventListener("click", () => {
+      if(name.value && email.value && review.value){
       fetch(url + "/" + id, {
         method: "PUT",
         body: JSON.stringify({
@@ -126,6 +126,9 @@ function editTodo(id) {
         .catch(function (error) {
           console.log(error);
         });
+      } else {
+        alert('Заполните все поля!');
+      }
     })
   );
 }
