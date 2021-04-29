@@ -1,74 +1,181 @@
 <!DOCTYPE html>
+<html>
 
 <head>
-    
 
+    <meta charset="UTF-8" />
     <title>01</title>
-    <link rel="stylesheet" href="./style.ccs" />
-    <link rel="stylesheet" href="./script.js" />
+
+    <link rel="stylesheet" href="/Users/natal/Desktop/УЧЕБА/html-css-js-course/01/Айтжанова/style.css" />
+
 </head>
 
 <body>
     <script>
 
+        // Кратное 3=Fizz, кратное 5=Buzz, кратное 3 и 5=FizzBuzz 
         for (var i = 1; i <= 100; i++) {
-            if (i % 15) {
-                if (i % 5) {
-                    if (i % 3) {
-                        console.log(i);
-                        continue;
-                    }
-                    console.log('Fizz');
+            if (i % 5 == 0) {
+                if (i % 3 == 0) {
+                    console.log('FizzBuzz');
                     continue;
                 }
+            }
+            if (i % 5 == 0) {
                 console.log('Buzz');
                 continue;
             }
-            console.log('FizzBuzz');
+            if (i % 3 == 0) {
+                console.log('Fizz');
+                continue;
+            }
+            console.log(i);
         }
 
-        /*var str = 'Лето удалось очень жарким, было много ягод и фруктов, лучшим местом для отдыха была речка';
+        // заменить "," на ".", Начало предложения с заглавной буквы*/
+        var str = 'Лето удалось очень жарким, было много ягод и фруктов, лучшим местом для отдыха была речка';
         console.log(str);
-        var str1 = str.slice(0, 25);
-        var str2 = str.slice(26, 52);
-        var str3 = str.slice(53);
 
-        var w1 = str2.slice(5);
-        var w2 = str3.slice(7);
+        var dot = '.';
+        var space = ' ';
 
+        var kor = str.slice(0, comma + 1);
+        var den = str.slice(comma + 1);
+        var comma1 = den.lastIndexOf(',');
+        var kor2 = str.slice(comma1 + 1);
+        var element = kor2.trim().slice(0).charAt().toUpperCase();
+        var letter2 = element.concat(kor2.trim().slice(1));
 
-        var world = str2.slice(1, 5);
+        for (var i = 0; i < str.length; i++) {
+            var comma = den.indexOf(',');
 
-        var b = world.charAt(0).toUpperCase(1);
-        var y = world.charAt(1);
-        var L = world.charAt(2);
-        var O = world.charAt(3);
-        var str4 = b.concat((y + L + O) + w1);
+            var kor1 = den.slice(0, comma + 1);
+            var element = kor1.trim().slice(0).charAt().toUpperCase();
+            var letter = element.concat(kor1.trim().slice(1));
 
-        var world1 = str3.slice(1, 7);
+            var den1 = den.slice(comma + 1);
+            den = den1;
 
-        var l = world1.charAt(0).toUpperCase(0);
-        var u = world1.charAt(1);
-        var ch = world1.charAt(2);
-        var sh = world1.charAt(3);
-        var y = world1.charAt(4);
-        var m = world1.charAt(5);
-        var str6 = l.concat((u + ch + sh + y + m) + w2);
+            var res = kor.trim().concat(space + letter);
+            kor = res;
 
-        var str5 = str1.concat('.' + ' ' + str4 + '.' + ' ' + str6 + '.');
-        console.log(str5);*/
+            if (comma < 0) {
+                break;
+            }
+        }
+        str = res.replaceAll(',', '.').concat(letter2);
+        console.log(str);
 
+        // Достать из строки имена и составить: "На день рождения пришли: Антон, Дима, Женя, Миша
         var string = 'Антон, Дима и Женя пришли на День рождения cразу, а Миша пришел позже'
         console.log(string);
-        var path1 = string.slice(26, 42);
-        var pretext1 = path1.slice(0, 1).charAt(0).toUpperCase(0);
-        var string1 = pretext1.concat(path1.slice(1));
-        var path2 = string.slice(19, 25);
-        var path3 = string.slice(0, 11);
-        var path4 = string.slice(14, 18);
-        var path5 = string.slice(52, 56);
-        var finish = string1.concat(' ' + path2 + ':' + ' ' + path3 + ',' + ' ' + path4 + ',' + ' ' + path5 + '.');
-        console.log(finish);
+        var pretext = 'на';
+        var day = 'День';
+        var happy = 'рождения';
+        var came = 'пришли';
+        var Anton = 'Антон';
+        var Dima = 'Дима';
+        var Jon = 'Женя';
+        var Misha = 'Миша';
+        var colon = ':';
+        var comma = ',';
+        var space = ' ';
+        var stroka;
+
+        var sentence = string.replaceAll(',', ' ').split(' ');
+        console.log(sentence);
+
+        var string1 = [];
+        var names = [];
+        var start = [];
+        sentence.forEach(function (value) {
+
+            if (value == pretext) {
+                start.unshift(value);
+            }
+            if (value == day) {
+                start.push(value);
+            }
+            if (value == happy) {
+                start.push(value);
+            }
+            if (value == came) {
+                string1.push(value);
+            }
+            if (value == Anton) {
+                names.push(value);
+            }
+            if (value == Dima) {
+                names.push(value);
+            }
+            if (value == Jon) {
+                names.push(value);
+            }
+            if (value == Misha) {
+                names.push(value);
+            }
+        })
+        string1 = string1.join().concat(colon, space,);
+        names = names.join().replaceAll(',', (',' + ' '));
+        start = start.join().toLowerCase().replaceAll(',', ' ') + space;
+        start = start.slice(0).charAt(0).toUpperCase().concat(start.slice(1));
+        stroka = start.concat(string1, names);
+        console.log(stroka);
+
+        // Скопировать массив в другой массив
+        const fruits = ['Apple', 'Peer', 'Orang', 'Grapes', 'Banana'];
+        copyFruits = fruits.slice();
+        console.log(copyFruits);
+
+        // Преобразовать массив в строку
+        let vegetables = ['Капуста', 'Репа', 'Редиска', 'Морковка'];
+        let str2 = vegetables.toString();
+        console.log(str2);
+
+        // Получить сумму элементов массива
+        const nums = [1, 2, 3, 4, 5];
+        var sum = nums.reduce(function (a, b) {
+            return (a + b);
+        })
+        console.log(sum);
+
+        // Удалить повторяющиеся элементы из массива
+        const languages = ["php", "php", "css", "css", "script", "script", "html", "html", "java"];
+
+        var lang = languages.filter(function (a, b) {
+            var opo = languages.indexOf(a);
+            if (opo == b) {
+                return true;
+            }
+        });
+        console.log(lang);
+
+        // Вывести число повторяющихся элементов массива
+        const repeatingNums = [3, 3, 7, 7, 3, 3, 4, 5, 5, 8, 8, 8];
+        var cycle = 0;
+
+        var torg = repeatingNums.sort().filter(function (element, index) {
+            var num = repeatingNums.indexOf(element);
+
+            if (num == index) {
+                cycle = 1;
+                console.log(element, num, cycle);
+                return element, num, cycle;
+            }
+            if (num < index) {
+                cycle = cycle + 1;
+                console.log(element, num, cycle);
+                return element, num, cycle;
+            }
+        });
+
+        // Удалить все ложные значения из массива
+        /*const falseArray=[Nan, 0, 77, false, -17, '',undefined, 99, null];
+          Значение: NaN, 0, false, -17, '', undefined, null - это все false!!!*/
+
+
+    </script>
+    <script src="/Users/natal/Desktop/УЧЕБА/html-css-js-course/01/Айтжанова/script.js" />
 
     </script>
 </body>
