@@ -64,11 +64,11 @@
 
 // Достать имена из строки "Антон, Дима и Женя пришли на День рождения сразу, а Миша пришел позже" и создать
 // новую строку - "На день рождения пришли: Антон, Дима, Женя, Миша"
-let names =  "Антон, Дима и Женя пришли на День рождения сразу, а Миша пришел позже";
-let extNames = names.slice(26, 42);
-let comes = names.slice(19, 25);
+// let names =  "Антон, Дима и Женя пришли на День рождения сразу, а Миша пришел позже";
+// let extNames = names.slice(26, 42);
+// let comes = names.slice(19, 25);
 
-console.log( extNames, comes);
+// console.log( extNames, comes);
 
 // let word = prompt('would you like to check word?');
 // let checkWord = word.split('').reverse().join('');
