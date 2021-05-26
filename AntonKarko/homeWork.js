@@ -52,7 +52,7 @@ for (let arrayStr of arraysStr) {
        name.push(arrayStr);
     }
 }
-console.log(`На день рождения пришли : ${name[0]}, ${name[1]}, ${name[2]}, ${name[4]}`);*/
+console.log(`На день рождения пришли : ${name[0]} ${name[1]}, ${name[2]}, ${name[4]}`);*/
 
 
 // var str = '<option value=\'64\'>Tom Антон, Дима и Женя пришли на день рождения сразу, а Миша пришел позже';
