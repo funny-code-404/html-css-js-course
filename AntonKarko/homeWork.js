@@ -42,12 +42,18 @@ console.log(string);*/
 
 // задание из презентации (достать имена ...)
 
-// let stringName = 'Антон, Дима и Женя пришли на день рождения сразу, а Миша пришел позже';
-// function nameString(stringName) {
-//     return 
+// // Достать имя из строки 
 
-// }
-// console.log(`На день рождения пришли ${name}`);
+/*let str = 'Антон, Дима и Женя пришли на День рождения сразу, а Миша пришел позже'
+let arraysStr = str.split(' ');
+let name = [];
+for (let arrayStr of arraysStr) {
+    if (arrayStr.charAt(0) === arrayStr.charAt(0).toUpperCase()) {
+       name.push(arrayStr);
+    }
+}
+console.log(`На день рождения пришли : ${name[0]} ${name[1]}, ${name[2]}, ${name[4]}`);*/
+
 
 // var str = '<option value=\'64\'>Tom Антон, Дима и Женя пришли на день рождения сразу, а Миша пришел позже';
 // var tmpStr = str.split("'");
