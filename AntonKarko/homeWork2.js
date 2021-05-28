@@ -26,7 +26,7 @@
 };
 calcul();*/
 
-// Напишите функцию замыкания, которая зхранит и складывает принимаемые аргументы в сумму и возвращает ее.
+// Напишите функцию замыкания, которая хранит и складывает принимаемые аргументы в сумму и возвращает ее.
 /*function summ() {
     return function (a, b) {
         return a + b;      
@@ -40,22 +40,55 @@ suma(1,5);*/
 /*let obj = {
     name: "Anton",
     age: 33,
-    NumberOfProperties: function() {
-       return Object.keys(obj).length;
+    status,
+    write: function () {
+        // for (let [key, value] in Object.entries(obj)) {
+        //     obj[key] = value;
+        //     if (value == '') {
+        //         obj[value] = 'ok'
+        //     }
+        // }console.log(value);
+        for (let [key, value] in Object.entries(obj)) {
+            if (this.obj.hasOwnProperty() == false) {
+                this.obj[key, value] = this.obj[key, 'ok']
+            };
+        }
     },
+
+    // NumberOfProperties: function() {
+    //    return Object.keys(obj).length;
+    // },
 };
+console.log(obj);
+
 obj.NumberOfProperties();*/
 
 // Создать обьект машины car, который имеет свойство "передача" и метод, который повышает/понижает передачу на 1. Также у обьекта должен быть метод, который в зависимости от передачи возвращает сообщение о скорости: (-1) - 'back', 0 - 'neutral', 1 - 'slow', 2 - 'medium', 3 - 'fast', 4- 'very fast'. При попытке сложить обьект car с числом - число должно складывать в свойство speed и speed должен возвращатьсяю Если скорость больше 5 - должно быть выведено сообщение "Warning! Your speed is too high!"
 
-let car = {
-    trans: 0,
-    upTrans: function () {
-        do {
-           trans += + 1;
-        }while (parseInt(trans) == 5) {
-            console.log("Warning! Your speed is too high!");
-        }
-    }
-}
-console.log(car.upTrans());
+/*const car = {
+   transmission: 0,
+    upTransmission: function () { this.transmission += 1;},
+    downTransmission: function () { this.transmission -= 1;},
+    shownTransmission: function () {
+        if (this.transmission == -1) {
+            console.log('back'); 
+        } else if (this.transmission == 0) {
+            console.log('neutral'); 
+        }else if (this.transmission == 1) {
+            console.log('slow'); 
+        }else if (this.transmission == 2) {
+            console.log('medium'); 
+        }else if (this.transmission == 3) {
+            console.log('fast'); 
+        }else if (this.transmission == 4) {
+            console.log('very fast'); 
+        }else if (this.transmission == 5) {
+            console.log('Warning! Your speed is too high!'); 
+        }else
+        console.log('Car is broken, Sorry...');
+    } 
+};
+
+car.downTransmission();
+car.upTransmission();
+car.shownTransmission();*/
