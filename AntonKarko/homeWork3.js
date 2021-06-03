@@ -1,32 +1,20 @@
 // создать функцию, которая принимает параметром url. При наличии данных в объекте кэше под ключом, совпадающим с урлом - вернуть их, а если такого ключа в объекте нет - запросить данные по данному урлу отдельной функцией (пока написать пустую функцию для этого), и сохранить полученные данные под данным ключом
 
-let obj = {
+  let obj = {
     name: "Anton",
     age: 33,
-    status,
-    write: function () {
-        for (let value in Object.values(obj)) {
-            if (obj[value] == undefined) {
-                console.log(Object.values(obj));
-            }
-        }console.log(value);
-        // Это не сделано еще
-for (let [key, value] in Object.entries(obj)) {
-            if (obj.hasOwnProperty() == true) {
-                Object.values(obj) = 'nowValue';
-            };
-        }
-    },
-
-    NumberOfProperties: function() {
-       return Object.keys(obj).length;
-    },
+    status: '',
+    write: function (url) {
+  for (let [key, value] in Object.entries(obj)) {
+    if (obj.hasOwnProperty(url) == true) {
+        obj[value] = 'new';
+      };
+    };
+  },
 };
 
-
+obj.write('status');
 console.log(obj);
-
-obj.NumberOfProperties();
 
 // Реализовать функцию drawCalendar, которая принимает три аргумента - год, месяц, htmlElement и выводит в этот элемент календарь на месяц (дни недели начинаются с понеджельника).
 
