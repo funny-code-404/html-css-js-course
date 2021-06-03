@@ -94,4 +94,17 @@ let earn1 = {
         break;
     }
 
-   
+//Дополнить объект методом, который возвращает
+//количество всех его ключей
+
+let objKeys = {
+    weight: 100,
+    height: 180,
+    age: 40,
+    getKeyCount: function () {
+      console.log('Your object have',Object.keys(objKeys).length, 'properties.')
+     },
+  };
+  objKeys.getKeyCount()
+
+ 
