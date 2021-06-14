@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendar</title>
-    <style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar</title>
+  <style>
     table {
       border-collapse: collapse;
     }
@@ -21,13 +22,60 @@
       font-weight: bold;
       background-color: #E6E6E6;
     }
+
+    .square {
+      border: 1px solid black;
+      width: 100px;
+      height: 100px;
+      display: inline-block;
+    }
+
+    .bigSquare {
+      width: 320px;
+      height: 320px;
+    }
+
+    .hello {
+      background: red;
+      color: black;
+    }
+
+    .notification{
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      padding: 5px;
+      border: 1px solid black;
+      font-size: 20px;
+      text-align: center;
+    }
   </style>
 </head>
+
 <body>
-    <div id="calendar"></div>
-    <script src="homeWork.js"></script>
+  <div id="calendar"></div>
+  <div class="bigSquare" style >
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+  </div>
+  <ul>
+    <li><a href="http://google.com">http://google.com</a></li>
+    <li><a href="/tutorial">/tutorial.html</a></li>
+    <li><a href="local/patch">local/patch</a></li>
+    <li><a href="http://nodejs.org">http://nodejs.org</a></li>
+  </ul>  
+  <!-- <script src="homeWork.js"></script>
     <script src="homeWork2.js"></script>
     <script src="homeWork3.js"></script>
-    <script src="homeWork4.js"></script>
+    <script src="homeWork4.js"></script> -->
+  <script src="homeWork5.js"></script>
 </body>
+
 </html>
