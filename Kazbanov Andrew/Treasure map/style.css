@@ -1,0 +1,10 @@
+*{box-sizing: border-box; margin: 0; padding: 0;}
+
+#map{
+    width: 800px; height: 650px;
+    background-image: url(./img/128bb8ca24faf3aa800aed3cd278a90d.jpg);
+    background-size: contain; background-repeat: no-repeat ; position: relative;
+}
+#gold{
+    width: 30px; height: 30px; position: absolute; top: 355px; left: 410px;
+}
