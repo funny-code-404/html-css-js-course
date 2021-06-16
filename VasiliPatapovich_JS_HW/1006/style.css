@@ -1,0 +1,15 @@
+#grid { 
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    }
+  #grid > div {
+    font-size: 3vw;
+   
+    border-style: solid ;
+    border-color: rgb(163, 154, 154);
+    text-align: center;
+    height: 200px;
+    
+  }
