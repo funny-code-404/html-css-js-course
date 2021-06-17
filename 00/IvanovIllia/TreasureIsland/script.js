@@ -1,11 +1,11 @@
-let succsesClick = function () {
+let a = document.getElementById('mapMark');
+a.onclick = function () {
     alert('Нашёл');
 };
 
+let b = document.getElementById('TrMap')
 
-mapMark.onclick = succsesClick;
-
-TrMap.onclick = function() {
+b.onclick = function() {
     alert('Мимо! Попробуй ещё!');
 };
 
