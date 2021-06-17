@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure island</title>
+</head>
+<style>
+    #island{
+        width: 800px;
+        height: 650px;
+        background-image: url(./images/Treasure\ island.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        margin: auto;
+    }
+    #container{
+        display: flex;
+        justify-content: center;
+    }
+    .button{
+        display: flex;
+        justify-content: center;
+    }
+</style>
+<body>
+    
+    <div id="container"></div>
+    <div class="button"><button id="createBlock">Start</button></div>
+    <div id="island"></div>
+    <script src="island.js"></script>
+</body>
+</html>
