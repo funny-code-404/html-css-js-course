@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: gold;
+    text-align: center;
+}
+
+#yourmap {
+    width: 736px;
+    height: 554px;
+    background-image: url(map.jpg);
+    background-size:60% ;
+    background-repeat: no-repeat;
+    margin: 5% 25% ;
+    position: fixed;
+}
+
+#treasure {
+    width:  20px;
+    height: 20px;
+    position: absolute;
+    top: 250px;
+    left: 470px;
+}
+
