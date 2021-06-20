@@ -1,29 +1,34 @@
-//Прописываем в DOM
+// //Прописываем в DOM
+// let TM = document.createElement ('div');
 
-let TM = document.createElement ('div');
+// TM.id = 'TrMap';
 
-TM.id = TrMap;
+// let MM = document.createElement ('div');
 
-let MM = document.createElement ('div');
+// MM.id = 'mapMark';
 
-MM.id = mapMark;
+// TM.appendChild(MM);
 
-TM.appendChild(MM);
-
-document.body.appendChild(TM);
+// document.body.appendChild(TM);
 
 
 //Пишем события
-let a = document.getElementById('mapMark');
-a.onclick = function () {
+const gold = document.querySelector("#mapMark");
+const map = document.querySelector("#TrMap")
+
+gold.addEventListener('click', () => {
     alert('Нашёл');
-};
+});
 
-let b = document.getElementById('TrMap')
-
-b.onclick = function() {
+map.addEventListener('click', () => {
     alert('Мимо! Попробуй ещё!');
-};
+});
+// gold.onclick = function () {
+//     alert('Нашёл');
+// };
+// map.onclick = function() {
+//     alert('Мимо! Попробуй ещё!');
+// };
 
 
 
