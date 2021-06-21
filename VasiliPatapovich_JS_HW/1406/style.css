@@ -1,0 +1,13 @@
+/* .notification {
+    position: fixed;
+    z-index: 1000;
+    padding: 30px;
+    border: 2px solid rgb(179, 172, 172);
+    font-size: 20px;
+    background: rgb(255, 255, 255);
+    text-align: center;
+  } */
+  .message{
+    background: #4700b8;
+    color: rgb(60, 255, 0);
+  }
