@@ -62,7 +62,7 @@ let earn1 = {
     Nick: 5000,
     Steve: 2000,
     };
-    
+
     console.log(Object.entries(earn1));
     console.log(earn1.Peter);
     console.log(earn1.Nick);
@@ -94,4 +94,18 @@ let earn1 = {
         break;
     }
 
-   
+//Дополнить объект методом, который возвращает
+//количество всех его ключей
+
+let objKeys = {
+    weight: 100,
+    height: 180,
+    age: 40,
+    getKeyCount: function () {
+      console.log('Your object have',Object.keys(objKeys).length, 'properties.')
+     },
+  };
+  objKeys.getKeyCount()
+
+
+
