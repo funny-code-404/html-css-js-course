@@ -4,7 +4,7 @@ const ul = document.querySelector('ul');
 function createTodo() {
     const li = document.createElement('li');
     li.classList.add('li');
-    li.id = 'data-id';
+    // li.id = 'data-id';
     const textSpan = document.createElement('span');
     textSpan.classList.add('todo-text');
     let textInput = input.value;
@@ -53,3 +53,13 @@ let button = document.getElementsByClassName('close');
 //         })
 //     };
 // }
+
+let button = document.getElementsByClassName('close');
+
+const buttons = [];
+buttons.push(button);
+    for ( let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function () {
+            this.parentNode.parentNode.remove();
+        })
+    };
