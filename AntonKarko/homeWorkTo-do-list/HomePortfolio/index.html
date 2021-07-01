@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<style>
+#content{
+  display: flex;
+  justify-content: space-around;
+  }
+
+a {
+  display: inline-block;
+  padding: 10px 25px;
+  border: 1px solid red;
+  margin: 10px;
+  }
+
+table {
+  border-collapse: collapse;
+  }
+
+td,th {
+  border: 1px solid black;
+  padding: 3px;
+  text-align: center;
+  }
+
+th {
+  font-weight: bold;
+  background-color: #E6E6E6;
+  }
+
+.square {
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  }
+
+.bigSquare {
+  width: 320px;
+  height: 320px;
+  }
+
+.hello {
+  background: red;
+  color: black;
+  }
+
+.notification{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  border: 1px solid black;
+  font-size: 20px;
+  text-align: center;
+  }
+
+.ul{
+  background-color: yellow;
+  }
+
+li{
+  background-color: blue;
+  }
+
+.close{
+  background-image: url(../images/кнопка\ закрытие.png);
+  position: relative;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  }
+
+.portfolio{
+  background-image: url(../HomePortfolio/images/I\ am.png);
+  position: relative;
+  left: 55px;
+  width: 275px;
+  height: 400px;
+  background-size: cover;
+}
+
+.spanText{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  align-items: center;
+}
+.p{
+  align-items: center;
+  font-size: 14px;
+}
+</style>
+<body>
+    <nav id="nav">
+        <a href="#" id="home">HOME</a>
+        <a href="#" id="about">ABOUT</a>
+        <a href="#" id="portfolio">PORTFOLIO</a>
+    </nav>
+    <div id="content"></div>
+    <script src="portfolio.js"></script>
+</body>
+</html>
