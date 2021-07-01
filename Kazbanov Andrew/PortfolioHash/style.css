@@ -1,0 +1,49 @@
+*{box-sizing: border-box; margin: auto;}
+nav {
+    display: flex; width: 60%; padding-top: 20px;
+}
+.img{
+     height: 480px; max-width: 100%; display: flex; margin-top: 30px;
+     border-radius: 30px;
+     border:rgba(67, 243, 243, 0.479) 4px solid
+}
+
+footer{
+    margin-top: 20px;
+}
+
+
+.container{
+    width: 900px; margin: auto;
+}
+body{
+    background-color: darkorange;
+}
+main{
+    display: flex; flex-direction: column; align-items: center;
+}
+button{
+    height: 21px; width: 90px;
+}
+li{
+   margin-bottom: 20px; 
+}
+#ol
+{
+    padding-top: 50px;
+}
+.notPerformed{
+    margin-left: 30px; background-color: rgba(255, 47, 47, 0.959); font-size: 10px; border-radius: 5px; color: honeydew;
+}
+.performed{ 
+    background-color: rgba(89, 214, 16, 0.719);
+}
+
+p
+{
+font-size: 30px; text-align: center;
+}
+#content
+{
+    padding-top: 20px;
+}
