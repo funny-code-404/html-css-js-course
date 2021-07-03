@@ -1,3 +1,6 @@
+@import './fonts/beermoney.css';
+@import '~normalize.css';
+
 #content{
   display: flex;
   justify-content: space-around;
@@ -61,7 +64,7 @@ li{
   }
 
 .close{
-  background-image: url(../HomeWorkwebPack/images/кнопка\ закрытие.png);
+  background-image: url(../assest/images//кнопка\ закрытие.png);
   position: relative;
   left: 10px;
   width: 20px;
@@ -70,7 +73,7 @@ li{
   }
 
 .portfolio{
-  background-image: url(../HomeWorkwebPack/images/I\ am.png);
+  background-image: url(../assest/images/I\ am.png);
   position: relative;
   left: 55px;
   width: 275px;
@@ -79,7 +82,7 @@ li{
 }
 
 .spanText{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Beer money';
   align-items: center;
 }
 .p{

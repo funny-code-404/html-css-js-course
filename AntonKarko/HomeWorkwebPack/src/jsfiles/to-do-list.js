@@ -1,4 +1,4 @@
-function renderHome() {
+export function renderHome() {
     const content = document.getElementById('content');
     content.innerHTML = '';
     let element = document.createElement("div");
