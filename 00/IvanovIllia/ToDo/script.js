@@ -29,12 +29,14 @@ function markList(checkButton){
     checkButton.addEventListener('click', (event) => {
         let taskStatus = checkButton.classList;
         if (taskStatus == 'inProgress') {
-            checkButton.innerHTML = 'Done'
+            checkButton.classList.remove('inProgress');
             checkButton.classList.add('done');
+            checkButton.innerHTML = 'Done';
         }
         else {
-            checkButton.innerHTML = 'In Progress'
+            checkButton.classList.remove('done');
             checkButton.classList.add('inProgress');
+            checkButton.innerHTML = 'In Progress';
         }
     })
 }
