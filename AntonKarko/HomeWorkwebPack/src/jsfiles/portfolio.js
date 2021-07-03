@@ -1,4 +1,4 @@
-function renderPortfolio() {
+export function renderPortfolio() {
   const content = document.getElementById('content');
   content.innerHTML = '';
   let element = document.createElement("div");
