@@ -1,0 +1,45 @@
+.container {
+    max-width: 500px;
+    margin: auto;
+}
+
+body {
+    text-align: center;
+    background-color: rgb(103, 214, 241);
+}
+
+h1 {
+    font-size: 72px;
+    color: darkblue;
+}
+
+input {
+    padding: 20px 50px;
+    font-size: 22px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: rgb(243, 151, 151);
+    font-size: 14px;
+}
+
+li {
+    padding-top: 30px;
+    text-align: left;
+    color: rgb(248, 7, 7);
+}
+
+btn {
+    margin-left: 300px;
+}
+
+h2 {
+    font-size: 42px;
+    color: darkblue;
+}
+
+#task {
+    font-size: 32px;
+    color: rgb(248, 7, 7);
+}
