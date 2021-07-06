@@ -1,4 +1,7 @@
-import reviewsApi from "../../services/ex/api/reviews.service";
+// import reviewsApi from "../../services/ex/api/reviews.service";
+import Client from '../../services/ex2';
+
+const {reviews: reviewsApi} = new Client();
 
 const render = (data) => {
   const ul = document.createElement('ul');
@@ -21,7 +24,7 @@ const render = (data) => {
     del.addEventListener('click', (e) => {
       e.preventDefault();
       console.log(id);
-      reviewsApi.deleteReviews('', { id }).then(() => {
+      reviewsApi.deleteReview('', { id }).then(() => {
         li.remove();
       });
     });
@@ -48,7 +51,7 @@ export const createData = () => {
     return obj;
   }, {});
 
-  reviewsApi.createReviews('', data).then(getData);
+  reviewsApi.createReview('', data).then(getData);
 };
 
 const init = () => {

@@ -10,7 +10,7 @@ const reviewsApi = {
             throw error;
         })
     },
-    createReviews: (path = '', config = {}) => {
+    createReview: (path = '', config = {}) => {
         return api
         .post(`/reviews${path}`, config)
         .then((data) => data)
@@ -18,7 +18,7 @@ const reviewsApi = {
             throw error;
         })
     },
-    deleteReviews: (path = '', data = {}) => {
+    deleteReview: (path = '', data = {}) => {
         return api
         .delete(`/reviews${path}`, { data })
         .then((data) => data)
