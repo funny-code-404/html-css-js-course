@@ -1,5 +1,5 @@
 import api from '../axiosInstance';
-import { mapReviews } from '../../ex2/helpers';
+import { mapReviews } from '../../helpers';
 
 const reviewsApi = {
     getReviews: (path = '', config = {}) => {
@@ -18,9 +18,9 @@ const reviewsApi = {
             throw error;
         })
     },
-    deleteReviews: (path = '', config = {}) => {
+    deleteReviews: (path = '', data = {}) => {
         return api
-        .delete(`/reviews${path}`, config)
+        .delete(`/reviews${path}`, { data })
         .then((data) => data)
         .catch((error) => {
             throw error;
