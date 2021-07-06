@@ -28,3 +28,7 @@ window.onhashchange = () => {
 };
 
 render(location.hash);
+
+import { getData } from './companents/reviews';
+
+getData();

@@ -5,6 +5,9 @@ const MiniCssWebpackPlugin = require('mini-css-extract-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const OptimizeCssWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 
+const dotenv = require('dotenv');
+const webpack = require('webpack');
+
 function optimization() {
     const config = {
         splitChunks: {
@@ -50,6 +53,12 @@ module.exports = {
         new CleanWebpackPlugin(),
         new MiniCssWebpackPlugin({
             filename: '[name].[contenthash].css',
+        }),
+        new webpack.ProvidePlugin({
+            process: 'process/browser',
+        }),
+        new webpack.DefinePlugin({
+            'process.env': JSON.stringify(dotenv.config().parsed),
         }),
     ],
     module: {

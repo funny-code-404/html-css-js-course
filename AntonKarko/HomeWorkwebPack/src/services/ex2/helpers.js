@@ -1,0 +1,1 @@
+export const mapReviews = (data) => data.reviews;
