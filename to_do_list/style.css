@@ -1,0 +1,15 @@
+.input-task {
+    display: flex;
+    margin: 10px;
+}
+
+.input-task-item {
+    margin: 10px;
+    width: 176px;
+}
+
+.button {
+    text-transform: uppercase;
+    border: 3px solid black;
+    text-align: center;
+}
