@@ -1,0 +1,28 @@
+{
+  "name": "hw2906",
+  "version": "1.0.1",
+  "description": "homework2906",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VasPot/html-css-js-course.git#VasiliPatapovich_"
+  },
+  "keywords": [
+    "123"
+  ],
+  "author": "Vasili P",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VasPot/html-css-js-course/issues"
+  },
+  "homepage": "https://github.com/VasPot/html-css-js-course/tree/VasiliPatapovich_#readme",
+  "devDependencies": {
+    "html": "^1.0.0",
+    "html-webpack-plugin": "^5.3.2",
+    "webpack": "^5.42.0",
+    "webpack-cli": "^4.7.2"
+  }
+}
